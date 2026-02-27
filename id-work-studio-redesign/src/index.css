@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #2C2C2C;
+  --color-off-white: #F9F9F9;
+  --color-champagne: #D4AF37;
+  --color-champagne-hover: #C5A028;
+}
+
+body {
+  background-color: var(--color-off-white);
+  color: var(--color-charcoal);
+}

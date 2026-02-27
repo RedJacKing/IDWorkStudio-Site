@@ -1,0 +1,86 @@
+import { MapPin, Mail, Phone, Clock } from 'lucide-react';
+
+export default function Contact() {
+  const whatsappNumber = "6598333085";
+  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+
+  return (
+    <section id="contact" className="py-24 bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-serif mb-8">Get in Touch</h2>
+            <p className="text-gray-400 mb-12 text-lg font-light">
+              Ready to start your renovation journey? Contact us today for a consultation.
+            </p>
+
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <MapPin className="w-6 h-6 text-gray-500 mt-1" />
+                <div>
+                  <h4 className="text-white font-medium mb-1">Office Address</h4>
+                  <p className="text-gray-400 leading-relaxed">
+                    11 Woodlands Close, Woodlands 11, #03-10<br />
+                    Singapore 737853
+                  </p>
+                  <a 
+                    href="https://www.google.com.sg/maps/dir//11+%2303-10,+11+Woodlands+Cl,+ID+Work+Studio,+Singapore+737853/@1.4348129,103.7326522,12z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white text-sm underline mt-2 inline-block hover:text-gray-300"
+                  >
+                    View on Google Maps
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <Mail className="w-6 h-6 text-gray-500 mt-1" />
+                <div>
+                  <h4 className="text-white font-medium mb-1">Email</h4>
+                  <a href="mailto:contact@idworkstudio.com" className="text-gray-400 hover:text-white transition-colors">
+                    contact@idworkstudio.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <Clock className="w-6 h-6 text-gray-500 mt-1" />
+                <div>
+                  <h4 className="text-white font-medium mb-1">Opening Hours</h4>
+                  <p className="text-gray-400">Mon - Fri: 09:00 - 21:00</p>
+                  <p className="text-gray-400">Sat - Sun: 10:00 - 16:00</p>
+                </div>
+              </div>
+
+              <div className="pt-8">
+                <a 
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-4 bg-[#25D366] text-white font-bold rounded-full hover:bg-[#128C7E] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  WhatsApp Us
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="h-96 lg:h-auto bg-gray-800 rounded-2xl overflow-hidden relative">
+             {/* Simple Map Placeholder or Embed */}
+             <iframe 
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.790606668748!2d103.80050131475396!3d1.434812998955562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da139ecaf571eb%3A0x248f2dc10ca64638!2sID%20Work%20Studio!5e0!3m2!1sen!2ssg!4v1629789123456!5m2!1sen!2ssg" 
+               width="100%" 
+               height="100%" 
+               style={{ border: 0 }} 
+               allowFullScreen 
+               loading="lazy"
+               className="absolute inset-0 w-full h-full grayscale opacity-80 hover:grayscale-0 transition-all duration-500"
+             ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
