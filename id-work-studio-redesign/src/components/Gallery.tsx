@@ -120,11 +120,7 @@ export default function Gallery() {
           </div>
         ) : (
           <div>
-            {projects.length === 0 ? (
-              <div className="text-center text-gray-500 py-12">
-                No projects found. Please add photos to the <code className="bg-gray-100 px-2 py-1 rounded">public/gallery/residential</code> or <code className="bg-gray-100 px-2 py-1 rounded">public/gallery/commercial</code> folders and rebuild the site.
-              </div>
-            ) : (
+            {projects.length === 0 ? null : (
               <>
                 {renderProjectSection('Commercial Projects', groupedCommercial)}
                 {renderProjectSection('Residential Projects', groupedResidential)}

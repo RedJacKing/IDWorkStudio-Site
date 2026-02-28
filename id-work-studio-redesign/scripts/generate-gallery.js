@@ -5,24 +5,26 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORTFOLIO_DIR = path.join(__dirname, '../public/assets/portfolio');
+const BASE_GALLERY_DIR = path.join(__dirname, '../public/gallery');
+const IMAGE_GALLERY_DIR = path.join(__dirname, '../public/gallery/image');
 const OUTPUT_FILE = path.join(__dirname, '../public/gallery.json');
 
-// Ensure directories exist
-if (!fs.existsSync(PORTFOLIO_DIR)) {
-  fs.mkdirSync(PORTFOLIO_DIR, { recursive: true });
+// Ensure base directories exist
+if (!fs.existsSync(BASE_GALLERY_DIR)) {
+  fs.mkdirSync(BASE_GALLERY_DIR, { recursive: true });
 }
-if (!fs.existsSync(path.join(PORTFOLIO_DIR, 'residential'))) {
-  fs.mkdirSync(path.join(PORTFOLIO_DIR, 'residential'), { recursive: true });
+if (!fs.existsSync(path.join(BASE_GALLERY_DIR, 'residential'))) {
+  fs.mkdirSync(path.join(BASE_GALLERY_DIR, 'residential'), { recursive: true });
 }
-if (!fs.existsSync(path.join(PORTFOLIO_DIR, 'commercial'))) {
-  fs.mkdirSync(path.join(PORTFOLIO_DIR, 'commercial'), { recursive: true });
+if (!fs.existsSync(path.join(BASE_GALLERY_DIR, 'commercial'))) {
+  fs.mkdirSync(path.join(BASE_GALLERY_DIR, 'commercial'), { recursive: true });
 }
 
 // Function to scan directory
 function scanDirectory(dir, category) {
   if (!fs.existsSync(dir)) return [];
   
+  const actualFolderName = path.basename(dir);
   const files = fs.readdirSync(dir);
   return files
     .filter(file => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(file))
@@ -41,11 +43,18 @@ function scanDirectory(dir, category) {
         .replace(/[_-]/g, ' ')   // Replace separators with spaces
         .replace(/\b\w/g, c => c.toUpperCase()); // Capitalize words
 
+      // Get path relative to public directory for the URL
+      const publicDir = path.join(__dirname, '../public');
+      const relativePath = path.relative(publicDir, filePath).replace(/\\/g, '/');
+      
+      // Encode the URL to handle spaces and special characters
+      const encodedUrl = '/' + relativePath.split('/').map(encodeURIComponent).join('/');
+
       return {
         id: `${category}-${nameWithoutExt}`,
         title: title,
         category: category.charAt(0).toUpperCase() + category.slice(1),
-        imageUrl: `/assets/portfolio/${category}/${file}`,
+        imageUrl: encodedUrl,
         description: '', // Could be extracted from a sidecar file if needed
         order: order,
         createdAt: stats.birthtime.toISOString()
@@ -53,11 +62,33 @@ function scanDirectory(dir, category) {
     });
 }
 
-// Scan both directories
-const residentialProjects = scanDirectory(path.join(PORTFOLIO_DIR, 'residential'), 'residential');
-const commercialProjects = scanDirectory(path.join(PORTFOLIO_DIR, 'commercial'), 'commercial');
+// Function to find directory case-insensitively
+function findDirectoryIgnoreCase(baseDir, targetName) {
+  if (!fs.existsSync(baseDir)) return null;
+  const files = fs.readdirSync(baseDir);
+  const found = files.find(f => f.toLowerCase() === targetName.toLowerCase());
+  return found ? path.join(baseDir, found) : null;
+}
 
-const allProjects = [...residentialProjects, ...commercialProjects];
+// Scan both directories (base and image subfolder)
+const resDirBase = findDirectoryIgnoreCase(BASE_GALLERY_DIR, 'residential') || path.join(BASE_GALLERY_DIR, 'residential');
+const comDirBase = findDirectoryIgnoreCase(BASE_GALLERY_DIR, 'commercial') || path.join(BASE_GALLERY_DIR, 'commercial');
+
+const resDirImage = findDirectoryIgnoreCase(IMAGE_GALLERY_DIR, 'residential');
+const comDirImage = findDirectoryIgnoreCase(IMAGE_GALLERY_DIR, 'commercial');
+
+const residentialProjectsBase = scanDirectory(resDirBase, 'residential');
+const commercialProjectsBase = scanDirectory(comDirBase, 'commercial');
+
+const residentialProjectsImage = resDirImage ? scanDirectory(resDirImage, 'residential') : [];
+const commercialProjectsImage = comDirImage ? scanDirectory(comDirImage, 'commercial') : [];
+
+const allProjects = [
+  ...residentialProjectsBase, 
+  ...commercialProjectsBase,
+  ...residentialProjectsImage,
+  ...commercialProjectsImage
+];
 
 // Write to JSON file
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allProjects, null, 2));
