@@ -12,4 +12,5 @@
   to = "/index.html"
   status = 200
 
-
+[images]
+  remote_images = ["https://drive.google.com/.*"]
