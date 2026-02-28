@@ -1,33 +1,36 @@
 import { PenTool, HardHat, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
-
-const steps = [
-  {
-    title: "Consult & Visualize",
-    description: "We begin by understanding your vision and lifestyle, translating them into detailed 3D concepts.",
-    icon: PenTool
-  },
-  {
-    title: "Accredited Execution",
-    description: "Our HDB & BCA registered team manages the renovation with precision, ensuring quality and compliance.",
-    icon: HardHat
-  },
-  {
-    title: "The Big Reveal",
-    description: "Walk into your dream space, perfectly finished, cleaned, and ready for your new chapter.",
-    icon: Sparkles
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Process() {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      title: t('process.steps.1.title'),
+      description: t('process.steps.1.desc'),
+      icon: PenTool
+    },
+    {
+      title: t('process.steps.2.title'),
+      description: t('process.steps.2.desc'),
+      icon: HardHat
+    },
+    {
+      title: t('process.steps.3.title'),
+      description: t('process.steps.3.desc'),
+      icon: Sparkles
+    }
+  ];
+
   return (
     <section className="py-20 bg-off-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-charcoal">Our Process</h2>
+          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-charcoal">{t('process.title')}</h2>
           <div className="w-24 h-1 bg-champagne mx-auto mb-6"></div>
           <p className="text-charcoal/70 max-w-2xl mx-auto">
-            A seamless journey from concept to reality.
+            {t('process.subtitle')}
           </p>
         </div>
 

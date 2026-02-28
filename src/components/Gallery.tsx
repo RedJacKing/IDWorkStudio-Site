@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import { Project } from '../types';
 import { motion } from 'motion/react';
 import { getAllProjects } from '../lib/indexedDB';
+import { useTranslation } from 'react-i18next';
 
 export default function Gallery() {
+  const { t } = useTranslation();
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -81,10 +83,10 @@ export default function Gallery() {
     <div className="min-h-screen bg-white pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif mb-4">Our Gallery</h1>
+          <h1 className="text-4xl md:text-5xl font-serif mb-4">{t('gallery.title')}</h1>
           <div className="w-24 h-1 bg-black mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            A curated selection of our finest commercial and residential work.
+            {t('gallery.subtitle')}
           </p>
         </div>
 
@@ -96,8 +98,8 @@ export default function Gallery() {
           <div>
             {projects.length === 0 ? null : (
               <>
-                {renderProjectSection('Commercial', commercialProjects)}
-                {renderProjectSection('Residential', residentialProjects)}
+                {renderProjectSection(t('gallery.commercial'), commercialProjects)}
+                {renderProjectSection(t('gallery.residential'), residentialProjects)}
               </>
             )}
           </div>

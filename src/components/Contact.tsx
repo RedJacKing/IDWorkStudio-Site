@@ -1,6 +1,8 @@
 import { MapPin, Mail, Phone, Clock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const whatsappNumber = "6598333085";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
@@ -9,19 +11,19 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl md:text-4xl font-serif mb-8">Get in Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-serif mb-8">{t('contact.title')}</h2>
             <p className="text-gray-400 mb-12 text-lg font-light">
-              Ready to start your renovation journey? Contact us today for a consultation.
+              {t('contact.subtitle')}
             </p>
 
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <MapPin className="w-6 h-6 text-gray-500 mt-1" />
                 <div>
-                  <h4 className="text-white font-medium mb-1">Office Address</h4>
+                  <h4 className="text-white font-medium mb-1">{t('contact.info.address_title')}</h4>
                   <p className="text-gray-400 leading-relaxed">
-                    11 Woodlands Close, Woodlands 11, #03-10<br />
-                    Singapore 737853
+                    {t('contact.info.address_line1')}<br />
+                    {t('contact.info.address_line2')}
                   </p>
                   <a 
                     href="https://www.google.com.sg/maps/dir//11+%2303-10,+11+Woodlands+Cl,+ID+Work+Studio,+Singapore+737853/@1.4348129,103.7326522,12z"
@@ -29,7 +31,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="text-white text-sm underline mt-2 inline-block hover:text-gray-300"
                   >
-                    View on Google Maps
+                    {t('contact.info.view_map')}
                   </a>
                 </div>
               </div>
@@ -37,7 +39,7 @@ export default function Contact() {
               <div className="flex items-start space-x-4">
                 <Mail className="w-6 h-6 text-gray-500 mt-1" />
                 <div>
-                  <h4 className="text-white font-medium mb-1">Email</h4>
+                  <h4 className="text-white font-medium mb-1">{t('contact.info.email_title')}</h4>
                   <a href="mailto:contact@idworkstudio.com" className="text-gray-400 hover:text-white transition-colors">
                     contact@idworkstudio.com
                   </a>
@@ -47,9 +49,9 @@ export default function Contact() {
               <div className="flex items-start space-x-4">
                 <Clock className="w-6 h-6 text-gray-500 mt-1" />
                 <div>
-                  <h4 className="text-white font-medium mb-1">Opening Hours</h4>
-                  <p className="text-gray-400">Mon - Fri: 09:00 - 21:00</p>
-                  <p className="text-gray-400">Sat - Sun: 10:00 - 16:00</p>
+                  <h4 className="text-white font-medium mb-1">{t('contact.info.hours_title')}</h4>
+                  <p className="text-gray-400">{t('contact.info.hours_weekday')}</p>
+                  <p className="text-gray-400">{t('contact.info.hours_weekend')}</p>
                 </div>
               </div>
 
@@ -61,7 +63,7 @@ export default function Contact() {
                   className="inline-flex items-center px-8 py-4 bg-[#25D366] text-white font-bold rounded-full hover:bg-[#128C7E] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  WhatsApp Us
+                  {t('contact.info.whatsapp')}
                 </a>
               </div>
             </div>

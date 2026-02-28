@@ -1,6 +1,9 @@
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image with Overlay */}
@@ -20,7 +23,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-6 tracking-tight leading-none"
         >
-          Curated Interiors <span className="italic font-light text-champagne">for the Modern Visionary</span>
+          {t('hero.title_main')}<span className="italic font-light text-champagne">{t('hero.title_sub')}</span>
         </motion.h1>
         
         <motion.p 
@@ -29,8 +32,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light tracking-wide"
         >
-          Premium interior design and renovation services in Singapore. 
-          With over a decade of trusted excellence, we transform homes, offices, and retail spaces into masterpieces.
+          {t('hero.subtitle')}
         </motion.p>
 
         <motion.div
@@ -45,7 +47,7 @@ export default function Hero() {
             rel="noopener noreferrer" 
             className="px-6 py-2 border-2 border-champagne text-champagne rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm hover:bg-champagne hover:text-white transition-all shadow-[0_0_15px_rgba(212,175,55,0.3)]"
           >
-            HDB Registered
+            {t('accreditation.hdb')}
           </a>
           <a 
             href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" 
@@ -53,7 +55,7 @@ export default function Hero() {
             rel="noopener noreferrer" 
             className="px-6 py-2 border-2 border-champagne text-champagne rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm hover:bg-champagne hover:text-white transition-all shadow-[0_0_15px_rgba(212,175,55,0.3)]"
           >
-            BCA Registered
+            {t('accreditation.bca')}
           </a>
         </motion.div>
 
@@ -67,13 +69,13 @@ export default function Hero() {
             href="/residential"
             className="px-8 py-4 bg-white text-charcoal text-sm uppercase tracking-widest hover:bg-gray-100 transition-colors font-medium border border-white min-w-[160px]"
           >
-            Residential
+            {t('nav.residential')}
           </a>
           <a 
             href="/commercial"
             className="px-8 py-4 bg-champagne text-white text-sm uppercase tracking-widest hover:bg-champagne-hover transition-colors font-medium border border-champagne min-w-[160px]"
           >
-            Commercial
+            {t('nav.commercial')}
           </a>
         </motion.div>
       </div>

@@ -10,6 +10,7 @@ import Commercial from './components/Commercial';
 import Residential from './components/Residential';
 import StickyMobileNav from './components/StickyMobileNav';
 import ScrollToHashElement from './components/ScrollToHashElement';
+import { useTranslation } from 'react-i18next';
 
 function LandingPage() {
   return (
@@ -24,6 +25,8 @@ function LandingPage() {
 }
 
 export default function App() {
+  const { t } = useTranslation();
+
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -46,7 +49,7 @@ export default function App() {
                   rel="noopener noreferrer" 
                   className="text-gray-400 text-sm uppercase tracking-widest border border-gray-700 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors"
                 >
-                  HDB Registered
+                  {t('accreditation.hdb')}
                 </a>
                 <a 
                   href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" 
@@ -54,11 +57,11 @@ export default function App() {
                   rel="noopener noreferrer" 
                   className="text-gray-400 text-sm uppercase tracking-widest border border-gray-700 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors"
                 >
-                  BCA Registered
+                  {t('accreditation.bca')}
                 </a>
               </div>
               <p className="text-gray-500 text-sm">
-                &copy; {new Date().getFullYear()} ID Work Studio. All rights reserved. <span className="text-xs opacity-50">v1.1</span>
+                &copy; {new Date().getFullYear()} ID Work Studio. {t('footer.rights')} <span className="text-xs opacity-50">v1.1</span>
               </p>
             </div>
           </footer>
