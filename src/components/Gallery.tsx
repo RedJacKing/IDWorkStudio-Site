@@ -8,6 +8,9 @@ export default function Gallery() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Scroll to top when component mounts (since it's a new page)
+    window.scrollTo(0, 0);
+    
     const fetchProjects = async () => {
       try {
         const data = await getAllProjects();
@@ -43,21 +46,8 @@ export default function Gallery() {
   const commercialProjects = projects.filter(p => getCategoryGroup(p.category) === 'Commercial');
   const residentialProjects = projects.filter(p => getCategoryGroup(p.category) === 'Residential');
 
-  const groupProjects = (items: Project[]) => {
-    return items.reduce((acc, project) => {
-      if (!acc[project.title]) {
-        acc[project.title] = [];
-      }
-      acc[project.title].push(project);
-      return acc;
-    }, {} as Record<string, Project[]>);
-  };
-
-  const groupedCommercial = groupProjects(commercialProjects);
-  const groupedResidential = groupProjects(residentialProjects);
-
-  const renderProjectSection = (title: string, groupedData: Record<string, Project[]>) => {
-    if (Object.keys(groupedData).length === 0) return null;
+  const renderProjectSection = (title: string, projectImages: Project[]) => {
+    if (projectImages.length === 0) return null;
 
     return (
       <div className="mb-24 last:mb-0">
@@ -66,35 +56,19 @@ export default function Gallery() {
           <div className="w-16 h-1 bg-gray-200 mx-auto"></div>
         </div>
 
-        <div className="space-y-16">
-          {Object.entries(groupedData).map(([projectTitle, projectImages]) => (
-            <div key={projectTitle} className="space-y-6">
-              <div className="border-b pb-4">
-                <h4 className="text-xl font-serif text-charcoal">{projectTitle}</h4>
-                <p className="text-sm text-gray-500 uppercase tracking-wider mt-1">
-                  {projectImages[0].category}
-                </p>
-                {projectImages[0].description && (
-                  <p className="text-gray-600 mt-2 max-w-3xl">{projectImages[0].description}</p>
-                )}
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2">
-                {projectImages.map((project) => (
-                  <div 
-                    key={project.id}
-                    className="group relative aspect-square cursor-pointer z-0 md:hover:z-50"
-                  >
-                    <div className="absolute inset-0 transition-all duration-300 ease-out md:group-hover:scale-150 md:group-hover:shadow-2xl md:group-hover:rounded-lg rounded-md overflow-hidden bg-gray-100 border border-gray-200">
-                      <img 
-                        src={project.imageUrl} 
-                        alt={project.title} 
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                ))}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4">
+          {projectImages.map((project) => (
+            <div 
+              key={project.id}
+              className="group relative aspect-square cursor-pointer z-0 md:hover:z-50"
+            >
+              <div className="absolute inset-0 transition-all duration-300 ease-out md:group-hover:scale-150 md:group-hover:shadow-2xl md:group-hover:rounded-lg rounded-md overflow-hidden bg-gray-100 border border-gray-200">
+                <img 
+                  src={project.imageUrl} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           ))}
@@ -104,13 +78,13 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-24 bg-white">
+    <div className="min-h-screen bg-white pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif mb-4">Our Gallery</h2>
+          <h1 className="text-4xl md:text-5xl font-serif mb-4">Our Gallery</h1>
           <div className="w-24 h-1 bg-black mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            A curated selection of our finest work.
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            A curated selection of our finest commercial and residential work.
           </p>
         </div>
 
@@ -122,13 +96,13 @@ export default function Gallery() {
           <div>
             {projects.length === 0 ? null : (
               <>
-                {renderProjectSection('Commercial Projects', groupedCommercial)}
-                {renderProjectSection('Residential Projects', groupedResidential)}
+                {renderProjectSection('Commercial', commercialProjects)}
+                {renderProjectSection('Residential', residentialProjects)}
               </>
             )}
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
 }

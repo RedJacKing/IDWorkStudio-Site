@@ -17,7 +17,6 @@ function LandingPage() {
       <Hero />
       <Process />
       <Services />
-      <Gallery />
       <Contact />
       <StickyMobileNav />
     </>
@@ -35,6 +34,7 @@ export default function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/residential" element={<Residential />} />
             <Route path="/commercial" element={<Commercial />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
           
           <footer className="bg-black text-white py-12 border-t border-gray-800">

@@ -27,7 +27,7 @@ export default function Navbar() {
               <Link to="/#home" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-widest font-medium">Home</Link>
               <Link to="/residential" className={`text-sm uppercase tracking-widest font-medium transition-colors ${isActive('/residential') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>Residential</Link>
               <Link to="/commercial" className={`text-sm uppercase tracking-widest font-medium transition-colors ${isActive('/commercial') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>Commercial</Link>
-              <Link to="/#gallery" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-widest font-medium">Gallery</Link>
+              <Link to="/gallery" className={`text-sm uppercase tracking-widest font-medium transition-colors ${isActive('/gallery') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>Gallery</Link>
               <Link to="/#contact" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-widest font-medium">Contact</Link>
             </div>
 
@@ -46,7 +46,7 @@ export default function Navbar() {
               <Link to="/#home" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">Home</Link>
               <Link to="/residential" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">Residential</Link>
               <Link to="/commercial" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">Commercial</Link>
-              <Link to="/#gallery" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">Gallery</Link>
+              <Link to="/gallery" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">Gallery</Link>
               <Link to="/#contact" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">Contact</Link>
             </div>
           </div>
