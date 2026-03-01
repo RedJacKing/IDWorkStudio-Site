@@ -20,7 +20,25 @@ export default function Navbar() {
     <div className="fixed w-full z-50">
       {/* Accreditation Bar */}
       <div className="bg-charcoal text-white text-xs py-2 text-center tracking-widest uppercase font-medium border-b border-champagne/20">
-        <span className="text-champagne font-bold">{t('accreditation.hdb')}</span> <span className="mx-2 text-gray-500">|</span> <span className="text-champagne font-bold">{t('accreditation.bca')}</span> {t('accreditation.firm')}
+        <a 
+          href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PListingContractor.jsp" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          title="Search for ID WORK STUDIO"
+          className="text-champagne font-bold hover:text-white transition-colors"
+        >
+          {t('accreditation.hdb')}
+        </a> 
+        <span className="mx-2 text-gray-500">|</span> 
+        <a 
+          href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-champagne font-bold hover:text-white transition-colors"
+        >
+          {t('accreditation.bca')}
+        </a>{' '}
+        {t('accreditation.firm')}
       </div>
 
       <nav className="bg-white/95 backdrop-blur-md border-b border-gray-100">
@@ -31,15 +49,15 @@ export default function Navbar() {
             </div>
             
             <div className="hidden md:flex space-x-8 items-center">
-              <Link to="/#home" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-widest font-medium">{t('nav.home')}</Link>
-              <Link to="/residential" className={`text-sm uppercase tracking-widest font-medium transition-colors ${isActive('/residential') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.residential')}</Link>
-              <Link to="/commercial" className={`text-sm uppercase tracking-widest font-medium transition-colors ${isActive('/commercial') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.commercial')}</Link>
-              <Link to="/gallery" className={`text-sm uppercase tracking-widest font-medium transition-colors ${isActive('/gallery') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.gallery')}</Link>
-              <Link to="/#contact" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-widest font-medium">{t('nav.contact')}</Link>
+              <Link to="/#home" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.1rem] font-light font-sans">{t('nav.home')}</Link>
+              <Link to="/residential" className={`text-sm uppercase tracking-[0.1rem] font-light font-sans transition-colors ${isActive('/residential') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.residential')}</Link>
+              <Link to="/commercial" className={`text-sm uppercase tracking-[0.1rem] font-light font-sans transition-colors ${isActive('/commercial') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.commercial')}</Link>
+              <Link to="/gallery" className={`text-sm uppercase tracking-[0.1rem] font-light font-sans transition-colors ${isActive('/gallery') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.gallery')}</Link>
+              <Link to="/#contact" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.1rem] font-light font-sans">{t('nav.contact')}</Link>
               
               <button 
                 onClick={toggleLanguage}
-                className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-widest font-medium ml-4 border border-gray-200 px-3 py-1 rounded-full"
+                className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.1rem] font-light font-sans ml-4 border border-charcoal/20 px-3 py-1 rounded-full"
               >
                 <Globe size={14} />
                 <span>{i18n.language === 'en' ? '中文' : 'EN'}</span>
@@ -49,7 +67,7 @@ export default function Navbar() {
             <div className="md:hidden flex items-center space-x-4">
               <button 
                 onClick={toggleLanguage}
-                className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-widest font-medium border border-gray-200 px-2 py-1 rounded-full"
+                className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-[0.1rem] font-light font-sans border border-charcoal/20 px-2 py-1 rounded-full"
               >
                 <Globe size={14} />
                 <span>{i18n.language === 'en' ? '中文' : 'EN'}</span>

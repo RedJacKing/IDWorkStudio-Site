@@ -44,9 +44,10 @@ export default function App() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <div className="mb-6 flex justify-center space-x-8">
                 <a 
-                  href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PContractorResult.jsp" 
+                  href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PListingContractor.jsp" 
                   target="_blank" 
                   rel="noopener noreferrer" 
+                  title="Search for ID WORK STUDIO"
                   className="text-gray-400 text-sm uppercase tracking-widest border border-gray-700 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors"
                 >
                   {t('accreditation.hdb')}
