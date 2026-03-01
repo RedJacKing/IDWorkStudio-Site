@@ -6,7 +6,8 @@
 /blog           /           301!
 /promo          /           301!
 /index.html     /           301!
-/contact    /contactus    301!
+/contactus    /    301!
+/contact    /    301!
 
 # Safety net: If Google has other old links, send them home
 /index.html  /    301!
