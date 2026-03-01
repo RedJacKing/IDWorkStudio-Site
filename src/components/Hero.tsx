@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ export default function Hero() {
     <section 
       id="home" 
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-32 md:pt-12"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-32 md:pt-12 pb-32"
     >
       {/* Background Image with Overlay and Parallax */}
       <motion.div 
@@ -54,14 +55,14 @@ export default function Hero() {
            initial={{ opacity: 0, y: 20 }}
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-           className="flex justify-center gap-4 mb-12"
+           className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-[12px]"
         >
           <a 
             href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PListingContractor.jsp" 
             target="_blank" 
             rel="noopener noreferrer" 
             title="Search for ID WORK STUDIO"
-            className="px-6 py-2 border-2 border-champagne text-champagne rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm hover:bg-champagne hover:text-white transition-all shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+            className="w-full sm:w-auto px-[15px] py-2 my-[5px] sm:my-0 border border-gold/50 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.1rem] backdrop-blur-sm hover:bg-gold hover:text-dark-charcoal transition-all shadow-[0_0_15px_rgba(197,160,89,0.1)]"
           >
             {t('accreditation.hdb')}
           </a>
@@ -69,7 +70,7 @@ export default function Hero() {
             href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="px-6 py-2 border-2 border-champagne text-champagne rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm hover:bg-champagne hover:text-white transition-all shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+            className="w-full sm:w-auto px-[15px] py-2 my-[5px] sm:my-0 border border-white/30 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.1rem] backdrop-blur-sm hover:bg-white hover:text-dark-charcoal transition-all"
           >
             {t('accreditation.bca')}
           </a>
@@ -79,20 +80,20 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row gap-6 justify-center"
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-[12px]"
         >
-          <a 
-            href="/commercial"
-            className="px-10 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[4px] min-w-[200px]"
+          <Link 
+            to="/commercial"
+            className="w-full sm:w-auto px-10 py-4 my-[10px] sm:my-0 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.12rem] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[30px] min-w-[200px]"
           >
             {t('nav.commercial')}
-          </a>
-          <a 
-            href="/residential"
-            className="px-10 py-4 bg-transparent text-white text-sm uppercase tracking-[0.2em] hover:bg-white/10 transition-all duration-300 font-bold border border-white rounded-[4px] min-w-[200px]"
+          </Link>
+          <Link 
+            to="/residential"
+            className="w-full sm:w-auto px-10 py-4 my-[10px] sm:my-0 bg-transparent text-white text-sm uppercase tracking-[0.12rem] hover:bg-white/10 transition-all duration-300 font-bold border border-white/50 rounded-[30px] backdrop-blur-[5px] min-w-[200px]"
           >
             {t('nav.residential')}
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

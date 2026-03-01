@@ -1,5 +1,6 @@
 import { Home, Briefcase, PenTool } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Services() {
   const { t } = useTranslation();
@@ -44,7 +45,7 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <a key={index} href={service.link} className="group bg-white hover:shadow-xl transition-shadow duration-300 overflow-hidden block">
+            <Link key={index} to={service.link} className="group bg-white hover:shadow-xl transition-shadow duration-300 overflow-hidden block">
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src={service.image} 
@@ -59,22 +60,22 @@ export default function Services() {
                 <h3 className="text-xl font-serif mb-3 text-charcoal">{service.title}</h3>
                 <p className="text-charcoal/70 text-sm leading-relaxed">{service.description}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center border-t border-gray-200 pt-16">
           <div>
-            <h3 className="text-4xl font-serif mb-2">10+</h3>
-            <p className="text-gray-500 uppercase tracking-widest text-sm">{t('services.stats.years')}</p>
+            <h3 className="text-4xl font-serif mb-2 text-gold">10+</h3>
+            <p className="text-gold uppercase tracking-widest text-sm">{t('services.stats.years')}</p>
           </div>
           <div>
-            <h3 className="text-4xl font-serif mb-2">{t('services.stats.trusted')}</h3>
-            <p className="text-gray-500 uppercase tracking-widest text-sm">{t('services.stats.brand')}</p>
+            <h3 className="text-4xl font-serif mb-2 text-gold">{t('services.stats.trusted')}</h3>
+            <p className="text-gold uppercase tracking-widest text-sm">{t('services.stats.brand')}</p>
           </div>
           <div>
-            <h3 className="text-4xl font-serif mb-2">{t('services.stats.quality')}</h3>
-            <p className="text-gray-500 uppercase tracking-widest text-sm">{t('services.stats.workmanship')}</p>
+            <h3 className="text-4xl font-serif mb-2 text-gold">{t('services.stats.quality')}</h3>
+            <p className="text-gold uppercase tracking-widest text-sm">{t('services.stats.workmanship')}</p>
           </div>
         </div>
       </div>

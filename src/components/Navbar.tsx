@@ -43,21 +43,21 @@ export default function Navbar() {
 
       <nav className="bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20 items-center">
-            <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="font-serif text-2xl font-bold tracking-tighter text-charcoal">ID WORK STUDIO</Link>
+          <div className="flex flex-col lg:flex-row justify-between h-auto lg:h-20 items-center py-4 lg:py-0">
+            <div className="flex-shrink-0 flex items-center mb-4 lg:mb-0">
+              <Link to="/" className="font-serif text-2xl md:max-lg:text-[1.2rem] font-bold tracking-tighter text-charcoal">ID WORK STUDIO</Link>
             </div>
             
-            <div className="hidden md:flex space-x-8 items-center">
-              <Link to="/#home" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.1rem] font-light font-sans">{t('nav.home')}</Link>
-              <Link to="/residential" className={`text-sm uppercase tracking-[0.1rem] font-light font-sans transition-colors ${isActive('/residential') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.residential')}</Link>
-              <Link to="/commercial" className={`text-sm uppercase tracking-[0.1rem] font-light font-sans transition-colors ${isActive('/commercial') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.commercial')}</Link>
-              <Link to="/gallery" className={`text-sm uppercase tracking-[0.1rem] font-light font-sans transition-colors ${isActive('/gallery') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.gallery')}</Link>
-              <Link to="/#contact" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.1rem] font-light font-sans">{t('nav.contact')}</Link>
+            <div className="hidden md:flex space-x-4 lg:space-x-8 items-center">
+              <Link to="/#home" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.12rem] font-light font-sans">{t('nav.home')}</Link>
+              <Link to="/residential" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/residential') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.residential')}</Link>
+              <Link to="/commercial" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/commercial') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.commercial')}</Link>
+              <Link to="/gallery" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/gallery') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.gallery')}</Link>
+              <Link to="/#contact" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.12rem] font-light font-sans">{t('nav.contact')}</Link>
               
               <button 
                 onClick={toggleLanguage}
-                className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.1rem] font-light font-sans ml-4 border border-charcoal/20 px-3 py-1 rounded-full"
+                className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.12rem] font-light font-sans ml-4 border border-charcoal/20 px-3 py-1 rounded-full"
               >
                 <Globe size={14} />
                 <span>{i18n.language === 'en' ? '中文' : 'EN'}</span>
@@ -67,13 +67,13 @@ export default function Navbar() {
             <div className="md:hidden flex items-center space-x-4">
               <button 
                 onClick={toggleLanguage}
-                className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-[0.1rem] font-light font-sans border border-charcoal/20 px-2 py-1 rounded-full"
+                className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-[0.1rem] font-light font-sans border border-charcoal/20 px-3 py-1 rounded-full"
               >
-                <Globe size={14} />
+                <Globe size={12} />
                 <span>{i18n.language === 'en' ? '中文' : 'EN'}</span>
               </button>
-              <button onClick={() => setIsOpen(!isOpen)} className="text-charcoal hover:text-black focus:outline-none">
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              <button onClick={() => setIsOpen(!isOpen)} className="text-gold hover:text-gold-hover focus:outline-none">
+                {isOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
               </button>
             </div>
           </div>
@@ -82,12 +82,12 @@ export default function Navbar() {
         {/* Mobile menu */}
         {isOpen && (
           <div className="md:hidden bg-white border-b border-gray-100">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link to="/#home" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">{t('nav.home')}</Link>
-              <Link to="/residential" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">{t('nav.residential')}</Link>
-              <Link to="/commercial" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">{t('nav.commercial')}</Link>
-              <Link to="/gallery" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">{t('nav.gallery')}</Link>
-              <Link to="/#contact" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-charcoal hover:text-champagne hover:bg-gray-50">{t('nav.contact')}</Link>
+            <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3">
+              <Link to="/#home" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.home')}</Link>
+              <Link to="/residential" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.residential')}</Link>
+              <Link to="/commercial" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.commercial')}</Link>
+              <Link to="/gallery" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.gallery')}</Link>
+              <Link to="/#contact" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.contact')}</Link>
             </div>
           </div>
         )}

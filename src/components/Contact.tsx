@@ -16,9 +16,9 @@ export default function Contact() {
               {t('contact.subtitle')}
             </p>
 
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-gray-500 mt-1" />
+            <div className="space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4">
+                <MapPin className="w-6 h-6 text-gold mt-1" />
                 <div>
                   <h4 className="text-white font-medium mb-1">{t('contact.info.address_title')}</h4>
                   <p className="text-gray-400 leading-relaxed">
@@ -36,8 +36,8 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <Mail className="w-6 h-6 text-gray-500 mt-1" />
+              <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4">
+                <Mail className="w-6 h-6 text-gold mt-1" />
                 <div>
                   <h4 className="text-white font-medium mb-1">{t('contact.info.email_title')}</h4>
                   <a href="mailto:contact@idworkstudio.com" className="text-gray-400 hover:text-white transition-colors">
@@ -46,8 +46,8 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <Clock className="w-6 h-6 text-gray-500 mt-1" />
+              <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4">
+                <Clock className="w-6 h-6 text-gold mt-1" />
                 <div>
                   <h4 className="text-white font-medium mb-1">{t('contact.info.hours_title')}</h4>
                   <p className="text-gray-400">{t('contact.info.hours_weekday')}</p>
@@ -55,12 +55,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="pt-8">
+              <div className="pt-8 w-full flex justify-center lg:justify-start">
                 <a 
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-8 py-4 bg-[#25D366] text-white font-bold rounded-full hover:bg-[#128C7E] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="inline-flex items-center px-8 py-4 bg-gold text-dark-charcoal font-bold rounded-full hover:bg-gold-hover transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   {t('contact.info.whatsapp')}

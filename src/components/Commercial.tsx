@@ -38,7 +38,7 @@ export default function Commercial() {
         </script>
       </Helmet>
 
-      <div className="pt-20 bg-off-white min-h-screen">
+      <div className="pt-32 bg-off-white min-h-screen">
         {/* Hero Section */}
         <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-charcoal text-white">
           <div className="absolute inset-0 z-0">
@@ -70,7 +70,7 @@ export default function Commercial() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-champagne text-white text-sm uppercase tracking-widest hover:bg-champagne-hover transition-colors font-medium rounded-sm"
+              className="px-8 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.12rem] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[30px]"
             >
               {t('commercial_page.hero.cta')}
             </a>
@@ -212,7 +212,7 @@ export default function Commercial() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-champagne text-white text-sm uppercase tracking-widest hover:bg-champagne-hover transition-colors font-medium rounded-sm"
+              className="inline-block px-8 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.12rem] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[30px]"
             >
               {t('commercial_page.cta.button')}
             </a>

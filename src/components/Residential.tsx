@@ -46,13 +46,13 @@ export default function Residential() {
         </script>
       </Helmet>
 
-      <div className="pt-20 bg-off-white min-h-screen">
+      <div className="pt-32 bg-off-white min-h-screen">
         {/* Hero Section */}
         <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-charcoal text-white">
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=2000&auto=format&fit=crop" 
-              alt="Modern Warm Minimalist 5-room BTO Living Room at Woodleigh Glen with Lived-in Japandi style" 
+              alt="Modern Warm Minimalist Living Room" 
               className="w-full h-full object-cover opacity-50"
             />
             <div className="absolute inset-0 bg-black/40" />
@@ -86,7 +86,7 @@ export default function Residential() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-[#25D366] text-white text-sm uppercase tracking-widest hover:bg-[#128C7E] transition-colors font-bold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="px-10 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.12rem] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[30px] min-w-[200px]"
               >
                 {t('residential_page.hero.cta')}
               </a>
@@ -147,7 +147,7 @@ export default function Residential() {
               <div className="relative h-96">
                 <img 
                   src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1000&auto=format&fit=crop" 
-                  alt="Luxury Japandi Master Bedroom with platform storage in Singapore Resale Flat" 
+                  alt="Luxury Master Bedroom" 
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl max-w-xs hidden md:block">
@@ -203,7 +203,7 @@ export default function Residential() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-champagne text-white text-sm uppercase tracking-widest hover:bg-champagne-hover transition-colors font-medium rounded-sm"
+              className="inline-block px-8 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.12rem] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[30px]"
             >
               {t('residential_page.cta.button')}
             </a>
