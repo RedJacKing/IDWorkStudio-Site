@@ -8,7 +8,7 @@ export default function Hero() {
   const location = useLocation();
   const containerRef = useRef(null);
   
-  // Detect if we are on the residential page
+  // Case-insensitive check for the residential path
   const isResidential = location.pathname.toLowerCase().includes('residential');
 
   const { scrollYProgress } = useScroll({
@@ -29,7 +29,7 @@ export default function Hero() {
       {/* Background Layer */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         {/* We ONLY show this image tag if we are NOT on the residential page.
-            This prevents the "Double Image" ghosting. */}
+            On Residential, the image is handled strictly by CSS in index.css */}
         {!isResidential && (
           <>
             <img 
