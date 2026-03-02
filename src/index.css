@@ -16,7 +16,6 @@ body {
 }
 
 /* --- GLOBAL CLEANUP --- */
-/* This kills the ghost text and question marks everywhere */
 svg[class*='lucide-help'], 
 svg[class*='lucide-circle-help'], 
 .help-icon, 
@@ -39,18 +38,23 @@ header, nav {
 /* --- RESIDENTIAL BACKDROP --- */
 .hero-residential {
     position: relative !important;
-    /* Correct path for public/assets/ folder */
+    background-color: #000 !important;
+    /* Uses the 3rd Japandi pic from your assets folder */
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
                       url('/assets/residential-hero.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+    /* This creates the smooth parallax effect */
+    background-attachment: fixed !important; 
 }
 
-/* Mobile Fix */
+/* Mobile Fixes */
 @media (max-width: 768px) {
     .hero-residential {
-        padding-top: 160px !important; 
+        padding-top: 160px !important;
+        /* Mobile browsers handle 'scroll' better than 'fixed' */
+        background-attachment: scroll !important; 
     }
     .pt-40 {
         padding-top: 150px !important;
