@@ -37,7 +37,7 @@ header, nav {
     z-index: 50;
 }
 
-/* Pushes general content down to avoid header overlap */
+/* Restore standard spacing without 'res-hero' specific overrides */
 header + *, nav + *, main {
     margin-top: 80px !important; 
 }
@@ -46,35 +46,4 @@ header + *, nav + *, main {
     header + *, nav + *, main {
         margin-top: 110px !important; 
     }
-}
-
-/* --- RESIDENTIAL JAPANDI BACKDROP --- */
-.res-hero {
-    position: relative;
-    /* This path assumes image is in public/asset/residential-hero.jpg */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-                      url('/asset/residential-hero.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 65vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Fix for mobile overlap - Pushes the title text down */
-@media (max-width: 768px) {
-    .res-hero {
-        padding-top: 140px !important; 
-    }
-}
-
-/* Ensure all text inside the hero is forced to White */
-.res-hero h1, 
-.res-hero p, 
-.res-hero span, 
-.res-hero a:not([class*="bg-gold"]) {
-    color: white !important;
 }
