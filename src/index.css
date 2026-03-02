@@ -14,3 +14,13 @@ body {
   background-color: var(--color-off-white);
   color: var(--color-charcoal);
 }
+
+/* This class only triggers on the Residential Page now */
+@media (max-width: 768px) {
+    .res-hero {
+        /* This clears the logo/nav bar on mobile only */
+        padding-top: 160px !important; 
+    }
+}
+
+/* Home and Gallery pages will use standard 'pt-32' from Tailwind */
