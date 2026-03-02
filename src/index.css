@@ -15,17 +15,20 @@ body {
   color: var(--color-charcoal);
 }
 
-/* This class only triggers on the Residential Page now */
-@media (max-width: 768px) {
-    .res-hero {
-        /* This clears the logo/nav bar on mobile only */
-        padding-top: 160px !important; 
-    }
+/* --- 1. GLOBAL CLEANUP (Affects All Pages) --- */
+/* Removes stray icons and ghost watermarks site-wide */
+svg[class*='lucide-help'], 
+svg[class*='lucide-circle-help'], 
+.help-icon, 
+.hero-watermark, 
+#help-button,
+[alt*="modern warm minimalist"] { 
+    display: none !important; 
+    visibility: hidden !important; 
+    opacity: 0 !important;
 }
 
-/* Home and Gallery pages will use standard 'pt-32' from Tailwind */
-
-/* --- GLOBAL HEADER OVERLAP FIX --- */
+/* Fixes the header position for all pages */
 header, nav {
     position: fixed !important;
     top: 0 !important;
@@ -33,17 +36,20 @@ header, nav {
     z-index: 50;
 }
 
-/* --- RESIDENTIAL SPECIFIC --- */
+/* --- 2. RESIDENTIAL ONLY (Does NOT affect Home/Gallery) --- */
 .hero-residential {
+    position: relative;
+    /* This only loads the Japandi pic for the Residential class */
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
                       url('/asset/residential-hero.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
+/* Mobile Fix: Only pushes text down if the 'hero-residential' class is present */
 @media (max-width: 768px) {
-    /* This forces all pages using the Hero to drop down on mobile */
-    .hero-residential, .pt-40 {
-        padding-top: 150px !important; 
+    .hero-residential {
+        padding-top: 160px !important; 
     }
 }
