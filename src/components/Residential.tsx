@@ -50,7 +50,8 @@ export default function Residential() {
       <div className="pt-40 bg-off-white min-h-screen">
         
         {/* Hero Section */}
-        <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-charcoal text-white">
+        /* ISOLATED FIX: Matching Landing Page height (90vh) and standard padding (pt-32) */
+<section className="relative pt-32 pb-32 min-h-[90vh] flex items-center justify-center overflow-hidden bg-charcoal text-white">
           <div className="absolute inset-0 z-0">
             {/* FIXED PATH: Points to your local public/assets folder */}
             <img 

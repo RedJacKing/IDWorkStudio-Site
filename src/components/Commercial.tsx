@@ -40,7 +40,8 @@ export default function Commercial() {
 
       <div className="pt-32 bg-off-white min-h-screen">
         {/* Hero Section */}
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-charcoal text-white">
+        /* ISOLATED FIX: Matching Landing Page height (90vh) and standard padding (pt-32) */
+<section className="relative pt-32 pb-32 min-h-[90vh] flex items-center justify-center overflow-hidden bg-charcoal text-white">
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop" 
