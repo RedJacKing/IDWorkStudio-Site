@@ -15,12 +15,14 @@ body {
   color: var(--color-charcoal);
 }
 
-/* --- 1. GLOBAL CLEANUP --- */
+/* --- GLOBAL CLEANUP --- */
+/* This kills the ghost text and question marks everywhere */
 svg[class*='lucide-help'], 
 svg[class*='lucide-circle-help'], 
 .help-icon, 
 .hero-watermark, 
 #help-button,
+span[class*="bg-champagne/10"],
 [alt*="modern warm minimalist"] { 
     display: none !important; 
     visibility: hidden !important; 
@@ -34,10 +36,10 @@ header, nav {
     z-index: 50;
 }
 
-/* --- 2. RESIDENTIAL BACKDROP --- */
+/* --- RESIDENTIAL BACKDROP --- */
 .hero-residential {
-    position: relative;
-    /* Absolute path /assets/ is the most reliable for Vite deployments */
+    position: relative !important;
+    /* Correct path for public/assets/ folder */
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
                       url('/assets/residential-hero.jpg') !important;
     background-size: cover !important;
@@ -45,7 +47,7 @@ header, nav {
     background-repeat: no-repeat !important;
 }
 
-/* Mobile Overlap Fix */
+/* Mobile Fix */
 @media (max-width: 768px) {
     .hero-residential {
         padding-top: 160px !important; 

@@ -88,7 +88,7 @@ const resources = {
       },
       "residential_page": {
         "hero": {
-          "badge": "2026 Design Trends",
+          "badge": "",
           "title": "Modern Visionary Living <br/> for Singapore Homeowners",
           "subtitle": "BCA-Registered & HDB-Approved Partner. We handle all HDB permits and structural submissions for your peace of mind.",
           "cta": "Book a Home Consultation"
@@ -332,7 +332,7 @@ const resources = {
       },
       "residential_page": {
         "hero": {
-          "badge": "2026 设计趋势",
+          "badge": "",
           "title": "现代远见生活 <br/> 为新加坡业主打造",
           "subtitle": "BCA注册与HDB认可的合作伙伴。我们处理所有HDB许可证和结构提交，让您高枕无忧。",
           "cta": "预约家居咨询"
@@ -474,7 +474,7 @@ const resources = {
           },
           "q2": {
             "q": "BCA注册公司如何确保商业安全合规？",
-            "a": "作为BCA注册公司，我们通过严格的3步流程确保合规性：<br/><br/>1. <strong>提交前检查：</strong> 我们的合格人员(QP)根据当前的SCDF消防规范和BCA无障碍标准审查所有设计。<br/>2. <strong>许可证管理：</strong> 在工作开始前，我们处理向BCA、URA和FSSD的所有必要提交。<br/>3. <strong>现场监督：</strong> 持牌CoreTrade人员监督关键工程，确保其符合批准的规范和安全法规。"
+            "a": "作为BCA注册公司，我们通过严格的3步流程确保合规性：<br/><br/>1. <strong>提交前检查：</strong> 我们的合格人员(QP)根据当前的SCDF消防规范和BCA无障碍标准审查所有设计。<br/>2. <strong>许可证管理：</strong> 在工作开始前，我们处理向BCA、URA和FSSD的所有必要提交。<br/>3. <strong>现场监督：</strong> 持牌CoreTrade人员监督关键工程，确保其符合批准的规范 and 安全法规。"
           }
         },
         "cta": {
