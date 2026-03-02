@@ -82,3 +82,28 @@ svg[class*='lucide-circle-help'],
     opacity: 0 !important;
     pointer-events: none !important;
 }
+
+/* --- RESIDENTIAL JAPANDI BACKDROP --- */
+
+/* This targets the section on your Residential page */
+.res-hero {
+    position: relative;
+    /* This path assumes you saved the file in public/asset/ */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                      url('/asset/residential-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 65vh; /* Gives it that professional tall look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white !important;
+}
+
+/* Ensure the "HDB-APPROVED" text stays visible and white */
+.res-hero h1, .res-hero p, .res-hero span {
+    color: white !important;
+}
