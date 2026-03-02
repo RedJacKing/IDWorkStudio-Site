@@ -15,7 +15,7 @@ body {
   color: var(--color-charcoal);
 }
 
-/* --- 1. GLOBAL CLEANUP (Affects All Pages) --- */
+/* --- 1. GLOBAL CLEANUP --- */
 svg[class*='lucide-help'], 
 svg[class*='lucide-circle-help'], 
 .help-icon, 
@@ -27,7 +27,6 @@ svg[class*='lucide-circle-help'],
     opacity: 0 !important;
 }
 
-/* Fixes the header position for all pages */
 header, nav {
     position: fixed !important;
     top: 0 !important;
@@ -35,10 +34,10 @@ header, nav {
     z-index: 50;
 }
 
-/* --- 2. RESIDENTIAL ONLY (Does NOT affect Home/Gallery) --- */
+/* --- 2. RESIDENTIAL BACKDROP --- */
 .hero-residential {
     position: relative;
-    /* Updated path to /assets/ folder */
+    /* Absolute path /assets/ is the most reliable for Vite deployments */
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
                       url('/assets/residential-hero.jpg') !important;
     background-size: cover !important;
@@ -46,13 +45,11 @@ header, nav {
     background-repeat: no-repeat !important;
 }
 
-/* Mobile Fix: Only pushes text down on mobile */
+/* Mobile Overlap Fix */
 @media (max-width: 768px) {
     .hero-residential {
         padding-top: 160px !important; 
     }
-
-    /* General push-down for other pages like Home/Gallery */
     .pt-40 {
         padding-top: 150px !important;
     }

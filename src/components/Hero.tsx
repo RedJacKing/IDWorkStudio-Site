@@ -8,8 +8,8 @@ export default function Hero() {
   const location = useLocation();
   const containerRef = useRef(null);
   
-  // Logic: Detect if we are on the residential page
-  const isResidential = location.pathname === '/residential';
+  // Case-insensitive check for the residential path
+  const isResidential = location.pathname.toLowerCase().includes('residential');
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -22,7 +22,6 @@ export default function Hero() {
     <section 
       id="home" 
       ref={containerRef}
-      /* Dynamically adds the 'hero-residential' class only on the residential page */
       className={`relative min-h-screen flex items-center justify-center overflow-hidden pb-32 ${
         isResidential ? 'hero-residential' : 'pt-40 md:pt-32 bg-black'
       }`}
@@ -30,11 +29,11 @@ export default function Hero() {
       {/* Background Layer with Parallax */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <img 
-          /* Updated path to /assets/ folder */
           src={isResidential ? "/assets/residential-hero.jpg" : "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"} 
           alt="Interior Design" 
           className="w-full h-full object-cover opacity-70 scale-110"
         />
+        {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black/40" />
       </motion.div>
 
