@@ -1,11 +1,16 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Hero() {
   const { t } = useTranslation();
+  const location = useLocation();
   const containerRef = useRef(null);
+  
+  // High-reliability check for the residential path
+  const isResidential = location.pathname.toLowerCase().includes('residential');
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
@@ -17,27 +22,31 @@ export default function Hero() {
     <section 
       id="home" 
       ref={containerRef}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32"
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden pb-32 ${
+        isResidential ? 'hero-residential' : 'pt-40 md:pt-32 bg-black'
+      }`}
     >
-      {/* Background Image with Overlay and Parallax */}
-      <motion.div 
-        style={{ y }}
-        className="absolute inset-0 z-0"
-      >
+      {/* Background Layer with Parallax */}
+      <motion.div style={{ y }} className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
-          alt="Modern Interior" 
-          className="w-full h-full object-cover object-center opacity-60 scale-110"
+          /* ROOT PATH CHECK: 
+             If on residential page, use your local jpg.
+             Otherwise, use the default Unsplash image.
+          */
+          src={isResidential ? "/assets/residential-hero.jpg" : "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"} 
+          alt="Interior Design" 
+          className="w-full h-full object-cover opacity-70 scale-110"
         />
+        {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/40" />
       </motion.div>
 
-      <div className="relative z-20 text-center px-4 max-w-4xl mx-auto mt-8 md:mt-12">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-12">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-3xl md:text-7xl lg:text-8xl font-serif text-white mb-6 md:mb-8 tracking-tight leading-tight md:leading-none"
+          className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 tracking-tight leading-none"
         >
           {t('hero.title_main')}<span className="italic font-light text-champagne">{t('hero.title_sub')}</span>
         </motion.h1>
@@ -51,50 +60,14 @@ export default function Hero() {
           {t('hero.subtitle')}
         </motion.p>
 
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-           className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-[12px]"
-        >
-          <a 
-            href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PListingContractor.jsp" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            title="Search for ID WORK STUDIO"
-            className="w-full sm:w-auto px-[15px] py-2 my-[5px] sm:my-0 border border-gold/50 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.1rem] backdrop-blur-sm hover:bg-gold hover:text-dark-charcoal transition-all shadow-[0_0_15px_rgba(197,160,89,0.1)]"
-          >
-            {t('accreditation.hdb')}
-          </a>
-          <a 
-            href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="w-full sm:w-auto px-[15px] py-2 my-[5px] sm:my-0 border border-white/30 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.1rem] backdrop-blur-sm hover:bg-white hover:text-dark-charcoal transition-all"
-          >
-            {t('accreditation.bca')}
-          </a>
-        </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-[12px]"
-        >
-          <Link 
-            to="/commercial"
-            className="w-full sm:w-auto px-10 py-4 my-[10px] sm:my-0 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.12rem] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[30px] min-w-[200px]"
-          >
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <Link to="/commercial" className="w-full sm:w-auto px-10 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-widest font-bold rounded-full">
             {t('nav.commercial')}
           </Link>
-          <Link 
-            to="/residential"
-            className="w-full sm:w-auto px-10 py-4 my-[10px] sm:my-0 bg-transparent text-white text-sm uppercase tracking-[0.12rem] hover:bg-white/10 transition-all duration-300 font-bold border border-white/50 rounded-[30px] backdrop-blur-[5px] min-w-[200px]"
-          >
+          <Link to="/residential" className="w-full sm:w-auto px-10 py-4 bg-transparent text-white text-sm uppercase tracking-widest font-bold border border-white/50 rounded-full backdrop-blur-sm">
             {t('nav.residential')}
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
