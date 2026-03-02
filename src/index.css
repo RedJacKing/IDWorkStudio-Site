@@ -24,3 +24,26 @@ body {
 }
 
 /* Home and Gallery pages will use standard 'pt-32' from Tailwind */
+
+/* --- GLOBAL HEADER OVERLAP FIX --- */
+header, nav {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100%;
+    z-index: 50;
+}
+
+/* --- RESIDENTIAL SPECIFIC --- */
+.hero-residential {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                      url('/asset/residential-hero.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+@media (max-width: 768px) {
+    /* This forces all pages using the Hero to drop down on mobile */
+    .hero-residential, .pt-40 {
+        padding-top: 150px !important; 
+    }
+}
