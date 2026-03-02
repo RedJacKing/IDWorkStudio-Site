@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
-// HelpCircle removed to eliminate the question mark icon
+// Strictly removed HelpCircle and MapPin to eliminate all stray icons
 import { Home, Layout, Box, ShieldCheck, TrendingUp } from 'lucide-react';
 
 export default function Residential() {
@@ -42,7 +42,6 @@ export default function Residential() {
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=2000&auto=format&fit=crop" 
-              // Ghost text removed from alt attribute
               alt="ID Work Studio Residential Interior Design Singapore" 
               className="w-full h-full object-cover opacity-50"
             />
@@ -140,7 +139,7 @@ export default function Residential() {
           </div>
         </section>
 
-        {/* Trust & Insights */}
+        {/* Trust & Peace of Mind */}
         <section className="py-20 bg-off-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-serif mb-12 text-center text-charcoal">Trust & Peace of Mind</h2>
