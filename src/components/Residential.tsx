@@ -14,26 +14,11 @@ export default function Residential() {
     "name": "ID Work Studio Residential Design",
     "description": "Award-Winning HDB & BCA Registered Interior Design specializing in Modern BTO & Resale Renovation in Singapore.",
     "areaServed": "Singapore",
-    "serviceType": [
-      "BTO Renovation Solutions",
-      "Resale Flat Transformation",
-      "Kitchen & Bath Remodeling",
-      "Full-house Carpentry",
-      "Warm Luxury Interior Design",
-      "Japandi Interior Design"
-    ],
-    "knowsAbout": [
-      "Tengah BTO Renovation",
-      "Bidadari Estate Design",
-      "Tampines North Layouts",
-      "Smart-integrated storage solutions"
-    ],
     "provider": {
       "@type": "Organization",
       "name": "ID Work Studio",
       "url": "https://idworkstudio.com"
-    },
-    "license": "HDB-Approved & BCA-Registered"
+    }
   };
 
   return (
@@ -47,7 +32,7 @@ export default function Residential() {
       </Helmet>
 
       <div className="bg-off-white min-h-screen">
-        {/* Hero Section - FIXED: pt-40 and min-h-screen to match landing page */}
+        {/* FIXED HERO ONLY: Matches landing page height and padding */}
         <section className="relative pt-40 pb-32 min-h-screen flex items-center justify-center overflow-hidden bg-charcoal text-white">
           <div className="absolute inset-0 z-0">
             <img 
@@ -86,7 +71,7 @@ export default function Residential() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.12rem] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[30px] min-w-[200px]"
+                className="px-10 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-widest hover:bg-gold-hover transition-all duration-300 font-bold rounded-[30px] min-w-[200px]"
               >
                 {t('residential_page.hero.cta')}
               </a>
@@ -94,10 +79,84 @@ export default function Residential() {
           </div>
         </section>
 
-        {/* The rest of the file remains unchanged */}
+        {/* PRESERVED CONTENT: Original specialists section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* ... */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-serif mb-6 text-charcoal">{t('residential_page.specialists.title')}</h2>
+                <div className="space-y-6">
+                  <div className="flex">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-12 w-12 rounded-md bg-off-white text-champagne border border-champagne/20">
+                        <Home />
+                      </div>
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-lg font-medium text-charcoal">{t('residential_page.specialists.items.1.title')}</h3>
+                      <p className="mt-2 text-base text-gray-500">{t('residential_page.specialists.items.1.desc')}</p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-12 w-12 rounded-md bg-off-white text-champagne border border-champagne/20">
+                        <Layout />
+                      </div>
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-lg font-medium text-charcoal">{t('residential_page.specialists.items.2.title')}</h3>
+                      <p className="mt-2 text-base text-gray-500">{t('residential_page.specialists.items.2.desc')}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative h-96">
+                <img 
+                   src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1000&auto=format&fit=crop" 
+                  alt="Luxury Master Bedroom" 
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PRESERVED CONTENT: Original insights/FAQ section */}
+        <section className="py-20 bg-off-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-3xl font-serif mb-12 text-center text-charcoal">{t('residential_page.insights.title')}</h2>
+            <div className="space-y-6">
+              <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-champagne">
+                <h3 className="text-xl font-bold text-charcoal mb-3 flex items-start">
+                  <TrendingUp className="w-6 h-6 text-champagne mr-3 mt-1 flex-shrink-0" />
+                  {t('residential_page.insights.q1.q')}
+                </h3>
+                <p className="text-gray-600 leading-relaxed pl-9" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q1.a') }} />
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-champagne">
+                <h3 className="text-xl font-bold text-charcoal mb-3 flex items-start">
+                  <ShieldCheck className="w-6 h-6 text-champagne mr-3 mt-1 flex-shrink-0" />
+                  {t('residential_page.insights.q3.q')}
+                </h3>
+                <p className="text-gray-600 leading-relaxed pl-9" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q3.a') }} />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PRESERVED CONTENT: Original CTA section */}
+        <section id="contact" className="py-20 bg-charcoal text-white text-center">
+          <div className="max-w-3xl mx-auto px-4">
+            <h2 className="text-3xl font-serif mb-6">{t('residential_page.cta.title')}</h2>
+            <p className="text-gray-300 mb-8">{t('residential_page.cta.subtitle')}</p>
+            <a 
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-widest hover:bg-gold-hover transition-all duration-300 font-bold rounded-[30px]"
+            >
+              {t('residential_page.cta.button')}
+            </a>
           </div>
         </section>
       </div>
