@@ -13,19 +13,22 @@
 body {
   background-color: var(--color-off-white);
   color: var(--color-charcoal);
+  overflow-x: hidden; /* Stops mobile side-scrolling */
 }
 
-/* --- 1. GLOBAL CLEANUP --- */
-svg[class*='lucide-help'], 
-svg[class*='lucide-circle-help'], 
-.help-icon, 
-.hero-watermark, 
-#help-button,
-span[class*="bg-champagne/10"],
-[alt*="modern warm minimalist"] { 
+/* --- GLOBAL CLEANUP --- */
+svg[class*='lucide-help'], .help-icon, .hero-watermark, #help-button, [alt*="modern warm minimalist"] { 
     display: none !important; 
-    visibility: hidden !important; 
-    opacity: 0 !important;
+}
+
+/* --- RESIDENTIAL BACKDROP (MOBILE STABLE) --- */
+.hero-residential {
+    background-color: #1A1A1A !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('/assets/residential-hero.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
 header, nav {
@@ -33,17 +36,4 @@ header, nav {
     top: 0 !important;
     width: 100%;
     z-index: 50;
-}
-
-/* --- RESIDENTIAL BACKDROP --- */
-.hero-residential {
-    position: relative !important;
-    background-color: #000 !important;
-    /* Ensure this path matches public/assets/residential-hero.jpg */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-                      url('/assets/residential-hero.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
 }

@@ -8,8 +8,8 @@ export default function Hero() {
   const location = useLocation();
   const containerRef = useRef(null);
   
-  // IMPROVED CHECK: This matches /residential, /residential/, or /Residential
-  const isResidential = /residential/i.test(location.pathname);
+  // High-reliability check for the residential path
+  const isRes = location.pathname.toLowerCase().includes('residential');
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -22,15 +22,14 @@ export default function Hero() {
     <section 
       id="home" 
       ref={containerRef}
-      className={`relative min-h-screen flex items-center justify-center overflow-hidden pb-32 ${
-        isResidential ? 'hero-residential' : 'pt-40 md:pt-32 bg-black'
+      /* Added pt-32 to ensure your logo/nav never covers the text on mobile */
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-32 ${
+        isRes ? 'hero-residential' : 'bg-black'
       }`}
     >
       {/* Background Layer */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
-        {/* We ONLY show this image tag if we are NOT on the residential page.
-            On Residential, the image is handled strictly by CSS in index.css */}
-        {!isResidential && (
+        {!isRes && (
           <>
             <img 
               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
@@ -44,42 +43,24 @@ export default function Hero() {
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-12">
         <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 tracking-tight leading-none"
+          className="text-4xl md:text-7xl lg:text-8xl font-serif text-white mb-8 tracking-tight leading-none"
         >
-          {/* Force the Residential Title if the URL matches */}
-          {isResidential ? (
+          {isRes ? (
             <>Modern Visionary Living <br/> <span className="italic font-light text-champagne">for Singapore Homeowners</span></>
           ) : (
             <>{t('hero.title_main')}<span className="italic font-light text-champagne">{t('hero.title_sub')}</span></>
           )}
         </motion.h1>
         
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl mx-auto font-light tracking-wide"
-        >
-          {isResidential ? t('residential_page.hero.subtitle') : t('hero.subtitle')}
+        <motion.p className="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl mx-auto font-light tracking-wide">
+          {isRes ? t('residential_page.hero.subtitle') : t('hero.subtitle')}
         </motion.p>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
-          <a href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PListingContractor.jsp" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-4 py-2 border border-white/30 text-white rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-sm hover:bg-gold transition-all">
-            {t('accreditation.hdb')}
-          </a>
-          <a href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-4 py-2 border border-white/30 text-white rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-sm hover:bg-white/10 transition-all">
-            {t('accreditation.bca')}
-          </a>
-        </div>
-
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Link to="/commercial" className="w-full sm:w-auto px-10 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-widest font-bold rounded-full">
+          <Link to="/commercial" className="w-full sm:w-auto px-10 py-4 bg-gold text-dark-charcoal text-sm uppercase font-bold rounded-full">
             {t('nav.commercial')}
           </Link>
-          <Link to="/residential" className="w-full sm:w-auto px-10 py-4 bg-transparent text-white text-sm uppercase tracking-widest font-bold border border-white/50 rounded-full backdrop-blur-sm">
+          <Link to="/residential" className="w-full sm:w-auto px-10 py-4 bg-transparent text-white text-sm uppercase font-bold border border-white/50 rounded-full backdrop-blur-sm">
             {t('nav.residential')}
           </Link>
         </div>
