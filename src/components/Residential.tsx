@@ -46,14 +46,17 @@ export default function Residential() {
         </script>
       </Helmet>
 
-      <div className="pt-32 bg-off-white min-h-screen">
+      {/* ISOLATED FIX: pt-40 only applies to this page wrapper */}
+      <div className="pt-40 bg-off-white min-h-screen">
+        
         {/* Hero Section */}
         <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-charcoal text-white">
           <div className="absolute inset-0 z-0">
+            {/* FIXED PATH: Points to your local public/assets folder */}
             <img 
-              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=2000&auto=format&fit=crop" 
-              alt="Modern Warm Minimalist Living Room" 
-              className="w-full h-full object-cover opacity-50"
+              src="/assets/residential-hero.jpg" 
+              alt="ID Work Studio Residential Design" 
+              className="w-full h-full object-cover opacity-60"
             />
             <div className="absolute inset-0 bg-black/40" />
           </div>
