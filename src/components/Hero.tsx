@@ -15,10 +15,9 @@ export default function Hero() {
 
   return (
     <section 
-  id="home" 
-  ref={containerRef}
-  className="res-hero relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-12 pb-32"
->
+      id="home" 
+      ref={containerRef}
+      className="res-hero relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-12 pb-32"
     >
       {/* Background Image with Overlay and Parallax */}
       <motion.div 
@@ -26,10 +25,9 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <img 
-  src="/asset/residential-hero.jpg" 
-  alt="Modern Japandi Interior" 
-  className="w-full h-full object-cover opacity-80 scale-110"
-/>
+          src="/asset/residential-hero.jpg" 
+          alt="Modern Japandi Interior" 
+          className="w-full h-full object-cover opacity-80 scale-110"
         />
         <div className="absolute inset-0 bg-black/40" />
       </motion.div>
