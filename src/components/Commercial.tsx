@@ -39,7 +39,7 @@ export default function Commercial() {
       </Helmet>
 
       <div className="bg-off-white min-h-screen">
-        {/* HERO SECTION - ONLY ADJUSTED HEIGHT AND PADDING */}
+        {/* Hero Section - ADJUSTED ONLY HEIGHT AND PADDING TO MATCH LANDING */}
         <section className="relative pt-40 pb-32 min-h-screen flex items-center justify-center overflow-hidden bg-charcoal text-white">
           <div className="absolute inset-0 z-0">
             <img 
@@ -79,7 +79,7 @@ export default function Commercial() {
           </div>
         </section>
 
-        {/* SPECIALISTS SECTION - RESTORED ORIGINAL */}
+        {/* Specialists Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -107,7 +107,7 @@ export default function Commercial() {
           </div>
         </section>
 
-        {/* FAQ SECTION - RESTORED ORIGINAL */}
+        {/* FAQ Section */}
         <section className="py-20 bg-off-white">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl font-serif mb-12 text-center text-charcoal">{t('commercial_page.faq.title')}</h2>
@@ -131,7 +131,7 @@ export default function Commercial() {
           </div>
         </section>
 
-        {/* CTA SECTION - RESTORED ORIGINAL */}
+        {/* CTA Section */}
         <section id="contact" className="py-20 bg-charcoal text-white text-center">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-serif mb-6">{t('commercial_page.cta.title')}</h2>
