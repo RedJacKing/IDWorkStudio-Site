@@ -35,28 +35,15 @@ header, nav {
     z-index: 50;
 }
 
-/* --- 2. RESIDENTIAL BACKDROP --- */
+/* --- RESIDENTIAL BACKDROP --- */
 .hero-residential {
     position: relative !important;
     background-color: #000 !important;
-    /* Correct path for your 3rd Japandi image */
+    /* Ensure this path matches public/assets/residential-hero.jpg */
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
                       url('/assets/residential-hero.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    /* This creates the smooth parallax effect instead of the React img tag */
-    background-attachment: fixed !important; 
-}
-
-/* Mobile Overlap Fix */
-@media (max-width: 768px) {
-    .hero-residential {
-        padding-top: 160px !important;
-        /* Fixed backgrounds don't work well on mobile, so we switch to scroll */
-        background-attachment: scroll !important; 
-    }
-    .pt-40 {
-        padding-top: 150px !important;
-    }
+    background-attachment: fixed !important;
 }

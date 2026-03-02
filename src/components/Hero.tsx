@@ -8,8 +8,8 @@ export default function Hero() {
   const location = useLocation();
   const containerRef = useRef(null);
   
-  // Case-insensitive check for the residential path
-  const isResidential = location.pathname.toLowerCase().includes('residential');
+  // IMPROVED CHECK: This matches /residential, /residential/, or /Residential
+  const isResidential = /residential/i.test(location.pathname);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -49,7 +49,12 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 tracking-tight leading-none"
         >
-          {t('hero.title_main')}<span className="italic font-light text-champagne">{t('hero.title_sub')}</span>
+          {/* Force the Residential Title if the URL matches */}
+          {isResidential ? (
+            <>Modern Visionary Living <br/> <span className="italic font-light text-champagne">for Singapore Homeowners</span></>
+          ) : (
+            <>{t('hero.title_main')}<span className="italic font-light text-champagne">{t('hero.title_sub')}</span></>
+          )}
         </motion.h1>
         
         <motion.p 
@@ -58,7 +63,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl mx-auto font-light tracking-wide"
         >
-          {t('hero.subtitle')}
+          {isResidential ? t('residential_page.hero.subtitle') : t('hero.subtitle')}
         </motion.p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
