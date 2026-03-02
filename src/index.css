@@ -10,40 +10,49 @@
   --color-dark-charcoal: #1A1A1A;
 }
 
-body {
-  background-color: var(--color-off-white);
-  color: var(--color-charcoal);
-}
-
-/* --- HIDE HELP ICONS & GHOST TEXT --- */
-svg[class*='lucide-help'], 
-svg[class*='lucide-circle-help'], 
-.help-icon, 
-.hero-watermark,
-#help-button,
-[alt*="modern warm minimalist"] { 
-    display: none !important; 
-    visibility: hidden !important; 
-    opacity: 0 !important;
-    pointer-events: none !important;
-}
-
-/* --- HEADER FIX --- */
+/* --- GLOBAL FIXES --- */
 header, nav {
     position: fixed !important;
     top: 0 !important;
-    left: 0;
     width: 100%;
     z-index: 50;
 }
 
-/* Restore standard spacing without 'res-hero' specific overrides */
 header + *, nav + *, main {
     margin-top: 80px !important; 
 }
 
 @media (max-width: 768px) {
     header + *, nav + *, main {
-        margin-top: 110px !important; 
+        margin-top: 100px !important; 
+    }
+}
+
+/* Hide Icons & Ghost Watermarks */
+svg[class*='lucide-help'], .help-icon, .hero-watermark, #help-button { 
+    display: none !important; 
+}
+
+/* --- SET 1: LANDING PAGE (Original Style) --- */
+.hero-landing {
+    background-color: #000000; /* Original Black */
+    position: relative;
+}
+
+/* --- SET 2: RESIDENTIAL PAGE (Japandi Style) --- */
+.hero-residential {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                      url('/asset/residential-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 65vh;
+}
+
+/* Mobile Fix ONLY for Residential Page */
+@media (max-width: 768px) {
+    .hero-residential {
+        padding-top: 140px !important;
     }
 }
