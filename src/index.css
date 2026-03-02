@@ -15,95 +15,66 @@ body {
   color: var(--color-charcoal);
 }
 
-/* --- ADD THIS CODE BELOW --- */
-
-/* Force-hide any Lucide help/question icons and ghost watermarks */
+/* --- HIDE HELP ICONS & GHOST TEXT --- */
 svg[class*='lucide-help'], 
 svg[class*='lucide-circle-help'], 
 .help-icon, 
 .hero-watermark,
-#help-button { 
+#help-button,
+[alt*="modern warm minimalist"] { 
     display: none !important; 
     visibility: hidden !important; 
     opacity: 0 !important;
     pointer-events: none !important;
 }
 
-/* --- FINAL SAFETY CLEANUP --- */
-
-/* This hides any help/question mark icons site-wide */
-svg[class*='lucide-help'], 
-svg[class*='lucide-circle-help'], 
-.help-icon, 
-#help-button { 
-    display: none !important; 
-    visibility: hidden !important; 
-}
-
-/* This hides the ghost text overlay */
-.hero-watermark, 
-[alt*="modern warm minimalist"] {
-    display: none !important;
-    opacity: 0 !important;
-}
-
-/* --- UPDATED FIX --- */
-
-/* 1. Ensure the header stays at the absolute top */
+/* --- HEADER FIX --- */
 header, nav {
     position: fixed !important;
     top: 0 !important;
     left: 0;
     width: 100%;
-    z-index: 50; /* Keeps it above content */
+    z-index: 50;
 }
 
-/* 2. Push only the content down, NOT the body */
-/* This targets the first element after the header to clear the overlap */
+/* Pushes general content down to avoid header overlap */
 header + *, nav + *, main {
     margin-top: 80px !important; 
 }
 
-/* 3. Mobile specific adjustment */
 @media (max-width: 768px) {
     header + *, nav + *, main {
-        margin-top: 110px !important; /* Adjust based on your mobile header height */
+        margin-top: 110px !important; 
     }
 }
 
-/* Keep your existing icon-hiding code below */
-svg[class*='lucide-help'], 
-svg[class*='lucide-circle-help'], 
-.help-icon, 
-.hero-watermark,
-#help-button { 
-    display: none !important; 
-    visibility: hidden !important; 
-    opacity: 0 !important;
-    pointer-events: none !important;
-}
-
 /* --- RESIDENTIAL JAPANDI BACKDROP --- */
-
-/* This targets the section on your Residential page */
 .res-hero {
     position: relative;
-    /* This path assumes you saved the file in public/asset/ */
+    /* This path assumes image is in public/asset/residential-hero.jpg */
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-                      url('/asset/residential-hero.jpg');
+                      url('/asset/residential-hero.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 65vh; /* Gives it that professional tall look */
+    min-height: 65vh; 
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white !important;
 }
 
-/* Ensure the "HDB-APPROVED" text stays visible and white */
-.res-hero h1, .res-hero p, .res-hero span {
+/* Fix for mobile overlap - Pushes the title text down */
+@media (max-width: 768px) {
+    .res-hero {
+        padding-top: 140px !important; 
+    }
+}
+
+/* Ensure all text inside the hero is forced to White */
+.res-hero h1, 
+.res-hero p, 
+.res-hero span, 
+.res-hero a:not([class*="bg-gold"]) {
     color: white !important;
 }

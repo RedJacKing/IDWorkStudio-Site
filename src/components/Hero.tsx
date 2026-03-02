@@ -19,20 +19,14 @@ export default function Hero() {
       ref={containerRef}
       className="res-hero relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-12 pb-32"
     >
-      {/* Background Image with Overlay and Parallax */}
+      {/* Background Overlay Layer - Handles the Parallax effect */}
       <motion.div 
         style={{ y }}
-        className="absolute inset-0 z-0"
-      >
-        <img 
-          src="/asset/residential-hero.jpg" 
-          alt="Modern Japandi Interior" 
-          className="w-full h-full object-cover opacity-80 scale-110"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-      </motion.div>
+        className="absolute inset-0 z-0 bg-black/20"
+      />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-12">
+        {/* Main Title - Added back in */}
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
