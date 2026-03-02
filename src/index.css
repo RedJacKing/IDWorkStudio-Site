@@ -15,7 +15,7 @@ body {
   color: var(--color-charcoal);
 }
 
-/* --- GLOBAL CLEANUP --- */
+/* --- 1. GLOBAL CLEANUP --- */
 svg[class*='lucide-help'], 
 svg[class*='lucide-circle-help'], 
 .help-icon, 
@@ -35,25 +35,25 @@ header, nav {
     z-index: 50;
 }
 
-/* --- RESIDENTIAL BACKDROP --- */
+/* --- 2. RESIDENTIAL BACKDROP --- */
 .hero-residential {
     position: relative !important;
     background-color: #000 !important;
-    /* Uses the 3rd Japandi pic from your assets folder */
+    /* Correct path for your 3rd Japandi image */
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
                       url('/assets/residential-hero.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    /* This creates the smooth parallax effect */
+    /* This creates the smooth parallax effect instead of the React img tag */
     background-attachment: fixed !important; 
 }
 
-/* Mobile Fixes */
+/* Mobile Overlap Fix */
 @media (max-width: 768px) {
     .hero-residential {
         padding-top: 160px !important;
-        /* Mobile browsers handle 'scroll' better than 'fixed' */
+        /* Fixed backgrounds don't work well on mobile, so we switch to scroll */
         background-attachment: scroll !important; 
     }
     .pt-40 {

@@ -28,7 +28,8 @@ export default function Hero() {
     >
       {/* Background Layer */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
-        {/* We ONLY show this image tag if we are NOT on the residential page */}
+        {/* We ONLY show this image tag if we are NOT on the residential page.
+            This prevents the "Double Image" ghosting. */}
         {!isResidential && (
           <>
             <img 
