@@ -31,8 +31,8 @@ export default function Commercial() {
   return (
     <>
       <Helmet>
-        <title>Office Renovation Singapore | Retail & Commercial Interior Design</title>
-        <meta name="description" content="Professional office renovation in Singapore. BCA-approved commercial contractor for retail, F&B, and reinstatement works. On-time, on-budget delivery." />
+        <title>Office Renovation Singapore | Commercial Interior Design | ID Work Studio</title>
+        <meta name="description" content="Looking for an office renovation company in Singapore? ID Work Studio is a BCA-registered contractor specializing in turnkey commercial fit-outs and modern office designs." />
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>
@@ -171,6 +171,42 @@ export default function Commercial() {
                 <HardHat className="w-12 h-12 text-champagne mx-auto mb-4" />
                 <h4 className="font-bold text-charcoal mb-2">{t('commercial_page.trust.items.4.title')}</h4>
                 <p className="text-sm text-gray-500">{t('commercial_page.trust.items.4.desc')}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Project Management Section */}
+        <section className="py-20 bg-off-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-serif mb-4 text-charcoal">{t('commercial_page.project_management.title')}</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                {t('commercial_page.project_management.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-gold">
+                <Clock className="w-10 h-10 text-gold mb-4" />
+                <h3 className="text-xl font-bold text-charcoal mb-3">{t('commercial_page.project_management.items.1.title')}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {t('commercial_page.project_management.items.1.desc')}
+                </p>
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-gold">
+                <FileCheck className="w-10 h-10 text-gold mb-4" />
+                <h3 className="text-xl font-bold text-charcoal mb-3">{t('commercial_page.project_management.items.2.title')}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {t('commercial_page.project_management.items.2.desc')}
+                </p>
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-gold">
+                <CheckCircle className="w-10 h-10 text-gold mb-4" />
+                <h3 className="text-xl font-bold text-charcoal mb-3">{t('commercial_page.project_management.items.3.title')}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {t('commercial_page.project_management.items.3.desc')}
+                </p>
               </div>
             </div>
           </div>
