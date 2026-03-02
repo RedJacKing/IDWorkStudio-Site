@@ -14,3 +14,35 @@ body {
   background-color: var(--color-off-white);
   color: var(--color-charcoal);
 }
+
+/* --- ADD THIS CODE BELOW --- */
+
+/* Force-hide any Lucide help/question icons and ghost watermarks */
+svg[class*='lucide-help'], 
+svg[class*='lucide-circle-help'], 
+.help-icon, 
+.hero-watermark,
+#help-button { 
+    display: none !important; 
+    visibility: hidden !important; 
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* --- FINAL SAFETY CLEANUP --- */
+
+/* This hides any help/question mark icons site-wide */
+svg[class*='lucide-help'], 
+svg[class*='lucide-circle-help'], 
+.help-icon, 
+#help-button { 
+    display: none !important; 
+    visibility: hidden !important; 
+}
+
+/* This hides the ghost text overlay */
+.hero-watermark, 
+[alt*="modern warm minimalist"] {
+    display: none !important;
+    opacity: 0 !important;
+}
