@@ -46,3 +46,15 @@ svg[class*='lucide-circle-help'],
     display: none !important;
     opacity: 0 !important;
 }
+
+/* Add space at the top so the navigation bar doesn't cover the content */
+body {
+    padding-top: 100px !important; 
+}
+
+/* Specifically for mobile screens */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 120px !important;
+    }
+}
