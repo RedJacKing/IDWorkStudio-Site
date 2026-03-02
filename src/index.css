@@ -47,14 +47,38 @@ svg[class*='lucide-circle-help'],
     opacity: 0 !important;
 }
 
-/* Add space at the top so the navigation bar doesn't cover the content */
-body {
-    padding-top: 100px !important; 
+/* --- UPDATED FIX --- */
+
+/* 1. Ensure the header stays at the absolute top */
+header, nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    z-index: 50; /* Keeps it above content */
 }
 
-/* Specifically for mobile screens */
-@media screen and (max-width: 768px) {
-    body {
-        padding-top: 120px !important;
+/* 2. Push only the content down, NOT the body */
+/* This targets the first element after the header to clear the overlap */
+header + *, nav + *, main {
+    margin-top: 80px !important; 
+}
+
+/* 3. Mobile specific adjustment */
+@media (max-width: 768px) {
+    header + *, nav + *, main {
+        margin-top: 110px !important; /* Adjust based on your mobile header height */
     }
+}
+
+/* Keep your existing icon-hiding code below */
+svg[class*='lucide-help'], 
+svg[class*='lucide-circle-help'], 
+.help-icon, 
+.hero-watermark,
+#help-button { 
+    display: none !important; 
+    visibility: hidden !important; 
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
