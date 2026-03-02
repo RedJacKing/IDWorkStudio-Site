@@ -30,7 +30,7 @@ export default function Hero() {
       {/* Background Layer with Parallax */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <img 
-          src={isResidential ? "/asset/residential-hero.jpg" : "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"} 
+          src={isResidential ? "/assets/residential-hero.jpg" : "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"} 
           alt="Interior Design" 
           className="w-full h-full object-cover opacity-70 scale-110"
         />

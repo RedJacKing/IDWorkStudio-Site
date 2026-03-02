@@ -41,7 +41,7 @@ header, nav {
     position: relative;
     /* This only loads the Japandi pic for the Residential class */
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-                      url('/asset/residential-hero.jpg') !important;
+                      url('/assets/residential-hero.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
