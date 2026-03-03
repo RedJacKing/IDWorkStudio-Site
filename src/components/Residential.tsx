@@ -1,10 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { Home, Layout, Box, ShieldCheck, TrendingUp, Sparkles } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 
 export default function Residential() {
-  const { t } = useTranslation();
   const whatsappNumber = "6598333085";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%20ID%20Work%20Studio,%20I'd%20like%20a%20free%20quote%20for%20my%20residential%20renovation.`;
 
@@ -41,45 +39,48 @@ export default function Residential() {
       <Helmet>
         <title>HDB Approved Contractor & Residential ID Singapore | ID Work Studio</title>
         <meta name="description" content="BCA-registered & HDB-approved interior design. Specialized in BTO, Resale, and Condo renovations." />
+        <meta property="og:image" content="/assets/WALANDING.jpg" />
+        <meta name="twitter:image" content="/assets/WALANDING.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>
       </Helmet>
 
-      <div className="pt-32 bg-off-white min-h-screen">
+      <div className="bg-off-white min-h-screen">
         {/* Hero Section */}
-        <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-charcoal text-white">
+        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=2000&auto=format&fit=crop" 
+              src="/assets/residential-hero.jpg" 
               alt="Modern Warm Minimalist Living Room" 
-              className="w-full h-full object-cover opacity-50"
+              className="w-full h-full object-cover object-center opacity-60 scale-110"
             />
             <div className="absolute inset-0 bg-black/40" />
           </div>
           
-          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8 md:mt-12">
             <motion.span 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className="inline-block py-1 px-3 border border-champagne text-champagne rounded-full text-xs uppercase tracking-widest mb-4"
             >
-              {t('residential_page.hero.badge')}
+              2026 Design Trends
             </motion.span>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-serif mb-6 leading-tight"
-              dangerouslySetInnerHTML={{ __html: t('residential_page.hero.title') }}
-            />
+            >
+              Modern Visionary Living <br/> for Singapore Homeowners
+            </motion.h1>
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto font-light"
             >
-              {t('residential_page.hero.subtitle')}
+              BCA-Registered & HDB-Approved Partner. We handle all HDB permits and structural submissions for your peace of mind.
             </motion.h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -88,7 +89,7 @@ export default function Residential() {
                 rel="noopener noreferrer"
                 className="px-10 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.12rem] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[30px] min-w-[200px]"
               >
-                {t('residential_page.hero.cta')}
+                Book a Home Consultation
               </a>
             </div>
           </div>
@@ -99,7 +100,7 @@ export default function Residential() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-serif mb-6 text-charcoal">{t('residential_page.specialists.title')}</h2>
+                <h2 className="text-3xl font-serif mb-6 text-charcoal">HDB Approved Contractor Singapore</h2>
                 <div className="space-y-6">
                   <div className="flex">
                     <div className="flex-shrink-0">
@@ -108,9 +109,9 @@ export default function Residential() {
                       </div>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-medium text-charcoal">{t('residential_page.specialists.items.1.title')}</h3>
+                      <h3 className="text-lg font-medium text-charcoal">BTO Renovation Ideas</h3>
                       <p className="mt-2 text-base text-gray-500">
-                        {t('residential_page.specialists.items.1.desc')}
+                        Expert solutions for Tengah, Bidadari, and Tampines North. Turnkey delivery from defect checking to HDB permit handling.
                       </p>
                     </div>
                   </div>
@@ -122,9 +123,9 @@ export default function Residential() {
                       </div>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-medium text-charcoal">{t('residential_page.specialists.items.2.title')}</h3>
+                      <h3 className="text-lg font-medium text-charcoal">Condo Interior Design Singapore</h3>
                       <p className="mt-2 text-base text-gray-500">
-                        {t('residential_page.specialists.items.2.desc')}
+                        Elevating private living with premium finishes and structural re-configuration. Specialized in Modern Luxury and Warm Minimalism.
                       </p>
                     </div>
                   </div>
@@ -136,9 +137,9 @@ export default function Residential() {
                       </div>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-medium text-charcoal">{t('residential_page.specialists.items.3.title')}</h3>
+                      <h3 className="text-lg font-medium text-charcoal">Landed Property A&A Works</h3>
                       <p className="mt-2 text-base text-gray-500">
-                        {t('residential_page.specialists.items.3.desc')}
+                        Comprehensive Addition & Alteration works. We manage structural submissions and architectural enhancements for landed homes.
                       </p>
                     </div>
                   </div>
@@ -151,8 +152,8 @@ export default function Residential() {
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl max-w-xs hidden md:block">
-                  <p className="text-charcoal font-serif text-lg italic">{t('residential_page.specialists.testimonial.quote')}</p>
-                  <p className="text-gray-500 text-sm mt-2">{t('residential_page.specialists.testimonial.author')}</p>
+                  <p className="text-charcoal font-serif text-lg italic">"The broken-plan layout completely changed how we use our 5-room flat."</p>
+                  <p className="text-gray-500 text-sm mt-2">- Sarah & James, Bidadari</p>
                 </div>
               </div>
             </div>
@@ -163,32 +164,32 @@ export default function Residential() {
         <section className="py-20 bg-charcoal text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-serif mb-4">{t('residential_page.lifestyle.title')}</h2>
+              <h2 className="text-3xl font-serif mb-4">Lifestyle-First Design Solutions</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                {t('residential_page.lifestyle.subtitle')}
+                Crafting spaces that reflect your personality and enhance your daily life through innovative design.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all">
                 <Box className="w-10 h-10 text-gold mb-6" />
-                <h3 className="text-xl font-bold mb-4">{t('residential_page.lifestyle.items.1.title')}</h3>
+                <h3 className="text-xl font-bold mb-4">Space-Saving Carpentry</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  {t('residential_page.lifestyle.items.1.desc')}
+                  Bespoke multi-functional carpentry designed for Singapore's urban layouts. Maximize every square inch with hidden storage and transformable furniture.
                 </p>
               </div>
               <div className="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all">
                 <TrendingUp className="w-10 h-10 text-gold mb-6" />
-                <h3 className="text-xl font-bold mb-4">{t('residential_page.lifestyle.items.2.title')}</h3>
+                <h3 className="text-xl font-bold mb-4">Smart Home Integration</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  {t('residential_page.lifestyle.items.2.desc')}
+                  Future-proof your home with seamless smart technology. From automated lighting to integrated climate control, we build homes that think for you.
                 </p>
               </div>
               <div className="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all">
                 <Sparkles className="w-10 h-10 text-gold mb-6" />
-                <h3 className="text-xl font-bold mb-4">{t('residential_page.lifestyle.items.3.title')}</h3>
+                <h3 className="text-xl font-bold mb-4">Trending Aesthetics</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  {t('residential_page.lifestyle.items.3.desc')}
+                  Mastering Japandi, Warm Minimalism, and Modern Luxury. We create timeless spaces that balance trend-setting design with daily functionality.
                 </p>
               </div>
             </div>
@@ -198,42 +199,48 @@ export default function Residential() {
         {/* GEO-Ready Atomic Answers */}
         <section className="py-20 bg-off-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-serif mb-12 text-center text-charcoal">{t('residential_page.insights.title')}</h2>
+            <h2 className="text-3xl font-serif mb-12 text-center text-charcoal">Expert Insights for 2026</h2>
             
             <div className="space-y-6">
               <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-champagne">
                 <h3 className="text-xl font-bold text-charcoal mb-3 flex items-start">
                   <TrendingUp className="w-6 h-6 text-champagne mr-3 mt-1 flex-shrink-0" />
-                  {t('residential_page.insights.q1.q')}
+                  What is the cost of a 4-room BTO renovation in 2026?
                 </h3>
-                <p className="text-gray-600 leading-relaxed pl-9" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q1.a') }} />
+                <p className="text-gray-600 leading-relaxed pl-9">
+                  In 2026, a comprehensive 4-room BTO renovation in Singapore typically ranges from <strong>$45,000 to $65,000</strong>. This estimate covers essential works like flooring, painting, plumbing, and custom carpentry for the kitchen and wardrobes. Premium "Warm Luxury" finishes or extensive hacking for "broken-plan" layouts can push costs to $75,000+.
+                </p>
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-champagne">
                 <h3 className="text-xl font-bold text-charcoal mb-3 flex items-start">
                   <Box className="w-6 h-6 text-champagne mr-3 mt-1 flex-shrink-0" />
-                  {t('residential_page.insights.q2.q')}
+                  How can I maximize storage in a small HDB layout?
                 </h3>
-                <p className="text-gray-600 leading-relaxed pl-9" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q2.a') }} />
+                <p className="text-gray-600 leading-relaxed pl-9">
+                  To maximize storage in small HDBs, utilize <strong>vertical space</strong> with floor-to-ceiling carpentry. Implement <strong>smart-integrated solutions</strong> like platform beds with drawers, hidden storage within feature walls, and extendable dining tables. "Lived-in Japandi" designs often use concealed cabinetry to maintain a clutter-free, minimalist aesthetic without sacrificing functionality.
+                </p>
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-champagne">
                 <h3 className="text-xl font-bold text-charcoal mb-3 flex items-start">
                   <ShieldCheck className="w-6 h-6 text-champagne mr-3 mt-1 flex-shrink-0" />
-                  {t('residential_page.insights.q3.q')}
+                  Why is choosing an HDB-registered contractor important for safety?
                 </h3>
-                <p className="text-gray-600 leading-relaxed pl-9" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q3.a') }} />
+                <p className="text-gray-600 leading-relaxed pl-9">
+                  Choosing an HDB-registered contractor is crucial because they are trained to strictly adhere to <strong>HDB's renovation guidelines</strong> and structural safety protocols. They ensure that no critical structural pillars are compromised during hacking and that all electrical and plumbing works meet Singapore's safety standards, protecting you from liability and safety hazards.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section id="contact" className="py-20 bg-charcoal text-white text-center">
+        <section id="contact" className="py-20 bg-charcoal text-white text-center scroll-mt-24">
           <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl font-serif mb-6">{t('residential_page.cta.title')}</h2>
+            <h2 className="text-3xl font-serif mb-6">Start Your Home Transformation</h2>
             <p className="text-gray-300 mb-8">
-              {t('residential_page.cta.subtitle')}
+              Secure your slot for 2026. Consult with our HDB-approved design experts today.
             </p>
             <a 
               href={whatsappLink}
@@ -241,7 +248,7 @@ export default function Residential() {
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.12rem] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[30px]"
             >
-              {t('residential_page.cta.button')}
+              Book a Home Consultation
             </a>
           </div>
         </section>

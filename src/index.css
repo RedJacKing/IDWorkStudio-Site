@@ -14,17 +14,3 @@ body {
   background-color: var(--color-off-white);
   color: var(--color-charcoal);
 }
-
-/* --- RESIDENTIAL BACKDROP --- */
-.hero-residential {
-    position: relative !important;
-    /* We handle the image in Hero.tsx, so we just set the fallback background color here */
-    background-color: #1A1A1A !important;
-}
-
-/* Mobile Spacing Fix */
-@media (max-width: 768px) {
-    .hero-residential {
-        padding-top: 140px !important; 
-    }
-}
