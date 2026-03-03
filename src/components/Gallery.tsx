@@ -80,7 +80,7 @@ export default function Gallery() {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-32 pb-24">
+    <div className="min-h-screen bg-white pt-48 md:pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-serif mb-4">{t('gallery.title')}</h1>

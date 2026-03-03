@@ -17,7 +17,7 @@ export default function Hero() {
     <section 
       id="home" 
       ref={containerRef}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-48 md:pt-32 lg:pt-40 pb-20 md:pb-32"
     >
       {/* Background Image with Overlay and Parallax */}
       <motion.div 

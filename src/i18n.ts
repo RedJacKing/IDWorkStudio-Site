@@ -89,7 +89,7 @@ const resources = {
       "residential_page": {
         "hero": {
           "badge": "2026 Design Trends",
-          "title": "Modern Visionary Living <br/> for Singapore Homeowners",
+          "title": "Modern Visionary Living for Singapore Homeowners",
           "subtitle": "BCA-Registered & HDB-Approved Partner. We handle all HDB permits and structural submissions for your peace of mind.",
           "cta": "Book a Home Consultation"
         },
@@ -128,8 +128,8 @@ const resources = {
             }
           },
           "testimonial": {
-            "quote": "\"The broken-plan layout completely changed how we use our 5-room flat.\"",
-            "author": "- Sarah & James, Bidadari"
+            "quote": "HDB & BCA Registered Interior Design specializing in Modern BTO & Resale Renovation in Singapore.",
+            "author": "ID Work Studio"
           }
         },
         "insights": {
@@ -155,7 +155,7 @@ const resources = {
       },
       "commercial_page": {
         "hero": {
-          "title": "Expert Office Renovation Singapore <br/> & Commercial Fit-Outs",
+          "title": "Expert Office Renovation Singapore & Commercial Fit-Outs",
           "subtitle": "Retail, F&B, and Reinstatement Services by BCA-Approved Contractors",
           "cta": "Request Site Survey"
         },
@@ -333,7 +333,7 @@ const resources = {
       "residential_page": {
         "hero": {
           "badge": "2026 设计趋势",
-          "title": "现代远见生活 <br/> 为新加坡业主打造",
+          "title": "现代远见生活 为新加坡业主打造",
           "subtitle": "BCA注册与HDB认可的合作伙伴。我们处理所有HDB许可证和结构提交，让您高枕无忧。",
           "cta": "预约家居咨询"
         },
@@ -372,8 +372,8 @@ const resources = {
             }
           },
           "testimonial": {
-            "quote": "\"打破常规的布局彻底改变了我们使用五房式组屋的方式。\"",
-            "author": "- Sarah & James, Bidadari"
+            "quote": "HDB和BCA注册室内设计，专注于新加坡现代BTO和转售组屋翻新。",
+            "author": "ID Work Studio"
           }
         },
         "insights": {
@@ -399,7 +399,7 @@ const resources = {
       },
       "commercial_page": {
         "hero": {
-          "title": "新加坡专业办公室翻新 <br/> 与商业装修",
+          "title": "新加坡专业办公室翻新 与商业装修",
           "subtitle": "由建设局(BCA)认可的承包商提供零售、餐饮和恢复原状服务",
           "cta": "预约现场勘察"
         },
