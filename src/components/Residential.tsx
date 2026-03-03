@@ -152,8 +152,8 @@ export default function Residential() {
               </div>
               <div className="relative h-96">
                 <img 
-                   src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=1000&auto=format&fit=crop" 
-                  alt="Scandinavian style kitchen cabinet in Singapore HDB" 
+                   src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?q=80&w=1000&auto=format&fit=crop" 
+                  alt="Japandi style kitchen cabinet in Singapore HDB" 
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl max-w-xs hidden md:block">
