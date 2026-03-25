@@ -52,12 +52,12 @@ export default function Residential() {
       </Helmet>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
-        {/* Hero Section */}
+        {/* Hero Section - Pointing back to original lifestyle image */}
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
           <div className="absolute inset-0 z-0">
             <img 
-              src="/gallery/house-renovation.png" 
-              alt="Modern Warm Minimalist Living Room Interior Design Singapore" 
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop" 
+              alt="Modern Warm Minimalist Living Room" 
               className="w-full h-full object-cover object-center opacity-60 scale-110"
             />
             <div className="absolute inset-0 bg-black/40" />
@@ -75,7 +75,7 @@ export default function Residential() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-serif mb-6 leading-tight uppercase tracking-tight"
+              className="text-3xl sm:text-4xl md:text-6xl font-serif mb-6 leading-tight uppercase tracking-tight"
             >
               {t('residential_page.hero.title')}
             </motion.h1>
@@ -100,7 +100,7 @@ export default function Residential() {
           </div>
         </section>
 
-        {/* Specialists Section with New Fixed Image */}
+        {/* Specialists Section - Using your new busy renovation image */}
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -258,7 +258,6 @@ export default function Residential() {
               {t('residential_page.cta.button')}
             </a>
           </div>
-          {/* Decorative Corner */}
           <div className="absolute top-0 left-0 w-64 h-64 border-l border-t border-gold/10 -translate-x-1/2 -translate-y-1/2"></div>
         </section>
       </div>
