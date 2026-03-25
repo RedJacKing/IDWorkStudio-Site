@@ -25,7 +25,7 @@ function scanDirectory(category) {
   const categoryPath = path.join(GALLERY_DIR, category);
   if (!fs.existsSync(categoryPath)) return;
 
-  // AMENDED PART: Added .sort() to arrange items by filename numerically and alphabetically
+  // ENFORCED NATURAL SORT: Ensures 2 comes before 10
   const items = fs.readdirSync(categoryPath).sort((a, b) => 
     a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
   );
@@ -35,7 +35,6 @@ function scanDirectory(category) {
     const stats = fs.statSync(itemPath);
 
     if (stats.isDirectory()) {
-      // It's a project folder (e.g., "Modern Loft")
       const projectTitle = item;
       const images = fs.readdirSync(itemPath)
         .filter(f => /\.(jpg|jpeg|png|webp|gif)$/i.test(f))
@@ -53,7 +52,6 @@ function scanDirectory(category) {
         });
       });
     } else if (/\.(jpg|jpeg|png|webp|gif)$/i.test(item)) {
-      // It's a direct image file, use filename as title
       const title = path.parse(item).name;
       projects.push({
         id: `static-${category}-${title}`,
@@ -68,8 +66,9 @@ function scanDirectory(category) {
   });
 }
 
+// Scanning order: Residential first, then Commercial
 scanDirectory('residential');
 scanDirectory('commercial');
 
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(projects, null, 2));
-console.log(`Generated ${projects.length} projects to ${OUTPUT_FILE}`);
+console.log(`Successfully generated and sorted ${projects.length} projects to ${OUTPUT_FILE}`);

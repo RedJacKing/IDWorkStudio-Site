@@ -5,62 +5,8 @@
     "description": "",
     "imageUrl": "/gallery/residential/1-luxury-modern-condo-bedroom-design-orchard.webp",
     "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.757Z",
+    "createdAt": "2026-03-25T16:33:47.605Z",
     "order": 1
-  },
-  {
-    "id": "static-residential-10-luxury-modern-HDB-livingroom-design-orchard",
-    "title": "10 luxury modern HDB livingroom design orchard",
-    "description": "",
-    "imageUrl": "/gallery/residential/10-luxury-modern-HDB-livingroom-design-orchard.webp",
-    "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 2
-  },
-  {
-    "id": "static-residential-11-luxury-modern-condo-living-design-orchard",
-    "title": "11 luxury modern condo living design orchard",
-    "description": "",
-    "imageUrl": "/gallery/residential/11-luxury-modern-condo-living-design-orchard.webp",
-    "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 3
-  },
-  {
-    "id": "static-residential-12-luxury-modern-condo-living-design-orchard",
-    "title": "12 luxury modern condo living design orchard",
-    "description": "",
-    "imageUrl": "/gallery/residential/12-luxury-modern-condo-living-design-orchard.webp",
-    "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 4
-  },
-  {
-    "id": "static-residential-13-luxury-modern-condo-toilet-design-orchard",
-    "title": "13 luxury modern condo toilet design orchard",
-    "description": "",
-    "imageUrl": "/gallery/residential/13-luxury-modern-condo-toilet-design-orchard.webp",
-    "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 5
-  },
-  {
-    "id": "static-residential-14-luxury-modern-HDB-kitchen-design-tampines",
-    "title": "14 luxury modern HDB kitchen design tampines",
-    "description": "",
-    "imageUrl": "/gallery/residential/14-luxury-modern-HDB-kitchen-design-tampines.webp",
-    "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 6
-  },
-  {
-    "id": "static-residential-15-luxury-modern-HDB-living-design-tampines",
-    "title": "15 luxury modern HDB living design tampines",
-    "description": "",
-    "imageUrl": "/gallery/residential/15-luxury-modern-HDB-living-design-tampines.webp",
-    "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 7
   },
   {
     "id": "static-residential-2-luxury-modern-condo-bedroom-design-orchard2",
@@ -68,8 +14,8 @@
     "description": "",
     "imageUrl": "/gallery/residential/2-luxury-modern-condo-bedroom-design-orchard2.webp",
     "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 8
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 2
   },
   {
     "id": "static-residential-3-luxury-modern-condo-bedroom-design-orchard3",
@@ -77,8 +23,8 @@
     "description": "",
     "imageUrl": "/gallery/residential/3-luxury-modern-condo-bedroom-design-orchard3.webp",
     "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 9
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 3
   },
   {
     "id": "static-residential-4-luxury-modern-HDB-livingroom-design-1",
@@ -86,8 +32,8 @@
     "description": "",
     "imageUrl": "/gallery/residential/4-luxury-modern-HDB-livingroom-design-1.webp",
     "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 10
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 4
   },
   {
     "id": "static-residential-5-luxury-modern-hdb-kitchen-design1",
@@ -95,8 +41,8 @@
     "description": "",
     "imageUrl": "/gallery/residential/5-luxury-modern-hdb-kitchen-design1.webp",
     "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 11
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 5
   },
   {
     "id": "static-residential-6-luxury-modern-HDB-wardrobe-design-orchard",
@@ -104,8 +50,8 @@
     "description": "",
     "imageUrl": "/gallery/residential/6-luxury-modern-HDB-wardrobe-design-orchard.webp",
     "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 12
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 6
   },
   {
     "id": "static-residential-7-luxury-modern-condoe-livingroom-design-orchard",
@@ -113,8 +59,8 @@
     "description": "",
     "imageUrl": "/gallery/residential/7-luxury-modern-condoe-livingroom-design-orchard.webp",
     "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 13
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 7
   },
   {
     "id": "static-residential-8-luxury-modern-condo-living-design-orchard2",
@@ -122,8 +68,8 @@
     "description": "",
     "imageUrl": "/gallery/residential/8-luxury-modern-condo-living-design-orchard2.webp",
     "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 14
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 8
   },
   {
     "id": "static-residential-9-luxury-modern-condo-design-cbd",
@@ -131,7 +77,61 @@
     "description": "",
     "imageUrl": "/gallery/residential/9-luxury-modern-condo-design-cbd.webp",
     "category": "Residential",
-    "createdAt": "2026-03-25T15:53:49.759Z",
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 9
+  },
+  {
+    "id": "static-residential-10-luxury-modern-HDB-livingroom-design-orchard",
+    "title": "10 luxury modern HDB livingroom design orchard",
+    "description": "",
+    "imageUrl": "/gallery/residential/10-luxury-modern-HDB-livingroom-design-orchard.webp",
+    "category": "Residential",
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 10
+  },
+  {
+    "id": "static-residential-11-luxury-modern-condo-living-design-orchard",
+    "title": "11 luxury modern condo living design orchard",
+    "description": "",
+    "imageUrl": "/gallery/residential/11-luxury-modern-condo-living-design-orchard.webp",
+    "category": "Residential",
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 11
+  },
+  {
+    "id": "static-residential-12-luxury-modern-condo-living-design-orchard",
+    "title": "12 luxury modern condo living design orchard",
+    "description": "",
+    "imageUrl": "/gallery/residential/12-luxury-modern-condo-living-design-orchard.webp",
+    "category": "Residential",
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 12
+  },
+  {
+    "id": "static-residential-13-luxury-modern-condo-toilet-design-orchard",
+    "title": "13 luxury modern condo toilet design orchard",
+    "description": "",
+    "imageUrl": "/gallery/residential/13-luxury-modern-condo-toilet-design-orchard.webp",
+    "category": "Residential",
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 13
+  },
+  {
+    "id": "static-residential-14-luxury-modern-HDB-kitchen-design-tampines",
+    "title": "14 luxury modern HDB kitchen design tampines",
+    "description": "",
+    "imageUrl": "/gallery/residential/14-luxury-modern-HDB-kitchen-design-tampines.webp",
+    "category": "Residential",
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 14
+  },
+  {
+    "id": "static-residential-15-luxury-modern-HDB-living-design-tampines",
+    "title": "15 luxury modern HDB living design tampines",
+    "description": "",
+    "imageUrl": "/gallery/residential/15-luxury-modern-HDB-living-design-tampines.webp",
+    "category": "Residential",
+    "createdAt": "2026-03-25T16:33:47.607Z",
     "order": 15
   },
   {
@@ -140,98 +140,8 @@
     "description": "",
     "imageUrl": "/gallery/commercial/1-Shop-store-renovation2.webp",
     "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
+    "createdAt": "2026-03-25T16:33:47.607Z",
     "order": 16
-  },
-  {
-    "id": "static-commercial-10-Shop-office-renovation4",
-    "title": "10 Shop office renovation4",
-    "description": "",
-    "imageUrl": "/gallery/commercial/10-Shop-office-renovation4.jpeg",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 17
-  },
-  {
-    "id": "static-commercial-11-retail-shopping-mall-renovation",
-    "title": "11 retail shopping mall renovation",
-    "description": "",
-    "imageUrl": "/gallery/commercial/11-retail-shopping-mall-renovation.webp",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 18
-  },
-  {
-    "id": "static-commercial-12-retail-shopping-mall-renovation",
-    "title": "12 retail shopping mall renovation",
-    "description": "",
-    "imageUrl": "/gallery/commercial/12-retail-shopping-mall-renovation.webp",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 19
-  },
-  {
-    "id": "static-commercial-13-Takashimaya-office-renovation",
-    "title": "13 Takashimaya office renovation",
-    "description": "",
-    "imageUrl": "/gallery/commercial/13-Takashimaya-office-renovation.webp",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 20
-  },
-  {
-    "id": "static-commercial-14Nakery-shop-renovation-commercial",
-    "title": "14Nakery shop renovation commercial",
-    "description": "",
-    "imageUrl": "/gallery/commercial/14Nakery-shop-renovation-commercial.webp",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 21
-  },
-  {
-    "id": "static-commercial-15-retail-shopping-mall-renovation",
-    "title": "15 retail shopping mall renovation",
-    "description": "",
-    "imageUrl": "/gallery/commercial/15-retail-shopping-mall-renovation.webp",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 22
-  },
-  {
-    "id": "static-commercial-16shop-renovation",
-    "title": "16shop renovation",
-    "description": "",
-    "imageUrl": "/gallery/commercial/16shop-renovation.webp",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 23
-  },
-  {
-    "id": "static-commercial-17Simplytoy-singpost-shop-renovation",
-    "title": "17Simplytoy singpost shop renovation",
-    "description": "",
-    "imageUrl": "/gallery/commercial/17Simplytoy-singpost-shop-renovation.webp",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 24
-  },
-  {
-    "id": "static-commercial-18-Takashimaya-office-renovation",
-    "title": "18 Takashimaya office renovation",
-    "description": "",
-    "imageUrl": "/gallery/commercial/18-Takashimaya-office-renovation.webp",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 25
-  },
-  {
-    "id": "static-commercial-19-Office-suntec-commerical-renovation-1",
-    "title": "19 Office suntec commerical renovation 1",
-    "description": "",
-    "imageUrl": "/gallery/commercial/19-Office-suntec-commerical-renovation-1.webp",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 26
   },
   {
     "id": "static-commercial-2-Shop-store-renovation8",
@@ -239,17 +149,8 @@
     "description": "",
     "imageUrl": "/gallery/commercial/2-Shop-store-renovation8.webp",
     "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.759Z",
-    "order": 27
-  },
-  {
-    "id": "static-commercial-20-Office-suntec-commerical-renovation",
-    "title": "20 Office suntec commerical renovation",
-    "description": "",
-    "imageUrl": "/gallery/commercial/20-Office-suntec-commerical-renovation.webp",
-    "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.760Z",
-    "order": 28
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 17
   },
   {
     "id": "static-commercial-3-Shop-store-renovation9",
@@ -257,8 +158,8 @@
     "description": "",
     "imageUrl": "/gallery/commercial/3-Shop-store-renovation9.webp",
     "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.760Z",
-    "order": 29
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 18
   },
   {
     "id": "static-commercial-4-Shop-store-renovation7",
@@ -266,8 +167,8 @@
     "description": "",
     "imageUrl": "/gallery/commercial/4-Shop-store-renovation7.webp",
     "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.760Z",
-    "order": 30
+    "createdAt": "2026-03-25T16:33:47.607Z",
+    "order": 19
   },
   {
     "id": "static-commercial-5-Shop-store-renovation6",
@@ -275,8 +176,8 @@
     "description": "",
     "imageUrl": "/gallery/commercial/5-Shop-store-renovation6.webp",
     "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.760Z",
-    "order": 31
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 20
   },
   {
     "id": "static-commercial-6-Shop-store-renovation3",
@@ -284,8 +185,8 @@
     "description": "",
     "imageUrl": "/gallery/commercial/6-Shop-store-renovation3.webp",
     "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.760Z",
-    "order": 32
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 21
   },
   {
     "id": "static-commercial-7-Shop-store-renovation4",
@@ -293,8 +194,8 @@
     "description": "",
     "imageUrl": "/gallery/commercial/7-Shop-store-renovation4.webp",
     "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.760Z",
-    "order": 33
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 22
   },
   {
     "id": "static-commercial-8-Shop-store-renovation12",
@@ -302,8 +203,8 @@
     "description": "",
     "imageUrl": "/gallery/commercial/8-Shop-store-renovation12.webp",
     "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.760Z",
-    "order": 34
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 23
   },
   {
     "id": "static-commercial-9-Shop-office-renovation4",
@@ -311,7 +212,106 @@
     "description": "",
     "imageUrl": "/gallery/commercial/9-Shop-office-renovation4.jpeg",
     "category": "Commercial",
-    "createdAt": "2026-03-25T15:53:49.760Z",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 24
+  },
+  {
+    "id": "static-commercial-10-Shop-office-renovation4",
+    "title": "10 Shop office renovation4",
+    "description": "",
+    "imageUrl": "/gallery/commercial/10-Shop-office-renovation4.jpeg",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 25
+  },
+  {
+    "id": "static-commercial-11-retail-shopping-mall-renovation",
+    "title": "11 retail shopping mall renovation",
+    "description": "",
+    "imageUrl": "/gallery/commercial/11-retail-shopping-mall-renovation.webp",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 26
+  },
+  {
+    "id": "static-commercial-12-retail-shopping-mall-renovation",
+    "title": "12 retail shopping mall renovation",
+    "description": "",
+    "imageUrl": "/gallery/commercial/12-retail-shopping-mall-renovation.webp",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 27
+  },
+  {
+    "id": "static-commercial-13-Takashimaya-office-renovation",
+    "title": "13 Takashimaya office renovation",
+    "description": "",
+    "imageUrl": "/gallery/commercial/13-Takashimaya-office-renovation.webp",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 28
+  },
+  {
+    "id": "static-commercial-14Nakery-shop-renovation-commercial",
+    "title": "14Nakery shop renovation commercial",
+    "description": "",
+    "imageUrl": "/gallery/commercial/14Nakery-shop-renovation-commercial.webp",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 29
+  },
+  {
+    "id": "static-commercial-15-retail-shopping-mall-renovation",
+    "title": "15 retail shopping mall renovation",
+    "description": "",
+    "imageUrl": "/gallery/commercial/15-retail-shopping-mall-renovation.webp",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 30
+  },
+  {
+    "id": "static-commercial-16shop-renovation",
+    "title": "16shop renovation",
+    "description": "",
+    "imageUrl": "/gallery/commercial/16shop-renovation.webp",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 31
+  },
+  {
+    "id": "static-commercial-17Simplytoy-singpost-shop-renovation",
+    "title": "17Simplytoy singpost shop renovation",
+    "description": "",
+    "imageUrl": "/gallery/commercial/17Simplytoy-singpost-shop-renovation.webp",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 32
+  },
+  {
+    "id": "static-commercial-18-Takashimaya-office-renovation",
+    "title": "18 Takashimaya office renovation",
+    "description": "",
+    "imageUrl": "/gallery/commercial/18-Takashimaya-office-renovation.webp",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 33
+  },
+  {
+    "id": "static-commercial-19-Office-suntec-commerical-renovation-1",
+    "title": "19 Office suntec commerical renovation 1",
+    "description": "",
+    "imageUrl": "/gallery/commercial/19-Office-suntec-commerical-renovation-1.webp",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
+    "order": 34
+  },
+  {
+    "id": "static-commercial-20-Office-suntec-commerical-renovation",
+    "title": "20 Office suntec commerical renovation",
+    "description": "",
+    "imageUrl": "/gallery/commercial/20-Office-suntec-commerical-renovation.webp",
+    "category": "Commercial",
+    "createdAt": "2026-03-25T16:33:47.608Z",
     "order": 35
   }
 ]
