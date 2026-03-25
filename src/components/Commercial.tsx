@@ -45,7 +45,7 @@ export default function Commercial() {
       </Helmet>
 
       <div className="bg-off-white min-h-screen">
-        {/* Hero Section - Responsive Mobile Fix */}
+        {/* Hero Section */}
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
           <div className="absolute inset-0 z-0">
             <img 
@@ -53,7 +53,6 @@ export default function Commercial() {
               alt="Modern Bright Singapore Corporate Office Design" 
               className="w-full h-full object-cover object-center opacity-60"
             />
-            {/* Dark overlay to ensure white text is readable */}
             <div className="absolute inset-0 bg-black/40" />
           </div>
           
@@ -62,7 +61,6 @@ export default function Commercial() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              {/* Responsive text size: 3xl on mobile, 6xl on desktop. leading-tight prevents overlap */}
               className="text-3xl sm:text-4xl md:text-6xl font-serif mb-6 leading-tight text-white uppercase tracking-tight px-2"
             >
               {t('commercial_page.hero.title')}
@@ -71,7 +69,6 @@ export default function Commercial() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              {/* Responsive text size for subtitle */}
               className="text-base md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light tracking-wide leading-relaxed px-4"
             >
               {t('commercial_page.hero.subtitle')}
@@ -110,7 +107,7 @@ export default function Commercial() {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Rest of the file remains exactly the same */}
         <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-serif mb-4 text-charcoal">{t('commercial_page.solutions.title')}</h2>
@@ -174,7 +171,6 @@ export default function Commercial() {
           </div>
         </section>
 
-        {/* Trust Stack Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -209,7 +205,6 @@ export default function Commercial() {
           </div>
         </section>
 
-        {/* Project Management Section */}
         <section className="py-20 bg-off-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -245,7 +240,6 @@ export default function Commercial() {
           </div>
         </section>
 
-        {/* Atomic Answers / FAQ Section */}
         <section className="py-20 bg-off-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-serif mb-12 text-center text-charcoal">{t('commercial_page.faq.title')}</h2>
@@ -270,7 +264,6 @@ export default function Commercial() {
           </div>
         </section>
 
-        {/* Reinstatement CTA Section */}
         <section className="py-24 bg-white border-t border-gray-100 relative overflow-hidden">
           <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.02]" 
                style={{ backgroundImage: 'linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
@@ -312,7 +305,6 @@ export default function Commercial() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section id="contact" className="py-20 bg-charcoal text-white text-center scroll-mt-24">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-serif mb-6">{t('commercial_page.cta.title')}</h2>
