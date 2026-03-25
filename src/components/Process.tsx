@@ -27,9 +27,9 @@ export default function Process() {
     <section className="py-20 bg-off-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-charcoal">{t('process.title')}</h2>
+          <h2 className="text-4xl md:text-5xl font-sans font-black uppercase tracking-tight mb-4 text-charcoal">{t('process.title')}</h2>
           <div className="w-24 h-1 bg-champagne mx-auto mb-6"></div>
-          <p className="text-charcoal/70 max-w-2xl mx-auto">
+          <p className="text-charcoal/70 max-w-2xl mx-auto font-medium">
             {t('process.subtitle')}
           </p>
         </div>
@@ -50,8 +50,8 @@ export default function Process() {
               <div className="w-24 h-24 rounded-full bg-white border border-champagne/30 flex items-center justify-center mb-6 shadow-sm relative z-10">
                 <step.icon className="w-10 h-10 text-champagne" />
               </div>
-              <h3 className="text-xl font-serif mb-3 text-charcoal">{step.title}</h3>
-              <p className="text-charcoal/70 text-sm leading-relaxed max-w-xs">{step.description}</p>
+              <h3 className="text-xl font-sans font-bold mb-3 text-charcoal uppercase tracking-wide">{step.title}</h3>
+              <p className="text-charcoal/70 text-sm leading-relaxed max-w-xs font-medium">{step.description}</p>
             </motion.div>
           ))}
         </div>

@@ -25,7 +25,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <img 
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
+          src="assets/hero-1.jpg" 
           alt="Modern Interior" 
           className="w-full h-full object-cover object-center opacity-60 scale-110"
         />
@@ -37,7 +37,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-3xl md:text-7xl lg:text-8xl font-serif text-white mb-6 md:mb-8 tracking-tight leading-tight md:leading-none"
+          className="text-3xl md:text-7xl lg:text-8xl font-sans font-black uppercase tracking-tight text-white mb-6 md:mb-8 leading-tight md:leading-none"
         >
           {t('hero.title_main')}<span className="italic font-light text-champagne">{t('hero.title_sub')}</span>
         </motion.h1>

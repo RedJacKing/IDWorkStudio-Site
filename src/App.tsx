@@ -8,6 +8,7 @@ import Process from './components/Process';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Commercial from './components/Commercial';
+import Reinstatement from './components/Reinstatement';
 import Residential from './components/Residential';
 import StickyMobileNav from './components/StickyMobileNav';
 import ScrollToHashElement from './components/ScrollToHashElement';
@@ -71,6 +72,7 @@ export default function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/residential" element={<Residential />} />
             <Route path="/commercial" element={<Commercial />} />
+            <Route path="/commercial/reinstatement" element={<Reinstatement />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
           

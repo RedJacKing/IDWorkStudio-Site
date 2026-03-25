@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-serif mb-6 text-charcoal">
+            <h2 className="text-3xl md:text-4xl font-sans font-bold mb-6 text-charcoal">
               Your Trusted HDB Licensed Contractor & Interior Design Partner
             </h2>
             <div className="w-24 h-1 bg-champagne mb-8"></div>
@@ -46,7 +46,7 @@ export default function About() {
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-champagne rounded-lg z-0"></div>
             <img 
-              src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1000&auto=format&fit=crop" 
+              src="assets/about/team-1.jpg" 
               alt="ID Work Studio Team - HDB Licensed Contractor Singapore" 
               className="relative z-10 rounded-lg shadow-xl w-full object-cover h-[600px]"
             />

@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { Building2, ShieldCheck, FileCheck, HardHat, Clock, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -72,14 +73,36 @@ export default function Commercial() {
             >
               {t('commercial_page.hero.subtitle')}
             </motion.h2>
-            <a 
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.12rem] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-[30px]"
-            >
-              {t('commercial_page.hero.cta')}
-            </a>
+            <div className="flex flex-col gap-4 items-center justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="w-full md:w-auto"
+              >
+                <a 
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block w-full md:w-auto px-10 py-5 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-full text-center"
+                >
+                  {t('commercial_page.hero.cta')}
+                </a>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="w-full md:w-auto"
+              >
+                <Link 
+                  to="/commercial/reinstatement"
+                  className="inline-block w-full md:w-auto px-10 py-5 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-full text-center"
+                >
+                  {t('commercial_page.hero.cta_reinstatement')}
+                </Link>
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -240,6 +263,49 @@ export default function Commercial() {
                 <p className="text-gray-600 leading-relaxed pl-9" dangerouslySetInnerHTML={{ __html: t('commercial_page.faq.q2.a') }} />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Reinstatement CTA Section */}
+        <section className="py-24 bg-white border-t border-gray-100 relative overflow-hidden">
+          {/* Architectural Grid Background Pattern */}
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.02]" 
+               style={{ backgroundImage: 'linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center relative z-10">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="mb-10"
+            >
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-gold">
+                <path d="M3 3H21V21H3V3Z" stroke="currentColor" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 9H21" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 15H21" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M9 3V21" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M15 3V21" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 3L21 21" stroke="currentColor" strokeWidth="0.25" strokeDasharray="2 2"/>
+                <path d="M21 3L3 21" stroke="currentColor" strokeWidth="0.25" strokeDasharray="2 2"/>
+              </svg>
+            </motion.div>
+
+            <h2 className="text-3xl md:text-5xl mb-8 leading-tight flex flex-col items-center justify-center">
+              <span className="font-serif italic text-dark-charcoal/60 text-2xl mb-2">{t('reinstatement_section.headline_serif')}</span>
+              <span className="font-sans font-bold text-gold uppercase tracking-[0.15em]">{t('reinstatement_section.headline_bold')}</span>
+            </h2>
+
+            <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-lg leading-relaxed font-sans">
+              {t('reinstatement_section.subtext')}
+            </p>
+
+            <Link 
+              to="/commercial/reinstatement"
+              className="px-12 py-6 bg-gold text-dark-charcoal text-sm font-bold uppercase tracking-[0.3em] hover:bg-gold-hover transition-all duration-300 rounded-full shadow-xl hover:shadow-gold/20"
+            >
+              {t('reinstatement_section.button')}
+            </Link>
           </div>
         </section>
 

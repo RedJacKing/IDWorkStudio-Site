@@ -8,6 +8,8 @@
   --color-gold: #C5A059;
   --color-gold-hover: #D6B26B;
   --color-dark-charcoal: #1A1A1A;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 body {

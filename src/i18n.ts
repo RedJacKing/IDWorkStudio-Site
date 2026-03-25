@@ -157,7 +157,8 @@ const resources = {
         "hero": {
           "title": "Expert Office Renovation Singapore & Commercial Fit-Outs",
           "subtitle": "Retail, F&B, and Reinstatement Services by BCA-Approved Contractors",
-          "cta": "Request Site Survey"
+          "cta": "Request Site Survey",
+          "cta_reinstatement": "LEARN MORE ABOUT REINSTATEMENT"
         },
         "solutions": {
           "title": "Commercial Renovation Solutions",
@@ -245,6 +246,74 @@ const resources = {
       "sticky_nav": {
         "consult": "Free Consult",
         "contact": "Contact Us"
+      },
+      "reinstatement_section": {
+        "headline_serif": "A Flawless",
+        "headline_bold": "BARE SHELL HANDOVER",
+        "subtext": "Professional, BCA/HDB compliant reinstatement for offices and shopping mall units. Get your deposit back with our 100% pass-rate solutions.",
+        "button": "LEARN MORE ABOUT REINSTATEMENT"
+      },
+      "reinstatement_page": {
+        "hero": {
+          "headline_serif": "A Flawless",
+          "headline_bold": "BARE SHELL HANDOVER"
+        },
+        "challenges": {
+          "title_serif": "Overcoming",
+          "title_bold": "REINSTATEMENT CHALLENGES",
+          "items": {
+            "1": {
+              "pain": "Fear of Deposit Forfeit",
+              "solution": "100% Handover Success Guarantee. We manage the landlord’s checklist so you don’t have to."
+            },
+            "2": {
+              "pain": "Strict Mall Management (MCST)",
+              "solution": "We are experts in Shopping malls and Grade A Office reinstatement compliance."
+            },
+            "3": {
+              "pain": "Complex Fire Safety (SCDF)",
+              "solution": "Professional relocation of sprinklers and smoke detectors with certified endorsement."
+            }
+          }
+        },
+        "process": {
+          "title_serif": "Our Seamless",
+          "title_bold": "4-STEP PROCESS",
+          "steps": {
+            "1": {
+              "title": "Site Survey",
+              "desc": "Free onsite assessment & quotation."
+            },
+            "2": {
+              "title": "Permit Management",
+              "desc": "We handle all MCST & SCDF submissions."
+            },
+            "3": {
+              "title": "The Work",
+              "desc": "Professional dismantling and \"Bare Shell\" restoration."
+            },
+            "4": {
+              "title": "Handover",
+              "desc": "Final joint inspection with your landlord for a 100% pass."
+            }
+          }
+        },
+        "trust": {
+          "bca": "BCA Registered",
+          "hdb": "HDB Approved",
+          "scdf": "SCDF Compliant"
+        },
+        "trust_row": {
+          "text": "Trusted by tenants in Singapore's leading Grade A Offices & Malls."
+        },
+        "footer": {
+          "headline_serif": "Your Peace of Mind",
+          "headline_bold": "IS OUR PRIORITY",
+          "whatsapp_btn": "WHATSAPP FOR A FREE SITE SURVEY"
+        },
+        "sticky_footer": {
+          "text": "Get Your Deposit Back – WhatsApp for a Free Survey"
+        }
       }
     }
   },
@@ -401,7 +470,8 @@ const resources = {
         "hero": {
           "title": "新加坡专业办公室翻新 与商业装修",
           "subtitle": "由建设局(BCA)认可的承包商提供零售、餐饮和恢复原状服务",
-          "cta": "预约现场勘察"
+          "cta": "预约现场勘察",
+          "cta_reinstatement": "了解更多原状修复服务"
         },
         "solutions": {
           "title": "商业翻新解决方案",
@@ -489,6 +559,74 @@ const resources = {
       "sticky_nav": {
         "consult": "免费咨询",
         "contact": "联系我们"
+      },
+      "reinstatement_section": {
+        "headline_serif": "专业的",
+        "headline_bold": "商业与商场原状修复服务",
+        "subtext": "专业且符合 BCA/HDB 标准的办公室和商场单位原状修复。凭借我们 100% 的通过率方案，助您顺利取回押金。",
+        "button": "了解更多关于原状修复"
+      },
+      "reinstatement_page": {
+        "hero": {
+          "headline_serif": "专业的",
+          "headline_bold": "商业与商场原状修复服务"
+        },
+        "challenges": {
+          "title_serif": "克服",
+          "title_bold": "原状修复挑战",
+          "items": {
+            "1": {
+              "pain": "担心押金被没收",
+              "solution": "100% 移交成功保证。我们为您管理业主的清单，让您高枕无忧。"
+            },
+            "2": {
+              "pain": "严格的商场管理 (MCST)",
+              "solution": "我们是购物中心和甲级写字楼原状修复合规方面的专家。"
+            },
+            "3": {
+              "pain": "复杂的消防安全 (SCDF)",
+              "solution": "专业移位洒水器和烟雾探测器，并提供认证背书。"
+            }
+          }
+        },
+        "process": {
+          "title_serif": "我们的无缝",
+          "title_bold": "四步流程",
+          "steps": {
+            "1": {
+              "title": "现场勘察",
+              "desc": "免费现场评估与报价。"
+            },
+            "2": {
+              "title": "许可证管理",
+              "desc": "我们处理所有 MCST 和 SCDF 提交。"
+            },
+            "3": {
+              "title": "施工阶段",
+              "desc": "专业拆除和“清水房”还原。"
+            },
+            "4": {
+              "title": "完工移交",
+              "desc": "与您的房东进行最终联合检查，100% 通过。"
+            }
+          }
+        },
+        "trust": {
+          "bca": "BCA 注册",
+          "hdb": "HDB 认可",
+          "scdf": "SCDF 合规"
+        },
+        "trust_row": {
+          "text": "深受新加坡各大甲级写字楼与商场租户信赖"
+        },
+        "footer": {
+          "headline_serif": "您的安心",
+          "headline_bold": "是我们的首要任务",
+          "whatsapp_btn": "WhatsApp 获取免费现场勘察"
+        },
+        "sticky_footer": {
+          "text": "拿回您的押金 – WhatsApp 预约免费勘察"
+        }
       }
     }
   }

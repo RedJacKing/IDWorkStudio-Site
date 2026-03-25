@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between h-auto lg:h-20 items-center py-4 lg:py-0">
             <div className="flex-shrink-0 flex items-center mb-4 lg:mb-0">
-              <Link to="/" className="font-serif text-2xl md:max-lg:text-[1.2rem] font-bold tracking-tighter text-charcoal">ID WORK STUDIO</Link>
+              <Link to="/" className="font-sans text-2xl md:max-lg:text-[1.2rem] font-black tracking-tighter text-charcoal uppercase">ID WORK STUDIO</Link>
             </div>
             
             <div className="hidden md:flex space-x-4 lg:space-x-8 items-center">
