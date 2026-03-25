@@ -2,21 +2,21 @@ import { useEffect, useState } from 'react';
 import { Project } from '../types';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-// 1. Import the generated data from your public folder
+// 1. Import the generated and sorted data from your public folder
 import projectsData from '../../public/projects.json';
 
 export default function Gallery() {
   const { t } = useTranslation();
   
-  // 2. Initialize projects state with the imported JSON data
+  // 2. Simple State Logic: Initialize projects state directly from the JSON
   const [projects] = useState<Project[]>(projectsData);
 
   useEffect(() => {
-    // Ensure page starts at the top
+    // Ensure the page always starts at the top when navigating
     window.scrollTo(0, 0);
   }, []);
 
-  // Helper to normalize and filter projects by category
+  // Filter projects by category, ensuring match regardless of case
   const commercialProjects = projects.filter(p => p.category.toLowerCase() === 'commercial');
   const residentialProjects = projects.filter(p => p.category.toLowerCase() === 'residential');
 
@@ -68,7 +68,9 @@ export default function Gallery() {
 
         <div>
           {projects.length === 0 ? (
-            <p className="text-center text-gray-500">No projects found. Please ensure you have run 'node generate-gallery.js' and pushed projects.json to GitHub.</p>
+            <p className="text-center text-gray-500">
+              No projects found. Please ensure you have run 'node generate-gallery.js' and pushed projects.json to GitHub.
+            </p>
           ) : (
             <>
               {renderProjectSection(t('gallery.commercial'), commercialProjects)}
