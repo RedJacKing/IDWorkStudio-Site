@@ -2,9 +2,9 @@ import { Project } from '../types';
 
 export const getAllProjects = async (): Promise<Project[]> => {
   try {
-    const response = await fetch('/gallery.json');
+    const response = await fetch('/projects.json');
     if (!response.ok) {
-      console.warn('Failed to fetch gallery.json, returning empty list');
+      console.warn('Failed to fetch projects.json, returning empty list');
       return [];
     }
     return response.json();

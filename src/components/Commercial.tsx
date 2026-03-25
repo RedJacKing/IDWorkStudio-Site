@@ -46,22 +46,22 @@ export default function Commercial() {
 
       <div className="bg-off-white min-h-screen">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
+        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-white pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-charcoal">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop" 
-              alt="Modern Minimalist Office Reception Design Singapore" 
-              className="w-full h-full object-cover object-center opacity-40 scale-110"
+              src="/gallery/bright-office.jpg" 
+              alt="Modern Bright Singapore Corporate Office Design" 
+              className="w-full h-full object-cover object-center opacity-90"
             />
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px]" />
           </div>
           
-          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8 md:mt-12">
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8 md:mt-12 bg-white/40 backdrop-blur-md p-8 md:p-12 rounded-2xl border border-white/50 shadow-xl">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-serif mb-6 leading-tight"
+              className="text-4xl md:text-6xl font-serif mb-6 leading-tight text-dark-charcoal"
             >
               {t('commercial_page.hero.title')}
             </motion.h1>
@@ -69,7 +69,7 @@ export default function Commercial() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto font-light"
+              className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto font-medium"
             >
               {t('commercial_page.hero.subtitle')}
             </motion.h2>

@@ -56,7 +56,7 @@ export default function Residential() {
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
           <div className="absolute inset-0 z-0">
             <img 
-              src="/assets/residential-hero.jpg" 
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop" 
               alt="Modern Warm Minimalist Living Room" 
               className="w-full h-full object-cover object-center opacity-60 scale-110"
             />
@@ -75,7 +75,7 @@ export default function Residential() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-sans font-black uppercase tracking-tight mb-6 leading-tight"
+              className="text-4xl md:text-6xl font-serif mb-6 leading-tight"
             >
               {t('residential_page.hero.title')}
             </motion.h1>
@@ -105,7 +105,7 @@ export default function Residential() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-sans font-black uppercase tracking-tight mb-6 text-charcoal">{t('residential_page.specialists.title')}</h2>
+                <h2 className="text-3xl font-serif mb-6 text-charcoal">{t('residential_page.specialists.title')}</h2>
                 <div className="space-y-6">
                   <div className="flex">
                     <div className="flex-shrink-0">
@@ -152,12 +152,12 @@ export default function Residential() {
               </div>
               <div className="relative h-96">
                 <img 
-                   src="assets/residential/kitchen-1.jpg" 
+                   src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?q=80&w=1000&auto=format&fit=crop" 
                   alt="Japandi style kitchen cabinet in Singapore HDB" 
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl max-w-xs hidden md:block">
-                  <p className="text-charcoal font-sans font-bold text-lg italic">{t('residential_page.specialists.testimonial.quote')}</p>
+                  <p className="text-charcoal font-serif text-lg italic">{t('residential_page.specialists.testimonial.quote')}</p>
                   <p className="text-gray-500 text-sm mt-2">{t('residential_page.specialists.testimonial.author')}</p>
                 </div>
               </div>
@@ -169,8 +169,8 @@ export default function Residential() {
         <section className="py-20 bg-charcoal text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-sans font-black uppercase tracking-tight mb-4">{t('residential_page.lifestyle.title')}</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto font-medium">
+              <h2 className="text-3xl font-serif mb-4">{t('residential_page.lifestyle.title')}</h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
                 {t('residential_page.lifestyle.subtitle')}
               </p>
             </div>
@@ -204,7 +204,7 @@ export default function Residential() {
         {/* GEO-Ready Atomic Answers */}
         <section className="py-20 bg-off-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl md:text-5xl font-sans font-black uppercase tracking-tight mb-12 text-center text-charcoal">{t('residential_page.insights.title')}</h2>
+            <h2 className="text-3xl font-serif mb-12 text-center text-charcoal">{t('residential_page.insights.title')}</h2>
             
             <div className="space-y-6">
               <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-champagne">
@@ -237,8 +237,8 @@ export default function Residential() {
         {/* CTA Section */}
         <section id="contact" className="py-20 bg-charcoal text-white text-center scroll-mt-24">
           <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-4xl font-sans font-black uppercase tracking-tight mb-6">{t('residential_page.cta.title')}</h2>
-            <p className="text-gray-300 mb-8 font-medium">
+            <h2 className="text-3xl font-serif mb-6">{t('residential_page.cta.title')}</h2>
+            <p className="text-gray-300 mb-8">
               {t('residential_page.cta.subtitle')}
             </p>
             <a 
