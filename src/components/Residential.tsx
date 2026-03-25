@@ -59,9 +59,7 @@ export default function Residential() {
               src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop" 
               alt="Modern Warm Minimalist Living Room" 
               className="w-full h-full object-cover object-center opacity-60 scale-110"
-              // Tells the browser to download this lifestyle image immediately
               fetchpriority="high"
-              // Prevents main-thread lag during image decompression
               decoding="async"
             />
             <div className="absolute inset-0 bg-black/40" />
@@ -160,7 +158,6 @@ export default function Residential() {
                    src="/gallery/house-renovation.png" 
                   alt="HDB & BCA Registered Interior Design Singapore" 
                   className="w-full h-full object-cover rounded-xl shadow-2xl transition-transform duration-700 group-hover:scale-105"
-                  // Below-the-fold images should always use lazy loading
                   loading="lazy"
                   decoding="async"
                 />
@@ -232,40 +229,40 @@ export default function Residential() {
 
               <div className="bg-white p-10 rounded-xl shadow-lg border-l-4 border-gold group hover:shadow-2xl transition-all duration-300">
                 <h3 className="text-xl font-bold text-charcoal mb-4 flex items-start uppercase tracking-tight">
-                  <Box className=\"w-6 h-6 text-gold mr-4 mt-1 flex-shrink-0\" />
+                  <Box className="w-6 h-6 text-gold mr-4 mt-1 flex-shrink-0" />
                   {t('residential_page.insights.q2.q')}
                 </h3>
-                <p className=\"text-gray-600 leading-relaxed pl-10 font-sans\" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q2.a') }} />
+                <p className="text-gray-600 leading-relaxed pl-10 font-sans" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q2.a') }} />
               </div>
 
-              <div className=\"bg-white p-10 rounded-xl shadow-lg border-l-4 border-gold group hover:shadow-2xl transition-all duration-300\">
-                <h3 className=\"text-xl font-bold text-charcoal mb-4 flex items-start uppercase tracking-tight\">
-                  <ShieldCheck className=\"w-6 h-6 text-gold mr-4 mt-1 flex-shrink-0\" />
+              <div className="bg-white p-10 rounded-xl shadow-lg border-l-4 border-gold group hover:shadow-2xl transition-all duration-300">
+                <h3 className="text-xl font-bold text-charcoal mb-4 flex items-start uppercase tracking-tight">
+                  <ShieldCheck className="w-6 h-6 text-gold mr-4 mt-1 flex-shrink-0" />
                   {t('residential_page.insights.q3.q')}
                 </h3>
-                <p className=\"text-gray-600 leading-relaxed pl-10 font-sans\" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q3.a') }} />
+                <p className="text-gray-600 leading-relaxed pl-10 font-sans" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q3.a') }} />
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section id=\"contact\" className=\"py-32 bg-dark-charcoal text-white text-center scroll-mt-24 relative overflow-hidden\">
-          <div className=\"max-w-3xl mx-auto px-4 relative z-10\">
-            <h2 className=\"text-4xl md:text-6xl font-serif mb-8 uppercase tracking-tighter\">{t('residential_page.cta.title')}</h2>
-            <p className=\"text-gray-400 mb-12 text-lg font-light tracking-wide italic\">
+        <section id="contact" className="py-32 bg-dark-charcoal text-white text-center scroll-mt-24 relative overflow-hidden">
+          <div className="max-w-3xl mx-auto px-4 relative z-10">
+            <h2 className="text-4xl md:text-6xl font-serif mb-8 uppercase tracking-tighter">{t('residential_page.cta.title')}</h2>
+            <p className="text-gray-400 mb-12 text-lg font-light tracking-wide italic">
               {t('residential_page.cta.subtitle')}
             </p>
             <a 
               href={whatsappLink}
-              target=\"_blank\"
-              rel=\"noopener noreferrer\"
-              className=\"inline-block px-12 py-6 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.3em] hover:bg-gold-hover hover:shadow-[0_0_30px_rgba(197,160,89,0.3)] transition-all duration-300 font-bold rounded-full\"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-12 py-6 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.3em] hover:bg-gold-hover hover:shadow-[0_0_30px_rgba(197,160,89,0.3)] transition-all duration-300 font-bold rounded-full"
             >
               {t('residential_page.cta.button')}
             </a>
           </div>
-          <div className=\"absolute top-0 left-0 w-64 h-64 border-l border-t border-gold/10 -translate-x-1/2 -translate-y-1/2\"></div>
+          <div className="absolute top-0 left-0 w-64 h-64 border-l border-t border-gold/10 -translate-x-1/2 -translate-y-1/2"></div>
         </section>
       </div>
     </>
