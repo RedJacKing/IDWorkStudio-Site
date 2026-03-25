@@ -54,7 +54,7 @@ export default function Gallery() {
     return (
       <div className="mb-24 last:mb-0">
         <div className="text-center mb-12">
-          <h3 className="text-2xl md:text-3xl font-sans font-bold mb-4 text-charcoal">{title}</h3>
+          <h3 className="text-2xl md:text-3xl font-serif mb-4 text-charcoal">{title}</h3>
           <div className="w-16 h-1 bg-gray-200 mx-auto"></div>
         </div>
 
@@ -83,7 +83,7 @@ export default function Gallery() {
     <div className="min-h-screen bg-white pt-48 md:pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-sans font-bold mb-4">{t('gallery.title')}</h1>
+          <h1 className="text-4xl md:text-5xl font-serif mb-4">{t('gallery.title')}</h1>
           <div className="w-24 h-1 bg-black mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             {t('gallery.subtitle')}

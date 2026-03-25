@@ -45,23 +45,24 @@ export default function Commercial() {
       </Helmet>
 
       <div className="bg-off-white min-h-screen">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-white pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-charcoal">
+        {/* Hero Section - Darkened Style Fix */}
+        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
           <div className="absolute inset-0 z-0">
             <img 
-              src="/gallery/bright-office.jpg" 
+              src="/gallery/commercial-expertise.png" 
               alt="Modern Bright Singapore Corporate Office Design" 
-              className="w-full h-full object-cover object-center opacity-90"
+              className="w-full h-full object-cover object-center opacity-60"
             />
-            <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px]" />
+            {/* Dark overlay to ensure white text is readable */}
+            <div className="absolute inset-0 bg-black/40" />
           </div>
           
-          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8 md:mt-12 bg-white/40 backdrop-blur-md p-8 md:p-12 rounded-2xl border border-white/50 shadow-xl">
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8 md:mt-12">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-serif mb-6 leading-tight text-dark-charcoal"
+              className="text-4xl md:text-6xl font-serif mb-6 leading-tight text-white uppercase tracking-tight"
             >
               {t('commercial_page.hero.title')}
             </motion.h1>
@@ -69,22 +70,23 @@ export default function Commercial() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto font-medium"
+              className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light tracking-wide leading-relaxed"
             >
               {t('commercial_page.hero.subtitle')}
             </motion.h2>
-            <div className="flex flex-col gap-4 items-center justify-center">
+
+            <div className="flex flex-col sm:flex-row gap-6 items-center justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="w-full md:w-auto"
+                className="w-full sm:w-auto"
               >
                 <a 
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block w-full md:w-auto px-10 py-5 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-full text-center"
+                  className="inline-block w-full sm:w-auto px-10 py-5 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-full text-center"
                 >
                   {t('commercial_page.hero.cta')}
                 </a>
@@ -93,11 +95,11 @@ export default function Commercial() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="w-full md:w-auto"
+                className="w-full sm:w-auto"
               >
                 <Link 
                   to="/commercial/reinstatement"
-                  className="inline-block w-full md:w-auto px-10 py-5 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-full text-center"
+                  className="inline-block w-full sm:w-auto px-10 py-5 bg-transparent text-white text-sm uppercase tracking-[0.2em] hover:bg-white/10 transition-all duration-300 font-bold border border-white/50 rounded-full text-center backdrop-blur-sm"
                 >
                   {t('commercial_page.hero.cta_reinstatement')}
                 </Link>
@@ -268,7 +270,6 @@ export default function Commercial() {
 
         {/* Reinstatement CTA Section */}
         <section className="py-24 bg-white border-t border-gray-100 relative overflow-hidden">
-          {/* Architectural Grid Background Pattern */}
           <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.02]" 
                style={{ backgroundImage: 'linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
           </div>
