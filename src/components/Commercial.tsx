@@ -45,13 +45,17 @@ export default function Commercial() {
       </Helmet>
 
       <div className="bg-off-white min-h-screen">
-        {/* Hero Section */}
+        {/* Hero Section - Optimized for LCP */}
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
           <div className="absolute inset-0 z-0">
             <img 
               src="/gallery/commercial-expertise.png" 
               alt="Modern Bright Singapore Corporate Office Design" 
               className="w-full h-full object-cover object-center opacity-60"
+              // Tells the browser to download this PNG immediately
+              fetchpriority="high"
+              // Prevents main-thread lag during image decompression
+              decoding="async"
             />
             <div className="absolute inset-0 bg-black/40" />
           </div>
@@ -107,7 +111,7 @@ export default function Commercial() {
           </div>
         </section>
 
-        {/* Rest of the file remains exactly the same */}
+        {/* Services Section */}
         <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-serif mb-4 text-charcoal">{t('commercial_page.solutions.title')}</h2>
@@ -121,6 +125,7 @@ export default function Commercial() {
                   src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop" 
                   alt="Modern Minimalist Office Reception Design Singapore" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-serif mb-3 text-charcoal">{t('commercial_page.solutions.items.1.title')}</h3>
@@ -139,6 +144,7 @@ export default function Commercial() {
                   src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=800&auto=format&fit=crop" 
                   alt="Luxury Retail Store Layout Singapore" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-serif mb-3 text-charcoal">{t('commercial_page.solutions.items.2.title')}</h3>
@@ -157,6 +163,7 @@ export default function Commercial() {
                   src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop" 
                   alt="BCA HDB Compliant Commercial Renovations Singapore" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-serif mb-3 text-charcoal">{t('commercial_page.solutions.items.3.title')}</h3>

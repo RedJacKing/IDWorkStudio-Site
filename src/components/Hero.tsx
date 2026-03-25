@@ -19,7 +19,7 @@ export default function Hero() {
       ref={containerRef}
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-48 md:pt-32 lg:pt-40 pb-20 md:pb-32"
     >
-      {/* Background Image with Overlay and Parallax */}
+      {/* Background Image with Overlay and Parallax - Optimized for Speed */}
       <motion.div 
         style={{ y }}
         className="absolute inset-0 z-0"
@@ -28,6 +28,10 @@ export default function Hero() {
           src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
           alt="Modern Interior" 
           className="w-full h-full object-cover object-center opacity-60 scale-110"
+          // Tells the browser this is the most important image on the homepage
+          fetchpriority="high"
+          // Decodes the image in the background to keep the UI smooth
+          decoding="async"
         />
         <div className="absolute inset-0 bg-black/40" />
       </motion.div>

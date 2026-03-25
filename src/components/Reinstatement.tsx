@@ -21,19 +21,22 @@ export default function Reinstatement() {
              style={{ backgroundImage: 'linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)', backgroundSize: '50px 50px' }}>
         </div>
 
-        {/* Updated Hero Header with Dimmed Background Image */}
-        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
+        {/* Hero Header - Optimized for LCP Speed */}
+        <section className="relative pt-40 pb-24 bg-dark-charcoal text-white overflow-hidden">
+          {/* Background image container for reinstatement Hero */}
           <div className="absolute inset-0 z-0">
-            <img 
+             <img 
               src="/gallery/reinstatement-expertise.png" 
               alt="Singapore Commercial Office Reinstatement and Bare Shell Handover" 
               className="w-full h-full object-cover object-center opacity-60"
+              // Essential for fixing the 6.2s LCP score
+              fetchpriority="high"
+              decoding="async"
             />
-            {/* Dark overlay to match Landing/Residential page style */}
             <div className="absolute inset-0 bg-black/40" />
           </div>
 
-          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8 md:mt-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -62,22 +65,6 @@ export default function Reinstatement() {
               <span className="font-serif italic font-light text-white mb-2 uppercase tracking-tight">{t('reinstatement_page.hero.headline_serif')}</span>
               <span className="font-sans font-bold text-gold uppercase tracking-[0.2em]">{t('reinstatement_page.hero.headline_bold')}</span>
             </motion.h1>
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="w-full sm:w-auto"
-              >
-                <a 
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block w-full sm:w-auto px-10 py-5 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-full text-center"
-                >
-                  {t('reinstatement_page.footer.whatsapp_btn')}
-                </a>
-              </motion.div>
           </div>
         </section>
 

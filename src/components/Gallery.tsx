@@ -35,15 +35,19 @@ export default function Gallery() {
             <motion.div 
               key={project.id}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }} // Enhanced: Only animates when scrolled into view
+              viewport={{ once: true, margin: "100px" }} // Triggers slightly before the image hits the screen
               className="group relative aspect-square cursor-pointer z-0 md:hover:z-50"
             >
-              <div className="absolute inset-0 transition-all duration-300 ease-out md:group-hover:scale-125 md:group-hover:shadow-2xl md:group-hover:rounded-lg rounded-md overflow-hidden bg-gray-100 border border-gray-200">
+              <div className="absolute inset-0 transition-all duration-300 ease-out md:group-hover:scale-125 md:group-hover:shadow-2xl md:group-hover:rounded-lg rounded-md overflow-hidden bg-gray-200 border border-gray-200">
                 <img 
                   src={project.imageUrl} 
                   alt={project.title} 
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+                  className="w-full h-full object-cover transition-opacity duration-500"
+                  // Lazy loading ensures PNGs only load when near the viewport
+                  loading="lazy" 
+                  // Decoding async prevents the main thread from lagging during image decompression
+                  decoding="async"
                 />
               </div>
             </motion.div>
