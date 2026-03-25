@@ -45,7 +45,7 @@ export default function Commercial() {
       </Helmet>
 
       <div className="bg-off-white min-h-screen">
-        {/* Hero Section - Darkened Style Fix */}
+        {/* Hero Section - Responsive Mobile Fix */}
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
           <div className="absolute inset-0 z-0">
             <img 
@@ -62,7 +62,8 @@ export default function Commercial() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-serif mb-6 leading-tight text-white uppercase tracking-tight"
+              {/* Responsive text size: 3xl on mobile, 6xl on desktop. leading-tight prevents overlap */}
+              className="text-3xl sm:text-4xl md:text-6xl font-serif mb-6 leading-tight text-white uppercase tracking-tight px-2"
             >
               {t('commercial_page.hero.title')}
             </motion.h1>
@@ -70,12 +71,13 @@ export default function Commercial() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light tracking-wide leading-relaxed"
+              {/* Responsive text size for subtitle */}
+              className="text-base md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light tracking-wide leading-relaxed px-4"
             >
               {t('commercial_page.hero.subtitle')}
             </motion.h2>
 
-            <div className="flex flex-col sm:flex-row gap-6 items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-center justify-center w-full px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -86,7 +88,7 @@ export default function Commercial() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block w-full sm:w-auto px-10 py-5 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-full text-center"
+                  className="inline-block w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-gold text-dark-charcoal text-[11px] md:text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-full text-center"
                 >
                   {t('commercial_page.hero.cta')}
                 </a>
@@ -99,7 +101,7 @@ export default function Commercial() {
               >
                 <Link 
                   to="/commercial/reinstatement"
-                  className="inline-block w-full sm:w-auto px-10 py-5 bg-transparent text-white text-sm uppercase tracking-[0.2em] hover:bg-white/10 transition-all duration-300 font-bold border border-white/50 rounded-full text-center backdrop-blur-sm"
+                  className="inline-block w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-transparent text-white text-[11px] md:text-sm uppercase tracking-[0.2em] hover:bg-white/10 transition-all duration-300 font-bold border border-white/50 rounded-full text-center backdrop-blur-sm"
                 >
                   {t('commercial_page.hero.cta_reinstatement')}
                 </Link>
