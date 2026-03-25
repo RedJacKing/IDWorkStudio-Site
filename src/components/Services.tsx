@@ -11,7 +11,7 @@ export default function Services() {
       description: t('services.residential.desc'),
       icon: Home,
       // Added leading slash and pointed to your gallery folder
-      image: "/gallery/residential-expertise.jpg", 
+      image: "/gallery/residential-expertise.png", 
       alt: "Modern Residential Interior Design Singapore",
       link: "/residential"
     },
@@ -20,7 +20,7 @@ export default function Services() {
       description: t('services.commercial.desc'),
       icon: Briefcase,
       // Added leading slash and pointed to your gallery folder
-      image: "/gallery/commercial-expertise.jpg",
+      image: "/gallery/commercial-expertise.png",
       alt: "Commercial Office Renovation Singapore",
       link: "/commercial"
     },
@@ -29,7 +29,7 @@ export default function Services() {
       description: t('services.custom.desc'),
       icon: PenTool,
       // Added leading slash and pointed to your gallery folder
-      image: "/gallery/carpentry-expertise.jpg",
+      image: "/gallery/carpentry-expertise.png",
       alt: "Custom Carpentry Singapore",
       link: "/gallery"
     }
