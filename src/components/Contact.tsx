@@ -6,6 +6,14 @@ export default function Contact() {
   const whatsappNumber = "6598333085";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
+  const handleWhatsAppClick = () => {
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'conversion', {
+        send_to: 'AW-17984905730/EBz1COSuqJAcEILE7_9C',
+      });
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-gray-900 text-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,6 +68,7 @@ export default function Contact() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handleWhatsAppClick}
                   className="inline-flex items-center px-8 py-4 bg-gold text-dark-charcoal font-bold rounded-full hover:bg-gold-hover transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <Phone className="w-5 h-5 mr-2" />
