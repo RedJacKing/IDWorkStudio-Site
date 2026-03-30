@@ -25,8 +25,8 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <img 
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
-          alt="Modern Interior" 
+          src="/hero.webp" 
+          alt="Modern Interior Design Singapore" 
           className="w-full h-full object-cover object-center opacity-60 scale-110"
           // Tells the browser this is the most important image on the homepage
           fetchpriority="high"
