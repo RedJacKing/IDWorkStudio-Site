@@ -5,19 +5,16 @@ import './index.css';
 import './i18n';
 
 // Google Analytics
-const script1 = document.createElement('script');
-script1.async = true;
-script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-S82B3CLFH8';
-document.head.appendChild(script1);
+window.dataLayer = window.dataLayer || [];
+function gtag(...args: any[]){ window.dataLayer.push(args); }
+(window as any).gtag = gtag;
+gtag('js', new Date());
+gtag('config', 'G-S82B3CLFH8', { 'send_page_view': true });
 
-const script2 = document.createElement('script');
-script2.innerHTML = `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-S82B3CLFH8');
-`;
-document.head.appendChild(script2);
+const gtagScript = document.createElement('script');
+gtagScript.async = true;
+gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-S82B3CLFH8';
+document.head.appendChild(gtagScript);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
