@@ -1,1 +1,18 @@
-/* /index.html 200
+# Block old WordPress URLs - force 404 so Google deindexes them
+/service/*    /index.html    404
+/galleries/*    /index.html    404
+/contact-us/    /index.html    404
+/contact-us    /index.html    404
+/wp-content/*    /index.html    404
+/wp-includes/*    /index.html    404
+/wp-admin/*    /index.html    404
+/20190301*    /index.html    404
+/*-legal-*    /index.html    404
+/*-agreement-*    /index.html    404
+/*-contract-*    /index.html    404
+/*-consulting-*    /index.html    404
+/*-guide    /index.html    404
+/*-guide/    /index.html    404
+
+# Netlify SPA routing - must be last
+/*    /index.html    200
