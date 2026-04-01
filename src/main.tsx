@@ -5,7 +5,7 @@ import './index.css';
 import './i18n';
 import ReactGA from 'react-ga4';
 
-ReactGA.initialize('G-S82B3CLFH8');
+ReactGA.initialize('G-0R2LXVRM0R');
 ReactGA.send('pageview');
 
 createRoot(document.getElementById('root')!).render(
