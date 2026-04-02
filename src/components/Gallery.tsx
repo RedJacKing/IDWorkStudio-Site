@@ -1,21 +1,20 @@
 import { Helmet } from 'react-helmet-async';
 import { useEffect, useState } from 'react';
+import { Project } from '../types';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { X, Camera, ExternalLink } from 'lucide-react';
 import Navbar from './Navbar';
-// FIXED: Changed Footer to footer to match common lowercase naming or local file structure
-import Footer from './footer'; 
 import projectsData from '../../public/projects.json';
 
 const Gallery = () => {
   const { t } = useTranslation();
-  // Using any[] to bypass strict typing for this data structure check
+  // Using any[] to match the direct array structure in your projects.json
   const [projects, setProjects] = useState<any[]>([]);
   const [selectedImage, setSelectedImage] = useState<null | any>(null);
 
   useEffect(() => {
-    // FIXED: Your projects.json is a direct array, not an object with a .projects property
+    // Your projects.json is a direct array
     setProjects(projectsData);
   }, []);
 
@@ -40,7 +39,7 @@ const Gallery = () => {
           >
             <div className="aspect-[4/3] overflow-hidden">
               <img
-                src={project.imageUrl} // FIXED: Your JSON uses 'imageUrl', not 'image'
+                src={project.imageUrl} // Matches "imageUrl" in your projects.json
                 alt={project.title}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -59,6 +58,7 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-amber-400/30">
+      {/* KEEPS YOUR ORIGINAL SEO METADATA */}
       <Helmet>
         <title>Gallery | ID Work Studio - Premier Interior Design Portfolio</title>
         <meta name="description" content="Explore our portfolio of award-winning residential and commercial interior design projects in Singapore. From HDB BTO renovations to luxury office fit-outs." />
@@ -87,6 +87,7 @@ const Gallery = () => {
             {t('gallery.subtitle')}
           </motion.p>
           
+          {/* YOUR SEO DESCRIPTION */}
           <p className="text-gray-400 max-w-3xl mx-auto text-xs mt-4">
             {t('gallery.main_desc')}
           </p>
@@ -112,6 +113,7 @@ const Gallery = () => {
         </div>
       </main>
 
+      {/* LIGHTBOX MODAL */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
@@ -134,7 +136,7 @@ const Gallery = () => {
             >
               <div className="md:col-span-2 rounded-xl overflow-hidden shadow-2xl border border-zinc-800">
                 <img 
-                  src={selectedImage.imageUrl} // FIXED: To match projects.json
+                  src={selectedImage.imageUrl} // Fixed to match your JSON
                   alt={selectedImage.title} 
                   className="w-full h-full object-cover" 
                 />
@@ -154,8 +156,6 @@ const Gallery = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      <Footer />
     </div>
   );
 };
