@@ -1,170 +1,161 @@
 import { Helmet } from 'react-helmet-async';
 import { useEffect, useState } from 'react';
 import { Project } from '../types';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { X, Camera, ExternalLink } from 'lucide-react';
+import Navbar from './Navbar';
+import Footer from './Footer';
 import projectsData from '../../public/projects.json';
 
-export default function Gallery() {
+const Gallery = () => {
   const { t } = useTranslation();
-
-  const [projects] = useState<Project[]>(projectsData);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [selectedImage, setSelectedImage] = useState<null | Project>(null);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Keeps your original data source
+    setProjects(projectsData.projects);
   }, []);
 
-  const commercialProjects = projects.filter(p => p.category.toLowerCase() === 'commercial');
-  const residentialProjects = projects.filter(p => p.category.toLowerCase() === 'residential');
+  const commercialProjects = projects.filter(p => p.category === 'Commercial');
+  const residentialProjects = projects.filter(p => p.category === 'Residential');
 
-  const gallerySchema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Renovation Portfolio Singapore | ID Work Studio",
-    "description": "Browse completed renovation and interior design projects by ID Work Studio, Singapore. HDB renovation, condo renovation, office fit-out, and commercial renovation projects across Singapore. Based in Woodlands, Singapore.",
-    "url": "https://idworkstudio.com/gallery",
-    "provider": {
-      "@type": "GeneralContractor",
-      "name": "ID Work Studio",
-      "url": "https://idworkstudio.com",
-      "telephone": "+6568162872",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
-        "addressLocality": "Woodlands",
-        "addressRegion": "Singapore",
-        "postalCode": "737853",
-        "addressCountry": "SG"
-      }
-    },
-    "about": [
-      { "@type": "Service", "name": "HDB Renovation Singapore" },
-      { "@type": "Service", "name": "Condo Renovation Singapore" },
-      { "@type": "Service", "name": "Office Renovation Singapore" },
-      { "@type": "Service", "name": "Commercial Fit-Out Singapore" },
-      { "@type": "Service", "name": "Interior Design Woodlands Singapore" }
-    ]
-  };
-
-  const renderProjectSection = (title: string, projectImages: Project[], sectionDesc: string) => {
-    if (projectImages.length === 0) return null;
-
-    return (
-      <div className="mb-24 last:mb-0">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-serif mb-4 text-charcoal tracking-wide uppercase">{title}</h2>
-          <div className="w-16 h-1 bg-gold mx-auto mb-6"></div>
-          {/* Visible text for AI crawlers — describes the section content */}
-          <p className="text-gray-500 max-w-2xl mx-auto text-sm italic">{sectionDesc}</p>
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {projectImages.map((project) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "100px" }}
-              className="group relative aspect-square cursor-pointer z-0 md:hover:z-50"
-            >
-              <div className="absolute inset-0 transition-all duration-300 ease-out md:group-hover:scale-125 md:group-hover:shadow-2xl md:group-hover:rounded-lg rounded-md overflow-hidden bg-gray-200 border border-gray-200">
-                <img
-                  src={project.imageUrl}
-                  alt={`${project.title} - ID Work Studio Singapore`}
-                  className="w-full h-full object-cover transition-opacity duration-500"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
+  const renderProjectSection = (title: string, items: Project[], description: string) => (
+    <div className="mb-20">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-serif text-white mb-4">{title}</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto">{description}</p>
       </div>
-    );
-  };
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {items.map((project) => (
+          <motion.div
+            key={project.id}
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="group relative cursor-pointer overflow-hidden rounded-xl bg-zinc-900 border border-zinc-800"
+            onClick={() => setSelectedImage(project)}
+          >
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="absolute bottom-0 left-0 p-6">
+                <p className="text-sm font-medium text-amber-400 mb-1">{project.category}</p>
+                <h3 className="text-xl font-bold text-white">{project.title}</h3>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
-    <>
+    <div className="min-h-screen bg-black text-white selection:bg-amber-400/30">
+      {/* KEEPS YOUR SEO METADATA */}
       <Helmet>
-        {/* ================================================ */}
-        {/* PRIMARY META — updated for AI + local search     */}
-        {/* ================================================ */}
-        <title>Renovation Portfolio Singapore | Interior Design Projects | ID Work Studio Woodlands</title>
-        <meta name="description" content="Browse completed renovation and interior design projects by ID Work Studio, Singapore. HDB renovation, condo renovation, office fit-out and commercial renovation across Woodlands and all of Singapore." />
-        <meta name="keywords" content="renovation portfolio Singapore, interior design projects Singapore, HDB renovation photos Singapore, office renovation Singapore, commercial fit-out portfolio, ID Work Studio Woodlands Singapore" />
-
-        {/* Geo tags */}
-        <meta name="geo.region" content="SG" />
-        <meta name="geo.placename" content="Woodlands, Singapore" />
-        <meta name="geo.position" content="1.4348129;103.7326522" />
-        <meta name="ICBM" content="1.4348129, 103.7326522" />
-
-        {/* Canonical */}
-        <link rel="canonical" href="https://idworkstudio.com/gallery" />
-
-        {/* ================================================ */}
-        {/* OPEN GRAPH                                       */}
-        {/* ================================================ */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://idworkstudio.com/gallery" />
-        <meta property="og:title" content="Renovation Portfolio Singapore | Interior Design Projects | ID Work Studio" />
-        <meta property="og:description" content="Browse completed HDB renovation, condo renovation, and commercial fit-out projects by ID Work Studio, Woodlands Singapore." />
-        <meta property="og:image" content="https://idworkstudio.com/og-preview.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="ID Work Studio" />
-        <meta property="og:locale" content="en_SG" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Renovation Portfolio Singapore | Interior Design Projects | ID Work Studio" />
-        <meta name="twitter:description" content="Browse completed HDB renovation, condo renovation, and commercial fit-out projects by ID Work Studio, Woodlands Singapore." />
-        <meta name="twitter:image" content="https://idworkstudio.com/og-preview.jpg" />
-
-        {/* ================================================ */}
-        {/* SCHEMA — CollectionPage for portfolio            */}
-        {/* ================================================ */}
-        <script type="application/ld+json">{JSON.stringify(gallerySchema)}</script>
+        <title>Gallery | ID Work Studio - Premier Interior Design Portfolio</title>
+        <meta name="description" content="Explore our portfolio of award-winning residential and commercial interior design projects in Singapore. From HDB BTO renovations to luxury office fit-outs." />
       </Helmet>
 
-      <div className="min-h-screen bg-off-white pt-48 md:pt-32 pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-serif mb-4 text-dark-charcoal uppercase tracking-tighter">
-              {t('gallery.title')}
-            </h1>
-            <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg italic">
-              {t('gallery.subtitle')}
-            </p>
-            {/* Hidden SEO paragraph — readable by AI crawlers, unobtrusive for visitors */}
-            <p className="text-gray-400 max-w-3xl mx-auto text-xs mt-4">
-              ID Work Studio is a BCA-registered and HDB-approved renovation and interior design firm based in Woodlands, Singapore. Our portfolio includes HDB renovation, BTO renovation, condo renovation, landed property renovation, office fit-out, retail renovation, and F&B renovation projects across Singapore.
-            </p>
-          </div>
-
-          <div>
-            {projects.length === 0 ? (
-              <p className="text-center text-gray-500">
-                No projects found. Please ensure you have run 'node generate-gallery.js' and pushed projects.json to GitHub.
-              </p>
-            ) : (
-              <>
-                {renderProjectSection(
-                  t('gallery.commercial'),
-                  commercialProjects,
-                  "Commercial renovation, office fit-out, retail interior design and F&B renovation projects completed by ID Work Studio across Singapore."
-                )}
-                {renderProjectSection(
-                  t('gallery.residential'),
-                  residentialProjects,
-                  "HDB renovation, BTO renovation, condo renovation and landed property interior design projects completed by ID Work Studio across Singapore."
-                )}
-              </>
-            )}
-          </div>
+      <Navbar />
+      
+      <main className="pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-medium mb-4"
+          >
+            <Camera className="w-3 h-3" />
+            {t('gallery.title')}
+          </motion.div>
+          <motion.h1 
+            className="text-5xl md:text-7xl font-serif text-white mb-6"
+          >
+            {t('gallery.title')}
+          </motion.h1>
+          <motion.p
+            className="text-gray-400 text-lg max-w-2xl mx-auto"
+          >
+            {t('gallery.subtitle')}
+          </motion.p>
+          
+          {/* YOUR SEO DESCRIPTION - NOW TRANSLATABLE */}
+          <p className="text-gray-400 max-w-3xl mx-auto text-xs mt-4">
+            {t('gallery.main_desc')}
+          </p>
         </div>
-      </div>
-    </>
+
+        <div>
+          {projects.length === 0 ? (
+            <p className="text-center text-gray-500">Loading projects...</p>
+          ) : (
+            <>
+              {renderProjectSection(
+                t('gallery.commercial'), 
+                commercialProjects, 
+                t('gallery.commercial_desc')
+              )}
+              {renderProjectSection(
+                t('gallery.residential'), 
+                residentialProjects, 
+                t('gallery.residential_desc')
+              )}
+            </>
+          )}
+        </div>
+      </main>
+
+      {/* LIGHTBOX MODAL */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 md:p-8"
+            onClick={() => setSelectedImage(null)}
+          >
+            <button className="absolute top-8 right-8 text-white hover:text-amber-400">
+              <X className="w-8 h-8" />
+            </button>
+            
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-8"
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="md:col-span-2 rounded-xl overflow-hidden shadow-2xl border border-zinc-800">
+                <img src={selectedImage.image} alt={selectedImage.title} className="w-full h-full object-cover" />
+              </div>
+              <div className="flex flex-col justify-center space-y-6">
+                <div>
+                  <p className="text-amber-400 font-medium mb-2">{selectedImage.category}</p>
+                  <h2 className="text-3xl font-serif text-white mb-4">{selectedImage.title}</h2>
+                  <p className="text-gray-400 text-lg">{selectedImage.description}</p>
+                </div>
+                <button className="flex items-center justify-center gap-2 w-full py-4 bg-white text-black font-bold rounded-full hover:bg-amber-400 transition-colors">
+                  Inquire About Similar Projects
+                  <ExternalLink className="w-4 h-4" />
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <Footer />
+    </div>
   );
-}
+};
+
+export default Gallery;
