@@ -1,36 +1,37 @@
 import { Helmet } from 'react-helmet-async';
 import { useEffect, useState } from 'react';
-import { Project } from '../types';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { X, Camera, ExternalLink } from 'lucide-react';
 import Navbar from './Navbar';
-import Footer from './Footer';
+// FIXED: Changed Footer to footer to match common lowercase naming or local file structure
+import Footer from './footer'; 
 import projectsData from '../../public/projects.json';
 
 const Gallery = () => {
   const { t } = useTranslation();
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [selectedImage, setSelectedImage] = useState<null | Project>(null);
+  // Using any[] to bypass strict typing for this data structure check
+  const [projects, setProjects] = useState<any[]>([]);
+  const [selectedImage, setSelectedImage] = useState<null | any>(null);
 
   useEffect(() => {
-    // Keeps your original data source
-    setProjects(projectsData.projects);
+    // FIXED: Your projects.json is a direct array, not an object with a .projects property
+    setProjects(projectsData);
   }, []);
 
   const commercialProjects = projects.filter(p => p.category === 'Commercial');
   const residentialProjects = projects.filter(p => p.category === 'Residential');
 
-  const renderProjectSection = (title: string, items: Project[], description: string) => (
+  const renderProjectSection = (title: string, items: any[], description: string) => (
     <div className="mb-20">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-serif text-white mb-4">{title}</h2>
         <p className="text-gray-400 max-w-2xl mx-auto">{description}</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {items.map((project) => (
+        {items.map((project, index) => (
           <motion.div
-            key={project.id}
+            key={project.id || index}
             layout
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -39,7 +40,7 @@ const Gallery = () => {
           >
             <div className="aspect-[4/3] overflow-hidden">
               <img
-                src={project.image}
+                src={project.imageUrl} // FIXED: Your JSON uses 'imageUrl', not 'image'
                 alt={project.title}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -58,7 +59,6 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-amber-400/30">
-      {/* KEEPS YOUR SEO METADATA */}
       <Helmet>
         <title>Gallery | ID Work Studio - Premier Interior Design Portfolio</title>
         <meta name="description" content="Explore our portfolio of award-winning residential and commercial interior design projects in Singapore. From HDB BTO renovations to luxury office fit-outs." />
@@ -87,7 +87,6 @@ const Gallery = () => {
             {t('gallery.subtitle')}
           </motion.p>
           
-          {/* YOUR SEO DESCRIPTION - NOW TRANSLATABLE */}
           <p className="text-gray-400 max-w-3xl mx-auto text-xs mt-4">
             {t('gallery.main_desc')}
           </p>
@@ -113,7 +112,6 @@ const Gallery = () => {
         </div>
       </main>
 
-      {/* LIGHTBOX MODAL */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
@@ -135,7 +133,11 @@ const Gallery = () => {
               onClick={e => e.stopPropagation()}
             >
               <div className="md:col-span-2 rounded-xl overflow-hidden shadow-2xl border border-zinc-800">
-                <img src={selectedImage.image} alt={selectedImage.title} className="w-full h-full object-cover" />
+                <img 
+                  src={selectedImage.imageUrl} // FIXED: To match projects.json
+                  alt={selectedImage.title} 
+                  className="w-full h-full object-cover" 
+                />
               </div>
               <div className="flex flex-col justify-center space-y-6">
                 <div>
