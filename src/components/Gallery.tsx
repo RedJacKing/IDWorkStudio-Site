@@ -19,28 +19,6 @@ const Gallery = () => {
   const commercialProjects = projects.filter(p => p.category === 'Commercial');
   const residentialProjects = projects.filter(p => p.category === 'Residential');
 
-  const gallerySchema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Renovation Portfolio Singapore | ID Work Studio",
-    "description": "Browse completed renovation and interior design projects by ID Work Studio, Singapore. HDB renovation, condo renovation, office fit-out, and commercial renovation projects across Singapore. Based in Woodlands, Singapore.",
-    "url": "https://idworkstudio.com/gallery",
-    "provider": {
-      "@type": "GeneralContractor",
-      "name": "ID Work Studio",
-      "url": "https://idworkstudio.com",
-      "telephone": "+6568162872",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
-        "addressLocality": "Woodlands",
-        "addressRegion": "Singapore",
-        "postalCode": "737853",
-        "addressCountry": "SG"
-      }
-    }
-  };
-
   const renderProjectSection = (title: string, items: any[], description: string) => (
     <div className="mb-20">
       <div className="text-center mb-12">
@@ -79,9 +57,6 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 selection:bg-amber-100">
       <Helmet>
-        {/* ================================================ */}
-        {/* PRIMARY META — updated for AI + local search     */}
-        {/* ================================================ */}
         <title>Renovation Portfolio Singapore | Interior Design Projects | ID Work Studio Woodlands</title>
         <meta name="description" content="Browse completed renovation and interior design projects by ID Work Studio, Singapore. HDB renovation, condo renovation, office fit-out and commercial renovation across Woodlands and all of Singapore." />
         <meta name="keywords" content="renovation portfolio Singapore, interior design projects Singapore, HDB renovation photos Singapore, office renovation Singapore, commercial fit-out portfolio, ID Work Studio Woodlands Singapore" />
@@ -103,7 +78,27 @@ const Gallery = () => {
         <meta name="twitter:title" content="Renovation Portfolio Singapore | Interior Design Projects | ID Work Studio" />
         <meta name="twitter:description" content="Browse completed HDB renovation, condo renovation, and commercial fit-out projects by ID Work Studio, Woodlands Singapore." />
         <meta name="twitter:image" content="https://idworkstudio.com/og-preview.jpg" />
-        <script type="application/ld+json">{JSON.stringify(gallerySchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Renovation Portfolio Singapore | ID Work Studio",
+          "description": "Browse completed renovation and interior design projects by ID Work Studio, Singapore. HDB renovation, condo renovation, office fit-out, and commercial renovation projects across Singapore. Based in Woodlands, Singapore.",
+          "url": "https://idworkstudio.com/gallery",
+          "provider": {
+            "@type": "GeneralContractor",
+            "name": "ID Work Studio",
+            "url": "https://idworkstudio.com",
+            "telephone": "+6568162872",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
+              "addressLocality": "Woodlands",
+              "addressRegion": "Singapore",
+              "postalCode": "737853",
+              "addressCountry": "SG"
+            }
+          }
+        })}</script>
       </Helmet>
 
       <Navbar />
@@ -128,10 +123,8 @@ const Gallery = () => {
           >
             {t('gallery.subtitle')}
           </motion.p>
-          
-          <p className="text-gray-500 max-w-3xl mx-auto text-xs mt-4">
-            {t('gallery.main_desc')}
-          </p>
+          {/* SEO text — hidden visually, readable by AI crawlers */}
+          <p className="sr-only">{t('gallery.main_desc')}</p>
         </div>
 
         <div>
