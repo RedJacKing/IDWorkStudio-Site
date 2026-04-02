@@ -89,25 +89,14 @@ export default function Residential() {
   return (
     <>
       <Helmet>
-        {/* ================================================ */}
-        {/* PRIMARY META — updated for AI + local search     */}
-        {/* ================================================ */}
         <title>HDB & Condo Renovation Singapore | Residential Interior Design | ID Work Studio Woodlands</title>
         <meta name="description" content="HDB-approved residential renovation and interior design in Singapore. BCA-registered contractor specialising in HDB, condo and landed property renovations. Based in Woodlands, serving all of Singapore. Get a free consultation today." />
         <meta name="keywords" content="HDB renovation Singapore, condo renovation Singapore, residential renovation Singapore, interior design Singapore, BTO renovation Singapore, landed property renovation Singapore, Woodlands interior designer, ID Work Studio" />
-
-        {/* Geo tags */}
         <meta name="geo.region" content="SG" />
         <meta name="geo.placename" content="Woodlands, Singapore" />
         <meta name="geo.position" content="1.4348129;103.7326522" />
         <meta name="ICBM" content="1.4348129, 103.7326522" />
-
-        {/* Canonical */}
         <link rel="canonical" href="https://idworkstudio.com/residential" />
-
-        {/* ================================================ */}
-        {/* OPEN GRAPH                                       */}
-        {/* ================================================ */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://idworkstudio.com/residential" />
         <meta property="og:title" content="HDB & Condo Renovation Singapore | Residential Interior Design | ID Work Studio" />
@@ -117,16 +106,10 @@ export default function Residential() {
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="ID Work Studio" />
         <meta property="og:locale" content="en_SG" />
-
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="HDB & Condo Renovation Singapore | Residential Interior Design | ID Work Studio" />
         <meta name="twitter:description" content="HDB-approved residential renovation and interior design in Singapore. BCA-registered, Woodlands-based. Specialising in HDB, condo and landed property renovations." />
         <meta name="twitter:image" content="https://idworkstudio.com/og-preview.jpg" />
-
-        {/* ================================================ */}
-        {/* SCHEMA — Service + FAQPage for rich results      */}
-        {/* ================================================ */}
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>

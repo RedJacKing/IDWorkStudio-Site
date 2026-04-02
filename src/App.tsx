@@ -15,10 +15,7 @@ import ScrollToHashElement from './components/ScrollToHashElement';
 import { useTranslation } from 'react-i18next';
 import ReactGA from 'react-ga4';
 
-// ================================================
-// GA4 — fires a pageview on every route change
-// ================================================
-function RouteTracker() {
+function GARouteTracker() {
   const location = useLocation();
 
   useEffect(() => {
@@ -78,13 +75,8 @@ export default function App() {
       <BrowserRouter>
         <LanguagePersistence />
         <QueryParamStripper />
+        <GARouteTracker />
         <ScrollToHashElement />
-        <RouteTracker />
-        {/*
-          REMOVED: <Helmet><link rel="canonical" /></Helmet>
-          This was the root cause of every page showing the homepage canonical.
-          Each page component now sets its own canonical via its own <Helmet> block.
-        */}
         <div className="min-h-screen bg-white font-sans text-charcoal">
           <Navbar />
           <Routes>
