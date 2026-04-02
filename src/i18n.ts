@@ -14,7 +14,7 @@ const resources = {
         "contact": "Contact"
       },
       "accreditation": {
-        "hdb": "HDB-Approved",
+        "hdb": "HDB-Registered",
         "bca": "BCA-Registered",
         "firm": "Firm"
       },
@@ -83,14 +83,17 @@ const resources = {
       "gallery": {
         "title": "Our Gallery",
         "subtitle": "A curated selection of our finest commercial and residential work.",
+        "main_desc": "ID Work Studio is a BCA-registered and HDB-registered renovation and interior design firm based in Woodlands, Singapore. Our portfolio includes HDB renovation, BTO renovation, condo renovation, landed property renovation, office fit-out, retail renovation, and F&B renovation projects across Singapore.",
         "commercial": "Commercial",
-        "residential": "Residential"
+        "commercial_desc": "Commercial renovation, office fit-out, retail interior design and F&B renovation projects completed by ID Work Studio across Singapore.",
+        "residential": "Residential",
+        "residential_desc": "HDB renovation, BTO renovation, condo renovation and landed property interior design projects completed by ID Work Studio across Singapore."
       },
       "residential_page": {
         "hero": {
           "badge": "2026 Design Trends",
           "title": "Modern Visionary Living for Singapore Homeowners",
-          "subtitle": "BCA-Registered & HDB-Approved Partner. We handle all HDB permits and structural submissions for your peace of mind.",
+          "subtitle": "BCA-Registered & HDB-Registered Partner. We handle all HDB permits and structural submissions for your peace of mind.",
           "cta": "Book a Home Consultation"
         },
         "lifestyle": {
@@ -112,7 +115,7 @@ const resources = {
           }
         },
         "specialists": {
-          "title": "HDB Approved Contractor Singapore",
+          "title": "HDB Registered Contractor Singapore",
           "items": {
             "1": {
               "title": "BTO Renovation Ideas",
@@ -149,14 +152,14 @@ const resources = {
         },
         "cta": {
           "title": "Start Your Home Transformation",
-          "subtitle": "Secure your slot for 2026. Consult with our HDB-approved design experts today.",
+          "subtitle": "Secure your slot for 2026. Consult with our HDB-registered design experts today.",
           "button": "Book a Home Consultation"
         }
       },
       "commercial_page": {
         "hero": {
           "title": "Expert Office Renovation Singapore & Commercial Fit-Outs",
-          "subtitle": "Retail, F&B, and Reinstatement Services by BCA-Approved Contractors",
+          "subtitle": "Retail, F&B, and Reinstatement Services by BCA-Registered Contractors",
           "cta": "Request Site Survey",
           "cta_reinstatement": "LEARN MORE ABOUT REINSTATEMENT"
         },
@@ -236,7 +239,7 @@ const resources = {
         },
         "cta": {
           "title": "Ready to Transform Your Business Space?",
-          "subtitle": "Partner with a trusted, BCA-approved commercial contractor for your next project.",
+          "subtitle": "Partner with a trusted, BCA-registered commercial contractor for your next project.",
           "button": "Get Commercial Quote"
         }
       },
@@ -300,7 +303,7 @@ const resources = {
         },
         "trust": {
           "bca": "BCA Registered",
-          "hdb": "HDB Approved",
+          "hdb": "HDB Registered",
           "scdf": "SCDF Compliant"
         },
         "trust_row": {
@@ -327,8 +330,8 @@ const resources = {
         "contact": "联系我们"
       },
       "accreditation": {
-        "hdb": "建屋局认证",
-        "bca": "建设局注册",
+        "hdb": "HDB 注册",
+        "bca": "BCA 注册",
         "firm": "公司"
       },
       "hero": {
@@ -347,7 +350,7 @@ const resources = {
           },
           "2": {
             "title": "专业施工",
-            "desc": "我们拥有建屋局(HDB)和建设局(BCA)注册的团队，精准管理翻新工程，确保质量和合规性。"
+            "desc": "我们拥有 BCA 注册与 HDB 注册的团队，精准管理翻新工程，确保质量和合规性。"
           },
           "3": {
             "title": "完美交付",
@@ -396,14 +399,17 @@ const resources = {
       "gallery": {
         "title": "我们的作品集",
         "subtitle": "精选的商业和住宅设计佳作。",
+        "main_desc": "ID Work Studio 是一家位于新加坡 Woodlands 的 BCA 注册与 HDB 注册建筑设计与室内装修公司。我们的作品集涵盖了新加坡各地的 HDB 装修、BTO 装修、公寓翻新、有地房产装修、办公室装修、零售店装修及餐饮空间装修项目。",
         "commercial": "商业空间",
-        "residential": "住宅设计"
+        "commercial_desc": "由 ID Work Studio 在新加坡完成的商业装修、办公室规划、零售室内设计及餐饮空间翻新项目。",
+        "residential": "住宅设计",
+        "residential_desc": "由 ID Work Studio 在新加坡完成的 HDB 装修、BTO 装修、公寓翻新及有地房产室内设计项目。"
       },
       "residential_page": {
         "hero": {
           "badge": "2026 设计趋势",
           "title": "现代远见生活 为新加坡业主打造",
-          "subtitle": "BCA注册与HDB认可的合作伙伴。我们处理所有HDB许可证和结构提交，让您高枕无忧。",
+          "subtitle": "BCA 注册与 HDB 注册的合作伙伴。我们处理所有 HDB 许可证和结构提交，让您高枕无忧。",
           "cta": "预约家居咨询"
         },
         "lifestyle": {
@@ -425,7 +431,7 @@ const resources = {
           }
         },
         "specialists": {
-          "title": "新加坡 HDB 认可承包商",
+          "title": "新加坡 HDB 注册承包商",
           "items": {
             "1": {
               "title": "BTO 装修灵感",
@@ -441,7 +447,7 @@ const resources = {
             }
           },
           "testimonial": {
-            "quote": "HDB和BCA注册室内设计，专注于新加坡现代BTO和转售组屋翻新。",
+            "quote": "HDB 和 BCA 注册室内设计，专注于新加坡现代 BTO 和转售组屋翻新。",
             "author": "ID Work Studio"
           }
         },
@@ -456,20 +462,20 @@ const resources = {
             "a": "要在小型组屋中最大化存储空间，请利用带有落地木工的<strong>垂直空间</strong>。实施<strong>智能集成解决方案</strong>，如带抽屉的平台床、特色墙内的隐藏存储空间以及可扩展的餐桌。“生活化的Japandi”设计通常使用隐藏式橱柜，以保持整洁、极简的美感，同时不牺牲功能性。"
           },
           "q3": {
-            "q": "为什么选择建屋局注册承包商对安全很重要？",
-            "a": "选择建屋局注册承包商至关重要，因为他们受过培训，严格遵守<strong>建屋局的翻新指南</strong>和结构安全协议。他们确保在拆除过程中不会损坏关键的结构柱，并且所有电气和管道工程均符合新加坡的安全标准，从而保护您免受责任和安全隐患。"
+            "q": "为什么选择 HDB 注册承包商对安全很重要？",
+            "a": "选择 HDB 注册承包商至关重要，因为他们受过培训，严格遵守<strong> HDB 的翻新指南</strong>和结构 safety 协议。他们确保在拆除过程中不会损坏关键的结构柱，并且所有电气和管道工程均符合新加坡的安全标准，从而保护您免受责任和安全隐患。"
           }
         },
         "cta": {
           "title": "开始您的家居改造",
-          "subtitle": "确保您在2026年的名额。立即咨询我们的 HDB 认可设计专家。",
+          "subtitle": "确保您在2026年的名额。立即咨询我们的 HDB 注册设计专家。",
           "button": "预约家居咨询"
         }
       },
       "commercial_page": {
         "hero": {
           "title": "新加坡专业办公室翻新 与商业装修",
-          "subtitle": "由建设局(BCA)认可的承包商提供零售、餐饮和恢复原状服务",
+          "subtitle": "由 BCA 注册的承包商提供零售、餐饮和恢复原状服务",
           "cta": "预约现场勘察",
           "cta_reinstatement": "了解更多原状修复服务"
         },
@@ -489,7 +495,7 @@ const resources = {
               "point2": "照明设计"
             },
             "3": {
-              "title": "符合BCA/HDB标准的商业翻新",
+              "title": "符合 BCA/HDB 标准的商业翻新",
               "desc": "完全符合新加坡严格的建筑规范。我们管理餐饮、工业和商业空间的所有提交文件。",
               "point1": "FSSD (消防安全) 提交",
               "point2": "大厦管理 (MA) 联络"
@@ -540,7 +546,7 @@ const resources = {
           "title": "常见问题",
           "q1": {
             "q": "新加坡办公室装修的平均时间表是怎样的？",
-            "a": "对于新加坡的标准办公室装修（约2,000 - 5,000平方英尺），时间表通常在<strong>4到8周</strong>之间。这包括1-2周的设计和材料选择，1-2周的BCA/消防安全提交，以及4-6周的翻新工程。需要大量机电工程或结构更改的复杂项目可能需要8-12周。"
+            "a": "对于新加坡的标准办公室装修（约2,000 - 5,000平方英尺），时间表通常在<strong>4到8周</strong>之间。这包括1-2周的设计 and 材料选择，1-2周的BCA/消防安全提交，以及4-6周的翻新工程。需要大量机电工程或结构更改的复杂项目可能需要8-12周。"
           },
           "q2": {
             "q": "BCA注册公司如何确保商业安全合规？",
@@ -549,7 +555,7 @@ const resources = {
         },
         "cta": {
           "title": "准备好改造您的商业空间了吗？",
-          "subtitle": "为您的下一个项目与值得信赖的、BCA认可的商业承包商合作。",
+          "subtitle": "为您的下一个项目与值得信赖的、BCA 注册的商业承包商合作。",
           "button": "获取商业报价"
         }
       },
@@ -613,7 +619,7 @@ const resources = {
         },
         "trust": {
           "bca": "BCA 注册",
-          "hdb": "HDB 认可",
+          "hdb": "HDB 注册",
           "scdf": "SCDF 合规"
         },
         "trust_row": {
