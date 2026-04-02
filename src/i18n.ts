@@ -158,7 +158,7 @@ const resources = {
       },
       "commercial_page": {
         "hero": {
-          "title": "Expert Office Renovation Singapore & Commercial Fit-Outs",
+          "title": "Expert Office Renovations & Commercial Fit-outs in Singapore",
           "subtitle": "Retail, F&B, and Reinstatement Services by BCA-Registered Contractors",
           "cta": "Request Site Survey",
           "cta_reinstatement": "LEARN MORE ABOUT REINSTATEMENT"
