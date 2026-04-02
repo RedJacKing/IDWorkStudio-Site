@@ -90,7 +90,7 @@ export default function App() {
           <footer className="bg-black text-white py-12 border-t border-gray-800 pb-[90px] md:pb-[90px] lg:pb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <div className="mb-6 flex justify-center space-x-8">
-                
+                <a
                   href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PListingContractor.jsp"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -99,7 +99,7 @@ export default function App() {
                 >
                   {t('accreditation.hdb')}
                 </a>
-                
+                <a
                   href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s"
                   target="_blank"
                   rel="noopener noreferrer"
