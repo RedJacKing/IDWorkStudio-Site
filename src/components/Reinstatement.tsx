@@ -8,11 +8,127 @@ export default function Reinstatement() {
   const whatsappNumber = "6598333085";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%20ID%20Work%20Studio,%20I'd%20like%20a%20site%20survey%20for%20reinstatement.`;
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Office Reinstatement Singapore",
+    "description": "Professional BCA and HDB compliant office and commercial reinstatement services in Singapore. Full strip-out, SCDF fire protection, M&E works, and bare shell handover for offices and shopping malls across Singapore. Based in Woodlands, Singapore.",
+    "serviceType": "Office Reinstatement",
+    "areaServed": {
+      "@type": "City",
+      "name": "Singapore"
+    },
+    "provider": {
+      "@type": "GeneralContractor",
+      "name": "ID Work Studio",
+      "url": "https://idworkstudio.com",
+      "telephone": "+6568162872",
+      "email": "contact@idworkstudio.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
+        "addressLocality": "Woodlands",
+        "addressRegion": "Singapore",
+        "postalCode": "737853",
+        "addressCountry": "SG"
+      }
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Reinstatement Services Singapore",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office Reinstatement Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Reinstatement Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mall Unit Reinstatement Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "BCA Compliant Reinstatement Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HDB Commercial Reinstatement Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office Bare Shell Handover Singapore" } }
+      ]
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://idworkstudio.com/commercial/reinstatement"
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is office reinstatement in Singapore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Office reinstatement in Singapore refers to the process of restoring a leased commercial space back to its original bare shell condition before lease expiry. This is required by most Singapore landlords and must comply with BCA, HDB, and SCDF regulations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does office reinstatement take in Singapore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A typical office reinstatement in Singapore takes 1 to 3 weeks depending on the size of the unit and extent of works required. ID Work Studio provides a site survey and timeline estimate before works begin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does office reinstatement cost in Singapore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Office reinstatement costs in Singapore vary based on unit size, scope of works, and building requirements. Contact ID Work Studio for a free site survey and quotation for your commercial reinstatement project."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
-        <title>Commercial Reinstatement Singapore | Office & Mall Handover | ID Work Studio</title>
-        <meta name="description" content="Professional BCA/HDB compliant reinstatement services in Singapore. 100% pass-rate solutions for office and shopping mall units. Get your deposit back today." />
+        {/* ================================================ */}
+        {/* PRIMARY META — updated for AI + local search     */}
+        {/* ================================================ */}
+        <title>Office Reinstatement Singapore | BCA & HDB Compliant Handover | ID Work Studio Woodlands</title>
+        <meta name="description" content="Professional office and commercial reinstatement in Singapore. BCA & HDB compliant, SCDF approved. Serving offices and malls across Singapore from our Woodlands studio. Free site survey. Get your deposit back today." />
+        <meta name="keywords" content="office reinstatement Singapore, commercial reinstatement Singapore, BCA reinstatement Singapore, HDB reinstatement Singapore, mall handover Singapore, bare shell handover Singapore, office handover contractor Singapore, Woodlands contractor Singapore, ID Work Studio" />
+
+        {/* Geo tags */}
+        <meta name="geo.region" content="SG" />
+        <meta name="geo.placename" content="Woodlands, Singapore" />
+        <meta name="geo.position" content="1.4348129;103.7326522" />
+        <meta name="ICBM" content="1.4348129, 103.7326522" />
+
+        {/* Canonical — critical fix, was pointing to homepage */}
+        <link rel="canonical" href="https://idworkstudio.com/commercial/reinstatement" />
+
+        {/* ================================================ */}
+        {/* OPEN GRAPH — full set, was defaulting to homepage */}
+        {/* ================================================ */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://idworkstudio.com/commercial/reinstatement" />
+        <meta property="og:title" content="Office Reinstatement Singapore | BCA & HDB Compliant | ID Work Studio" />
+        <meta property="og:description" content="Professional office and commercial reinstatement in Singapore. BCA & HDB compliant, SCDF approved. Free site survey. Based in Woodlands, serving all of Singapore." />
+        <meta property="og:image" content="https://idworkstudio.com/gallery/reinstatement-expertise.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="ID Work Studio" />
+        <meta property="og:locale" content="en_SG" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Office Reinstatement Singapore | BCA & HDB Compliant | ID Work Studio" />
+        <meta name="twitter:description" content="Professional office and commercial reinstatement in Singapore. BCA & HDB compliant, SCDF approved. Free site survey. Based in Woodlands, serving all of Singapore." />
+        <meta name="twitter:image" content="https://idworkstudio.com/gallery/reinstatement-expertise.png" />
+
+        {/* ================================================ */}
+        {/* SCHEMA — Service + FAQPage for rich results      */}
+        {/* ================================================ */}
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       </Helmet>
 
       <div className="bg-off-white min-h-screen font-sans selection:bg-gold selection:text-dark-charcoal">
@@ -23,13 +139,11 @@ export default function Reinstatement() {
 
         {/* Hero Header - Optimized for LCP Speed */}
         <section className="relative pt-40 pb-24 bg-dark-charcoal text-white overflow-hidden">
-          {/* Background image container for reinstatement Hero */}
           <div className="absolute inset-0 z-0">
              <img 
               src="/gallery/reinstatement-expertise.png" 
               alt="Singapore Commercial Office Reinstatement and Bare Shell Handover" 
               className="w-full h-full object-cover object-center opacity-60"
-              // Essential for fixing the 6.2s LCP score
               fetchpriority="high"
               decoding="async"
             />
@@ -43,7 +157,6 @@ export default function Reinstatement() {
               transition={{ duration: 0.6 }}
               className="mb-10 flex justify-center"
             >
-              {/* Gold-line Architectural Vector Icon */}
               <svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-gold">
                 <path d="M3 3H21V21H3V3Z" stroke="currentColor" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M3 9H21" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -142,7 +255,6 @@ export default function Reinstatement() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-0 relative">
-              {/* Connector Line (Desktop) */}
               <div className="hidden md:block absolute top-[32px] left-0 w-full h-[1px] bg-gold/20 z-0"></div>
               
               {[1, 2, 3, 4].map((step) => (
@@ -192,7 +304,6 @@ export default function Reinstatement() {
             </a>
           </div>
           
-          {/* Decorative Elements */}
           <div className="absolute top-0 left-0 w-64 h-64 border-l border-t border-gold/10 -translate-x-1/2 -translate-y-1/2"></div>
           <div className="absolute bottom-0 right-0 w-64 h-64 border-r border-b border-gold/10 translate-x-1/2 translate-y-1/2"></div>
         </section>

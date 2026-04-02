@@ -11,36 +11,116 @@ export default function Commercial() {
 
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": ["CommercialRealEstateService", "ProfessionalService"],
-    "name": "ID Work Studio Commercial Renovation",
-    "description": "Strategic Commercial Interior Design & Fit-Outs in Singapore. BCA-Approved Commercial Contractor specializing in Office Reinstatement and Retail Interior Fit-out.",
-    "areaServed": "Singapore",
-    "knowsAbout": [
-      "Office Reinstatement Singapore",
-      "Retail Interior Fit-out",
-      "BCA-Approved Commercial Contractor",
-      "F&B Renovation",
-      "Commercial Interior Design"
-    ],
+    "@type": "Service",
+    "name": "Commercial Renovation & Office Fit-Out Singapore",
+    "description": "BCA-registered commercial renovation and office fit-out contractor in Singapore. Specialising in office design, retail fit-outs, F&B renovations, and commercial interior design across Singapore. Based in Woodlands, Singapore.",
+    "serviceType": "Commercial Renovation",
+    "areaServed": {
+      "@type": "City",
+      "name": "Singapore"
+    },
     "provider": {
-      "@type": "Organization",
+      "@type": "GeneralContractor",
       "name": "ID Work Studio",
-      "url": "https://idworkstudio.com"
+      "url": "https://idworkstudio.com",
+      "telephone": "+6568162872",
+      "email": "contact@idworkstudio.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
+        "addressLocality": "Woodlands",
+        "addressRegion": "Singapore",
+        "postalCode": "737853",
+        "addressCountry": "SG"
+      }
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Commercial Renovation Services Singapore",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office Renovation Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Fit-Out Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retail Interior Fit-Out Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "F&B Renovation Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office Interior Design Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Interior Design Woodlands Singapore" } }
+      ]
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://idworkstudio.com/commercial"
     }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": t('commercial_page.faq.q1.q'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('commercial_page.faq.q1.a')
+        }
+      },
+      {
+        "@type": "Question",
+        "name": t('commercial_page.faq.q2.q'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('commercial_page.faq.q2.a')
+        }
+      }
+    ]
   };
 
   return (
     <>
       <Helmet>
-        <title>Office Renovation Singapore | Commercial Interior Design | ID Work Studio</title>
-        <meta name="description" content="Looking for an office renovation company in Singapore? ID Work Studio is a BCA-registered contractor specializing in turnkey commercial fit-outs and modern office designs." />
+        {/* ================================================ */}
+        {/* PRIMARY META — updated for AI + local search     */}
+        {/* ================================================ */}
+        <title>Office Renovation Singapore | Commercial Fit-Out Contractor | ID Work Studio Woodlands</title>
+        <meta name="description" content="BCA-registered office renovation and commercial fit-out contractor in Singapore. Serving offices, retail and F&B across Singapore from our Woodlands studio. Turnkey solutions, on-time delivery. Get a free consultation today." />
+        <meta name="keywords" content="office renovation Singapore, commercial fit-out Singapore, office interior design Singapore, retail fit-out Singapore, F&B renovation Singapore, BCA registered contractor Singapore, Woodlands renovation contractor, ID Work Studio" />
+
+        {/* Geo tags */}
+        <meta name="geo.region" content="SG" />
+        <meta name="geo.placename" content="Woodlands, Singapore" />
+        <meta name="geo.position" content="1.4348129;103.7326522" />
+        <meta name="ICBM" content="1.4348129, 103.7326522" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://idworkstudio.com/commercial" />
+
+        {/* ================================================ */}
+        {/* OPEN GRAPH — full set for this page              */}
+        {/* ================================================ */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://idworkstudio.com/commercial" />
+        <meta property="og:title" content="Office Renovation Singapore | Commercial Fit-Out | ID Work Studio" />
+        <meta property="og:description" content="BCA-registered office renovation and commercial fit-out contractor in Singapore. Woodlands-based, serving all of Singapore. Offices, retail, F&B — turnkey solutions." />
         <meta property="og:image" content="https://idworkstudio.com/WALANDING.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://idworkstudio.com/commercial" />
+        <meta property="og:site_name" content="ID Work Studio" />
+        <meta property="og:locale" content="en_SG" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Office Renovation Singapore | Commercial Fit-Out | ID Work Studio" />
+        <meta name="twitter:description" content="BCA-registered office renovation and commercial fit-out contractor in Singapore. Woodlands-based, serving all of Singapore." />
         <meta name="twitter:image" content="https://idworkstudio.com/WALANDING.jpg" />
+
+        {/* ================================================ */}
+        {/* SCHEMA — Service + FAQPage for rich results      */}
+        {/* ================================================ */}
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
         </script>
       </Helmet>
 
@@ -142,7 +222,7 @@ export default function Commercial() {
               <div className="h-48 mb-6 overflow-hidden rounded-sm">
                 <img 
                   src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=800&auto=format&fit=crop" 
-                  alt="Luxury Retail Store Layout Singapore" 
+                  alt="Retail Interior Fit-Out Singapore Shopping Mall"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -160,8 +240,8 @@ export default function Commercial() {
             <div className="bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
               <div className="h-48 mb-6 overflow-hidden rounded-sm">
                 <img 
-                  src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop" 
-                  alt="BCA HDB Compliant Commercial Renovations Singapore" 
+                  src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" 
+                  alt="F&B Restaurant Interior Design Singapore"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -178,16 +258,14 @@ export default function Commercial() {
           </div>
         </section>
 
+        {/* Trust Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-serif mb-4 text-charcoal">{t('commercial_page.trust.title')}</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                {t('commercial_page.trust.subtitle')}
-              </p>
+              <div className="w-24 h-1 bg-champagne mx-auto"></div>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center p-6 border border-gray-100 rounded-lg hover:border-champagne transition-colors">
                 <ShieldCheck className="w-12 h-12 text-champagne mx-auto mb-4" />
                 <h4 className="font-bold text-charcoal mb-2">{t('commercial_page.trust.items.1.title')}</h4>

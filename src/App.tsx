@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -13,6 +13,24 @@ import Residential from './components/Residential';
 import StickyMobileNav from './components/StickyMobileNav';
 import ScrollToHashElement from './components/ScrollToHashElement';
 import { useTranslation } from 'react-i18next';
+import ReactGA from 'react-ga4';
+
+// ================================================
+// GA4 — fires a pageview on every route change
+// ================================================
+function RouteTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: 'pageview',
+      page: location.pathname + location.search,
+      title: document.title,
+    });
+  }, [location]);
+
+  return null;
+}
 
 function QueryParamStripper() {
   const location = useLocation();
@@ -20,7 +38,6 @@ function QueryParamStripper() {
 
   useEffect(() => {
     if (location.search) {
-      // Strip query parameters and redirect to the clean URL
       navigate(location.pathname, { replace: true });
     }
   }, [location, navigate]);
@@ -29,7 +46,6 @@ function QueryParamStripper() {
 }
 
 function LandingPage() {
-// ... (rest of the component)
   return (
     <>
       <Hero />
@@ -63,10 +79,13 @@ export default function App() {
         <LanguagePersistence />
         <QueryParamStripper />
         <ScrollToHashElement />
+        <RouteTracker />
+        {/*
+          REMOVED: <Helmet><link rel="canonical" /></Helmet>
+          This was the root cause of every page showing the homepage canonical.
+          Each page component now sets its own canonical via its own <Helmet> block.
+        */}
         <div className="min-h-screen bg-white font-sans text-charcoal">
-          <Helmet>
-            <link rel="canonical" href="https://idworkstudio.com" />
-          </Helmet>
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -75,23 +94,23 @@ export default function App() {
             <Route path="/commercial/reinstatement" element={<Reinstatement />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
-          
+
           <footer className="bg-black text-white py-12 border-t border-gray-800 pb-[90px] md:pb-[90px] lg:pb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <div className="mb-6 flex justify-center space-x-8">
-                <a 
-                  href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PListingContractor.jsp" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                
+                  href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PListingContractor.jsp"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   title="Search for ID WORK STUDIO"
                   className="text-white text-xs uppercase tracking-[0.12rem] border border-gold/50 px-6 py-2 rounded-full hover:bg-gold hover:text-dark-charcoal transition-all backdrop-blur-sm"
                 >
                   {t('accreditation.hdb')}
                 </a>
-                <a 
-                  href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                
+                  href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white text-xs uppercase tracking-[0.12rem] border border-white/30 px-6 py-2 rounded-full hover:bg-white hover:text-dark-charcoal transition-all backdrop-blur-sm"
                 >
                   {t('accreditation.bca')}
