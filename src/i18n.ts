@@ -474,7 +474,7 @@ const resources = {
       },
       "commercial_page": {
         "hero": {
-          "title": "新加坡专业办公室翻新 与商业装修",
+          "title": "新加坡专业办公室翻新与商业装修",
           "subtitle": "由 BCA 注册的承包商提供零售、餐饮和恢复原状服务",
           "cta": "预约现场勘察",
           "cta_reinstatement": "了解更多原状修复服务"
