@@ -33,14 +33,14 @@ export default function Residential() {
       "name": "ID Work Studio",
       "url": "https://idworkstudio.com"
     },
-    "license": "HDB-Approved & BCA-Registered"
+    "license": "HDB-Registered & BCA-Registered"
   };
 
   return (
     <>
       <Helmet>
-        <title>HDB Approved Contractor & Residential ID Singapore | ID Work Studio</title>
-        <meta name="description" content="BCA-registered & HDB-approved interior design. Specialized in BTO, Resale, and Condo renovations." />
+        <title>HDB Registered Contractor & Residential ID Singapore | ID Work Studio</title>
+        <meta name="description" content="BCA-registered & HDB-registered interior design. Specialized in BTO, Resale, and Condo renovations." />
         <meta property="og:image" content="https://idworkstudio.com/WALANDING.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
