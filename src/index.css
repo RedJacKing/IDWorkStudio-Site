@@ -16,3 +16,9 @@ body {
   background-color: var(--color-off-white);
   color: var(--color-charcoal);
 }
+
+/* Fix for Chinese Text Wrapping and Centering */
+.hero-title-break {
+  white-space: pre-line;
+  text-align: center;
+}

@@ -409,7 +409,7 @@ const resources = {
         "hero": {
           "badge": "2026 设计趋势",
           "title": "现代远见生活 为新加坡业主打造",
-          "subtitle": "BCA 注册与 HDB 注册的合作伙伴。我们处理所有 HDB 许可证和结构提交，让您高枕无忧。",
+          "subtitle": "BCA 注册与 HDB 注册的合作伙伴。我们 handle 所有 HDB 许可证和结构提交，让您高枕无忧。",
           "cta": "预约家居咨询"
         },
         "lifestyle": {
@@ -474,7 +474,7 @@ const resources = {
       },
       "commercial_page": {
         "hero": {
-          "title": "新加坡专业办公室翻新与\n商业空间装修服务",
+          "title": "新加坡专业办公室翻新\n与商业空间装修服务",
           "subtitle": "由 BCA 注册的承包商提供零售、餐饮和恢复原状服务",
           "cta": "预约现场勘察",
           "cta_reinstatement": "了解更多原状修复服务"
