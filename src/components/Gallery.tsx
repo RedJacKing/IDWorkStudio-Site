@@ -9,17 +9,37 @@ import projectsData from '../../public/projects.json';
 
 const Gallery = () => {
   const { t } = useTranslation();
-  // Using any[] to match the direct array structure in your projects.json
   const [projects, setProjects] = useState<any[]>([]);
   const [selectedImage, setSelectedImage] = useState<null | any>(null);
 
   useEffect(() => {
-    // Your projects.json is a direct array
     setProjects(projectsData);
   }, []);
 
   const commercialProjects = projects.filter(p => p.category === 'Commercial');
   const residentialProjects = projects.filter(p => p.category === 'Residential');
+
+  const gallerySchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Renovation Portfolio Singapore | ID Work Studio",
+    "description": "Browse completed renovation and interior design projects by ID Work Studio, Singapore. HDB renovation, condo renovation, office fit-out, and commercial renovation projects across Singapore. Based in Woodlands, Singapore.",
+    "url": "https://idworkstudio.com/gallery",
+    "provider": {
+      "@type": "GeneralContractor",
+      "name": "ID Work Studio",
+      "url": "https://idworkstudio.com",
+      "telephone": "+6568162872",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
+        "addressLocality": "Woodlands",
+        "addressRegion": "Singapore",
+        "postalCode": "737853",
+        "addressCountry": "SG"
+      }
+    }
+  };
 
   const renderProjectSection = (title: string, items: any[], description: string) => (
     <div className="mb-20">
@@ -39,7 +59,7 @@ const Gallery = () => {
           >
             <div className="aspect-[4/3] overflow-hidden">
               <img
-                src={project.imageUrl} // Matches "imageUrl" in your projects.json
+                src={project.imageUrl}
                 alt={project.title}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -58,10 +78,32 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 selection:bg-amber-100">
-      {/* KEEPS YOUR ORIGINAL SEO METADATA */}
       <Helmet>
-        <title>Gallery | ID Work Studio - Premier Interior Design Portfolio</title>
-        <meta name="description" content="Explore our portfolio of award-winning residential and commercial interior design projects in Singapore. From HDB BTO renovations to luxury office fit-outs." />
+        {/* ================================================ */}
+        {/* PRIMARY META — updated for AI + local search     */}
+        {/* ================================================ */}
+        <title>Renovation Portfolio Singapore | Interior Design Projects | ID Work Studio Woodlands</title>
+        <meta name="description" content="Browse completed renovation and interior design projects by ID Work Studio, Singapore. HDB renovation, condo renovation, office fit-out and commercial renovation across Woodlands and all of Singapore." />
+        <meta name="keywords" content="renovation portfolio Singapore, interior design projects Singapore, HDB renovation photos Singapore, office renovation Singapore, commercial fit-out portfolio, ID Work Studio Woodlands Singapore" />
+        <meta name="geo.region" content="SG" />
+        <meta name="geo.placename" content="Woodlands, Singapore" />
+        <meta name="geo.position" content="1.4348129;103.7326522" />
+        <meta name="ICBM" content="1.4348129, 103.7326522" />
+        <link rel="canonical" href="https://idworkstudio.com/gallery" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://idworkstudio.com/gallery" />
+        <meta property="og:title" content="Renovation Portfolio Singapore | Interior Design Projects | ID Work Studio" />
+        <meta property="og:description" content="Browse completed HDB renovation, condo renovation, and commercial fit-out projects by ID Work Studio, Woodlands Singapore." />
+        <meta property="og:image" content="https://idworkstudio.com/og-preview.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="ID Work Studio" />
+        <meta property="og:locale" content="en_SG" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Renovation Portfolio Singapore | Interior Design Projects | ID Work Studio" />
+        <meta name="twitter:description" content="Browse completed HDB renovation, condo renovation, and commercial fit-out projects by ID Work Studio, Woodlands Singapore." />
+        <meta name="twitter:image" content="https://idworkstudio.com/og-preview.jpg" />
+        <script type="application/ld+json">{JSON.stringify(gallerySchema)}</script>
       </Helmet>
 
       <Navbar />
@@ -87,7 +129,6 @@ const Gallery = () => {
             {t('gallery.subtitle')}
           </motion.p>
           
-          {/* YOUR SEO DESCRIPTION */}
           <p className="text-gray-500 max-w-3xl mx-auto text-xs mt-4">
             {t('gallery.main_desc')}
           </p>
@@ -136,7 +177,7 @@ const Gallery = () => {
             >
               <div className="md:col-span-2 rounded-xl overflow-hidden shadow-2xl border border-gray-100">
                 <img 
-                  src={selectedImage.imageUrl} // Fixed to match your JSON
+                  src={selectedImage.imageUrl}
                   alt={selectedImage.title} 
                   className="w-full h-full object-cover" 
                 />

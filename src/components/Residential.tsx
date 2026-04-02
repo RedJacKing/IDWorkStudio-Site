@@ -10,45 +10,101 @@ export default function Residential() {
 
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": ["Service", "LocalBusiness"],
-    "name": "ID Work Studio Residential Design",
-    "description": "HDB & BCA Registered Interior Design specializing in Modern BTO & Resale Renovation in Singapore.",
-    "areaServed": "Singapore",
-    "serviceType": [
-      "BTO Renovation Solutions",
-      "Resale Flat Transformation",
-      "Kitchen & Bath Remodeling",
-      "Full-house Carpentry",
-      "Warm Luxury Interior Design",
-      "Japandi Interior Design"
-    ],
-    "knowsAbout": [
-      "Tengah BTO Renovation",
-      "Bidadari Estate Design",
-      "Tampines North Layouts",
-      "Smart-integrated storage solutions"
-    ],
+    "@type": "Service",
+    "name": "Residential Renovation Singapore",
+    "description": "HDB-approved and BCA-registered residential renovation and interior design in Singapore. Specialising in HDB renovation, condo renovation, and landed property interior design across Singapore. Based in Woodlands, Singapore.",
+    "serviceType": "Residential Renovation",
+    "areaServed": { "@type": "City", "name": "Singapore" },
     "provider": {
-      "@type": "Organization",
+      "@type": "GeneralContractor",
       "name": "ID Work Studio",
-      "url": "https://idworkstudio.com"
+      "url": "https://idworkstudio.com",
+      "telephone": "+6568162872",
+      "email": "contact@idworkstudio.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
+        "addressLocality": "Woodlands",
+        "addressRegion": "Singapore",
+        "postalCode": "737853",
+        "addressCountry": "SG"
+      }
     },
-    "license": "HDB-Registered & BCA-Registered"
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Residential Renovation Services Singapore",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HDB Renovation Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Condo Renovation Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landed Property Renovation Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "BTO Renovation Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Resale HDB Renovation Singapore" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Design Woodlands Singapore" } }
+      ]
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://idworkstudio.com/residential"
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the cost of a 4-room BTO renovation in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In 2026, a comprehensive 4-room BTO renovation in Singapore typically ranges from $45,000 to $65,000. This covers flooring, painting, plumbing, and custom carpentry for the kitchen and wardrobes. Premium finishes or extensive hacking for open-plan layouts can push costs to $75,000+."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I maximize storage in a small HDB layout?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To maximize storage in small HDBs, utilize vertical space with floor-to-ceiling carpentry. Implement smart solutions like platform beds with drawers, hidden storage within feature walls, and extendable dining tables. Japandi designs use concealed cabinetry to maintain a minimalist aesthetic without sacrificing functionality."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is choosing an HDB-registered contractor important?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Choosing an HDB-registered contractor is crucial because they are trained to adhere to HDB's renovation guidelines and structural safety protocols. They ensure no critical structural pillars are compromised during hacking and that all electrical and plumbing works meet Singapore's safety standards."
+        }
+      }
+    ]
   };
 
   return (
     <>
       <Helmet>
-        <title>HDB Registered Contractor & Residential ID Singapore | ID Work Studio</title>
-        <meta name="description" content="BCA-registered & HDB-registered interior design. Specialized in BTO, Resale, and Condo renovations." />
+        <title>HDB & Condo Renovation Singapore | Residential Interior Design | ID Work Studio Woodlands</title>
+        <meta name="description" content="HDB-approved residential renovation and interior design in Singapore. BCA-registered contractor specialising in HDB, condo and landed property renovations. Based in Woodlands, serving all of Singapore." />
+        <meta name="keywords" content="HDB renovation Singapore, condo renovation Singapore, residential renovation Singapore, interior design Singapore, BTO renovation Singapore, landed property renovation Singapore, Woodlands interior designer, ID Work Studio" />
+        <meta name="geo.region" content="SG" />
+        <meta name="geo.placename" content="Woodlands, Singapore" />
+        <meta name="geo.position" content="1.4348129;103.7326522" />
+        <meta name="ICBM" content="1.4348129, 103.7326522" />
+        <link rel="canonical" href="https://idworkstudio.com/residential" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://idworkstudio.com/residential" />
+        <meta property="og:title" content="HDB & Condo Renovation Singapore | Residential Interior Design | ID Work Studio" />
+        <meta property="og:description" content="HDB-approved residential renovation and interior design in Singapore. BCA-registered, Woodlands-based. Specialising in HDB, condo and landed property renovations across Singapore." />
         <meta property="og:image" content="https://idworkstudio.com/WALANDING.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://idworkstudio.com/residential" />
+        <meta property="og:site_name" content="ID Work Studio" />
+        <meta property="og:locale" content="en_SG" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="HDB & Condo Renovation Singapore | Residential Interior Design | ID Work Studio" />
+        <meta name="twitter:description" content="HDB-approved residential renovation and interior design in Singapore. BCA-registered, Woodlands-based. Specialising in HDB, condo and landed property renovations." />
         <meta name="twitter:image" content="https://idworkstudio.com/WALANDING.jpg" />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
