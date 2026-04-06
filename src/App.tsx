@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -45,6 +45,15 @@ function QueryParamStripper() {
 function LandingPage() {
   return (
     <>
+      <Helmet>
+        <title>ID Work Studio | Renovation &amp; Interior Design Singapore | Woodlands</title>
+        <meta name="description" content="Singapore's trusted renovation and interior design firm based in Woodlands. BCA-registered &amp; HDB-approved. Specialising in commercial fit-outs, office reinstatement, and residential renovations across Singapore." />
+        <link rel="canonical" href="https://idworkstudio.com/" />
+        <meta property="og:url" content="https://idworkstudio.com/" />
+        <meta property="og:title" content="ID Work Studio | Renovation &amp; Interior Design Singapore | Woodlands" />
+        <meta property="og:description" content="BCA-registered &amp; HDB-registered renovation and interior design firm in Woodlands, Singapore. Commercial fit-outs, office reinstatement, and residential renovations across Singapore." />
+        <meta property="og:image" content="https://idworkstudio.com/og-preview.jpg" />
+      </Helmet>
       <Hero />
       <Process />
       <Services />
