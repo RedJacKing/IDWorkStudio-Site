@@ -5,58 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Not Found | ID Work Studio</title>
     <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
       body {
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        background: #0a0a0a;
+        color: #fff;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
-        background: #0a0a0a;
-        color: #fff;
         text-align: center;
         padding: 2rem;
+        position: relative;
+        overflow: hidden;
       }
-      h1 {
-        font-size: 6rem;
-        font-weight: 200;
-        letter-spacing: 0.2em;
-        color: #c9a84c;
-        line-height: 1;
+
+      body::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at 50% 0%, rgba(197,160,89,0.08) 0%, transparent 60%);
+        pointer-events: none;
       }
-      h2 {
-        font-size: 1.2rem;
-        font-weight: 300;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        color: #fff;
-        margin: 1rem 0 0.5rem;
-      }
-      p {
-        color: #888;
-        font-size: 0.95rem;
-        margin-bottom: 2.5rem;
-      }
-      a {
-        background: #c9a84c;
-        color: #000;
-        padding: 0.85rem 2.5rem;
-        text-decoration: none;
+
+      .logo {
+        font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 0.85rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: #c9a84c;
+        margin-bottom: 4rem;
+      }
+
+      .divider {
+        width: 40px;
+        height: 1px;
+        background: #c9a84c;
+        margin: 0 auto 4rem;
+        opacity: 0.5;
+      }
+
+      .error-number {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(6rem, 20vw, 12rem);
+        font-weight: 400;
+        line-height: 1;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(197,160,89,0.3);
+        letter-spacing: 0.05em;
+        margin-bottom: 1.5rem;
+      }
+
+      .headline {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 0.8rem;
+        font-weight: 300;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #666;
+        margin-bottom: 3rem;
+        max-width: 320px;
+        line-height: 1.8;
+      }
+
+      .cta {
+        display: inline-block;
+        padding: 1rem 3rem;
+        background: transparent;
+        border: 1px solid #c9a84c;
+        color: #c9a84c;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+      }
+
+      .cta::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: #c9a84c;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+      }
+
+      .cta:hover { color: #0a0a0a; }
+      .cta:hover::before { transform: translateX(0); }
+
+      .links {
+        margin-top: 2.5rem;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .links a {
+        font-size: 0.7rem;
         letter-spacing: 0.15em;
         text-transform: uppercase;
-        transition: opacity 0.2s;
+        color: #444;
+        text-decoration: none;
+        transition: color 0.2s;
       }
-      a:hover { opacity: 0.85; }
+
+      .links a:hover { color: #c9a84c; }
+
+      .footer-note {
+        position: absolute;
+        bottom: 2rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        color: #333;
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body>
-    <h1>404</h1>
-    <h2>Page Not Found</h2>
-    <p>The page you're looking for doesn't exist or has been moved.</p>
-    <a href="/">Back to ID Work Studio</a>
+    <div class="logo">ID Work Studio</div>
+    <div class="divider"></div>
+    <div class="error-number">404</div>
+    <h1 class="headline">Page Not Found</h1>
+    <p class="subtitle">The page you're looking for has been moved or no longer exists.</p>
+    <a href="/" class="cta">Return Home</a>
+    <div class="links">
+      <a href="/residential">Residential</a>
+      <a href="/commercial">Commercial</a>
+      <a href="/gallery">Portfolio</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-note">&copy; 2025 ID Work Studio &middot; Singapore</div>
   </body>
 </html>
