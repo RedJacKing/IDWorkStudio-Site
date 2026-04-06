@@ -24,7 +24,17 @@
   status = 200
 
 [[redirects]]
+  from = "/commercial/reinstatement"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
   from = "/portfolio"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/gallery"
   to = "/index.html"
   status = 200
 
