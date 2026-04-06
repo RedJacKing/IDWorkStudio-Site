@@ -7,10 +7,37 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
+# Your real site pages - serve normally
 [[redirects]]
-  from = "/*"
+  from = "/"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/residential"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/commercial"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/portfolio"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/index.html"
+  status = 200
+
+# All other URLs (old WordPress pages, image attachments, etc.) return 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
 
 [images]
   remote_images = ["https://drive.google.com/.*"]
