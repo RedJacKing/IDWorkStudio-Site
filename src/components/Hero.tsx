@@ -57,7 +57,7 @@ export default function Hero() {
             </span>
           </motion.h1>
 
-          {/* SEO Accreditation Line */}
+          {/* SEO Accreditation Line — small, elegant, both links preserved */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function Hero() {
             >
               {t('accreditation.hdb')}
             </a>
-            <span className="mx-2 text-white/30">·</span>
+            <span className="mx-3 text-white/30">·</span>
             <a
               href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s"
               target="_blank"
@@ -82,8 +82,8 @@ export default function Hero() {
             >
               {t('accreditation.bca')}
             </a>
-            <span className="mx-2 text-white/30">·</span>
-            <span className="text-white/60">{t('accreditation.firm')}</span>
+            <span className="mx-3 text-white/30">·</span>
+            <span className="text-white/50">{t('accreditation.firm')}</span>
           </motion.p>
 
           {/* Subtitle */}
@@ -96,36 +96,51 @@ export default function Hero() {
             {t('hero.subtitle')}
           </motion.p>
 
-          {/* 4 CTA Buttons */}
+          {/* Primary CTAs: 2 on top row */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4"
           >
+            {/* Commercial — gold filled, primary CTA */}
             <Link 
               to="/commercial"
-              className="w-full sm:w-auto px-10 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.4)] transition-all duration-300 font-bold rounded-full min-w-[200px]"
+              className="w-full sm:w-auto px-12 py-5 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_25px_rgba(197,160,89,0.5)] transition-all duration-300 font-bold rounded-full min-w-[220px]"
             >
               {t('nav.commercial')}
             </Link>
+
+            {/* Residential — white outlined */}
             <Link 
               to="/residential"
-              className="w-full sm:w-auto px-10 py-4 bg-transparent text-white text-sm uppercase tracking-[0.2em] hover:bg-white/10 transition-all duration-300 font-bold border border-white/50 rounded-full backdrop-blur-[5px] min-w-[200px]"
+              className="w-full sm:w-auto px-12 py-5 bg-transparent text-white text-sm uppercase tracking-[0.2em] hover:bg-white/10 transition-all duration-300 font-bold border border-white/50 rounded-full backdrop-blur-[5px] min-w-[220px]"
             >
               {t('nav.residential')}
             </Link>
+          </motion.div>
+
+          {/* Secondary CTAs: 2 on bottom row */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            {/* View Our Work → /gallery page */}
             <Link 
-              to="/#gallery"
-              className="w-full sm:w-auto px-10 py-4 bg-transparent text-white text-sm uppercase tracking-[0.2em] hover:bg-white/10 transition-all duration-300 font-bold border border-white/30 rounded-full backdrop-blur-[5px] min-w-[200px]"
+              to="/gallery"
+              className="w-full sm:w-auto px-12 py-4 bg-transparent text-white/80 text-sm uppercase tracking-[0.2em] hover:text-white hover:bg-white/10 transition-all duration-300 font-medium border border-white/25 rounded-full backdrop-blur-[5px] min-w-[220px]"
             >
               {t('hero.cta')}
             </Link>
+
+            {/* WhatsApp — gold outline to match brand, subtle */}
             <a
               href="https://wa.me/6598333085"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-10 py-4 bg-[#25D366] text-white text-sm uppercase tracking-[0.2em] hover:bg-[#1ebe5d] hover:shadow-[0_0_20px_rgba(37,211,102,0.35)] transition-all duration-300 font-bold rounded-full min-w-[200px]"
+              className="w-full sm:w-auto px-12 py-4 bg-transparent text-gold text-sm uppercase tracking-[0.2em] hover:bg-gold hover:text-dark-charcoal transition-all duration-300 font-medium border border-gold/60 rounded-full backdrop-blur-[5px] min-w-[220px]"
             >
               {t('hero.whatsapp')}
             </a>
