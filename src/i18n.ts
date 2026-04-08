@@ -22,7 +22,8 @@ const resources = {
         "title_main": "Curated Interiors ",
         "title_sub": "for the Modern Visionary",
         "subtitle": "Premium interior design and renovation services in Singapore. With over a decade of trusted excellence, we transform homes, offices, and retail spaces into masterpieces.",
-        "cta": "View Our Work"
+        "cta": "View Our Work",
+        "whatsapp": "WhatsApp Us"
       },
       "process": {
         "title": "Our Process",
@@ -338,7 +339,8 @@ const resources = {
         "title_main": "精心打造的室内设计 ",
         "title_sub": "致敬现代有识之士",
         "subtitle": "新加坡优质室内设计与翻新服务。凭借十多年的卓越信誉，我们将住宅、办公室和零售空间转化为杰作。",
-        "cta": "查看我们的作品"
+        "cta": "查看我们的作品",
+        "whatsapp": "WhatsApp 立即咨询"
       },
       "process": {
         "title": "我们的流程",
@@ -409,7 +411,7 @@ const resources = {
         "hero": {
           "badge": "2026 设计趋势",
           "title": "现代远见生活 为新加坡业主打造",
-          "subtitle": "BCA 注册与 HDB 注册的合作伙伴。我们 handle 所有 HDB 许可证和结构提交，让您高枕无忧。",
+          "subtitle": "BCA 注册与 HDB 注册的合作伙伴。我们处理所有 HDB 许可证和结构提交，让您高枕无忧。",
           "cta": "预约家居咨询"
         },
         "lifestyle": {
