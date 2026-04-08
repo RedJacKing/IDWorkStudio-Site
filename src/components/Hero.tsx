@@ -57,7 +57,7 @@ export default function Hero() {
             </span>
           </motion.h1>
 
-          {/* SEO Accreditation Line — small, elegant, both links preserved */}
+          {/* SEO Accreditation Line */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -96,51 +96,51 @@ export default function Hero() {
             {t('hero.subtitle')}
           </motion.p>
 
-          {/* Primary CTAs: 2 on top row */}
+          {/* Row 1 — Primary CTAs */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4"
           >
-            {/* Commercial — gold filled, primary CTA */}
+            {/* Commercial — gold filled */}
             <Link 
               to="/commercial"
-              className="w-full sm:w-auto px-12 py-5 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_25px_rgba(197,160,89,0.5)] transition-all duration-300 font-bold rounded-full min-w-[220px]"
+              className="w-full sm:w-[260px] px-8 py-5 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_25px_rgba(197,160,89,0.5)] transition-all duration-300 font-bold rounded-full text-center"
             >
               {t('nav.commercial')}
             </Link>
 
-            {/* Residential — white outlined */}
+            {/* Residential — white outline, gold highlight on hover */}
             <Link 
               to="/residential"
-              className="w-full sm:w-auto px-12 py-5 bg-transparent text-white text-sm uppercase tracking-[0.2em] hover:bg-white/10 transition-all duration-300 font-bold border border-white/50 rounded-full backdrop-blur-[5px] min-w-[220px]"
+              className="w-full sm:w-[260px] px-8 py-5 bg-transparent text-white text-sm uppercase tracking-[0.2em] hover:bg-gold/20 hover:border-gold/60 hover:text-gold transition-all duration-300 font-bold border border-white/50 rounded-full backdrop-blur-[5px] text-center"
             >
               {t('nav.residential')}
             </Link>
           </motion.div>
 
-          {/* Secondary CTAs: 2 on bottom row */}
+          {/* Row 2 — Secondary CTAs */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            {/* View Our Work → /gallery page */}
+            {/* View Our Work → /gallery — no hover change as requested */}
             <Link 
               to="/gallery"
-              className="w-full sm:w-auto px-12 py-4 bg-transparent text-white/80 text-sm uppercase tracking-[0.2em] hover:text-white hover:bg-white/10 transition-all duration-300 font-medium border border-white/25 rounded-full backdrop-blur-[5px] min-w-[220px]"
+              className="w-full sm:w-[260px] px-8 py-4 bg-transparent text-white/80 text-sm uppercase tracking-[0.2em] transition-all duration-300 font-medium border border-white/25 rounded-full backdrop-blur-[5px] text-center"
             >
               {t('hero.cta')}
             </Link>
 
-            {/* WhatsApp — gold outline to match brand, subtle */}
+            {/* WhatsApp — gold outline, light green fill on hover */}
             <a
               href="https://wa.me/6598333085"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-12 py-4 bg-transparent text-gold text-sm uppercase tracking-[0.2em] hover:bg-gold hover:text-dark-charcoal transition-all duration-300 font-medium border border-gold/60 rounded-full backdrop-blur-[5px] min-w-[220px]"
+              className="w-full sm:w-[260px] px-8 py-4 bg-transparent text-gold text-sm uppercase tracking-[0.2em] hover:bg-[#25D366]/20 hover:border-[#25D366]/70 hover:text-[#25D366] transition-all duration-300 font-medium border border-gold/60 rounded-full backdrop-blur-[5px] text-center"
             >
               {t('hero.whatsapp')}
             </a>
