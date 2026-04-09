@@ -47,7 +47,7 @@ function LandingPage() {
     <>
       <Helmet>
         <title>ID Work Studio | Renovation &amp; Interior Design Singapore | Woodlands</title>
-        <meta name="description" content="Singapore's trusted renovation and interior design firm based in Woodlands. BCA-registered &amp; HDB-approved. Specialising in commercial fit-outs, office reinstatement, and residential renovations across Singapore." />
+        <meta name="description" content="Singapore's trusted renovation and interior design firm. BCA & HDB registered. Specialising in commercial fit-outs, reinstatement & residential renovations." />
         <link rel="canonical" href="https://idworkstudio.com/" />
         <meta property="og:url" content="https://idworkstudio.com/" />
         <meta property="og:title" content="ID Work Studio | Renovation &amp; Interior Design Singapore | Woodlands" />
