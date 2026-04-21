@@ -28,26 +28,11 @@ const resources = {
         "title": "Our Process",
         "subtitle": "A seamless journey from concept to reality.",
         "steps": {
-          "1": {
-            "title": "Consult & Visualize",
-            "desc": "We begin by understanding your vision and lifestyle, translating them into detailed 3D concepts."
-          },
-          "2": {
-            "title": "Accredited Execution",
-            "desc": "Our HDB & BCA registered team manages the renovation with precision, ensuring quality and compliance."
-          },
-          "3": {
-            "title": "Quality Craftsmanship",
-            "desc": "Every detail is handled by skilled artisans, using premium materials to deliver a flawless finish."
-          },
-          "4": {
-            "title": "Handover & Beyond",
-            "desc": "We ensure a perfect delivery, followed by dedicated post-renovation support for your peace of mind."
-          }
+          "1": { "title": "Consult & Visualize", "desc": "We begin by understanding your vision and lifestyle, translating them into detailed 3D concepts." },
+          "2": { "title": "Accredited Execution", "desc": "Our HDB & BCA registered team manages the renovation with precision, ensuring quality and compliance." },
+          "3": { "title": "Quality Craftsmanship", "desc": "Every detail is handled by skilled artisans, using premium materials to deliver a flawless finish." },
+          "4": { "title": "Handover & Beyond", "desc": "We ensure a perfect delivery, followed by dedicated post-renovation support for your peace of mind." }
         }
-      },
-      "footer": {
-        "rights": "All Rights Reserved."
       },
       "commercial_page": {
         "hero": {
@@ -72,6 +57,7 @@ const resources = {
           "subtitle": "Contact our commercial team for a professional consultation and site assessment."
         }
       },
+      // PRESERVING YOUR ORIGINAL KEYS FOR COMMERCIAL/HOME PAGE
       "reinstatement_section": {
         "headline_serif": "End-of-Lease",
         "headline_bold": "Reinstatement",
@@ -107,23 +93,14 @@ const resources = {
           "subtitle": "Early planning avoids unnecessary landlord disputes. Send us your lease clause for a same-day professional assessment.",
           "button": "WhatsApp Us For Quote"
         }
-      }
+      },
+      "footer": { "rights": "All Rights Reserved." }
     }
   },
   zh: {
     translation: {
-      "nav": {
-        "home": "首页",
-        "residential": "住宅装修",
-        "commercial": "商业装修",
-        "gallery": "案例展示",
-        "contact": "联系我们"
-      },
-      "accreditation": {
-        "hdb": "HDB 注册",
-        "bca": "BCA 注册",
-        "firm": "装修商"
-      },
+      "nav": { "home": "首页", "residential": "住宅装修", "commercial": "商业装修", "gallery": "案例展示", "contact": "联系我们" },
+      "accreditation": { "hdb": "HDB 注册", "bca": "BCA 注册", "firm": "装修商" },
       "hero": {
         "title_main": "为现代远见者",
         "title_sub": "精心打造的室内空间",
@@ -131,32 +108,17 @@ const resources = {
         "cta": "查看我们的作品",
         "whatsapp": "联系我们"
       },
-      "footer": {
-        "rights": "版权所有。"
-      },
       "commercial_page": {
         "hero": {
           "title_serif": "打造卓越业务的",
           "title_bold": "战略空间",
           "subtitle": "BCA & HDB 注册商业专家。我们打造高效的办公室、零售精品店和餐饮环境，助力业务增长。"
         },
-        "stats": {
-          "years": "多年专业经验",
-          "projects": "商业项目",
-          "retention": "客户留存率"
-        },
-        "sectors": {
-          "title": "行业专长",
-          "office": "企业办公室",
-          "retail": "零售精品店",
-          "fnb": "餐饮环境",
-          "medical": "医疗与康养"
-        },
-        "cta": {
-          "title": "准备好改造您的业务空间了吗？",
-          "subtitle": "联系我们的商业团队，进行专业咨询和现场评估。"
-        }
+        "stats": { "years": "多年专业经验", "projects": "商业项目", "retention": "客户留存率" },
+        "sectors": { "title": "行业专长", "office": "企业办公室", "retail": "零售精品店", "fnb": "餐饮环境", "medical": "医疗与康养" },
+        "cta": { "title": "准备好改造您的业务空间了吗？", "subtitle": "联系我们的商业团队，进行专业咨询和现场评估。" }
       },
+      // PRESERVING YOUR ORIGINAL CHINESE KEYS
       "reinstatement_section": {
         "headline_serif": "租约期满",
         "headline_bold": "原状恢复",
@@ -192,7 +154,8 @@ const resources = {
           "subtitle": "提早规划可避免不必要的房东纠纷。请将您的租约条款发送给我们，进行当天的专业评估。",
           "button": "WhatsApp 咨询报价"
         }
-      }
+      },
+      "footer": { "rights": "版权所有。" }
     }
   }
 };
@@ -203,9 +166,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    interpolation: {
-      escapeValue: false,
-    },
+    interpolation: { escapeValue: false }
   });
 
 export default i18n;

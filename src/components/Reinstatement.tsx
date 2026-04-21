@@ -89,21 +89,21 @@ export default function Reinstatement() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-serif text-center mb-16 italic text-dark-charcoal underline decoration-gold/20 underline-offset-8">
             {t('reinstatement_page.faq.title')}
           </h2>
           <div className="space-y-6">
-             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
                 <h4 className="font-bold text-lg mb-3 flex gap-2"><ArrowRight className="text-gold" /> {t('reinstatement_page.faq.q1')}</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">{t('reinstatement_page.faq.a1')}</p>
              </div>
-             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
                 <h4 className="font-bold text-lg mb-3 flex gap-2"><ArrowRight className="text-gold" /> {t('reinstatement_page.faq.q2')}</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">{t('reinstatement_page.faq.a2')}</p>
              </div>
-             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
                 <h4 className="font-bold text-lg mb-3 flex gap-2"><ArrowRight className="text-gold" /> {t('reinstatement_page.faq.q3')}</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">{t('reinstatement_page.faq.a3')}</p>
              </div>
