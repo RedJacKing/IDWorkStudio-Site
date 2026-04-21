@@ -54,79 +54,236 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
+    <!-- ============================================================
+         JSON-LD STRUCTURED DATA — AI CITATION & SEO INFRASTRUCTURE
+         Changes from previous version:
+         1. @graph wrapper added to support multiple schema types
+         2. @type upgraded: HomeAndConstructionBusiness added as primary
+         3. legalName, foundingDate, founder added
+         4. aggregateRating added (4.9 stars, 20 reviews)
+         5. priceRange updated from "$$" to specific SGD range
+         6. areaServed expanded with specific Singapore commercial districts
+         7. hasOfferCatalog service descriptions filled in (were empty)
+         8. FAQPage schema added as second @graph node
+         VISUAL IMPACT: Zero. This block is invisible to users.
+    ============================================================ -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": ["GeneralContractor", "InteriorDesigner", "ProfessionalService"],
-        "name": "ID Work Studio",
-        "image": "https://idworkstudio.com/logo.png",
-        "description": "BCA-registered and HDB-registered renovation and interior design firm in Woodlands, Singapore. Specialising in commercial fit-outs, office reinstatement, residential HDB and condo renovations, retail fit-outs, and F&B renovations across Singapore.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
-          "addressLocality": "Woodlands",
-          "addressRegion": "Singapore",
-          "postalCode": "737853",
-          "addressCountry": "SG"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 1.4348129,
-          "longitude": 103.7326522
-        },
-        "url": "https://idworkstudio.com",
-        "telephone": "+6568162872",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+6568162872",
-            "contactType": "customer service"
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+
+        {
+          "@type": ["HomeAndConstructionBusiness", "GeneralContractor", "InteriorDesigner"],
+          "@id": "https://idworkstudio.com/#business",
+          "name": "ID Work Studio",
+          "legalName": "ID WORK STUDIO PTE. LTD.",
+          "image": "https://idworkstudio.com/logo.png",
+          "description": "BCA-registered and HDB-registered commercial renovation and interior design firm in Singapore. Specialising in office fit-outs for 1,200-3,000 sqft spaces, express office reinstatement, retail and shophouse fit-outs, MOH-compliant clinic fit-outs, and residential HDB and condo renovations across all Singapore districts. Over 10 years of trusted delivery.",
+          "url": "https://idworkstudio.com",
+          "telephone": "+6568162872",
+          "email": "contact@idworkstudio.com",
+          "foundingDate": "2015",
+          "founder": {
+            "@type": "Person",
+            "name": "Ng Chong Kee"
           },
-          {
-            "@type": "ContactPoint",
-            "telephone": "+6598333085",
-            "contactType": "sales"
-          }
-        ],
-        "email": "contact@idworkstudio.com",
-        "priceRange": "$$",
-        "areaServed": {
-          "@type": "City",
-          "name": "Singapore"
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:30",
-            "closes": "17:00"
+
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
+            "addressLocality": "Woodlands",
+            "addressRegion": "Singapore",
+            "postalCode": "737853",
+            "addressCountry": "SG"
           },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Saturday", "Sunday"],
-            "description": "By Appointment Only"
-          }
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Renovation & Interior Design Services",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HDB Renovation Singapore" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Condo Renovation Singapore" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Fit-Out Singapore" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office Reinstatement Singapore" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retail Interior Fit-Out Singapore" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "F&B Renovation Singapore" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Design Woodlands Singapore" } }
+
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 1.4348129,
+            "longitude": 103.7326522
+          },
+
+          "priceRange": "SGD 80,000 - SGD 180,000",
+
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "20",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+
+          "areaServed": [
+            { "@type": "City", "name": "Singapore" },
+            { "@type": "AdministrativeArea", "name": "Central Business District, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Raffles Place, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Tanjong Pagar, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Marina Bay, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Shenton Way, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Orchard, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Novena, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Paya Lebar, Singapore" },
+            { "@type": "AdministrativeArea", "name": "one-north, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Jurong, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Harbourfront, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Tampines, Singapore" },
+            { "@type": "AdministrativeArea", "name": "Woodlands, Singapore" }
+          ],
+
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+6568162872",
+              "contactType": "customer service"
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+6598333085",
+              "contactType": "sales"
+            }
+          ],
+
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:30",
+              "closes": "17:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday", "Sunday"],
+              "description": "By Appointment Only"
+            }
+          ],
+
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Commercial and Residential Renovation Services Singapore",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "HDB Renovation Singapore",
+                  "description": "HDB-registered renovation contractor for BTO and resale HDB flat renovations across Singapore. Full interior renovation including hacking, tiling, carpentry, painting, electrical, and plumbing works. Registered under the HDB Renovation Contractor Registration Scheme (HB-02-5250G)."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Condo Renovation Singapore",
+                  "description": "Design-led condominium and private apartment renovation services across Singapore. Full project management, MCST and management office compliance, premium material sourcing, and a dedicated project coordinator from design consultation through to final handover."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Commercial Office Fit-Out Singapore",
+                  "description": "Turnkey office fit-out for 1,200-3,000 sqft commercial spaces in Singapore office buildings and business parks. Full scope includes space planning, partitioning, flooring, ceiling works, M&E coordination, CORENET submission, and end-to-end project management. Fixed-price Bronze, Silver, and Gold packages available by square footage. BCA-registered contractor."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Office Reinstatement Singapore",
+                  "description": "Express office reinstatement service for Grade A CBD office buildings across Singapore. Fixed-price packages with a 7-day completion SLA. Works include hacking of partitions, ceiling and wall reinstatement, repainting to original landlord colour, flooring restoration, and full coordination of the landlord handover inspection. Experienced with CapitaLand, Mapletree, JTC, and Keppel Land tenancy requirements."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Retail and Shop Fit-Out Singapore",
+                  "description": "Retail shop and conservation shophouse fit-outs for Singapore malls, commercial buildings, and street-level retail. Full scope including custom millwork, display systems, lighting design, signage coordination, and strict compliance with mall tenancy fit-out guides. Experienced across major Singapore landlord portfolios."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Clinic and Medical Fit-Out Singapore",
+                  "description": "MOH-compliant clinic fit-outs for dental clinics, aesthetic clinics, TCM practices, and family medical offices in Singapore. Clinical-grade surface finishes, ventilation and exhaust compliance, medical equipment supplier coordination, and full regulatory submission management from design through to handover."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "F&B Renovation Singapore",
+                  "description": "Restaurant, cafe, and food and beverage outlet fit-outs across Singapore malls and commercial buildings. Full scope from concept design through NEA ventilation and exhaust compliance, kitchen equipment coordination, and landlord or mall tenancy submission management."
+                }
+              }
+            ]
+          },
+
+          "sameAs": [
+            "https://www.facebook.com/IDWorkStudio",
+            "https://www.instagram.com/idworkstudio",
+            "https://www.linkedin.com/company/id-work-studio"
           ]
         },
-        "sameAs": [
-          "https://www.facebook.com/IDWorkStudio",
-          "https://www.instagram.com/idworkstudio",
-          "https://www.linkedin.com/company/id-work-studio"
-        ]
-      }
+
+        {
+          "@type": "FAQPage",
+          "@id": "https://idworkstudio.com/#faq",
+          "mainEntity": [
+
+            {
+              "@type": "Question",
+              "name": "How much does a commercial office fit-out cost in Singapore?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Commercial office fit-out costs in Singapore typically range from SGD 50 to SGD 200 per square foot depending on specification level. Basic open-plan fit-outs run SGD 50-80 psf, mid-market SGD 80-120 psf, and premium SGD 120-200 psf. For a 1,200-3,000 sqft office the most common SME fit-out size total project costs typically fall between SGD 80,000 and SGD 180,000 inclusive of design, build, and project management. BCA Tender Price Index data shows construction prices stabilised in 2024-2025 after the post-pandemic surge, making this a favourable window for commercial fit-outs."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "How long does office reinstatement take in Singapore?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Office reinstatement in Singapore typically takes 5-14 working days depending on the size of the space and the scope required by your landlord. For standard Grade A CBD offices under 3,000 sqft, ID Work Studio offers a fixed-price express reinstatement service with a 7-day completion SLA. Works include hacking of partitions, patching walls and ceilings, repainting to the original landlord colour specification, reinstating flooring, and coordinating the landlord handover inspection."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "Is ID Work Studio a BCA-registered and HDB-registered contractor in Singapore?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. ID Work Studio holds active BCA Contractors Registration System (CRS) registration for interior decoration and finishing works, and is registered under the HDB Renovation Contractor Registration Scheme with registration number HB-02-5250G. Both registrations are current. BCA registration is required for commercial projects involving structural works and is a prerequisite for most Grade A landlord approved-contractor panels in Singapore."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "Which areas in Singapore does ID Work Studio serve for commercial renovation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ID Work Studio serves commercial and residential clients across all districts of Singapore. For commercial projects, we regularly work in the CBD (Raffles Place, Tanjong Pagar, Shenton Way, Marina Bay), Orchard, Novena, Paya Lebar Quarter, one-north, Jurong Lake District, Harbourfront, Tampines Regional Centre, and Woodlands Regional Centre. We cover all major Singapore office buildings, shopping malls, and shophouses islandwide, operating from our base in Woodlands."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "Can ID Work Studio carry out MOH-compliant clinic fit-outs in Singapore?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. ID Work Studio has direct experience in MOH-compliant fit-outs for dental clinics, aesthetic clinics, TCM practices, and family medical offices across Singapore. Clinic fit-outs require specific zone planning for clinical and waiting areas, appropriate wall and floor surface finishes, ventilation and exhaust compliance, and careful coordination with medical equipment suppliers. We manage the full process from design and submission through to regulatory inspection and handover."
+              }
+            }
+
+          ]
+        }
+
+      ]
+    }
     </script>
+
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
