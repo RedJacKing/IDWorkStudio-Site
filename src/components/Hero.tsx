@@ -64,26 +64,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
             className="text-xs uppercase tracking-[0.25em] text-gold/80 mb-8 font-semibold"
           >
-            <a
-              href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PListingContractor.jsp"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Search for ID WORK STUDIO on HDB"
-              className="hover:text-gold transition-colors underline underline-offset-2"
-            >
-              {t('accreditation.hdb')}
-            </a>
+            <span>{t('accreditation.hdb')} HB-02-5250G</span>
             <span className="mx-3 text-white/30">·</span>
-            <a
-              href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gold transition-colors underline underline-offset-2"
-            >
-              {t('accreditation.bca')}
-            </a>
-            <span className="mx-3 text-white/30">·</span>
-            <span className="text-white/50">{t('accreditation.firm')}</span>
+            <span>{t('accreditation.bca')}</span>
           </motion.p>
 
           {/* Subtitle */}

@@ -19,9 +19,9 @@ const resources = {
         "firm": "Firm"
       },
       "hero": {
-        "title_main": "Curated Interiors ",
-        "title_sub": "for the Modern Visionary",
-        "subtitle": "Premium interior design and renovation services in Singapore. With over a decade of trusted excellence, we transform homes, offices, and retail spaces into masterpieces.",
+        "title_main": "Interior Design & Renovation",
+        "title_sub": "For the Modern Visionary",
+        "subtitle": "BCA-registered and HDB-registered renovation contractor in Woodlands, Singapore. Over 10 years delivering residential renovations — HDB BTO, resale flats, condominiums, landed homes — and commercial fit-outs for offices, retail shops, and mall stores across all Singapore districts.",
         "cta": "View Our Work",
         "whatsapp": "WhatsApp Us"
       },
@@ -44,15 +44,15 @@ const resources = {
         }
       },
       "services": {
-        "title": "Our Expertise",
-        "subtitle": "Comprehensive interior design solutions for residential and commercial spaces.",
+        "title": "Our Renovation Services",
+        "subtitle": "BCA-registered and HDB-registered contractor for office fit-out, retail and mall renovation, and residential works across all Singapore districts.",
         "residential": {
           "title": "Residential Renovation",
           "desc": "Transforming HDBs, Condos, and Landed properties into dream homes. Specialized in space planning and lifestyle-centric designs."
         },
         "commercial": {
-          "title": "Commercial & Retail",
-          "desc": "Strategic workspace and retail design that enhances brand identity and operational efficiency. BCA-compliant solutions."
+          "title": "Office & Retail Renovation",
+          "desc": "BCA-registered fit-out contractor for offices, retail shops, and mall stores across Singapore. We handle space planning, partitioning, M&E, MCST submissions, and all permit applications. Office renovation from $50 psf · Retail fit-out from $65 psf."
         },
         "custom": {
           "title": "Custom Carpentry & Styling",
@@ -335,10 +335,10 @@ const resources = {
         "bca": "BCA 注册",
         "firm": "公司"
       },
-      "hero": {
-        "title_main": "精心打造的室内设计 ",
+     "hero": {
+        "title_main": "室内设计与翻新",
         "title_sub": "致敬现代有识之士",
-        "subtitle": "新加坡优质室内设计与翻新服务。凭借十多年的卓越信誉，我们将住宅、办公室和零售空间转化为杰作。",
+        "subtitle": "坐落于兀兰的BCA注册及HDB注册装修承包商。逾10年诚信交付，服务涵盖HDB组屋、公寓、有地房产及办公室、零售店铺、商场翻新，遍及新加坡全岛各区。",
         "cta": "查看我们的作品",
         "whatsapp": "WhatsApp 立即咨询"
       },
@@ -361,15 +361,15 @@ const resources = {
         }
       },
       "services": {
-        "title": "我们的专长",
-        "subtitle": "为住宅和商业空间提供全面的室内设计解决方案。",
+        "title": "我们的翻新服务",
+        "subtitle": "BCA注册及HDB注册承包商，专业承接办公室装修、零售店面及商场翻新，以及全岛住宅装修工程。",
         "residential": {
           "title": "住宅翻新",
           "desc": "将组屋、公寓和有地房产改造成梦想家园。专注于空间规划和以生活方式为中心的设计。"
         },
         "commercial": {
-          "title": "商业与零售",
-          "desc": "战略性的工作空间和零售设计，提升品牌形象和运营效率。符合建设局(BCA)标准的解决方案。"
+          "title": "办公室与零售翻新",
+          "desc": "BCA注册装修承包商，承接新加坡各类办公室、零售店面及商场翻新工程。服务涵盖空间规划、隔间、机电工程、MCST提交及全套许可证申请。办公室翻新从每平方尺$50起 · 零售翻新从每平方尺$65起。"
         },
         "custom": {
           "title": "定制木工与造型",
