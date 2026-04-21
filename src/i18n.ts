@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+// Translations
 const resources = {
   en: {
     translation: {
@@ -24,15 +25,45 @@ const resources = {
         "cta": "View Our Work",
         "whatsapp": "WhatsApp Us"
       },
+      "services": {
+        "title": "Our Expertise",
+        "residential": {
+          "title": "Residential",
+          "desc": "Bespoke living spaces designed for comfort and elegance."
+        },
+        "commercial": {
+          "title": "Commercial",
+          "desc": "High-performance environments tailored for business success."
+        },
+        "reinstatement": {
+          "title": "Reinstatement",
+          "desc": "Professional end-of-lease services for a seamless handover."
+        }
+      },
       "process": {
         "title": "Our Process",
         "subtitle": "A seamless journey from concept to reality.",
         "steps": {
-          "1": { "title": "Consult & Visualize", "desc": "We begin by understanding your vision and lifestyle, translating them into detailed 3D concepts." },
-          "2": { "title": "Accredited Execution", "desc": "Our HDB & BCA registered team manages the renovation with precision, ensuring quality and compliance." },
-          "3": { "title": "Quality Craftsmanship", "desc": "Every detail is handled by skilled artisans, using premium materials to deliver a flawless finish." },
-          "4": { "title": "Handover & Beyond", "desc": "We ensure a perfect delivery, followed by dedicated post-renovation support for your peace of mind." }
+          "1": {
+            "title": "Consult & Visualize",
+            "desc": "We begin by understanding your vision and lifestyle, translating them into detailed 3D concepts."
+          },
+          "2": {
+            "title": "Accredited Execution",
+            "desc": "Our HDB & BCA registered team manages the renovation with precision, ensuring quality and compliance."
+          },
+          "3": {
+            "title": "Quality Craftsmanship",
+            "desc": "Every detail is handled by skilled artisans, using premium materials to deliver a flawless finish."
+          },
+          "4": {
+            "title": "Handover & Beyond",
+            "desc": "We ensure a perfect delivery, followed by dedicated post-renovation support for your peace of mind."
+          }
         }
+      },
+      "footer": {
+        "rights": "All Rights Reserved."
       },
       "commercial_page": {
         "hero": {
@@ -57,7 +88,18 @@ const resources = {
           "subtitle": "Contact our commercial team for a professional consultation and site assessment."
         }
       },
-      // PRESERVING YOUR ORIGINAL KEYS FOR COMMERCIAL/HOME PAGE
+      "residential_page": {
+        "hero": {
+          "title_serif": "Crafting Your",
+          "title_bold": "Ideal Sanctuary",
+          "subtitle": "Specializing in HDB BTO/Resale, Condominiums, and Landed Properties. We blend aesthetics with functionality to create homes that reflect your soul."
+        },
+        "stats": {
+          "homes": "Homes Transformed",
+          "hdb": "HDB Licensed",
+          "satisfaction": "Client Satisfaction"
+        }
+      },
       "reinstatement_section": {
         "headline_serif": "End-of-Lease",
         "headline_bold": "Reinstatement",
@@ -73,12 +115,6 @@ const resources = {
           "whatsapp": "Request Site Survey",
           "email": "Email Lease Clause"
         },
-        "stats": {
-          "cost_label": "Typical Cost PSF",
-          "timeline_label": "Typical Timeline",
-          "compliance_label": "Compliance Rate",
-          "licensed_label": "HDB Licensed"
-        },
         "faq": {
           "title": "Expert Knowledge Base",
           "q1": "What is the typical cost for office reinstatement in Singapore?",
@@ -93,14 +129,23 @@ const resources = {
           "subtitle": "Early planning avoids unnecessary landlord disputes. Send us your lease clause for a same-day professional assessment.",
           "button": "WhatsApp Us For Quote"
         }
-      },
-      "footer": { "rights": "All Rights Reserved." }
+      }
     }
   },
   zh: {
     translation: {
-      "nav": { "home": "首页", "residential": "住宅装修", "commercial": "商业装修", "gallery": "案例展示", "contact": "联系我们" },
-      "accreditation": { "hdb": "HDB 注册", "bca": "BCA 注册", "firm": "装修商" },
+      "nav": {
+        "home": "首页",
+        "residential": "住宅装修",
+        "commercial": "商业装修",
+        "gallery": "案例展示",
+        "contact": "联系我们"
+      },
+      "accreditation": {
+        "hdb": "HDB 注册",
+        "bca": "BCA 注册",
+        "firm": "装修商"
+      },
       "hero": {
         "title_main": "为现代远见者",
         "title_sub": "精心打造的室内空间",
@@ -108,17 +153,35 @@ const resources = {
         "cta": "查看我们的作品",
         "whatsapp": "联系我们"
       },
+      "services": {
+        "title": "我们的专长",
+        "residential": {
+          "title": "住宅装修",
+          "desc": "为您量身定制舒适优雅的居住空间。"
+        },
+        "commercial": {
+          "title": "商业装修",
+          "desc": "助力业务成功的专业办公与商业环境。"
+        },
+        "reinstatement": {
+          "title": "原状恢复",
+          "desc": "专业高效的租约期满移交服务。"
+        }
+      },
       "commercial_page": {
         "hero": {
           "title_serif": "打造卓越业务的",
           "title_bold": "战略空间",
           "subtitle": "BCA & HDB 注册商业专家。我们打造高效的办公室、零售精品店和餐饮环境，助力业务增长。"
-        },
-        "stats": { "years": "多年专业经验", "projects": "商业项目", "retention": "客户留存率" },
-        "sectors": { "title": "行业专长", "office": "企业办公室", "retail": "零售精品店", "fnb": "餐饮环境", "medical": "医疗与康养" },
-        "cta": { "title": "准备好改造您的业务空间了吗？", "subtitle": "联系我们的商业团队，进行专业咨询和现场评估。" }
+        }
       },
-      // PRESERVING YOUR ORIGINAL CHINESE KEYS
+      "residential_page": {
+        "hero": {
+          "title_serif": "打造您的",
+          "title_bold": "理想避风港",
+          "subtitle": "专注于 HDB 新房/转售、公寓及有地住宅。我们将美学与功能完美结合，打造体现您灵魂的家园。"
+        }
+      },
       "reinstatement_section": {
         "headline_serif": "租约期满",
         "headline_bold": "原状恢复",
@@ -134,18 +197,12 @@ const resources = {
           "whatsapp": "预约现场勘察",
           "email": "电邮租约条款"
         },
-        "stats": {
-          "cost_label": "每平方英尺成本",
-          "timeline_label": "典型工期",
-          "compliance_label": "合规率",
-          "licensed_label": "HDB 注册执照"
-        },
         "faq": {
           "title": "专家见解与常见问题",
           "q1": "新加坡办公室原状恢复的典型成本是多少？",
           "a1": "在2026年，市场价格通常在每平方英尺 S$5 到 S$30 之间。标准办公室（拆除隔断和地板）通常在 S$8–S$15 之间。具体取决于单位大小和房东要求。",
           "q2": "你们处理 SCDF 消防安全和洒水系统还原吗？",
-          "a2": "是的。作为 HDB 执照 (HB-02-5250G) 承包商，我们确保洒水器、烟雾探测器和应急灯根据原始布局进行还原，以通过房东和管理处的最终检查。",
+          "a2": "是的。作为 HDB 执照 (HB-02-5250G) 承包商，我们确保洒水器、烟雾探测器和应急灯根据原始布局进行还原，以通过检查。",
           "q3": "什么是“清水房” (Bare Shell) 移交标准？",
           "a3": "清水房移交通常要求拆除租户安装的所有设施，包括隔断、定制家具和地板。墙壁必须修补并涂成中性白色，确保所有机电服务符合原始交付状态。"
         },
@@ -155,7 +212,9 @@ const resources = {
           "button": "WhatsApp 咨询报价"
         }
       },
-      "footer": { "rights": "版权所有。" }
+      "footer": {
+        "rights": "版权所有。"
+      }
     }
   }
 };
@@ -166,7 +225,9 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    interpolation: { escapeValue: false }
+    interpolation: {
+      escapeValue: false,
+    },
   });
 
 export default i18n;
