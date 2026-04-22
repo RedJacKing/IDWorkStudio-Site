@@ -350,6 +350,75 @@ const resources = {
           "q2": {
             "q": "How does a BCA-registered firm ensure commercial safety compliance?",
             "a": "As a BCA-registered firm, we ensure compliance through a rigorous 3-step process:<br/><br/>1. <strong>Pre-Submission Checks:</strong> Our Qualified Persons (QP) review all designs against current SCDF Fire Code and BCA accessibility standards.<br/>2. <strong>Permit Management:</strong> We handle all necessary submissions to BCA, URA, and FSSD before work commences.<br/>3. <strong>Site Supervision:</strong> Licensed CoreTrade personnel supervise critical works to ensure they meet approved specifications and safety regulations."
+          },
+          "q3": {
+            "q": "What are the permit requirements for commercial renovation in Singapore?",
+            "a": "Commercial renovation in Singapore typically requires submissions to multiple authorities depending on scope: <strong>BCA</strong> for structural works, <strong>SCDF</strong> for fire safety modifications (sprinklers, fire doors, emergency lighting), <strong>URA</strong> for change of use, and <strong>MCST</strong> for mall or office tower fit-outs. As a BCA-registered contractor, we manage all submissions in-house to keep your project on schedule."
+          },
+          "q4": {
+            "q": "How much does a commercial renovation cost in Singapore?",
+            "a": "Commercial renovation costs in Singapore vary by space type and fit-out level:<br/><br/>• <strong>Office renovation:</strong> S$50–S$180 per sqft<br/>• <strong>Retail / mall fit-out:</strong> S$65–S$150 per sqft<br/>• <strong>F&B / shophouse:</strong> S$80–S$200 per sqft<br/>• <strong>Office reinstatement:</strong> S$8–S$25 per sqft<br/><br/>These ranges cover M&E works, false ceilings, partitioning, flooring, joinery, and permit fees. Request a free itemised quotation for your specific project."
+          }
+        },
+        "subpages": {
+          "section_title": "Commercial Renovation Solutions",
+          "section_subtitle": "Specialist services for every commercial space in Singapore — from offices to F&B outlets.",
+          "btn": "Learn More",
+          "office": {
+            "badge": "Office Renovation",
+            "title": "Office & Workspace Renovation",
+            "desc": "Turnkey office fit-outs for Singapore businesses. Hybrid work layouts, system furniture, and full BCA/SCDF compliance."
+          },
+          "retail": {
+            "badge": "Retail Fit-Out",
+            "title": "Retail & Mall Store Design",
+            "desc": "High-impact retail interiors that drive footfall and sales. MCST submission management for major Singapore malls."
+          },
+          "shophouse": {
+            "badge": "Shophouse Renovation",
+            "title": "F&B & Shophouse Renovation",
+            "desc": "Heritage-sensitive shophouse renovations and F&B fit-outs with full URA and SCDF compliance."
+          },
+          "compliance": {
+            "badge": "Permits & Compliance",
+            "title": "Permits & Compliance",
+            "desc": "BCA, SCDF, MCST and LEW permit management. We handle all submissions so you can focus on your business."
+          },
+          "reinstatement": {
+            "badge": "Reinstatement",
+            "title": "Office & Mall Reinstatement",
+            "desc": "Professional bare-shell handover with 100% pass-rate guarantee. SCDF and MCST compliant."
+          }
+        },
+        "process": {
+          "title": "Our Commercial Renovation Process",
+          "subtitle": "A transparent, step-by-step approach engineered to minimise business downtime.",
+          "steps": {
+            "1": {
+              "title": "Free Site Survey",
+              "detail": "FREE",
+              "desc": "We conduct a detailed onsite assessment and provide a comprehensive itemised quotation at no cost."
+            },
+            "2": {
+              "title": "Design & Planning",
+              "detail": "1–2 WEEKS",
+              "desc": "Our designers develop space plans, material schedules and 3D visuals aligned with your brand identity."
+            },
+            "3": {
+              "title": "Permit Submission",
+              "detail": "1–3 WEEKS",
+              "desc": "We handle all BCA, SCDF, MCST and URA submissions before physical work begins."
+            },
+            "4": {
+              "title": "Renovation Works",
+              "detail": "4–8 WEEKS",
+              "desc": "Our licensed CoreTrade team executes the fit-out with phased scheduling to minimise disruption."
+            },
+            "5": {
+              "title": "Handover & Inspection",
+              "detail": "DAY 1",
+              "desc": "Joint inspection with building management, defect rectification and full site handover."
+            }
           }
         },
         "cta": {
@@ -781,6 +850,75 @@ const resources = {
           "q2": {
             "q": "BCA注册公司如何确保商业安全合规？",
             "a": "作为BCA注册公司，我们通过严格的3步流程确保合规性：<br/><br/>1. <strong>提交前检查：</strong> 我们的合格人员(QP)根据当前的SCDF消防规范和BCA无障碍标准审查所有设计。<br/>2. <strong>许可证管理：</strong> 在工作开始前，我们处理向BCA、URA和FSSD的所有必要提交。<br/>3. <strong>现场监督：</strong> 持牌CoreTrade人员监督关键工程，确保其符合批准的规范和安全法规。"
+          },
+          "q3": {
+            "q": "新加坡商业翻新的许可证要求是什么？",
+            "a": "新加坡商业翻新通常需要根据施工范围向多个部门提交申请：结构工程需提交 <strong>BCA</strong>，消防安全修改（洒水器、防火门、应急照明）需提交 <strong>SCDF</strong>，用途变更需提交 <strong>URA</strong>，商场或写字楼装修需提交 <strong>MCST</strong>。作为 BCA 注册承包商，我们内部处理所有提交，确保项目按时推进。"
+          },
+          "q4": {
+            "q": "新加坡商业翻新费用是多少？",
+            "a": "新加坡商业翻新费用因空间类型和装修标准而异：<br/><br/>• <strong>办公室翻新：</strong>每平方英尺 S$50–S$180<br/>• <strong>零售/商场装修：</strong>每平方英尺 S$65–S$150<br/>• <strong>餐饮/店屋：</strong>每平方英尺 S$80–S$200<br/>• <strong>办公室原状修复：</strong>每平方英尺 S$8–S$25<br/><br/>以上范围涵盖机电工程、假天花、隔断、地板、木工及许可证费用。请联系我们获取针对您项目的免费分项报价。"
+          }
+        },
+        "subpages": {
+          "section_title": "商业翻新解决方案",
+          "section_subtitle": "专为新加坡各类商业空间打造的专业服务——从办公室到餐饮场所。",
+          "btn": "了解更多",
+          "office": {
+            "badge": "办公室翻新",
+            "title": "办公室与工作空间翻新",
+            "desc": "为新加坡企业提供一站式办公室装修服务。混合办公布局、系统家具及完整 BCA/SCDF 合规。"
+          },
+          "retail": {
+            "badge": "零售装修",
+            "title": "零售与商场店面设计",
+            "desc": "高影响力的零售室内设计，提升客流量与销售额。负责主要新加坡商场的 MCST 提交管理。"
+          },
+          "shophouse": {
+            "badge": "店屋翻新",
+            "title": "餐饮与店屋翻新",
+            "desc": "注重传统风貌的店屋翻新及餐饮装修，完全符合 URA 和 SCDF 要求。"
+          },
+          "compliance": {
+            "badge": "许可证与合规",
+            "title": "许可证与合规管理",
+            "desc": "BCA、SCDF、MCST 和 LEW 许可证管理。我们代您处理所有提交，让您专注于业务。"
+          },
+          "reinstatement": {
+            "badge": "原状修复",
+            "title": "办公室与商场原状修复",
+            "desc": "专业清水房移交，100% 通过率保证。符合 SCDF 和 MCST 标准。"
+          }
+        },
+        "process": {
+          "title": "我们的商业翻新流程",
+          "subtitle": "透明、逐步推进的方案，专为最大限度减少业务停机时间而设计。",
+          "steps": {
+            "1": {
+              "title": "免费现场勘察",
+              "detail": "免费",
+              "desc": "我们进行详细的现场评估，并免费提供全面的分项报价。"
+            },
+            "2": {
+              "title": "设计与规划",
+              "detail": "1–2 周",
+              "desc": "我们的设计师根据您的品牌形象制定空间方案、材料计划和 3D 效果图。"
+            },
+            "3": {
+              "title": "许可证提交",
+              "detail": "1–3 周",
+              "desc": "我们在施工开始前处理所有 BCA、SCDF、MCST 和 URA 提交。"
+            },
+            "4": {
+              "title": "翻新施工",
+              "detail": "4–8 周",
+              "desc": "我们持牌的 CoreTrade 团队按分阶段计划执行装修，最大限度减少业务干扰。"
+            },
+            "5": {
+              "title": "交付与验收",
+              "detail": "第 1 天",
+              "desc": "与大厦管理方联合检查、缺陷修正及完整现场交付。"
+            }
           }
         },
         "cta": {
