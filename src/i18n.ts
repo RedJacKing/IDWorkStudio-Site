@@ -433,6 +433,10 @@ const resources = {
           "title": "Ready to Transform Your Business Space?",
           "subtitle": "Partner with a trusted, BCA-registered commercial contractor for your next project.",
           "button": "Get Commercial Quote"
+        },
+        "partners": {
+          "title": "Our Clients & Partners",
+          "subtitle": "Trusted by leading brands, MNCs, and businesses across Singapore."
         }
       },
       "footer": {
@@ -941,6 +945,10 @@ const resources = {
           "title": "准备好改造您的商业空间了吗？",
           "subtitle": "为您的下一个项目与值得信赖的、BCA 注册的商业承包商合作。",
           "button": "获取商业报价"
+        },
+        "partners": {
+          "title": "我们的客户与合作伙伴",
+          "subtitle": "深受新加坡各大品牌、跨国公司及企业信赖。"
         }
       },
       "footer": {
