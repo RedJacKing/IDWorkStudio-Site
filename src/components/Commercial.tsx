@@ -238,11 +238,7 @@ export default function Commercial() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
-                    {/* Dark gradient so the "tap to explore" label is readable */}
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-charcoal/70 via-transparent to-transparent" />
-                    <span className="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-gold/90 font-bold font-sans">
-                      {svc.detail}
-                    </span>
                   </div>
 
                   {/* Card body */}
