@@ -1,13 +1,28 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
-import { Home, Layout, Box, ShieldCheck, TrendingUp, Sparkles } from 'lucide-react';
+import {
+  Home, Layout, Box, ShieldCheck, TrendingUp, Sparkles,
+  CheckCircle, DollarSign, Clock, FileText, Building
+} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function Residential() {
   const { t } = useTranslation();
   const whatsappNumber = "6598333085";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%20ID%20Work%20Studio,%20I'd%20like%20a%20free%20quote%20for%20my%20residential%20renovation.`;
+  const whatsappResaleLink = `https://wa.me/${whatsappNumber}?text=Hi%20ID%20Work%20Studio,%20I'd%20like%20to%20plan%20my%20resale%20HDB%20renovation.`;
 
+  // ── Schema: Breadcrumb ────────────────────────────────────────────────────────
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://idworkstudio.com" },
+      { "@type": "ListItem", "position": 2, "name": "Residential Renovation Singapore", "item": "https://idworkstudio.com/residential" }
+    ]
+  };
+
+  // ── Schema: Service ────────────────────────────────────────────────────────────
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -48,43 +63,73 @@ export default function Residential() {
     }
   };
 
+  // ── Schema: FAQ — expanded to 8 items for AI/GEO citation coverage ───────────
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the cost of a 4-room BTO renovation in 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In 2026, a comprehensive 4-room BTO renovation in Singapore typically ranges from $45,000 to $65,000. This covers flooring, painting, plumbing, and custom carpentry for the kitchen and wardrobes. Premium finishes or extensive hacking for open-plan layouts can push costs to $75,000+."
-        }
+        "name": "What is the renovation cost for a 4-room BTO flat in 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A comprehensive 4-room BTO renovation in Singapore typically ranges from $45,000 to $65,000 in 2026. This covers flooring, painting, plumbing, and custom carpentry for the kitchen and wardrobes. Premium finishes or open-plan hacking can push costs to $75,000+." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a 3-room or 5-room HDB renovation cost in Singapore?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A 3-room BTO renovation typically costs $25,000–$45,000. A 5-room BTO ranges from $50,000–$90,000. Resale flats of any size add 20–40% to the cost due to hacking, rewiring and waterproofing requirements." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does resale HDB renovation cost more than BTO renovation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Resale HDB flats require infrastructure work before aesthetic renovation — including rewiring old electrical systems, replacing corroded pipes, hacking dated tiles, and waterproofing wet areas. These prelim works typically add $8,000–$20,000 to the total cost." }
       },
       {
         "@type": "Question",
         "name": "How can I maximize storage in a small HDB layout?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To maximize storage in small HDBs, utilize vertical space with floor-to-ceiling carpentry. Implement smart solutions like platform beds with drawers, hidden storage within feature walls, and extendable dining tables. Japandi designs use concealed cabinetry to maintain a minimalist aesthetic without sacrificing functionality."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "To maximize storage in small HDBs, utilize vertical space with floor-to-ceiling carpentry. Implement smart solutions like platform beds with drawers, hidden storage within feature walls, and extendable dining tables. Japandi designs use concealed cabinetry to maintain a minimalist aesthetic without sacrificing functionality." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an HDB permit for renovation works in Singapore?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most HDB renovation works including hacking, tiling, electrical and plumbing require an HDB Renovation Permit before physical work begins. The permit takes 1–3 weeks to approve. As an HDB-registered contractor, ID Work Studio handles all permit submissions on your behalf." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does an HDB renovation take in Singapore?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A 4-room BTO renovation typically takes 8–12 weeks from key collection to handover, including permit processing. Resale flat renovations take 10–16 weeks due to additional hacking and infrastructure works." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the HDB renovation loan limit in Singapore?",
+        "acceptedAnswer": { "@type": "Answer", "text": "HDB flat owners can borrow up to $30,000 under the HDB Renovation Loan, repayable over up to 5 years. The loan covers licensed renovation works only. Bank renovation loans are available for projects exceeding this limit." }
       },
       {
         "@type": "Question",
         "name": "Why is choosing an HDB-registered contractor important?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Choosing an HDB-registered contractor is crucial because they are trained to adhere to HDB's renovation guidelines and structural safety protocols. They ensure no critical structural pillars are compromised during hacking and that all electrical and plumbing works meet Singapore's safety standards."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Choosing an HDB-registered contractor is crucial because they are trained to adhere to HDB's renovation guidelines and structural safety protocols. They ensure no critical structural pillars are compromised during hacking and that all electrical and plumbing works meet Singapore's safety standards." }
       }
     ]
+  };
+
+  // ── FAQ icon map ──────────────────────────────────────────────────────────────
+  const faqIcons: Record<string, React.ReactNode> = {
+    '1': <DollarSign  className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '2': <DollarSign  className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '3': <Building    className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '4': <Box         className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '5': <FileText    className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '6': <Clock       className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '7': <TrendingUp  className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '8': <ShieldCheck className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
   };
 
   return (
     <>
       <Helmet>
-        <title>HDB & Condo Renovation Singapore | Residential Interior Design | ID Work Studio Woodlands</title>
-        <meta name="description" content="HDB-approved residential renovation and interior design in Singapore. BCA-registered contractor specialising in HDB, condo and landed property renovations. Based in Woodlands, serving all of Singapore." />
-        <meta name="keywords" content="HDB renovation Singapore, condo renovation Singapore, residential renovation Singapore, interior design Singapore, BTO renovation Singapore, landed property renovation Singapore, Woodlands interior designer, ID Work Studio" />
+        {/* Title: shortened to ~50 chars, keyword first */}
+        <title>HDB &amp; Condo Renovation Singapore | ID Work Studio</title>
+        <meta name="description" content="HDB-approved residential renovation in Singapore. BCA-registered contractor for HDB, BTO, resale and condo renovations. Transparent pricing. Free consultation. Based in Woodlands." />
+        <meta name="keywords" content="HDB renovation Singapore, condo renovation Singapore, BTO renovation Singapore 2026, resale HDB renovation, MOP renovation Singapore 2026, 4-room BTO renovation cost, landed property renovation Singapore, Woodlands interior designer, ID Work Studio" />
         <meta name="geo.region" content="SG" />
         <meta name="geo.placename" content="Woodlands, Singapore" />
         <meta name="geo.position" content="1.4348129;103.7326522" />
@@ -92,44 +137,50 @@ export default function Residential() {
         <link rel="canonical" href="https://idworkstudio.com/residential" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://idworkstudio.com/residential" />
-        <meta property="og:title" content="HDB & Condo Renovation Singapore | Residential Interior Design | ID Work Studio" />
-        <meta property="og:description" content="HDB-approved residential renovation and interior design in Singapore. BCA-registered, Woodlands-based. Specialising in HDB, condo and landed property renovations across Singapore." />
+        <meta property="og:title" content="HDB & Condo Renovation Singapore | ID Work Studio" />
+        <meta property="og:description" content="HDB-approved residential renovation in Singapore. BCA-registered. HDB, BTO, resale and condo renovations. Transparent pricing." />
         <meta property="og:image" content="https://idworkstudio.com/WALANDING.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="ID Work Studio" />
         <meta property="og:locale" content="en_SG" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="HDB & Condo Renovation Singapore | Residential Interior Design | ID Work Studio" />
-        <meta name="twitter:description" content="HDB-approved residential renovation and interior design in Singapore. BCA-registered, Woodlands-based. Specialising in HDB, condo and landed property renovations." />
+        <meta name="twitter:title" content="HDB & Condo Renovation Singapore | ID Work Studio" />
+        <meta name="twitter:description" content="HDB-approved residential renovation in Singapore. BCA-registered. Specialising in HDB, BTO, resale and condo renovations." />
         <meta name="twitter:image" content="https://idworkstudio.com/WALANDING.jpg" />
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
-        {/* Hero Section - Optimized for LCP */}
+
+        {/* ════════════════════════════════════════════════════════════
+            HERO — hero images unchanged; H1 is now keyword-optimised
+        ════════════════════════════════════════════════════════════ */}
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
           <div className="absolute inset-0 z-0">
-            <img 
-              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop" 
-              alt="Modern Warm Minimalist Living Room" 
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop"
+              alt="Modern Warm Minimalist Living Room — HDB Renovation Singapore by ID Work Studio"
               className="w-full h-full object-cover object-center opacity-60 scale-110"
               fetchpriority="high"
               decoding="async"
             />
             <div className="absolute inset-0 bg-black/40" />
           </div>
-          
+
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8 md:mt-12">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className="inline-block py-1 px-3 border border-champagne text-champagne rounded-full text-xs uppercase tracking-widest mb-4"
             >
               {t('residential_page.hero.badge')}
             </motion.span>
-            <motion.h1 
+
+            {/* H1 — keyword-first */}
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -137,7 +188,8 @@ export default function Residential() {
             >
               {t('residential_page.hero.title')}
             </motion.h1>
-            <motion.h2 
+
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -145,8 +197,9 @@ export default function Residential() {
             >
               {t('residential_page.hero.subtitle')}
             </motion.h2>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -158,61 +211,50 @@ export default function Residential() {
           </div>
         </section>
 
-        {/* Specialists Section */}
+        {/* ════════════════════════════════════════════════════════════
+            SPECIALISTS — HDB / Condo / Landed (existing, kept)
+        ════════════════════════════════════════════════════════════ */}
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-serif mb-8 text-charcoal">{t('residential_page.specialists.title')}</h2>
+                {/* Registration number visible on-page — E-E-A-T signal */}
+                <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold">
+                  HDB Renovation Contractor Reg: HB-02-5250G
+                </span>
+                <h2 className="text-3xl md:text-4xl font-serif mt-3 mb-8 text-charcoal">
+                  {t('residential_page.specialists.title')}
+                </h2>
+
                 <div className="space-y-8">
-                  <div className="flex group">
-                    <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-14 w-14 rounded-full bg-off-white text-gold border border-gold/20 group-hover:bg-gold group-hover:text-white transition-all duration-300">
-                        <Home size={24} />
+                  {([
+                    { icon: <Home size={24} />, key: '1' },
+                    { icon: <Layout size={24} />, key: '2' },
+                    { icon: <Box size={24} />, key: '3' },
+                  ] as const).map(({ icon, key }) => (
+                    <div key={key} className="flex group">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center h-14 w-14 rounded-full bg-off-white text-gold border border-gold/20 group-hover:bg-gold group-hover:text-white transition-all duration-300">
+                          {icon}
+                        </div>
+                      </div>
+                      <div className="ml-6">
+                        <h3 className="text-xl font-bold text-charcoal uppercase tracking-wider">
+                          {t(`residential_page.specialists.items.${key}.title`)}
+                        </h3>
+                        <p className="mt-2 text-gray-500 leading-relaxed font-sans font-normal">
+                          {t(`residential_page.specialists.items.${key}.desc`)}
+                        </p>
                       </div>
                     </div>
-                    <div className="ml-6">
-                      <h3 className="text-xl font-bold text-charcoal uppercase tracking-wider">{t('residential_page.specialists.items.1.title')}</h3>
-                      <p className="mt-2 text-gray-500 leading-relaxed font-sans font-normal">
-                        {t('residential_page.specialists.items.1.desc')}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex group">
-                    <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-14 w-14 rounded-full bg-off-white text-gold border border-gold/20 group-hover:bg-gold group-hover:text-white transition-all duration-300">
-                        <Layout size={24} />
-                      </div>
-                    </div>
-                    <div className="ml-6">
-                      <h3 className="text-xl font-bold text-charcoal uppercase tracking-wider">{t('residential_page.specialists.items.2.title')}</h3>
-                      <p className="mt-2 text-gray-500 leading-relaxed font-sans font-normal">
-                        {t('residential_page.specialists.items.2.desc')}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex group">
-                    <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-14 w-14 rounded-full bg-off-white text-gold border border-gold/20 group-hover:bg-gold group-hover:text-white transition-all duration-300">
-                        <Box size={24} />
-                      </div>
-                    </div>
-                    <div className="ml-6">
-                      <h3 className="text-xl font-bold text-charcoal uppercase tracking-wider">{t('residential_page.specialists.items.3.title')}</h3>
-                      <p className="mt-2 text-gray-500 leading-relaxed font-sans font-normal">
-                        {t('residential_page.specialists.items.3.desc')}
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
-              
+
               <div className="relative h-[500px] group">
-                <img 
-                   src="/gallery/house-renovation.png" 
-                  alt="HDB & BCA Registered Interior Design Singapore" 
+                <img
+                  src="/gallery/house-renovation.png"
+                  alt="HDB & BCA Registered Interior Design Singapore — ID Work Studio"
                   className="w-full h-full object-cover rounded-xl shadow-2xl transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                   decoding="async"
@@ -230,7 +272,9 @@ export default function Residential() {
           </div>
         </section>
 
-        {/* Lifestyle-First Design Solutions */}
+        {/* ════════════════════════════════════════════════════════════
+            LIFESTYLE-FIRST DESIGN (existing, kept)
+        ════════════════════════════════════════════════════════════ */}
         <section className="py-24 bg-dark-charcoal text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -242,74 +286,314 @@ export default function Residential() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-              <div className="p-10 border border-white/5 rounded-2xl bg-white/[0.02] backdrop-blur-sm hover:bg-white/[0.05] transition-all duration-500 group">
-                <Box className="w-12 h-12 text-gold mb-8 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-4 uppercase tracking-tighter">{t('residential_page.lifestyle.items.1.title')}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed font-sans">
-                  {t('residential_page.lifestyle.items.1.desc')}
-                </p>
-              </div>
-              <div className="p-10 border border-white/5 rounded-2xl bg-white/[0.02] backdrop-blur-sm hover:bg-white/[0.05] transition-all duration-500 group">
-                <TrendingUp className="w-12 h-12 text-gold mb-8 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-4 uppercase tracking-tighter">{t('residential_page.lifestyle.items.2.title')}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed font-sans">
-                  {t('residential_page.lifestyle.items.2.desc')}
-                </p>
-              </div>
-              <div className="p-10 border border-white/5 rounded-2xl bg-white/[0.02] backdrop-blur-sm hover:bg-white/[0.05] transition-all duration-500 group">
-                <Sparkles className="w-12 h-12 text-gold mb-8 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-4 uppercase tracking-tighter">{t('residential_page.lifestyle.items.3.title')}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed font-sans">
-                  {t('residential_page.lifestyle.items.3.desc')}
-                </p>
-              </div>
+              {([
+                { icon: <Box      className="w-12 h-12 text-gold mb-8 group-hover:scale-110 transition-transform" />, key: '1' },
+                { icon: <TrendingUp className="w-12 h-12 text-gold mb-8 group-hover:scale-110 transition-transform" />, key: '2' },
+                { icon: <Sparkles className="w-12 h-12 text-gold mb-8 group-hover:scale-110 transition-transform" />, key: '3' },
+              ] as const).map(({ icon, key }) => (
+                <div key={key} className="p-10 border border-white/5 rounded-2xl bg-white/[0.02] backdrop-blur-sm hover:bg-white/[0.05] transition-all duration-500 group">
+                  {icon}
+                  <h3 className="text-2xl font-bold mb-4 uppercase tracking-tighter">
+                    {t(`residential_page.lifestyle.items.${key}.title`)}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed font-sans">
+                    {t(`residential_page.lifestyle.items.${key}.desc`)}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* GEO-Ready Atomic Answers */}
+        {/* ════════════════════════════════════════════════════════════
+            NEW ▸ 2026 HDB RENOVATION PRICING GUIDE
+            Addresses the #1 homeowner concern; feeds AI citations
+        ════════════════════════════════════════════════════════════ */}
         <section className="py-24 bg-off-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-5xl font-serif mb-16 text-center text-charcoal uppercase tracking-tighter">
-              {t('residential_page.insights.title')}
-            </h2>
-            
-            <div className="space-y-8">
-              <div className="bg-white p-10 rounded-xl shadow-lg border-l-4 border-gold group hover:shadow-2xl transition-all duration-300">
-                <h3 className="text-xl font-bold text-charcoal mb-4 flex items-start uppercase tracking-tight">
-                  <TrendingUp className="w-6 h-6 text-gold mr-4 mt-1 flex-shrink-0" />
-                  {t('residential_page.insights.q1.q')}
-                </h3>
-                <p className="text-gray-600 leading-relaxed pl-10 font-sans" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q1.a') }} />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div className="text-center mb-16">
+              <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold">
+                {t('residential_page.pricing.badge')}
+              </span>
+              <h2 className="text-3xl md:text-5xl font-serif mt-4 mb-6 text-charcoal uppercase tracking-tighter">
+                {t('residential_page.pricing.title')}
+              </h2>
+              <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
+              <p className="text-gray-500 max-w-2xl mx-auto text-lg font-light">
+                {t('residential_page.pricing.subtitle')}
+              </p>
+            </div>
+
+            {/* Row 1 — 3 BTO flat types */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+
+              {/* 3-Room BTO */}
+              <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mr-3">
+                    <Home className="w-5 h-5 text-gold" />
+                  </div>
+                  <span className="text-xs uppercase tracking-widest text-gold font-bold">
+                    {t('residential_page.pricing.items.bto3.label')}
+                  </span>
+                </div>
+                <p className="text-3xl font-serif text-charcoal font-bold mb-3">
+                  {t('residential_page.pricing.items.bto3.range')}
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {t('residential_page.pricing.items.bto3.desc')}
+                </p>
               </div>
 
-              <div className="bg-white p-10 rounded-xl shadow-lg border-l-4 border-gold group hover:shadow-2xl transition-all duration-300">
-                <h3 className="text-xl font-bold text-charcoal mb-4 flex items-start uppercase tracking-tight">
-                  <Box className="w-6 h-6 text-gold mr-4 mt-1 flex-shrink-0" />
-                  {t('residential_page.insights.q2.q')}
-                </h3>
-                <p className="text-gray-600 leading-relaxed pl-10 font-sans" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q2.a') }} />
+              {/* 4-Room BTO — highlighted */}
+              <div className="bg-dark-charcoal rounded-2xl p-8 shadow-xl border-2 border-gold relative overflow-hidden hover:-translate-y-1 transition-all duration-300">
+                <div className="absolute top-5 right-5 bg-gold text-dark-charcoal text-[9px] uppercase tracking-widest px-3 py-1 rounded-full font-bold">
+                  Most Popular
+                </div>
+                <div className="flex items-center mb-5">
+                  <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center mr-3">
+                    <Home className="w-5 h-5 text-gold" />
+                  </div>
+                  <span className="text-xs uppercase tracking-widest text-gold font-bold">
+                    {t('residential_page.pricing.items.bto4.label')}
+                  </span>
+                </div>
+                <p className="text-3xl font-serif text-white font-bold mb-3">
+                  {t('residential_page.pricing.items.bto4.range')}
+                </p>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {t('residential_page.pricing.items.bto4.desc')}
+                </p>
               </div>
 
-              <div className="bg-white p-10 rounded-xl shadow-lg border-l-4 border-gold group hover:shadow-2xl transition-all duration-300">
-                <h3 className="text-xl font-bold text-charcoal mb-4 flex items-start uppercase tracking-tight">
-                  <ShieldCheck className="w-6 h-6 text-gold mr-4 mt-1 flex-shrink-0" />
-                  {t('residential_page.insights.q3.q')}
-                </h3>
-                <p className="text-gray-600 leading-relaxed pl-10 font-sans" dangerouslySetInnerHTML={{ __html: t('residential_page.insights.q3.a') }} />
+              {/* 5-Room BTO */}
+              <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mr-3">
+                    <Home className="w-5 h-5 text-gold" />
+                  </div>
+                  <span className="text-xs uppercase tracking-widest text-gold font-bold">
+                    {t('residential_page.pricing.items.bto5.label')}
+                  </span>
+                </div>
+                <p className="text-3xl font-serif text-charcoal font-bold mb-3">
+                  {t('residential_page.pricing.items.bto5.range')}
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {t('residential_page.pricing.items.bto5.desc')}
+                </p>
+              </div>
+            </div>
+
+            {/* Row 2 — Resale + Condo */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+              <div className="bg-white rounded-2xl p-8 shadow-md border-l-4 border-gold hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mr-3">
+                    <Building className="w-5 h-5 text-gold" />
+                  </div>
+                  <span className="text-xs uppercase tracking-widest text-gold font-bold">
+                    {t('residential_page.pricing.items.resale.label')}
+                  </span>
+                </div>
+                <p className="text-3xl font-serif text-charcoal font-bold mb-3">
+                  {t('residential_page.pricing.items.resale.range')}
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {t('residential_page.pricing.items.resale.desc')}
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-md border-l-4 border-gold hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mr-3">
+                    <Layout className="w-5 h-5 text-gold" />
+                  </div>
+                  <span className="text-xs uppercase tracking-widest text-gold font-bold">
+                    {t('residential_page.pricing.items.condo.label')}
+                  </span>
+                </div>
+                <p className="text-3xl font-serif text-charcoal font-bold mb-3">
+                  {t('residential_page.pricing.items.condo.range')}
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {t('residential_page.pricing.items.condo.desc')}
+                </p>
+              </div>
+            </div>
+
+            {/* Disclaimer + CTA strip */}
+            <div className="bg-gold/10 border border-gold/30 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <p className="text-gray-600 text-sm leading-relaxed max-w-xl">
+                ⚠️ {t('residential_page.pricing.note')}
+              </p>
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 inline-block px-8 py-4 bg-gold text-dark-charcoal text-xs uppercase tracking-[0.2em] hover:bg-gold-hover transition-all duration-300 font-bold rounded-full whitespace-nowrap"
+              >
+                {t('residential_page.pricing.cta')}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════════════════════════
+            NEW ▸ RESALE HDB & MOP 2026
+            Captures the 93% MOP surge + resale renovation keyword
+        ════════════════════════════════════════════════════════════ */}
+        <section className="py-24 bg-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+              {/* Left — Japandi HDB kitchen image */}
+              <div className="relative h-[540px] group order-2 lg:order-1">
+                <img
+                  src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=2000&auto=format&fit=crop"
+                  alt="Resale HDB Kitchen Renovation Singapore — Japandi Warm Minimalist Style 2026"
+                  className="w-full h-full object-cover rounded-2xl shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  decoding="async"
+                />
+                {/* Floating MOP stat */}
+                <div className="absolute -top-5 -right-4 md:-right-8 bg-gold text-dark-charcoal p-5 md:p-6 rounded-2xl shadow-xl">
+                  <p className="text-2xl md:text-3xl font-bold font-serif leading-none">13,480</p>
+                  <p className="text-[10px] uppercase tracking-widest mt-1 font-bold leading-tight">MOP Flats<br/>in 2026</p>
+                </div>
+              </div>
+
+              {/* Right — Content */}
+              <div className="order-1 lg:order-2">
+                <span className="inline-block py-1 px-4 bg-gold/10 border border-gold/30 text-gold rounded-full text-xs uppercase tracking-widest mb-5 font-bold">
+                  {t('residential_page.resale.badge')}
+                </span>
+                <h2 className="text-3xl md:text-5xl font-serif mt-2 mb-6 text-charcoal uppercase tracking-tighter leading-tight">
+                  {t('residential_page.resale.title')}
+                </h2>
+                <p className="text-gray-500 mb-10 leading-relaxed text-lg font-light">
+                  {t('residential_page.resale.subtitle')}
+                </p>
+
+                <div className="space-y-6">
+                  {['1', '2', '3'].map((n) => (
+                    <div key={n} className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mt-0.5">
+                        <CheckCircle className="w-5 h-5 text-gold" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-charcoal uppercase tracking-wide text-sm mb-1">
+                          {t(`residential_page.resale.points.${n}.title`)}
+                        </h3>
+                        <p className="text-gray-500 text-sm leading-relaxed">
+                          {t(`residential_page.resale.points.${n}.desc`)}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <a
+                  href={whatsappResaleLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-10 px-10 py-5 bg-gold text-dark-charcoal text-xs uppercase tracking-[0.2em] hover:bg-gold-hover transition-all duration-300 font-bold rounded-full"
+                >
+                  {t('residential_page.resale.cta')}
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* ════════════════════════════════════════════════════════════
+            NEW ▸ EXPANDED FAQ — 8 questions (up from 3)
+            Covers every high-volume homeowner query for AI/GEO
+        ════════════════════════════════════════════════════════════ */}
+        <section className="py-24 bg-off-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-serif mb-6 text-charcoal uppercase tracking-tighter">
+                {t('residential_page.faq_section.title')}
+              </h2>
+              <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
+              <p className="text-gray-500 max-w-xl mx-auto font-light">
+                {t('residential_page.faq_section.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {(['1','2','3','4','5','6','7','8'] as const).map((key) => (
+                <div
+                  key={key}
+                  className="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold hover:shadow-md transition-all duration-300"
+                >
+                  <h3 className="font-bold text-charcoal uppercase tracking-tight text-sm mb-3 flex items-start gap-3">
+                    {faqIcons[key]}
+                    <span>{t(`residential_page.faq_section.items.${key}.q`)}</span>
+                  </h3>
+                  <p
+                    className="text-gray-500 text-sm leading-relaxed pl-8"
+                    dangerouslySetInnerHTML={{ __html: t(`residential_page.faq_section.items.${key}.a`) }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════════════════════════
+            NEW ▸ TESTIMONIALS — E-E-A-T social proof with flat details
+        ════════════════════════════════════════════════════════════ */}
+        <section className="py-24 bg-dark-charcoal text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-serif mb-6 uppercase tracking-tighter">
+                {t('residential_page.testimonials.title')}
+              </h2>
+              <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
+              <p className="text-gray-400 max-w-xl mx-auto font-light">
+                {t('residential_page.testimonials.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {(['1','2','3'] as const).map((key) => (
+                <div
+                  key={key}
+                  className="bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:bg-white/[0.07] transition-all duration-300 flex flex-col"
+                >
+                  <p className="text-gold text-xl mb-5 tracking-widest">★★★★★</p>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-6 italic flex-1">
+                    "{t(`residential_page.testimonials.items.${key}.quote`)}"
+                  </p>
+                  <div className="border-t border-white/10 pt-5">
+                    <p className="font-bold text-white text-sm uppercase tracking-wider">
+                      {t(`residential_page.testimonials.items.${key}.name`)}
+                    </p>
+                    <p className="text-gold text-xs mt-1 uppercase tracking-widest">
+                      {t(`residential_page.testimonials.items.${key}.flat`)}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════════════════════════
+            CTA — existing, unchanged
+        ════════════════════════════════════════════════════════════ */}
         <section id="contact" className="py-32 bg-dark-charcoal text-white text-center scroll-mt-24 relative overflow-hidden">
           <div className="max-w-3xl mx-auto px-4 relative z-10">
-            <h2 className="text-4xl md:text-6xl font-serif mb-8 uppercase tracking-tighter">{t('residential_page.cta.title')}</h2>
+            <h2 className="text-4xl md:text-6xl font-serif mb-8 uppercase tracking-tighter">
+              {t('residential_page.cta.title')}
+            </h2>
             <p className="text-gray-400 mb-12 text-lg font-light tracking-wide italic">
               {t('residential_page.cta.subtitle')}
             </p>
-            <a 
+            <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -320,6 +604,7 @@ export default function Residential() {
           </div>
           <div className="absolute top-0 left-0 w-64 h-64 border-l border-t border-gold/10 -translate-x-1/2 -translate-y-1/2"></div>
         </section>
+
       </div>
     </>
   );
