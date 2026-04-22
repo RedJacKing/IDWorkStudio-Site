@@ -9,6 +9,16 @@ export default function Commercial() {
   const whatsappNumber = "6598333085";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%20ID%20Work%20Studio,%20I'd%20like%20a%20free%20consultation%20for%20my%20commercial%20project.`;
 
+  const stripHtmlForSchema = (html: string) =>
+    html
+      .replace(/<br\s*\/?>/gi, ' ')
+      .replace(/<[^>]*>/g, '')
+      .replace(/&nbsp;/gi, ' ')
+      .replace(/&amp;/gi, '&')
+      .replace(/&quot;/gi, '"')
+      .replace(/&#39;/gi, "'")
+      .trim();
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -58,7 +68,7 @@ export default function Commercial() {
     "mainEntity": ['q1','q2','q3','q4','q5','q6'].map(k => ({
       "@type": "Question",
       "name": t(`commercial_page.faq.${k}.q`),
-      "acceptedAnswer": { "@type": "Answer", "text": t(`commercial_page.faq.${k}.a`) }
+      "acceptedAnswer": { "@type": "Answer", "text": stripHtmlForSchema(t(`commercial_page.faq.${k}.a`)) }
     }))
   };
 
