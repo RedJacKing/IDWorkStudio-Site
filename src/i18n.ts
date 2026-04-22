@@ -373,27 +373,27 @@ const resources = {
           "section_subtitle": "Specialist services for every commercial space in Singapore — from offices to F&B outlets.",
           "btn": "Learn More",
           "office": {
-            "badge": "Office Renovation",
+            "badge": "",
             "title": "Office & Workspace Renovation",
             "desc": "Turnkey office fit-outs for Singapore businesses. Hybrid work layouts, system furniture, and full BCA/SCDF compliance."
           },
           "retail": {
-            "badge": "Retail Fit-Out",
+            "badge": "",
             "title": "Retail & Mall Store Design",
             "desc": "High-impact retail interiors that drive footfall and sales. MCST submission management for major Singapore malls."
           },
           "shophouse": {
-            "badge": "Shophouse Renovation",
+            "badge": "",
             "title": "F&B & Shophouse Renovation",
             "desc": "Heritage-sensitive shophouse renovations and F&B fit-outs with full URA and SCDF compliance."
           },
           "compliance": {
-            "badge": "Permits & Compliance",
+            "badge": "",
             "title": "Permits & Compliance",
             "desc": "BCA, SCDF, MCST and LEW permit management. We handle all submissions so you can focus on your business."
           },
           "reinstatement": {
-            "badge": "Reinstatement",
+            "badge": "",
             "title": "Office & Mall Reinstatement",
             "desc": "Professional bare-shell handover with 100% pass-rate guarantee. SCDF and MCST compliant."
           }
@@ -881,27 +881,27 @@ const resources = {
           "section_subtitle": "专为新加坡各类商业空间打造的专业服务——从办公室到餐饮场所。",
           "btn": "了解更多",
           "office": {
-            "badge": "办公室翻新",
+            "badge": "",
             "title": "办公室与工作空间翻新",
             "desc": "为新加坡企业提供一站式办公室装修服务。混合办公布局、系统家具及完整 BCA/SCDF 合规。"
           },
           "retail": {
-            "badge": "零售装修",
+            "badge": "",
             "title": "零售与商场店面设计",
             "desc": "高影响力的零售室内设计，提升客流量与销售额。负责主要新加坡商场的 MCST 提交管理。"
           },
           "shophouse": {
-            "badge": "店屋翻新",
+            "badge": "",
             "title": "餐饮与店屋翻新",
             "desc": "注重传统风貌的店屋翻新及餐饮装修，完全符合 URA 和 SCDF 要求。"
           },
           "compliance": {
-            "badge": "许可证与合规",
+            "badge": "",
             "title": "许可证与合规管理",
             "desc": "BCA、SCDF、MCST 和 LEW 许可证管理。我们代您处理所有提交，让您专注于业务。"
           },
           "reinstatement": {
-            "badge": "原状修复",
+            "badge": "",
             "title": "办公室与商场原状修复",
             "desc": "专业清水房移交，100% 通过率保证。符合 SCDF 和 MCST 标准。"
           }
