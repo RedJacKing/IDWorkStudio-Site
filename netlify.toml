@@ -2,57 +2,39 @@
   command = "npm run build"
   publish = "dist"
 
-# ─── 1. KILL UNRELATED LEGAL/ARTICLE GHOSTS (Step 1 Fix) ──────────────────
-# These are the specific "unrelated" pages mentioned in your feedback.
-# We use 301 to move their "trust" to your homepage.
-
+# Redirect old unrelated WordPress pages to the homepage
 [[redirects]]
-  from = "/old-legal-article-name" 
+  from = "/is-ppsspp-legal-everything-you-need-to-know/"
   to = "/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/terms-and-conditions-old" 
+  from = "/cpd-requirements-for-nurses-in-the-philippines-latest-updates/"
   to = "/"
   status = 301
   force = true
 
-# ─── 2. AGGRESSIVE WP CLEANUP (410 GONE) ──────────────────────────────────
-# Tells Google "Stop checking these, they are never coming back."
-
 [[redirects]]
-  from = "/category/*"
+  from = "/understanding-california-rental-application-laws-what-you-need-to-know/"
   to = "/"
-  status = 410
+  status = 301
   force = true
 
 [[redirects]]
-  from = "/tag/*"
+  from = "/understanding-conditional-sale-and-purchase-agreements-legal-guide/"
   to = "/"
-  status = 410
+  status = 301
   force = true
 
+# Redirect old portfolio URL if needed
 [[redirects]]
-  from = "/author/*"
-  to = "/"
-  status = 410
+  from = "/portfolio"
+  to = "/gallery"
+  status = 301
   force = true
 
-[[redirects]]
-  from = "/attachment/*"
-  to = "/"
-  status = 410
-  force = true
-
-[[redirects]]
-  from = "/20*/**"
-  to = "/"
-  status = 410
-  force = true
-
-# ─── 3. REDIRECT WP SYSTEM URLS (301) ─────────────────────────────────────
-
+# WordPress system paths
 [[redirects]]
   from = "/wp-admin/*"
   to = "/"
@@ -101,24 +83,13 @@
   status = 301
   force = true
 
-# ─── 4. OLD URL ALIASES ───────────────────────────────────────────────────
-
-[[redirects]]
-  from = "/portfolio"
-  to = "/gallery"
-  status = 301
-  force = true
-
-# ─── 5. NETLIFY FUNCTIONS API ─────────────────────────────────────────────
-
+# API routes, if you use Netlify Functions
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
 
-# ─── 6. REACT SPA CATCH-ALL (Must be LAST) ────────────────────────────────
-# This ensures your residential, commercial, and gallery pages work.
-
+# React SPA fallback - must be last
 [[redirects]]
   from = "/*"
   to = "/index.html"
