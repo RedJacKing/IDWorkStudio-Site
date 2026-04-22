@@ -132,6 +132,26 @@
   to = "/"
   status = 301
 
+[[redirects]]
+  from = "/commercial/office-renovation"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/commercial/retail-mall-renovation"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/commercial/shophouse-renovation"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/commercial/permits-compliance"
+  to = "/index.html"
+  status = 200
+
 # ─── CATCH-ALL — everything else returns 404 ────────────────────────────────
 # This must always be last. Any URL not matched above hits this rule.
 [[redirects]]
