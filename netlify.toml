@@ -2,163 +2,124 @@
   command = "npm run build"
   publish = "dist"
 
-# ─── API ────────────────────────────────────────────────────────────────────
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
-# ─── REAL SITE PAGES (SPA rewrites — serve index.html at each route) ────────
-[[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
+# ─── 1. KILL UNRELATED LEGAL/ARTICLE GHOSTS (Step 1 Fix) ──────────────────
+# These are the specific "unrelated" pages mentioned in your feedback.
+# We use 301 to move their "trust" to your homepage.
 
 [[redirects]]
-  from = "/residential"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/commercial"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/commercial/reinstatement"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/gallery"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/contact"
-  to = "/index.html"
-  status = 200
-
-# ─── OLD URL ALIASES → correct current pages (301 = permanent redirect) ─────
-# If /portfolio was a real page on your old WordPress site, this sends
-# anyone (and Google) who still has the old link to the correct new page.
-[[redirects]]
-  from = "/portfolio"
-  to = "/gallery"
-  status = 301
-
-# ─── WORDPRESS SYSTEM URLS → homepage (301) ─────────────────────────────────
-# These tell Google: "these pages are permanently gone, stop visiting them."
-# A 301 cleans up Google's index much faster than a 404 ever will.
-# Order matters — Netlify matches top-to-bottom, first match wins.
-
-[[redirects]]
-  from = "/wp-admin"
+  from = "/old-legal-article-name" 
   to = "/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms-and-conditions-old" 
+  to = "/"
+  status = 301
+  force = true
+
+# ─── 2. AGGRESSIVE WP CLEANUP (410 GONE) ──────────────────────────────────
+# Tells Google "Stop checking these, they are never coming back."
+
+[[redirects]]
+  from = "/category/*"
+  to = "/"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/tag/*"
+  to = "/"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/author/*"
+  to = "/"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/attachment/*"
+  to = "/"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/20*/**"
+  to = "/"
+  status = 410
+  force = true
+
+# ─── 3. REDIRECT WP SYSTEM URLS (301) ─────────────────────────────────────
 
 [[redirects]]
   from = "/wp-admin/*"
   to = "/"
   status = 301
-
-[[redirects]]
-  from = "/wp-login.php"
-  to = "/"
-  status = 301
+  force = true
 
 [[redirects]]
   from = "/wp-content/*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/wp-includes/*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/wp-json/*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
-  from = "/wp-sitemap*"
+  from = "/wp-login.php"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/xmlrpc.php"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/feed"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
-  from = "/feed/*"
+  from = "/*/feed"
   to = "/"
   status = 301
+  force = true
+
+# ─── 4. OLD URL ALIASES ───────────────────────────────────────────────────
 
 [[redirects]]
-  from = "/category/*"
-  to = "/"
+  from = "/portfolio"
+  to = "/gallery"
   status = 301
+  force = true
+
+# ─── 5. NETLIFY FUNCTIONS API ─────────────────────────────────────────────
 
 [[redirects]]
-  from = "/tag/*"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/author/*"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/page/*"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/comments/*"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/trackback/*"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/commercial/office-renovation"
-  to = "/index.html"
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
   status = 200
 
-[[redirects]]
-  from = "/commercial/retail-mall-renovation"
-  to = "/index.html"
-  status = 200
+# ─── 6. REACT SPA CATCH-ALL (Must be LAST) ────────────────────────────────
+# This ensures your residential, commercial, and gallery pages work.
 
-[[redirects]]
-  from = "/commercial/shophouse-renovation"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/commercial/permits-compliance"
-  to = "/index.html"
-  status = 200
-
-# ─── CATCH-ALL — everything else returns 404 ────────────────────────────────
-# This must always be last. Any URL not matched above hits this rule.
 [[redirects]]
   from = "/*"
-  to = "/404.html"
-  status = 404
-
-# ─── IMAGES ─────────────────────────────────────────────────────────────────
-[images]
-  remote_images = ["https://drive.google.com/.*"]
+  to = "/index.html"
+  status = 200
