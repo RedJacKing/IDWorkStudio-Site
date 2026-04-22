@@ -249,23 +249,24 @@ const resources = {
           }
         },
         "testimonials": {
-          "title": "What Our Homeowners Say",
-          "subtitle": "Real feedback from Singapore families who trusted us with their homes.",
+          "title": "What Our Clients Say",
+          "subtitle": "Verified Google reviews from Singapore homeowners and property owners.",
+          "verified": "Verified on Google",
           "items": {
             "1": {
-              "quote": "ID Work Studio transformed our 4-room resale flat in Tampines into a stunning Japandi home. The HDB permit was handled within 10 days and the entire renovation was completed in 10 weeks. Zero hidden costs — the final bill matched the quote exactly.",
-              "name": "Mr & Mrs Tan",
-              "flat": "4-Room Resale HDB, Tampines"
+              "quote": "Absolutely outstanding renovation service. From start to finish, they demonstrated top-level professionalism, excellent craftsmanship, and great attention to detail. They were punctual, well-organised, and kept everything clean throughout the process. Communication was smooth and transparent, and they were always responsive to my requests. The final result truly exceeded my expectations — I am extremely satisfied and would highly recommend them to anyone looking for reliable, high-quality renovation services.",
+              "name": "Dewi",
+              "flat": "Renovation Client · 5★ Google Review"
             },
             "2": {
-              "quote": "We were nervous about our BTO renovation budget, but the team gave us a detailed itemised quote with zero surprises. The final result exceeded our expectations — our Tengah flat looks like a showflat. Highly recommend for first-timers.",
-              "name": "Sarah & James Lim",
-              "flat": "5-Room BTO, Tengah"
+              "quote": "I recently engaged ID Work Studio for renovation works on my landed property along Yunnan Road, and I am very pleased with the results. The quality of workmanship was good, and any minor touch-ups or issues were followed up and resolved promptly and responsibly. The transformation has been impressive — my house now truly stands out among the others on the street. I appreciate the team's commitment to delivering quality work and ensuring customer satisfaction. I would highly recommend them to anyone looking for reliable and capable renovation services.",
+              "name": "Megannn",
+              "flat": "Landed Property, Yunnan Road · 5★ Google Review"
             },
             "3": {
-              "quote": "As a first-time homeowner, I had a hundred questions. The ID Work Studio team patiently walked me through every decision — carpentry layout, tile selection, smart lighting. My 3-room came out beautifully, within budget and on time.",
-              "name": "Miss Chen",
-              "flat": "3-Room BTO, Bidadari"
+              "quote": "I have been working with this renovation company for many years — from my own commercial shopfront to my home renovation, they are always my first choice. The owner is an exceptionally honest person who always offers the best pricing. When clients wish to source certain materials from China, he is accommodating and actively helps save costs. I can hand over any renovation project to them with complete confidence — no need to supervise the works — because the owner is an extremely responsible and dedicated professional. For any future renovation, I will only choose this company.",
+              "name": "Michelle Zheng",
+              "flat": "Long-Term Client · Commercial & Residential · 5★ Google Review"
             }
           }
         }
@@ -679,23 +680,24 @@ const resources = {
           }
         },
         "testimonials": {
-          "title": "业主真实评价",
-          "subtitle": "来自信任我们的新加坡家庭的真实反馈。",
+          "title": "客户真实评价",
+          "subtitle": "来自新加坡业主的 Google 认证真实评价。",
+          "verified": "Google 认证评价",
           "items": {
             "1": {
-              "quote": "ID Work Studio 将我们在淡滨尼的四房式转售组屋打造成令人惊艳的日式北欧风格家居。HDB 许可证在 10 天内办妥，整个翻新在 10 周内完成。费用透明，最终账单与报价完全一致。",
-              "name": "陈先生与陈太太",
-              "flat": "四房式转售组屋，淡滨尼"
+              "quote": "翻新服务绝对出色。从头到尾展现出高水准的专业素养、精湛的工艺及对细节的高度重视。团队工作准时、有条不紊，整个施工过程中保持现场整洁。沟通顺畅透明，对每一个要求都能及时回应。最终效果真正超出了我的预期——我对翻新成果非常满意，强烈推荐给任何寻求可靠、高质量翻新服务的业主。",
+              "name": "Dewi",
+              "flat": "翻新客户 · Google 5★ 评价"
             },
             "2": {
-              "quote": "我们最初对翻新预算感到忧虑，但团队提供了详细的明细报价，完全没有额外惊喜。最终效果超出预期——我们的登加组屋看起来像展示单位。强烈推荐给首次置业者。",
-              "name": "Sarah 与 James Lim",
-              "flat": "五房式 BTO，登加"
+              "quote": "我近期委托 ID Work Studio 为我位于云南路的有地房产进行翻新工程，对成果非常满意。施工质量良好，任何小修或问题都能得到迅速且负责任的跟进处理。翻新后的效果令人印象深刻——我的房子在街道上真正脱颖而出。我非常欣赏团队对高质量工程与客户满意度的承诺，强烈推荐给任何寻求可靠专业翻新服务的人士。",
+              "name": "Megannn",
+              "flat": "有地房产，云南路 · Google 5★ 评价"
             },
             "3": {
-              "quote": "作为首次置业者，我有很多问题。ID Work Studio 的团队耐心引导我完成每一个决定——木工布局、瓷砖选择、智能灯光。我的三房式组屋在预算内准时完工，效果非常美观。",
-              "name": "陈小姐",
-              "flat": "三房式 BTO，比达达里"
+              "quote": "我用这家装修公司很多年了，从自己的公司店铺到家里的装修，我只找他家的，因为老板是个很实在的人，给最好的价格，如果有些材料业主想从中国购买，他也会采纳，也会帮业主省钱，装修交给他完全放心，不需要督工，因为老板是个非常责任心的人，以后有任何装修我只选择他的公司。",
+              "name": "Michelle Zheng",
+              "flat": "长期客户 · 商业与住宅 · Google 5★ 评价"
             }
           }
         }
