@@ -238,6 +238,33 @@ const resources = {
             "a": "As a BCA-registered firm, we ensure compliance through a rigorous 3-step process:<br/><br/>1. <strong>Pre-Submission Checks:</strong> Our Qualified Persons (QP) review all designs against current SCDF Fire Code and BCA accessibility standards.<br/>2. <strong>Permit Management:</strong> We handle all necessary submissions to BCA, URA, and FSSD before work commences.<br/>3. <strong>Site Supervision:</strong> Licensed CoreTrade personnel supervise critical works to ensure they meet approved specifications and safety regulations."
           }
         },
+        "subpages": {
+          "section_title": "Our Commercial Specialisations",
+          "section_subtitle": "Every commercial space type has its own approval process, its own compliance requirements, and its own design logic. Select your project type below.",
+          "office": {
+            "title": "Office Renovation",
+            "desc": "Full turnkey fit-out — space planning, partitioning, M&E, and all BCA, SCDF, and MCST permit submissions. From $50 psf.",
+            "detail": "6–12 weeks · BCA registered"
+          },
+          "retail": {
+            "title": "Retail & Mall Store",
+            "desc": "MCST submission experts. Shopfront design, display systems, night-works capable. Serving CapitaLand, Frasers, and Mapletree malls.",
+            "detail": "6–12 weeks · Night-works capable"
+          },
+          "shophouse": {
+            "title": "Shophouse Renovation",
+            "desc": "URA Conservation Permission, BCA structural, and SCDF fire safety — the three-agency process most contractors cannot navigate.",
+            "detail": "Tanjong Pagar · Chinatown · Kampong Glam"
+          },
+          "compliance": {
+            "title": "Permits & Compliance",
+            "desc": "MCST, BCA, SCDF fire safety, and EMA Licensed Electrical Worker (LEW) requirements — explained and managed in full.",
+            "detail": "SCDF · LEW Grade 8 · BCA · MCST"
+          },
+          "reinstatement_row": "Office & Mall Reinstatement — Bare Shell Handover",
+          "reinstatement_detail": "100% deposit return · MCST & SCDF compliant · Free site survey",
+          "reinstatement_label": "Also Available"
+        },
         "cta": {
           "title": "Ready to Transform Your Business Space?",
           "subtitle": "Partner with a trusted, BCA-registered commercial contractor for your next project.",
@@ -554,6 +581,33 @@ const resources = {
             "q": "BCA注册公司如何确保商业安全合规？",
             "a": "作为BCA注册公司，我们通过严格的3步流程确保合规性：<br/><br/>1. <strong>提交前检查：</strong> 我们的合格人员(QP)根据当前的SCDF消防规范和BCA无障碍标准审查所有设计。<br/>2. <strong>许可证管理：</strong> 在工作开始前，我们处理向BCA、URA和FSSD的所有必要提交。<br/>3. <strong>现场监督：</strong> 持牌CoreTrade人员监督关键工程，确保其符合批准的规范和安全法规。"
           }
+        },
+        "subpages": {
+          "section_title": "我们的商业专业服务",
+          "section_subtitle": "每种商业空间类型都有其独特的审批流程、合规要求和设计逻辑。请在下方选择您的项目类型。",
+          "office": {
+            "title": "办公室翻新",
+            "desc": "全套一站式翻新服务——空间规划、隔间、机电工程，以及所有BCA、SCDF和MCST许可证提交。从每平方尺$50起。",
+            "detail": "6–12周 · BCA注册"
+          },
+          "retail": {
+            "title": "零售与商场店面",
+            "desc": "MCST提交专家。店面设计、陈列系统、可承接夜间施工。服务凯德、星狮及丰树旗下商场。",
+            "detail": "6–12周 · 可承接夜间施工"
+          },
+          "shophouse": {
+            "title": "店屋翻新",
+            "desc": "URA保护区许可、BCA结构审批及SCDF消防安全——大多数承包商无法驾驭的三机构审批流程，我们全程管理。",
+            "detail": "丹戎巴葛 · 牛车水 · 甘榜格南"
+          },
+          "compliance": {
+            "title": "许可证与合规",
+            "desc": "MCST、BCA、SCDF消防安全及EMA持牌电气工程师(LEW)要求——全程解释与管理。",
+            "detail": "SCDF · LEW 8级 · BCA · MCST"
+          },
+          "reinstatement_row": "办公室及商场单位恢复原状——清水房移交",
+          "reinstatement_detail": "100%押金退还 · 符合MCST及SCDF规定 · 免费现场勘察",
+          "reinstatement_label": "另可提供"
         },
         "cta": {
           "title": "准备好改造您的商业空间了吗？",

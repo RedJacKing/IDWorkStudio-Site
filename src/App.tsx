@@ -11,6 +11,10 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Commercial from './components/Commercial';
 import Reinstatement from './components/Reinstatement';
+import OfficeRenovation from './components/OfficeRenovation';
+import RetailMallRenovation from './components/RetailMallRenovation';
+import ShophouseRenovation from './components/ShophouseRenovation';
+import CompliancePermits from './components/CompliancePermits';
 import Residential from './components/Residential';
 import StickyMobileNav from './components/StickyMobileNav';
 import ScrollToHashElement from './components/ScrollToHashElement';
@@ -95,6 +99,10 @@ export default function App() {
             <Route path="/residential" element={<Residential />} />
             <Route path="/commercial" element={<Commercial />} />
             <Route path="/commercial/reinstatement" element={<Reinstatement />} />
+            <Route path="/commercial/office-renovation" element={<OfficeRenovation />} />
+            <Route path="/commercial/retail-mall-renovation" element={<RetailMallRenovation />} />
+            <Route path="/commercial/shophouse-renovation" element={<ShophouseRenovation />} />
+            <Route path="/commercial/permits-compliance" element={<CompliancePermits />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
 

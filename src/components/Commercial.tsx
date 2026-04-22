@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Building2, ShieldCheck, FileCheck, HardHat, Clock, CheckCircle } from 'lucide-react';
+import { Building2, ShieldCheck, FileCheck, HardHat, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function Commercial() {
@@ -345,6 +345,86 @@ export default function Commercial() {
                 </h3>
                 <p className="text-gray-600 leading-relaxed pl-9" dangerouslySetInnerHTML={{ __html: t('commercial_page.faq.q2.a') }} />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── SUB-PAGE NAVIGATION ─────────────────────────────────
+            GEO: Pillar → Spoke internal linking.
+            This section makes every sub-page discoverable from the
+            commercial pillar — critical for AI crawlers following links.
+        ─────────────────────────────────────────────────────────── */}
+        <section className="py-24 bg-off-white border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-serif mb-4 text-charcoal">{t('commercial_page.subpages.section_title')}</h2>
+              <div className="w-24 h-1 bg-champagne mx-auto mb-6"></div>
+              <p className="text-gray-600 max-w-2xl mx-auto text-sm leading-relaxed">
+                {t('commercial_page.subpages.section_subtitle')}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  title: t('commercial_page.subpages.office.title'),
+                  desc: t('commercial_page.subpages.office.desc'),
+                  detail: t('commercial_page.subpages.office.detail'),
+                  link: "/commercial/office-renovation",
+                },
+                {
+                  title: t('commercial_page.subpages.retail.title'),
+                  desc: t('commercial_page.subpages.retail.desc'),
+                  detail: t('commercial_page.subpages.retail.detail'),
+                  link: "/commercial/retail-mall-renovation",
+                },
+                {
+                  title: t('commercial_page.subpages.shophouse.title'),
+                  desc: t('commercial_page.subpages.shophouse.desc'),
+                  detail: t('commercial_page.subpages.shophouse.detail'),
+                  link: "/commercial/shophouse-renovation",
+                },
+                {
+                  title: t('commercial_page.subpages.compliance.title'),
+                  desc: t('commercial_page.subpages.compliance.desc'),
+                  detail: t('commercial_page.subpages.compliance.detail'),
+                  link: "/commercial/permits-compliance",
+                },
+              ].map((svc, i) => (
+                <Link
+                  key={i}
+                  to={svc.link}
+                  className="group bg-white border border-gray-100 rounded-xl p-7 flex flex-col hover:border-gold hover:shadow-lg transition-all duration-300"
+                >
+                  <h3 className="font-bold text-charcoal mb-3 uppercase tracking-wide text-sm group-hover:text-gold transition-colors">
+                    {svc.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">
+                    {svc.desc}
+                  </p>
+                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-50">
+                    <span className="text-[11px] text-gray-400 uppercase tracking-wide">{svc.detail}</span>
+                    <ArrowRight size={15} className="text-gray-300 group-hover:text-gold transition-colors flex-shrink-0" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {/* Reinstatement — kept as its own prominent row since it already has a dedicated CTA section below */}
+            <div className="mt-6">
+              <Link
+                to="/commercial/reinstatement"
+                className="group flex items-center justify-between bg-dark-charcoal text-white rounded-xl px-8 py-6 hover:bg-charcoal transition-colors duration-300"
+              >
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold/60 block mb-1">{t('commercial_page.subpages.reinstatement_label')}</span>
+                  <h3 className="font-bold uppercase tracking-wide text-sm text-white group-hover:text-gold transition-colors">
+                    {t('commercial_page.subpages.reinstatement_row')}
+                  </h3>
+                  <p className="text-white/50 text-xs mt-1">{t('commercial_page.subpages.reinstatement_detail')}</p>
+                </div>
+                <ArrowRight size={18} className="text-gold flex-shrink-0 ml-6" />
+              </Link>
             </div>
           </div>
         </section>
