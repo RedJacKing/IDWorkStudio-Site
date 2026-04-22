@@ -2,39 +2,34 @@
   command = "npm run build"
   publish = "dist"
 
-# Redirect old unrelated WordPress pages to the homepage
-[[redirects]]
-  from = "/is-ppsspp-legal-everything-you-need-to-know/"
-  to = "/"
-  status = 301
-  force = true
+# =========================================================
+# 1) CANONICAL / CLEANUP REDIRECTS
+# =========================================================
 
-[[redirects]]
-  from = "/cpd-requirements-for-nurses-in-the-philippines-latest-updates/"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/understanding-california-rental-application-laws-what-you-need-to-know/"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/understanding-conditional-sale-and-purchase-agreements-legal-guide/"
-  to = "/"
-  status = 301
-  force = true
-
-# Redirect old portfolio URL if needed
+# Old portfolio path
 [[redirects]]
   from = "/portfolio"
   to = "/gallery"
   status = 301
   force = true
 
-# WordPress system paths
+# Strip common legacy language query-style access by redirecting old paths to clean pages where possible
+[[redirects]]
+  from = "/contact-us"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/service/office-renovation-service"
+  to = "/commercial/office-renovation"
+  status = 301
+  force = true
+
+# =========================================================
+# 2) OLD WORDPRESS SYSTEM PATHS
+# =========================================================
+
 [[redirects]]
   from = "/wp-admin/*"
   to = "/"
@@ -83,13 +78,171 @@
   status = 301
   force = true
 
-# API routes, if you use Netlify Functions
+# =========================================================
+# 3) SPECIFIC BAD LEGACY ARTICLES ALREADY FOUND
+# =========================================================
+
+[[redirects]]
+  from = "/is-ppsspp-legal-everything-you-need-to-know/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cpd-requirements-for-nurses-in-the-philippines-latest-updates/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/understanding-california-rental-application-laws-what-you-need-to-know/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/understanding-conditional-sale-and-purchase-agreements-legal-guide/"
+  to = "/"
+  status = 301
+  force = true
+
+# Add the old legal/article slugs you discovered here one by one
+[[redirects]]
+  from = "/asset-purchase-agreement-schedules-key-components-and-examples/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-to-create-terms-and-conditions-for-business-legal-guide/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/understanding-unilateral-real-estate-agreements-legal-guide/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-to-make-a-contract-on-word-simple-step-by-step-guide/"
+  to = "/"
+  status = 301
+  force = true
+
+# =========================================================
+# 4) LEGACY MEDIA / ATTACHMENT / GARBAGE URL PATTERNS
+# =========================================================
+
+# Old numeric / image-like junk pages often indexed from WordPress media attachments
+[[redirects]]
+  from = "/20190301_152218"
+  to = "/gallery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/20190301_152218/"
+  to = "/gallery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact-us/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/service/office-renovation-service/"
+  to = "/commercial/office-renovation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/10"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/10/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/office-small-2"
+  to = "/commercial/office-renovation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/office-small-2/"
+  to = "/commercial/office-renovation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kitchen-ld1329s"
+  to = "/residential"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kitchen-ld1329s/"
+  to = "/residential"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/living01-05122018"
+  to = "/gallery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/living01-05122018/"
+  to = "/gallery"
+  status = 301
+  force = true
+
+# =========================================================
+# 5) OPTIONAL: BLOCK COMMON WORDPRESS AUTHOR / TAG / CATEGORY PATHS
+# =========================================================
+
+[[redirects]]
+  from = "/author/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tag/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/category/*"
+  to = "/"
+  status = 301
+  force = true
+
+# =========================================================
+# 6) NETLIFY FUNCTIONS
+# =========================================================
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
 
-# React SPA fallback - must be last
+# =========================================================
+# 7) SPA FALLBACK — MUST STAY LAST
+# =========================================================
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
