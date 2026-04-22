@@ -358,6 +358,14 @@ const resources = {
           "q4": {
             "q": "How much does a commercial renovation cost in Singapore?",
             "a": "Commercial renovation costs in Singapore vary by space type and fit-out level:<br/><br/>• <strong>Office renovation:</strong> S$50–S$180 per sqft<br/>• <strong>Retail / mall fit-out:</strong> S$65–S$150 per sqft<br/>• <strong>F&B / shophouse:</strong> S$80–S$200 per sqft<br/>• <strong>Office reinstatement:</strong> S$8–S$25 per sqft<br/><br/>These ranges cover M&E works, false ceilings, partitioning, flooring, joinery, and permit fees. Request a free itemised quotation for your specific project."
+          },
+          "q5": {
+            "q": "What is the difference between office reinstatement and renovation?",
+            "a": "Office <strong>renovation</strong> involves fitting out a space to your requirements — partitions, flooring, ceilings, M&E, and joinery. Office <strong>reinstatement</strong> is the reverse process: stripping a space back to its original bare-shell condition as required by your lease agreement at the end of tenancy. Reinstatement typically includes demolition of all tenant-installed works, restoration of original flooring and walls, and relocation of fire safety systems back to their original positions."
+          },
+          "q6": {
+            "q": "How do I choose the right commercial renovation contractor in Singapore?",
+            "a": "Key criteria when selecting a commercial renovation contractor in Singapore:<br/><br/>1. <strong>BCA Registration:</strong> Verify the contractor is listed on the BCA Directory — required for all structural works.<br/>2. <strong>Track Record:</strong> Ask for references and photos of completed commercial projects of similar scope.<br/>3. <strong>In-house Permit Management:</strong> Choose a contractor who handles MCST, BCA, and SCDF submissions in-house rather than outsourcing.<br/>4. <strong>Fixed-Price Contract:</strong> Avoid contractors who provide vague quotations without full itemisation.<br/>5. <strong>Insurance:</strong> Ensure the contractor carries Public Liability Insurance and Work Injury Compensation coverage."
           }
         },
         "subpages": {
@@ -858,6 +866,14 @@ const resources = {
           "q4": {
             "q": "新加坡商业翻新费用是多少？",
             "a": "新加坡商业翻新费用因空间类型和装修标准而异：<br/><br/>• <strong>办公室翻新：</strong>每平方英尺 S$50–S$180<br/>• <strong>零售/商场装修：</strong>每平方英尺 S$65–S$150<br/>• <strong>餐饮/店屋：</strong>每平方英尺 S$80–S$200<br/>• <strong>办公室原状修复：</strong>每平方英尺 S$8–S$25<br/><br/>以上范围涵盖机电工程、假天花、隔断、地板、木工及许可证费用。请联系我们获取针对您项目的免费分项报价。"
+          },
+          "q5": {
+            "q": "办公室原状修复与翻新有什么区别？",
+            "a": "办公室<strong>翻新</strong>是根据您的需求装修空间，包括隔断、地板、天花板、机电及木工工程。办公室<strong>原状修复</strong>则是相反的过程：在租约结束时，按照租约规定将空间恢复至原始清水房状态。原状修复通常包括拆除所有租户安装的装修，恢复原始地板和墙面，以及将消防安全系统恢复至原始位置。"
+          },
+          "q6": {
+            "q": "如何在新加坡选择合适的商业翻新承包商？",
+            "a": "选择新加坡商业翻新承包商的关键标准：<br/><br/>1. <strong>BCA 注册：</strong>核实承包商已在 BCA 目录中注册——所有结构性工程均要求此资质。<br/>2. <strong>项目记录：</strong>要求提供同类规模商业项目的参考资料和照片。<br/>3. <strong>内部许可证管理：</strong>选择能够内部处理 MCST、BCA 和 SCDF 提交的承包商，而非外包给第三方。<br/>4. <strong>固定价格合同：</strong>避免选择提供模糊报价而无详细分项的承包商。<br/>5. <strong>保险：</strong>确保承包商持有公共责任险和工伤赔偿保险。"
           }
         },
         "subpages": {
@@ -1004,6 +1020,385 @@ const resources = {
       }
     }
   }
+};
+
+// ─── Subpage translations (EN only — fallbackLng:"en" covers ZH) ──────────
+const enT = (resources as any).en.translation;
+
+enT["office_reno_page"] = {
+  hero: {
+    badge: "Singapore BCA-Registered Office Renovation Contractor",
+    serif: "Transform Your",
+    bold: "OFFICE SPACE",
+    subtitle: "Turnkey office renovation and fit-out services for Singapore businesses. From hybrid work layouts to full M&E works — delivered on time, on budget.",
+    cta: "Get a Free Site Survey",
+    b1: "BCA & SCDF Compliant",
+    b2: "All Permit Submissions Managed",
+    b3: "Phased to Minimise Downtime"
+  },
+  overview: {
+    serif: "Singapore's",
+    bold: "OFFICE RENOVATION SPECIALISTS",
+    p1: "ID Work Studio is a BCA-registered contractor specialising in office renovation and commercial fit-outs across Singapore. We serve SMEs, MNCs, and government agencies from our Woodlands studio.",
+    p2: "Every office project begins with a free onsite consultation where we assess your space, understand your operational requirements, and develop a fit-out plan designed to minimise business disruption.",
+    p3: "As a <strong>BCA-registered contractor</strong>, we manage all submissions to BCA, SCDF, and MCST — eliminating the administrative burden from your team.",
+    c1t: "Hybrid Work Ready",
+    c1d: "We design flexible work environments with hot-desking zones, collaboration areas, and quiet focus pods to support modern hybrid work models.",
+    c2t: "Full M&E Coordination",
+    c2d: "Our team manages all mechanical and electrical works in-house, including air-conditioning, data cabling, and lighting design.",
+    c3t: "BCA & SCDF Compliant",
+    c3d: "We handle all BCA building permits and SCDF fire safety submissions before physical work commences, keeping your project legal and on schedule."
+  },
+  scope: {
+    serif: "What's Included in",
+    bold: "OFFICE RENOVATION",
+    i1t: "Space Planning & Layout",
+    i1d: "Optimised floorplans for productivity, collaboration, and compliance with Singapore's workplace safety standards.",
+    i2t: "Partitioning & False Ceilings",
+    i2d: "Glass partitions, drywall systems, and T-bar or plasterboard false ceilings for acoustic and aesthetic performance.",
+    i3t: "Electrical & Data Works",
+    i3d: "Full M&E works including power points, data cabling, UPS systems, and lighting control.",
+    i4t: "Flooring & Finishes",
+    i4d: "Vinyl planks, raised access floors, carpet tiles, and epoxy coatings to suit operational and aesthetic requirements.",
+    i5t: "Custom Joinery & Furniture",
+    i5d: "Built-in reception counters, workstations, storage walls, and boardroom furniture tailored to your brand.",
+    i6t: "Permit Submissions",
+    i6d: "Full BCA building plan submission, SCDF fire safety approval, and MCST fit-out permit management."
+  },
+  stats: {
+    s1u: "psf",
+    s1l: "Office renovation cost range",
+    s2u: "weeks",
+    s2l: "Typical fit-out timeline",
+    s3u: "weeks",
+    s3l: "Permit approval lead time"
+  },
+  challenges: {
+    serif: "Common",
+    bold: "OFFICE RENOVATION CHALLENGES",
+    ch_label: "The Challenge",
+    sol_label: "Our Solution",
+    p1pain: "Budget Overruns",
+    p1sol: "Fixed-price contracts with full itemised quotations. No hidden costs, no surprises.",
+    p2pain: "Business Downtime",
+    p2sol: "Phased renovation schedules and after-hours works to keep your operations running throughout.",
+    p3pain: "Permit Complexity",
+    p3sol: "Our in-house team manages all BCA, SCDF, and MCST submissions so you don't have to."
+  },
+  trust: { text: "Trusted by Singapore businesses, law firms, and government agencies." },
+  process: {
+    serif: "How We",
+    bold: "DELIVER YOUR OFFICE",
+    s1t: "Free Site Survey",
+    s1d: "Free onsite assessment and full itemised quotation.",
+    s2t: "Design & Approval",
+    s2d: "Space planning, 3D visuals, and all permit submissions.",
+    s3t: "Renovation Works",
+    s3d: "Phased fit-out by our licensed CoreTrade team.",
+    s4t: "Handover",
+    s4d: "Joint inspection, defect rectification, and full handover."
+  },
+  faq: {
+    title: "Office Renovation FAQs",
+    q1: "How much does an office renovation cost in Singapore in 2026?",
+    a1: "Office renovation in Singapore typically costs between <strong>S$50 and S$180 per square foot</strong>, depending on fit-out level and scope of M&E works. A basic office refresh starts from S$50 psf. A full premium fit-out with glass partitions, feature walls, and smart office systems can reach S$180 psf or more.",
+    q2: "Do I need a permit for office renovation in Singapore?",
+    a2: "Yes. Most office renovation works require permit approval from one or more authorities:<br/><br/>• <strong>BCA</strong> for structural works and building plan amendments<br/>• <strong>SCDF</strong> for fire safety modifications (sprinklers, fire doors, emergency lighting)<br/>• <strong>MCST</strong> if your office is within a strata building or commercial tower<br/><br/>As a BCA-registered contractor, ID Work Studio handles all submissions on your behalf before physical work begins.",
+    q3: "How long does an office renovation take in Singapore?",
+    a3: "A typical office renovation (2,000–5,000 sqft) takes <strong>6–12 weeks</strong> from site survey to handover. This includes 1–2 weeks for design, 1–3 weeks for permit approvals, and 4–8 weeks for renovation works. Larger projects or those requiring structural changes may take 12–16 weeks."
+  },
+  related: { title: "Explore Our Other Commercial Services" },
+  cta: {
+    serif: "Ready to Transform",
+    bold: "YOUR OFFICE?",
+    btn: "WhatsApp for a Free Site Survey"
+  },
+  sticky: { text: "Free Office Renovation Quote — WhatsApp Us Now" }
+};
+
+enT["shophouse_reno_page"] = {
+  hero: {
+    badge: "Singapore URA Conservation Shophouse Specialist",
+    serif: "Shophouse Renovation",
+    bold: "DONE RIGHT",
+    subtitle: "Full URA Conservation Permission, BCA structural, and SCDF fire safety compliance for Singapore shophouses. Specialists in Tanjong Pagar, Chinatown, Kampong Glam, and Boat Quay.",
+    cta: "Get a Free Consultation",
+    b1: "URA Conservation Permission",
+    b2: "BCA & SCDF Compliant",
+    b3: "All Submissions Managed"
+  },
+  overview: {
+    serif: "Singapore's",
+    bold: "SHOPHOUSE RENOVATION SPECIALISTS",
+    p1: "Singapore's conserved shophouses present a unique renovation challenge — every modification must balance heritage preservation requirements with modern functional needs, navigating the tripartite approval process of URA, BCA, and SCDF.",
+    p2: "ID Work Studio has completed shophouse renovation and F&B fit-out projects across Singapore's major conservation districts. Our team understands the specific URA guidelines applicable to each conservation area and style classification.",
+    p3: "We manage the complete approval process — from <strong>URA Conservation Permission</strong> application to BCA structural submission and SCDF fire safety approval — delivering compliant, beautifully restored spaces.",
+    districts_title: "Conservation Districts We Serve",
+    uses_title: "Common Shophouse Uses",
+    uses_desc: "F&B restaurants and cafés, boutique retail, professional offices, boutique hotels, creative studios, and mixed-use residential above commercial."
+  },
+  scope: {
+    serif: "What We Cover in",
+    bold: "SHOPHOUSE RENOVATION",
+    i1t: "URA Conservation Submissions",
+    i1d: "Full URA Conservation Permission application and liaison for all categories of conserved shophouses in Singapore.",
+    i2t: "Facade & Heritage Restoration",
+    i2d: "Sensitive restoration of original facade elements, five-foot ways, air wells, and heritage architectural details.",
+    i3t: "Structural Works",
+    i3d: "BCA-approved structural modifications including mezzanine additions, floor openings, and load-bearing assessments.",
+    i4t: "M&E & Fire Safety",
+    i4d: "Full mechanical, electrical, and SCDF-compliant fire safety installation including suppression systems and emergency lighting.",
+    i5t: "F&B Grease Trap & Ventilation",
+    i5d: "NEA-compliant grease trap installation, industrial kitchen ventilation, and exhaust system design for F&B operations.",
+    i6t: "Interior Fit-Out",
+    i6d: "Custom joinery, feature walls, flooring, and lighting design that honours heritage character while meeting modern operational needs."
+  },
+  stats: {
+    s1u: "per sqft",
+    s1l: "Shophouse renovation from",
+    s2u: "agencies",
+    s2l: "Permits managed (URA, BCA, SCDF)",
+    s3u: "months",
+    s3l: "Typical project timeline"
+  },
+  challenges: {
+    serif: "Navigating",
+    bold: "SHOPHOUSE RENOVATION CHALLENGES",
+    ch_label: "The Challenge",
+    sol_label: "Our Solution",
+    p1pain: "Complex URA Approvals",
+    p1sol: "Our team is experienced in URA Conservation Permission applications across all conservation area classifications.",
+    p2pain: "Heritage vs Modern Function",
+    p2sol: "We design interiors that satisfy URA heritage requirements while delivering the modern F&B or office functionality you need.",
+    p3pain: "Multi-Agency Compliance",
+    p3sol: "We coordinate BCA structural, SCDF fire safety, and URA conservation submissions concurrently to minimise delays."
+  },
+  trust: { text: "Trusted for conservation shophouse projects in Tanjong Pagar, Chinatown, Kampong Glam, and Boat Quay." },
+  process: {
+    serif: "Our",
+    bold: "SHOPHOUSE RENOVATION PROCESS",
+    s1t: "Free Consultation",
+    s1d: "Onsite assessment, heritage classification review, and quotation.",
+    s2t: "Design & URA Submission",
+    s2d: "Architectural drawings and full URA Conservation Permission application.",
+    s3t: "BCA & SCDF Approval",
+    s3d: "Structural and fire safety submissions managed in parallel.",
+    s4t: "Renovation & Handover",
+    s4d: "Heritage-sensitive construction and full site handover."
+  },
+  faq: {
+    title: "Shophouse Renovation FAQs",
+    q1: "Do I need URA approval to renovate a Singapore shophouse?",
+    a1: "Yes. Conserved shophouses are protected under the URA Conservation Guidelines. Any external changes — and many internal alterations — require <strong>URA Conservation Permission</strong> before works can commence. This includes changes to facades, windows, roofing, five-foot ways, and structural elements. ID Work Studio manages the full URA application process on your behalf.",
+    q2: "How much does a shophouse renovation cost in Singapore?",
+    a2: "Shophouse renovation costs typically start from <strong>S$150 per square foot</strong> for a basic fit-out, and can reach S$300+ psf for full heritage restoration with premium F&B or hospitality fit-out. Key cost drivers include structural works, M&E complexity, heritage restoration requirements, and specialist conservation materials.",
+    q3: "How long does a shophouse renovation take in Singapore?",
+    a3: "A typical shophouse renovation takes <strong>6–9 months</strong> from initial consultation to handover. The timeline is primarily driven by the URA Conservation Permission approval process (typically 2–4 months), followed by BCA structural approval and SCDF fire safety clearance. Physical renovation works usually take 3–5 months depending on scope."
+  },
+  related: { title: "Explore Our Other Commercial Services" },
+  cta: {
+    serif: "Ready for Your",
+    bold: "SHOPHOUSE RENOVATION?",
+    btn: "WhatsApp for a Free Consultation"
+  },
+  sticky: { text: "Free Shophouse Renovation Consultation — WhatsApp Us" }
+};
+
+enT["retail_reno_page"] = {
+  hero: {
+    badge: "Singapore Retail & Mall Store Renovation Specialist",
+    serif: "Retail Fit-Out That",
+    bold: "DRIVES SALES",
+    subtitle: "MCST-compliant retail renovation for Singapore shopping malls. Night-works capable, shopfront-to-stockroom specialists with proven mall management relationships.",
+    cta: "Get a Free Site Survey",
+    b1: "MCST Submission Managed",
+    b2: "Night-Works Capable",
+    b3: "Fast Mall Turnaround"
+  },
+  overview: {
+    serif: "Singapore's",
+    bold: "RETAIL FIT-OUT SPECIALISTS",
+    p1: "ID Work Studio specialises in retail and mall store renovation across Singapore's major shopping centres. We understand the strict MCST fit-out requirements, limited working hour windows, and brand-standard compliance that mall retail demands.",
+    p2: "From luxury boutiques in Orchard Road to food hall units and neighbourhood mall stores, our team delivers high-quality retail interiors that maximise sales floor efficiency and brand impact within your MCST timeline.",
+    p3: "As an experienced retail contractor, we manage all <strong>MCST fit-out submissions, building plan approvals, and SCDF fire safety requirements</strong> — and we are capable of executing night works to meet your mall's restricted hours.",
+    c1t: "MCST Submission Experts",
+    c1d: "Full management of mall fit-out permit packages, tenant coordination, and MCST compliance documentation for major Singapore malls.",
+    c2t: "Night-Works Capability",
+    c2d: "Our team is certified for and experienced in after-hours and overnight renovation works to comply with mall trading hour restrictions.",
+    c3t: "Brand-Standard Delivery",
+    c3d: "We work directly with brand guidelines and head office specifications to deliver compliant, brand-accurate store environments."
+  },
+  scope: {
+    serif: "What's Included in",
+    bold: "RETAIL FIT-OUT",
+    i1t: "Shopfront & Display Design",
+    i1d: "High-impact shopfronts, window displays, and entrance signage designed to maximise footfall from mall common areas.",
+    i2t: "Sales Floor Layout",
+    i2d: "Customer journey mapping and floor layout optimised for product discovery, dwell time, and sales conversion.",
+    i3t: "Custom Joinery & Displays",
+    i3d: "Bespoke display fixtures, shelving, counters, and fitting rooms built to brand specifications and MCST guidelines.",
+    i4t: "Lighting Design",
+    i4d: "Layered retail lighting — ambient, accent, and task — designed to showcase products and enhance the in-store experience.",
+    i5t: "M&E & ACMV Works",
+    i5d: "Air-conditioning, electrical, and data works coordinated with the mall's central building management system.",
+    i6t: "MCST & Permit Management",
+    i6d: "Full MCST fit-out submission, BCA permit applications, and SCDF fire safety approval managed in-house."
+  },
+  stats: {
+    s1u: "per sqft",
+    s1l: "Retail fit-out cost range",
+    s2u: "weeks",
+    s2l: "Typical fit-out timeline",
+    s3u: "day",
+    s3l: "MCST submission turnaround"
+  },
+  challenges: {
+    serif: "Overcoming",
+    bold: "RETAIL RENOVATION CHALLENGES",
+    ch_label: "The Challenge",
+    sol_label: "Our Solution",
+    p1pain: "MCST Compliance",
+    p1sol: "We have established relationships with major Singapore mall management teams and understand each mall's specific fit-out requirements.",
+    p2pain: "Night-Works Restrictions",
+    p2sol: "Our certified night-works team operates during mall off-hours to complete your fit-out without impacting neighbouring tenants.",
+    p3pain: "Tight Mall Timelines",
+    p3sol: "Detailed Gantt chart planning and dedicated site supervisors ensure your store opens on time, every time."
+  },
+  trust: { text: "Trusted by retail brands and F&B operators in Singapore's major shopping malls." },
+  process: {
+    serif: "How We",
+    bold: "DELIVER YOUR RETAIL FIT-OUT",
+    s1t: "Free Site Survey",
+    s1d: "Onsite assessment, MCST requirement review, and full quotation.",
+    s2t: "Design & MCST Submission",
+    s2d: "Shopfront design, floor plans, and full MCST fit-out permit submission.",
+    s3t: "Fit-Out Works",
+    s3d: "Night-capable construction by our licensed retail fit-out team.",
+    s4t: "Handover & Opening",
+    s4d: "MCST joint inspection, defect rectification, and store opening support."
+  },
+  faq: {
+    title: "Retail Renovation FAQs",
+    q1: "How much does a retail store fit-out cost in Singapore?",
+    a1: "Retail fit-out in Singapore typically costs between <strong>S$65 and S$150 per square foot</strong> for a standard mall store. A basic fit-out starts from S$65 psf. A premium brand-standard fit-out with custom displays and high-end finishes can reach S$150 psf or more. F&B fit-outs with kitchen equipment and NEA compliance add further to the cost.",
+    q2: "How long does a mall store fit-out take in Singapore?",
+    a2: "A standard mall store fit-out (200–500 sqft) typically takes <strong>6–12 weeks</strong> from design sign-off to store opening. This includes 1–2 weeks for MCST submission review and 4–8 weeks for the physical fit-out. We provide a full Gantt chart timeline before work commences.",
+    q3: "Can you do night works for mall renovation in Singapore?",
+    a3: "Yes. ID Work Studio is experienced in and certified for night works in Singapore shopping malls. Most major mall management companies (CapitaLand, Frasers, Lendlease) require renovation works outside trading hours. Our night-works team is fully equipped and compliant with MOM Workplace Safety and Health regulations for after-hours construction."
+  },
+  related: { title: "Explore Our Other Commercial Services" },
+  cta: {
+    serif: "Ready to Open",
+    bold: "YOUR STORE?",
+    btn: "WhatsApp for a Free Site Survey"
+  },
+  sticky: { text: "Free Retail Fit-Out Quote — WhatsApp Us Now" }
+};
+
+enT["compliance_reno_page"] = {
+  hero: {
+    badge: "Singapore Commercial Renovation Permit Specialists",
+    serif: "Navigate Singapore's",
+    bold: "COMMERCIAL RENOVATION PERMITS",
+    subtitle: "Complete MCST, BCA, SCDF fire safety, and LEW permit management for commercial renovation in Singapore — all handled in-house by our registered specialists.",
+    cta: "Get a Free Permit Consultation",
+    b1: "MCST Submission Management",
+    b2: "SCDF Fire Safety Approval",
+    b3: "BCA Building Plan Submission",
+    b4: "LEW Licensed Electrician"
+  },
+  intro: {
+    serif: "Why Permit Management",
+    bold: "MATTERS FOR YOUR PROJECT",
+    p1: "Commercial renovation in Singapore involves a complex web of regulatory submissions. Unpermitted works expose tenants to heavy fines, reinstatement orders, and lease disputes — risks that are entirely avoidable with a qualified, BCA-registered contractor.",
+    p2: "ID Work Studio manages the complete permit pipeline — from initial MCST fit-out application through to BCA building plan approval, SCDF fire safety certificate, and LEW electrical clearance — so your project proceeds lawfully and on schedule."
+  },
+  stats: {
+    s1: "Max fine for unpermitted works",
+    s2: "Max fine per permit breach",
+    s3: "Permit agencies we manage",
+    s4: "Days saved vs self-submission"
+  },
+  pillars: {
+    serif: "The Four",
+    bold: "PERMIT PILLARS",
+    step_label: "STEP",
+    facts_label: "Key Requirements",
+    p1: {
+      agency: "MCST / Building Management",
+      title: "MCST Fit-Out Permit",
+      subtitle: "Required for all works within strata commercial buildings and shopping malls",
+      body: "Before any physical work begins in a commercial strata unit, tenants must obtain written approval from the Management Corporation Strata Title (MCST) or building management. Each building has its own fit-out guidelines covering approved materials, working hours, dust and noise controls, and reinstatement obligations.",
+      f1: "Submit fit-out drawings to building management",
+      f2: "Obtain written approval before work commences",
+      f3: "Comply with permitted working hours",
+      f4: "Provide security deposit for reinstatement",
+      f5: "Final joint inspection required at project completion"
+    },
+    p2: {
+      agency: "Building & Construction Authority",
+      title: "BCA Building Plan Submission",
+      subtitle: "Required for structural works, change of use, and M&E modifications",
+      body: "Works that affect structural integrity, change the approved use of a space, or significantly alter M&E systems require submission to the Building and Construction Authority. A Qualified Person (QP) must certify all structural and fire safety designs.",
+      f1: "Qualified Person (QP) required for structural submissions",
+      f2: "Building plan approval before structural works",
+      f3: "Change of use application via URA and BCA",
+      f4: "Temporary Occupation Permit (TOP) may be required",
+      f5: "As-built drawings required at project completion"
+    },
+    p3: {
+      agency: "Singapore Civil Defence Force",
+      title: "SCDF Fire Safety Submission",
+      subtitle: "Required for any modification to fire protection systems or fire compartmentation",
+      body: "The Singapore Civil Defence Force regulates all works affecting fire safety systems. This includes relocation of sprinkler heads, smoke detectors, and fire doors — works commonly required in retail fit-outs, office renovations, and F&B conversions.",
+      f1: "Fire safety plan submission to SCDF",
+      f2: "Licensed Fire Safety Manager (FSM) sign-off required",
+      f3: "Sprinkler relocation by PUB-licensed plumber",
+      f4: "Fire door compliance with BS 476 / SS standards",
+      f5: "Completion certificate from SCDF required at handover"
+    },
+    p4: {
+      agency: "Energy Market Authority",
+      title: "LEW Licensed Electrical Works",
+      subtitle: "Required for all electrical works above 45 Amps in Singapore commercial spaces",
+      body: "All electrical works in Singapore commercial spaces above 45 Amps must be carried out by or under the supervision of a Licensed Electrical Worker (LEW). This includes new consumer switch boards, three-phase power installations, and major M&E additions.",
+      f1: "LEW must supervise all works above 45A",
+      f2: "Electrical installation licence application to EMA",
+      f3: "LEW to certify all new electrical installations",
+      f4: "Periodic inspection certificate for existing systems",
+      f5: "Electrical as-built drawings required at completion"
+    }
+  },
+  process: {
+    serif: "Our",
+    bold: "PERMIT MANAGEMENT PROCESS",
+    s1t: "Permit Assessment",
+    s1d: "Free review of your renovation scope to identify all required permits.",
+    s2t: "Document Preparation",
+    s2d: "Architectural drawings, structural calculations, and fire safety plans prepared by our QP.",
+    s3t: "Submission & Liaison",
+    s3d: "We submit and chase all applications with MCST, BCA, SCDF, and EMA.",
+    s4t: "Approval & Clearance",
+    s4d: "Final approvals obtained and compliance certificates filed before handover."
+  },
+  faq: {
+    title: "Commercial Permit FAQs",
+    q1: "Do I need SCDF approval for office renovation in Singapore?",
+    a1: "Yes, if your renovation involves any modification to fire protection systems. This includes relocation of <strong>sprinkler heads, smoke detectors, fire doors, or emergency lighting</strong> — all commonly required when partitioning an open-plan office or converting a retail unit. SCDF requires a fire safety plan submission certified by a Licensed Fire Safety Manager before works commence.",
+    q2: "What electrical works require a Licensed Electrical Worker (LEW) in Singapore?",
+    a2: "All electrical works in Singapore commercial spaces exceeding <strong>45 Amperes</strong> must be carried out by or under the direct supervision of an EMA-licensed LEW. This includes:<br/><br/>• Installation or replacement of consumer switch boards<br/>• Three-phase power installations<br/>• New electrical sub-mains<br/>• Major M&E additions requiring load calculations<br/><br/>ID Work Studio works with in-house LEW-supervised electricians for all commercial M&E works.",
+    q3: "What happens if I renovate without the required permits in Singapore?",
+    a3: "Unpermitted renovation works carry serious consequences. Under the Building Control Act, fines can reach <strong>S$200,000</strong> for serious breaches. Building management may issue a Stop Work Order, require full reinstatement at the tenant's cost, and forfeit the security deposit. Always engage a BCA-registered contractor to manage your permits.",
+    q4: "How long do commercial renovation permit approvals take in Singapore?",
+    a4: "Permit timelines vary by authority:<br/><br/>• <strong>MCST fit-out approval:</strong> 1–3 weeks<br/>• <strong>BCA building plan approval:</strong> 4–8 weeks<br/>• <strong>SCDF fire safety approval:</strong> 2–6 weeks<br/>• <strong>EMA electrical licence:</strong> 1–2 weeks<br/><br/>We submit all applications concurrently where possible to minimise overall timeline impact."
+  },
+  related: { title: "Explore Our Other Commercial Services" },
+  cta: {
+    serif: "Take the Stress Out of",
+    bold: "YOUR RENOVATION PERMITS",
+    btn: "WhatsApp for a Free Permit Consultation"
+  },
+  sticky: { text: "Free Permit Consultation — WhatsApp Us Now" }
 };
 
 i18n
