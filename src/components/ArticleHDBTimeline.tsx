@@ -90,32 +90,42 @@ export default function ArticleHDBTimeline() {
         </section>
 
         <article className="py-16 md:py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none 
 prose-headings:font-serif 
 prose-headings:text-charcoal 
-prose-h2:mt-14 
-prose-h2:mb-6 
+prose-h2:mt-16 
+prose-h2:mb-7 
+prose-h2:border-t 
+prose-h2:border-gray-200 
+prose-h2:pt-8 
 prose-h2:text-3xl 
 prose-h2:font-semibold 
-prose-h3:mt-10 
-prose-h3:mb-4 
-prose-h3:text-2xl 
+prose-h2:leading-tight 
+prose-h3:mt-12 
+prose-h3:mb-5 
+prose-h3:text-[1.7rem] 
 prose-h3:font-semibold 
+prose-h3:leading-snug 
 prose-p:text-gray-600 
 prose-p:leading-relaxed 
 prose-p:mb-6 
 prose-strong:text-charcoal 
 prose-li:text-gray-600 
 prose-li:leading-relaxed 
-prose-li:mb-2">
+prose-li:mb-2
+prose-img:my-10 
+prose-img:rounded-2xl 
+prose-img:border 
+prose-img:border-gray-100 
+prose-img:shadow-sm">
               <h2>{t('article_hdb_timeline.sections.duration_title')}</h2>
               <p>{t('article_hdb_timeline.sections.duration_intro')}</p>
               <ul>{Object.values(durationItems).map((item) => <li key={item}>{item}</li>)}</ul>
               <p>{t('article_hdb_timeline.sections.duration_p2')}</p>
 
               <h2>{t('article_hdb_timeline.sections.breakdown_title')}</h2>
-              <img src="/images/article2-gantt.jpg" alt="Renovation Gantt chart showing sequencing of works in Singapore renovation" className="my-8 rounded-xl w-full" loading="lazy" decoding="async" />
+              <img src="/images/article2-gantt.jpg" alt="Renovation Gantt chart showing sequencing of works in Singapore renovation" className="my-10 rounded-2xl w-full border border-gray-100 shadow-sm" loading="lazy" decoding="async" />
               {Object.values(phases).map((phase) => (
                 <div key={phase.title}>
                   <h3>{phase.title}</h3>
@@ -129,7 +139,7 @@ prose-li:mb-2">
               <h2>{t('article_hdb_timeline.sections.delays_title')}</h2>
 
               <h3>{t('article_hdb_timeline.sections.delays.1.title')}</h3>
-              <img src="/images/article2-sink.jpg" alt="Undermount kitchen sink installation before countertop placement" className="my-8 rounded-xl w-full" loading="lazy" decoding="async" />
+              <img src="/images/article2-sink.jpg" alt="Undermount kitchen sink installation before countertop placement" className="my-10 rounded-2xl w-full border border-gray-100 shadow-sm" loading="lazy" decoding="async" />
               <p>{t('article_hdb_timeline.sections.delays.1.p1')}</p>
               <p>{t('article_hdb_timeline.sections.delays.1.p2')}</p>
 

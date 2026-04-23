@@ -98,25 +98,35 @@ export default function ArticleRenovationCost2026() {
         </section>
 
         <article className="py-16 md:py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none 
 prose-headings:font-serif 
 prose-headings:text-charcoal 
-prose-h2:mt-14 
-prose-h2:mb-6 
+prose-h2:mt-16 
+prose-h2:mb-7 
+prose-h2:border-t 
+prose-h2:border-gray-200 
+prose-h2:pt-8 
 prose-h2:text-3xl 
 prose-h2:font-semibold 
-prose-h3:mt-10 
-prose-h3:mb-4 
-prose-h3:text-2xl 
+prose-h2:leading-tight 
+prose-h3:mt-12 
+prose-h3:mb-5 
+prose-h3:text-[1.7rem] 
 prose-h3:font-semibold 
+prose-h3:leading-snug 
 prose-p:text-gray-600 
 prose-p:leading-relaxed 
 prose-p:mb-6 
 prose-strong:text-charcoal 
 prose-li:text-gray-600 
 prose-li:leading-relaxed 
-prose-li:mb-2">
+prose-li:mb-2
+prose-img:my-10 
+prose-img:rounded-2xl 
+prose-img:border 
+prose-img:border-gray-100 
+prose-img:shadow-sm">
               <p className="text-xl md:text-2xl text-charcoal font-light leading-relaxed !mb-10">{t('article_renovation_cost_2026.intro')}</p>
 
               <h2>{t('article_renovation_cost_2026.sections.costs_title')}</h2>
@@ -148,7 +158,7 @@ prose-li:mb-2">
               <p>{t('article_renovation_cost_2026.sections.drivers_intro')}</p>
 
               <h3>{t('article_renovation_cost_2026.sections.carpentry_title')}</h3>
-              <img src="/images/article1-carpentry.jpg" alt="Custom carpentry wardrobe with laminate finish in Singapore renovation" className="my-8 rounded-xl w-full" loading="lazy" decoding="async" />
+              <img src="/images/article1-carpentry.jpg" alt="Custom carpentry wardrobe with laminate finish in Singapore renovation" className="my-10 rounded-2xl w-full border border-gray-100 shadow-sm" loading="lazy" decoding="async" />
               <p>{t('article_renovation_cost_2026.sections.carpentry_p1')}</p>
               <p>{t('article_renovation_cost_2026.sections.carpentry_p2')}</p>
               <p>{t('article_renovation_cost_2026.sections.carpentry_p3')}</p>
@@ -162,7 +172,7 @@ prose-li:mb-2">
               <p>{t('article_renovation_cost_2026.sections.wetworks_p1')}</p>
 
               <h3>{t('article_renovation_cost_2026.sections.tiles_title')}</h3>
-              <img src="/images/article1-tiles.jpg" alt="Large format tiles 600x1200 used in modern Singapore interior" className="my-8 rounded-xl w-full" loading="lazy" decoding="async" />
+              <img src="/images/article1-tiles.jpg" alt="Large format tiles 600x1200 used in modern Singapore interior" className="my-10 rounded-2xl w-full border border-gray-100 shadow-sm" loading="lazy" decoding="async" />
               <p>{t('article_renovation_cost_2026.sections.tiles_p1')}</p>
               <p>{t('article_renovation_cost_2026.sections.tiles_p2')}</p>
 
