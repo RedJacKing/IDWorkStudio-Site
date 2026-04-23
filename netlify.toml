@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
+# Disable Netlify's automatic trailing slash redirects so prerendered
+# HTML files are served directly without being redirected first.
+[build.environment]
+  NETLIFY_DISABLE_FORCED_TRAILING_SLASH = "true"
+
 # =========================================================
 # 1) CANONICAL / CLEANUP REDIRECTS
 # =========================================================
@@ -106,7 +111,6 @@
   status = 301
   force = true
 
-# Add the old legal/article slugs you discovered here one by one
 [[redirects]]
   from = "/asset-purchase-agreement-schedules-key-components-and-examples/"
   to = "/"
@@ -135,7 +139,6 @@
 # 4) LEGACY MEDIA / ATTACHMENT / GARBAGE URL PATTERNS
 # =========================================================
 
-# Old numeric / image-like junk pages often indexed from WordPress media attachments
 [[redirects]]
   from = "/20190301_152218"
   to = "/gallery"
