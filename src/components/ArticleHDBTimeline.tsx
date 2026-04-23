@@ -91,7 +91,16 @@ export default function ArticleHDBTimeline() {
 
         <article className="py-16 md:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-charcoal prose-p:text-gray-600 prose-p:leading-8 prose-strong:text-charcoal prose-li:text-gray-600 prose-li:leading-8">
+            <div className="prose prose-lg max-w-none 
+prose-headings:font-serif 
+prose-headings:text-charcoal 
+prose-p:text-gray-600 
+prose-p:leading-relaxed 
+prose-p:mb-6 
+prose-strong:text-charcoal 
+prose-li:text-gray-600 
+prose-li:leading-relaxed 
+prose-li:mb-2">
               <h2>{t('article_hdb_timeline.sections.duration_title')}</h2>
               <p>{t('article_hdb_timeline.sections.duration_intro')}</p>
               <ul>{Object.values(durationItems).map((item) => <li key={item}>{item}</li>)}</ul>

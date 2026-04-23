@@ -99,7 +99,16 @@ export default function ArticleRenovationCost2026() {
 
         <article className="py-16 md:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-charcoal prose-p:text-gray-600 prose-p:leading-8 prose-strong:text-charcoal prose-li:text-gray-600 prose-li:leading-8">
+            <div className="prose prose-lg max-w-none 
+prose-headings:font-serif 
+prose-headings:text-charcoal 
+prose-p:text-gray-600 
+prose-p:leading-relaxed 
+prose-p:mb-6 
+prose-strong:text-charcoal 
+prose-li:text-gray-600 
+prose-li:leading-relaxed 
+prose-li:mb-2">
               <p className="text-xl md:text-2xl text-charcoal font-light leading-relaxed !mb-10">{t('article_renovation_cost_2026.intro')}</p>
 
               <h2>{t('article_renovation_cost_2026.sections.costs_title')}</h2>
