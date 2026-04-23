@@ -20,8 +20,8 @@ const resources = {
       },
       "hero": {
         "title_main": "Curated Interiors ",
-        "title_sub": "for the Modern Visionary",
-        "subtitle": "Premium interior design and renovation services in Singapore. With over a decade of trusted excellence, we transform homes, offices, and retail spaces into masterpieces.",
+        "title_sub": "for Refined Living",
+        "subtitle": "Singapore interior design and renovation studio creating refined homes, workplaces and retail spaces with thoughtful detail, regulatory confidence and timeless appeal.",
         "cta": "View Our Work",
         "whatsapp": "WhatsApp Us"
       },
@@ -93,8 +93,8 @@ const resources = {
       "residential_page": {
         "hero": {
           "badge": "2026 Design Trends",
-          "title": "HDB & Condo Renovation Singapore — Modern Visionary Living",
-          "subtitle": "BCA-Registered & HDB-Registered Partner. We handle all HDB permits and structural submissions for your peace of mind.",
+          "title": "HDB & Condo Interior Design Singapore — Refined Living, Thoughtfully Crafted",
+          "subtitle": "HDB-licensed and BCA-registered firm creating tailored homes for modern living, with careful planning, permit coordination and polished execution.",
           "cta": "Book a Home Consultation"
         },
         "lifestyle": {
@@ -116,23 +116,23 @@ const resources = {
           }
         },
         "specialists": {
-          "title": "HDB Registered Contractor Singapore",
+          "title": "Residential Interior Design for HDB, Condo & Landed Homes in Singapore",
           "items": {
             "1": {
-              "title": "BTO Renovation Ideas",
-              "desc": "Expert solutions for Tengah, Bidadari, and Tampines North. Turnkey delivery from defect checking to HDB permit handling."
+              "title": "BTO Interior Planning",
+              "desc": "Thoughtfully planned solutions for Tengah, Bidadari and Tampines North. From early defect checks to permit coordination, we shape new homes with clarity and care."
             },
             "2": {
               "title": "Condo Interior Design Singapore",
-              "desc": "Elevating private living with premium finishes and structural re-configuration. Specialized in Modern Luxury and Warm Minimalism."
+              "desc": "Refined private living with elevated finishes, tailored detailing and spatial planning shaped around contemporary lifestyles."
             },
             "3": {
-              "title": "Landed Property A&A Works",
-              "desc": "Comprehensive Addition & Alteration works. We manage structural submissions and architectural enhancements for landed homes."
+              "title": "Landed Home Enhancements",
+              "desc": "Tailored addition and alteration works with careful management of structural submissions, architectural updates and design continuity."
             }
           },
           "testimonial": {
-            "quote": "HDB & BCA Registered Interior Design specializing in Modern BTO & Resale Renovation in Singapore.",
+            "quote": "HDB-licensed and BCA-registered interior design for modern BTO and resale homes in Singapore.",
             "author": "ID Work Studio"
           }
         },
@@ -153,7 +153,7 @@ const resources = {
         },
         "cta": {
           "title": "Start Your Home Transformation",
-          "subtitle": "Secure your slot for 2026. Consult with our HDB-registered design experts today.",
+          "subtitle": "Begin your renovation journey with a design-led team experienced in HDB, condo and landed homes across Singapore.",
           "button": "Book a Home Consultation"
         },
         "pricing": {
@@ -204,8 +204,8 @@ const resources = {
               "desc": "We design renovations that appeal to the next buyer — open-plan kitchens, Japandi aesthetics and neutral palettes proven to command higher asking prices in the Singapore resale market."
             },
             "3": {
-              "title": "Full HDB Permit Handling",
-              "desc": "As an HDB-registered contractor (Reg: HB-02-5250G), we manage all HDB renovation permits, neighbour notifications and structural submissions on your behalf."
+              "title": "Complete Permit Coordination",
+              "desc": "As an HDB-licensed firm, we manage HDB renovation permits, neighbour notifications and structural submissions on your behalf for a smoother experience."
             }
           },
           "cta": "Plan My Resale Renovation"
@@ -232,7 +232,7 @@ const resources = {
             },
             "5": {
               "q": "Do I need an HDB permit for renovation works?",
-              "a": "Yes. Most HDB renovation works — including <strong>hacking, tiling, electrical and plumbing</strong> — require an HDB Renovation Permit before physical work begins. The permit typically takes 1–3 weeks to approve. As an HDB-registered contractor, ID Work Studio handles all permit submissions on your behalf."
+              "a": "Yes. Most HDB renovation works — including <strong>hacking, tiling, electrical and plumbing</strong> — require an HDB Renovation Permit before physical work begins. The permit typically takes 1–3 weeks to approve. As an HDB-licensed firm, ID Work Studio handles all permit submissions on your behalf."
             },
             "6": {
               "q": "How long does an HDB renovation take in Singapore?",
@@ -243,8 +243,8 @@ const resources = {
               "a": "HDB flat owners can borrow up to <strong>$30,000</strong> under the HDB Renovation Loan, repayable over up to 5 years. The loan covers licensed renovation works only. Bank renovation loans and personal loans are available for projects exceeding this limit."
             },
             "8": {
-              "q": "Why is choosing an HDB-registered contractor important?",
-              "a": "HDB-registered contractors are trained to adhere to <strong>HDB's renovation guidelines</strong> and structural safety protocols. They ensure no critical structural pillars are compromised during hacking and that all electrical and plumbing works meet Singapore's safety standards. Only HDB-registered contractors can apply for HDB Renovation Permits on your behalf."
+              "q": "Why is choosing an HDB-licensed firm important?",
+              "a": "Choosing an HDB-licensed firm helps ensure your renovation follows <strong>HDB guidelines</strong> and structural safety requirements. It also gives homeowners added confidence that electrical, plumbing and hacking works are carried out in line with Singapore’s renovation standards."
             }
           }
         },
@@ -273,8 +273,8 @@ const resources = {
       },
       "commercial_page": {
         "hero": {
-          "title": "Expert Office Renovations & Commercial Fit-outs in Singapore",
-          "subtitle": "Retail, F&B, and Reinstatement Services by BCA-Registered Contractors",
+          "title": "Commercial Interior Design & Office Fit-Out Singapore",
+          "subtitle": "Refined workplace, retail and F&B environments delivered with thoughtful planning, compliance-led coordination and polished execution.",
           "cta": "Request Site Survey",
           "cta_reinstatement": "LEARN MORE ABOUT REINSTATEMENT"
         },
@@ -329,7 +329,7 @@ const resources = {
             },
             "2": {
               "title": "BCA Permits",
-              "desc": "Registered contractor for all necessary Building and Construction Authority permits."
+              "desc": "Experienced coordination for Building and Construction Authority permit requirements."
             },
             "3": {
               "title": "Mall Management",
@@ -353,7 +353,7 @@ const resources = {
           },
           "q3": {
             "q": "What are the permit requirements for commercial renovation in Singapore?",
-            "a": "Commercial renovation in Singapore typically requires submissions to multiple authorities depending on scope: <strong>BCA</strong> for structural works, <strong>SCDF</strong> for fire safety modifications (sprinklers, fire doors, emergency lighting), <strong>URA</strong> for change of use, and <strong>MCST</strong> for mall or office tower fit-outs. As a BCA-registered contractor, we manage all submissions in-house to keep your project on schedule."
+            "a": "Commercial renovation in Singapore typically requires submissions to multiple authorities depending on scope: <strong>BCA</strong> for structural works, <strong>SCDF</strong> for fire safety modifications (sprinklers, fire doors, emergency lighting), <strong>URA</strong> for change of use, and <strong>MCST</strong> for mall or office tower fit-outs. As a BCA-registered firm, we manage all submissions in-house to keep your project on schedule."
           },
           "q4": {
             "q": "How much does a commercial renovation cost in Singapore?",
@@ -364,8 +364,8 @@ const resources = {
             "a": "Office <strong>renovation</strong> involves fitting out a space to your requirements — partitions, flooring, ceilings, M&E, and joinery. Office <strong>reinstatement</strong> is the reverse process: stripping a space back to its original bare-shell condition as required by your lease agreement at the end of tenancy. Reinstatement typically includes demolition of all tenant-installed works, restoration of original flooring and walls, and relocation of fire safety systems back to their original positions."
           },
           "q6": {
-            "q": "How do I choose the right commercial renovation contractor in Singapore?",
-            "a": "Key criteria when selecting a commercial renovation contractor in Singapore:<br/><br/>1. <strong>BCA Registration:</strong> Verify the contractor is listed on the BCA Directory — required for all structural works.<br/>2. <strong>Track Record:</strong> Ask for references and photos of completed commercial projects of similar scope.<br/>3. <strong>In-house Permit Management:</strong> Choose a contractor who handles MCST, BCA, and SCDF submissions in-house rather than outsourcing.<br/>4. <strong>Fixed-Price Contract:</strong> Avoid contractors who provide vague quotations without full itemisation.<br/>5. <strong>Insurance:</strong> Ensure the contractor carries Public Liability Insurance and Work Injury Compensation coverage."
+            "q": "How do I choose the right commercial renovation firm in Singapore?",
+            "a": "Key criteria when selecting a commercial renovation contractor in Singapore:<br/><br/>1. <strong>BCA Registration:</strong> Verify the firm is listed on the BCA Directory when structural works are involved.<br/>2. <strong>Track Record:</strong> Ask for references and photos of completed commercial projects of similar scope.<br/>3. <strong>In-house Permit Management:</strong> Choose a firm that handles MCST, BCA and SCDF submissions in-house rather than outsourcing.<br/>4. <strong>Fixed-Price Contract:</strong> Avoid firms that provide vague quotations without full itemisation.<br/>5. <strong>Insurance:</strong> Ensure the firm carries Public Liability Insurance and Work Injury Compensation coverage."
           }
         },
         "subpages": {
@@ -431,7 +431,7 @@ const resources = {
         },
         "cta": {
           "title": "Ready to Transform Your Business Space?",
-          "subtitle": "Partner with a trusted, BCA-registered commercial contractor for your next project.",
+          "subtitle": "Work with a trusted, BCA-registered commercial interior design and fit-out firm for your next project.",
           "button": "Get Commercial Quote"
         },
         "partners": {
@@ -449,7 +449,7 @@ const resources = {
       "reinstatement_section": {
         "headline_serif": "A Flawless",
         "headline_bold": "BARE SHELL HANDOVER",
-        "subtext": "Professional, BCA/HDB compliant reinstatement for offices and shopping mall units. Get your deposit back with our 100% pass-rate solutions.",
+        "subtext": "Professional reinstatement for offices and shopping mall units, managed with compliance, precision and a smooth handover experience.",
         "button": "LEARN MORE ABOUT REINSTATEMENT"
       },
       "reinstatement_page": {
@@ -604,11 +604,12 @@ const resources = {
       },
       "residential_page": {
         "hero": {
-          "badge": "2026 设计趋势",
-          "title": "新加坡 HDB 及公寓翻新 — 现代远见生活",
-          "subtitle": "BCA 注册与 HDB 注册的合作伙伴。我们处理所有 HDB 许可证和结构提交，让您高枕无忧。",
-          "cta": "预约家居咨询"
-        },
+        "title_main": "精心打造的室内设计 ",
+        "title_sub": "成就精致生活",
+        "subtitle": "新加坡室内设计与翻新工作室，专注于住宅、办公与零售空间的精致呈现，以细节、美感与合规并重，打造历久弥新的空间体验。",
+        "cta": "查看我们的作品",
+        "whatsapp": "WhatsApp 立即咨询"
+      },
         "lifestyle": {
           "title": "生活方式优先的设计解决方案",
           "subtitle": "通过创新设计打造反映您个性并提升日常生活的空间。",
@@ -628,23 +629,23 @@ const resources = {
           }
         },
         "specialists": {
-          "title": "新加坡 HDB 注册承包商",
+          "title": "新加坡 HDB、私人公寓与有地住宅室内设计",
           "items": {
             "1": {
-              "title": "BTO 装修灵感",
-              "desc": "为 Tengah、Bidadari 和 Tampines North 提供专家解决方案。从缺陷检查到 HDB 许可证处理的一站式交付。"
+              "title": "BTO 新居规划",
+              "desc": "针对 Tengah、Bidadari 与 Tampines North 等新市镇，提供从初期验房到许可证协调的周全规划，以清晰有序的方式打造理想新居。"
             },
             "2": {
               "title": "新加坡公寓室内设计",
-              "desc": "通过优质饰面和结构重新配置提升私人生活。专注于现代奢华和温暖极简主义。"
+              "desc": "以更高层次的材质运用、定制细节与空间规划，营造贴合当代生活方式的精致私人居所。"
             },
             "3": {
-              "title": "有地房产改建及加建工程",
-              "desc": "全面的加建与改建工程。我们为有地住宅管理结构提交和建筑增强。"
+              "title": "有地住宅优化工程",
+              "desc": "为有地住宅提供量身定制的加建与改建方案，谨慎处理结构报批、建筑优化与整体设计延续性。"
             }
           },
           "testimonial": {
-            "quote": "HDB 和 BCA 注册室内设计，专注于新加坡现代 BTO 和转售组屋翻新。",
+            "quote": "具备 HDB 执照及 BCA 注册资质，专注于新加坡现代 BTO 与转售住宅的室内设计。",
             "author": "ID Work Studio"
           }
         },
@@ -664,8 +665,8 @@ const resources = {
           }
         },
         "cta": {
-          "title": "开始您的家居改造",
-          "subtitle": "确保您在2026年的名额。立即咨询我们的 HDB 注册设计专家。",
+          "title": "开启您的理想家居蜕变",
+          "subtitle": "与熟悉新加坡 HDB、公寓及有地住宅的设计团队，一同展开您的翻新之旅。",
           "button": "预约家居咨询"
         },
         "pricing": {
@@ -716,8 +717,8 @@ const resources = {
               "desc": "我们设计能吸引下一位买家的翻新方案——开放式厨房、日式北欧美学及中性色调，经证实能在新加坡转售市场获得更高的叫价。"
             },
             "3": {
-              "title": "全程 HDB 许可证代办",
-              "desc": "作为 HDB 注册承包商（注册编号：HB-02-5250G），我们代您处理所有 HDB 翻新许可证、邻居通知及结构提交事宜。"
+              "title": "全程许可证协调",
+              "desc": "作为具备 HDB 执照的公司，我们可代您协调 HDB 翻新许可证、邻里通知及结构报批流程，让整个过程更顺畅。"
             }
           },
           "cta": "规划我的转售组屋翻新"
@@ -744,7 +745,7 @@ const resources = {
             },
             "5": {
               "q": "组屋翻新是否需要申请 HDB 许可证？",
-              "a": "是的。大多数组屋翻新工程——包括<strong>拆除、铺砖、电气及管道</strong>——在实体施工前均需取得 HDB 翻新许可证。许可证审批通常需要 1–3 周。作为 HDB 注册承包商，ID Work Studio 代您处理所有许可证申请。"
+              "a": "是的。大多数组屋翻新工程——包括<strong>拆除、铺砖、电气及管道</strong>——在实体施工前均需取得 HDB 翻新许可证。许可证审批通常需要 1–3 周。作为具备 HDB 执照的公司，ID Work Studio 可代您处理相关许可证申请。"
             },
             "6": {
               "q": "新加坡组屋翻新需要多长时间？",
@@ -755,8 +756,8 @@ const resources = {
               "a": "组屋业主可向 HDB 申请最高 <strong>$30,000</strong> 的翻新贷款，还款期最长 5 年。贷款仅涵盖经许可的翻新工程。超出上限的项目可申请银行翻新贷款或个人贷款。"
             },
             "8": {
-              "q": "为什么选择 HDB 注册承包商至关重要？",
-              "a": "HDB 注册承包商经过培训，严格遵守<strong> HDB 的翻新指南</strong>和结构安全协议。他们确保拆除过程中不损坏关键结构柱，并确保所有电气和管道工程符合新加坡安全标准。只有 HDB 注册承包商才能代表您申请 HDB 翻新许可证。"
+              "q": "为什么选择具备 HDB 执照的公司很重要？",
+              "a": "选择具备 HDB 执照的公司，有助于确保翻新工程符合<strong>HDB 指南</strong>及结构安全要求，也让业主更安心，知道电气、管道及拆改工程都按新加坡相关规范执行。"
             }
           }
         },
@@ -785,10 +786,10 @@ const resources = {
       },
       "commercial_page": {
         "hero": {
-          "title": "新加坡专业办公室翻新\n与商业空间装修服务",
-          "subtitle": "由 BCA 注册的承包商提供零售、餐饮和恢复原状服务",
-          "cta": "预约现场勘察",
-          "cta_reinstatement": "了解更多原状修复服务"
+          "badge": "2026 设计趋势",
+          "title": "新加坡 HDB 与公寓室内设计——为精致生活而打造",
+          "subtitle": "作为具备 HDB 执照及 BCA 注册资质的设计公司，我们以周密规划、许可证协调与细致执行，为您打造契合现代生活的理想居所。",
+          "cta": "预约家居咨询"
         },
         "solutions": {
           "title": "商业翻新解决方案",
@@ -841,7 +842,7 @@ const resources = {
             },
             "2": {
               "title": "BCA 许可证",
-              "desc": "所有必要的建筑和建设局许可证的注册承包商。"
+              "desc": "熟悉建筑与建设局相关许可要求，并具备完整协调经验。"
             },
             "3": {
               "title": "商场管理",
@@ -865,7 +866,7 @@ const resources = {
           },
           "q3": {
             "q": "新加坡商业翻新的许可证要求是什么？",
-            "a": "新加坡商业翻新通常需要根据施工范围向多个部门提交申请：结构工程需提交 <strong>BCA</strong>，消防安全修改（洒水器、防火门、应急照明）需提交 <strong>SCDF</strong>，用途变更需提交 <strong>URA</strong>，商场或写字楼装修需提交 <strong>MCST</strong>。作为 BCA 注册承包商，我们内部处理所有提交，确保项目按时推进。"
+            "a": "新加坡商业翻新通常需要根据施工范围向多个部门提交申请：结构工程需提交 <strong>BCA</strong>，消防安全修改（洒水器、防火门、应急照明）需提交 <strong>SCDF</strong>，用途变更需提交 <strong>URA</strong>，商场或写字楼装修需提交 <strong>MCST</strong>。作为 BCA 注册公司，我们可内部统筹各项报批流程，协助项目更有序地推进。"
           },
           "q4": {
             "q": "新加坡商业翻新费用是多少？",
@@ -876,8 +877,8 @@ const resources = {
             "a": "办公室<strong>翻新</strong>是根据您的需求装修空间，包括隔断、地板、天花板、机电及木工工程。办公室<strong>原状修复</strong>则是相反的过程：在租约结束时，按照租约规定将空间恢复至原始清水房状态。原状修复通常包括拆除所有租户安装的装修，恢复原始地板和墙面，以及将消防安全系统恢复至原始位置。"
           },
           "q6": {
-            "q": "如何在新加坡选择合适的商业翻新承包商？",
-            "a": "选择新加坡商业翻新承包商的关键标准：<br/><br/>1. <strong>BCA 注册：</strong>核实承包商已在 BCA 目录中注册——所有结构性工程均要求此资质。<br/>2. <strong>项目记录：</strong>要求提供同类规模商业项目的参考资料和照片。<br/>3. <strong>内部许可证管理：</strong>选择能够内部处理 MCST、BCA 和 SCDF 提交的承包商，而非外包给第三方。<br/>4. <strong>固定价格合同：</strong>避免选择提供模糊报价而无详细分项的承包商。<br/>5. <strong>保险：</strong>确保承包商持有公共责任险和工伤赔偿保险。"
+            "q": "如何在新加坡选择合适的商业翻新公司？",
+            "a": "选择新加坡商业翻新承包商的关键标准：<br/><br/>1. <strong>BCA 注册：</strong>如涉及结构工程，应先确认该公司已列入 BCA 名录。<br/>2. <strong>项目记录：</strong>要求提供同类规模商业项目的参考资料和照片。<br/>3. <strong>内部许可证管理：</strong>优先选择能够内部处理 MCST、BCA 与 SCDF 报批流程的公司，而非完全外包给第三方。<br/>4. <strong>固定价格合同：</strong>避免选择报价含糊、缺乏详细分项的公司。<br/>5. <strong>保险：</strong>并确认该公司持有公共责任险与工伤赔偿保险。"
           }
         },
         "subpages": {
@@ -943,7 +944,7 @@ const resources = {
         },
         "cta": {
           "title": "准备好改造您的商业空间了吗？",
-          "subtitle": "为您的下一个项目与值得信赖的、BCA 注册的商业承包商合作。",
+          "subtitle": "为您的下一个项目，选择值得信赖且具备 BCA 注册资质的商业室内设计与装修公司。",
           "button": "获取商业报价"
         },
         "partners": {
@@ -959,15 +960,17 @@ const resources = {
         "contact": "联系我们"
       },
       "reinstatement_section": {
-        "headline_serif": "专业的",
-        "headline_bold": "商业与商场原状修复服务",
-        "subtext": "专业且符合 BCA/HDB 标准的办公室和商场单位原状修复。凭借我们 100% 的通过率方案，助您顺利取回押金。",
+        "headline_serif": "专业呈现",
+        "headline_bold": "清水房交付",
+        "subtext": "为办公室与商场单位提供专业原状修复服务，以合规、精准与顺畅交付为核心，协助您安心完成移交。",
         "button": "了解更多关于原状修复"
       },
       "reinstatement_page": {
         "hero": {
-          "headline_serif": "专业的",
-          "headline_bold": "商业与商场原状修复服务"
+          "title": "新加坡商业室内设计与办公室装修服务",
+          "subtitle": "为办公室、零售与餐饮空间打造更精致的环境，并以周密规划、合规协调与细致执行完成交付。",
+          "cta": "预约现场勘察",
+          "cta_reinstatement": "了解更多原状修复服务"
         },
         "challenges": {
           "title_serif": "克服",
