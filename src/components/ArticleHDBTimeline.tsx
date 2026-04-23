@@ -95,11 +95,11 @@ export default function ArticleHDBTimeline() {
 prose-headings:font-serif 
 prose-headings:text-charcoal 
 prose-h2:mt-16 
-prose-h2:mb-7 
+prose-h2:mb-5 
 prose-h2:border-t 
 prose-h2:border-gray-200 
 prose-h2:pt-8 
-prose-h2:text-3xl 
+prose-h2:text-[1.8rem] 
 prose-h2:font-semibold 
 prose-h2:leading-tight 
 prose-p:text-gray-600 
@@ -123,7 +123,7 @@ prose-img:shadow-sm">
               <img src="/images/article2-gantt.jpg" alt="Renovation Gantt chart showing sequencing of works in Singapore renovation" className="my-10 rounded-2xl w-full border border-gray-100 shadow-sm" loading="lazy" decoding="async" />
               {Object.values(phases).map((phase) => (
                 <div key={phase.title}>
-                  <h3 className="!mt-10 !mb-3 text-[1.55rem] md:text-[1.7rem] font-semibold leading-snug text-charcoal">{phase.title}</h3>
+                  <h3 className="!mt-10 !mb-3 text-[1.32rem] md:text-[1.45rem] font-semibold leading-snug text-charcoal">{phase.title}</h3>
                   <p className="!mt-0 !mb-7 text-gray-600 leading-relaxed">{phase.desc}</p>
                 </div>
               ))}
@@ -133,18 +133,18 @@ prose-img:shadow-sm">
 
               <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.delays_title')}</h2>
 
-              <h3 className="!mt-10 !mb-3 text-[1.55rem] md:text-[1.7rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.1.title')}</h3>
+              <h3 className="!mt-10 !mb-3 text-[1.32rem] md:text-[1.45rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.1.title')}</h3>
               <img src="/images/article2-sink.jpg" alt="Undermount kitchen sink installation before countertop placement" className="my-10 rounded-2xl w-full border border-gray-100 shadow-sm" loading="lazy" decoding="async" />
               <p>{t('article_hdb_timeline.sections.delays.1.p1')}</p>
               <p>{t('article_hdb_timeline.sections.delays.1.p2')}</p>
 
-              <h3 className="!mt-10 !mb-3 text-[1.55rem] md:text-[1.7rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.2.title')}</h3>
+              <h3 className="!mt-10 !mb-3 text-[1.32rem] md:text-[1.45rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.2.title')}</h3>
               <p>{t('article_hdb_timeline.sections.delays.2.p1')}</p>
 
-              <h3 className="!mt-10 !mb-3 text-[1.55rem] md:text-[1.7rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.3.title')}</h3>
+              <h3 className="!mt-10 !mb-3 text-[1.32rem] md:text-[1.45rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.3.title')}</h3>
               <p>{t('article_hdb_timeline.sections.delays.3.p1')}</p>
 
-              <h3 className="!mt-10 !mb-3 text-[1.55rem] md:text-[1.7rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.4.title')}</h3>
+              <h3 className="!mt-10 !mb-3 text-[1.32rem] md:text-[1.45rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.4.title')}</h3>
               <p>{t('article_hdb_timeline.sections.delays.4.p1')}</p>
               <p>{t('article_hdb_timeline.sections.delays.4.p2')}</p>
 
