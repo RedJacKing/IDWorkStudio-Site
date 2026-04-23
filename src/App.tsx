@@ -16,6 +16,10 @@ import RetailMallRenovation from './components/RetailMallRenovation';
 import ShophouseRenovation from './components/ShophouseRenovation';
 import CompliancePermits from './components/CompliancePermits';
 import Residential from './components/Residential';
+import Insights from './components/Insights';
+import ArticleRenovationCost2026 from './components/ArticleRenovationCostSingapore2026';
+import ArticleHDBTimeline from './components/ArticleHDBTimeline';
+import ArticleRenovationMistakes from './components/ArticleRenovationMistakes';
 import StickyMobileNav from './components/StickyMobileNav';
 import ScrollToHashElement from './components/ScrollToHashElement';
 import { useTranslation } from 'react-i18next';
@@ -103,6 +107,10 @@ export default function App() {
             <Route path="/commercial/retail-mall-renovation" element={<RetailMallRenovation />} />
             <Route path="/commercial/shophouse-renovation" element={<ShophouseRenovation />} />
             <Route path="/commercial/permits-compliance" element={<CompliancePermits />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/renovation-cost-singapore-2026" element={<ArticleRenovationCost2026 />} />
+            <Route path="/insights/hdb-renovation-timeline-singapore" element={<ArticleHDBTimeline />} />
+            <Route path="/insights/renovation-mistakes-singapore" element={<ArticleRenovationMistakes />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
 

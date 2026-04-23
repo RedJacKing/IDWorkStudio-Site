@@ -10,6 +10,7 @@ const resources = {
         "home": "Home",
         "residential": "Residential",
         "commercial": "Commercial",
+        "insights": "Insights",
         "gallery": "Gallery",
         "contact": "Contact"
       },
@@ -307,12 +308,105 @@ const resources = {
           }
         }
       },
+
+      "insights_page": {
+        "meta": {
+          "title": "Insights | ID Work Studio Singapore",
+          "description": "Design-led renovation insights, cost guides and project planning perspectives for homeowners and businesses in Singapore."
+        },
+        "hero": {
+          "badge": "Design Perspectives",
+          "title": "Insights",
+          "subtitle": "Thoughtful perspectives on renovation, interiors and project planning in Singapore — designed to help homeowners and businesses make better decisions."
+        },
+        "intro": {
+          "eyebrow": "Editorial Perspective",
+          "title": "Built for Reading, Sharing and Future Growth",
+          "body": "This page is designed as a crawlable insights hub, not a long scrolling article wall. Each article has its own future-ready URL, making it easier for Google, AI systems and mobile visitors to find the right topic quickly."
+        },
+        "highlights": {
+          "1": {
+            "title": "Crawlable Article Structure",
+            "desc": "Each article is meant to live on its own URL so it can rank, be cited and be shared independently."
+          },
+          "2": {
+            "title": "Better Mobile Experience",
+            "desc": "Visitors see concise previews instead of long full articles, making the page easier to browse on phones."
+          },
+          "3": {
+            "title": "Authority Building",
+            "desc": "The first three topics are chosen to strengthen GEO, SEO and buyer trust for renovation searches in Singapore."
+          }
+        },
+        "listing": {
+          "eyebrow": "Featured Articles",
+          "title": "Current Perspectives",
+          "subtitle": "Three high-impact articles to anchor your authority in Singapore renovation search and future AI citations.",
+          "read_more": "Read Article"
+        },
+        "articles": {
+          "1": {
+            "category": "Cost Guide",
+            "title": "Renovation Cost in Singapore (2026 Guide)",
+            "excerpt": "A direct guide to what homeowners should realistically budget for BTO, resale and condo renovation in Singapore — including what actually drives cost.",
+            "read_time": "8 min read"
+          },
+          "2": {
+            "category": "Planning Guide",
+            "title": "HDB Renovation Timeline in Singapore",
+            "excerpt": "A clear look at how long renovation usually takes, where delays happen and what homeowners can do to plan with more confidence.",
+            "read_time": "7 min read"
+          },
+          "3": {
+            "category": "Strategy Guide",
+            "title": "Biggest Renovation Mistakes Singapore Homeowners Make",
+            "excerpt": "A practical guide to common renovation pitfalls in Singapore, and how clearer decisions early on can prevent delay, rework and regret.",
+            "read_time": "7 min read"
+          }
+        },
+        "footer_block": {
+          "eyebrow": "ID Work Studio",
+          "title": "Design-Led Renovation in Singapore",
+          "subtitle": "If you are planning a residential or commercial project, we can help you think through design direction, practical scope, budgeting and execution with more clarity.",
+          "address_label": "Office Address",
+          "phone_label": "Phone",
+          "email_label": "Email",
+          "cta": "WhatsApp Us"
+        }
+      },
+      "article_renovation_cost_2026": {
+        "meta": {
+          "title": "Renovation Cost in Singapore (2026 Guide) | ID Work Studio",
+          "description": "A practical 2026 guide to renovation cost in Singapore, covering BTO, resale and condo budgets, key cost drivers, hidden expenses and smarter planning."
+        },
+        "hero_badge": "Cost Guide",
+        "title": "Renovation Cost in Singapore (2026 Guide)",
+        "subtitle": "A practical guide to what homeowners in Singapore should realistically budget for BTO, resale and condo renovation in 2026, and what actually drives cost."
+      },
+      "article_hdb_timeline": {
+        "meta": {
+          "title": "HDB Renovation Timeline in Singapore (2026 Guide) | ID Work Studio",
+          "description": "Understand how long HDB renovation takes in Singapore, including real timelines, delays, and when you can actually move in."
+        },
+        "hero_badge": "Planning Guide",
+        "title": "HDB Renovation Timeline in Singapore (2026 Guide)",
+        "subtitle": "A practical breakdown of how long renovation really takes, where delays happen, and when you can realistically move in."
+      },
+      "article_renovation_mistakes": {
+        "meta": {
+          "title": "Biggest Renovation Mistakes Singapore Homeowners Make | ID Work Studio",
+          "description": "Avoid costly renovation mistakes in Singapore. Learn common pitfalls and how to plan better with this experience-led guide."
+        },
+        "hero_badge": "Strategy Guide",
+        "title": "Biggest Renovation Mistakes Singapore Homeowners Make",
+        "subtitle": "A practical guide to avoiding costly renovation mistakes, based on real project experience in Singapore."
+      },
       "commercial_page": {
         "hero": {
-          "title": "新加坡商业室内设计与办公室装修",
-          "subtitle": "为办公室、零售与餐饮空间打造更精致的商业环境，并以周密规划、合规协调与细致执行完成交付。",
-          "cta": "预约现场勘察",
-          "cta_reinstatement": "了解更多原状修复服务"
+          "title": "Commercial Interior Design & Office Renovation Singapore",
+          "subtitle": "Refined commercial environments for offices, retail and F&B spaces, delivered with careful planning, compliance coordination and polished execution.",
+          "cta": "Book a Site Survey",
+          "cta_reinstatement": "Explore Reinstatement Services"
         },
         "solutions": {
           "title": "Commercial Renovation Solutions",
@@ -558,6 +652,7 @@ const resources = {
         "home": "首页",
         "residential": "住宅设计",
         "commercial": "商业空间",
+        "insights": "见解",
         "gallery": "作品集",
         "contact": "联系我们"
       },
@@ -855,7 +950,100 @@ const resources = {
           }
         }
       },
-      "commercial_page": {
+      
+      "insights_page": {
+        "meta": {
+          "title": "见解 | ID Work Studio Singapore",
+          "description": "关于新加坡翻新、室内设计与项目规划的专业见解，帮助住宅与商业客户做出更明智的决定。"
+        },
+        "hero": {
+          "badge": "设计观点",
+          "title": "见解",
+          "subtitle": "围绕新加坡翻新、室内设计与项目规划的深度观点，帮助住宅与商业客户作出更清晰、更从容的决定。"
+        },
+        "intro": {
+          "eyebrow": "编辑式内容",
+          "title": "为阅读、分享与未来扩展而设计",
+          "body": "这个页面被设计成可被搜索引擎与 AI 系统理解的内容枢纽，而不是一整页冗长文章。每篇文章未来都应拥有独立网址，更利于 Google 收录、AI 引用，以及手机用户快速浏览。"
+        },
+        "highlights": {
+          "1": {
+            "title": "独立文章结构",
+            "desc": "每篇文章都适合放在独立网址之下，便于排名、被引用与单独分享。"
+          },
+          "2": {
+            "title": "更适合手机浏览",
+            "desc": "页面只展示精简摘要，而非整篇长文，让用户在手机上也能轻松浏览其他内容。"
+          },
+          "3": {
+            "title": "建立专业权威",
+            "desc": "首三篇主题专为提升 GEO、SEO 以及新加坡翻新搜索中的客户信任而设。"
+          }
+        },
+        "listing": {
+          "eyebrow": "精选文章",
+          "title": "当前观点",
+          "subtitle": "三篇高影响力文章，帮助建立您在新加坡翻新搜索与未来 AI 引用中的专业地位。",
+          "read_more": "阅读全文"
+        },
+        "articles": {
+          "1": {
+            "category": "费用指南",
+            "title": "新加坡翻新费用（2026 指南）",
+            "excerpt": "直接说明 BTO、转售组屋与私人公寓在新加坡翻新的合理预算范围，以及真正影响成本的关键因素。",
+            "read_time": "约 8 分钟"
+          },
+          "2": {
+            "category": "规划指南",
+            "title": "新加坡 HDB 翻新时间表",
+            "excerpt": "清楚说明翻新通常需要多久、延误常见在哪里，以及业主可如何更有把握地规划时间。",
+            "read_time": "约 7 分钟"
+          },
+          "3": {
+            "category": "策略指南",
+            "title": "新加坡业主最常犯的翻新错误",
+            "excerpt": "一篇实用指南，帮助您识别新加坡常见翻新误区，并通过更清晰的前期决策避免延误、返工与后悔。",
+            "read_time": "约 7 分钟"
+          }
+        },
+        "footer_block": {
+          "eyebrow": "ID Work Studio",
+          "title": "新加坡设计导向翻新团队",
+          "subtitle": "若您正在规划住宅或商业项目，我们可协助您更清晰地思考设计方向、工程范围、预算安排与执行节奏。",
+          "address_label": "办公地址",
+          "phone_label": "电话",
+          "email_label": "电子邮件",
+          "cta": "WhatsApp 联系我们"
+        }
+      },
+      "article_renovation_cost_2026": {
+        "meta": {
+          "title": "新加坡翻新费用（2026 指南） | ID Work Studio",
+          "description": "从 BTO、转售组屋到私人公寓，本指南全面解析 2026 年新加坡翻新预算、主要成本来源、隐藏费用及更实际的预算规划方式。"
+        },
+        "hero_badge": "费用指南",
+        "title": "新加坡翻新费用（2026 指南）",
+        "subtitle": "帮助新加坡业主更实际地规划 BTO、转售组屋与私人公寓翻新预算，并了解真正影响整体成本的关键因素。"
+      },
+      "article_hdb_timeline": {
+        "meta": {
+          "title": "新加坡 HDB 翻新时间表（2026 指南） | ID Work Studio",
+          "description": "了解新加坡组屋翻新通常需要多久、哪些因素最容易造成延误，以及您大约什么时候可以入住。"
+        },
+        "hero_badge": "规划指南",
+        "title": "新加坡 HDB 翻新时间表（2026 指南）",
+        "subtitle": "一篇实用指南，说明翻新真正需要多久、常见延误从何而来，以及您何时能较实际地准备入住。"
+      },
+      "article_renovation_mistakes": {
+        "meta": {
+          "title": "新加坡业主最常犯的翻新错误 | ID Work Studio",
+          "description": "一篇以实际项目经验为基础的指南，帮助新加坡业主避开常见翻新错误，并以更清晰的方式规划项目。"
+        },
+        "hero_badge": "策略指南",
+        "title": "新加坡业主最常犯的翻新错误",
+        "subtitle": "根据新加坡真实项目经验整理，帮助业主在翻新前避开最常见、也最昂贵的错误。"
+      },
+"commercial_page": {
         "hero": {
           "title": "新加坡商业室内设计与办公室装修",
           "subtitle": "为办公室、零售与餐饮空间打造更精致的商业环境，并以周密规划、合规协调与细致执行完成交付。",
@@ -1542,6 +1730,535 @@ zhT["compliance_reno_page"] = {
   related: { title:"探索我们的其他商业服务" },
   cta: { serif:"让许可证管理", bold:"不再是难题", btn:"WhatsApp 获取免费许可证咨询" },
   sticky: { text:"免费许可证咨询 — 立即WhatsApp联系我们" }
+};
+
+
+// ─── Insights + article translations ──────────────────────────────────────
+enT["insights_page"] = {
+  meta: {
+    title: "Insights | ID Work Studio Singapore",
+    description: "Design-led renovation insights, cost guides and project planning perspectives for homeowners and businesses in Singapore."
+  },
+  hero: {
+    badge: "Design Perspectives",
+    title: "Insights",
+    subtitle: "Thoughtful perspectives on renovation, interiors and project planning in Singapore — designed to help homeowners and businesses make better decisions."
+  },
+  intro: {
+    eyebrow: "Editorial Perspective",
+    title: "Built for Reading, Sharing and Future Growth",
+    body: "This page is designed as a crawlable insights hub, not a long scrolling article wall. Each article has its own future-ready URL, making it easier for Google, AI systems and mobile visitors to find the right topic quickly."
+  },
+  highlights: {
+    "1": {
+      title: "Crawlable Article Structure",
+      desc: "Each article is meant to live on its own URL so it can rank, be cited and be shared independently."
+    },
+    "2": {
+      title: "Better Mobile Experience",
+      desc: "Visitors see concise previews instead of long full articles, making the page easier to browse on phones."
+    },
+    "3": {
+      title: "Authority Building",
+      desc: "The first three topics are chosen to strengthen GEO, SEO and buyer trust for renovation searches in Singapore."
+    }
+  },
+  listing: {
+    eyebrow: "Featured Articles",
+    title: "Current Perspectives",
+    subtitle: "Three high-impact articles to anchor your authority in Singapore renovation search and future AI citations.",
+    read_more: "Read Article"
+  },
+  articles: {
+    "1": {
+      category: "Cost Guide",
+      title: "Renovation Cost in Singapore (2026 Guide)",
+      excerpt: "A direct guide to what homeowners should realistically budget for BTO, resale and condo renovation in Singapore — including what actually drives cost.",
+      read_time: "8 min read"
+    },
+    "2": {
+      category: "Planning Guide",
+      title: "HDB Renovation Timeline in Singapore",
+      excerpt: "A clear look at how long renovation usually takes, where delays happen and what homeowners can do to plan with more confidence.",
+      read_time: "7 min read"
+    },
+    "3": {
+      category: "Strategy Guide",
+      title: "Biggest Renovation Mistakes Singapore Homeowners Make",
+      excerpt: "A practical guide to common renovation pitfalls in Singapore, and how clearer decisions early on can prevent delay, rework and regret.",
+      read_time: "7 min read"
+    }
+  },
+  footer_block: {
+    eyebrow: "ID Work Studio",
+    title: "Design-Led Renovation in Singapore",
+    subtitle: "If you are planning a residential or commercial project, we can help you think through design direction, practical scope, budgeting and execution with more clarity.",
+    address_label: "Office Address",
+    phone_label: "Phone",
+    email_label: "Email",
+    cta: "WhatsApp Us"
+  }
+};
+
+zhT["insights_page"] = {
+  meta: {
+    title: "见解 | ID Work Studio Singapore",
+    description: "关于新加坡翻新、室内设计与项目规划的专业见解，帮助住宅与商业客户做出更明智的决定。"
+  },
+  hero: {
+    badge: "设计观点",
+    title: "见解",
+    subtitle: "围绕新加坡翻新、室内设计与项目规划的深度观点，帮助住宅与商业客户作出更清晰、更从容的决定。"
+  },
+  intro: {
+    eyebrow: "编辑式内容",
+    title: "为阅读、分享与未来扩展而设计",
+    body: "这个页面被设计成可被搜索引擎与 AI 系统理解的内容枢纽，而不是一整页冗长文章。每篇文章都拥有独立网址，更利于 Google 收录、AI 引用，以及手机用户快速浏览。"
+  },
+  highlights: {
+    "1": {
+      title: "独立文章结构",
+      desc: "每篇文章都适合放在独立网址之下，便于排名、被引用与单独分享。"
+    },
+    "2": {
+      title: "更适合手机浏览",
+      desc: "页面只展示精简摘要，而非整篇长文，让用户在手机上也能轻松浏览其他内容。"
+    },
+    "3": {
+      title: "建立专业权威",
+      desc: "首三篇主题专为提升 GEO、SEO 以及新加坡翻新搜索中的客户信任而设。"
+    }
+  },
+  listing: {
+    eyebrow: "精选文章",
+    title: "当前观点",
+    subtitle: "三篇高影响力文章，帮助建立您在新加坡翻新搜索与未来 AI 引用中的专业地位。",
+    read_more: "阅读全文"
+  },
+  articles: {
+    "1": {
+      category: "费用指南",
+      title: "新加坡翻新费用（2026 指南）",
+      excerpt: "直接说明 BTO、转售组屋与私人公寓在新加坡翻新的合理预算范围，以及真正影响成本的关键因素。",
+      read_time: "约 8 分钟"
+    },
+    "2": {
+      category: "规划指南",
+      title: "新加坡 HDB 翻新时间表",
+      excerpt: "清楚说明翻新通常需要多久、延误常见在哪里，以及业主可如何更有把握地规划时间。",
+      read_time: "约 7 分钟"
+    },
+    "3": {
+      category: "策略指南",
+      title: "新加坡业主最常见的翻新错误",
+      excerpt: "聚焦新加坡住宅翻新中最常见的错误，并说明如何通过更清晰的前期决策避免延误、返工与后悔。",
+      read_time: "约 7 分钟"
+    }
+  },
+  footer_block: {
+    eyebrow: "ID Work Studio",
+    title: "新加坡设计导向翻新团队",
+    subtitle: "若您正在规划住宅或商业项目，我们可协助您更清晰地思考设计方向、工程范围、预算安排与执行节奏。",
+    address_label: "办公地址",
+    phone_label: "电话",
+    email_label: "电子邮件",
+    cta: "WhatsApp 联系我们"
+  }
+};
+
+enT["article_common"] = {
+  back_to_insights: "Back to Insights",
+  next_article: "Next Article",
+  continue_reading: "Continue Reading",
+  back_to_start: "Back to Start",
+  read_article: "Read Article"
+};
+zhT["article_common"] = {
+  back_to_insights: "返回见解",
+  next_article: "下一篇文章",
+  continue_reading: "继续阅读",
+  back_to_start: "返回起点",
+  read_article: "阅读文章"
+};
+
+enT["article_renovation_cost_2026"] = {
+  meta: {
+    title: "Renovation Cost in Singapore (2026 Guide) | ID Work Studio",
+    description: "A practical 2026 guide to renovation cost in Singapore, covering BTO, resale and condo budgets, key cost drivers, hidden expenses and smarter planning."
+  },
+  hero_badge: "Cost Guide",
+  title: "Renovation Cost in Singapore (2026 Guide)",
+  subtitle: "A practical guide to what homeowners in Singapore should realistically budget for BTO, resale and condo renovation in 2026, and what actually drives cost.",
+  read_time: "8 min read",
+  intro: "Renovation cost in Singapore is not determined by size alone. In practice, the final budget depends on a combination of scope, design complexity, material grade, carpentry detailing, wet works and whether the property is a new BTO flat or an older resale unit.",
+  sections: {
+    costs_title: "How much does renovation cost in Singapore?",
+    costs_intro: "In 2026, most homeowners in Singapore can expect renovation budgets to fall within these broad ranges:",
+    table_headers: { type: "Home Type", budget: "Typical Budget Range" },
+    table_rows: {
+      "1": ["3-room HDB (BTO)", "$40,000 – $52,000"],
+      "2": ["4-room HDB (BTO)", "$50,000 – $60,000"],
+      "3": ["5-room HDB (BTO)", "$60,000 – $75,000"],
+      "4": ["3-room HDB (Resale)", "$55,000 – $68,000"],
+      "5": ["4-room HDB (Resale)", "$70,000 – $81,000"],
+      "6": ["5-room HDB (Resale)", "$80,000 – $98,000"],
+      "7": ["Condo / Private Apartment", "$40,000 – $105,000+"]
+    },
+    tiers_intro: "In simple terms, many homeowners in Singapore end up in one of three broad tiers:",
+    tiers: {
+      "1": "$30K–$50K for a more basic renovation",
+      "2": "$50K–$80K for a more standard, well-rounded renovation",
+      "3": "$80K+ for a premium, design-led renovation with more customisation"
+    },
+    drivers_title: "What actually drives renovation cost?",
+    drivers_intro: "Most homeowners assume renovation cost is mainly about floor area. In reality, the strongest cost drivers are usually carpentry, wet works, material selections and how ambitious the design direction is.",
+    carpentry_title: "1. Carpentry",
+    carpentry_p1: "Carpentry is often one of the largest cost components in a Singapore renovation. This includes kitchen cabinets, wardrobes, TV consoles, storage walls, study areas and feature-built joinery.",
+    carpentry_p2: "But carpentry cost is not just about quantity. It is heavily affected by design complexity and material choice. For example, curved corners or rounded edges require more specialised fabrication and finishing than standard sharp-corner cabinetry, so they cost more.",
+    carpentry_p3: "Laminate selection also influences pricing. Most laminates in Singapore come in 4ft x 8ft sheets, while some higher-end options are available in 4ft x 10ft sheets. Larger sheets allow for cleaner, more seamless carpentry because they reduce visible break lines, but they also increase material cost.",
+    kitchen_title: "2. Kitchen cabinet systems and worktops",
+    kitchen_p1: "Kitchen renovation is one of the most cost-sensitive areas in any home. The cabinet bodies, door finishes, backing area and worktop material all affect price.",
+    kitchen_p2: "One key factor is the worktop selection. In the past, quartz was the more common choice. Today, more homeowners are moving toward sintered stone because of its durability, heat resistance and more premium look. In most cases, sintered stone comes at a higher price point than standard quartz.",
+    kitchen_p3: "Another cost factor is the backing area — the space between the top and bottom kitchen cabinets. This area may be finished in tiles, glass, quartz or sintered stone. Once the backing is upgraded to a more premium full-height surface, both material and labour costs go up.",
+    wetworks_title: "3. Wet works",
+    wetworks_p1: "Wet works typically include bathrooms, kitchen tiling, waterproofing, screeding and plumbing-related coordination. These items can take up a meaningful portion of the budget, especially in resale flats where existing conditions are older or less predictable.",
+    tiles_title: "4. Tiles, marble and country of origin",
+    tiles_p1: "Tile and stone pricing is influenced by origin, finishing and size. Materials imported from Italy, Spain and other European countries generally cost more than tiles from Malaysia or China. The price difference often comes from manufacturing quality, brand positioning and finish consistency.",
+    tiles_p2: "Tile size also affects cost. Many homeowners use 600 x 600 mm tiles, while some prefer 600 x 1,200 mm or even larger formats. Larger tiles usually create a cleaner and more premium visual effect, but they also require more precise handling and more skilled labour to install properly. As a result, both the tile price and the laying cost tend to increase when tile sizes become larger.",
+    elec_title: "5. Electrical and plumbing upgrades",
+    elec_p1: "Additional lighting points, concealed wiring, replacement of older systems and new plumbing runs can all add to the final cost — especially for resale flats.",
+    bto_vs_resale_title: "BTO vs resale: why costs differ so much",
+    bto_vs_resale_intro: "One of the biggest cost misunderstandings in Singapore is the difference between a BTO renovation and a resale renovation.",
+    bto_title: "BTO renovation",
+    bto_p1: "BTO flats usually start as a relatively blank canvas. There is generally less demolition, fewer concealed issues and lower site uncertainty. That helps keep renovation budgets more controlled.",
+    resale_title: "Resale renovation",
+    resale_p1: "Resale flats often come with hidden infrastructure work before aesthetic upgrading can even begin. That may include hacking dated finishes, replacing older wiring, changing water pipes, waterproofing wet areas and levelling surfaces after demolition.",
+    resale_p2: "In practice, resale renovation can easily cost 20% to 40% more than a comparable BTO renovation because more of the budget goes into making the unit workable before the design layer is added.",
+    callout_title: "A simple way to think about it",
+    callout_body: "If a BTO renovation sits around $55,000, the resale equivalent can quickly move into the $70,000 to $80,000 range once hacking, rewiring, plumbing replacement and waterproofing are added in.",
+    overspend_title: "Where homeowners overspend",
+    overspend_intro: "Based on common renovation patterns in Singapore, homeowners usually overspend in the same few areas:",
+    overspend_items: {
+      "1": "Overbuilding carpentry that looks impressive on paper but is not truly needed for daily use",
+      "2": "Following trends too aggressively without thinking about maintenance, practicality or how quickly those details may date",
+      "3": "Changing layout decisions too late, which often leads to variation orders and rework",
+      "4": "Choosing the lowest quotation without understanding material specifications, omissions or hidden cost exposure later"
+    },
+    budget_title: "How to plan your renovation budget more realistically",
+    budget_intro: "A better renovation budget usually starts with clarity, not guesswork.",
+    budget_cards: {
+      "1": "Start with lifestyle needs before design references",
+      "2": "Set a budget range, not a single fixed number",
+      "3": "Prioritise layout, function and durability first",
+      "4": "Keep decorative upgrades proportionate to daily use",
+      "5": "Allow for site realities, especially in resale units",
+      "6": "Reserve a contingency buffer of 10% to 15%"
+    },
+    budget_p2: "Instead of saying, “I want to spend $50,000,” it is usually more practical to think in ranges — for example, “I am comfortable between $50,000 and $65,000, depending on design priorities.” That gives the project more room to stay realistic.",
+    expectation_title: "A more realistic expectation for Singapore homeowners",
+    expectation_intro: "In the current market, many homeowners end up around these practical ranges:",
+    expectation_items: {
+      "1": "$50,000–$70,000 for a comfortable, well-designed home",
+      "2": "$70,000–$90,000 for more customised interiors and stronger material upgrades"
+    },
+    expectation_p2: "Budgets below that range are still possible, but they usually involve more compromise in carpentry scope, material choice, or wet-work ambition. Budgets above that range often reflect design ambition rather than basic necessity.",
+    final_title: "Final perspective",
+    final_p1: "Renovation cost in Singapore is not only about square footage or headline price. It reflects how you live, how much customisation you want, how refined the material palette is and how much hidden groundwork the property requires.",
+    final_p2: "Most homeowners do not regret spending more when the planning is thoughtful. More often, they regret unclear budgeting, weak early decisions and not understanding where the real cost drivers were from the start.",
+    final_p3: "A better renovation does not always mean the most expensive one. It usually means a project where the budget, design priorities and day-to-day lifestyle have been aligned properly from the beginning."
+  },
+  next_title: "HDB Renovation Timeline in Singapore"
+};
+
+zhT["article_renovation_cost_2026"] = {
+  meta: {
+    title: "新加坡翻新费用（2026 指南）| ID Work Studio",
+    description: "2026 年新加坡翻新费用实用指南，涵盖 BTO、转售组屋与私人公寓预算范围、主要成本驱动因素、隐藏费用与更稳妥的预算规划方式。"
+  },
+  hero_badge: "费用指南",
+  title: "新加坡翻新费用（2026 指南）",
+  subtitle: "帮助新加坡业主更现实地规划 BTO、转售组屋与私人公寓翻新预算，并理解真正影响费用的关键因素。",
+  read_time: "约 8 分钟",
+  intro: "新加坡的翻新费用并不单纯由面积决定。实际预算通常取决于工程范围、设计复杂度、材料等级、木作细节、湿作工程，以及房屋是全新 BTO 还是较旧的转售单位。",
+  sections: {
+    costs_title: "新加坡翻新费用大概是多少？",
+    costs_intro: "在 2026 年，新加坡大多数业主的翻新预算大致会落在以下区间：",
+    table_headers: { type: "房屋类型", budget: "常见预算范围" },
+    table_rows: {
+      "1": ["3 房式组屋（BTO）", "$40,000 – $52,000"],
+      "2": ["4 房式组屋（BTO）", "$50,000 – $60,000"],
+      "3": ["5 房式组屋（BTO）", "$60,000 – $75,000"],
+      "4": ["3 房式组屋（转售）", "$55,000 – $68,000"],
+      "5": ["4 房式组屋（转售）", "$70,000 – $81,000"],
+      "6": ["5 房式组屋（转售）", "$80,000 – $98,000"],
+      "7": ["私人公寓 / 住宅公寓", "$40,000 – $105,000+"]
+    },
+    tiers_intro: "简单来说，新加坡大多数业主最终会落在以下三个预算层级之一：",
+    tiers: {
+      "1": "$30K–$50K：较基础的翻新",
+      "2": "$50K–$80K：较完整、较平衡的翻新",
+      "3": "$80K 以上：更高定制度的设计导向翻新"
+    },
+    drivers_title: "真正推高费用的是什么？",
+    drivers_intro: "很多业主以为翻新费用主要看面积。实际上，更大的成本驱动因素通常是木作、湿作工程、材料选择，以及设计方向有多讲究。",
+    carpentry_title: "1. 木作",
+    carpentry_p1: "在新加坡住宅翻新中，木作往往是最大的成本项目之一，包括厨房橱柜、衣柜、电视柜、储物墙、书桌区以及各类定制柜体。",
+    carpentry_p2: "但木作费用并不只取决于数量，更取决于设计复杂度与材料选择。例如，圆角或弧形收边所需的制作与收口工艺，比一般直角柜体更复杂，因此费用也更高。",
+    carpentry_p3: "饰面板材的规格也会影响价格。新加坡常见的饰面板多为 4ft x 8ft，也有部分较高端的 4ft x 10ft 规格。板材越大，越能减少接缝，令整体木作看起来更完整、更高级，但材料成本也会相应提高。",
+    kitchen_title: "2. 厨房柜体系统与台面材料",
+    kitchen_p1: "厨房通常是整屋翻新中最容易拉开预算差距的空间。柜体结构、门板、墙身背板以及台面材料都会影响最终价格。",
+    kitchen_p2: "其中一个关键因素是台面选择。过去较常见的是石英石，如今越来越多业主选择岩板，因为它更耐热、耐刮，也更有高级感。大多数情况下，岩板的价格会高于一般石英石。",
+    kitchen_p3: "另一个成本因素是厨房上、下柜之间的背板区域。这个区域可以选择瓷砖、玻璃、石英石或岩板。若升级为更高级的全高材质，材料和施工费用都会增加。",
+    wetworks_title: "3. 湿作工程",
+    wetworks_p1: "湿作工程通常包括浴室、厨房铺砖、防水、找平以及与水喉相关的配合工作。对于转售单位而言，由于原有条件较旧或较难预判，这部分预算往往更高。",
+    tiles_title: "4. 瓷砖、大理石与产地差异",
+    tiles_p1: "瓷砖和石材的价格会受到产地、表面处理与尺寸影响。来自意大利、西班牙等欧洲国家的材料，通常会比马来西亚或中国的产品更贵，这往往与工艺、品牌定位及表面一致性有关。",
+    tiles_p2: "瓷砖尺寸同样会影响价格。很多业主会使用 600 x 600 mm，也有人偏好 600 x 1,200 mm 甚至更大的大板砖。尺寸越大，视觉上越完整高级，但对搬运和铺贴工艺要求也更高，因此材料与人工费用通常都会上升。",
+    elec_title: "5. 电气与水喉升级",
+    elec_p1: "增加灯位、隐藏式走线、更换旧系统以及新增水喉路线，都会推高最终预算，尤其在转售单位中更为常见。",
+    bto_vs_resale_title: "BTO 与转售：为什么费用差这么多？",
+    bto_vs_resale_intro: "在新加坡，很多业主最容易误判的，就是 BTO 翻新与转售翻新之间的差异。",
+    bto_title: "BTO 翻新",
+    bto_p1: "BTO 通常是一张较为空白的画布，拆除工程较少、隐藏问题较少、现场变数也较低，因此整体预算更容易控制。",
+    resale_title: "转售翻新",
+    resale_p1: "转售单位在进入外观与设计层之前，往往先要处理大量基础问题，例如拆除旧饰面、重做旧电线、更换老化水管、湿区防水以及拆除后的地面找平。",
+    resale_p2: "实际操作中，转售翻新的费用往往会比相近规格的 BTO 高出 20% 至 40%，因为预算中更大一部分必须先花在“把单位恢复到可翻新状态”。",
+    callout_title: "可以这样理解",
+    callout_body: "如果一套 BTO 的翻新预算约为 $55,000，那么当项目加入拆除、重拉电线、更换水管及防水等工程后，对应的转售单位预算很快就会来到 $70,000 至 $80,000。",
+    overspend_title: "业主最容易超支的地方",
+    overspend_intro: "根据新加坡常见的翻新情况，业主最容易在以下几类项目上超支：",
+    overspend_items: {
+      "1": "做了太多看起来很厉害、但日常并不真正需要的木作",
+      "2": "过度追随趋势，而忽略了保养、实用性以及风格更新速度",
+      "3": "太迟才改变布局决策，导致变更单与返工",
+      "4": "只选最便宜的报价，而没有看清材料规格、遗漏项目与后续追加风险"
+    },
+    budget_title: "怎样更现实地规划翻新预算？",
+    budget_intro: "更好的翻新预算，通常不是从猜数字开始，而是从清晰度开始。",
+    budget_cards: {
+      "1": "先从生活方式与实际需求出发，而不是先看图片",
+      "2": "设定预算区间，而不是只给一个死数字",
+      "3": "优先把预算放在布局、功能与耐用性上",
+      "4": "把装饰性升级控制在真正有意义的范围内",
+      "5": "尤其在转售单位中，预留应对现场情况的空间",
+      "6": "预留 10% 到 15% 的应急备用金"
+    },
+    budget_p2: "与其说“我只想花 $50,000”，更实际的想法通常是：“如果设计重点合理，我可以接受 $50,000 到 $65,000 的区间。” 这样项目会更容易保持现实与可控。",
+    expectation_title: "对新加坡业主来说，更现实的预算预期",
+    expectation_intro: "在目前市场中，很多业主最后会落在以下区间：",
+    expectation_items: {
+      "1": "$50,000–$70,000：舒适、完整且兼顾设计感的住宅",
+      "2": "$70,000–$90,000：更高定制度与更明显材料升级的住宅"
+    },
+    expectation_p2: "低于这个区间并非不可能，但通常意味着在木作范围、材料选择或湿作工程上需要更多取舍。高于这个区间则通常反映的是设计野心，而不只是基本需要。",
+    final_title: "最后的观点",
+    final_p1: "在新加坡，翻新费用不只是面积或表面报价的问题。它更反映了您的生活方式、定制度、材料质感，以及房屋本身需要多少前期基础处理。",
+    final_p2: "大多数业主并不会后悔花得更多；他们更常后悔的是：前期预算不够清晰、决定做得太晚，或一开始没有真正理解费用是如何被推高的。",
+    final_p3: "更好的翻新，不一定是最贵的翻新，而是预算、设计重点与日常生活方式从一开始就被妥善对齐的翻新。"
+  },
+  next_title: "新加坡 HDB 翻新时间表"
+};
+
+enT["article_hdb_timeline"] = {
+  meta: {
+    title: "HDB Renovation Timeline in Singapore (2026 Guide) | ID Work Studio",
+    description: "Understand how long HDB renovation takes in Singapore, including real timelines, delays, and when you can actually move in."
+  },
+  hero_badge: "Planning Guide",
+  title: "HDB Renovation Timeline in Singapore (2026 Guide)",
+  subtitle: "A practical breakdown of how long renovation really takes, where delays happen, and when you can realistically move in.",
+  read_time: "7 min read",
+  sections: {
+    duration_title: "How long does HDB renovation take?",
+    duration_intro: "In Singapore, most renovation timelines fall within these ranges:",
+    duration_items: {
+      "1": "BTO: 8–12 weeks",
+      "2": "Resale: 10–16 weeks"
+    },
+    duration_p2: "BTO flats are faster due to fewer structural changes, while resale units require additional work such as hacking, rewiring and plumbing upgrades.",
+    breakdown_title: "Typical renovation timeline breakdown",
+    phases: {
+      "1": { title: "1. Planning & Design (2–4 weeks)", desc: "Layout planning, design concept, quotation and material selection." },
+      "2": { title: "2. Permit Approval (1–3 weeks)", desc: "Submission of HDB permits, especially for hacking and wet works." },
+      "3": { title: "3. Hacking & Demolition (3–7 days)", desc: "Mainly for resale units." },
+      "4": { title: "4. Wet Works (2–3 weeks)", desc: "Tiling, waterproofing and floor preparation." },
+      "5": { title: "5. Carpentry Production (3–5 weeks)", desc: "Fabrication is done off-site and often overlaps with other phases of the renovation timeline." },
+      "6": { title: "6. Installation (2–3 weeks)", desc: "Carpentry, electrical and painting." },
+      "7": { title: "7. Final Touch & Handover (1 week)", desc: "Defect rectification and cleaning." }
+    },
+    movein_title: "When can you actually move in?",
+    movein_p1: "Most homeowners cannot move in immediately after completion. You should allow an additional 1–2 weeks for cleaning, airing and final adjustments.",
+    delays_title: "Why renovations get delayed",
+    delays: {
+      "1": {
+        title: "1. Project sequencing issues",
+        p1: "Renovation follows a Gantt chart sequence. If one stage is delayed, everything after it shifts. For example, if aircon piping is not completed, tiling and carpentry may be delayed as well.",
+        p2: "One common example is the kitchen sink. If the project uses an undermount sink, the sink needs to be installed before the countertop can be placed. If the sink is delayed, the kitchen installation is delayed too."
+      },
+      "2": {
+        title: "2. External contractors",
+        p1: "Engaging separate vendors often leads to coordination issues and schedule misalignment. If one external contractor cannot keep to the project sequence, the rest of the work can be pushed back."
+      },
+      "3": {
+        title: "3. Owner-supplied materials",
+        p1: "Items sourced from overseas can be delayed or incorrect, which stops installation work. This has become increasingly common when homeowners order kitchen systems, taps, accessories or fixtures from overseas platforms."
+      },
+      "4": {
+        title: "4. Late decisions & design changes",
+        p1: "Indecision, adding features late or changing cabinet designs midway can cause major delays. When clients continue exploring materials for too long, or cannot agree on finishes, the timeline is affected because drawings, procurement and coordination cannot be finalised.",
+        p2: "Small changes can also create large ripple effects. If a cabinet layout is revised after lighting or electrical points have already been planned, those drawings and sequences may need to be redone."
+      }
+    },
+    avoid_title: "How to avoid delays",
+    avoid_items: {
+      "1": "Finalise design early",
+      "2": "Understand project sequencing",
+      "3": "Confirm critical materials early",
+      "4": "Avoid too many contractors",
+      "5": "Align decisions early"
+    },
+    final_title: "Final perspective",
+    final_p1: "Renovation delays are rarely caused by construction itself. More often, they come from decisions, coordination and planning. When the sequence is understood clearly and key materials are confirmed early, the move-in timeline becomes much more predictable."
+  },
+  next_title: "Biggest Renovation Mistakes Singapore Homeowners Make"
+};
+
+zhT["article_hdb_timeline"] = {
+  meta: {
+    title: "新加坡 HDB 翻新时间表（2026 指南）| ID Work Studio",
+    description: "了解新加坡 HDB 翻新一般需要多久、常见延误原因，以及您大概何时可以真正入住。"
+  },
+  hero_badge: "规划指南",
+  title: "新加坡 HDB 翻新时间表（2026 指南）",
+  subtitle: "以更实际的角度拆解翻新一般需要多久、延误通常发生在哪里，以及您何时可以较安心地安排入住。",
+  read_time: "约 7 分钟",
+  sections: {
+    duration_title: "HDB 翻新一般需要多久？",
+    duration_intro: "在新加坡，大多数住宅翻新时间大致落在以下区间：",
+    duration_items: {
+      "1": "BTO：8–12 周",
+      "2": "转售组屋：10–16 周"
+    },
+    duration_p2: "BTO 通常较快，因为结构改动较少；转售单位则往往需要额外的拆除、重拉电线与水喉升级工程。",
+    breakdown_title: "常见翻新时间拆解",
+    phases: {
+      "1": { title: "1. 规划与设计（2–4 周）", desc: "包括空间布局、设计方向、报价讨论及材料选择。" },
+      "2": { title: "2. 许可证审批（1–3 周）", desc: "提交 HDB 所需许可证，尤其是拆改和湿作工程相关审批。" },
+      "3": { title: "3. 拆除与清拆（3–7 天）", desc: "主要发生在转售单位。" },
+      "4": { title: "4. 湿作工程（2–3 周）", desc: "包括铺砖、防水及地面处理。" },
+      "5": { title: "5. 木作生产（3–5 周）", desc: "木作通常在工厂场外制作，并与其他工程阶段交叉进行。" },
+      "6": { title: "6. 安装阶段（2–3 周）", desc: "包括木作安装、电气及油漆等工程。" },
+      "7": { title: "7. 收尾与交付（1 周）", desc: "进行修补、清洁及最终交付准备。" }
+    },
+    movein_title: "什么时候才算真正可以入住？",
+    movein_p1: "大多数业主并不能在工程完工当天立刻入住。一般还需要额外预留 1–2 周用于清洁、散味和最后的小修整。",
+    delays_title: "翻新为什么会延误？",
+    delays: {
+      "1": {
+        title: "1. 工序衔接问题",
+        p1: "翻新通常按甘特图工序推进。如果前一项工作延误，后面的工程就会整体往后推。例如冷气铜管若未及时完成，铺砖和木作安装都可能受到影响。",
+        p2: "厨房水槽就是常见例子之一。如果项目使用下嵌式水槽，水槽必须先到位并安装好，台面才能继续施工。若水槽延误，整个厨房安装也会被拖慢。"
+      },
+      "2": {
+        title: "2. 外部承包商介入",
+        p1: "当业主分别找不同供应商处理某些项目时，往往更容易出现协调失衡与时间错位。只要其中一方无法按工序配合，后续工作就会被拖延。"
+      },
+      "3": {
+        title: "3. 业主自购材料",
+        p1: "从海外采购的材料可能出现延误、规格不合或配件不齐，直接导致安装无法进行。现在越来越多业主会自行购买厨房系统、水龙头、卫浴配件或其他五金，这类问题也因此更常见。"
+      },
+      "4": {
+        title: "4. 太迟做决定或中途改设计",
+        p1: "材料一直定不下来、临时加功能，或木作设计做到一半又改变，都会造成明显延误。若夫妻双方迟迟无法对材料、颜色或风格达成一致，图纸、采购与工序安排都难以定案。",
+        p2: "很多看似小的改动，其实会带来连锁反应。例如柜体布局一旦改变，原本规划好的灯位与电位往往也要重画重配，整个工序就得重新协调。"
+      }
+    },
+    avoid_title: "怎样减少延误？",
+    avoid_items: {
+      "1": "尽早确认设计方向",
+      "2": "理解项目工序顺序",
+      "3": "尽早确认关键材料",
+      "4": "避免过多外部承包商",
+      "5": "尽早统一决策"
+    },
+    final_title: "最后的观点",
+    final_p1: "翻新延误通常并不是施工本身造成的，更多时候是因为决策、协调与前期规划不足。当工序逻辑被理解清楚，关键材料也能提早确认时，入住时间通常会更可预测。"
+  },
+  next_title: "新加坡业主最常见的翻新错误"
+};
+
+enT["article_renovation_mistakes"] = {
+  meta: {
+    title: "Biggest Renovation Mistakes Singapore Homeowners Make | ID Work Studio",
+    description: "Avoid costly renovation mistakes in Singapore. Learn common pitfalls and how to plan better with this experience-led guide."
+  },
+  hero_badge: "Strategy Guide",
+  title: "Biggest Renovation Mistakes Singapore Homeowners Make",
+  subtitle: "A practical guide to avoiding costly renovation mistakes, based on real project experience in Singapore.",
+  read_time: "7 min read",
+  sections: {
+    intro_title: "Why renovation mistakes are so common",
+    intro_p1: "Renovation is a one-time major decision for most homeowners. With so many design choices, materials and suppliers available today, mistakes often happen due to unclear decisions early in the process.",
+    mistakes_title: "Common renovation mistakes",
+    mistakes: {
+      "1": { title: "1. Underestimating cost", body: "Many homeowners focus only on the base quotation and overlook hidden costs. A 10–15% buffer is recommended." },
+      "2": { title: "2. Choosing based on price", body: "The cheapest quote often leads to unclear scope and additional costs later." },
+      "3": { title: "3. Overdesigning", body: "Too many features without considering daily use leads to impractical spaces." },
+      "4": { title: "4. Poor storage planning", body: "Insufficient storage is one of the most common long-term regrets." },
+      "5": { title: "5. Following trends too closely", body: "Trends change faster than renovation cycles and may not age well." },
+      "6": { title: "6. Late decisions and design changes", body: "Indecision, adding features late, or redesigning midway causes delays and rework." },
+      "7": { title: "7. Underestimating resale complexity", body: "Resale flats often require more hidden work such as hacking and rewiring." },
+      "8": { title: "8. Buying materials without understanding dependencies", body: "Owner-supplied items such as overseas purchases can delay work if not delivered on time or incorrectly specified." }
+    },
+    avoid_title: "How to avoid these mistakes",
+    avoid_items: {
+      "1": "Start with a clear design direction",
+      "2": "Align expectations early",
+      "3": "Finalise key materials before work",
+      "4": "Understand sequencing",
+      "5": "Focus on function over trends"
+    },
+    final_title: "Final perspective",
+    final_p1: "Most homeowners do not regret spending more. They regret unclear decisions and rushed choices. In practice, clarity early in the process prevents more problems than budget alone ever can."
+  },
+  next_title: "Renovation Cost Guide"
+};
+
+zhT["article_renovation_mistakes"] = {
+  meta: {
+    title: "新加坡业主最常见的翻新错误 | ID Work Studio",
+    description: "通过这篇基于实务经验的指南，了解新加坡住宅翻新中常见的错误，以及如何更稳妥地规划。"
+  },
+  hero_badge: "策略指南",
+  title: "新加坡业主最常见的翻新错误",
+  subtitle: "从实际项目经验出发，帮助您避开代价高昂的翻新错误。",
+  read_time: "约 7 分钟",
+  sections: {
+    intro_title: "为什么翻新错误这么常见？",
+    intro_p1: "对大多数业主而言，翻新是一项人生中不常发生的重要决定。如今设计、材料与供应商选择太多，许多错误并不是因为判断太差，而是因为前期决策不够清晰。",
+    mistakes_title: "常见翻新错误",
+    mistakes: {
+      "1": { title: "1. 低估整体预算", body: "很多业主只看基础报价，却忽略了隐藏费用。一般建议额外预留 10–15% 的应急预算。" },
+      "2": { title: "2. 只按价格做决定", body: "最低报价往往伴随着范围不清，后期更容易出现追加费用。" },
+      "3": { title: "3. 过度设计", body: "如果只顾外观、不顾日常使用，空间很容易变得不实用。" },
+      "4": { title: "4. 收纳规划不足", body: "收纳不足是许多业主入住后一再后悔的问题之一。" },
+      "5": { title: "5. 过度追随潮流", body: "流行变化速度往往快过一次翻新的使用周期，太追潮流未必耐看耐用。" },
+      "6": { title: "6. 太迟做决定或中途改设计", body: "迟迟无法定案、临时加功能或中途修改设计，都会造成延误与返工。" },
+      "7": { title: "7. 低估转售单位复杂度", body: "转售单位往往隐藏着更多拆除、重拉电线与基础修复工程。" },
+      "8": { title: "8. 购买材料时忽略工序依赖", body: "若业主自购材料，尤其是海外采购项目，一旦延误或规格错误，就会直接影响施工安排。" }
+    },
+    avoid_title: "怎样减少这些错误？",
+    avoid_items: {
+      "1": "先确立清晰的设计方向",
+      "2": "尽早统一彼此期待",
+      "3": "在开工前确定关键材料",
+      "4": "理解工序顺序",
+      "5": "把功能放在潮流之前"
+    },
+    final_title: "最后的观点",
+    final_p1: "大多数业主并不会后悔花得更多，他们更常后悔的是：决定做得太晚、沟通不够清晰，或在一开始没有把真正重要的事情想清楚。很多问题，并不是预算不够，而是前期清晰度不够。"
+  },
+  next_title: "新加坡翻新费用指南"
 };
 
 i18n

@@ -21,7 +21,7 @@ export default function Navbar() {
       {/* Accreditation Bar */}
       <div className="bg-charcoal text-white text-xs py-2 text-center tracking-widest uppercase font-medium border-b border-champagne/20">
         <a 
-          href="https://services2.hdb.gov.sg/webapp/BN31AWERRCMobile/BN31PListingContractor.jsp" 
+          href="https://services2.hdb.gov.sg/webapp/FI10AWBIZ/" 
           target="_blank" 
           rel="noopener noreferrer"
           title="Search for ID WORK STUDIO"
@@ -47,14 +47,15 @@ export default function Navbar() {
             <div className="flex-shrink-0 flex items-center mb-4 lg:mb-0">
               <Link to="/" className="font-sans text-2xl md:max-lg:text-[1.2rem] font-black tracking-tighter text-charcoal uppercase">ID WORK STUDIO</Link>
             </div>
-            
+
             <div className="hidden md:flex space-x-4 lg:space-x-8 items-center">
               <Link to="/#home" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.12rem] font-light font-sans">{t('nav.home')}</Link>
               <Link to="/residential" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/residential') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.residential')}</Link>
               <Link to="/commercial" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/commercial') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.commercial')}</Link>
+              <Link to="/insights" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/insights') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.insights')}</Link>
               <Link to="/gallery" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/gallery') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.gallery')}</Link>
               <Link to="/#contact" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.12rem] font-light font-sans">{t('nav.contact')}</Link>
-              
+
               <button 
                 onClick={toggleLanguage}
                 className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.12rem] font-light font-sans ml-4 border border-charcoal/20 px-3 py-1 rounded-full"
@@ -86,6 +87,7 @@ export default function Navbar() {
               <Link to="/#home" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.home')}</Link>
               <Link to="/residential" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.residential')}</Link>
               <Link to="/commercial" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.commercial')}</Link>
+              <Link to="/insights" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.insights')}</Link>
               <Link to="/gallery" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.gallery')}</Link>
               <Link to="/#contact" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.contact')}</Link>
             </div>
