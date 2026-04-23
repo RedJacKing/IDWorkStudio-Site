@@ -109,13 +109,13 @@ export default function Residential() {
   };
 
   const faqIcons: Record<string, React.ReactNode> = {
-    '1': <DollarSign  className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
-    '2': <DollarSign  className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
-    '3': <Building    className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
-    '4': <Box         className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
-    '5': <FileText    className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
-    '6': <Clock       className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
-    '7': <TrendingUp  className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '1': <DollarSign className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '2': <DollarSign className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '3': <Building className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '4': <Box className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '5': <FileText className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '6': <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
+    '7': <TrendingUp className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
     '8': <ShieldCheck className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />,
   };
 
@@ -161,7 +161,6 @@ export default function Residential() {
       </Helmet>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
-
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-32 text-white">
           <div className="absolute inset-0 z-0">
             <img
@@ -283,7 +282,7 @@ export default function Residential() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {([
-                { icon: <Box      className="w-12 h-12 text-gold mb-8 group-hover:scale-110 transition-transform" />, key: '1' },
+                { icon: <Box className="w-12 h-12 text-gold mb-8 group-hover:scale-110 transition-transform" />, key: '1' },
                 { icon: <TrendingUp className="w-12 h-12 text-gold mb-8 group-hover:scale-110 transition-transform" />, key: '2' },
                 { icon: <Sparkles className="w-12 h-12 text-gold mb-8 group-hover:scale-110 transition-transform" />, key: '3' },
               ] as const).map(({ icon, key }) => (
@@ -303,7 +302,6 @@ export default function Residential() {
 
         <section className="py-24 bg-off-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div className="text-center mb-16">
               <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold">
                 {t('residential_page.pricing.badge')}
@@ -425,10 +423,91 @@ export default function Residential() {
           </div>
         </section>
 
+        <section className="py-20 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <h2 className="text-3xl md:text-5xl font-serif mb-6 text-charcoal uppercase tracking-tighter">
+                {t('residential_page.timeline.title')}
+              </h2>
+              <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
+              <p className="text-gray-500 max-w-2xl mx-auto text-lg font-light">
+                {t('residential_page.timeline.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {(['1', '2', '3'] as const).map((key) => {
+                const icons: Record<string, React.ReactNode> = {
+                  '1': <FileText className="w-6 h-6 text-gold" />,
+                  '2': <Clock className="w-6 h-6 text-gold" />,
+                  '3': <CheckCircle className="w-6 h-6 text-gold" />,
+                };
+
+                return (
+                  <div
+                    key={key}
+                    className="bg-off-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-5">
+                      {icons[key]}
+                    </div>
+                    <h3 className="text-xl font-bold text-charcoal uppercase tracking-wide mb-3">
+                      {t(`residential_page.timeline.items.${key}.title`)}
+                    </h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">
+                      {t(`residential_page.timeline.items.${key}.desc`)}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-off-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <h2 className="text-3xl md:text-5xl font-serif mb-6 text-charcoal uppercase tracking-tighter">
+                {t('residential_page.mistakes.title')}
+              </h2>
+              <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
+              <p className="text-gray-500 max-w-2xl mx-auto text-lg font-light">
+                {t('residential_page.mistakes.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {(['1', '2', '3'] as const).map((key) => {
+                const icons: Record<string, React.ReactNode> = {
+                  '1': <DollarSign className="w-6 h-6 text-gold" />,
+                  '2': <Layout className="w-6 h-6 text-gold" />,
+                  '3': <ShieldCheck className="w-6 h-6 text-gold" />,
+                };
+
+                return (
+                  <div
+                    key={key}
+                    className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-5">
+                      {icons[key]}
+                    </div>
+                    <h3 className="text-xl font-bold text-charcoal uppercase tracking-wide mb-3">
+                      {t(`residential_page.mistakes.items.${key}.title`)}
+                    </h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">
+                      {t(`residential_page.mistakes.items.${key}.desc`)}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
         <section className="py-24 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
               <div className="relative h-[540px] group order-2 lg:order-1">
                 <img
                   src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=2000&auto=format&fit=crop"
@@ -439,7 +518,9 @@ export default function Residential() {
                 />
                 <div className="absolute -top-5 -right-4 md:-right-8 bg-gold text-dark-charcoal p-5 md:p-6 rounded-2xl shadow-xl">
                   <p className="text-2xl md:text-3xl font-bold font-serif leading-none">13,480</p>
-                  <p className="text-[10px] uppercase tracking-widest mt-1 font-bold leading-tight">MOP Flats<br/>in 2026</p>
+                  <p className="text-[10px] uppercase tracking-widest mt-1 font-bold leading-tight">
+                    MOP Flats<br />in 2026
+                  </p>
                 </div>
               </div>
 
@@ -498,7 +579,7 @@ export default function Residential() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {(['1','2','3','4','5','6','7','8'] as const).map((key) => (
+              {(['1', '2', '3', '4', '5', '6', '7', '8'] as const).map((key) => (
                 <div
                   key={key}
                   className="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold hover:shadow-md transition-all duration-300"
@@ -530,7 +611,7 @@ export default function Residential() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {(['1','2','3'] as const).map((key) => (
+              {(['1', '2', '3'] as const).map((key) => (
                 <div
                   key={key}
                   className="bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:bg-white/[0.07] transition-all duration-300 flex flex-col"
@@ -539,10 +620,10 @@ export default function Residential() {
                     <p className="text-gold text-lg tracking-widest">★★★★★</p>
                     <span className="flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
                       </svg>
                       <span className="text-[9px] uppercase tracking-widest text-white/60 font-bold">
                         {t('residential_page.testimonials.verified')}
@@ -574,15 +655,14 @@ export default function Residential() {
                 className="inline-flex items-center gap-2 text-gray-400 hover:text-white text-xs uppercase tracking-widest transition-colors duration-200"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
                 </svg>
                 View all reviews on Google
               </a>
             </div>
-
           </div>
         </section>
 
@@ -605,7 +685,6 @@ export default function Residential() {
           </div>
           <div className="absolute top-0 left-0 w-64 h-64 border-l border-t border-gold/10 -translate-x-1/2 -translate-y-1/2"></div>
         </section>
-
       </div>
     </>
   );

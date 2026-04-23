@@ -210,6 +210,42 @@ const resources = {
           },
           "cta": "Plan My Resale Renovation"
         },
+        "timeline": {
+          "title": "HDB Renovation Timeline in Singapore",
+          "subtitle": "Most residential renovation projects follow a clear journey from planning and approvals to construction and final handover.",
+          "items": {
+            "1": {
+              "title": "Planning & Design",
+              "desc": "2–4 weeks for consultation, layout planning, material selection, design development and quotation review before works begin."
+            },
+            "2": {
+              "title": "Renovation Works",
+              "desc": "8–12 weeks for most BTO homes and 10–16 weeks for resale flats, depending on hacking, carpentry, plumbing and overall scope."
+            },
+            "3": {
+              "title": "Final Handover",
+              "desc": "Final detailing, touch-ups, inspections and handover are completed once the home is ready for comfortable everyday living."
+            }
+          }
+        },
+        "mistakes": {
+          "title": "Common Renovation Mistakes to Avoid",
+          "subtitle": "A well-planned renovation is not just about style — it is also about avoiding unnecessary delays, rework and budget surprises.",
+          "items": {
+            "1": {
+              "title": "Underestimating Budget",
+              "desc": "Hidden costs can come from additional electrical works, waterproofing, old pipe replacement and custom carpentry upgrades."
+            },
+            "2": {
+              "title": "Poor Space Planning",
+              "desc": "A home can look beautiful but still feel awkward if storage, movement flow and daily routines are not considered early."
+            },
+            "3": {
+              "title": "Ignoring Regulations",
+              "desc": "HDB guidelines, permit approvals and structural requirements need to be handled properly to avoid delays and costly corrections."
+            }
+          }
+        },
         "faq_section": {
           "title": "Frequently Asked Questions",
           "subtitle": "Everything Singapore homeowners need to know before starting their renovation journey.",
@@ -273,10 +309,10 @@ const resources = {
       },
       "commercial_page": {
         "hero": {
-          "title": "Commercial Interior Design & Office Fit-Out Singapore",
-          "subtitle": "Refined workplace, retail and F&B environments delivered with thoughtful planning, compliance-led coordination and polished execution.",
-          "cta": "Request Site Survey",
-          "cta_reinstatement": "LEARN MORE ABOUT REINSTATEMENT"
+          "title": "新加坡商业室内设计与办公室装修",
+          "subtitle": "为办公室、零售与餐饮空间打造更精致的商业环境，并以周密规划、合规协调与细致执行完成交付。",
+          "cta": "预约现场勘察",
+          "cta_reinstatement": "了解更多原状修复服务"
         },
         "solutions": {
           "title": "Commercial Renovation Solutions",
@@ -604,12 +640,11 @@ const resources = {
       },
       "residential_page": {
         "hero": {
-        "title_main": "精心打造的室内设计 ",
-        "title_sub": "成就精致生活",
-        "subtitle": "新加坡室内设计与翻新工作室，专注于住宅、办公与零售空间的精致呈现，以细节、美感与合规并重，打造历久弥新的空间体验。",
-        "cta": "查看我们的作品",
-        "whatsapp": "WhatsApp 立即咨询"
-      },
+          "badge": "2026 设计趋势",
+          "title": "新加坡 HDB 与公寓室内设计 — 精致生活，匠心打造",
+          "subtitle": "具备 HDB 执照与 BCA 注册资质，为现代居住需求打造专属住宅，涵盖规划、报批与精致施工。",
+          "cta": "预约家居咨询"
+        },
         "lifestyle": {
           "title": "生活方式优先的设计解决方案",
           "subtitle": "通过创新设计打造反映您个性并提升日常生活的空间。",
@@ -723,6 +758,42 @@ const resources = {
           },
           "cta": "规划我的转售组屋翻新"
         },
+        "timeline": {
+          "title": "新加坡组屋翻新时间表",
+          "subtitle": "大多数住宅翻新项目都会经历从规划与审批，到施工与最终交付的清晰流程。",
+          "items": {
+            "1": {
+              "title": "规划与设计",
+              "desc": "通常需要 2–4 周进行咨询、格局规划、材料挑选、设计深化及报价确认，随后才正式开工。"
+            },
+            "2": {
+              "title": "施工阶段",
+              "desc": "大多数 BTO 住宅约需 8–12 周；转售组屋通常需 10–16 周，视拆改、木作、水电及整体工程范围而定。"
+            },
+            "3": {
+              "title": "最终交付",
+              "desc": "在细节修饰、收尾修补与检查完成后，才会把住宅交付给您，确保空间适合安心入住。"
+            }
+          }
+        },
+        "mistakes": {
+          "title": "常见翻新误区",
+          "subtitle": "一项规划完善的翻新，不仅关乎美感，也在于避免不必要的延误、返工与预算超支。",
+          "items": {
+            "1": {
+              "title": "低估整体预算",
+              "desc": "额外的电气工程、防水处理、老旧水管更换，以及定制木作升级，往往都会带来额外成本。"
+            },
+            "2": {
+              "title": "忽略空间规划",
+              "desc": "即使住宅看起来美观，如果没有及早考虑收纳、动线与日常生活习惯，居住体验仍会受到影响。"
+            },
+            "3": {
+              "title": "忽视相关规范",
+              "desc": "HDB 指南、许可证审批与结构要求都必须妥善处理，否则可能导致工程延误或后续修正成本增加。"
+            }
+          }
+        },
         "faq_section": {
           "title": "常见问题",
           "subtitle": "新加坡业主在开始翻新之旅前需要了解的一切。",
@@ -786,170 +857,170 @@ const resources = {
       },
       "commercial_page": {
         "hero": {
-          "badge": "2026 设计趋势",
-          "title": "新加坡 HDB 与公寓室内设计——为精致生活而打造",
-          "subtitle": "作为具备 HDB 执照及 BCA 注册资质的设计公司，我们以周密规划、许可证协调与细致执行，为您打造契合现代生活的理想居所。",
-          "cta": "预约家居咨询"
+          "title": "新加坡商业室内设计与办公室装修",
+          "subtitle": "为办公室、零售与餐饮空间打造更精致的商业环境，并以周密规划、合规协调与细致执行完成交付。",
+          "cta": "预约现场勘察",
+          "cta_reinstatement": "了解更多原状修复服务"
         },
         "solutions": {
           "title": "商业翻新解决方案",
           "items": {
             "1": {
-              "title": "提高生产力的办公室翻新解决方案",
-              "desc": "优化混合办公布局、符合人体工程学的工作站和协作区。我们处理办公室恢复原状和全面装修。",
-              "point1": "办公室恢复原状",
+              "title": "提升效率的办公室翻新方案",
+              "desc": "优化混合办公布局、人体工学工作站与协作区域。我们可处理办公室原状修复及全面装修工程。",
+              "point1": "办公室原状修复",
               "point2": "系统家具"
             },
             "2": {
-              "title": "高人流量零售与店面设计",
-              "desc": "吸引人的零售室内设计，推动客流量和销售。从奢侈品精品店到高街零售装修。",
-              "point1": "视觉营销",
-              "point2": "照明设计"
+              "title": "高人流零售与店面设计",
+              "desc": "打造吸引客流与提升销售的零售空间，从精品店到高街零售门店皆可提供完整设计与施工服务。",
+              "point1": "视觉陈列",
+              "point2": "灯光设计"
             },
             "3": {
-              "title": "符合 BCA/HDB 标准的商业翻新",
-              "desc": "完全符合新加坡严格的建筑规范。我们管理餐饮、工业和商业空间的所有提交文件。",
-              "point1": "FSSD (消防安全) 提交",
-              "point2": "大厦管理 (MA) 联络"
+              "title": "符合 BCA / HDB 标准的商业翻新",
+              "desc": "全面配合新加坡严格建筑规范，可统筹餐饮、工业及商业空间所需的各项报批与施工协调。",
+              "point1": "FSSD（消防安全）报批",
+              "point2": "大厦管理协调"
             }
           }
         },
         "project_management": {
-          "title": "战略项目管理",
-          "subtitle": "通过精准的规划和执行，最大限度地减少业务停机时间。",
+          "title": "策略型项目管理",
+          "subtitle": "通过精准规划与执行，尽可能减少业务停顿时间。",
           "items": {
             "1": {
-              "title": "停机时间最小化",
-              "desc": "分阶段翻新策略，确保您的业务在装修过程中保持运营。"
+              "title": "降低停业影响",
+              "desc": "采用分阶段施工策略，让您的业务在装修期间尽量维持运作。"
             },
             "2": {
-              "title": "甘特图透明度",
-              "desc": "详细的项目时间表和每周进度报告，确保按时交付。"
+              "title": "甘特图进度透明",
+              "desc": "提供清晰项目时间表与每周进度更新，帮助您掌握交付节点。"
             },
             "3": {
               "title": "一站式交付",
-              "desc": "从最初的现场勘察到最终交付，我们管理商业项目的每一个细节。"
+              "desc": "从现场勘察到最终移交，我们统筹商业项目中的每一个关键细节。"
             }
           }
         },
         "trust": {
-          "title": "项目管理与合规",
-          "subtitle": "我们处理繁文缛节，让您专注于您的业务。",
+          "title": "项目管理与合规协调",
+          "subtitle": "繁琐流程交给我们，您可更专注于业务本身。",
           "items": {
             "1": {
-              "title": "消防安全 (SCDF)",
-              "desc": "全面处理消防安全法规的提交和批准。"
+              "title": "消防安全（SCDF）",
+              "desc": "协助处理消防安全相关报批与审批流程。"
             },
             "2": {
               "title": "BCA 许可证",
-              "desc": "熟悉建筑与建设局相关许可要求，并具备完整协调经验。"
+              "desc": "具备建筑与建设局相关报批与协调经验。"
             },
             "3": {
-              "title": "商场管理",
-              "desc": "在与新加坡主要商场管理团队协调方面经验丰富。"
+              "title": "商场管理协调",
+              "desc": "熟悉新加坡主要商场与办公楼管理团队的配合要求。"
             },
             "4": {
               "title": "现场安全",
-              "desc": "严格遵守工作场所安全与健康 (WSH) 标准。"
+              "desc": "严格遵守工作场所安全与健康（WSH）标准。"
             }
           }
         },
         "faq": {
           "title": "常见问题",
           "q1": {
-            "q": "新加坡办公室装修的平均时间表是怎样的？",
-            "a": "对于新加坡的标准办公室装修（约2,000 - 5,000平方英尺），时间表通常在<strong>4到8周</strong>之间。这包括1-2周的设计 and 材料选择，1-2周的BCA/消防安全提交，以及4-6周的翻新工程。需要大量机电工程或结构更改的复杂项目可能需要8-12周。"
+            "q": "新加坡办公室装修一般需要多久？",
+            "a": "标准办公室装修（约 2,000–5,000 平方英尺）通常需要 <strong>4 到 8 周</strong>。其中包括 1–2 周设计与选材、1–2 周 BCA / 消防安全报批，以及 4–6 周施工时间。若涉及大量机电工程或结构改动，整体时间可能延长至 8–12 周。"
           },
           "q2": {
-            "q": "BCA注册公司如何确保商业安全合规？",
-            "a": "作为BCA注册公司，我们通过严格的3步流程确保合规性：<br/><br/>1. <strong>提交前检查：</strong> 我们的合格人员(QP)根据当前的SCDF消防规范和BCA无障碍标准审查所有设计。<br/>2. <strong>许可证管理：</strong> 在工作开始前，我们处理向BCA、URA和FSSD的所有必要提交。<br/>3. <strong>现场监督：</strong> 持牌CoreTrade人员监督关键工程，确保其符合批准的规范和安全法规。"
+            "q": "BCA 注册公司如何确保商业项目的安全合规？",
+            "a": "作为 BCA 注册公司，我们通常通过三步确保合规：<br/><br/>1. <strong>报批前检查：</strong>由合格人员（QP）审查设计是否符合现行 SCDF 消防规范与 BCA 无障碍标准。<br/>2. <strong>许可证管理：</strong>在开工前处理所需的 BCA、URA 与 FSSD 相关报批。<br/>3. <strong>现场监督：</strong>由持牌 CoreTrade 人员监督关键工序，确保与已批准方案及安全法规一致。"
           },
           "q3": {
-            "q": "新加坡商业翻新的许可证要求是什么？",
-            "a": "新加坡商业翻新通常需要根据施工范围向多个部门提交申请：结构工程需提交 <strong>BCA</strong>，消防安全修改（洒水器、防火门、应急照明）需提交 <strong>SCDF</strong>，用途变更需提交 <strong>URA</strong>，商场或写字楼装修需提交 <strong>MCST</strong>。作为 BCA 注册公司，我们可内部统筹各项报批流程，协助项目更有序地推进。"
+            "q": "新加坡商业翻新通常需要哪些许可证？",
+            "a": "商业翻新通常需按工程范围向不同单位提交申请：<strong>BCA</strong> 负责结构工程，<strong>SCDF</strong> 负责消防安全更改（如喷淋、防火门、应急照明），<strong>URA</strong> 负责用途变更，而商场或办公楼装修常涉及 <strong>MCST</strong>。作为 BCA 注册公司，我们可内部统筹相关报批流程，帮助项目更有序推进。"
           },
           "q4": {
-            "q": "新加坡商业翻新费用是多少？",
-            "a": "新加坡商业翻新费用因空间类型和装修标准而异：<br/><br/>• <strong>办公室翻新：</strong>每平方英尺 S$50–S$180<br/>• <strong>零售/商场装修：</strong>每平方英尺 S$65–S$150<br/>• <strong>餐饮/店屋：</strong>每平方英尺 S$80–S$200<br/>• <strong>办公室原状修复：</strong>每平方英尺 S$8–S$25<br/><br/>以上范围涵盖机电工程、假天花、隔断、地板、木工及许可证费用。请联系我们获取针对您项目的免费分项报价。"
+            "q": "新加坡商业翻新费用大概是多少？",
+            "a": "商业翻新费用会因空间类型及装修标准而异：<br/><br/>• <strong>办公室翻新：</strong>每平方英尺 S$50–S$180<br/>• <strong>零售 / 商场店铺装修：</strong>每平方英尺 S$65–S$150<br/>• <strong>餐饮 / 店屋：</strong>每平方英尺 S$80–S$200<br/>• <strong>办公室原状修复：</strong>每平方英尺 S$8–S$25<br/><br/>以上通常涵盖机电工程、天花、隔间、地面、木作及许可证费用。"
           },
           "q5": {
-            "q": "办公室原状修复与翻新有什么区别？",
-            "a": "办公室<strong>翻新</strong>是根据您的需求装修空间，包括隔断、地板、天花板、机电及木工工程。办公室<strong>原状修复</strong>则是相反的过程：在租约结束时，按照租约规定将空间恢复至原始清水房状态。原状修复通常包括拆除所有租户安装的装修，恢复原始地板和墙面，以及将消防安全系统恢复至原始位置。"
+            "q": "办公室原状修复与翻新有什么不同？",
+            "a": "办公室<strong>翻新</strong>是根据您的营运需求打造空间，包括隔间、地板、天花、机电及木作工程。办公室<strong>原状修复</strong>则是在租约结束时，将空间恢复至原始清水房状态。通常包括拆除租户加装项目、恢复原有墙地面，并将消防系统移回原位。"
           },
           "q6": {
             "q": "如何在新加坡选择合适的商业翻新公司？",
-            "a": "选择新加坡商业翻新承包商的关键标准：<br/><br/>1. <strong>BCA 注册：</strong>如涉及结构工程，应先确认该公司已列入 BCA 名录。<br/>2. <strong>项目记录：</strong>要求提供同类规模商业项目的参考资料和照片。<br/>3. <strong>内部许可证管理：</strong>优先选择能够内部处理 MCST、BCA 与 SCDF 报批流程的公司，而非完全外包给第三方。<br/>4. <strong>固定价格合同：</strong>避免选择报价含糊、缺乏详细分项的公司。<br/>5. <strong>保险：</strong>并确认该公司持有公共责任险与工伤赔偿保险。"
+            "a": "选择商业翻新公司时，可重点留意：<br/><br/>1. <strong>BCA 注册：</strong>如涉及结构工程，应先确认公司是否列入 BCA 名录。<br/>2. <strong>项目经验：</strong>查看是否有类似规模商业项目的案例与照片。<br/>3. <strong>内部报批能力：</strong>优先考虑可内部处理 MCST、BCA 与 SCDF 流程的团队。<br/>4. <strong>固定价格与明细报价：</strong>避免仅提供模糊总价而缺乏分项说明。<br/>5. <strong>保险保障：</strong>确认具备公共责任险与工伤赔偿保险。"
           }
         },
         "subpages": {
           "section_title": "商业翻新解决方案",
-          "section_subtitle": "专为新加坡各类商业空间打造的专业服务——从办公室到餐饮场所。",
+          "section_subtitle": "专为新加坡不同商业空间打造的专业服务——从办公室到餐饮门店。",
           "btn": "了解更多",
           "office": {
             "badge": "",
             "title": "办公室与工作空间翻新",
-            "desc": "为新加坡企业提供一站式办公室装修服务。混合办公布局、系统家具及完整 BCA/SCDF 合规。"
+            "desc": "为新加坡企业提供一站式办公室装修服务，包括混合办公布局、系统家具及完整 BCA / SCDF 合规协调。"
           },
           "retail": {
             "badge": "",
             "title": "零售与商场店面设计",
-            "desc": "高影响力的零售室内设计，提升客流量与销售额。负责主要新加坡商场的 MCST 提交管理。"
+            "desc": "打造高影响力零售空间，提升客流与销售，并可协助处理主要商场的 MCST 提交流程。"
           },
           "shophouse": {
             "badge": "",
             "title": "餐饮与店屋翻新",
-            "desc": "注重传统风貌的店屋翻新及餐饮装修，完全符合 URA 和 SCDF 要求。"
+            "desc": "兼顾传统风貌与营运需求的店屋翻新及餐饮装修，符合 URA 与 SCDF 要求。"
           },
           "compliance": {
             "badge": "",
             "title": "许可证与合规管理",
-            "desc": "BCA、SCDF、MCST 和 LEW 许可证管理。我们代您处理所有提交，让您专注于业务。"
+            "desc": "涵盖 BCA、SCDF、MCST 及 LEW 的报批与协调流程，让您能专注于业务发展。"
           },
           "reinstatement": {
             "badge": "",
             "title": "办公室与商场原状修复",
-            "desc": "专业清水房移交，100% 通过率保证。符合 SCDF 和 MCST 标准。"
+            "desc": "专业清水房交付服务，协助符合 SCDF 与 MCST 要求，并顺利完成交还程序。"
           }
         },
         "process": {
           "title": "我们的商业翻新流程",
-          "subtitle": "透明、逐步推进的方案，专为最大限度减少业务停机时间而设计。",
+          "subtitle": "透明且清晰的分阶段流程，尽量降低对业务营运的影响。",
           "steps": {
             "1": {
               "title": "免费现场勘察",
               "detail": "免费",
-              "desc": "我们进行详细的现场评估，并免费提供全面的分项报价。"
+              "desc": "进行详细现场评估，并提供完整的分项报价。"
             },
             "2": {
               "title": "设计与规划",
               "detail": "1–2 周",
-              "desc": "我们的设计师根据您的品牌形象制定空间方案、材料计划和 3D 效果图。"
+              "desc": "根据品牌形象与使用需求，制定空间规划、材料安排及 3D 视觉方案。"
             },
             "3": {
               "title": "许可证提交",
               "detail": "1–3 周",
-              "desc": "我们在施工开始前处理所有 BCA、SCDF、MCST 和 URA 提交。"
+              "desc": "在施工前处理所需的 BCA、SCDF、MCST 与 URA 报批流程。"
             },
             "4": {
               "title": "翻新施工",
               "detail": "4–8 周",
-              "desc": "我们持牌的 CoreTrade 团队按分阶段计划执行装修，最大限度减少业务干扰。"
+              "desc": "由持牌 CoreTrade 团队执行工程，并通过分阶段安排尽量减少营运干扰。"
             },
             "5": {
               "title": "交付与验收",
               "detail": "第 1 天",
-              "desc": "与大厦管理方联合检查、缺陷修正及完整现场交付。"
+              "desc": "与大厦管理方联合检查、处理缺陷并完成正式交付。"
             }
           }
         },
         "cta": {
-          "title": "准备好改造您的商业空间了吗？",
-          "subtitle": "为您的下一个项目，选择值得信赖且具备 BCA 注册资质的商业室内设计与装修公司。",
+          "title": "准备好升级您的商业空间了吗？",
+          "subtitle": "为您的下一个项目选择值得信赖、具备 BCA 注册资质的商业室内设计与装修团队。",
           "button": "获取商业报价"
         },
         "partners": {
           "title": "我们的客户与合作伙伴",
-          "subtitle": "深受新加坡各大品牌、跨国公司及企业信赖。"
+          "subtitle": "深受新加坡各大品牌、跨国公司及企业客户信赖。"
         }
       },
       "footer": {
@@ -967,26 +1038,24 @@ const resources = {
       },
       "reinstatement_page": {
         "hero": {
-          "title": "新加坡商业室内设计与办公室装修服务",
-          "subtitle": "为办公室、零售与餐饮空间打造更精致的环境，并以周密规划、合规协调与细致执行完成交付。",
-          "cta": "预约现场勘察",
-          "cta_reinstatement": "了解更多原状修复服务"
+          "headline_serif": "专业呈现",
+          "headline_bold": "清水房交付"
         },
         "challenges": {
           "title_serif": "克服",
           "title_bold": "原状修复挑战",
           "items": {
             "1": {
-              "pain": "担心押金被没收",
-              "solution": "100% 移交成功保证。我们为您管理业主的清单，让您高枕无忧。"
+              "pain": "担心押金被扣",
+              "solution": "我们协助对照业主或管理方的移交流程与清单，提高顺利交付的把握。"
             },
             "2": {
-              "pain": "严格的商场管理 (MCST)",
-              "solution": "我们是购物中心和甲级写字楼原状修复合规方面的专家。"
+              "pain": "商场或大厦管理要求严格",
+              "solution": "熟悉商场单位与甲级办公楼的管理规范，可配合 MCST 与大厦管理方要求安排施工。"
             },
             "3": {
-              "pain": "复杂的消防安全 (SCDF)",
-              "solution": "专业移位洒水器和烟雾探测器，并提供认证背书。"
+              "pain": "消防系统调整复杂",
+              "solution": "可协调喷淋头、烟雾探测器等消防装置的迁移与复位，并配合所需认证流程。"
             }
           }
         },
@@ -996,19 +1065,19 @@ const resources = {
           "steps": {
             "1": {
               "title": "现场勘察",
-              "desc": "免费现场评估与报价。"
+              "desc": "提供免费现场评估与报价。"
             },
             "2": {
               "title": "许可证管理",
-              "desc": "我们处理所有 MCST 和 SCDF 提交。"
+              "desc": "协助处理 MCST 与 SCDF 等相关提交流程。"
             },
             "3": {
               "title": "施工阶段",
-              "desc": "专业拆除和“清水房”还原。"
+              "desc": "进行专业拆除与清水房还原工程。"
             },
             "4": {
               "title": "完工移交",
-              "desc": "与您的房东进行最终联合检查，100% 通过。"
+              "desc": "与业主或管理方进行联合检查，完成交付。"
             }
           }
         },
@@ -1018,15 +1087,15 @@ const resources = {
           "scdf": "SCDF 合规"
         },
         "trust_row": {
-          "text": "深受新加坡各大甲级写字楼与商场租户信赖"
+          "text": "深受新加坡甲级办公楼与商场租户信赖"
         },
         "footer": {
           "headline_serif": "您的安心",
           "headline_bold": "是我们的首要任务",
-          "whatsapp_btn": "WhatsApp 获取免费现场勘察"
+          "whatsapp_btn": "WhatsApp 预约免费现场勘察"
         },
         "sticky_footer": {
-          "text": "拿回您的押金 – WhatsApp 预约免费勘察"
+          "text": "想顺利拿回押金？WhatsApp 预约免费勘察"
         }
       }
     }
