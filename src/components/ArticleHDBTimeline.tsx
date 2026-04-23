@@ -102,11 +102,6 @@ prose-h2:pt-8
 prose-h2:text-3xl 
 prose-h2:font-semibold 
 prose-h2:leading-tight 
-prose-h3:mt-12 
-prose-h3:mb-5 
-prose-h3:text-[1.7rem] 
-prose-h3:font-semibold 
-prose-h3:leading-snug 
 prose-p:text-gray-600 
 prose-p:leading-relaxed 
 prose-p:mb-6 
@@ -119,41 +114,41 @@ prose-img:rounded-2xl
 prose-img:border 
 prose-img:border-gray-100 
 prose-img:shadow-sm">
-              <h2>{t('article_hdb_timeline.sections.duration_title')}</h2>
+              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.duration_title')}</h2>
               <p>{t('article_hdb_timeline.sections.duration_intro')}</p>
               <ul>{Object.values(durationItems).map((item) => <li key={item}>{item}</li>)}</ul>
               <p>{t('article_hdb_timeline.sections.duration_p2')}</p>
 
-              <h2>{t('article_hdb_timeline.sections.breakdown_title')}</h2>
+              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.breakdown_title')}</h2>
               <img src="/images/article2-gantt.jpg" alt="Renovation Gantt chart showing sequencing of works in Singapore renovation" className="my-10 rounded-2xl w-full border border-gray-100 shadow-sm" loading="lazy" decoding="async" />
               {Object.values(phases).map((phase) => (
                 <div key={phase.title}>
-                  <h3>{phase.title}</h3>
-                  <p>{phase.desc}</p>
+                  <h3 className="!mt-10 !mb-3 text-[1.55rem] md:text-[1.7rem] font-semibold leading-snug text-charcoal">{phase.title}</h3>
+                  <p className="!mt-0 !mb-7 text-gray-600 leading-relaxed">{phase.desc}</p>
                 </div>
               ))}
 
-              <h2>{t('article_hdb_timeline.sections.movein_title')}</h2>
+              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.movein_title')}</h2>
               <p>{t('article_hdb_timeline.sections.movein_p1')}</p>
 
-              <h2>{t('article_hdb_timeline.sections.delays_title')}</h2>
+              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.delays_title')}</h2>
 
-              <h3>{t('article_hdb_timeline.sections.delays.1.title')}</h3>
+              <h3 className="!mt-10 !mb-3 text-[1.55rem] md:text-[1.7rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.1.title')}</h3>
               <img src="/images/article2-sink.jpg" alt="Undermount kitchen sink installation before countertop placement" className="my-10 rounded-2xl w-full border border-gray-100 shadow-sm" loading="lazy" decoding="async" />
               <p>{t('article_hdb_timeline.sections.delays.1.p1')}</p>
               <p>{t('article_hdb_timeline.sections.delays.1.p2')}</p>
 
-              <h3>{t('article_hdb_timeline.sections.delays.2.title')}</h3>
+              <h3 className="!mt-10 !mb-3 text-[1.55rem] md:text-[1.7rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.2.title')}</h3>
               <p>{t('article_hdb_timeline.sections.delays.2.p1')}</p>
 
-              <h3>{t('article_hdb_timeline.sections.delays.3.title')}</h3>
+              <h3 className="!mt-10 !mb-3 text-[1.55rem] md:text-[1.7rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.3.title')}</h3>
               <p>{t('article_hdb_timeline.sections.delays.3.p1')}</p>
 
-              <h3>{t('article_hdb_timeline.sections.delays.4.title')}</h3>
+              <h3 className="!mt-10 !mb-3 text-[1.55rem] md:text-[1.7rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.4.title')}</h3>
               <p>{t('article_hdb_timeline.sections.delays.4.p1')}</p>
               <p>{t('article_hdb_timeline.sections.delays.4.p2')}</p>
 
-              <h2>{t('article_hdb_timeline.sections.avoid_title')}</h2>
+              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.avoid_title')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose my-8">
                 {Object.values(avoidItems).map((item) => (
                   <div key={item} className="bg-white border border-gray-200 rounded-2xl p-5 flex items-start gap-3 shadow-sm">
@@ -163,7 +158,7 @@ prose-img:shadow-sm">
                 ))}
               </div>
 
-              <h2>{t('article_hdb_timeline.sections.final_title')}</h2>
+              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.final_title')}</h2>
               <p>{t('article_hdb_timeline.sections.final_p1')}</p>
             </div>
 
