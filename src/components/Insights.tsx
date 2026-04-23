@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
-import { ArrowRight, CalendarDays, MapPin, Mail, Phone, BookOpen, Building2, Clock3 } from 'lucide-react';
+import { ArrowRight, CalendarDays, MapPin, Mail, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 type ArticleCard = {
@@ -128,55 +128,6 @@ export default function Insights() {
             >
               {t('insights_page.hero.subtitle')}
             </motion.p>
-          </div>
-        </section>
-
-        <section className="py-20 bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-14">
-              <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold">
-                {t('insights_page.intro.eyebrow')}
-              </span>
-              <h2 className="text-3xl md:text-5xl font-serif mt-4 mb-6 text-charcoal uppercase tracking-tighter">
-                {t('insights_page.intro.title')}
-              </h2>
-              <div className="w-24 h-1 bg-gold mx-auto mb-6" />
-              <p className="text-gray-500 text-lg font-light leading-relaxed">
-                {t('insights_page.intro.body')}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: <BookOpen className="w-7 h-7 text-gold" />,
-                  title: t('insights_page.highlights.1.title'),
-                  desc: t('insights_page.highlights.1.desc'),
-                },
-                {
-                  icon: <Clock3 className="w-7 h-7 text-gold" />,
-                  title: t('insights_page.highlights.2.title'),
-                  desc: t('insights_page.highlights.2.desc'),
-                },
-                {
-                  icon: <Building2 className="w-7 h-7 text-gold" />,
-                  title: t('insights_page.highlights.3.title'),
-                  desc: t('insights_page.highlights.3.desc'),
-                },
-              ].map((item) => (
-                <div key={item.title} className="bg-off-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
-                  <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-5">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-charcoal uppercase tracking-wide mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
