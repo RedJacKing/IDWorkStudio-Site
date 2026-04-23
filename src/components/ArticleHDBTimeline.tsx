@@ -1,16 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
-
 import { useTranslation } from 'react-i18next';
 
 type StringMap = Record<string, string>;
-type PairMap = Record<string, [string, string]>;
-
 
 export default function ArticleHDBTimeline() {
   const { t } = useTranslation();
   const durationItems = t('article_hdb_timeline.sections.duration_items', { returnObjects: true }) as StringMap;
-  const phases = t('article_hdb_timeline.sections.phases', { returnObjects: true }) as Record<string, {title: string; desc: string;}>;
+  const phases = t('article_hdb_timeline.sections.phases', { returnObjects: true }) as Record<string, { title: string; desc: string }>;
   const avoidItems = t('article_hdb_timeline.sections.avoid_items', { returnObjects: true }) as StringMap;
 
   const articleSchema = {
@@ -42,6 +39,8 @@ export default function ArticleHDBTimeline() {
     ]
   };
 
+  const delayKeys = ['1', '2', '3', '4'] as const;
+
   return (
     <>
       <Helmet>
@@ -62,17 +61,27 @@ export default function ArticleHDBTimeline() {
       </Helmet>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
+
+        {/* ── HERO ── */}
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-black text-white pt-28 pb-20">
           <div className="absolute inset-0 z-0">
-            <img src="/images/insights-hero.jpg" alt="HDB renovation planning timeline in Singapore" className="w-full h-full object-cover object-center opacity-55 scale-105" fetchPriority="high" decoding="async" />
+            <img
+              src="/images/insights-hero.jpg"
+              alt="HDB renovation planning timeline in Singapore"
+              className="w-full h-full object-cover object-center opacity-55 scale-105"
+              fetchPriority="high"
+              decoding="async"
+            />
             <div className="absolute inset-0 bg-black/45" />
           </div>
-
           <div className="relative z-10 max-w-4xl text-center px-4">
-            <span className="text-xs tracking-[0.25em] uppercase border px-4 py-1 mb-5 inline-block">{t('article_hdb_timeline.hero_badge')}</span>
-            <h1 className="text-4xl md:text-6xl font-serif uppercase mb-6">{t('article_hdb_timeline.title')}</h1>
+            <span className="text-xs tracking-[0.25em] uppercase border px-4 py-1 mb-5 inline-block">
+              {t('article_hdb_timeline.hero_badge')}
+            </span>
+            <h1 className="text-4xl md:text-6xl font-serif uppercase mb-6">
+              {t('article_hdb_timeline.title')}
+            </h1>
             <p className="text-lg text-gray-200">{t('article_hdb_timeline.subtitle')}</p>
-
             <div className="flex justify-center gap-6 mt-6 text-xs uppercase">
               <span className="flex items-center gap-2"><CalendarDays className="w-4 h-4" />2026-04-23</span>
               <span className="flex items-center gap-2"><Clock3 className="w-4 h-4" />{t('article_hdb_timeline.read_time')}</span>
@@ -80,98 +89,189 @@ export default function ArticleHDBTimeline() {
           </div>
         </section>
 
+        {/* ── BACK NAV ── */}
         <section className="py-8 border-b bg-white border-gray-100">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <a href="/insights" className="inline-flex items-center gap-2 text-charcoal hover:text-gold text-xs uppercase tracking-[0.22em] font-bold transition-colors duration-200">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a
+              href="/insights"
+              className="inline-flex items-center gap-2 text-charcoal hover:text-gold text-xs uppercase tracking-[0.22em] font-bold transition-colors duration-200"
+            >
               <ArrowLeft className="w-4 h-4" />
               {t('article_common.back_to_insights')}
             </a>
           </div>
         </section>
 
-        <article className="py-16 md:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg max-w-none 
-prose-headings:font-serif 
-prose-headings:text-charcoal 
-prose-h2:mt-16 
-prose-h2:mb-5 
-prose-h2:border-t 
-prose-h2:border-gray-200 
-prose-h2:pt-8 
-prose-h2:text-[1.8rem] 
-prose-h2:font-semibold 
-prose-h2:leading-tight 
-prose-p:text-gray-600 
-prose-p:leading-relaxed 
-prose-p:mb-6 
-prose-strong:text-charcoal 
-prose-li:text-gray-600 
-prose-li:leading-relaxed 
-prose-li:mb-2
-prose-img:my-10 
-prose-img:rounded-2xl 
-prose-img:border 
-prose-img:border-gray-100 
-prose-img:shadow-sm">
-              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.duration_title')}</h2>
-              <p>{t('article_hdb_timeline.sections.duration_intro')}</p>
-              <ul>{Object.values(durationItems).map((item) => <li key={item}>{item}</li>)}</ul>
-              <p>{t('article_hdb_timeline.sections.duration_p2')}</p>
+        {/* ── ARTICLE BODY ── */}
+        <article className="py-16 md:py-24 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
-              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.breakdown_title')}</h2>
-              <img src="/images/article2-gantt.jpg" alt="Renovation Gantt chart showing sequencing of works in Singapore renovation" className="my-10 rounded-2xl w-full border border-gray-100 shadow-sm" loading="lazy" decoding="async" />
-              {Object.values(phases).map((phase) => (
-                <div key={phase.title}>
-                  <h3 className="!mt-10 !mb-3 text-[1.32rem] md:text-[1.45rem] font-semibold leading-snug text-charcoal">{phase.title}</h3>
-                  <p className="!mt-0 !mb-7 text-gray-600 leading-relaxed">{phase.desc}</p>
-                </div>
-              ))}
+            {/* ── HOW LONG SECTION ── */}
+            <div className="mb-14">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5 pb-4 border-b border-gray-200">
+                {t('article_hdb_timeline.sections.duration_title')}
+              </h2>
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-6">
+                {t('article_hdb_timeline.sections.duration_intro')}
+              </p>
+              <ul className="space-y-2 mb-6 pl-1">
+                {Object.values(durationItems).map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-600 text-base leading-relaxed">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
+                {t('article_hdb_timeline.sections.duration_p2')}
+              </p>
+            </div>
 
-              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.movein_title')}</h2>
-              <p>{t('article_hdb_timeline.sections.movein_p1')}</p>
+            {/* ── PHASE BREAKDOWN ── */}
+            <div className="mb-14">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-8 pb-4 border-b border-gray-200">
+                {t('article_hdb_timeline.sections.breakdown_title')}
+              </h2>
 
-              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.delays_title')}</h2>
+              {/* Gantt image */}
+              <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm mb-10">
+                <img
+                  src="/images/article2-gantt.jpg"
+                  alt="Renovation Gantt chart showing sequencing of works in Singapore renovation"
+                  className="w-full h-[280px] md:h-[400px] object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
 
-              <h3 className="!mt-10 !mb-3 text-[1.32rem] md:text-[1.45rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.1.title')}</h3>
-              <img src="/images/article2-sink.jpg" alt="Undermount kitchen sink installation before countertop placement" className="my-10 rounded-2xl w-full border border-gray-100 shadow-sm" loading="lazy" decoding="async" />
-              <p>{t('article_hdb_timeline.sections.delays.1.p1')}</p>
-              <p>{t('article_hdb_timeline.sections.delays.1.p2')}</p>
-
-              <h3 className="!mt-10 !mb-3 text-[1.32rem] md:text-[1.45rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.2.title')}</h3>
-              <p>{t('article_hdb_timeline.sections.delays.2.p1')}</p>
-
-              <h3 className="!mt-10 !mb-3 text-[1.32rem] md:text-[1.45rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.3.title')}</h3>
-              <p>{t('article_hdb_timeline.sections.delays.3.p1')}</p>
-
-              <h3 className="!mt-10 !mb-3 text-[1.32rem] md:text-[1.45rem] font-semibold leading-snug text-charcoal">{t('article_hdb_timeline.sections.delays.4.title')}</h3>
-              <p>{t('article_hdb_timeline.sections.delays.4.p1')}</p>
-              <p>{t('article_hdb_timeline.sections.delays.4.p2')}</p>
-
-              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.avoid_title')}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose my-8">
-                {Object.values(avoidItems).map((item) => (
-                  <div key={item} className="bg-white border border-gray-200 rounded-2xl p-5 flex items-start gap-3 shadow-sm">
-                    <CheckCircle2 className="w-5 h-5 text-gold mt-0.5 shrink-0" />
-                    <p className="text-sm text-gray-600 leading-7 mb-0">{item}</p>
+              {/* Numbered phases */}
+              <div className="space-y-0">
+                {Object.entries(phases).map(([key, phase], index) => (
+                  <div key={key} className="pb-10 mb-10 border-b border-gray-100 last:border-b-0 last:mb-0 last:pb-0">
+                    <div className="flex items-start gap-4 mb-4">
+                      <span className="flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full bg-gold flex items-center justify-center text-sm font-bold text-white mt-0.5 shadow-sm" aria-hidden="true">
+                        {index + 1}
+                      </span>
+                      <h3 className="text-xl md:text-2xl font-bold text-charcoal leading-snug pt-1">
+                        {phase.title}
+                      </h3>
+                    </div>
+                    <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] pl-0 md:pl-14">
+                      {phase.desc}
+                    </p>
                   </div>
                 ))}
               </div>
-
-              <h2 className="!mt-14 !mb-5 border-t border-gray-200 pt-8 text-3xl font-semibold leading-tight text-charcoal">{t('article_hdb_timeline.sections.final_title')}</h2>
-              <p>{t('article_hdb_timeline.sections.final_p1')}</p>
             </div>
 
-            <div className="mt-12 border-t pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-              <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-2">{t('article_common.next_article')}</p>
-                <h3 className="text-2xl font-serif text-charcoal">{t('article_hdb_timeline.next_title')}</h3>
+            {/* ── MOVE-IN ── */}
+            <div className="mb-14">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5 pb-4 border-b border-gray-200">
+                {t('article_hdb_timeline.sections.movein_title')}
+              </h2>
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
+                {t('article_hdb_timeline.sections.movein_p1')}
+              </p>
+            </div>
+
+            {/* ── DELAYS ── */}
+            <div className="mb-14">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-8 pb-4 border-b border-gray-200">
+                {t('article_hdb_timeline.sections.delays_title')}
+              </h2>
+
+              <div className="space-y-0">
+                {delayKeys.map((key, index) => (
+                  <div key={key} className="pb-10 mb-10 border-b border-gray-100 last:border-b-0 last:mb-0 last:pb-0">
+                    <div className="flex items-start gap-4 mb-4">
+                      <span className="flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full bg-gold flex items-center justify-center text-sm font-bold text-white mt-0.5 shadow-sm" aria-hidden="true">
+                        {index + 1}
+                      </span>
+                      <h3 className="text-xl md:text-2xl font-bold text-charcoal leading-snug pt-1">
+                        {t(`article_hdb_timeline.sections.delays.${key}.title`)}
+                      </h3>
+                    </div>
+
+                    {/* Sink image inside delay 1 */}
+                    {key === '1' && (
+                      <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm mb-6 md:ml-14">
+                        <img
+                          src="/images/article2-sink.jpg"
+                          alt="Undermount kitchen sink installation before countertop placement"
+                          className="w-full h-[240px] md:h-[380px] object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    )}
+
+                    <div className="pl-0 md:pl-14 space-y-4">
+                      <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
+                        {t(`article_hdb_timeline.sections.delays.${key}.p1`)}
+                      </p>
+                      {key === '1' && (
+                        <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
+                          {t(`article_hdb_timeline.sections.delays.${key}.p2`)}
+                        </p>
+                      )}
+                      {key === '4' && (
+                        <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
+                          {t(`article_hdb_timeline.sections.delays.${key}.p2`)}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
-              <a href="/insights/renovation-mistakes-singapore" className="inline-flex items-center gap-2 text-charcoal hover:text-gold text-xs uppercase tracking-[0.22em] font-bold transition-colors duration-200">
+            </div>
+
+            {/* ── AVOID SECTION ── */}
+            <div className="mb-14">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-8 pb-4 border-b border-gray-200">
+                {t('article_hdb_timeline.sections.avoid_title')}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {Object.values(avoidItems).map((item) => (
+                  <div
+                    key={item}
+                    className="bg-white border border-gray-200 rounded-2xl p-5 flex items-start gap-3 shadow-sm hover:border-gold hover:shadow-md transition-all duration-200"
+                  >
+                    <CheckCircle2 className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                    <p className="text-sm text-gray-600 leading-7">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* ── FINAL ── */}
+            <div className="mb-14">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5 pb-4 border-b border-gray-200">
+                {t('article_hdb_timeline.sections.final_title')}
+              </h2>
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
+                {t('article_hdb_timeline.sections.final_p1')}
+              </p>
+            </div>
+
+            {/* ── NEXT ARTICLE FOOTER ── */}
+            <div className="mt-14 border-t pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-2">
+                  {t('article_common.next_article')}
+                </p>
+                <h3 className="text-2xl font-serif text-charcoal">
+                  {t('article_hdb_timeline.next_title')}
+                </h3>
+              </div>
+              <a
+                href="/insights/renovation-mistakes-singapore"
+                className="inline-flex items-center gap-2 text-charcoal hover:text-gold text-xs uppercase tracking-[0.22em] font-bold transition-colors duration-200 whitespace-nowrap"
+              >
                 {t('article_common.continue_reading')}
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
+
           </div>
         </article>
       </div>
