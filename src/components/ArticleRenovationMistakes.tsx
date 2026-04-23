@@ -93,6 +93,14 @@ export default function ArticleRenovationMistakes() {
             <div className="prose prose-lg max-w-none 
 prose-headings:font-serif 
 prose-headings:text-charcoal 
+prose-h2:mt-14 
+prose-h2:mb-6 
+prose-h2:text-3xl 
+prose-h2:font-semibold 
+prose-h3:mt-10 
+prose-h3:mb-4 
+prose-h3:text-2xl 
+prose-h3:font-semibold 
 prose-p:text-gray-600 
 prose-p:leading-relaxed 
 prose-p:mb-6 
