@@ -23,10 +23,10 @@
     .soft-card{background:rgba(251,248,242,.9);border:1px solid rgba(169,150,131,.24);box-shadow:0 24px 70px rgba(23,21,20,.08)}
     .card-btn{min-height:44px;transition:background .18s,border-color .18s,color .18s,transform .18s,box-shadow .18s}
     .card-btn:hover:not(.active-card){background:#fffaf2;border-color:#c8aa72;box-shadow:0 10px 24px rgba(23,21,20,.06);transform:translateY(-1px)}
-    .active-card{background:#171514!important;border-color:#171514!important;color:#fff!important;box-shadow:0 16px 30px rgba(23,21,20,.16)}
+    .active-card{background:#C5A059!important;border-color:#C5A059!important;color:#fff!important;box-shadow:0 16px 30px rgba(197,160,89,.35)}
     .pill-btn{min-height:44px;transition:background .18s,border-color .18s,color .18s}
     .pill-btn:hover:not(.active-pill){border-color:#c8aa72;background:#fffaf2}
-    .active-pill{background:#171514!important;border-color:#171514!important;color:#fff!important}
+    .active-pill{background:#C5A059!important;border-color:#C5A059!important;color:#fff!important}
     .inp{width:100%;min-height:44px;border:1px solid #d8cec0;background:#fffaf4;padding:.75rem 1rem;font-size:.875rem;font-family:'Poppins',sans-serif;outline:none;border-radius:14px;transition:border-color .15s,box-shadow .15s,background .15s;color:#24211f}
     .inp:focus{border-color:#b99658;box-shadow:0 0 0 4px rgba(200,170,114,.18);background:#fff}
     select.inp{cursor:pointer}
@@ -305,7 +305,7 @@
   </header>
 
   <!-- Step pills -->
-  <div class="mb-5 grid grid-cols-4 gap-1.5 sm:mb-7 sm:flex sm:gap-2">
+  <div id="calculatorTop" class="mb-5 grid grid-cols-4 gap-1.5 sm:mb-7 sm:flex sm:gap-2">
     <div id="pill0" class="flex-1 text-center text-xs font-semibold py-2.5 rounded-full transition-all"></div>
     <div id="pill1" class="flex-1 text-center text-xs font-semibold py-2.5 rounded-full transition-all"></div>
     <div id="pill2" class="flex-1 text-center text-xs font-semibold py-2.5 rounded-full transition-all"></div>
@@ -906,6 +906,9 @@ function renderPills(){
 function renderStep(){
   const content=document.getElementById('stepContent');
   const tc=Number(form.roomCounts.toilets||0);
+  // Save which section-card details are currently open (mobile: user may have opened some)
+  _openSectionIdxs = new Set();
+  content.querySelectorAll('details.section-card').forEach((d,i)=>{ if(d.open) _openSectionIdxs.add(i); });
 
   if(step===0){
     content.innerHTML=`<div class="fade-up">
@@ -949,7 +952,7 @@ function renderStep(){
         </div>
         <div>
           <div class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-400">Rooms</div>
-          <div class="grid grid-cols-2 gap-4">${nestNum('Bedrooms','roomCounts','bedrooms')}${nestNum('Toilets / Bathrooms','roomCounts','toilets')}</div>
+          <div class="grid grid-cols-2 gap-4 items-end">${nestNum('Bedrooms','roomCounts','bedrooms')}${nestNum('Toilets / Bathrooms','roomCounts','toilets')}</div>
         </div>
         <label class="flex items-start gap-3 rounded-2xl border border-stone-100 bg-stone-50 p-4 cursor-pointer">
           <input type="checkbox" id="fpChk" ${form.hasFloorPlan?'checked':''} onchange="setBool('hasFloorPlan',this.checked?'yes':'no')" class="mt-0.5 h-4 w-4 accent-stone-900"/>
@@ -1143,6 +1146,8 @@ function renderStep(){
 
     html+='</div></div>';
     content.innerHTML=html;
+    // Restore open state of section-card details after re-render (prevents auto-collapse on mobile)
+    content.querySelectorAll('details.section-card').forEach((d,i)=>{ if(_openSectionIdxs.has(i)) d.open=true; });
   }
 
   if(step===3){
@@ -1257,6 +1262,9 @@ function setFloorUnit(u){
 // =============================================
 // MASTER RENDER
 // =============================================
+// Tracks which section-card <details> are open so re-renders don't collapse them
+let _openSectionIdxs = new Set();
+
 function render(){
   renderPills();
   renderStep();
@@ -1264,10 +1272,11 @@ function render(){
 }
 
 function scrollToCalculatorTop(){
-  const target=document.getElementById('calculatorTop')||document.querySelector('main');
+  const target=document.getElementById('calculatorTop')||document.getElementById('calc-main');
   if(target){
-    const y=target.getBoundingClientRect().top+window.pageYOffset-16;
-    window.scrollTo({top:y,behavior:'smooth'});
+    const navH=document.getElementById('site-nav')?document.getElementById('site-nav').offsetHeight:110;
+    const y=target.getBoundingClientRect().top+window.pageYOffset-navH-8;
+    window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
   }
 }
 
