@@ -2,8 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-# Disable Netlify's automatic trailing slash redirects so prerendered
-# HTML files are served directly without being redirected first.
 [build.environment]
   NETLIFY_DISABLE_FORCED_TRAILING_SLASH = "true"
 
@@ -11,14 +9,12 @@
 # 1) CANONICAL / CLEANUP REDIRECTS
 # =========================================================
 
-# Old portfolio path
 [[redirects]]
   from = "/portfolio"
   to = "/gallery"
   status = 301
   force = true
 
-# Strip common legacy language query-style access by redirecting old paths to clean pages where possible
 [[redirects]]
   from = "/contact-us"
   to = "/"
@@ -242,10 +238,8 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
-
 # =========================================================
-# 7.5) RENOVATION CALCULATOR STANDALONE PAGE
-# Must be BEFORE the SPA fallback below.
+# 7) RENOVATION CALCULATOR STANDALONE PAGE
 # =========================================================
 
 [[redirects]]
@@ -253,12 +247,3 @@
   to     = "/renovation-cost-calculator.html"
   status = 200
   force  = true
-
-# =========================================================
-# 7) SPA FALLBACK — MUST STAY LAST
-# =========================================================
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200

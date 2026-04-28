@@ -24,7 +24,9 @@
 
     <title>ID Work Studio | Renovation & Interior Design Singapore | Woodlands</title>
     <meta name="description" content="Singapore's trusted renovation and interior design firm based in Woodlands. BCA-registered & HDB-approved. Specialising in commercial fit-outs, office reinstatement, and residential renovations across Singapore." />
-    <link rel="canonical" href="https://idworkstudio.com/" />
+
+    <!-- ❌ REMOVED GLOBAL CANONICAL HERE -->
+
     <meta name="keywords" content="renovation Singapore, interior design Singapore, Woodlands renovation, HDB renovation Singapore, commercial fit-out Singapore, office reinstatement Singapore, BCA registered contractor Singapore, ID Work Studio" />
 
     <!-- Geo tags -->
@@ -54,188 +56,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- ============================================================
-         JSON-LD STRUCTURED DATA — AI CITATION & SEO INFRASTRUCTURE
-         Changes from previous version:
-         1. @graph wrapper added to support multiple schema types
-         2. @type upgraded: HomeAndConstructionBusiness added as primary
-         3. legalName, foundingDate, founder added
-         4. aggregateRating added (4.9 stars, 20 reviews)
-         5. priceRange updated from "$$" to specific SGD range
-         6. areaServed expanded with specific Singapore commercial districts
-         7. hasOfferCatalog service descriptions filled in (were empty)
-         VISUAL IMPACT: Zero. This block is invisible to users.
-    ============================================================ -->
+    <!-- KEEP YOUR JSON-LD EXACTLY AS IS -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-
-        {
-          "@type": ["HomeAndConstructionBusiness", "GeneralContractor", "InteriorDesigner"],
-          "@id": "https://idworkstudio.com/#business",
-          "name": "ID Work Studio",
-          "legalName": "ID WORK STUDIO PTE. LTD.",
-          "image": "https://idworkstudio.com/logo.png",
-          "description": "BCA-registered and HDB-registered commercial renovation and interior design firm in Singapore. Specialising in office fit-outs for 1,200-3,000 sqft spaces, express office reinstatement, retail and shophouse fit-outs, MOH-compliant clinic fit-outs, and residential HDB and condo renovations across all Singapore districts. Over 10 years of trusted delivery.",
-          "url": "https://idworkstudio.com",
-          "telephone": "+6568162872",
-          "email": "contact@idworkstudio.com",
-          "foundingDate": "2015",
-          "founder": {
-            "@type": "Person",
-            "name": "Ng Chong Kee"
-          },
-
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
-            "addressLocality": "Woodlands",
-            "addressRegion": "Singapore",
-            "postalCode": "737853",
-            "addressCountry": "SG"
-          },
-
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 1.4348129,
-            "longitude": 103.7326522
-          },
-
-          "priceRange": "SGD 80,000 - SGD 180,000",
-
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "20",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-
-          "areaServed": [
-            { "@type": "City", "name": "Singapore" },
-            { "@type": "AdministrativeArea", "name": "Central Business District, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Raffles Place, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Tanjong Pagar, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Marina Bay, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Shenton Way, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Orchard, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Novena, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Paya Lebar, Singapore" },
-            { "@type": "AdministrativeArea", "name": "one-north, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Jurong, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Harbourfront, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Tampines, Singapore" },
-            { "@type": "AdministrativeArea", "name": "Woodlands, Singapore" }
-          ],
-
-          "contactPoint": [
-            {
-              "@type": "ContactPoint",
-              "telephone": "+6568162872",
-              "contactType": "customer service"
-            },
-            {
-              "@type": "ContactPoint",
-              "telephone": "+6598333085",
-              "contactType": "sales"
-            }
-          ],
-
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "09:30",
-              "closes": "17:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Saturday", "Sunday"],
-              "description": "By Appointment Only"
-            }
-          ],
-
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Commercial and Residential Renovation Services Singapore",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "HDB Renovation Singapore",
-                  "description": "HDB-registered renovation contractor for BTO and resale HDB flat renovations across Singapore. Full interior renovation including hacking, tiling, carpentry, painting, electrical, and plumbing works. Registered under the HDB Renovation Contractor Registration Scheme (HB-02-5250G)."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Condo Renovation Singapore",
-                  "description": "Design-led condominium and private apartment renovation services across Singapore. Full project management, MCST and management office compliance, premium material sourcing, and a dedicated project coordinator from design consultation through to final handover."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Commercial Office Fit-Out Singapore",
-                  "description": "Turnkey office fit-out for 1,200-3,000 sqft commercial spaces in Singapore office buildings and business parks. Full scope includes space planning, partitioning, flooring, ceiling works, M&E coordination, CORENET submission, and end-to-end project management. Fixed-price Bronze, Silver, and Gold packages available by square footage. BCA-registered contractor."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Office Reinstatement Singapore",
-                  "description": "Express office reinstatement service for Grade A CBD office buildings across Singapore. Fixed-price packages with a 7-day completion SLA. Works include hacking of partitions, ceiling and wall reinstatement, repainting to original landlord colour, flooring restoration, and full coordination of the landlord handover inspection. Experienced with CapitaLand, Mapletree, JTC, and Keppel Land tenancy requirements."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Retail and Shop Fit-Out Singapore",
-                  "description": "Retail shop and conservation shophouse fit-outs for Singapore malls, commercial buildings, and street-level retail. Full scope including custom millwork, display systems, lighting design, signage coordination, and strict compliance with mall tenancy fit-out guides. Experienced across major Singapore landlord portfolios."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Clinic and Medical Fit-Out Singapore",
-                  "description": "MOH-compliant clinic fit-outs for dental clinics, aesthetic clinics, TCM practices, and family medical offices in Singapore. Clinical-grade surface finishes, ventilation and exhaust compliance, medical equipment supplier coordination, and full regulatory submission management from design through to handover."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "F&B Renovation Singapore",
-                  "description": "Restaurant, cafe, and food and beverage outlet fit-outs across Singapore malls and commercial buildings. Full scope from concept design through NEA ventilation and exhaust compliance, kitchen equipment coordination, and landlord or mall tenancy submission management."
-                }
-              }
-            ]
-          },
-
-          "sameAs": [
-            "https://www.facebook.com/IDWorkStudio",
-            "https://www.instagram.com/idworkstudio",
-            "https://www.linkedin.com/company/id-work-studio"
-          ]
-        }
-
-      ]
-    }
+    { ...UNCHANGED... }
     </script>
 
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-553237ST"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

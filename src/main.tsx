@@ -1,18 +1,22 @@
-import { StrictMode } from 'react';
-import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from './App.tsx';
+import ReactGA from 'react-ga4';
+import { ViteReactSSG } from 'vite-react-ssg';
+import { routes } from './App';
 import './index.css';
 import './i18n';
-import ReactGA from 'react-ga4';
 
-ReactGA.initialize('G-0R2LXVRM0R');
-
-const rootElement = document.getElementById('root')!;
-
-// If the page was pre-rendered (has existing HTML), hydrate it.
-// Otherwise do a normal client-side render.
-if (rootElement.hasChildNodes()) {
-  hydrateRoot(rootElement, <StrictMode><App /></StrictMode>);
-} else {
-  createRoot(rootElement).render(<StrictMode><App /></StrictMode>);
+// Only run GA in browser
+if (typeof window !== 'undefined') {
+  ReactGA.initialize('G-0R2LXVRM0R');
 }
+
+export const createRoot = ViteReactSSG(
+  {
+    routes,
+    basename: '/',
+  },
+  ({ isClient }) => {
+    if (isClient) {
+      // place any client-only logic here if needed later
+    }
+  }
+);
