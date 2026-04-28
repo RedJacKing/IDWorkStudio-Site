@@ -242,6 +242,18 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
+
+# =========================================================
+# 7.5) RENOVATION CALCULATOR STANDALONE PAGE
+# Must be BEFORE the SPA fallback below.
+# =========================================================
+
+[[redirects]]
+  from   = "/renovation-cost-calculator"
+  to     = "/renovation-cost-calculator.html"
+  status = 200
+  force  = true
+
 # =========================================================
 # 7) SPA FALLBACK — MUST STAY LAST
 # =========================================================
