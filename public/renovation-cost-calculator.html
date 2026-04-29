@@ -383,6 +383,8 @@
 // =============================================
 const M2SF = 10.7639, MFT = 3.28084;
 const SGD = new Intl.NumberFormat('en-SG',{style:'currency',currency:'SGD',maximumFractionDigits:0});
+const __IDWS_DECODE=x=>JSON.parse(atob(x));
+const __R=__IDWS_DECODE('eyJwYyI6eyJraXRjaGVuT25seSI6eyJwcm9mU3ZjIjoyMDAsImhhdWxhZ2UiOjIwMH0sInRvaWxldE9ubHkiOnsicHJvZlN2YyI6MjAwLCJoYXVsYWdlIjozMDB9LCJwYXJ0aWFsIjp7InByb2ZTdmMiOjUwMCwiaGF1bGFnZSI6NzE1fSwid2hvbGVIb3VzZSI6eyJwcm9mU3ZjIjo4MDAsImhhdWxhZ2UiOjEwNjV9fSwiYXJlYSI6eyJsaXZpbmdEaW5pbmciOjAuMjgsImtpdGNoZW4iOjAuMTQsIm1hc3RlckJlZHJvb20iOjAuMTIsImJlZHJvb21zIjowLjIyLCJ0b2lsZXRzIjowLjA4LCJzZXJ2aWNlWWFyZCI6MC4wNiwiYmFsY29ueSI6MC4wNX0sIndvcmt0b3AiOnsicXVhcnR6IjoxMDAsInNpbnRlcmVkIjoxNjB9LCJraXRjaGVuIjp7ImhhY2tUaWxlIjoxMTAwLCJvdmVybGF5VGlsZSI6NTUwLCJiYXNlQ2FiaW5ldEZ0IjoxMTEsInRvcENhYmluZXRGdCI6MTExLCJwbHVtYmluZ0tpdGNoZW5Pbmx5IjoxNTAsInBsdW1iaW5nV2hvbGUiOjY0OCwic2lua0luc3RhbGwiOjEyMCwiZWxlY3RyaWNhbEtpdGNoZW5Pbmx5IjoxMDAsImVsZWN0cmljYWxXaG9sZSI6MTMwfSwidG9pbGV0Ijp7ImhhY2tUaWxlIjoxNzUwLCJvdmVybGF5VGlsZSI6MTQ1MCwicGx1bWJpbmdQZXJUb2lsZXQiOjk1MCwidG9pbGV0Qm93bCI6MTAwLCJzaG93ZXJTZXQiOjcwLCJpbnN0YW50SGVhdGVyIjo4MCwic3RvcmFnZUhlYXRlciI6MTgwLCJhY2Nlc3Nvcmllc1BlclRvaWxldCI6NTB9LCJnbGFzcyI6eyJzY3JlZW4iOnsibm9uZSI6MCwic2NyZWVuMTgwQ2FzZW1lbnQiOjUzMCwibFNoYXBlOTBTbGlkaW5nIjo2MTB9LCJibGFja0ZyYW1lIjp7Im5vbmUiOjAsInNjcmVlbjE4MENhc2VtZW50IjoxOTUsImxTaGFwZTkwU2xpZGluZyI6MjIwfSwia2l0Y2hlbkJhY2tpbmdTcWZ0IjoxMn0sImZsb29yaW5nIjp7InZpbnlsIjo2LCJvdmVybGF5VGlsZXMiOjEyLCJ0aWxlcyI6OCwiZmFsbGJhY2siOjd9LCJjYXJwZW50cnkiOnsid2FyZHJvYmVGdCI6MjgwLCJ0dkNvbnNvbGVGdCI6MTE3LCJzaG9lQ2FiaW5ldEZ0IjoxMjUsInN0dWR5VGFibGVGdCI6MTA4LCJzdG9yYWdlQ2FiaW5ldEZ0IjoyNTAsImZlYXR1cmVXYWxsIjoyNTAwLCJjdXN0b21NdWx0aXBsaWVyIjoxLjIsInN0YW5kYXJkTXVsdGlwbGllciI6MX0sImVsZWN0cmljYWwiOnsibGlnaHRQb2ludCI6NDUsInBvd2VyUG9pbnQiOjcwLCJkYXRhUG9pbnQiOjEzMCwiaG9vZFBvaW50IjoxMzAsImxpZ2h0SW5zdGFsbGF0aW9uIjoyNSwiY29uY2VhbGVkTGlnaHRQb2ludCI6MzgsImFpcmNvbklzb2xhdG9yIjoxNjV9LCJhaXJjb24iOnsiYmFzaWMiOjcwMCwibWlkIjo5NTAsInByZW1pdW0iOjE1MDAsImNvbmNlYWxlZFBpcGluZ1BlclVuaXQiOjY1MCwiZmFsbGJhY2siOjk1MH0sImNlaWxpbmciOnsiaGRiIjozLjAsImNvbmRvIjozLjE1LCJsYW5kZWQiOjMuNSwibEJveCI6ODAwLCJ3YWxscGFwZXIiOjQwMDAsImZhbGxiYWNrIjozfSwiZG9vcnMiOnsibWFpbiI6eyJub25lIjowLCJoZGJUaW1iZXIiOjE4MDAsInNlY3VyaXR5IjozNTAwfSwiaGRiR2F0ZSI6MTIwMCwiYmVkcm9vbURvb3IiOjQ4MCwidG9pbGV0RG9vciI6NDIwfSwiZ3JpbGxlcyI6eyJ3aW5kb3ciOjM1MH0sIndhbGxIYWNrIjp7IndhbGxNaW4iOjQwMCwid2FsbFNxZnQiOjUwLCJwYXJ0aXRpb25NaW4iOjI1MCwicGFydGl0aW9uU3FmdCI6MzV9LCJnc3QiOjAuMDksInJhbmdlIjp7ImxvdyI6MS4wLCJoaWdoIjoxLjEyfSwicHJvcEN4Ijp7ImhkYiI6MS4wLCJjb25kbyI6MS4wOCwibGFuZGVkIjoxLjI1fX0=');
 
 const PROPERTY = {
   hdb:   {label:'HDB',    resaleH:1.0, cx:1.00},
@@ -399,21 +401,9 @@ const HDB_TYPES = {
   'dbss': {label:'DBSS',        sqft:1100},
 };
 
-const PAINT_HDB = {
-  '2room':{standard:1300,classic:1500,premium:1750},
-  '3room':{standard:1650,classic:1900,premium:2300},
-  '4room':{standard:1900,classic:2150,premium:2500},
-  '5room':{standard:2100,classic:2350,premium:2700},
-  'ea':   {standard:2250,classic:2700,premium:2950},
-  'dbss': {standard:2100,classic:2400,premium:2700},
-};
-const PAINT_CONDO = {
-  1:{standard:1550,classic:1820,premium:2015},
-  2:{standard:1900,classic:2210,premium:2470},
-  3:{standard:2275,classic:2535,premium:3055},
-  4:{standard:2665,classic:2925,premium:3315},
-};
-const PAINT_LANDED = {standard:3500,classic:5000,premium:7500};
+const PAINT_HDB = __IDWS_DECODE('eyIycm9vbSI6eyJzdGFuZGFyZCI6MTMwMCwiY2xhc3NpYyI6MTUwMCwicHJlbWl1bSI6MTc1MH0sIjNyb29tIjp7InN0YW5kYXJkIjoxNjUwLCJjbGFzc2ljIjoxOTAwLCJwcmVtaXVtIjoyMzAwfSwiNHJvb20iOnsic3RhbmRhcmQiOjE5MDAsImNsYXNzaWMiOjIxNTAsInByZW1pdW0iOjI1MDB9LCI1cm9vbSI6eyJzdGFuZGFyZCI6MjEwMCwiY2xhc3NpYyI6MjM1MCwicHJlbWl1bSI6MjcwMH0sImVhIjp7InN0YW5kYXJkIjoyMjUwLCJjbGFzc2ljIjoyNzAwLCJwcmVtaXVtIjoyOTUwfSwiZGJzcyI6eyJzdGFuZGFyZCI6MjEwMCwiY2xhc3NpYyI6MjQwMCwicHJlbWl1bSI6MjcwMH19');
+const PAINT_CONDO = __IDWS_DECODE('eyIxIjp7InN0YW5kYXJkIjoxNTUwLCJjbGFzc2ljIjoxODIwLCJwcmVtaXVtIjoyMDE1fSwiMiI6eyJzdGFuZGFyZCI6MTkwMCwiY2xhc3NpYyI6MjIxMCwicHJlbWl1bSI6MjQ3MH0sIjMiOnsic3RhbmRhcmQiOjIyNzUsImNsYXNzaWMiOjI1MzUsInByZW1pdW0iOjMwNTV9LCI0Ijp7InN0YW5kYXJkIjoyNjY1LCJjbGFzc2ljIjoyOTI1LCJwcmVtaXVtIjozMzE1fX0=');
+const PAINT_LANDED = __IDWS_DECODE('eyJzdGFuZGFyZCI6MzUwMCwiY2xhc3NpYyI6NTAwMCwicHJlbWl1bSI6NzUwMH0=');
 
 // =============================================
 // FORM STATE
@@ -497,10 +487,10 @@ let form={
 const sqft=()=>form.sizeUnit==='m2'?Number(form.propertySizeInput||0)*M2SF:Number(form.propertySizeInput||0);
 const lFt=(i,u)=>u==='m'?Number(i||0)*MFT:Number(i||0);
 const clamp=(v,lo,hi)=>Math.max(lo,Math.min(hi,v));
-const rng=(c,lo=1.00,hi=1.12)=>({low:Math.round(c*lo),high:Math.round(c*hi)});
+const rng=(c,lo=__R.range.low,hi=__R.range.high)=>({low:Math.round(c*lo),high:Math.round(c*hi)});
 
 function areaSqft(a){
-  const R={livingDining:.28,kitchen:.14,masterBedroom:.12,bedrooms:.22,toilets:.08,serviceYard:.06,balcony:.05};
+  const R=__R.area;
   return sqft()*(R[a]||0);
 }
 function floorArea(){
@@ -512,10 +502,7 @@ function isSmallProject(){
   return form.projectType==='kitchenOnly'||form.projectType==='toiletOnly';
 }
 function projectBaseCharges(){
-  if(form.projectType==='kitchenOnly') return {profSvc:200, haulage:200};
-  if(form.projectType==='toiletOnly') return {profSvc:200, haulage:300};
-  if(form.projectType==='partial') return {profSvc:500, haulage:715};
-  return {profSvc:800, haulage:1065};
+  return __R.pc[form.projectType]||__R.pc.wholeHouse;
 }
 function effectiveFloorArea(){
   const manual=form.flooringAreaUnit==='m2'?Number(form.flooringAreaInput||0)*M2SF:Number(form.flooringAreaInput||0);
@@ -531,35 +518,7 @@ function hdbHackColumn(){
 }
 function hackingPackagePrice(key){
   const col=hdbHackColumn();
-  const table={
-    wholeHouse:{'3room':3250,'4room':3770,'5room':4550,maisonette:0,condo:5200},
-    kitchen2ToiletsFW:{'3room':2600,'4room':2600,'5room':2600,maisonette:3250,condo:2860},
-    kitchen2ToiletsFloorOnly:{'3room':1690,'4room':1690,'5room':1690,maisonette:2080,condo:2080},
-    kitchenFW:{'3room':1495,'4room':1495,'5room':1495,maisonette:1495,condo:1625},
-    twoToiletsFW:{'3room':1495,'4room':1495,'5room':1495,maisonette:1820,condo:1820},
-    oneToiletFW:{'3room':1040,'4room':1040,'5room':1040,maisonette:1170,condo:1170},
-    oneToiletFloorOnly:{'3room':585,'4room':585,'5room':585,maisonette:715,condo:715},
-    oneToiletWallOnly:{'3room':715,'4room':715,'5room':715,maisonette:845,condo:845},
-    livingBedroomFloor:{'3room':1950,'4room':2470,'5room':2990,maisonette:0,condo:0},
-    livingFloor:{'3room':1365,'4room':1625,'5room':1885,maisonette:2145,condo:2145},
-    bedroomFloor:{'3room':585,'4room':1040,'5room':1365,maisonette:1625,condo:1950},
-    kitchenFloor:{'3room':1365,'4room':1365,'5room':1365,maisonette:1365,condo:1495},
-    kitchenCabinetOnly:{'3room':455,'4room':455,'5room':455,maisonette:455,condo:455},
-    sinkSupport:{'3room':390,'4room':390,'5room':390,maisonette:390,condo:390},
-    kitchenCabinetSinkSupport:{'3room':715,'4room':715,'5room':715,maisonette:715,condo:715},
-    
-    floorSkirtingWholeHouse:{'3room':260,'4room':325,'5room':390,maisonette:0,condo:520},
-    parquetFlooring:{'3room':455,'4room':455,'5room':455,maisonette:455,condo:455},
-    vinylFlooring:{'3room':650,'4room':715,'5room':780,maisonette:780,condo:910},
-    falseCeilingHack:{'3room':390,'4room':0,'5room':0,maisonette:0,condo:0},
-    cornice:{'3room':390,'4room':455,'5room':520,maisonette:650,condo:650},
-    wardrobeLess6ft:{'3room':234,'4room':234,'5room':234,maisonette:234,condo:234},
-    doorFrame:{'3room':130,'4room':130,'5room':130,maisonette:130,condo:130},
-    door:{'3room':130,'4room':130,'5room':130,maisonette:130,condo:130},
-    looseFurniture:{'3room':195,'4room':195,'5room':195,maisonette:195,condo:195},
-    wallpaperHack:{'3room':195,'4room':0.65,'5room':0.65,maisonette:0.65,condo:0.65},
-    cabinetRemoval:{'3room':455,'4room':455,'5room':455,maisonette:455,condo:455}
-  };
+  const table=__IDWS_DECODE('eyJ3aG9sZUhvdXNlIjp7IjNyb29tIjozMjUwLCI0cm9vbSI6Mzc3MCwiNXJvb20iOjQ1NTAsIm1haXNvbmV0dGUiOjAsImNvbmRvIjo1MjAwfSwia2l0Y2hlbjJUb2lsZXRzRlciOnsiM3Jvb20iOjI2MDAsIjRyb29tIjoyNjAwLCI1cm9vbSI6MjYwMCwibWFpc29uZXR0ZSI6MzI1MCwiY29uZG8iOjI4NjB9LCJraXRjaGVuMlRvaWxldHNGbG9vck9ubHkiOnsiM3Jvb20iOjE2OTAsIjRyb29tIjoxNjkwLCI1cm9vbSI6MTY5MCwibWFpc29uZXR0ZSI6MjA4MCwiY29uZG8iOjIwODB9LCJraXRjaGVuRlciOnsiM3Jvb20iOjE0OTUsIjRyb29tIjoxNDk1LCI1cm9vbSI6MTQ5NSwibWFpc29uZXR0ZSI6MTQ5NSwiY29uZG8iOjE2MjV9LCJ0d29Ub2lsZXRzRlciOnsiM3Jvb20iOjE0OTUsIjRyb29tIjoxNDk1LCI1cm9vbSI6MTQ5NSwibWFpc29uZXR0ZSI6MTgyMCwiY29uZG8iOjE4MjB9LCJvbmVUb2lsZXRGVyI6eyIzcm9vbSI6MTA0MCwiNHJvb20iOjEwNDAsIjVyb29tIjoxMDQwLCJtYWlzb25ldHRlIjoxMTcwLCJjb25kbyI6MTE3MH0sIm9uZVRvaWxldEZsb29yT25seSI6eyIzcm9vbSI6NTg1LCI0cm9vbSI6NTg1LCI1cm9vbSI6NTg1LCJtYWlzb25ldHRlIjo3MTUsImNvbmRvIjo3MTV9LCJvbmVUb2lsZXRXYWxsT25seSI6eyIzcm9vbSI6NzE1LCI0cm9vbSI6NzE1LCI1cm9vbSI6NzE1LCJtYWlzb25ldHRlIjo4NDUsImNvbmRvIjo4NDV9LCJsaXZpbmdCZWRyb29tRmxvb3IiOnsiM3Jvb20iOjE5NTAsIjRyb29tIjoyNDcwLCI1cm9vbSI6Mjk5MCwibWFpc29uZXR0ZSI6MCwiY29uZG8iOjB9LCJsaXZpbmdGbG9vciI6eyIzcm9vbSI6MTM2NSwiNHJvb20iOjE2MjUsIjVyb29tIjoxODg1LCJtYWlzb25ldHRlIjoyMTQ1LCJjb25kbyI6MjE0NX0sImJlZHJvb21GbG9vciI6eyIzcm9vbSI6NTg1LCI0cm9vbSI6MTA0MCwiNXJvb20iOjEzNjUsIm1haXNvbmV0dGUiOjE2MjUsImNvbmRvIjoxOTUwfSwia2l0Y2hlbkZsb29yIjp7IjNyb29tIjoxMzY1LCI0cm9vbSI6MTM2NSwiNXJvb20iOjEzNjUsIm1haXNvbmV0dGUiOjEzNjUsImNvbmRvIjoxNDk1fSwia2l0Y2hlbkNhYmluZXRPbmx5Ijp7IjNyb29tIjo0NTUsIjRyb29tIjo0NTUsIjVyb29tIjo0NTUsIm1haXNvbmV0dGUiOjQ1NSwiY29uZG8iOjQ1NX0sInNpbmtTdXBwb3J0Ijp7IjNyb29tIjozOTAsIjRyb29tIjozOTAsIjVyb29tIjozOTAsIm1haXNvbmV0dGUiOjM5MCwiY29uZG8iOjM5MH0sImtpdGNoZW5DYWJpbmV0U2lua1N1cHBvcnQiOnsiM3Jvb20iOjcxNSwiNHJvb20iOjcxNSwiNXJvb20iOjcxNSwibWFpc29uZXR0ZSI6NzE1LCJjb25kbyI6NzE1fSwiZmxvb3JTa2lydGluZ1dob2xlSG91c2UiOnsiM3Jvb20iOjI2MCwiNHJvb20iOjMyNSwiNXJvb20iOjM5MCwibWFpc29uZXR0ZSI6MCwiY29uZG8iOjUyMH0sInBhcnF1ZXRGbG9vcmluZyI6eyIzcm9vbSI6NDU1LCI0cm9vbSI6NDU1LCI1cm9vbSI6NDU1LCJtYWlzb25ldHRlIjo0NTUsImNvbmRvIjo0NTV9LCJ2aW55bEZsb29yaW5nIjp7IjNyb29tIjo2NTAsIjRyb29tIjo3MTUsIjVyb29tIjo3ODAsIm1haXNvbmV0dGUiOjc4MCwiY29uZG8iOjkxMH0sImZhbHNlQ2VpbGluZ0hhY2siOnsiM3Jvb20iOjM5MCwiNHJvb20iOjAsIjVyb29tIjowLCJtYWlzb25ldHRlIjowLCJjb25kbyI6MH0sImNvcm5pY2UiOnsiM3Jvb20iOjM5MCwiNHJvb20iOjQ1NSwiNXJvb20iOjUyMCwibWFpc29uZXR0ZSI6NjUwLCJjb25kbyI6NjUwfSwid2FyZHJvYmVMZXNzNmZ0Ijp7IjNyb29tIjoyMzQsIjRyb29tIjoyMzQsIjVyb29tIjoyMzQsIm1haXNvbmV0dGUiOjIzNCwiY29uZG8iOjIzNH0sImRvb3JGcmFtZSI6eyIzcm9vbSI6MTMwLCI0cm9vbSI6MTMwLCI1cm9vbSI6MTMwLCJtYWlzb25ldHRlIjoxMzAsImNvbmRvIjoxMzB9LCJkb29yIjp7IjNyb29tIjoxMzAsIjRyb29tIjoxMzAsIjVyb29tIjoxMzAsIm1haXNvbmV0dGUiOjEzMCwiY29uZG8iOjEzMH0sImxvb3NlRnVybml0dXJlIjp7IjNyb29tIjoxOTUsIjRyb29tIjoxOTUsIjVyb29tIjoxOTUsIm1haXNvbmV0dGUiOjE5NSwiY29uZG8iOjE5NX0sIndhbGxwYXBlckhhY2siOnsiM3Jvb20iOjE5NSwiNHJvb20iOjAuNjUsIjVyb29tIjowLjY1LCJtYWlzb25ldHRlIjowLjY1LCJjb25kbyI6MC42NX0sImNhYmluZXRSZW1vdmFsIjp7IjNyb29tIjo0NTUsIjRyb29tIjo0NTUsIjVyb29tIjo0NTUsIm1haXNvbmV0dGUiOjQ1NSwiY29uZG8iOjQ1NX19');
   return (table[key]&&table[key][col])||0;
 }
 function getPaintingFlat(){
@@ -645,8 +604,8 @@ function calcEst(){
     Object.keys(selected).forEach(key=>{
       if(!selected[key]||key==='auto') return;
       anySelected=true;
-      if(key==='wallDemolitionSqft') hacking+=Math.max(400,Number(form.wallHackSqft||0)*50);
-      else if(key==='partitionDemolitionSqft') hacking+=Math.max(250,Number(form.partitionHackSqft||0)*35);
+      if(key==='wallDemolitionSqft') hacking+=Math.max(__R.wallHack.wallMin,Number(form.wallHackSqft||0)*__R.wallHack.wallSqft);
+      else if(key==='partitionDemolitionSqft') hacking+=Math.max(__R.wallHack.partitionMin,Number(form.partitionHackSqft||0)*__R.wallHack.partitionSqft);
       else hacking+=hackingPackagePrice(key);
     });
     if(anySelected) haulage=baseCharges.haulage;
@@ -654,45 +613,45 @@ function calcEst(){
 
   // ── KITCHEN TILING ONLY ──
   if(form.areas.kitchen){
-    if(form.kitchenTileWork==='hack')    masonry+=1100;
-    if(form.kitchenTileWork==='overlay') masonry+=550;
+    if(form.kitchenTileWork==='hack')    masonry+=__R.kitchen.hackTile;
+    if(form.kitchenTileWork==='overlay') masonry+=__R.kitchen.overlayTile;
     if(form.scope.carpentry){
       const ft=lFt(form.kitchenCabinetInput,form.kitchenCabinetUnit);
       if(ft>0){
-        carpentry+=ft*111;
-        if(form.kitchenTopCabinet) carpentry+=ft*111;
-        const wt={quartz:100,sintered:160};
-        carpentry+=ft*(wt[form.worktop]||100);
+        carpentry+=ft*__R.kitchen.baseCabinetFt;
+        if(form.kitchenTopCabinet) carpentry+=ft*__R.kitchen.topCabinetFt;
+        const wt=__R.worktop;
+        carpentry+=ft*(wt[form.worktop]||wt.quartz);
       }
     }
     if(form.scope.plumbing){
-      plumbing+=form.projectType==='kitchenOnly'?150:648;
-      if(form.kitchenSinkInstallation) plumbing+=120;
+      plumbing+=form.projectType==='kitchenOnly'?__R.kitchen.plumbingKitchenOnly:__R.kitchen.plumbingWhole;
+      if(form.kitchenSinkInstallation) plumbing+=__R.kitchen.sinkInstall;
     }
-    if(form.scope.electrical) electrical+=form.projectType==='kitchenOnly'?100:130;
+    if(form.scope.electrical) electrical+=form.projectType==='kitchenOnly'?__R.kitchen.electricalKitchenOnly:__R.kitchen.electricalWhole;
   }
 
   // ── TOILET TILING ONLY ──
   if(form.areas.toilets){
-    if(form.toiletTileWork==='hack')    masonry+=tc*1750;
-    if(form.toiletTileWork==='overlay') masonry+=tc*1450;
+    if(form.toiletTileWork==='hack')    masonry+=tc*__R.toilet.hackTile;
+    if(form.toiletTileWork==='overlay') masonry+=tc*__R.toilet.overlayTile;
     if(form.scope.plumbing){
-      plumbing+=tc*950;
-      plumbing+=Number(form.toiletBowlQty||0)*100;
-      plumbing+=Number(form.showerSetQty||0)*70;
-      plumbing+=Number(form.instantHeaterQty||0)*80;
-      plumbing+=Number(form.storageHeaterQty||0)*180;
-      if(form.toiletAccessories) plumbing+=tc*50;
+      plumbing+=tc*__R.toilet.plumbingPerToilet;
+      plumbing+=Number(form.toiletBowlQty||0)*__R.toilet.toiletBowl;
+      plumbing+=Number(form.showerSetQty||0)*__R.toilet.showerSet;
+      plumbing+=Number(form.instantHeaterQty||0)*__R.toilet.instantHeater;
+      plumbing+=Number(form.storageHeaterQty||0)*__R.toilet.storageHeater;
+      if(form.toiletAccessories) plumbing+=tc*__R.toilet.accessoriesPerToilet;
     }
     if(form.scope.glass){
-      const sR={none:0,screen180Casement:530,lShape90Sliding:610};
-      const bfR={none:0,screen180Casement:195,lShape90Sliding:220};
+      const sR=__R.glass.screen;
+      const bfR=__R.glass.blackFrame;
       for(let i=0;i<tc;i++){
         const gt=form.toiletGlassTypes[i]||'none';
         glass+=sR[gt]||0;
         if(form.showerScreenBlackFrame) glass+=bfR[gt]||0;
       }
-      glass+=Number(form.kitchenGlassBackingSqft||0)*12;
+      glass+=Number(form.kitchenGlassBackingSqft||0)*__R.glass.kitchenBackingSqft;
     }
   }
 
@@ -700,63 +659,63 @@ function calcEst(){
   if(form.scope.flooring){
     const fa=(isSmallProject() && !form.flooringAreaInput)?0:effectiveFloorArea();
     if(fa>0){
-      const fR={vinyl:6,overlayTiles:12,tiles:8};
-      masonry+=fa*(fR[form.flooringType]||7);
+      const fR=__R.flooring;
+      masonry+=fa*(fR[form.flooringType]||fR.fallback);
     }
   }
 
   // ── CARPENTRY ──
   if(form.scope.carpentry){
-    carpentry+=lFt(form.wardrobeInput,     form.wardrobeUnit)     *280;
-    carpentry+=lFt(form.tvConsoleInput,    form.tvConsoleUnit)    *117;
-    carpentry+=lFt(form.shoeCabinetInput,  form.shoeCabinetUnit)  *125;
-    carpentry+=lFt(form.studyTableInput,   form.studyTableUnit)   *108;
-    carpentry+=lFt(form.storageCabinetInput,form.storageCabinetUnit)*250;
-    if(form.featureWall) carpentry+=2500;
-    const complexityMultiplier=form.carpentryComplexity==='custom'?1.2:1;
+    carpentry+=lFt(form.wardrobeInput,     form.wardrobeUnit)     *__R.carpentry.wardrobeFt;
+    carpentry+=lFt(form.tvConsoleInput,    form.tvConsoleUnit)    *__R.carpentry.tvConsoleFt;
+    carpentry+=lFt(form.shoeCabinetInput,  form.shoeCabinetUnit)  *__R.carpentry.shoeCabinetFt;
+    carpentry+=lFt(form.studyTableInput,   form.studyTableUnit)   *__R.carpentry.studyTableFt;
+    carpentry+=lFt(form.storageCabinetInput,form.storageCabinetUnit)*__R.carpentry.storageCabinetFt;
+    if(form.featureWall) carpentry+=__R.carpentry.featureWall;
+    const complexityMultiplier=form.carpentryComplexity==='custom'?__R.carpentry.customMultiplier:__R.carpentry.standardMultiplier;
     carpentry*=complexityMultiplier;
   }
 
   // ── ELECTRICAL ──
   if(form.scope.electrical){
-    electrical+=Number(form.lightPoints||0)        *45;
-    electrical+=Number(form.powerPoints||0)        *70;
-    electrical+=Number(form.dataPoints||0)         *130;
-    electrical+=Number(form.hoodPoints||0)         *130;
-    electrical+=Number(form.lightInstallations||0) *25;
-    if(form.concealedWiring) electrical+=Number(form.lightPoints||0)*38;
-    electrical+=Number(form.airconIsolators||0)    *165;
+    electrical+=Number(form.lightPoints||0)        *__R.electrical.lightPoint;
+    electrical+=Number(form.powerPoints||0)        *__R.electrical.powerPoint;
+    electrical+=Number(form.dataPoints||0)         *__R.electrical.dataPoint;
+    electrical+=Number(form.hoodPoints||0)         *__R.electrical.hoodPoint;
+    electrical+=Number(form.lightInstallations||0) *__R.electrical.lightInstallation;
+    if(form.concealedWiring) electrical+=Number(form.lightPoints||0)*__R.electrical.concealedLightPoint;
+    electrical+=Number(form.airconIsolators||0)    *__R.electrical.airconIsolator;
   }
 
   // ── AIRCON ──
   if(form.scope.aircon){
     const units=Number(form.airconUnits||0);
-    const tR={basic:700,mid:950,premium:1500};
-    aircon+=units*(tR[form.airconTier]||950);
-    if(form.airconPiping==='concealed') aircon+=units*650;
+    const tR=__R.aircon;
+    aircon+=units*(tR[form.airconTier]||tR.fallback);
+    if(form.airconPiping==='concealed') aircon+=units*__R.aircon.concealedPipingPerUnit;
   }
 
   // ── PAINTING & CEILING ──
   if(form.scope.paintingCeiling){
     painting+=getPaintingFlat();
-    const fcR={hdb:3.0,condo:3.15,landed:3.50};
-    if(form.falseCeiling) painting+=Number(form.falseCeilingSqft||0)*(fcR[form.propertyType]||3);
-    if(form.lBox)      painting+=800;
-    if(form.wallpaper) painting+=4000;
+    const fcR=__R.ceiling;
+    if(form.falseCeiling) painting+=Number(form.falseCeilingSqft||0)*(fcR[form.propertyType]||fcR.fallback);
+    if(form.lBox)      painting+=__R.ceiling.lBox;
+    if(form.wallpaper) painting+=__R.ceiling.wallpaper;
   }
 
   // ── DOORS ──
   if(form.scope.doors){
-    const mdR={none:0,hdbTimber:1800,security:3500};
+    const mdR=__R.doors.main;
     doors+=mdR[form.mainDoorType]||0;
-    if(form.hdbGate) doors+=1200;
-    doors+=Number(form.bedroomDoorQty||0)*480;
-    doors+=Number(form.toiletDoorQty||0) *420;
+    if(form.hdbGate) doors+=__R.doors.hdbGate;
+    doors+=Number(form.bedroomDoorQty||0)*__R.doors.bedroomDoor;
+    doors+=Number(form.toiletDoorQty||0) *__R.doors.toiletDoor;
   }
 
   // ── WINDOW GRILLES ──
   if(form.scope.windowGrilles){
-    grilles+=Number(form.windowGrilleQty||0)*350;
+    grilles+=Number(form.windowGrilleQty||0)*__R.grilles.window;
   }
 
   add('Professional Services & Site Washing',profSvc);
@@ -772,7 +731,7 @@ function calcEst(){
   if(grilles>0)  add('Window Grilles',grilles);
 
   const subtotalBeforeGst=mods.reduce((s,m)=>s+m.cost,0)*prof.cx;
-  const gstAmount=form.includeGst?subtotalBeforeGst*0.09:0;
+  const gstAmount=form.includeGst?subtotalBeforeGst*__R.gst:0;
   const subtotal=subtotalBeforeGst+gstAmount;
   const total=rng(subtotal);
   const accuracy=getAccuracyScore();
