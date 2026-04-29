@@ -1,3 +1,6 @@
 node_modules
 dist
 .vite-react-ssg-temp
+
+# Local Netlify folder
+.netlify
