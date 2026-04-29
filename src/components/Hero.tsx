@@ -1,18 +1,33 @@
 import { Helmet } from 'react-helmet-async';
-import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
+import { motion, useMotionValue, useTransform } from 'motion/react';
+import { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const { t } = useTranslation();
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
+  const containerRef = useRef<HTMLElement>(null);
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  // SSR-SAFE: useMotionValue starts at 0 — no DOM access during SSG pre-render.
+  // useScroll (removed) called browser APIs during render, crashing the SSG build.
+  const scrollYProgress = useMotionValue(0);
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
+
+  // Client-side only: scroll listener attaches AFTER React hydrates in the browser.
+  // During SSG pre-render this useEffect never runs — that's exactly what we want.
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const onScroll = () => {
+      const rect = el.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, -rect.top / el.offsetHeight));
+      scrollYProgress.set(progress);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [scrollYProgress]);
 
   return (
     <>
@@ -36,7 +51,7 @@ export default function Hero() {
         ref={containerRef}
         className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-48 md:pt-32 lg:pt-40 pb-20 md:pb-32"
       >
-        {/* Background Image with Overlay and Parallax - Optimized for Speed */}
+        {/* Background Image with Overlay and Parallax */}
         <motion.div
           style={{ y }}
           className="absolute inset-0 z-0"
@@ -45,7 +60,7 @@ export default function Hero() {
             src="/hero.webp"
             alt="Luxury interior design and renovation in Singapore"
             className="w-full h-full object-cover object-center opacity-60 scale-110"
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -57,7 +72,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-4xl md:text-6xl font-serif text-white mb-6 leading-tight uppercase tracking-tight"
           >
             {t('hero.title_main')}
@@ -70,7 +85,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
             className="text-xs uppercase tracking-[0.25em] text-gold/80 mb-8 font-semibold"
           >
             <span>{t('accreditation.hdb')} HB-02-5250G</span>
@@ -82,7 +97,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             className="text-lg md:text-xl text-gray-200 mb-6 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
           >
             {t('hero.subtitle')}
@@ -92,7 +107,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.28, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.28, ease: 'easeOut' }}
             className="text-sm md:text-base text-gray-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
           >
             Singapore interior design and renovation firm for HDB, condo and commercial spaces, with expertise in bespoke home interiors, office fit-outs and reinstatement works.
@@ -102,7 +117,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.35, ease: 'easeOut' }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4"
           >
             {/* Commercial — gold filled */}
@@ -113,7 +128,7 @@ export default function Hero() {
               {t('nav.commercial')}
             </Link>
 
-            {/* Residential — white outline, gold highlight on hover */}
+            {/* Residential — white outline */}
             <Link
               to="/residential"
               className="w-full sm:w-[260px] px-8 py-5 bg-transparent text-white text-sm uppercase tracking-[0.2em] hover:bg-gold/20 hover:border-gold/60 hover:text-gold transition-all duration-300 font-bold border border-white/50 rounded-full backdrop-blur-[5px] text-center"
@@ -126,10 +141,10 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            {/* View Our Work → /gallery — no hover change as requested */}
+            {/* View Our Work → /gallery */}
             <Link
               to="/gallery"
               className="w-full sm:w-[260px] px-8 py-4 bg-transparent text-white/80 text-sm uppercase tracking-[0.2em] transition-all duration-300 font-medium border border-white/25 rounded-full backdrop-blur-[5px] text-center"
@@ -137,7 +152,7 @@ export default function Hero() {
               {t('hero.cta')}
             </Link>
 
-            {/* WhatsApp — gold outline, light green fill on hover */}
+            {/* WhatsApp */}
             <a
               href="https://wa.me/6598333085"
               target="_blank"
