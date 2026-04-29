@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Singapore Renovation Cost Calculator 2025 | Free Budget Estimate | ID Work Studio</title>
+  <meta name="description" content="Estimate HDB, condo, resale, BTO, kitchen and toilet renovation costs in Singapore with ID Work Studio’s renovation cost calculator."/>
+  <link rel="canonical" href="https://idworkstudio.com/renovation-cost-calculator"/>
+  <meta property="og:title" content="Singapore Renovation Cost Calculator | ID Work Studio"/>
+  <meta property="og:description" content="Plan your Singapore renovation budget for HDB, condo, resale, BTO, kitchen and toilet works."/>
+  <meta property="og:type" content="website"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Cormorant+Poppins replaced by Playfair+Montserrat in site-skin above -->
+  <style>
+    :root{--cream:#f3efe7;--warm:#ede5d8;--stone:#d8cec0;--taupe:#a99683;--charcoal:#171514;--muted:#746b61;--champagne:#c8aa72;--card:#fbf8f2}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Poppins',sans-serif;background:radial-gradient(circle at top left,#fbf7ef 0,#f0ebe3 38%,#e8dfd3 100%);color:var(--charcoal);overflow-x:hidden}
+    .serif{font-family:'Cormorant Garamond',serif}
+    input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+    input[type=number]{-moz-appearance:textfield}
+    .eyebrow{letter-spacing:.16em}
+    .soft-card{background:rgba(251,248,242,.9);border:1px solid rgba(169,150,131,.24);box-shadow:0 24px 70px rgba(23,21,20,.08)}
+    .card-btn{min-height:44px;transition:background .18s,border-color .18s,color .18s,transform .18s,box-shadow .18s}
+    .card-btn:hover:not(.active-card){background:#fffaf2;border-color:#c8aa72;box-shadow:0 10px 24px rgba(23,21,20,.06);transform:translateY(-1px)}
+    .active-card{background:#C5A059!important;border-color:#C5A059!important;color:#fff!important;box-shadow:0 16px 30px rgba(197,160,89,.35)}
+    .pill-btn{min-height:44px;transition:background .18s,border-color .18s,color .18s}
+    .pill-btn:hover:not(.active-pill){border-color:#c8aa72;background:#fffaf2}
+    .active-pill{background:#C5A059!important;border-color:#C5A059!important;color:#fff!important}
+    .inp{width:100%;min-height:44px;border:1px solid #d8cec0;background:#fffaf4;padding:.75rem 1rem;font-size:.875rem;font-family:'Poppins',sans-serif;outline:none;border-radius:14px;transition:border-color .15s,box-shadow .15s,background .15s;color:#24211f}
+    .inp:focus{border-color:#b99658;box-shadow:0 0 0 4px rgba(200,170,114,.18);background:#fff}
+    select.inp{cursor:pointer}
+    .section-card{background:rgba(255,252,246,.72);border-color:rgba(169,150,131,.25)!important}
+    .gold-note{border-color:rgba(200,170,114,.35)!important;background:rgba(200,170,114,.12)!important;color:#6f5830!important}
+    .section-card summary{list-style:none;cursor:pointer}
+    .section-card summary::-webkit-details-marker{display:none}
+    .section-card summary::after{content:'+';float:right;color:#a99683;font-size:1rem;line-height:1}
+    .section-card[open] summary::after{content:'–'}
+    #sidebar{box-shadow:0 20px 60px rgba(23,21,20,.18)}
+    @media (max-width:1023px){main{padding-bottom:170px!important}#sidebar{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;border-radius:22px!important;padding:14px!important;max-height:145px;overflow:auto}#sidebar .mobile-hide{display:none!important}#sidebar .mobile-compact{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center}#sidebar .mobile-cta{margin-top:10px!important;padding:.7rem 1rem!important;border-radius:16px!important}.section-card[open] summary{margin-bottom:1rem}}
+    @media (max-width:640px){.step-pill-text{font-size:10px}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .fade-up{animation:fadeUp .3s ease forwards}
+    @keyframes countUp{0%,100%{opacity:1}50%{opacity:.4}}
+    .counting{animation:countUp .3s ease}
+  </style>
+
+  <!-- OG / SEO enhancements -->
+  <meta property="og:url"   content="https://idworkstudio.com/renovation-cost-calculator"/>
+  <meta property="og:image" content="https://idworkstudio.com/og-preview.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="robots"       content="index, follow"/>
+
+  <!-- Site fonts: Playfair Display + Montserrat (replaces Cormorant/Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+
+  <!-- ═══ SITE SKIN — navbar / hero / footer only ═══ -->
+  <!-- Zero impact on calculator CSS below -->
+  <style id="site-skin">
+    /* Override body + serif to match site fonts */
+    body { font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif !important; }
+    .serif { font-family: 'Playfair Display', ui-serif, Georgia, serif !important; }
+
+    /* ─── Fixed Navbar ─── */
+    #site-nav { position:fixed; width:100%; z-index:60; top:0; }
+    .accred-bar {
+      background:#2C2C2C; color:#fff;
+      font-size:11px; padding:7px 16px; text-align:center;
+      letter-spacing:.16em; text-transform:uppercase; font-weight:500;
+      border-bottom:1px solid rgba(212,175,55,.18);
+      font-family:'Montserrat',sans-serif;
+    }
+    .accred-bar a { color:#D4AF37; font-weight:700; text-decoration:none; transition:color .2s; }
+    .accred-bar a:hover { color:#fff; }
+    .main-nav { background:rgba(255,255,255,.96); backdrop-filter:blur(12px); border-bottom:1px solid #f0f0f0; }
+    .main-nav-inner {
+      max-width:1280px; margin:0 auto; padding:0 24px;
+      height:68px; display:flex; align-items:center; justify-content:space-between;
+    }
+    .nav-logo {
+      font-family:'Montserrat',sans-serif; font-size:19px; font-weight:900;
+      letter-spacing:-.03em; text-transform:uppercase; color:#2C2C2C; text-decoration:none;
+    }
+    .nav-links { display:flex; align-items:center; gap:24px; }
+    .nav-links a {
+      font-size:13px; text-transform:uppercase; letter-spacing:.12em;
+      font-weight:300; color:rgba(44,44,44,.75); text-decoration:none; transition:color .2s;
+      font-family:'Montserrat',sans-serif;
+    }
+    .nav-links a:hover { color:#D4AF37; }
+    .nav-cta {
+      font-size:13px; text-transform:uppercase; letter-spacing:.14em; font-weight:600;
+      background:#C5A059; color:#fff; padding:9px 20px; border-radius:999px;
+      text-decoration:none; transition:background .2s,box-shadow .2s;
+      font-family:'Montserrat',sans-serif;
+    }
+    .nav-cta:hover { background:#D6B26B; box-shadow:0 0 20px rgba(197,160,89,.4); }
+    #mobile-menu-btn { display:none; background:none; border:none; cursor:pointer; padding:4px; }
+    @media(max-width:768px){
+      .nav-links { display:none; }
+      #mobile-menu-btn { display:block; }
+      .mobile-nav-open .nav-links {
+        display:flex; flex-direction:column; align-items:stretch;
+        position:absolute; top:100%; left:0; right:0;
+        background:#fff; padding:16px 24px 24px; gap:4px;
+        border-bottom:1px solid #f0f0f0; box-shadow:0 8px 20px rgba(0,0,0,.08);
+      }
+      .mobile-nav-open .nav-links a { padding:12px 8px; border-bottom:1px solid #f5f5f5; }
+      .mobile-nav-open .nav-cta { margin-top:8px; text-align:center; }
+    }
+
+    /* ─── Hero ─── */
+    #site-hero {
+      background:#111; padding-top:120px; padding-bottom:72px;
+      position:relative; overflow:hidden;
+    }
+    .hero-glow {
+      position:absolute; width:560px; height:560px; border-radius:50%;
+      background:radial-gradient(circle,rgba(197,160,89,.28) 0%,transparent 70%);
+      top:-80px; right:-80px; pointer-events:none;
+    }
+    .hero-pattern { position:absolute; inset:0; opacity:.06; pointer-events:none; }
+    .hero-inner { position:relative; z-index:10; max-width:1100px; margin:0 auto; padding:0 24px; text-align:center; }
+    .hero-pill {
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid rgba(197,160,89,.32); background:rgba(197,160,89,.09);
+      border-radius:999px; padding:8px 20px; margin-bottom:28px;
+      backdrop-filter:blur(4px);
+    }
+    .hero-pill span { font-size:10.5px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:rgba(197,160,89,.9); font-family:'Montserrat',sans-serif; }
+    .hero-pill i { width:6px; height:6px; background:#C5A059; border-radius:50%; display:inline-block; flex-shrink:0; }
+    .hero-h1 {
+      font-family:'Playfair Display',serif; font-size:clamp(2.4rem,6vw,4.2rem);
+      font-weight:700; color:#fff; line-height:1.06; margin-bottom:22px;
+    }
+    .hero-h1 em { color:#C5A059; font-style:italic; }
+    .hero-sub {
+      font-size:clamp(13px,1.7vw,16px); color:rgba(255,255,255,.6);
+      max-width:620px; margin:0 auto 36px; line-height:1.8; font-weight:300;
+      font-family:'Montserrat',sans-serif;
+    }
+    .hero-badges { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; max-width:600px; margin:0 auto 36px; }
+    .hero-badge {
+      border:1px solid rgba(197,160,89,.3); background:rgba(197,160,89,.07);
+      border-radius:14px; padding:14px 18px; backdrop-filter:blur(4px);
+    }
+    .hero-badge-title { font-size:10.5px; text-transform:uppercase; letter-spacing:.14em; color:#C5A059; font-weight:600; margin-bottom:4px; font-family:'Montserrat',sans-serif; }
+    .hero-badge-sub { font-size:11.5px; color:rgba(255,255,255,.5); line-height:1.5; font-family:'Montserrat',sans-serif; }
+    .hero-cta {
+      display:inline-flex; align-items:center; gap:10px;
+      background:#C5A059; color:#fff; padding:13px 30px; border-radius:999px;
+      font-size:12.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+      text-decoration:none; transition:background .2s,box-shadow .2s;
+      font-family:'Montserrat',sans-serif;
+    }
+    .hero-cta:hover { background:#D6B26B; box-shadow:0 0 28px rgba(197,160,89,.5); }
+
+    /* ─── Main padding for fixed navbar ─── */
+    #calc-main { padding-top:120px !important; }
+
+    /* ─── Footer ─── */
+    #site-footer {
+      background:#000; color:#fff;
+      padding:56px 24px 72px;
+      border-top:1px solid #1a1a1a;
+    }
+    .footer-inner { max-width:1280px; margin:0 auto; text-align:center; }
+    .footer-logo { font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:.2em; text-transform:uppercase; margin-bottom:18px; }
+    .footer-nap { display:flex; flex-wrap:wrap; justify-content:center; gap:16px 28px; margin-bottom:28px; color:#777; font-size:11px; font-family:'Montserrat',sans-serif; }
+    .footer-nap a { color:#777; text-decoration:none; transition:color .2s; }
+    .footer-nap a:hover { color:#C5A059; }
+    .footer-badges { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:22px; }
+    .footer-badge-link {
+      display:inline-flex; border:1px solid rgba(197,160,89,.4); color:#fff;
+      font-size:10.5px; text-transform:uppercase; letter-spacing:.12em;
+      padding:7px 22px; border-radius:999px; text-decoration:none;
+      transition:background .2s,color .2s; font-family:'Montserrat',sans-serif;
+    }
+    .footer-badge-link:hover { background:#C5A059; color:#111; }
+    .footer-badge-link.bca { border-color:rgba(255,255,255,.22); }
+    .footer-badge-link.bca:hover { background:#fff; color:#111; }
+    .footer-copy { color:#444; font-size:12px; font-family:'Montserrat',sans-serif; }
+
+    /* ─── WhatsApp float (desktop only) ─── */
+    #wa-float {
+      position:fixed; bottom:24px; right:24px; z-index:55;
+      background:#25D366; color:#fff; border-radius:999px;
+      padding:13px 22px; font-size:12.5px; font-weight:600;
+      text-decoration:none; box-shadow:0 8px 28px rgba(37,211,102,.42);
+      display:flex; align-items:center; gap:8px;
+      transition:transform .2s,box-shadow .2s;
+      font-family:'Montserrat',sans-serif;
+    }
+    #wa-float:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(37,211,102,.55); }
+    @media(max-width:1023px){ #wa-float { display:none; } }
+  </style>
+</head>
+<body>
+
+<!-- ╔══════════════════════════╗
+     ║  SITE NAVBAR            ║
+     ╚══════════════════════════╝ -->
+<div id="site-nav">
+  <div class="accred-bar">
+    <a href="https://services2.hdb.gov.sg/webapp/FI10AWBIZ/" target="_blank" rel="noopener noreferrer">HDB Registered</a>
+    <span style="margin:0 8px;color:#555">|</span>
+    <a href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" target="_blank" rel="noopener noreferrer">BCA Registered</a>
+    <span style="margin:0 8px;color:#555">|</span>
+    <span style="color:rgba(255,255,255,.45)">Est. 2015 · Singapore</span>
+  </div>
+  <nav class="main-nav" id="mainNav">
+    <div class="main-nav-inner">
+      <a href="https://idworkstudio.com" class="nav-logo">ID Work Studio</a>
+      <div class="nav-links" id="navLinks">
+        <a href="https://idworkstudio.com/#home">Home</a>
+        <a href="https://idworkstudio.com/residential">Residential</a>
+        <a href="https://idworkstudio.com/commercial">Commercial</a>
+        <a href="https://idworkstudio.com/gallery">Gallery</a>
+        <a href="https://idworkstudio.com/insights">Insights</a>
+        <a href="https://idworkstudio.com/#contact">Contact</a>
+        <a href="https://wa.me/6598333085" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+      </div>
+      <button id="mobile-menu-btn" aria-label="Toggle menu" onclick="document.getElementById('mainNav').classList.toggle('mobile-nav-open')">
+        <svg width="24" height="24" fill="none" stroke="#2C2C2C" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+</div>
+
+
+<!-- ╔══════════════════════════╗
+     ║  HERO SECTION           ║
+     ╚══════════════════════════╝ -->
+<section id="site-hero">
+  <!-- Geometric floor-plan SVG pattern -->
+  <svg class="hero-pattern" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="g1" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M72 0L0 0 0 72" fill="none" stroke="#C5A059" stroke-width="0.5"/></pattern>
+    </defs>
+    <rect width="1440" height="560" fill="url(#g1)"/>
+    <rect x="160" y="70" width="300" height="200" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.5"/>
+    <rect x="200" y="110" width="75" height="75" fill="none" stroke="#C5A059" stroke-width="0.4" opacity="0.35"/>
+    <rect x="310" y="110" width="110" height="130" fill="none" stroke="#C5A059" stroke-width="0.4" opacity="0.35"/>
+    <line x1="160" y1="190" x2="460" y2="190" stroke="#C5A059" stroke-width="0.4" opacity="0.4"/>
+    <rect x="870" y="90" width="260" height="185" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.5"/>
+    <rect x="895" y="115" width="90" height="75" fill="none" stroke="#C5A059" stroke-width="0.4" opacity="0.35"/>
+    <rect x="1005" y="115" width="105" height="140" fill="none" stroke="#C5A059" stroke-width="0.4" opacity="0.35"/>
+    <circle cx="720" cy="280" r="160" fill="none" stroke="#C5A059" stroke-width="0.4" opacity="0.18"/>
+  </svg>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-pill">
+      <i></i>
+      <span>ID Work Studio · BCA-Registered · HDB-Approved · Est. 2015</span>
+    </div>
+    <h1 class="hero-h1">
+      Singapore<br>
+      <em>Renovation Cost</em><br>
+      Calculator
+    </h1>
+    <p class="hero-sub">
+      Plan your HDB, BTO, resale, condo or landed renovation budget in minutes.
+      Free step-by-step estimate — no sign-up, no obligation.
+    </p>
+    <div class="hero-badges">
+      <div class="hero-badge">
+        <div class="hero-badge-title">HDB &amp; BTO</div>
+        <div class="hero-badge-sub">New flat &amp; resale budget guide</div>
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-title">Condo &amp; Landed</div>
+        <div class="hero-badge-sub">Full scope or partial renovation</div>
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-title">Kitchen &amp; Toilet</div>
+        <div class="hero-badge-sub">Focused works estimate</div>
+      </div>
+    </div>
+    <a href="#calc-main" class="hero-cta">
+      Start Free Estimate
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </a>
+  </div>
+</section>
+
+
+<main id="calc-main" class="min-h-screen px-4 py-8 md:py-14">
+<section class="mx-auto max-w-[1180px]">
+
+  <!-- SEO Header -->
+  <header class="mb-8 text-center md:mb-12">
+    <div class="eyebrow mb-5 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-[#d8cec0] bg-[#fbf8f2]/80 px-4 py-2 text-[11px] font-semibold uppercase text-[#746b61] shadow-sm">
+      ID Work Studio <span class="text-[#c8aa72]">·</span> BCA-Registered <span class="text-[#c8aa72]">·</span> HDB-Approved
+    </div>
+    <h1 class="serif mx-auto max-w-4xl text-4xl font-bold tracking-tight text-[#171514] md:text-6xl" style="line-height:1.03">Singapore Renovation Cost Calculator</h1>
+    <p class="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#746b61] md:text-base">
+      Estimate your renovation budget for HDB, condo, resale, BTO, kitchen and toilet renovation works in Singapore. Use this as a calm planning guide before requesting a detailed itemised quotation from ID Work Studio.
+    </p>
+    <div class="mx-auto mt-6 grid max-w-3xl gap-3 text-left text-xs text-[#746b61] sm:grid-cols-3">
+      <div class="rounded-2xl border border-[#d8cec0]/70 bg-[#fbf8f2]/75 p-4"><strong class="block text-[#171514]">HDB & BTO</strong>Budget guide for new and resale HDB flats.</div>
+      <div class="rounded-2xl border border-[#d8cec0]/70 bg-[#fbf8f2]/75 p-4"><strong class="block text-[#171514]">Condo & resale</strong>Plan hacking, carpentry, flooring and electrical works.</div>
+      <div class="rounded-2xl border border-[#d8cec0]/70 bg-[#fbf8f2]/75 p-4"><strong class="block text-[#171514]">Kitchen & toilet</strong>Focused estimates for common renovation scopes.</div>
+    </div>
+  </header>
+
+  <!-- Step pills -->
+  <div id="calculatorTop" class="mb-5 grid grid-cols-4 gap-1.5 sm:mb-7 sm:flex sm:gap-2">
+    <div id="pill0" class="flex-1 text-center text-xs font-semibold py-2.5 rounded-full transition-all"></div>
+    <div id="pill1" class="flex-1 text-center text-xs font-semibold py-2.5 rounded-full transition-all"></div>
+    <div id="pill2" class="flex-1 text-center text-xs font-semibold py-2.5 rounded-full transition-all"></div>
+    <div id="pill3" class="flex-1 text-center text-xs font-semibold py-2.5 rounded-full transition-all"></div>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
+
+    <!-- Step content -->
+    <div class="soft-card rounded-3xl p-5 md:p-10">
+      <div id="stepContent"></div>
+      <div class="mt-8 flex justify-between gap-3 border-t border-[#d8cec0]/60 pt-6">
+        <button id="backBtn" class="min-h-[44px] rounded-2xl border border-[#bfb2a2] px-6 py-3 text-sm font-semibold text-stone-600 hover:bg-stone-50 disabled:opacity-30 transition-all">← Back</button>
+        <button id="nextBtn" class="min-h-[44px] rounded-2xl bg-[#171514] px-8 py-3 text-sm font-semibold text-white hover:bg-stone-700 disabled:opacity-30 transition-all">Next →</button>
+      </div>
+    </div>
+
+    <!-- Sidebar (always dark) -->
+    <aside id="sidebar" class="rounded-3xl p-6 lg:sticky lg:top-5 lg:self-start" style="background:#171514;color:#fff"></aside>
+  </div>
+
+
+  <!-- FAQ / GEO Content -->
+  <section class="mt-12 rounded-3xl border border-[#d8cec0]/70 bg-[#fbf8f2]/75 p-6 shadow-sm md:p-10">
+    <div class="mb-7 max-w-3xl">
+      <p class="eyebrow mb-2 text-xs font-semibold uppercase text-[#a99683]">Renovation Budget FAQ</p>
+      <h2 class="serif text-3xl font-bold text-[#171514] md:text-4xl">Singapore renovation cost questions</h2>
+      <p class="mt-3 text-sm leading-7 text-[#746b61]">These answers help homeowners compare HDB, condo, resale, BTO, kitchen and toilet renovation estimates before speaking to a contractor.</p>
+    </div>
+    <div class="grid gap-3 md:grid-cols-2">
+      <details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5" open><summary class="cursor-pointer text-sm font-semibold text-[#171514]">How accurate is this renovation calculator?</summary><p class="mt-3 text-sm leading-6 text-[#746b61]">It is a planning estimate based on selected scope, property type, size and common Singapore renovation cost items. Final pricing still depends on site measurements, hacking condition, material selection and approval requirements.</p></details>
+      <details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5"><summary class="cursor-pointer text-sm font-semibold text-[#171514]">Can it estimate HDB and BTO renovation costs?</summary><p class="mt-3 text-sm leading-6 text-[#746b61]">Yes. The calculator includes HDB flat types, BTO/new condition and resale condition so homeowners can compare broad budget ranges for common HDB renovation scopes.</p></details>
+      <details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5"><summary class="cursor-pointer text-sm font-semibold text-[#171514]">Can I use it for kitchen or toilet renovation only?</summary><p class="mt-3 text-sm leading-6 text-[#746b61]">Yes. Choose kitchen-only or toilet-only at the first step. The estimate will focus on relevant items such as carpentry, worktop, tiling, plumbing, sanitary fittings and shower screens.</p></details>
+      <details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5"><summary class="cursor-pointer text-sm font-semibold text-[#171514]">Why does resale renovation usually cost more?</summary><p class="mt-3 text-sm leading-6 text-[#746b61]">Resale homes often involve hacking, haulage, removal, making-good works and unknown site conditions. These can increase the final renovation cost after inspection.</p></details>
+      <details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5"><summary class="cursor-pointer text-sm font-semibold text-[#171514]">Does the estimate include GST?</summary><p class="mt-3 text-sm leading-6 text-[#746b61]">The calculator includes a GST toggle at the estimate step. Switch it on to view a GST-inclusive planning range.</p></details>
+      <details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5"><summary class="cursor-pointer text-sm font-semibold text-[#171514]">How do I get a confirmed quotation?</summary><p class="mt-3 text-sm leading-6 text-[#746b61]">Send the estimate to ID Work Studio on WhatsApp. A confirmed quotation requires floor plan review, site measurements, material confirmation and final scope checking.</p></details>
+    </div>
+  </section>
+
+</section>
+</main>
+
+
+<!-- ╔══════════════════════════╗
+     ║  SITE FOOTER            ║
+     ╚══════════════════════════╝ -->
+<footer id="site-footer">
+  <div class="footer-inner">
+    <p class="footer-logo">ID Work Studio</p>
+    <div class="footer-nap">
+      <span>📍 11 Woodlands Close #03-10 Woodlands 11 Singapore 737853</span>
+      <a href="tel:+6568162872">📞 6816 2872</a>
+      <a href="mailto:contact@idworkstudio.com">✉ contact@idworkstudio.com</a>
+      <span>🏢 UEN 201539658C · HDB Reg: HB-02-5250G</span>
+    </div>
+    <div class="footer-badges">
+      <a href="https://services2.hdb.gov.sg/webapp/FI10AWBIZ/" target="_blank" rel="noopener noreferrer" class="footer-badge-link">HDB Registered</a>
+      <a href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" target="_blank" rel="noopener noreferrer" class="footer-badge-link bca">BCA Registered</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 ID Work Studio. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- WhatsApp floating button (desktop only) -->
+<a id="wa-float" href="https://wa.me/6598333085" target="_blank" rel="noopener noreferrer">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Get Free Quote
+</a>
+
+<script>
+// =============================================
+// CONSTANTS — CUSTOMER ESTIMATE RATES
+// =============================================
+const M2SF = 10.7639, MFT = 3.28084;
+const SGD = new Intl.NumberFormat('en-SG',{style:'currency',currency:'SGD',maximumFractionDigits:0});
+const __IDWS_DECODE=x=>JSON.parse(atob(x));
+const __R=__IDWS_DECODE('eyJwYyI6eyJraXRjaGVuT25seSI6eyJwcm9mU3ZjIjoyMDAsImhhdWxhZ2UiOjIwMH0sInRvaWxldE9ubHkiOnsicHJvZlN2YyI6MjAwLCJoYXVsYWdlIjozMDB9LCJwYXJ0aWFsIjp7InByb2ZTdmMiOjUwMCwiaGF1bGFnZSI6NzE1fSwid2hvbGVIb3VzZSI6eyJwcm9mU3ZjIjo4MDAsImhhdWxhZ2UiOjEwNjV9fSwiYXJlYSI6eyJsaXZpbmdEaW5pbmciOjAuMjgsImtpdGNoZW4iOjAuMTQsIm1hc3RlckJlZHJvb20iOjAuMTIsImJlZHJvb21zIjowLjIyLCJ0b2lsZXRzIjowLjA4LCJzZXJ2aWNlWWFyZCI6MC4wNiwiYmFsY29ueSI6MC4wNX0sIndvcmt0b3AiOnsicXVhcnR6IjoxMDAsInNpbnRlcmVkIjoxNjB9LCJraXRjaGVuIjp7ImhhY2tUaWxlIjoxMTAwLCJvdmVybGF5VGlsZSI6NTUwLCJiYXNlQ2FiaW5ldEZ0IjoxMTEsInRvcENhYmluZXRGdCI6MTExLCJwbHVtYmluZ0tpdGNoZW5Pbmx5IjoxNTAsInBsdW1iaW5nV2hvbGUiOjY0OCwic2lua0luc3RhbGwiOjEyMCwiZWxlY3RyaWNhbEtpdGNoZW5Pbmx5IjoxMDAsImVsZWN0cmljYWxXaG9sZSI6MTMwfSwidG9pbGV0Ijp7ImhhY2tUaWxlIjoxNzUwLCJvdmVybGF5VGlsZSI6MTQ1MCwicGx1bWJpbmdQZXJUb2lsZXQiOjk1MCwidG9pbGV0Qm93bCI6MTAwLCJzaG93ZXJTZXQiOjcwLCJpbnN0YW50SGVhdGVyIjo4MCwic3RvcmFnZUhlYXRlciI6MTgwLCJhY2Nlc3Nvcmllc1BlclRvaWxldCI6NTB9LCJnbGFzcyI6eyJzY3JlZW4iOnsibm9uZSI6MCwic2NyZWVuMTgwQ2FzZW1lbnQiOjUzMCwibFNoYXBlOTBTbGlkaW5nIjo2MTB9LCJibGFja0ZyYW1lIjp7Im5vbmUiOjAsInNjcmVlbjE4MENhc2VtZW50IjoxOTUsImxTaGFwZTkwU2xpZGluZyI6MjIwfSwia2l0Y2hlbkJhY2tpbmdTcWZ0IjoxMn0sImZsb29yaW5nIjp7InZpbnlsIjo2LCJvdmVybGF5VGlsZXMiOjEyLCJ0aWxlcyI6OCwiZmFsbGJhY2siOjd9LCJjYXJwZW50cnkiOnsid2FyZHJvYmVGdCI6MjgwLCJ0dkNvbnNvbGVGdCI6MTE3LCJzaG9lQ2FiaW5ldEZ0IjoxMjUsInN0dWR5VGFibGVGdCI6MTA4LCJzdG9yYWdlQ2FiaW5ldEZ0IjoyNTAsImZlYXR1cmVXYWxsIjoyNTAwLCJjdXN0b21NdWx0aXBsaWVyIjoxLjIsInN0YW5kYXJkTXVsdGlwbGllciI6MX0sImVsZWN0cmljYWwiOnsibGlnaHRQb2ludCI6NDUsInBvd2VyUG9pbnQiOjcwLCJkYXRhUG9pbnQiOjEzMCwiaG9vZFBvaW50IjoxMzAsImxpZ2h0SW5zdGFsbGF0aW9uIjoyNSwiY29uY2VhbGVkTGlnaHRQb2ludCI6MzgsImFpcmNvbklzb2xhdG9yIjoxNjV9LCJhaXJjb24iOnsiYmFzaWMiOjcwMCwibWlkIjo5NTAsInByZW1pdW0iOjE1MDAsImNvbmNlYWxlZFBpcGluZ1BlclVuaXQiOjY1MCwiZmFsbGJhY2siOjk1MH0sImNlaWxpbmciOnsiaGRiIjozLjAsImNvbmRvIjozLjE1LCJsYW5kZWQiOjMuNSwibEJveCI6ODAwLCJ3YWxscGFwZXIiOjQwMDAsImZhbGxiYWNrIjozfSwiZG9vcnMiOnsibWFpbiI6eyJub25lIjowLCJoZGJUaW1iZXIiOjE4MDAsInNlY3VyaXR5IjozNTAwfSwiaGRiR2F0ZSI6MTIwMCwiYmVkcm9vbURvb3IiOjQ4MCwidG9pbGV0RG9vciI6NDIwfSwiZ3JpbGxlcyI6eyJ3aW5kb3ciOjM1MH0sIndhbGxIYWNrIjp7IndhbGxNaW4iOjQwMCwid2FsbFNxZnQiOjUwLCJwYXJ0aXRpb25NaW4iOjI1MCwicGFydGl0aW9uU3FmdCI6MzV9LCJnc3QiOjAuMDksInJhbmdlIjp7ImxvdyI6MS4wLCJoaWdoIjoxLjEyfSwicHJvcEN4Ijp7ImhkYiI6MS4wLCJjb25kbyI6MS4wOCwibGFuZGVkIjoxLjI1fX0=');
+
+const PROPERTY = {
+  hdb:   {label:'HDB',    resaleH:1.0, cx:1.00},
+  condo: {label:'Condo',  resaleH:1.0, cx:1.08},
+  landed:{label:'Landed', resaleH:1.0, cx:1.25},
+};
+
+const HDB_TYPES = {
+  '2room':{label:'2-Room Flexi',sqft:430},
+  '3room':{label:'3-Room',      sqft:700},
+  '4room':{label:'4-Room',      sqft:969},
+  '5room':{label:'5-Room',      sqft:1184},
+  'ea':   {label:'EA / EM',     sqft:1561},
+  'dbss': {label:'DBSS',        sqft:1100},
+};
+
+const PAINT_HDB = __IDWS_DECODE('eyIycm9vbSI6eyJzdGFuZGFyZCI6MTMwMCwiY2xhc3NpYyI6MTUwMCwicHJlbWl1bSI6MTc1MH0sIjNyb29tIjp7InN0YW5kYXJkIjoxNjUwLCJjbGFzc2ljIjoxOTAwLCJwcmVtaXVtIjoyMzAwfSwiNHJvb20iOnsic3RhbmRhcmQiOjE5MDAsImNsYXNzaWMiOjIxNTAsInByZW1pdW0iOjI1MDB9LCI1cm9vbSI6eyJzdGFuZGFyZCI6MjEwMCwiY2xhc3NpYyI6MjM1MCwicHJlbWl1bSI6MjcwMH0sImVhIjp7InN0YW5kYXJkIjoyMjUwLCJjbGFzc2ljIjoyNzAwLCJwcmVtaXVtIjoyOTUwfSwiZGJzcyI6eyJzdGFuZGFyZCI6MjEwMCwiY2xhc3NpYyI6MjQwMCwicHJlbWl1bSI6MjcwMH19');
+const PAINT_CONDO = __IDWS_DECODE('eyIxIjp7InN0YW5kYXJkIjoxNTUwLCJjbGFzc2ljIjoxODIwLCJwcmVtaXVtIjoyMDE1fSwiMiI6eyJzdGFuZGFyZCI6MTkwMCwiY2xhc3NpYyI6MjIxMCwicHJlbWl1bSI6MjQ3MH0sIjMiOnsic3RhbmRhcmQiOjIyNzUsImNsYXNzaWMiOjI1MzUsInByZW1pdW0iOjMwNTV9LCI0Ijp7InN0YW5kYXJkIjoyNjY1LCJjbGFzc2ljIjoyOTI1LCJwcmVtaXVtIjozMzE1fX0=');
+const PAINT_LANDED = __IDWS_DECODE('eyJzdGFuZGFyZCI6MzUwMCwiY2xhc3NpYyI6NTAwMCwicHJlbWl1bSI6NzUwMH0=');
+
+// =============================================
+// FORM STATE
+// =============================================
+let step=0;
+let form={
+  projectType:'wholeHouse',
+  propertyType:'hdb', hdbFlatType:'4room',
+  propertyCondition:'resale',
+  sizeUnit:'sqft', propertySizeInput:969,
+  roomCounts:{bedrooms:3,toilets:2},
+  hasFloorPlan:false,
+  skipDetails:false,
+  includeGst:false,
+  areas:{livingDining:true,kitchen:true,masterBedroom:true,bedrooms:true,toilets:true,serviceYard:false,balcony:false},
+  scope:{hacking:true,flooring:true,carpentry:true,electrical:true,plumbing:true,glass:true,paintingCeiling:true,aircon:false,doors:false,windowGrilles:false},
+  kitchenCabinetUnit:'ft',kitchenCabinetInput:10,
+  kitchenTopCabinet:true, worktop:'quartz', kitchenTileWork:'hack',
+  toiletTileWork:'hack',
+  toiletGlassTypes:['none','none','none','none'],
+  showerScreenBlackFrame:false,
+  kitchenGlassBackingSqft:0,
+  kitchenSinkInstallation:false,
+  toiletAccessories:true,
+  toiletBowlQty:2, showerSetQty:2, instantHeaterQty:0, storageHeaterQty:0,
+  flooringType:'vinyl', flooringAreaUnit:'sqft', flooringAreaInput:0,
+  hackingItems:{
+    auto:false,
+    wholeHouse:false,
+    kitchen2ToiletsFW:false,
+    kitchen2ToiletsFloorOnly:false,
+    kitchenFW:false,
+    twoToiletsFW:false,
+    oneToiletFW:false,
+    oneToiletFloorOnly:false,
+    oneToiletWallOnly:false,
+    livingBedroomFloor:false,
+    livingFloor:false,
+    bedroomFloor:false,
+    kitchenFloor:false,
+    kitchenCabinetOnly:false,
+    sinkSupport:false,
+    kitchenCabinetSinkSupport:false,
+    
+    floorSkirtingWholeHouse:false,
+    wallDemolitionSqft:false,
+    partitionDemolitionSqft:false,
+    parquetFlooring:false,
+    vinylFlooring:false,
+    falseCeilingHack:false,
+    cornice:false,
+    wardrobeLess6ft:false,
+    doorFrame:false,
+    door:false,
+    looseFurniture:false,
+    wallpaperHack:false,
+    cabinetRemoval:false
+  },
+  wallHackSqft:0, partitionHackSqft:0,
+  pendingHackingItem:'',
+  wardrobeUnit:'ft',wardrobeInput:0,
+  tvConsoleUnit:'ft',tvConsoleInput:0,
+  shoeCabinetUnit:'ft',shoeCabinetInput:0,
+  studyTableUnit:'ft',studyTableInput:0,
+  storageCabinetUnit:'ft',storageCabinetInput:0,
+  featureWall:false,
+  carpentryComplexity:'standard',
+  lightPoints:0,powerPoints:0,dataPoints:0,hoodPoints:0,
+  lightInstallations:0,concealedWiring:false,airconIsolators:0,
+  airconUnits:3,airconPiping:'exposed',airconTier:'mid',
+  paintPackage:'standard',
+  falseCeiling:false,falseCeilingSqft:0,lBox:false,wallpaper:false,
+  mainDoorType:'hdbTimber',hdbGate:false,bedroomDoorQty:0,toiletDoorQty:0,
+  windowGrilleQty:0,
+  name:'',email:'',
+};
+
+// =============================================
+// HELPERS
+// =============================================
+const sqft=()=>form.sizeUnit==='m2'?Number(form.propertySizeInput||0)*M2SF:Number(form.propertySizeInput||0);
+const lFt=(i,u)=>u==='m'?Number(i||0)*MFT:Number(i||0);
+const clamp=(v,lo,hi)=>Math.max(lo,Math.min(hi,v));
+const rng=(c,lo=__R.range.low,hi=__R.range.high)=>({low:Math.round(c*lo),high:Math.round(c*hi)});
+
+function areaSqft(a){
+  const R=__R.area;
+  return sqft()*(R[a]||0);
+}
+function floorArea(){
+  let t=0;
+  ['livingDining','masterBedroom','bedrooms','serviceYard','balcony'].forEach(k=>{if(form.areas[k])t+=areaSqft(k)});
+  return t;
+}
+function isSmallProject(){
+  return form.projectType==='kitchenOnly'||form.projectType==='toiletOnly';
+}
+function projectBaseCharges(){
+  return __R.pc[form.projectType]||__R.pc.wholeHouse;
+}
+function effectiveFloorArea(){
+  const manual=form.flooringAreaUnit==='m2'?Number(form.flooringAreaInput||0)*M2SF:Number(form.flooringAreaInput||0);
+  return manual>0?manual:floorArea();
+}
+function hdbHackColumn(){
+  if(form.propertyType==='condo') return 'condo';
+  if(form.propertyType==='landed') return 'maisonette';
+  if(['2room','3room'].includes(form.hdbFlatType)) return '3room';
+  if(form.hdbFlatType==='4room') return '4room';
+  if(['5room','dbss'].includes(form.hdbFlatType)) return '5room';
+  return 'maisonette';
+}
+function hackingPackagePrice(key){
+  const col=hdbHackColumn();
+  const table=__IDWS_DECODE('eyJ3aG9sZUhvdXNlIjp7IjNyb29tIjozMjUwLCI0cm9vbSI6Mzc3MCwiNXJvb20iOjQ1NTAsIm1haXNvbmV0dGUiOjAsImNvbmRvIjo1MjAwfSwia2l0Y2hlbjJUb2lsZXRzRlciOnsiM3Jvb20iOjI2MDAsIjRyb29tIjoyNjAwLCI1cm9vbSI6MjYwMCwibWFpc29uZXR0ZSI6MzI1MCwiY29uZG8iOjI4NjB9LCJraXRjaGVuMlRvaWxldHNGbG9vck9ubHkiOnsiM3Jvb20iOjE2OTAsIjRyb29tIjoxNjkwLCI1cm9vbSI6MTY5MCwibWFpc29uZXR0ZSI6MjA4MCwiY29uZG8iOjIwODB9LCJraXRjaGVuRlciOnsiM3Jvb20iOjE0OTUsIjRyb29tIjoxNDk1LCI1cm9vbSI6MTQ5NSwibWFpc29uZXR0ZSI6MTQ5NSwiY29uZG8iOjE2MjV9LCJ0d29Ub2lsZXRzRlciOnsiM3Jvb20iOjE0OTUsIjRyb29tIjoxNDk1LCI1cm9vbSI6MTQ5NSwibWFpc29uZXR0ZSI6MTgyMCwiY29uZG8iOjE4MjB9LCJvbmVUb2lsZXRGVyI6eyIzcm9vbSI6MTA0MCwiNHJvb20iOjEwNDAsIjVyb29tIjoxMDQwLCJtYWlzb25ldHRlIjoxMTcwLCJjb25kbyI6MTE3MH0sIm9uZVRvaWxldEZsb29yT25seSI6eyIzcm9vbSI6NTg1LCI0cm9vbSI6NTg1LCI1cm9vbSI6NTg1LCJtYWlzb25ldHRlIjo3MTUsImNvbmRvIjo3MTV9LCJvbmVUb2lsZXRXYWxsT25seSI6eyIzcm9vbSI6NzE1LCI0cm9vbSI6NzE1LCI1cm9vbSI6NzE1LCJtYWlzb25ldHRlIjo4NDUsImNvbmRvIjo4NDV9LCJsaXZpbmdCZWRyb29tRmxvb3IiOnsiM3Jvb20iOjE5NTAsIjRyb29tIjoyNDcwLCI1cm9vbSI6Mjk5MCwibWFpc29uZXR0ZSI6MCwiY29uZG8iOjB9LCJsaXZpbmdGbG9vciI6eyIzcm9vbSI6MTM2NSwiNHJvb20iOjE2MjUsIjVyb29tIjoxODg1LCJtYWlzb25ldHRlIjoyMTQ1LCJjb25kbyI6MjE0NX0sImJlZHJvb21GbG9vciI6eyIzcm9vbSI6NTg1LCI0cm9vbSI6MTA0MCwiNXJvb20iOjEzNjUsIm1haXNvbmV0dGUiOjE2MjUsImNvbmRvIjoxOTUwfSwia2l0Y2hlbkZsb29yIjp7IjNyb29tIjoxMzY1LCI0cm9vbSI6MTM2NSwiNXJvb20iOjEzNjUsIm1haXNvbmV0dGUiOjEzNjUsImNvbmRvIjoxNDk1fSwia2l0Y2hlbkNhYmluZXRPbmx5Ijp7IjNyb29tIjo0NTUsIjRyb29tIjo0NTUsIjVyb29tIjo0NTUsIm1haXNvbmV0dGUiOjQ1NSwiY29uZG8iOjQ1NX0sInNpbmtTdXBwb3J0Ijp7IjNyb29tIjozOTAsIjRyb29tIjozOTAsIjVyb29tIjozOTAsIm1haXNvbmV0dGUiOjM5MCwiY29uZG8iOjM5MH0sImtpdGNoZW5DYWJpbmV0U2lua1N1cHBvcnQiOnsiM3Jvb20iOjcxNSwiNHJvb20iOjcxNSwiNXJvb20iOjcxNSwibWFpc29uZXR0ZSI6NzE1LCJjb25kbyI6NzE1fSwiZmxvb3JTa2lydGluZ1dob2xlSG91c2UiOnsiM3Jvb20iOjI2MCwiNHJvb20iOjMyNSwiNXJvb20iOjM5MCwibWFpc29uZXR0ZSI6MCwiY29uZG8iOjUyMH0sInBhcnF1ZXRGbG9vcmluZyI6eyIzcm9vbSI6NDU1LCI0cm9vbSI6NDU1LCI1cm9vbSI6NDU1LCJtYWlzb25ldHRlIjo0NTUsImNvbmRvIjo0NTV9LCJ2aW55bEZsb29yaW5nIjp7IjNyb29tIjo2NTAsIjRyb29tIjo3MTUsIjVyb29tIjo3ODAsIm1haXNvbmV0dGUiOjc4MCwiY29uZG8iOjkxMH0sImZhbHNlQ2VpbGluZ0hhY2siOnsiM3Jvb20iOjM5MCwiNHJvb20iOjAsIjVyb29tIjowLCJtYWlzb25ldHRlIjowLCJjb25kbyI6MH0sImNvcm5pY2UiOnsiM3Jvb20iOjM5MCwiNHJvb20iOjQ1NSwiNXJvb20iOjUyMCwibWFpc29uZXR0ZSI6NjUwLCJjb25kbyI6NjUwfSwid2FyZHJvYmVMZXNzNmZ0Ijp7IjNyb29tIjoyMzQsIjRyb29tIjoyMzQsIjVyb29tIjoyMzQsIm1haXNvbmV0dGUiOjIzNCwiY29uZG8iOjIzNH0sImRvb3JGcmFtZSI6eyIzcm9vbSI6MTMwLCI0cm9vbSI6MTMwLCI1cm9vbSI6MTMwLCJtYWlzb25ldHRlIjoxMzAsImNvbmRvIjoxMzB9LCJkb29yIjp7IjNyb29tIjoxMzAsIjRyb29tIjoxMzAsIjVyb29tIjoxMzAsIm1haXNvbmV0dGUiOjEzMCwiY29uZG8iOjEzMH0sImxvb3NlRnVybml0dXJlIjp7IjNyb29tIjoxOTUsIjRyb29tIjoxOTUsIjVyb29tIjoxOTUsIm1haXNvbmV0dGUiOjE5NSwiY29uZG8iOjE5NX0sIndhbGxwYXBlckhhY2siOnsiM3Jvb20iOjE5NSwiNHJvb20iOjAuNjUsIjVyb29tIjowLjY1LCJtYWlzb25ldHRlIjowLjY1LCJjb25kbyI6MC42NX0sImNhYmluZXRSZW1vdmFsIjp7IjNyb29tIjo0NTUsIjRyb29tIjo0NTUsIjVyb29tIjo0NTUsIm1haXNvbmV0dGUiOjQ1NSwiY29uZG8iOjQ1NX19');
+  return (table[key]&&table[key][col])||0;
+}
+function getPaintingFlat(){
+  const p=form.paintPackage;
+  if(form.propertyType==='hdb')return(PAINT_HDB[form.hdbFlatType]||{})[p]||0;
+  if(form.propertyType==='condo'){const br=clamp(Number(form.roomCounts.bedrooms||2),1,4);return(PAINT_CONDO[br]||{})[p]||0;}
+  if(form.propertyType==='landed')return PAINT_LANDED[p]||0;
+  return 0;
+}
+function getRealityBuffer(){
+  return form.propertyCondition==='resale'
+    ? {label:'+15% to +30%', low:0.15, high:0.30, note:'Resale homes usually have more site-condition risk, hacking variation, and making-good works.'}
+    : {label:'+10% to +15%', low:0.10, high:0.15, note:'New/BTO homes usually have lower hidden-condition risk, but site validation can still change scope.'};
+}
+function filledDetailCount(){
+  let count=0;
+  if(form.flooringAreaInput>0) count++;
+  if(lFt(form.kitchenCabinetInput,form.kitchenCabinetUnit)>0) count++;
+  if(lFt(form.wardrobeInput,form.wardrobeUnit)>0) count++;
+  if(form.lightPoints>0||form.powerPoints>0||form.dataPoints>0||form.hoodPoints>0) count++;
+  if(Object.values(form.hackingItems||{}).some(Boolean)) count++;
+  if(form.toiletGlassTypes.some(v=>v&&v!=='none')) count++;
+  if(form.falseCeiling&&form.falseCeilingSqft>0) count++;
+  return count;
+}
+function getAccuracyScore(){
+  if(form.skipDetails) return {score:60,label:'Quick estimate'};
+  const details=filledDetailCount();
+  if(details>=5) return {score:85,label:'Detailed estimate'};
+  if(step>=2||details>=2) return {score:75,label:'Guided estimate'};
+  return {score:60,label:'Basic estimate'};
+}
+function getBenchmark(){
+  const key=form.propertyType+'_'+form.propertyCondition+'_'+(form.propertyType==='hdb'?form.hdbFlatType:clamp(Number(form.roomCounts.bedrooms||3),1,4));
+  const table={
+    hdb_new_3room:[25000,45000], hdb_new_4room:[35000,60000], hdb_new_5room:[45000,75000], hdb_new_2room:[18000,35000], hdb_new_ea:[60000,95000], hdb_new_dbss:[45000,75000],
+    hdb_resale_3room:[35000,60000], hdb_resale_4room:[45000,70000], hdb_resale_5room:[60000,90000], hdb_resale_2room:[25000,45000], hdb_resale_ea:[80000,120000], hdb_resale_dbss:[65000,95000],
+    condo_new_1:[30000,55000], condo_new_2:[45000,75000], condo_new_3:[60000,100000], condo_new_4:[85000,130000],
+    condo_resale_1:[40000,70000], condo_resale_2:[60000,95000], condo_resale_3:[80000,130000], condo_resale_4:[110000,160000],
+    landed_new_3:[120000,220000], landed_new_4:[150000,280000], landed_resale_3:[180000,320000], landed_resale_4:[220000,400000]
+  };
+  const range=table[key]||[45000,90000];
+  return {low:range[0], high:range[1]};
+}
+function getBenchmarkStatus(totalLow,totalHigh){
+  const b=getBenchmark();
+  const mid=(totalLow+totalHigh)/2;
+  if(mid<b.low*0.9) return 'Slightly below typical market range';
+  if(mid>b.high*1.1) return 'Above typical market range';
+  return 'Within typical market range';
+}
+function getCostDrivers(mods){
+  const total=mods.reduce((s,m)=>s+m.cost,0)||1;
+  return [...mods].sort((a,b)=>b.cost-a.cost).slice(0,3).map(m=>({name:m.name,pct:Math.round(m.cost/total*100)}));
+}
+
+// =============================================
+// CALCULATE
+// =============================================
+function calcEst(){
+  const prof=PROPERTY[form.propertyType];
+  const isResale=form.propertyCondition==='resale';
+  const tc=Number(form.roomCounts.toilets||0);
+  const sz=sqft();
+  const mods=[];
+  const add=(name,c)=>{if(c>0)mods.push({name,cost:c})};
+
+  const baseCharges=projectBaseCharges();
+  let profSvc=baseCharges.profSvc;
+  let haulage=0,hacking=0,masonry=0,carpentry=0;
+  let plumbing=0,electrical=0,glass=0,aircon=0;
+  let painting=0,doors=0,grilles=0;
+
+  // ── HACKING / REMOVAL ──
+  if(form.scope.hacking){
+    const selected=form.hackingItems||{};
+
+    if(selected.auto){
+      if(isResale) haulage=baseCharges.haulage;
+    }
+
+    let anySelected=false;
+    Object.keys(selected).forEach(key=>{
+      if(!selected[key]||key==='auto') return;
+      anySelected=true;
+      if(key==='wallDemolitionSqft') hacking+=Math.max(__R.wallHack.wallMin,Number(form.wallHackSqft||0)*__R.wallHack.wallSqft);
+      else if(key==='partitionDemolitionSqft') hacking+=Math.max(__R.wallHack.partitionMin,Number(form.partitionHackSqft||0)*__R.wallHack.partitionSqft);
+      else hacking+=hackingPackagePrice(key);
+    });
+    if(anySelected) haulage=baseCharges.haulage;
+  }
+
+  // ── KITCHEN TILING ONLY ──
+  if(form.areas.kitchen){
+    if(form.kitchenTileWork==='hack')    masonry+=__R.kitchen.hackTile;
+    if(form.kitchenTileWork==='overlay') masonry+=__R.kitchen.overlayTile;
+    if(form.scope.carpentry){
+      const ft=lFt(form.kitchenCabinetInput,form.kitchenCabinetUnit);
+      if(ft>0){
+        carpentry+=ft*__R.kitchen.baseCabinetFt;
+        if(form.kitchenTopCabinet) carpentry+=ft*__R.kitchen.topCabinetFt;
+        const wt=__R.worktop;
+        carpentry+=ft*(wt[form.worktop]||wt.quartz);
+      }
+    }
+    if(form.scope.plumbing){
+      plumbing+=form.projectType==='kitchenOnly'?__R.kitchen.plumbingKitchenOnly:__R.kitchen.plumbingWhole;
+      if(form.kitchenSinkInstallation) plumbing+=__R.kitchen.sinkInstall;
+    }
+    if(form.scope.electrical) electrical+=form.projectType==='kitchenOnly'?__R.kitchen.electricalKitchenOnly:__R.kitchen.electricalWhole;
+  }
+
+  // ── TOILET TILING ONLY ──
+  if(form.areas.toilets){
+    if(form.toiletTileWork==='hack')    masonry+=tc*__R.toilet.hackTile;
+    if(form.toiletTileWork==='overlay') masonry+=tc*__R.toilet.overlayTile;
+    if(form.scope.plumbing){
+      plumbing+=tc*__R.toilet.plumbingPerToilet;
+      plumbing+=Number(form.toiletBowlQty||0)*__R.toilet.toiletBowl;
+      plumbing+=Number(form.showerSetQty||0)*__R.toilet.showerSet;
+      plumbing+=Number(form.instantHeaterQty||0)*__R.toilet.instantHeater;
+      plumbing+=Number(form.storageHeaterQty||0)*__R.toilet.storageHeater;
+      if(form.toiletAccessories) plumbing+=tc*__R.toilet.accessoriesPerToilet;
+    }
+    if(form.scope.glass){
+      const sR=__R.glass.screen;
+      const bfR=__R.glass.blackFrame;
+      for(let i=0;i<tc;i++){
+        const gt=form.toiletGlassTypes[i]||'none';
+        glass+=sR[gt]||0;
+        if(form.showerScreenBlackFrame) glass+=bfR[gt]||0;
+      }
+      glass+=Number(form.kitchenGlassBackingSqft||0)*__R.glass.kitchenBackingSqft;
+    }
+  }
+
+  // ── FLOORING ──
+  if(form.scope.flooring){
+    const fa=(isSmallProject() && !form.flooringAreaInput)?0:effectiveFloorArea();
+    if(fa>0){
+      const fR=__R.flooring;
+      masonry+=fa*(fR[form.flooringType]||fR.fallback);
+    }
+  }
+
+  // ── CARPENTRY ──
+  if(form.scope.carpentry){
+    carpentry+=lFt(form.wardrobeInput,     form.wardrobeUnit)     *__R.carpentry.wardrobeFt;
+    carpentry+=lFt(form.tvConsoleInput,    form.tvConsoleUnit)    *__R.carpentry.tvConsoleFt;
+    carpentry+=lFt(form.shoeCabinetInput,  form.shoeCabinetUnit)  *__R.carpentry.shoeCabinetFt;
+    carpentry+=lFt(form.studyTableInput,   form.studyTableUnit)   *__R.carpentry.studyTableFt;
+    carpentry+=lFt(form.storageCabinetInput,form.storageCabinetUnit)*__R.carpentry.storageCabinetFt;
+    if(form.featureWall) carpentry+=__R.carpentry.featureWall;
+    const complexityMultiplier=form.carpentryComplexity==='custom'?__R.carpentry.customMultiplier:__R.carpentry.standardMultiplier;
+    carpentry*=complexityMultiplier;
+  }
+
+  // ── ELECTRICAL ──
+  if(form.scope.electrical){
+    electrical+=Number(form.lightPoints||0)        *__R.electrical.lightPoint;
+    electrical+=Number(form.powerPoints||0)        *__R.electrical.powerPoint;
+    electrical+=Number(form.dataPoints||0)         *__R.electrical.dataPoint;
+    electrical+=Number(form.hoodPoints||0)         *__R.electrical.hoodPoint;
+    electrical+=Number(form.lightInstallations||0) *__R.electrical.lightInstallation;
+    if(form.concealedWiring) electrical+=Number(form.lightPoints||0)*__R.electrical.concealedLightPoint;
+    electrical+=Number(form.airconIsolators||0)    *__R.electrical.airconIsolator;
+  }
+
+  // ── AIRCON ──
+  if(form.scope.aircon){
+    const units=Number(form.airconUnits||0);
+    const tR=__R.aircon;
+    aircon+=units*(tR[form.airconTier]||tR.fallback);
+    if(form.airconPiping==='concealed') aircon+=units*__R.aircon.concealedPipingPerUnit;
+  }
+
+  // ── PAINTING & CEILING ──
+  if(form.scope.paintingCeiling){
+    painting+=getPaintingFlat();
+    const fcR=__R.ceiling;
+    if(form.falseCeiling) painting+=Number(form.falseCeilingSqft||0)*(fcR[form.propertyType]||fcR.fallback);
+    if(form.lBox)      painting+=__R.ceiling.lBox;
+    if(form.wallpaper) painting+=__R.ceiling.wallpaper;
+  }
+
+  // ── DOORS ──
+  if(form.scope.doors){
+    const mdR=__R.doors.main;
+    doors+=mdR[form.mainDoorType]||0;
+    if(form.hdbGate) doors+=__R.doors.hdbGate;
+    doors+=Number(form.bedroomDoorQty||0)*__R.doors.bedroomDoor;
+    doors+=Number(form.toiletDoorQty||0) *__R.doors.toiletDoor;
+  }
+
+  // ── WINDOW GRILLES ──
+  if(form.scope.windowGrilles){
+    grilles+=Number(form.windowGrilleQty||0)*__R.grilles.window;
+  }
+
+  add('Professional Services & Site Washing',profSvc);
+  if(haulage>0||hacking>0) add('Hacking, Removal & Haulage',haulage+hacking);
+  if(masonry>0)  add('Masonry, Tiling & Flooring',masonry);
+  if(carpentry>0)add('Carpentry & Worktop',carpentry);
+  if(electrical>0)add('Electrical Works',electrical);
+  if(aircon>0)   add('Aircon Supply & Installation',aircon);
+  if(plumbing>0) add('Plumbing & Sanitary',plumbing);
+  if(glass>0)    add('Glass Works & Shower Screen',glass);
+  if(painting>0) add('Painting & Ceiling Works',painting);
+  if(doors>0)    add('Doors',doors);
+  if(grilles>0)  add('Window Grilles',grilles);
+
+  const subtotalBeforeGst=mods.reduce((s,m)=>s+m.cost,0)*prof.cx;
+  const gstAmount=form.includeGst?subtotalBeforeGst*__R.gst:0;
+  const subtotal=subtotalBeforeGst+gstAmount;
+  const total=rng(subtotal);
+  const accuracy=getAccuracyScore();
+  return{mods,total,subtotalBeforeGst,gstAmount,gstIncluded:form.includeGst,acc:accuracy.label,accuracyScore:accuracy.score,reality:getRealityBuffer(),benchmark:getBenchmark(),drivers:getCostDrivers(mods)};
+}
+
+// =============================================
+// UI HELPERS
+// =============================================
+const card=(active,html,fn)=>`<button onclick="${fn}" class="card-btn w-full rounded-2xl border p-4 text-left ${active?'active-card border-stone-900':'border-[#d8cec0] bg-[#fffaf4] text-[#24211f]'}">${html}</button>`;
+const pillBtn=(active,label,fn)=>`<button onclick="${fn}" class="pill-btn rounded-xl border px-4 py-2 text-sm font-medium transition-all ${active?'active-pill border-stone-900':'border-[#d8cec0] bg-[#fffaf4] text-[#746b61]'}">${label}</button>`;
+
+function numInput(label,key,ph='0',hint=''){
+  return`<label class="block">
+    <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">${label}</div>
+    <input type="number" value="${form[key]||''}" placeholder="${ph}" oninput="setNum('${key}',this.value)" class="inp"/>
+    ${hint?`<div class="mt-1 text-xs text-stone-400">${hint}</div>`:''}
+  </label>`;
+}
+function nestNum(label,g,k,ph='0'){
+  return`<label class="block">
+    <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">${label}</div>
+    <input type="number" value="${form[g][k]||''}" placeholder="${ph}" oninput="setNestNum('${g}','${k}',this.value)" class="inp"/>
+  </label>`;
+}
+function selInput(label,key,opts){
+  return`<label class="block">
+    <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">${label}</div>
+    <select onchange="setField('${key}',this.value)" class="inp">
+      ${opts.map(([v,l])=>`<option value="${v}"${form[key]===v?' selected':''}>${l}</option>`).join('')}
+    </select>
+  </label>`;
+}
+function boolSel(label,key){
+  return`<label class="block">
+    <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">${label}</div>
+    <select onchange="setBool('${key}',this.value)" class="inp">
+      <option value="yes"${form[key]?' selected':''}>Yes</option>
+      <option value="no"${!form[key]?' selected':''}>No</option>
+    </select>
+  </label>`;
+}
+function lenInput(label,iKey,uKey){
+  const ftVal=lFt(form[iKey],form[uKey]);
+  return`<div>
+    <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">${label}</div>
+    <div class="mb-2 flex gap-1.5">
+      ${pillBtn(form[uKey]==='ft','ft',`setLenUnit('${iKey}','${uKey}','ft')`)}
+      ${pillBtn(form[uKey]==='m','m',`setLenUnit('${iKey}','${uKey}','m')`)}
+    </div>
+    <input type="number" value="${form[iKey]||''}" placeholder="0" oninput="setNum('${iKey}',this.value)" class="inp"/>
+    ${ftVal>0?`<div class="mt-1 text-xs text-stone-400">≈ ${ftVal.toFixed(1)} ft</div>`:''}
+  </div>`;
+}
+function secBox(title,content,note='',cols='lg:grid-cols-3'){
+  const openAttr = window.matchMedia('(min-width: 768px)').matches ? 'open' : '';
+  return`<details ${openAttr} class="section-card rounded-2xl border p-5">
+    <summary class="mb-0 text-xs font-bold uppercase tracking-widest text-stone-400">${title}</summary>
+    ${note?`<div class="mb-4 gold-note rounded-xl border px-4 py-2.5 text-xs">${note}</div>`:''}
+    <div class="grid gap-4 sm:grid-cols-2 ${cols}">${content}</div>
+  </details>`;
+}
+
+// =============================================
+// RENDER SIDEBAR
+// =============================================
+function renderSidebar(){
+  const est=calcEst();
+  const waLink=buildWa(est);
+  const accDot=est.acc==='High'?'#4ade80':est.acc==='Planning'?'#fbbf24':'#666';
+  const r=est.total;
+  document.getElementById('sidebar').innerHTML=`
+    <div class="mobile-compact">
+      <div>
+        <div class="text-[10px] font-semibold uppercase tracking-widest mb-2" style="color:#c8aa72">Live Estimate</div>
+        <div class="serif text-3xl lg:text-4xl font-bold leading-none mb-1">${SGD.format(r.low)}</div>
+        <div class="text-sm lg:text-base" style="color:#a89f93">— ${SGD.format(r.high)}</div>
+      </div>
+      <div class="inline-flex items-center gap-2 text-xs font-medium lg:mb-5">
+        <span style="width:8px;height:8px;border-radius:50%;background:${accDot};display:inline-block"></span>
+        <span style="color:#d8cec0">${est.accuracyScore}%</span>
+      </div>
+    </div>
+    <div class="mobile-hide rounded-2xl p-4 text-xs leading-5 mb-4" style="background:#24211f;color:#b7aa9a">
+      Planning estimate only. Most projects may adjust by ${est.reality.label} after site validation. Final cost depends on site condition, measurements, and material selections.
+    </div>
+    ${step>=2&&est.mods.length>0?`
+    <div class="mobile-hide space-y-2 border-t pt-4" style="border-color:#3b342d">
+      ${est.mods.map(m=>`
+        <div class="flex justify-between text-xs gap-2">
+          <span style="color:#777">${m.name}</span>
+          <span class="font-semibold whitespace-nowrap" style="color:#ccc">${SGD.format(rng(m.cost).low)}+</span>
+        </div>`).join('')}
+    </div>`:
+    `<div class="mobile-hide space-y-2 text-xs" style="color:#a89f93">
+      <div>Select areas and scope to see a detailed breakdown.</div>
+    </div>`}
+    ${step>=2?`
+    <a href="${waLink}" target="_blank"
+      class="mobile-cta mt-5 flex items-center justify-center gap-2 w-full rounded-2xl py-3.5 font-semibold text-sm transition-all"
+      style="background:#25D366;color:#fff;margin-top:1.25rem">
+      Get Itemised Quote
+    </a>`:``}
+  `;
+}
+
+function buildWa(est){
+  const nm=form.name?` My name is ${form.name}.`:'';
+  const em=form.email?` My email is ${form.email}.`:'';
+  const htL=form.propertyType==='hdb'?(HDB_TYPES[form.hdbFlatType]?.label||'HDB')+' HDB':PROPERTY[form.propertyType].label;
+  const msg=encodeURIComponent(`Hi ID Work Studio,${nm}${em} I used your calculator for my ${htL} (~${Math.round(sqft())} sqft, ${form.propertyCondition}, ${form.projectType}). Estimate: ${SGD.format(est.total.low)} – ${SGD.format(est.total.high)}. I'd like a detailed itemised quote.`);
+  return`https://wa.me/6598333085?text=${msg}`;
+}
+
+function buildMailto(est){
+  const htL=form.propertyType==='hdb'?(HDB_TYPES[form.hdbFlatType]?.label||'HDB')+' HDB':PROPERTY[form.propertyType].label;
+  const subj=encodeURIComponent(`Renovation Quote Request – ${htL}`);
+  const nm=form.name?`Name: ${form.name}\n`:'';
+  const em=form.email?`Email: ${form.email}\n`:'';
+  const body=encodeURIComponent(`Hi ID Work Studio,\n\n${nm}${em}I used your renovation cost calculator for my ${htL} (~${Math.round(sqft())} sqft, ${form.propertyCondition}, ${form.projectType}).\n\nEstimate range: ${SGD.format(est.total.low)} – ${SGD.format(est.total.high)}\n\nPlease send me a detailed itemised quotation.\n\nThank you.`);
+  return`mailto:contact@idworkstudio.com?subject=${subj}&body=${body}`;
+}
+
+// =============================================
+// RENDER PILLS
+// =============================================
+function renderPills(){
+  for(let i=0;i<4;i++){
+    const el=document.getElementById(`pill${i}`);
+    if(!el)return;
+    const labels=['Property','Scope','Details','Quote'];
+    el.textContent=labels[i]; el.classList.add("step-pill-text");
+    if(i===step)        el.style.cssText='background:#171514;color:#fff;border:1px solid #171514';
+    else if(i<step)     el.style.cssText='background:#d8cec0;color:#5f554c;border:1px solid #d8cec0';
+    else                el.style.cssText='background:#fbf8f2;color:#a99683;border:1px solid #d8cec0';
+  }
+}
+
+// =============================================
+// RENDER STEP CONTENT
+// =============================================
+function renderStep(){
+  const content=document.getElementById('stepContent');
+  const tc=Number(form.roomCounts.toilets||0);
+  // Save which section-card details are currently open (mobile: user may have opened some)
+  _openSectionIdxs = new Set();
+  content.querySelectorAll('details.section-card').forEach((d,i)=>{ if(d.open) _openSectionIdxs.add(i); });
+
+  if(step===0){
+    content.innerHTML=`<div class="fade-up">
+      <h2 class="serif text-3xl font-bold mb-1">Your property</h2>
+      <p class="text-stone-500 text-sm mb-8">Tell us the basics — this sets the cost framework for everything else.</p>
+      <div class="space-y-8">
+        <div>
+          <div class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-400">What are you renovating?</div>
+          <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            ${card(form.projectType==='wholeHouse',`<div class="font-semibold text-sm">Whole house</div>`,`setProjectType('wholeHouse')`)}
+            ${card(form.projectType==='kitchenOnly',`<div class="font-semibold text-sm">Kitchen only</div>`,`setProjectType('kitchenOnly')`)}
+            ${card(form.projectType==='toiletOnly',`<div class="font-semibold text-sm">Toilet only</div>`,`setProjectType('toiletOnly')`)}
+            ${card(form.projectType==='partial',`<div class="font-semibold text-sm">Partial renovation</div>`,`setProjectType('partial')`)}
+          </div>
+        </div>
+        <div>
+          <div class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-400">Property type</div>
+          <div class="grid grid-cols-3 gap-3">
+            ${Object.entries(PROPERTY).map(([k,v])=>card(form.propertyType===k,`<div class="font-semibold text-sm">${v.label}</div>`,`setPropType('${k}')`)).join('')}
+          </div>
+        </div>
+        ${form.propertyType==='hdb'?`
+        <div>
+          <div class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-400">HDB flat type</div>
+          <div class="grid grid-cols-3 gap-2">
+            ${Object.entries(HDB_TYPES).map(([k,v])=>card(form.hdbFlatType===k,`<div class="font-semibold text-sm">${v.label}</div><div class="text-xs mt-0.5 ${form.hdbFlatType===k?'opacity-50':'text-stone-400'}">${v.sqft.toLocaleString()} sqft</div>`,`setHdbFlat('${k}')`)).join('')}
+          </div>
+        </div>`:''}
+        <div>
+          <div class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-400">Condition</div>
+          <div class="grid grid-cols-2 gap-3">
+            ${card(form.propertyCondition==='new',`<div class="font-semibold text-sm">New / BTO</div><div class="text-xs mt-0.5 ${form.propertyCondition==='new'?'opacity-50':'text-stone-400'}">Minimal hacking needed</div>`,`setField('propertyCondition','new')`)}
+            ${card(form.propertyCondition==='resale',`<div class="font-semibold text-sm">Resale</div><div class="text-xs mt-0.5 ${form.propertyCondition==='resale'?'opacity-50':'text-stone-400'}">Hacking, removal & haulage included</div>`,`setField('propertyCondition','resale')`)}
+          </div>
+        </div>
+        <div>
+          <div class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-400">Property size <span class="font-normal normal-case text-stone-400">(auto-filled, editable)</span></div>
+          <div class="mb-2 flex gap-2">${pillBtn(form.sizeUnit==='sqft','sq ft',`setSizeUnit('sqft')`)}${pillBtn(form.sizeUnit==='m2','m²',`setSizeUnit('m2')`)}</div>
+          <input type="number" value="${form.propertySizeInput}" oninput="setSizeVal(this.value)" class="inp"/>
+          <div class="mt-1.5 text-xs text-stone-400">Calculating for <strong class="text-stone-700">${Math.round(sqft()).toLocaleString()} sqft</strong></div>
+        </div>
+        <div>
+          <div class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-400">Rooms</div>
+          <div class="grid grid-cols-2 gap-4 items-end">${nestNum('Bedrooms','roomCounts','bedrooms')}${nestNum('Toilets / Bathrooms','roomCounts','toilets')}</div>
+        </div>
+        <label class="flex items-start gap-3 rounded-2xl border border-stone-100 bg-stone-50 p-4 cursor-pointer">
+          <input type="checkbox" id="fpChk" ${form.hasFloorPlan?'checked':''} onchange="setBool('hasFloorPlan',this.checked?'yes':'no')" class="mt-0.5 h-4 w-4 accent-stone-900"/>
+          <div><div class="text-sm font-semibold text-stone-700">I can provide a floor plan later</div><div class="text-xs text-stone-400 mt-0.5">We can refine this estimate to around ±10% after reviewing your floor plan and confirmed measurements.</div></div>
+        </label>
+      </div>
+    </div>`;
+  }
+
+  if(step===1){
+    const areas=[['livingDining','Living / Dining',`~${Math.round(areaSqft('livingDining'))} sqft`],['kitchen','Kitchen',`~${Math.round(areaSqft('kitchen'))} sqft`],['masterBedroom','Master Bedroom',`~${Math.round(areaSqft('masterBedroom'))} sqft`],['bedrooms','Common Bedrooms',`~${Math.round(areaSqft('bedrooms'))} sqft`],['toilets','Toilets',`${tc} unit${tc!==1?'s':''}`],['serviceYard','Service Yard',''],['balcony','Balcony','']];
+    const scopes=[['hacking','Hacking & Removal',form.propertyCondition==='new'?'Less relevant for BTO':''],['flooring','Flooring',''],['carpentry','Carpentry',''],['electrical','Electrical',''],['plumbing','Plumbing',''],['glass','Glass & Shower Screen',''],['paintingCeiling','Painting & Ceiling',''],['aircon','Aircon',''],['doors','Doors',''],['windowGrilles','Window Grilles','']];
+    content.innerHTML=`<div class="fade-up">
+      <h2 class="serif text-3xl font-bold mb-1">Areas & scope</h2>
+      <p class="text-stone-500 text-sm mb-8">Deselect anything you're not renovating — it keeps the estimate precise.</p>
+      <div class="space-y-8">
+        <div><div class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-400">Areas to renovate</div><div class="grid grid-cols-2 gap-2 sm:grid-cols-3">${areas.map(([k,l,s])=>card(form.areas[k],`<div class="font-semibold text-sm">${l}</div>${s?`<div class="text-xs mt-0.5 ${form.areas[k]?'opacity-50':'text-stone-400'}">${s}</div>`:''}`,`toggleNest('areas','${k}')`)).join('')}</div></div>
+        <div><div class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-400">Works included</div><div class="grid grid-cols-2 gap-2 sm:grid-cols-3">${scopes.map(([k,l,s])=>card(form.scope[k],`<div class="font-semibold text-sm">${l}</div>${s?`<div class="text-xs mt-0.5 ${form.scope[k]?'opacity-50':'text-amber-500'}">${s}</div>`:''}`,`toggleNest('scope','${k}')`)).join('')}</div></div>
+      </div>
+    </div>`;
+  }
+
+  if(step===2){
+    let html=`<div class="fade-up"><h2 class="serif text-3xl font-bold mb-1">Fine-tune your estimate</h2><p class="text-stone-500 text-sm mb-8">Carpentry and electrical default to zero — only add what you need.</p>
+      <div class="mb-5 rounded-2xl border border-stone-100 bg-stone-50 p-4">
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" ${form.skipDetails?'checked':''} onchange="setBool('skipDetails',this.checked?'yes':'no')" class="mt-0.5 h-4 w-4 accent-stone-900"/>
+          <div><div class="text-sm font-semibold text-stone-700">Skip detailed inputs for a faster estimate</div><div class="text-xs text-stone-400 mt-0.5">Useful for quick budget planning. Accuracy will remain lower until details are added.</div></div>
+        </label>
+      </div><div class="space-y-5">`;
+
+    if(form.scope.hacking){
+      const hackingOptions=[
+        ['auto','Auto estimate from selected areas'],
+        ['wholeHouse','Whole house floor & wall tiles'],
+        ['kitchen2ToiletsFW','1 kitchen + 2 toilets floor & wall tiles'],
+        ['kitchen2ToiletsFloorOnly','1 kitchen + 2 toilets floor tiles only'],
+        ['kitchenFW','1 kitchen floor & wall'],
+        ['twoToiletsFW','2 toilets floor & wall'],
+        ['oneToiletFW','1 toilet floor & wall'],
+        ['oneToiletFloorOnly','1 toilet floor only'],
+        ['oneToiletWallOnly','1 toilet wall only'],
+        ['livingBedroomFloor','Living / dining / bedroom floor tiles'],
+        ['livingFloor','Living floor tiles'],
+        ['bedroomFloor','Bedroom floor tiles'],
+        ['kitchenFloor','Kitchen floor tiles'],
+        ['kitchenCabinetOnly','Kitchen cabinets'],
+        ['sinkSupport','Sink support'],
+        ['kitchenCabinetSinkSupport','Kitchen cabinet + sink support'],
+        
+        ['floorSkirtingWholeHouse','Floor skirting whole house'],
+        ['wallDemolitionSqft','Wall demolition by sq ft'],
+        ['partitionDemolitionSqft','Partition wall demolition by sq ft'],
+        ['parquetFlooring','Parquet flooring'],
+        ['vinylFlooring','Vinyl flooring'],
+        ['falseCeilingHack','False ceiling'],
+        ['cornice','Cornice'],
+        ['wardrobeLess6ft','Wardrobe less than 6ft'],
+        ['doorFrame','Door + frame'],
+        ['door','Door'],
+        ['looseFurniture','Loose furniture'],
+        ['wallpaperHack','Wallpaper'],
+        ['cabinetRemoval','Other built-in cabinet removal']
+      ];
+      const selectedHackingEntries=hackingOptions.filter(([key])=>form.hackingItems[key]);
+      const selectedHackingLabels=selectedHackingEntries.map(([,label])=>label);
+      let hf=`<div class="sm:col-span-2 lg:col-span-3">
+        <label class="block">
+          <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Add hacking item</div>
+          <div class="grid gap-2 sm:grid-cols-[1fr_auto]">
+            <select onchange="setPendingHackingItem(this.value)" class="inp">
+              <option value="">Select hacking item to add</option>
+              ${hackingOptions.map(([key,label])=>`<option value="${key}">${label}</option>`).join('')}
+            </select>
+            <button type="button" onclick="addPendingHackingItem()" class="min-h-[44px] rounded-xl bg-[#171514] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#2b2723]">Add</button>
+          </div>
+        </label>
+        <div class="mt-2 text-xs text-stone-400">Add one item at a time. Previously selected items will stay below until removed.</div>
+      </div>`;
+      hf+=`<div class="sm:col-span-2 lg:col-span-3 rounded-xl border border-stone-100 bg-stone-50 p-3">
+        <div class="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">Selected hacking items</div>
+        ${selectedHackingLabels.length?`<div class="flex flex-wrap gap-2">${selectedHackingLabels.map((label,i)=>`<span class="flex items-center gap-2 rounded-full bg-stone-900 px-3 py-1 text-xs font-medium text-white">${label}<button onclick="removeHackingItem(${i})" class="text-white/70 hover:text-white">×</button></span>`).join('')}</div>`:`<div class="text-xs text-stone-400">No hacking item selected yet.</div>`}
+      </div>`;
+      if(form.hackingItems.wallDemolitionSqft) hf+=numInput('Wall hacking area (sqft)','wallHackSqft','0','Minimum charge applies');
+      if(form.hackingItems.partitionDemolitionSqft) hf+=numInput('Partition hacking area (sqft)','partitionHackSqft','0','Minimum charge applies');
+      html+=secBox('Hacking & Removal',hf,'Select multiple hacking items if your project includes more than one removal scope.');
+    }
+
+    if(form.areas.kitchen){
+      let kf='';
+      if(form.scope.carpentry){
+        kf+=lenInput('Kitchen cabinet length (bottom run)','kitchenCabinetInput','kitchenCabinetUnit');
+        kf+=boolSel('Top wall cabinet?','kitchenTopCabinet');
+        kf+=selInput('Worktop material','worktop', [['quartz','Quartz / Compact — $100/ft'],['sintered','Sintered Stone — $160/ft']]);
+      }
+      kf+=selInput('Kitchen tile works','kitchenTileWork', [['none','No tile works'],['overlay','Overlay (tiling lump $550)'],['hack','Hack & Relay — tiling $1,100 + hacking shown separately']]);
+      if(form.scope.plumbing){
+        kf+=`<label class="block">
+          <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Kitchen sink installation</div>
+          <select onchange="setBool('kitchenSinkInstallation',this.value)" class="inp">
+            <option value="yes"${form.kitchenSinkInstallation?' selected':''}>Yes — $120</option>
+            <option value="no"${!form.kitchenSinkInstallation?' selected':''}>No</option>
+          </select>
+        </label>`;
+      }
+      html+=secBox('Kitchen',kf,form.kitchenTileWork==='hack'?'✓ <strong>Waterproofing included</strong> in tile cost. Hacking shown separately in Hacking & Removal line.':'');
+    }
+
+    if(form.areas.toilets){
+      let tf='';
+      tf+=selInput('Toilet tile works','toiletTileWork', [['none','No tile works'],['overlay',`Overlay — $1,450 per toilet`],['hack',`Hack & Relay — tiling $1,750 + hacking shown separately`]]);
+      tf+=boolSel('Toilet accessories (towel bar, TP holder…)','toiletAccessories');
+      tf+=numInput('Toilet bowls','toiletBowlQty','2','$100 per unit');
+      tf+=numInput('Shower sets','showerSetQty','2','$70 per unit');
+      tf+=numInput('Instant heaters','instantHeaterQty','0','$80 per unit');
+      tf+=numInput('Storage heaters','storageHeaterQty','0','$180 per unit');
+      html+=secBox('Toilets',tf,form.toiletTileWork==='hack'?'✓ <strong>Waterproofing included</strong> in tile cost. Hacking shown separately in Hacking & Removal line.':'');
+      if(form.scope.glass){
+        let gf='';
+        for(let i=0;i<Math.min(tc,4);i++){
+          gf+=`<label class="block"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Toilet ${i+1} shower screen</div><select onchange="setToiletGlass(${i},this.value)" class="inp"><option value="none"${(form.toiletGlassTypes[i]||'none')==='none'?' selected':''}>No screen</option><option value="screen180Casement"${form.toiletGlassTypes[i]==='screen180Casement'?' selected':''}>180° shower screen with swing door — $530</option><option value="lShape90Sliding"${form.toiletGlassTypes[i]==='lShape90Sliding'?' selected':''}>90° L-shape sliding door — $610</option></select></label>`;
+        }
+        gf+=boolSel('Black frame upgrade for screens?','showerScreenBlackFrame');
+        gf+=numInput('Kitchen glass backing (sqft)','kitchenGlassBackingSqft','0','');
+        html+=secBox('Glass & Shower Screen',gf,'Glass door is included inside the selected shower screen type. No separate glass-door charge is added.','lg:grid-cols-3 items-end');
+      }
+    }
+
+    if(form.scope.flooring){
+      let ff='';
+      ff+=selInput('Flooring type','flooringType', [['vinyl','Vinyl Overlay — $6/sqft (supply + install)'],['overlayTiles','Tile Overlay — $12/sqft (no hacking)'],['tiles','Hack & Lay Tiles — $8/sqft tiling + floor hacking if selected']]);
+      ff+=`<div><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Flooring area</div><div class="mb-2 flex gap-1.5">${pillBtn(form.flooringAreaUnit==='sqft','sq ft',`setFloorUnit('sqft')`)}${pillBtn(form.flooringAreaUnit==='m2','m²',`setFloorUnit('m2')`)}</div><input type="number" value="${form.flooringAreaInput||''}" placeholder="Auto: ${Math.round(floorArea())} sqft" oninput="setNum('flooringAreaInput',this.value)" class="inp"/><div class="mt-1 text-xs text-stone-400">Using ${Math.round(effectiveFloorArea()).toLocaleString()} sqft for flooring calculation.</div></div>`;
+      html+=secBox('Flooring',ff,'Leave blank to use the estimated area from selected rooms. Enter actual area for better accuracy.');
+    }
+
+    if(form.scope.carpentry){
+      let cf='';
+      cf+=lenInput('Wardrobe — $280/ft','wardrobeInput','wardrobeUnit');
+      cf+=lenInput('TV console — $117/ft','tvConsoleInput','tvConsoleUnit');
+      cf+=lenInput('Shoe cabinet — $125/ft','shoeCabinetInput','shoeCabinetUnit');
+      cf+=lenInput('Study / work table — $108/ft','studyTableInput','studyTableUnit');
+      cf+=lenInput('Storage cabinet — $250/ft','storageCabinetInput','storageCabinetUnit');
+      cf+=boolSel('Feature / accent wall?','featureWall');
+      cf+=selInput('Design complexity','carpentryComplexity', [['standard','Standard detailing'],['custom','Boutique / Custom detailing (+20%)']]);
+      html+=secBox('Carpentry',cf,'All lengths default to 0. Enter only what applies. Choose Boutique / Custom if the design has curves, fluted details, hidden handles, special profiles, or complex finishing.');
+    }
+
+    if(form.scope.electrical){
+      let ef='';
+      ef+=numInput('Lighting points — $45/pt','lightPoints','0','3-rm: ~25–30 · 4-rm: ~30–40');
+      ef+=numInput('Power points — $70/pt','powerPoints','0','');
+      ef+=numInput('Data / TV points — $130/pt','dataPoints','0','');
+      ef+=numInput('Hood / oven / hob points — $130/pt','hoodPoints','0','');
+      ef+=numInput('Light installations — $25 each','lightInstallations','0','Downlights, pendants, fans');
+      ef+=boolSel('Concealed wiring?','concealedWiring');
+      ef+=numInput('Aircon isolators — $165 each','airconIsolators','0','');
+      html+=secBox('Electrical',ef,'All quantities default to 0.');
+    }
+
+    if(form.scope.aircon){
+      let af='';
+      af+=numInput('Number of indoor units','airconUnits','3','');
+      af+=selInput('Piping type','airconPiping', [['exposed','Exposed piping'],['concealed','Concealed piping (+$650/unit)']]);
+      af+=selInput('Brand / tier','airconTier', [['basic','Economy — ~$700/unit'],['mid','Mid-range — ~$950/unit'],['premium','Premium — ~$1,500/unit']]);
+      html+=secBox('Aircon',af);
+    }
+
+    if(form.scope.paintingCeiling){
+      const paintFlat=getPaintingFlat();
+      let pf='';
+      pf+=`<div class="sm:col-span-2 lg:col-span-3"><div class="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">Painting package</div><div class="grid grid-cols-3 gap-2">${['standard','classic','premium'].map(p=>card(form.paintPackage===p,`<div class="font-semibold text-sm capitalize">${p}</div><div class="text-xs mt-0.5 ${form.paintPackage===p?'opacity-60':'text-stone-400'}">${p==='standard'?'Vinilex 5000':p==='classic'?'Easywash / Medifresh':'O-less Premium'}</div>`,`setField('paintPackage','${p}')`)).join('')}</div>${paintFlat>0?`<div class="mt-3 text-xs text-stone-500">Flat rate for your property: <strong class="text-stone-800">${SGD.format(paintFlat)}</strong></div>`:''}</div>`;
+      pf+=boolSel('False ceiling?','falseCeiling');
+      if(form.falseCeiling) pf+=numInput('False ceiling area (sqft)','falseCeilingSqft','0',`$${({hdb:3,condo:3.15,landed:3.5}[form.propertyType]||3)}/sqft`);
+      pf+=boolSel('L-box / aircon box-up?','lBox');
+      pf+=boolSel('Wallpaper / feature paint?','wallpaper');
+      html+=secBox('Painting & Ceiling',pf);
+    }
+
+    if(form.scope.doors){
+      let df='';
+      df+=selInput('Main door','mainDoorType', [['none','No change'],['hdbTimber','HDB Timber Door — $1,800'],['security','Security Door — $3,500']]);
+      if(form.propertyType==='hdb') df+=boolSel('HDB gate? — $1,200','hdbGate');
+      df+=numInput('Bedroom doors — $480 each','bedroomDoorQty','0','');
+      df+=numInput('Toilet doors — $420 each','toiletDoorQty','0','');
+      html+=secBox('Doors',df);
+    }
+
+    if(form.scope.windowGrilles){
+      html+=secBox('Window Grilles',numInput('Number of windows — $350 each','windowGrilleQty','0',''));
+    }
+
+    html+='</div></div>';
+    content.innerHTML=html;
+    // Restore open state of section-card details after re-render (prevents auto-collapse on mobile)
+    content.querySelectorAll('details.section-card').forEach((d,i)=>{ if(_openSectionIdxs.has(i)) d.open=true; });
+  }
+
+  if(step===3){
+    const est=calcEst();
+    const waLink=buildWa(est);
+    const propLabel=form.propertyType==='hdb'?`${HDB_TYPES[form.hdbFlatType]?.label||'HDB'} · ${Math.round(sqft()).toLocaleString()} sqft`:`${PROPERTY[form.propertyType].label} · ${Math.round(sqft()).toLocaleString()} sqft`;
+    content.innerHTML=`<div class="fade-up"><h2 class="serif text-3xl font-bold mb-1">Your renovation estimate</h2><p class="text-stone-500 text-sm mb-8">Full breakdown below — no sign-up required.</p><div class="rounded-3xl p-7 mb-7" style="background:#171514;color:#fff"><div class="text-xs uppercase tracking-widest mb-2" style="color:#666">${est.accuracyScore}% accuracy estimate</div><div class="serif text-5xl font-bold">${SGD.format(est.total.low)}</div><div class="serif text-2xl mt-1 mb-2" style="color:#666">— ${SGD.format(est.total.high)}</div><div class="text-xs" style="color:#555">${propLabel} · ${form.propertyCondition==='resale'?'Resale':'New / BTO'}</div></div><div class="mb-5 rounded-2xl border border-stone-100 bg-stone-50 px-5 py-4 text-xs text-stone-600 leading-5">
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" ${form.includeGst?'checked':''} onchange="setBool('includeGst',this.checked?'yes':'no')" class="mt-0.5 h-4 w-4 accent-stone-900"/>
+          <div><strong class="text-stone-800">Include 9% GST in estimate</strong><div class="mt-1 text-stone-500">Turn this on if you want the estimate to reflect GST-inclusive pricing. ${form.includeGst?`Estimated GST included: <strong>${SGD.format(est.gstAmount)}</strong>`:'Current estimate excludes GST.'}</div></div>
+        </label>
+      </div><div class="mb-7"><div class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-4">Cost breakdown</div><div class="divide-y divide-stone-100 rounded-2xl border border-stone-100 overflow-hidden">${est.mods.map(m=>{const r=rng(m.cost);return`<div class="flex items-center justify-between px-5 py-3.5 hover:bg-stone-50 transition-colors"><span class="text-sm text-stone-700">${m.name}</span><span class="text-sm font-semibold text-stone-900 ml-4 whitespace-nowrap">${SGD.format(r.low)} – ${SGD.format(r.high)}</span></div>`;}).join('')}</div></div><div class="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 mb-5 text-xs text-amber-800 leading-5"><strong>Reality buffer:</strong> Based on your ${form.propertyCondition==='resale'?'resale':'new/BTO'} selection, most projects may adjust by <strong>${est.reality.label}</strong> after site validation. ${est.reality.note}</div>
+      <div class="rounded-2xl border border-stone-100 bg-stone-50 px-5 py-4 mb-5 text-xs text-stone-600 leading-5"><strong class="text-stone-800">Market benchmark:</strong> Typical ${propLabel} ${form.propertyCondition==='resale'?'resale':'new/BTO'} renovation: <strong>${SGD.format(est.benchmark.low)} – ${SGD.format(est.benchmark.high)}</strong>. Your estimate is <strong>${getBenchmarkStatus(est.total.low,est.total.high)}</strong>.</div>
+      <div class="rounded-2xl border border-stone-100 bg-white px-5 py-4 mb-7 text-xs text-stone-600 leading-5"><strong class="text-stone-800">Biggest cost drivers:</strong><div class="mt-2 space-y-1">${est.drivers.map(d=>`<div class="flex justify-between"><span>${d.name}</span><strong>${d.pct}%</strong></div>`).join('')}</div></div>
+      <div class="rounded-2xl border border-stone-100 bg-stone-50 px-5 py-4 mb-7 text-xs text-stone-500 leading-5"><strong class="text-stone-700">Planning estimate, not a quotation.</strong> Actual cost depends on site conditions, confirmed measurements, material grade, and HDB/BCA approvals. ID Work Studio is BCA-registered and HDB-approved.</div><div class="rounded-3xl border-2 border-stone-900 p-7"><h3 class="serif text-2xl font-bold mb-1">Want an itemised quote?</h3><p class="text-sm text-stone-500 mb-6 leading-relaxed">Our designers convert this into a detailed line-item quotation — typically within 1–2 business days.</p><div class="grid gap-4 sm:grid-cols-2 mb-5"><label><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Your name <span class="font-normal normal-case text-stone-400">(optional)</span></div><input type="text" value="${form.name}" oninput="form.name=this.value;document.getElementById('waCta')?.setAttribute('onclick',\'window.open(buildWa(calcEst()),\\\'_blank\\\')\');" placeholder="Name" class="inp"/></label><label><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Your email <span class="font-normal normal-case text-stone-400">(optional)</span></div><input type="email" value="${form.email}" oninput="form.email=this.value;" placeholder="you@email.com" class="inp"/></label></div><button id="waCta" type="button" onclick="window.open(buildWa(calcEst()),'_blank')" class="flex items-center justify-center gap-2 w-full rounded-2xl py-4 font-semibold text-sm transition-all mb-3 cursor-pointer" style="background:#25D366;color:#fff;border:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Send via WhatsApp — Get Itemised Quote</button><button type="button" onclick="window.location.href=buildMailto(calcEst())" class="flex items-center justify-center gap-2 w-full rounded-2xl py-3.5 font-semibold text-sm transition-all cursor-pointer" style="background:#f3efe7;color:#2C2C2C;border:1px solid #d8cec0"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Send via Email Instead</button><p class="text-center text-xs text-stone-400 mt-3">Replied within 2 business hours · BCA-Registered · HDB-Approved</p></div></div>`;
+  }
+
+  document.getElementById('backBtn').disabled=step===0;
+  document.getElementById('nextBtn').style.display=step===3?'none':'';
+}
+
+// =============================================
+// UPDATE FUNCTIONS
+// =============================================
+function setNum(key,val)         { form[key]=Number(val||0); renderSidebar(); }
+function setNestNum(g,k,val)     { form[g][k]=Number(val||0); renderSidebar(); }
+function setSizeVal(val)         { form.propertySizeInput=Number(val||0); renderSidebar(); }
+function setToiletGlass(i,val)   { form.toiletGlassTypes[i]=val; renderSidebar(); }
+
+function setField(key,val)       { form[key]=val; render(); }
+function setBool(key,val)        { form[key]=(val==='yes'||val===true); if(key==='falseCeiling'&&!form[key]) form.falseCeilingSqft=0; render(); }
+function toggleNest(g,key)       { form[g][key]=!form[g][key]; render(); }
+function setPendingHackingItem(val){
+  form.pendingHackingItem=val;
+}
+function addPendingHackingItem(){
+  if(form.pendingHackingItem && form.hackingItems.hasOwnProperty(form.pendingHackingItem)){
+    form.hackingItems[form.pendingHackingItem]=true;
+    form.pendingHackingItem='';
+  }
+  render();
+}
+function removeHackingItem(index){
+  const hackingOptions=[
+    'auto','wholeHouse','kitchen2ToiletsFW','kitchen2ToiletsFloorOnly','kitchenFW','twoToiletsFW','oneToiletFW','oneToiletFloorOnly','oneToiletWallOnly','livingBedroomFloor','livingFloor','bedroomFloor','kitchenFloor','kitchenCabinetOnly','sinkSupport','kitchenCabinetSinkSupport','floorSkirtingWholeHouse','wallDemolitionSqft','partitionDemolitionSqft','parquetFlooring','vinylFlooring','falseCeilingHack','cornice','wardrobeLess6ft','doorFrame','door','looseFurniture','wallpaperHack','cabinetRemoval'
+  ];
+  const activeKeys=hackingOptions.filter(k=>form.hackingItems[k]);
+  const keyToRemove=activeKeys[index];
+  if(keyToRemove) form.hackingItems[keyToRemove]=false;
+  render();
+}
+
+function setProjectType(t){
+  form.projectType=t;
+  if(t==='kitchenOnly'){
+    form.areas={livingDining:false,kitchen:true,masterBedroom:false,bedrooms:false,toilets:false,serviceYard:false,balcony:false};
+    form.scope={hacking:true,flooring:false,carpentry:true,electrical:true,plumbing:true,glass:false,paintingCeiling:false,aircon:false,doors:false,windowGrilles:false};
+    form.hackingItems=Object.fromEntries(Object.keys(form.hackingItems).map(k=>[k,false]));
+    form.hackingItems.kitchenCabinetOnly=true;
+    form.flooringAreaInput=0;
+    form.toiletBowlQty=0; form.showerSetQty=0;
+  }
+  if(t==='toiletOnly'){
+    form.areas={livingDining:false,kitchen:false,masterBedroom:false,bedrooms:false,toilets:true,serviceYard:false,balcony:false};
+    form.scope={hacking:true,flooring:false,carpentry:false,electrical:false,plumbing:true,glass:true,paintingCeiling:false,aircon:false,doors:false,windowGrilles:false};
+    form.hackingItems=Object.fromEntries(Object.keys(form.hackingItems).map(k=>[k,false]));
+    form.hackingItems.oneToiletFW=true;
+    form.flooringAreaInput=0;
+  }
+  if(t==='partial'){
+    form.areas={livingDining:false,kitchen:true,masterBedroom:false,bedrooms:false,toilets:false,serviceYard:false,balcony:false};
+    form.scope={hacking:true,flooring:false,carpentry:true,electrical:true,plumbing:true,glass:false,paintingCeiling:false,aircon:false,doors:false,windowGrilles:false};
+    form.flooringAreaInput=0;
+  }
+  if(t==='wholeHouse'){
+    form.areas={livingDining:true,kitchen:true,masterBedroom:true,bedrooms:true,toilets:true,serviceYard:false,balcony:false};
+    form.scope={hacking:true,flooring:true,carpentry:true,electrical:true,plumbing:true,glass:true,paintingCeiling:true,aircon:false,doors:false,windowGrilles:false};
+  }
+  render();
+}
+function setPropType(t){
+  form.propertyType=t;
+  if(t==='hdb'){ form.hdbFlatType='4room'; form.propertySizeInput=969; form.sizeUnit='sqft'; }
+  render();
+}
+function setHdbFlat(t){
+  form.hdbFlatType=t;
+  form.propertySizeInput=HDB_TYPES[t].sqft;
+  form.sizeUnit='sqft';
+  render();
+}
+function setSizeUnit(u){
+  if(form.sizeUnit!==u){
+    form.propertySizeInput=u==='m2'?Math.round(sqft()/M2SF):Math.round(sqft());
+    form.sizeUnit=u;
+  }
+  render();
+}
+function setLenUnit(iKey,uKey,u){
+  const ft=lFt(form[iKey],form[uKey]);
+  form[iKey]=u==='m'?Math.round(ft/MFT*10)/10:Math.round(ft*10)/10;
+  form[uKey]=u;
+  render();
+}
+function setFloorUnit(u){
+  const current=effectiveFloorArea();
+  form.flooringAreaInput=u==='m2'?Math.round(current/M2SF*10)/10:Math.round(current*10)/10;
+  form.flooringAreaUnit=u;
+  render();
+}
+
+// =============================================
+// MASTER RENDER
+// =============================================
+// Tracks which section-card <details> are open so re-renders don't collapse them
+let _openSectionIdxs = new Set();
+
+function render(){
+  renderPills();
+  renderStep();
+  renderSidebar();
+}
+
+function scrollToCalculatorTop(){
+  const target=document.getElementById('calculatorTop')||document.getElementById('calc-main');
+  if(target){
+    const navH=document.getElementById('site-nav')?document.getElementById('site-nav').offsetHeight:110;
+    const y=target.getBoundingClientRect().top+window.pageYOffset-navH-8;
+    window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
+  }
+}
+
+document.getElementById('backBtn').addEventListener('click',()=>{ step=Math.max(0,step-1); render(); scrollToCalculatorTop(); });
+document.getElementById('nextBtn').addEventListener('click',()=>{ step=Math.min(3,step+1); render(); scrollToCalculatorTop(); });
+
+render();
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"LocalBusiness","@id":"https://idworkstudio.com/#business",
+   "name":"ID Work Studio","url":"https://idworkstudio.com/",
+   "telephone":"+65 6816 2872","email":"contact@idworkstudio.com",
+   "description":"BCA-registered and HDB-approved renovation and interior design contractor in Singapore. Specialising in commercial office fit-outs, office reinstatement, HDB and condo residential renovations.",
+   "foundingDate":"2015",
+   "address":{"@type":"PostalAddress","streetAddress":"11 Woodlands Close, Woodlands 11, #03-10","addressLocality":"Singapore","postalCode":"737853","addressCountry":"SG"},
+   "areaServed":[{"@type":"City","name":"Singapore"}],
+   "hasCredential":[{"@type":"EducationalOccupationalCredential","name":"HDB Registered Renovation Contractor","credentialCategory":"License","recognizedBy":{"@type":"Organization","name":"Housing & Development Board"}},{"@type":"EducationalOccupationalCredential","name":"BCA Registered Contractor","credentialCategory":"License","recognizedBy":{"@type":"Organization","name":"Building and Construction Authority Singapore"}}]},
+  {"@type":"WebPage","@id":"https://idworkstudio.com/renovation-cost-calculator",
+   "name":"Singapore Renovation Cost Calculator 2025 | Free Budget Estimate | ID Work Studio",
+   "description":"Free Singapore renovation cost calculator. Instant budget estimates for HDB BTO resale condo landed — whole house, kitchen, toilet. BCA-registered, HDB-approved contractor.",
+   "url":"https://idworkstudio.com/renovation-cost-calculator",
+   "isPartOf":{"@id":"https://idworkstudio.com/"},
+   "about":{"@id":"https://idworkstudio.com/#business"},
+   "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://idworkstudio.com/"},{"@type":"ListItem","position":2,"name":"Renovation Cost Calculator","item":"https://idworkstudio.com/renovation-cost-calculator"}]}},
+  {"@type":"Service","@id":"https://idworkstudio.com/renovation-cost-calculator#service",
+   "name":"Singapore renovation cost estimate tool",
+   "provider":{"@id":"https://idworkstudio.com/#business"},
+   "areaServed":{"@type":"City","name":"Singapore"},
+   "serviceType":"Renovation budget calculator for HDB BTO resale condo landed kitchen toilet renovation Singapore"},
+  {"@type":"FAQPage","@id":"https://idworkstudio.com/renovation-cost-calculator#faq",
+   "mainEntity":[
+    {"@type":"Question","name":"How accurate is this renovation calculator?","acceptedAnswer":{"@type":"Answer","text":"It is a planning estimate based on selected scope, property type, size and common Singapore renovation cost items. Final pricing depends on site measurements, hacking condition, material selection and approval requirements."}},
+    {"@type":"Question","name":"Can it estimate HDB and BTO renovation costs?","acceptedAnswer":{"@type":"Answer","text":"Yes. The calculator includes HDB flat types, BTO/new condition and resale condition so homeowners can compare broad budget ranges for common HDB renovation scopes."}},
+    {"@type":"Question","name":"Can I use it for kitchen or toilet renovation only?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose kitchen-only or toilet-only at the first step. The estimate focuses on relevant items such as carpentry, worktop, tiling, plumbing, sanitary fittings and shower screens."}},
+    {"@type":"Question","name":"Why does resale renovation usually cost more?","acceptedAnswer":{"@type":"Answer","text":"Resale homes often involve hacking, haulage, removal, making-good works and unknown site conditions. These can increase the final renovation cost after inspection."}},
+    {"@type":"Question","name":"Does the estimate include GST?","acceptedAnswer":{"@type":"Answer","text":"The calculator includes a GST toggle at the estimate step. Switch it on to view a GST-inclusive planning range."}},
+    {"@type":"Question","name":"How do I get a confirmed quotation?","acceptedAnswer":{"@type":"Answer","text":"Send the estimate to ID Work Studio on WhatsApp. A confirmed quotation requires floor plan review, site measurements, material confirmation and final scope checking."}},
+    {"@type":"Question","name":"How much does a 4-room HDB renovation cost in Singapore in 2025?","acceptedAnswer":{"@type":"Answer","text":"A typical 4-room HDB resale whole-house renovation in Singapore ranges from SGD 45,000 to SGD 70,000 depending on material grade, carpentry scope and hacking condition. New BTO 4-room renovations commonly range from SGD 35,000 to SGD 60,000."}},
+    {"@type":"Question","name":"Is ID Work Studio HDB registered?","acceptedAnswer":{"@type":"Answer","text":"Yes. ID Work Studio (UEN 201539658C) is registered on the HDB Renovation Contractor Registry under registration number HB-02-5250G. You can verify this on the HDB contractor portal at services2.hdb.gov.sg."}}
+  ]}
+]}
+</script>
+
+</body>
+</html>
