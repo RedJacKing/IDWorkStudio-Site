@@ -309,6 +309,151 @@ const resources = {
         }
       },
 
+      "insights": {
+        "article4": {
+          "meta": {
+            "title": "Commercial Renovation Cost Singapore (2026) | ID Work Studio",
+            "description": "Real commercial renovation cost in Singapore for office, retail, F&B and industrial spaces, including permits, timeline, hidden costs and common mistakes."
+          },
+          "hero": {
+            "badge": "Commercial Guide",
+            "title": "Commercial Renovation Cost Singapore (2026)",
+            "subtitle": "Real contractor pricing, compliance requirements and hidden costs for office, retail, F&B and industrial renovation in Singapore.",
+            "meta1": "2026 Guide",
+            "meta2": "Commercial Renovation"
+          },
+          "back": "Back to insights",
+          "quick": {
+            "title": "Quick cost summary",
+            "desc": "Commercial renovation cost in Singapore depends heavily on compliance, building requirements and mechanical systems — not just design.",
+            "office": "Office",
+            "officeCost": "$50 – $300 psf",
+            "retail": "Retail Shop",
+            "retailCost": "$95 – $400+ psf",
+            "fnb": "F&B / Restaurant",
+            "fnbCost": "$223 – $540 psf",
+            "industrial": "Industrial",
+            "industrialCost": "$30 – $450+ psf"
+          },
+          "why": {
+            "title": "Why commercial renovation is expensive in Singapore",
+            "desc": "The main cost drivers are compliance, mechanical and electrical systems, building restrictions and material standards. Most cost overruns happen due to compliance and M&E, not finishes.",
+            "point1": "Compliance: BCA, SCDF and MCST requirements",
+            "point2": "M&E systems: aircon, exhaust, wiring and drainage",
+            "point3": "Building restrictions: mall, CBD and JTC rules"
+          },
+          "office": {
+            "title": "Office renovation cost Singapore",
+            "level": "Level",
+            "cost": "Cost",
+            "scope": "Typical scope",
+            "basic": "Basic",
+            "basicCost": "$50 – $80 psf",
+            "basicScope": "Partition, carpet, basic lights",
+            "standard": "Standard",
+            "standardCost": "$80 – $150 psf",
+            "standardScope": "Glass rooms, reception, lighting",
+            "premium": "Premium",
+            "premiumCost": "$150 – $300 psf",
+            "premiumScope": "Feature design, smart office, acoustics",
+            "note": "In CBD buildings such as Marina Bay and Raffles Place, night-work restrictions can increase labour cost. Expect 15–25% higher cost in stricter Grade A buildings."
+          },
+          "retail": {
+            "title": "Retail renovation cost Singapore",
+            "desc": "Retail renovation cost depends heavily on shopfront design, display carpentry and lighting intensity.",
+            "point1": "Basic retail: $95 – $180 psf",
+            "point2": "Mall fit-out: $180 – $300 psf",
+            "point3": "High-end retail: $300 – $400+ psf",
+            "desc2": "Most tenants underestimate MCST submission requirements and design revisions. Approval alone can delay 2–4 weeks."
+          },
+          "fnb": {
+            "title": "F&B renovation cost Singapore",
+            "desc": "F&B projects are the most expensive due to exhaust systems, grease traps, fire-rated works and heavy plumbing.",
+            "note": "Typical F&B renovation cost: $223 – $540 psf. If the unit cannot support exhaust routing, rectification can cost $10,000 – $30,000 extra."
+          },
+          "industrial": {
+            "title": "Industrial renovation cost Singapore",
+            "point1": "Basic: $30 – $80 psf",
+            "point2": "Standard: $80 – $200 psf",
+            "point3": "Complex upgrade: $200 – $450+ psf",
+            "desc": "Industrial units may require URA zoning checks, JTC approval and structural load checks."
+          },
+          "breakdown": {
+            "title": "Full cost breakdown",
+            "component": "Component",
+            "share": "Typical share",
+            "construction": "Construction",
+            "constructionShare": "70–80%",
+            "professional": "Professional fees",
+            "professionalShare": "10–15%",
+            "permits": "Permits and submission",
+            "permitsShare": "5–8%",
+            "contingency": "Contingency",
+            "contingencyShare": "10–15%",
+            "note": "Plan for a 20–30% additional cost buffer for professional fees, permits and unforeseen site conditions."
+          },
+          "compliance": {
+            "title": "Permits & compliance",
+            "q": "Can you skip SCDF submission?",
+            "a": "You may not need SCDF submission if works are purely cosmetic and do not affect fire safety systems.",
+            "noTitle": "Usually no SCDF needed",
+            "no1": "Painting",
+            "no2": "Loose furniture",
+            "no3": "Vinyl flooring with no hacking",
+            "requiredTitle": "SCDF is still required when",
+            "required1": "Ceiling affects sprinklers",
+            "required2": "Partition is added or modified",
+            "required3": "Aircon ducting is changed",
+            "required4": "Fire protection system is touched",
+            "note": "Even if SCDF is not required, MCST approval, permit to work and method statement are still required before work can start."
+          },
+          "timeline": {
+            "title": "Renovation timeline Singapore",
+            "p1": { "title": "Planning: 4–9 weeks", "desc": "Feasibility, layout planning, budgeting and consultant coordination." },
+            "p2": { "title": "Design: 2–4 weeks", "desc": "Space planning, drawings, material proposal and scope confirmation." },
+            "p3": { "title": "Approval: 2–6 weeks", "desc": "BCA, SCDF, landlord or MCST approval depending on project scope." },
+            "p4": { "title": "Construction: 3–16 weeks", "desc": "Hacking, partition, electrical, M&E, carpentry, finishing and handover." }
+          },
+          "mistakes": {
+            "title": "Real mistakes that increase cost",
+            "m1": { "title": "Aircon system not checked", "desc": "Some buildings use central aircon that stops after 6pm. A new system may cost $8,000 – $30,000." },
+            "m2": { "title": "No water / drainage", "desc": "This is common for beauty salons, nail salons, facial services and cleaning businesses. A pump system can cost $3,000 – $10,000+." },
+            "m3": { "title": "MCST approval delay", "desc": "Missing documents or non-compliant drawings can delay projects by 2–4 weeks." },
+            "m4": { "title": "Too many decision makers", "desc": "Frequent changes lead to higher cost and project delay." },
+            "m5": { "title": "Reinstatement miscommunication", "desc": "One real case resulted in aircon removal and roughly $30,000 in avoidable cost." }
+          },
+          "reinstatement": {
+            "title": "Reinstatement cost Singapore",
+            "level": "Level",
+            "cost": "Cost",
+            "basic": "Basic",
+            "basicCost": "$10 – $20 psf",
+            "standard": "Standard",
+            "standardCost": "$20 – $30 psf",
+            "complex": "Complex",
+            "complexCost": "$30 – $40+ psf",
+            "desc": "Plan at least 3–4 months before lease end."
+          },
+          "faq": {
+            "title": "FAQ",
+            "q1": "How much does commercial renovation cost in Singapore?",
+            "a1": "$50–$300 psf for office, up to $540 psf for F&B.",
+            "q2": "Can I skip SCDF submission?",
+            "a2": "Only if works are purely cosmetic and do not affect fire safety systems.",
+            "q3": "What happens if I skip permits?",
+            "a3": "Work can be stopped by building management.",
+            "q4": "What is the biggest hidden cost?",
+            "a4": "Aircon, M&E, exhaust, drainage and compliance-related works."
+          },
+          "cta": {
+            "title": "Get a real renovation quote",
+            "desc": "ID Work Studio is a BCA-registered renovation firm specialising in commercial spaces, permits and practical site execution.",
+            "btn1": "Use Renovation Cost Calculator",
+            "btn2": "View Commercial Services"
+          }
+        }
+      },
+
       "insights_page": {
         "meta": {
           "title": "Insights | ID Work Studio Singapore",
@@ -957,6 +1102,151 @@ const resources = {
         }
       },
       
+      "insights": {
+        "article4": {
+          "meta": {
+            "title": "新加坡商业装修费用（2026）| ID Work Studio",
+            "description": "新加坡商业装修费用指南，涵盖办公室、零售店、餐饮与工业空间，包括审批、工期、隐藏成本与常见错误。"
+          },
+          "hero": {
+            "badge": "商业指南",
+            "title": "新加坡商业装修费用（2026）",
+            "subtitle": "从实际施工角度解析新加坡办公室、零售、餐饮与工业空间的装修价格、合规要求与隐藏成本。",
+            "meta1": "2026 指南",
+            "meta2": "商业装修"
+          },
+          "back": "返回见解",
+          "quick": {
+            "title": "快速费用总结",
+            "desc": "新加坡商业装修费用很大程度取决于合规要求、大厦规定与机电系统，而不只是设计本身。",
+            "office": "办公室",
+            "officeCost": "$50 – $300 /平方尺",
+            "retail": "零售店",
+            "retailCost": "$95 – $400+ /平方尺",
+            "fnb": "餐饮 / 餐厅",
+            "fnbCost": "$223 – $540 /平方尺",
+            "industrial": "工业单位",
+            "industrialCost": "$30 – $450+ /平方尺"
+          },
+          "why": {
+            "title": "为什么新加坡商业装修费用较高",
+            "desc": "主要成本来自合规要求、机电系统、大厦限制与材料标准。大多数超支并不是来自饰面，而是来自审批、机电与现场条件。",
+            "point1": "合规要求：BCA、SCDF 与 MCST 要求",
+            "point2": "机电系统：空调、排风、布线与排水",
+            "point3": "大厦限制：商场、CBD 办公楼与 JTC 规定"
+          },
+          "office": {
+            "title": "新加坡办公室装修费用",
+            "level": "级别",
+            "cost": "费用",
+            "scope": "常见工程范围",
+            "basic": "基础",
+            "basicCost": "$50 – $80 /平方尺",
+            "basicScope": "隔间、地毯、基础灯具",
+            "standard": "标准",
+            "standardCost": "$80 – $150 /平方尺",
+            "standardScope": "玻璃会议室、接待区、灯光",
+            "premium": "高端",
+            "premiumCost": "$150 – $300 /平方尺",
+            "premiumScope": "特色设计、智能办公室、声学处理",
+            "note": "在 Marina Bay 与 Raffles Place 等 CBD 大厦，夜间施工限制可能提高人工成本。较严格的 Grade A 办公楼通常需预留 15–25% 额外成本。"
+          },
+          "retail": {
+            "title": "新加坡零售店装修费用",
+            "desc": "零售装修费用主要取决于店面设计、展示木作与灯光强度。",
+            "point1": "基础零售：$95 – $180 /平方尺",
+            "point2": "商场装修：$180 – $300 /平方尺",
+            "point3": "高端零售：$300 – $400+ /平方尺",
+            "desc2": "很多租户低估了 MCST 提交要求与设计修改次数。单是审批就可能延误 2–4 周。"
+          },
+          "fnb": {
+            "title": "新加坡餐饮装修费用",
+            "desc": "餐饮项目通常最昂贵，因为涉及排风系统、隔油池、防火工程与大量水管工程。",
+            "note": "常见餐饮装修费用：$223 – $540 /平方尺。如果单位无法支持排风路径，整改可能额外花费 $10,000 – $30,000。"
+          },
+          "industrial": {
+            "title": "新加坡工业单位装修费用",
+            "point1": "基础：$30 – $80 /平方尺",
+            "point2": "标准：$80 – $200 /平方尺",
+            "point3": "复杂升级：$200 – $450+ /平方尺",
+            "desc": "工业单位可能需要 URA 用途检查、JTC 批准与结构承重检查。"
+          },
+          "breakdown": {
+            "title": "完整费用拆解",
+            "component": "项目",
+            "share": "常见占比",
+            "construction": "施工工程",
+            "constructionShare": "70–80%",
+            "professional": "专业费用",
+            "professionalShare": "10–15%",
+            "permits": "许可证与提交",
+            "permitsShare": "5–8%",
+            "contingency": "备用金",
+            "contingencyShare": "10–15%",
+            "note": "建议为专业费用、许可证与现场不可预见情况额外预留 20–30% 成本缓冲。"
+          },
+          "compliance": {
+            "title": "许可证与合规要求",
+            "q": "可以跳过 SCDF 提交吗？",
+            "a": "如果工程只是纯装饰，并且不影响消防安全系统，可能不需要 SCDF 提交。",
+            "noTitle": "通常不需要 SCDF 的工程",
+            "no1": "油漆",
+            "no2": "活动家具",
+            "no3": "不涉及拆除的 vinyl 地板",
+            "requiredTitle": "以下情况仍需要 SCDF",
+            "required1": "天花影响喷淋系统",
+            "required2": "新增或修改隔间",
+            "required3": "更改空调风管",
+            "required4": "触及消防保护系统",
+            "note": "即使不需要 SCDF，开工前通常仍需 MCST 批准、施工许可证与施工方法说明。"
+          },
+          "timeline": {
+            "title": "新加坡商业装修时间表",
+            "p1": { "title": "规划：4–9 周", "desc": "可行性评估、空间规划、预算与顾问协调。" },
+            "p2": { "title": "设计：2–4 周", "desc": "空间规划、图纸、材料建议与工程范围确认。" },
+            "p3": { "title": "审批：2–6 周", "desc": "视工程范围而定，可能涉及 BCA、SCDF、业主或 MCST 审批。" },
+            "p4": { "title": "施工：3–16 周", "desc": "拆除、隔间、电气、机电、木作、收尾与交付。" }
+          },
+          "mistakes": {
+            "title": "会增加成本的真实错误",
+            "m1": { "title": "没有检查空调系统", "desc": "部分大厦使用中央空调，晚上 6 点后停止供应。若需新增系统，可能花费 $8,000 – $30,000。" },
+            "m2": { "title": "没有供水 / 排水", "desc": "美容院、美甲店、面部护理服务与清洁业务经常遇到这个问题。泵系统可能花费 $3,000 – $10,000+。" },
+            "m3": { "title": "MCST 审批延误", "desc": "文件不足或图纸不合规，可能导致项目延误 2–4 周。" },
+            "m4": { "title": "决策者太多", "desc": "频繁更改决定会增加成本并延误工期。" },
+            "m5": { "title": "原状修复沟通错误", "desc": "一个真实案例因沟通不清导致空调被拆除，造成约 $30,000 的可避免成本。" }
+          },
+          "reinstatement": {
+            "title": "新加坡原状修复费用",
+            "level": "级别",
+            "cost": "费用",
+            "basic": "基础",
+            "basicCost": "$10 – $20 /平方尺",
+            "standard": "标准",
+            "standardCost": "$20 – $30 /平方尺",
+            "complex": "复杂",
+            "complexCost": "$30 – $40+ /平方尺",
+            "desc": "建议至少在租约结束前 3–4 个月开始规划。"
+          },
+          "faq": {
+            "title": "常见问题",
+            "q1": "新加坡商业装修费用是多少？",
+            "a1": "办公室约 $50–$300 /平方尺，餐饮项目最高可达 $540 /平方尺。",
+            "q2": "可以跳过 SCDF 提交吗？",
+            "a2": "只有在工程属于纯装饰且不影响消防安全系统时才可能不需要。",
+            "q3": "如果跳过许可证会怎样？",
+            "a3": "工程可能被大厦管理方要求停止。",
+            "q4": "最大的隐藏成本是什么？",
+            "a4": "空调、机电、排风、排水以及合规相关工程。"
+          },
+          "cta": {
+            "title": "获取真实商业装修报价",
+            "desc": "ID Work Studio 是 BCA 注册装修公司，专注于商业空间、许可证协调与实际现场执行。",
+            "btn1": "使用装修费用计算器",
+            "btn2": "查看商业服务"
+          }
+        }
+      },
+
       "insights_page": {
         "meta": {
           "title": "见解 | ID Work Studio Singapore",
