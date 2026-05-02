@@ -211,11 +211,138 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
     );
   }
 
-  // ── 7. Inject canonical just before </head> ───────────────────────────────
+   // ── 7. Inject JSON-LD schema before </head> ───────────────────────────────
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'LocalBusiness',
+        '@id': 'https://idworkstudio.com/#business',
+        name: 'ID Work Studio',
+        url: 'https://idworkstudio.com/',
+        telephone: '+65 6816 2872',
+        email: 'contact@idworkstudio.com',
+        description:
+          'BCA-registered and HDB-registered renovation and interior design firm in Singapore.',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '11 Woodlands Close, Woodlands 11, #03-10',
+          addressLocality: 'Singapore',
+          postalCode: '737853',
+          addressCountry: 'SG',
+        },
+        areaServed: {
+          '@type': 'Country',
+          name: 'Singapore',
+        },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${meta.canonical}#webpage`,
+        url: meta.canonical,
+        name: meta.title,
+        description: meta.description,
+      },
+    ],
+  };
+
+  if (relativeFile.startsWith('insights/')) {
+    schema['@graph'].push({
+      '@type': 'Article',
+      '@id': `${meta.canonical}#article`,
+      headline: meta.ogTitle || meta.title,
+      description: meta.description,
+      url: meta.canonical,
+      author: {
+        '@type': 'Organization',
+        name: 'ID Work Studio',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'ID Work Studio',
+      },
+    });
+  }
+
+  if (relativeFile.startsWith('commercial/') || relativeFile === 'commercial.html' || relativeFile === 'residential.html') {
+    schema['@graph'].push({
+      '@type': 'Service',
+      '@id': `${meta.canonical}#service`,
+      name: meta.ogTitle || meta.title,
+      description: meta.description,
+      provider: {
+        '@id': 'https://idworkstudio.com/#business',
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'Singapore',
+      },
+    });
+  }
+
+  if (relativeFile === 'insights/commercial-renovation-cost-singapore.html') {
+    schema['@graph'].push({
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How much does commercial renovation cost in Singapore?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'A standard office renovation usually costs around $80 to $150 psf. Retail renovation often ranges from $120 to $300 psf. F&B renovation can reach $200 to $500+ psf.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do I need approval before starting commercial renovation?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Most commercial projects require building management, MCST or landlord approval before work starts. Depending on scope, BCA, SCDF, PE or QP submissions may also be required.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What happens if MCST or building management rejects the permit?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Work cannot start until the submission is accepted. Rejection is usually caused by incomplete drawings, missing method statements, missing insurance or works that do not follow building rules.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the biggest hidden cost in commercial renovation?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The biggest hidden costs are usually aircon, exhaust, drainage, electrical loading, fire safety, reinstatement and compliance-related works.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can commercial renovation be done after office hours?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'It depends on building rules. Some buildings restrict noisy works, loading bay use and lift access. Night work may need separate approval and can increase labour cost by 15% to 25%.',
+          },
+        },
+      ],
+    });
+  }
+
+  html = html.replace(
+    /\s*<script\s+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>\s*/gi,
+    '\n'
+  );
+
+  html = html.replace(
+    '</head>',
+    `    <script type="application/ld+json">${JSON.stringify(schema)}</script>\n</head>`
+  );
+
+  // ── 8. Inject canonical just before </head> ───────────────────────────────
   const canonicalTag = `    <link rel="canonical" href="${meta.canonical}" />\n`;
   html = html.replace('</head>', `${canonicalTag}</head>`);
-
   fs.writeFileSync(filePath, html, 'utf8');
+
   console.log(`✓ ${relativeFile}`);
   console.log(`    title: ${meta.title}`);
   console.log(`    canonical: ${meta.canonical}`);
