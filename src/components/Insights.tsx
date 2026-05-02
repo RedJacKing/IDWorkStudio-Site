@@ -40,6 +40,14 @@ export default function Insights() {
       date: '2026-04-23',
       readTime: t('insights_page.articles.3.read_time'),
     },
+    {
+      slug: '/insights/commercial-renovation-cost-singapore',
+      category: t('insights_page.articles.4.category'),
+      title: t('insights_page.articles.4.title'),
+      excerpt: t('insights_page.articles.4.excerpt'),
+      date: '2026-05-03',
+      readTime: t('insights_page.articles.4.read_time'),
+    },
   ];
 
   const itemListSchema = {
@@ -146,7 +154,7 @@ export default function Insights() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {articles.map((article) => (
                 <article
                   key={article.slug}

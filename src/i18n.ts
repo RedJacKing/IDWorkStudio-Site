@@ -341,7 +341,7 @@ const resources = {
         "listing": {
           "eyebrow": "Featured Articles",
           "title": "Current Perspectives",
-          "subtitle": "Three high-impact articles to anchor your authority in Singapore renovation search and future AI citations.",
+          "subtitle": "Four high-impact articles to anchor your authority in Singapore renovation search and future AI citations.",
           "read_more": "Read Article"
         },
         "articles": {
@@ -362,6 +362,12 @@ const resources = {
             "title": "Biggest Renovation Mistakes Singapore Homeowners Make",
             "excerpt": "A practical guide to common renovation pitfalls in Singapore, and how clearer decisions early on can prevent delay, rework and regret.",
             "read_time": "7 min read"
+          },
+          "4": {
+            "category": "Commercial Cost Guide",
+            "title": "Commercial Renovation Cost Singapore (2026 Guide)",
+            "excerpt": "Real contractor pricing for office, retail, F&B and industrial renovation in Singapore — including permits, timeline, hidden costs and common site mistakes.",
+            "read_time": "9 min read"
           }
         },
         "footer_block": {
@@ -983,7 +989,7 @@ const resources = {
         "listing": {
           "eyebrow": "精选文章",
           "title": "当前观点",
-          "subtitle": "三篇高影响力文章，帮助建立您在新加坡翻新搜索与未来 AI 引用中的专业地位。",
+          "subtitle": "四篇高影响力文章，帮助建立您在新加坡翻新搜索与未来 AI 引用中的专业地位。",
           "read_more": "阅读全文"
         },
         "articles": {
@@ -1004,6 +1010,12 @@ const resources = {
             "title": "新加坡业主最常犯的翻新错误",
             "excerpt": "一篇实用指南，帮助您识别新加坡常见翻新误区，并通过更清晰的前期决策避免延误、返工与后悔。",
             "read_time": "约 7 分钟"
+          },
+          "4": {
+            "category": "商业费用指南",
+            "title": "新加坡商业翻新费用（2026 指南）",
+            "excerpt": "以承包商角度说明新加坡办公室、零售、餐饮与工业空间翻新费用，包括许可证、工期、隐藏成本与常见现场问题。",
+            "read_time": "约 9 分钟"
           }
         },
         "footer_block": {
@@ -1766,7 +1778,7 @@ enT["insights_page"] = {
   listing: {
     eyebrow: "Featured Articles",
     title: "Current Perspectives",
-    subtitle: "Three high-impact articles to anchor your authority in Singapore renovation search and future AI citations.",
+    subtitle: "Four high-impact articles to anchor your authority in Singapore renovation search and future AI citations.",
     read_more: "Read Article"
   },
   articles: {
@@ -1787,6 +1799,12 @@ enT["insights_page"] = {
       title: "Biggest Renovation Mistakes Singapore Homeowners Make",
       excerpt: "A practical guide to common renovation pitfalls in Singapore, and how clearer decisions early on can prevent delay, rework and regret.",
       read_time: "7 min read"
+    },
+    "4": {
+      category: "Commercial Cost Guide",
+      title: "Commercial Renovation Cost Singapore (2026 Guide)",
+      excerpt: "Real contractor pricing for office, retail, F&B and industrial renovation in Singapore — including permits, timeline, hidden costs and common site mistakes.",
+      read_time: "9 min read"
     }
   },
   footer_block: {
@@ -1832,7 +1850,7 @@ zhT["insights_page"] = {
   listing: {
     eyebrow: "精选文章",
     title: "当前观点",
-    subtitle: "三篇高影响力文章，帮助建立您在新加坡翻新搜索与未来 AI 引用中的专业地位。",
+    subtitle: "四篇高影响力文章，帮助建立您在新加坡翻新搜索与未来 AI 引用中的专业地位。",
     read_more: "阅读全文"
   },
   articles: {
@@ -1853,6 +1871,12 @@ zhT["insights_page"] = {
       title: "新加坡业主最常见的翻新错误",
       excerpt: "聚焦新加坡住宅翻新中最常见的错误，并说明如何通过更清晰的前期决策避免延误、返工与后悔。",
       read_time: "约 7 分钟"
+    },
+    "4": {
+      category: "商业费用指南",
+      title: "新加坡商业翻新费用（2026 指南）",
+      excerpt: "以承包商角度说明新加坡办公室、零售、餐饮与工业空间翻新费用，包括许可证、工期、隐藏成本与常见现场问题。",
+      read_time: "约 9 分钟"
     }
   },
   footer_block: {

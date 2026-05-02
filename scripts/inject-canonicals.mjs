@@ -79,6 +79,14 @@ const pageMetaMap = {
     ogDesc:      'Common renovation mistakes Singapore homeowners make — and how to avoid them with better planning.',
     ogUrl:       'https://idworkstudio.com/insights/renovation-mistakes-singapore',
   },
+  'insights/commercial-renovation-cost-singapore.html': {
+    canonical:   'https://idworkstudio.com/insights/commercial-renovation-cost-singapore',
+    title:       'Commercial Renovation Cost Singapore (2026 Guide) | ID Work Studio',
+    description: 'Real commercial renovation cost in Singapore for office, retail, F&B and industrial spaces. Includes per sqft pricing, permits, timeline and hidden costs explained by a BCA-registered contractor.',
+    ogTitle:     'Commercial Renovation Cost Singapore (2026 Guide)',
+    ogDesc:      'How much does commercial renovation cost in Singapore? Real contractor pricing, permits, timeline and hidden costs explained.',
+    ogUrl:       'https://idworkstudio.com/insights/commercial-renovation-cost-singapore',
+  },
   'commercial/reinstatement.html': {
     canonical:   'https://idworkstudio.com/commercial/reinstatement',
     title:       'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',

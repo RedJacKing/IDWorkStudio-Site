@@ -144,21 +144,29 @@ export default function ArticleHDBTimeline() {
                 />
               </div>
 
-              {/* Numbered phases */}
-              <div className="space-y-0">
+              {/* Numbered phases - compact timeline layout */}
+              <div className="space-y-4">
                 {Object.entries(phases).map(([key, phase], index) => (
-                  <div key={key} className="pb-10 mb-10 border-b border-gray-100 last:border-b-0 last:mb-0 last:pb-0">
-                    <div className="flex items-start gap-4 mb-4">
-                      <span className="flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full bg-gold flex items-center justify-center text-sm font-bold text-white mt-0.5 shadow-sm" aria-hidden="true">
+                  <div
+                    key={key}
+                    className="rounded-2xl border border-gray-100 bg-white p-5 md:p-6 shadow-sm"
+                  >
+                    <div className="flex items-start gap-4">
+                      <span
+                        className="flex-shrink-0 w-8 h-8 md:w-9 md:h-9 rounded-full bg-gold flex items-center justify-center text-xs md:text-sm font-bold text-white mt-0.5 shadow-sm"
+                        aria-hidden="true"
+                      >
                         {index + 1}
                       </span>
-                      <h3 className="text-xl md:text-2xl font-bold text-charcoal leading-snug pt-1">
-                        {phase.title}
-                      </h3>
+                      <div>
+                        <h3 className="text-lg md:text-xl font-bold text-charcoal leading-snug">
+                          {phase.title}
+                        </h3>
+                        <p className="mt-2 text-gray-600 text-sm md:text-base leading-7">
+                          {phase.desc}
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] pl-0 md:pl-14">
-                      {phase.desc}
-                    </p>
                   </div>
                 ))}
               </div>
