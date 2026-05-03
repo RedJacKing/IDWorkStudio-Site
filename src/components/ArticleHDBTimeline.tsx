@@ -9,56 +9,13 @@ export default function ArticleHDBTimeline() {
   const durationItems = t('article_hdb_timeline.sections.duration_items', { returnObjects: true }) as StringMap;
   const phases = t('article_hdb_timeline.sections.phases', { returnObjects: true }) as Record<string, { title: string; desc: string }>;
   const avoidItems = t('article_hdb_timeline.sections.avoid_items', { returnObjects: true }) as StringMap;
-  const hdbTimelineFaqs = [
-    {
-      q: 'How long does HDB renovation usually take in Singapore?',
-      a: 'Most HDB renovations in Singapore take about 8 to 12 weeks for a BTO flat and 10 to 16 weeks for a resale flat. Resale projects usually take longer because hacking, rewiring, plumbing checks, waterproofing and making-good works are more common.'
-    },
-    {
-      q: 'Why does resale HDB renovation take longer than BTO renovation?',
-      a: 'Resale HDB renovation takes longer because the existing condition must be removed and checked first. Old tiles, cabinets, wiring, pipes, uneven floors and hidden defects can affect the sequence before new renovation work starts.'
-    },
-    {
-      q: 'When should I start planning before collecting my HDB keys?',
-      a: 'Start planning 4 to 8 weeks before key collection if your floor plan is ready. This gives time to confirm layout, budget, material direction and quotation so the project can move faster after site measurements and HDB approval.'
-    },
-    {
-      q: 'Which HDB renovation works commonly need approval?',
-      a: 'Hacking, wet-area works, certain wall changes, window-related works and some plumbing works may need HDB approval. A HDB-registered renovation contractor should check the scope before work starts.'
-    },
-    {
-      q: 'Can carpentry start before tiles and electrical work are completed?',
-      a: 'Carpentry measurement usually depends on completed site conditions, especially after tiling, ceiling and electrical points are confirmed. Fabrication can overlap with site work, but wrong early measurements can cause fitting issues.'
-    },
-    {
-      q: 'What causes the most common HDB renovation delays?',
-      a: 'Common delays include late material selection, delayed HDB approval, owner-supplied items arriving late, changes to carpentry layout, aircon piping coordination, countertop measurement delays and external vendor scheduling issues.'
-    },
-    {
-      q: 'Can I move in immediately after renovation handover?',
-      a: 'It is better to allow 1 to 2 extra weeks after handover for cleaning, airing, minor touch-ups, furniture delivery and appliance setup. Moving in too tightly after completion can make defect checking and adjustment harder.'
-    },
-    {
-      q: 'How do Taobao or overseas purchases affect renovation timeline?',
-      a: 'Owner-supplied overseas purchases can delay renovation if items arrive late, arrive damaged, have wrong dimensions or miss fittings. Items such as sinks, taps, lights and accessories should be ordered early and checked before installation.'
-    },
-    {
-      q: 'Should I confirm kitchen appliances before carpentry starts?',
-      a: 'Yes. Hob, hood, oven, fridge, sink and dishwasher dimensions should be confirmed before carpentry fabrication. Late appliance changes can affect cabinet sizes, ventilation space, electrical points and countertop cut-outs.'
-    },
-    {
-      q: 'How can homeowners keep the renovation timeline under control?',
-      a: 'Confirm the layout early, avoid late design changes, decide materials before site work, appoint one main coordinator, check long-lead items and keep the renovation sequence clear. Most delays come from decision and coordination gaps.'
-    },
-    {
-      q: 'How long should I buffer for defects and touch-ups?',
-      a: 'A practical buffer is 1 week for smaller BTO projects and 1 to 2 weeks for larger or resale projects. This allows time for paint touch-ups, carpentry alignment, silicone works, cleaning and small rectifications.'
-    },
-    {
-      q: 'What should I prepare before asking for a HDB renovation timeline estimate?',
-      a: 'Prepare your floor plan, key collection date, target move-in date, renovation scope, appliance list, preferred materials and any owner-supplied items. These details help the contractor give a more realistic timeline.'
-    }
-  ];
+  const hdbTimelineFaqs = Array.from({ length: 12 }, (_, index) => {
+    const itemNo = String(index + 1);
+    return {
+      q: t(`article_hdb_timeline.faq.items.${itemNo}.q`),
+      a: t(`article_hdb_timeline.faq.items.${itemNo}.a`)
+    };
+  });
 
 
   const articleSchema = {

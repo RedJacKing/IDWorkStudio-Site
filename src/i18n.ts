@@ -3734,7 +3734,13 @@ enT["article_hdb_timeline"].faq = {
 };
 enT["article_hdb_timeline"].internal_links = {
   eyebrow: "Related HDB renovation guides",
-  title: "Plan your HDB renovation with clearer budget and fewer delays"
+  title: "Plan your HDB renovation with clearer budget and fewer delays",
+  cost_intro: "Before confirming your scope, compare your expected timeline with our",
+  cost_link: "Singapore renovation cost guide",
+  cost_outro: "so you can plan budget, carpentry, wet works and material decisions together.",
+  mistakes_intro: "To avoid delays from late decisions, owner-supplied items or unclear quotation scope, read our",
+  mistakes_link: "renovation mistakes Singapore homeowners should avoid",
+  mistakes_outro: "before renovation work starts."
 };
 enT["article_hdb_timeline"].cta = {
   eyebrow: "HDB Renovation Planning",
@@ -3762,7 +3768,13 @@ zhT["article_hdb_timeline"].faq = {
 };
 zhT["article_hdb_timeline"].internal_links = {
   eyebrow: "相关 HDB 翻新指南",
-  title: "用更清晰的预算与时间规划 HDB 翻新"
+  title: "用更清晰的预算与时间规划 HDB 翻新",
+  cost_intro: "确认工程范围前，建议先参考我们的",
+  cost_link: "新加坡翻新费用指南",
+  cost_outro: "这样能把预算、木作、湿区工程和材料决定一起规划清楚。",
+  mistakes_intro: "若要减少因决定太迟、自购材料或报价范围不清而造成的延误，可先阅读",
+  mistakes_link: "新加坡业主应避免的翻新错误",
+  mistakes_outro: "再开始安排翻新工程。"
 };
 zhT["article_hdb_timeline"].cta = {
   eyebrow: "HDB 翻新规划",
