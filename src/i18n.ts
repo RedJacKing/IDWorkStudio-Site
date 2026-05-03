@@ -3288,8 +3288,8 @@ enT["article_commercial_renovation_cost"] = {
   reinstatement_link: "commercial reinstatement service",
   related_label: "Related Guides",
   related_title: "Continue Your Renovation Planning",
-  related_office_cost: "Office Renovation Cost Singapore (2026 Guide)",
-  related_office_timeline: "Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes",
+  related_office_cost: "<officeCostLink>Office Renovation Cost Singapore (2026 Guide)</officeCostLink>",
+  related_office_timeline: "<officeTimelineLink>Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes</officeTimelineLink>",
   faq_title: "Commercial renovation FAQ",
   faqs: {
     "1": { q: "How much does commercial renovation cost in Singapore?", a: "A standard office renovation usually costs around $80 to $150 psf. Retail renovation often ranges from $120 to $300 psf. F&B renovation can reach $200 to $500+ psf because of exhaust, plumbing, grease trap, kitchen and fire safety requirements." },
@@ -3405,8 +3405,8 @@ zhT["article_commercial_renovation_cost"] = {
   reinstatement_link: "商业恢复原状服务",
   related_label: "相关文章",
   related_title: "继续规划您的商业翻新",
-  related_office_cost: "新加坡办公室翻新费用（2026 指南）",
-  related_office_timeline: "新加坡办公室翻新时间表：办公室装修实际需要多久",
+  related_office_cost: "<officeCostLink>新加坡办公室翻新费用（2026 指南）</officeCostLink>",
+  related_office_timeline: "<officeTimelineLink>新加坡办公室翻新时间表：办公室装修实际需要多久</officeTimelineLink>",
   faq_title: "商业翻新常见问题",
   faqs: {
     "1": { q: "新加坡商业翻新费用是多少？", a: "标准办公室翻新通常约 $80 至 $150 psf。零售翻新常见为 $120 至 $300 psf。餐饮翻新可能达到 $200 至 $500+ psf，因为涉及排烟、给排水、隔油池、厨房与消防安全要求。" },

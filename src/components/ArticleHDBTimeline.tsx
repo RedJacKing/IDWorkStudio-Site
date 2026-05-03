@@ -170,27 +170,17 @@ export default function ArticleHDBTimeline() {
 
               {/* Numbered phases - compact timeline layout */}
               <div className="space-y-4">
-                {Object.entries(phases).map(([key, phase], index) => (
+                {Object.entries(phases).map(([key, phase]) => (
                   <div
                     key={key}
-                    className="rounded-2xl border border-gray-100 bg-white p-5 md:p-6 shadow-sm"
+                    className="rounded-2xl border border-gray-200 bg-[#fffdf8] p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
                   >
-                    <div className="flex items-start gap-4">
-                      <span
-                        className="flex-shrink-0 w-8 h-8 md:w-9 md:h-9 rounded-full bg-gold flex items-center justify-center text-xs md:text-sm font-bold text-white mt-0.5 shadow-sm"
-                        aria-hidden="true"
-                      >
-                        {index + 1}
-                      </span>
-                      <div>
-                        <h3 className="text-lg md:text-xl font-bold text-charcoal leading-snug">
-                          {phase.title}
-                        </h3>
-                        <p className="mt-2 text-gray-600 text-sm md:text-base leading-7">
-                          {phase.desc}
-                        </p>
-                      </div>
-                    </div>
+                    <h3 className="text-lg md:text-xl font-bold text-charcoal leading-snug">
+                      {phase.title}
+                    </h3>
+                    <p className="mt-3 text-gray-600 text-sm md:text-base leading-7 md:leading-8">
+                      {phase.desc}
+                    </p>
                   </div>
                 ))}
               </div>
