@@ -382,19 +382,7 @@ const resources = {
             "q5": "What should I check before signing an office lease?",
             "a5": "Check power capacity, aircon operating hours, ceiling condition, sprinkler layout, reinstatement clause, loading access, floor loading, data point requirements and whether the landlord allows your planned layout.",
             "q6": "Is reinstatement part of office renovation cost?",
-            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out.",
-            "q7": "What documents should I prepare before asking for an office renovation quote?",
-            "a7": "Prepare the floor plan, current site photos, lease agreement or fitting-out handbook, preferred move-in date, headcount, workstation count, pantry needs, meeting room requirements and any landlord reinstatement conditions. With these details, the quotation will be much closer to the real project cost.",
-            "q8": "Will glass partitions increase my office renovation budget?",
-            "a8": "Yes. Glass partitions usually cost more than basic drywall partitions because of aluminium framing, glass specification, door hardware and installation accuracy. They are common for meeting rooms and manager rooms, but the quantity should be planned carefully if the budget is tight.",
-            "q9": "Do office renovation costs include furniture and workstations?",
-            "a9": "Not always. Some quotations include loose furniture, system furniture and workstations, while others only cover renovation works such as partitions, flooring, ceiling, electrical, carpentry and painting. Always check whether office chairs, desks, filing cabinets and loose furniture are included before comparing prices.",
-            "q10": "Can I keep my existing office flooring, ceiling or aircon to save cost?",
-            "a10": "Yes, if they are in good condition and accepted by the landlord or building management. Reusing existing flooring, ceiling grid, lights or aircon layout can reduce cost, but the contractor should check whether they fit the new layout and whether any reinstatement or compliance issue will remain.",
-            "q11": "How early should I start planning an office renovation before moving in?",
-            "a11": "Start planning at least 8 to 12 weeks before your target move-in date. This gives time for layout planning, quotation, landlord or MCST submission, material selection, authority checks and actual renovation works without paying unnecessary rush charges.",
-            "q12": "What causes office renovation delays in Singapore?",
-            "a12": "Common delays include late landlord approval, MCST restrictions, missing as-built drawings, sprinkler or fire alarm changes, delayed carpet or furniture delivery, after-hours access limits, loading bay booking issues and last-minute layout changes by management."
+            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out."
           },
           "cta": {
             "text": "Planning an office renovation? Send us your floor plan, lease condition and rough headcount. We can help you estimate a practical office fit-out budget before work starts.",
@@ -1408,19 +1396,7 @@ const resources = {
             "q5": "签办公室租约前应该检查什么？",
             "a5": "建议检查电力容量、空调供应时间、天花状况、喷淋位置、还原条款、卸货通道、楼面承重、网络点需求以及业主是否允许你的规划布局。",
             "q6": "还原费用是否包含在办公室装修费用内？",
-            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。",
-            "q7": "询问办公室装修报价前需要准备什么资料？",
-            "a7": "建议准备平面图、现场照片、租约或装修手册、预计入驻日期、员工人数、工位数量、茶水间需求、会议室需求以及业主的还原要求。有这些资料，报价会更接近真实工程费用。",
-            "q8": "玻璃隔间会增加办公室装修预算吗？",
-            "a8": "会。玻璃隔间通常比普通石膏板隔间贵，因为涉及铝框、玻璃规格、门五金和安装精度。会议室和经理房常用玻璃隔间，但如果预算有限，应先控制数量。",
-            "q9": "办公室装修费用是否包括家具和工位？",
-            "a9": "不一定。有些报价包含活动家具、系统家具和工位，有些只包括隔间、地面、天花、电气、木工和油漆等装修工程。比较报价前，应确认办公椅、办公桌、文件柜和活动家具是否包含。",
-            "q10": "可以保留现有地面、天花或空调来节省费用吗？",
-            "a10": "可以，前提是现有状况良好，并且业主或大厦管理接受。保留现有地面、天花龙骨、灯具或空调布局可以降低费用，但承包商应检查是否配合新布局，以及是否会留下还原或合规问题。",
-            "q11": "办公室搬迁前应该提前多久开始规划装修？",
-            "a11": "建议至少提前8到12周开始规划。这样才有足够时间处理布局、报价、业主或MCST提交、材料选择、审批检查和现场施工，避免不必要的赶工费用。",
-            "q12": "新加坡办公室装修常见延误原因有哪些？",
-            "a12": "常见延误包括业主批准太迟、MCST限制、缺少原有图纸、喷淋或消防警报需要调整、地毯或家具延迟、夜间施工权限受限、卸货区预约问题，以及管理层临时更改布局。"
+            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。"
           },
           "cta": {
             "text": "准备办公室装修？把平面图、租约条件和预计员工人数发给我们，我们可以在开工前协助你估算实际办公室装修预算。",
@@ -2567,12 +2543,6 @@ enT["insights_page"] = {
       title: "Office Renovation Cost Singapore (2026 Guide)",
       excerpt: "A practical office fit-out cost guide for Singapore businesses, covering budget by office size, M&E, data points, partitions, landlord approvals and reinstatement planning.",
       read_time: "8 min read"
-    },
-    "6": {
-      category: "Office Timeline Guide",
-      title: "Office Renovation Timeline Singapore",
-      excerpt: "A practical timeline guide for Singapore office fit-outs, covering planning, landlord or MCST approval, site works, M&E coordination, handover and common delays.",
-      read_time: "8 min read"
     }
   },
   footer_block: {
@@ -2650,12 +2620,6 @@ zhT["insights_page"] = {
       category: "办公室费用指南",
       title: "新加坡办公室翻新费用（2026 指南）",
       excerpt: "为新加坡企业整理办公室装修与 fit-out 预算，涵盖不同面积、机电工程、数据点、隔断、大厦审批及恢复原状规划。",
-      read_time: "约 8 分钟"
-    },
-    "6": {
-      category: "办公室时间表指南",
-      title: "新加坡办公室翻新时间表",
-      excerpt: "为新加坡办公室 fit-out 整理实际工期，涵盖规划、业主或 MCST 审批、现场施工、机电协调、移交与常见延误。",
       read_time: "约 8 分钟"
     }
   },
@@ -3324,11 +3288,7 @@ enT["article_commercial_renovation_cost"] = {
   cta_text: "WhatsApp us your floor plan, unit condition and business type. We will advise on estimated cost range, approval requirements, feasibility issues and possible hidden costs before renovation starts.",
   cta_whatsapp: "WhatsApp Floor Plan",
   cta_calculator: "Use Cost Calculator",
-  cta_services: "View Commercial Services",
-  related_label: "Related commercial renovation guides",
-  related_title: "Plan cost and timeline before renovation starts",
-  related_office_cost: "Office Renovation Cost Singapore",
-  related_office_timeline: "Office Renovation Timeline Singapore"
+  cta_services: "View Commercial Services"
 };
 
 zhT["article_commercial_renovation_cost"] = {
@@ -3441,11 +3401,7 @@ zhT["article_commercial_renovation_cost"] = {
   cta_text: "请通过 WhatsApp 发送您的平面图、单位现况与业务类型。我们会先协助判断预算范围、审批要求、可行性问题与潜在隐藏成本。",
   cta_whatsapp: "WhatsApp 发送平面图",
   cta_calculator: "使用费用计算器",
-  cta_services: "查看商业服务",
-  related_label: "相关商业翻新指南",
-  related_title: "开工前先规划费用与时间表",
-  related_office_cost: "新加坡办公室翻新费用",
-  related_office_timeline: "新加坡办公室翻新时间表"
+  cta_services: "查看商业服务"
 };
 
 
@@ -3687,6 +3643,202 @@ zhT["article_office_renovation_timeline"] = {
   }
 };
 
+
+
+// Renovation Cost Singapore 2026 article: affected keys added for FAQ and related links.
+// Critical SEO FAQ content is rendered statically in the TSX article so raw HTML remains crawlable.
+enT["article_renovation_cost_2026"].internal_links = {
+  eyebrow: "Related renovation guides",
+  title: "Plan your renovation with clearer cost, timeline and risk control",
+  timeline_intro: "If you are comparing renovation budget against the actual project schedule, read our",
+  timeline_link: "HDB renovation timeline guide",
+  timeline_outro: "to understand approval, delivery sequencing, carpentry lead time and common move-in delays.",
+  mistakes_intro: "To avoid unnecessary variation orders, also read our",
+  mistakes_link: "renovation mistakes Singapore homeowners should avoid",
+  mistakes_outro: "before confirming materials, layout and quotation items.",
+  calculator_intro: "For a quick starting estimate, use the",
+  calculator_link: "Singapore renovation cost calculator",
+  calculator_outro: "before sending your floor plan for a detailed contractor quotation."
+};
+
+zhT["article_renovation_cost_2026"].internal_links = {
+  eyebrow: "相关翻新指南",
+  title: "用更清楚的费用、工期和风险规划翻新",
+  timeline_intro: "如果你想把翻新预算和实际工期一起规划，可以阅读我们的",
+  timeline_link: "HDB 翻新时间表指南",
+  timeline_outro: "了解审批、施工顺序、木作交期和常见搬入延误。",
+  mistakes_intro: "为了避免不必要的追加费用，也建议阅读",
+  mistakes_link: "新加坡业主常见翻新错误",
+  mistakes_outro: "再确认材料、布局和报价项目。",
+  calculator_intro: "如果需要先做初步预算，可以使用",
+  calculator_link: "新加坡翻新费用计算器",
+  calculator_outro: "再把平面图发给我们准备更详细的承包商报价。"
+};
+
+enT["article_renovation_cost_2026"].faq = {
+  title: "Renovation cost FAQ",
+  items: {
+    "1": { q: "How much should I budget for a 4-room HDB renovation in Singapore in 2026?", a: "For a 4-room HDB in Singapore, a practical 2026 renovation budget is usually around $50,000 to $60,000 for a BTO and $70,000 to $81,000 for a resale flat. The resale range is higher because hacking, disposal, rewiring, plumbing replacement and waterproofing are more common." },
+    "2": { q: "Why is resale renovation more expensive than BTO renovation?", a: "Resale renovation usually costs more because the contractor must first remove old finishes, check existing wiring and plumbing, repair uneven surfaces, redo waterproofing in wet areas and handle more site-condition risks. These works happen before the new design finishes are installed." },
+    "3": { q: "What are the biggest renovation cost drivers in Singapore homes?", a: "The biggest cost drivers are usually carpentry, kitchen worktops, bathroom wet works, tile selection, electrical rewiring, plumbing upgrades and design complexity. Full-height cabinets, curved carpentry, large-format tiles and sintered stone surfaces can push the budget up quickly." },
+    "4": { q: "Is $50,000 enough for a home renovation in Singapore?", a: "$50,000 can be enough for a practical BTO renovation or a lighter resale scope, but it may not be enough for a full resale renovation with extensive hacking, rewiring, plumbing, carpentry and premium finishes. The key is to decide which areas matter most before confirming the scope." },
+    "5": { q: "How much buffer should homeowners set aside for renovation?", a: "A sensible buffer is 10% to 15% for BTO or newer homes and 15% to 25% for resale homes. Older resale units have more unknowns, especially after hacking starts and concealed wiring, pipe condition or floor levels become clearer." },
+    "6": { q: "Does renovation cost include furniture, appliances and curtains?", a: "Not always. Many renovation quotations cover built-in works such as carpentry, masonry, electrical, plumbing, painting and ceiling works. Loose furniture, appliances, curtains, blinds, mattresses and decorative lighting may be separate, so homeowners should check the quotation line by line." },
+    "7": { q: "Why do quotations from different renovation companies vary so much?", a: "Quotations can vary because of material specifications, carpentry dimensions, worktop grade, tile size, electrical quantity, wet-work scope, warranty responsibility and whether important items are omitted. The cheapest quote is not always cheaper after variations are added." },
+    "8": { q: "Should I choose quartz or sintered stone for my kitchen worktop?", a: "Quartz is still a practical and common option for many Singapore homes. Sintered stone usually costs more but gives a more premium look and better heat resistance. The right choice depends on cooking habits, design expectations and how much of the budget is allocated to the kitchen." },
+    "9": { q: "Can I reduce renovation cost without making the home look cheap?", a: "Yes. Keep the layout practical, avoid unnecessary built-in carpentry, use feature finishes only where they are most visible, choose durable mid-range materials and avoid late design changes. Good space planning often matters more than using the most expensive material everywhere." },
+    "10": { q: "When should I ask for a renovation quotation?", a: "Ask for a quotation after you have a floor plan, rough design direction, budget range, preferred move-in date and clear priorities. For resale homes, a site visit is important because existing conditions can change the cost significantly." },
+    "11": { q: "Do HDB renovation works need approval?", a: "Some HDB renovation works require approval, especially hacking, wet-area works, wall changes and certain plumbing or window-related works. Homeowners should work with an HDB-registered renovation contractor and confirm approval requirements before starting site work." },
+    "12": { q: "How can I avoid renovation cost overruns?", a: "Avoid cost overruns by confirming the scope early, checking quotation inclusions, planning electrical and carpentry properly, avoiding last-minute material changes and keeping a realistic contingency buffer. Most overruns come from unclear scope or late changes, not from one single item." }
+  }
+};
+
+zhT["article_renovation_cost_2026"].faq = {
+  title: "翻新费用常见问题",
+  items: {
+    "1": { q: "2026 年新加坡 4 房式 HDB 翻新应预算多少？", a: "新加坡 4 房式 HDB 的实际预算，BTO 通常约 $50,000 至 $60,000，转售组屋通常约 $70,000 至 $81,000。转售单位较高，是因为更常涉及拆除、清运、重拉电线、更换水喉和防水工程。" },
+    "2": { q: "为什么转售组屋翻新比 BTO 贵？", a: "转售翻新通常更贵，因为承包商需要先拆除旧饰面、检查原有电线和水喉、修补不平整表面、重做湿区防水，并处理更多现场不确定因素。这些工程通常在新设计安装前就已经产生费用。" },
+    "3": { q: "新加坡住宅翻新最大的费用驱动因素是什么？", a: "最大费用驱动因素通常是木作、厨房台面、浴室湿作、瓷砖选择、电线重拉、水喉升级和设计复杂度。全高柜、弧形木作、大板砖和岩板台面都会快速提高预算。" },
+    "4": { q: "$50,000 够不够做新加坡住宅翻新？", a: "$50,000 可以适用于实用型 BTO 翻新或较轻量的转售工程，但如果是完整转售翻新并包含大量拆除、电线、水喉、木作和较高等级饰面，通常不够。关键是先确认哪些空间和项目最重要。" },
+    "5": { q: "业主应预留多少翻新备用金？", a: "BTO 或较新的住宅建议预留 10% 至 15%，转售单位建议预留 15% 至 25%。较旧的转售单位在拆除后更容易发现隐藏问题，例如电线、水管或地面水平问题。" },
+    "6": { q: "翻新费用包括家具、电器和窗帘吗？", a: "不一定。许多翻新报价主要包括固定工程，例如木作、泥水、电工、水喉、油漆和天花。活动家具、电器、窗帘、百叶帘、床垫和装饰灯具可能另计，业主应逐项检查报价。" },
+    "7": { q: "为什么不同装修公司的报价差这么多？", a: "报价差异可能来自材料规格、木作尺寸、台面等级、瓷砖尺寸、电工数量、湿作范围、保修责任，以及是否遗漏重要项目。最便宜的报价不一定在追加费用后仍然便宜。" },
+    "8": { q: "厨房台面应该选石英石还是岩板？", a: "石英石仍然是许多新加坡家庭实用且常见的选择。岩板通常费用更高，但视觉更高级，也有较好的耐热表现。选择应根据烹饪习惯、设计要求和厨房预算来决定。" },
+    "9": { q: "如何降低翻新费用但不让家看起来廉价？", a: "可以。保持布局实用、避免不必要的固定木作、把重点饰面用在最显眼的位置、选择耐用的中档材料，并避免后期更改设计。好的空间规划往往比到处使用最贵材料更重要。" },
+    "10": { q: "什么时候应该要求装修报价？", a: "当你已有平面图、初步设计方向、预算范围、预期搬入日期和主要优先事项后，就可以要求报价。对于转售单位，现场查看很重要，因为现场条件会明显影响费用。" },
+    "11": { q: "HDB 翻新工程需要申请批准吗？", a: "部分 HDB 翻新工程需要批准，特别是拆墙、湿区工程、墙体改动，以及某些水喉或窗户相关工程。业主应选择 HDB 注册承包商，并在开工前确认审批要求。" },
+    "12": { q: "如何避免翻新超支？", a: "避免超支的方法包括尽早确认工程范围、检查报价包含项目、提前规划电工和木作、避免临时更换材料，并预留现实的备用金。多数超支来自范围不清或后期更改，而不是单一项目。" }
+  }
+};
+
+
+
+// HDB timeline article: affected keys added for FAQ, related links and CTA.
+// Critical SEO FAQ content is rendered statically in the TSX article so raw HTML remains crawlable.
+enT["article_hdb_timeline"].faq = {
+  title: "HDB renovation timeline FAQ",
+  items: {
+    "1": { q: "How long does HDB renovation usually take in Singapore?", a: "Most HDB renovations in Singapore take about 8 to 12 weeks for a BTO flat and 10 to 16 weeks for a resale flat. Resale projects usually take longer because hacking, rewiring, plumbing checks, waterproofing and making-good works are more common." },
+    "2": { q: "Why does resale HDB renovation take longer than BTO renovation?", a: "Resale HDB renovation takes longer because the existing condition must be removed and checked first. Old tiles, cabinets, wiring, pipes, uneven floors and hidden defects can affect the sequence before new renovation work starts." },
+    "3": { q: "When should I start planning before collecting my HDB keys?", a: "Start planning 4 to 8 weeks before key collection if your floor plan is ready. This gives time to confirm layout, budget, material direction and quotation so the project can move faster after site measurements and HDB approval." },
+    "4": { q: "Which HDB renovation works commonly need approval?", a: "Hacking, wet-area works, certain wall changes, window-related works and some plumbing works may need HDB approval. A HDB-registered renovation contractor should check the scope before work starts." },
+    "5": { q: "Can carpentry start before tiles and electrical work are completed?", a: "Carpentry measurement usually depends on completed site conditions, especially after tiling, ceiling and electrical points are confirmed. Fabrication can overlap with site work, but wrong early measurements can cause fitting issues." },
+    "6": { q: "What causes the most common HDB renovation delays?", a: "Common delays include late material selection, delayed HDB approval, owner-supplied items arriving late, changes to carpentry layout, aircon piping coordination, countertop measurement delays and external vendor scheduling issues." },
+    "7": { q: "Can I move in immediately after renovation handover?", a: "It is better to allow 1 to 2 extra weeks after handover for cleaning, airing, minor touch-ups, furniture delivery and appliance setup. Moving in too tightly after completion can make defect checking and adjustment harder." },
+    "8": { q: "How do Taobao or overseas purchases affect renovation timeline?", a: "Owner-supplied overseas purchases can delay renovation if items arrive late, arrive damaged, have wrong dimensions or miss fittings. Items such as sinks, taps, lights and accessories should be ordered early and checked before installation dates." },
+    "9": { q: "Should I confirm kitchen appliances before carpentry starts?", a: "Yes. Hob, hood, oven, fridge, sink and dishwasher dimensions should be confirmed before carpentry fabrication. Late appliance changes can affect cabinet sizes, ventilation space, electrical points and countertop cut-outs." },
+    "10": { q: "How can homeowners keep the renovation timeline under control?", a: "Confirm the layout early, avoid late design changes, decide materials before site work, appoint one main coordinator, check long-lead items and keep the renovation sequence clear. Most delays come from decision and coordination gaps." },
+    "11": { q: "How long should I buffer for defects and touch-ups?", a: "A practical buffer is 1 week for smaller BTO projects and 1 to 2 weeks for larger or resale projects. This allows time for paint touch-ups, carpentry alignment, silicone works, cleaning and small rectifications." },
+    "12": { q: "What should I prepare before asking for a HDB renovation timeline estimate?", a: "Prepare your floor plan, key collection date, target move-in date, renovation scope, appliance list, preferred materials and any owner-supplied items. These details help the contractor give a more realistic timeline." }
+  }
+};
+enT["article_hdb_timeline"].internal_links = {
+  eyebrow: "Related HDB renovation guides",
+  title: "Plan your HDB renovation with clearer budget and fewer delays"
+};
+enT["article_hdb_timeline"].cta = {
+  eyebrow: "HDB Renovation Planning",
+  title: "Need a realistic move-in timeline?",
+  body: "Send us your floor plan, key collection date and target move-in period. We can help you review the renovation sequence, likely approval items and practical timeline before work starts.",
+  button: "WhatsApp for HDB Timeline Advice"
+};
+
+zhT["article_hdb_timeline"].faq = {
+  title: "HDB 翻新时间 FAQ",
+  items: {
+    "1": { q: "新加坡 HDB 翻新通常需要多久？", a: "大多数新加坡 HDB 翻新，BTO 通常约 8 至 12 周，转售组屋通常约 10 至 16 周。转售单位一般较久，因为更常涉及拆除、重拉电线、水喉检查、防水和修补工程。" },
+    "2": { q: "为什么转售 HDB 翻新比 BTO 更久？", a: "转售 HDB 需要先拆除和检查原有状况。旧瓷砖、旧柜、旧电线、水管、地面不平和隐藏问题，都会影响新工程开始前的工序。" },
+    "3": { q: "拿钥匙前应提前多久开始规划？", a: "如果已有平面图，建议在拿钥匙前 4 至 8 周开始规划。这能让布局、预算、材料方向和报价更早确定，现场量尺和 HDB 审批后就能更顺利推进。" },
+    "4": { q: "哪些 HDB 翻新工程通常需要审批？", a: "拆墙、湿区工程、部分墙体改动、窗户相关工程以及某些水喉工程，可能需要 HDB 审批。应由 HDB 注册装修商在开工前检查范围。" },
+    "5": { q: "木作可以在瓷砖和电工完成前开始吗？", a: "木作量尺通常依赖现场完成后的实际尺寸，尤其是瓷砖、天花和电位确认后。生产可以与现场工程重叠，但过早量尺可能造成安装误差。" },
+    "6": { q: "HDB 翻新最常见的延误原因是什么？", a: "常见原因包括材料迟迟未定、HDB 审批延迟、业主自购材料迟到、木作布局修改、冷气铜管协调、台面量尺延误以及外部供应商时间配合问题。" },
+    "7": { q: "翻新交付后可以马上入住吗？", a: "建议额外预留 1 至 2 周用于清洁、散味、小修补、家具送货和电器安装。太赶着入住会让检查和修整变得更困难。" },
+    "8": { q: "淘宝或海外自购材料会怎样影响时间表？", a: "若自购海外材料迟到、损坏、尺寸不对或配件不齐，就会延误安装。水槽、水龙头、灯具和卫浴配件应提早购买并在安装日前检查。" },
+    "9": { q: "厨房电器是否应在木作开始前确认？", a: "是的。炉具、抽油烟机、烤箱、冰箱、水槽和洗碗机尺寸应在木作生产前确认。迟改电器会影响柜体尺寸、散热空间、电位和台面开孔。" },
+    "10": { q: "业主如何控制翻新时间？", a: "尽早确认布局，避免后期改设计，在开工前定好材料，指定一个主要协调方，检查长交期项目，并保持清楚的工序安排。多数延误来自决策与协调问题。" },
+    "11": { q: "缺陷修补应预留多久？", a: "较小的 BTO 项目可预留约 1 周，较大或转售项目可预留 1 至 2 周，用于油漆修补、木作调整、玻璃胶收口、清洁和小项目整改。" },
+    "12": { q: "询问 HDB 翻新时间前应准备什么？", a: "准备平面图、拿钥匙日期、目标入住日期、翻新范围、电器清单、材料偏好和自购项目。资料越完整，装修商越能给出实际时间表。" }
+  }
+};
+zhT["article_hdb_timeline"].internal_links = {
+  eyebrow: "相关 HDB 翻新指南",
+  title: "用更清晰的预算与时间规划 HDB 翻新"
+};
+zhT["article_hdb_timeline"].cta = {
+  eyebrow: "HDB 翻新规划",
+  title: "需要更实际的入住时间表？",
+  body: "把您的平面图、拿钥匙日期和目标入住时间发给我们。我们可以协助您预估工序、可能的审批项目和实际施工时间。",
+  button: "WhatsApp 咨询 HDB 翻新时间"
+};
+
+// Renovation mistakes article: affected keys added for FAQ, related links and CTA.
+// Critical SEO FAQ content is rendered statically in the TSX article so raw HTML remains crawlable.
+enT["article_renovation_mistakes"].faq = {
+  title: "Renovation mistakes FAQ",
+  items: {
+    "1": { q: "What is the most common renovation mistake in Singapore?", a: "The most common renovation mistake is confirming a quotation before the scope is clear. Homeowners may compare only the total price without checking carpentry length, electrical quantity, hacking scope, material grade, waterproofing and exclusions." },
+    "2": { q: "Why do renovation budgets exceed the original quotation?", a: "Budgets usually increase because of unclear scope, late design changes, hidden resale conditions, additional electrical points, upgraded materials, extra carpentry or items that were not included in the original quotation." },
+    "3": { q: "Is choosing the cheapest renovation quote risky?", a: "It can be risky if the quotation leaves out important work. A cheaper quote may exclude hacking, haulage, waterproofing, electrical points, soft-closing hardware, internal cabinet finishing or proper site protection." },
+    "4": { q: "What should I check before signing a renovation contract?", a: "Check the itemised scope, payment schedule, material specifications, carpentry measurements, timeline, warranty, variation rules, HDB approval responsibilities and whether important exclusions are clearly stated." },
+    "5": { q: "Why is storage planning so important for HDB homes?", a: "Most Singapore homes have limited floor area. Poor storage planning causes daily clutter even if the renovation looks good. Storage should be planned around luggage, cleaning tools, appliances, kids items, documents and long-term lifestyle needs." },
+    "6": { q: "Can following renovation trends become a mistake?", a: "Yes. Trend-heavy designs can look dated quickly or be hard to maintain. A better approach is to keep fixed renovation elements practical and timeless, then use loose furniture, lighting and styling for trend expression." },
+    "7": { q: "What mistakes happen when homeowners buy their own materials?", a: "Owner-supplied items can create problems when dimensions are wrong, delivery is late, fittings are missing or warranty responsibility is unclear. Sinks, taps, lights, fans and bathroom accessories should be checked before installation dates." },
+    "8": { q: "How do late design changes affect renovation?", a: "Late design changes can affect drawings, carpentry fabrication, electrical points, lighting layout, tile orders and site sequence. A small change can trigger rework if the related trade has already completed its part." },
+    "9": { q: "What is a smart renovation buffer for Singapore homeowners?", a: "A practical buffer is 10% to 15% for BTO projects and 15% to 25% for resale projects. Resale homes need more buffer because concealed site conditions are only fully known after hacking starts." },
+    "10": { q: "How can I avoid renovation delays?", a: "Confirm layout early, decide key materials before work starts, avoid too many separate vendors, order long-lead items early and keep communication centralised. Delays often come from coordination gaps rather than construction speed alone." },
+    "11": { q: "Should I prioritise design or function first?", a: "Function should come first. Good design should support daily use, cleaning, storage, lighting and maintenance. Once function is clear, the visual design can be built around it without wasting budget." },
+    "12": { q: "How do I know if a renovation quotation is complete?", a: "A complete quotation should clearly list quantities, materials, assumptions, exclusions and work stages. If many items are described only as lump sum or optional, ask for clarification before comparing it with another quote." }
+  }
+};
+enT["article_renovation_mistakes"].internal_links = {
+  eyebrow: "Related renovation planning guides",
+  title: "Plan your renovation with clearer cost, timeline and scope control"
+};
+enT["article_renovation_mistakes"].cta = {
+  eyebrow: "Avoid Costly Renovation Mistakes",
+  title: "Need a clearer renovation scope before signing?",
+  button: "WhatsApp for Scope Review"
+};
+
+zhT["article_renovation_mistakes"].faq = {
+  title: "翻新错误 FAQ",
+  items: {
+    "1": { q: "新加坡最常见的翻新错误是什么？", a: "最常见的错误是在工程范围还不清楚时就确认报价。业主往往只比较总价，却没有检查木作长度、电位数量、拆除范围、材料等级、防水和排除项目。" },
+    "2": { q: "为什么翻新预算会超过原本报价？", a: "预算增加通常是因为范围不清、后期改设计、转售单位隐藏问题、增加电位、升级材料、增加木作，或原报价没有包含某些项目。" },
+    "3": { q: "选择最便宜的装修报价有风险吗？", a: "如果报价漏掉重要工程，就会有风险。较低报价可能不包括拆除、搬运、防水、电位、缓冲五金、柜内饰面或适当的现场保护。" },
+    "4": { q: "签装修合约前应检查什么？", a: "应检查详细项目范围、付款进度、材料规格、木作尺寸、工期、保修、追加工程规则、HDB 审批责任，以及重要排除项目是否清楚列明。" },
+    "5": { q: "为什么 HDB 收纳规划很重要？", a: "多数新加坡住宅面积有限。收纳规划不好，即使装修看起来漂亮，日常也容易杂乱。应按行李、清洁工具、电器、儿童用品、文件和长期生活需求规划收纳。" },
+    "6": { q: "过度追流行会成为翻新错误吗？", a: "会。过度依赖流行元素容易很快过时，也可能难维护。较好的做法是让固定装修保持实用耐看，再用家具、灯具和软装表达风格。" },
+    "7": { q: "业主自购材料常出现什么问题？", a: "自购材料可能因尺寸错误、迟到、配件不齐或保修责任不清而造成问题。水槽、水龙头、灯具、风扇和卫浴配件应在安装日前确认。" },
+    "8": { q: "后期改设计会怎样影响翻新？", a: "后期改动会影响图纸、木作生产、电位、灯位、瓷砖订单和现场工序。即使是小改动，如果相关工种已完成，也可能造成返工。" },
+    "9": { q: "新加坡业主应预留多少应急预算？", a: "BTO 项目可预留 10% 至 15%，转售项目可预留 15% 至 25%。转售单位隐藏问题较多，很多情况要拆除后才看得清。" },
+    "10": { q: "如何避免翻新延误？", a: "尽早确认布局，开工前决定关键材料，避免太多独立供应商，提早订购长交期项目，并集中沟通。延误往往来自协调问题，而不只是施工速度。" },
+    "11": { q: "应先重视设计还是功能？", a: "应先重视功能。好的设计应支持日常使用、清洁、收纳、照明和维护。功能清楚后，再围绕它打造视觉效果，预算才不容易浪费。" },
+    "12": { q: "怎样判断装修报价是否完整？", a: "完整报价应清楚列出数量、材料、假设、排除项目和工程阶段。如果很多项目只写成笼统总价或选择项，应先问清楚再比较。" }
+  }
+};
+zhT["article_renovation_mistakes"].internal_links = {
+  eyebrow: "相关翻新规划指南",
+  title: "用更清晰的预算、时间与范围控制规划翻新"
+};
+zhT["article_renovation_mistakes"].cta = {
+  eyebrow: "避开昂贵翻新错误",
+  title: "签约前需要更清楚的工程范围吗？",
+  button: "WhatsApp 咨询范围检查"
+};
+
+enT["article_renovation_cost_2026"].cta = {
+  eyebrow: "Renovation Budget Planning",
+  title: "Want a more accurate renovation estimate?",
+  body: "Send us your floor plan, property type and preferred renovation scope. We can help you check whether your budget is realistic before you commit to materials, carpentry and site works.",
+  button: "WhatsApp for Renovation Budget Review"
+};
+zhT["article_renovation_cost_2026"].cta = {
+  eyebrow: "翻新预算规划",
+  title: "想获得更准确的翻新预算吗？",
+  body: "把您的平面图、房屋类型和预计翻新范围发给我们。我们可以在您确认材料、木作和现场工程前，协助判断预算是否实际。",
+  button: "WhatsApp 咨询翻新预算"
+};
 
 i18n
   .use(LanguageDetector)

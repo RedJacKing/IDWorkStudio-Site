@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -14,6 +14,57 @@ export default function ArticleRenovationCost2026() {
   const budgetCards = t('article_renovation_cost_2026.sections.budget_cards', { returnObjects: true }) as StringMap;
   const expectationItems = t('article_renovation_cost_2026.sections.expectation_items', { returnObjects: true }) as StringMap;
 
+  const renovationFaqs = [
+    {
+      q: 'How much should I budget for a 4-room HDB renovation in Singapore in 2026?',
+      a: 'For a 4-room HDB in Singapore, a practical 2026 renovation budget is usually around $50,000 to $60,000 for a BTO and $70,000 to $81,000 for a resale flat. The resale range is higher because hacking, disposal, rewiring, plumbing replacement and waterproofing are more common.'
+    },
+    {
+      q: 'Why is resale renovation more expensive than BTO renovation?',
+      a: 'Resale renovation usually costs more because the contractor must first remove old finishes, check existing wiring and plumbing, repair uneven surfaces, redo waterproofing in wet areas and handle more site-condition risks. These works happen before the new design finishes are installed.'
+    },
+    {
+      q: 'What are the biggest renovation cost drivers in Singapore homes?',
+      a: 'The biggest cost drivers are usually carpentry, kitchen worktops, bathroom wet works, tile selection, electrical rewiring, plumbing upgrades and design complexity. Full-height cabinets, curved carpentry, large-format tiles and sintered stone surfaces can push the budget up quickly.'
+    },
+    {
+      q: 'Is $50,000 enough for a home renovation in Singapore?',
+      a: '$50,000 can be enough for a practical BTO renovation or a lighter resale scope, but it may not be enough for a full resale renovation with extensive hacking, rewiring, plumbing, carpentry and premium finishes. The key is to decide which areas matter most before confirming the scope.'
+    },
+    {
+      q: 'How much buffer should homeowners set aside for renovation?',
+      a: 'A sensible buffer is 10% to 15% for BTO or newer homes and 15% to 25% for resale homes. Older resale units have more unknowns, especially after hacking starts and concealed wiring, pipe condition or floor levels become clearer.'
+    },
+    {
+      q: 'Does renovation cost include furniture, appliances and curtains?',
+      a: 'Not always. Many renovation quotations cover built-in works such as carpentry, masonry, electrical, plumbing, painting and ceiling works. Loose furniture, appliances, curtains, blinds, mattresses and decorative lighting may be separate, so homeowners should check the quotation line by line.'
+    },
+    {
+      q: 'Why do quotations from different renovation companies vary so much?',
+      a: 'Quotations can vary because of material specifications, carpentry dimensions, worktop grade, tile size, electrical quantity, wet-work scope, warranty responsibility and whether important items are omitted. The cheapest quote is not always cheaper after variations are added.'
+    },
+    {
+      q: 'Should I choose quartz or sintered stone for my kitchen worktop?',
+      a: 'Quartz is still a practical and common option for many Singapore homes. Sintered stone usually costs more but gives a more premium look and better heat resistance. The right choice depends on cooking habits, design expectations and how much of the budget is allocated to the kitchen.'
+    },
+    {
+      q: 'Can I reduce renovation cost without making the home look cheap?',
+      a: 'Yes. Keep the layout practical, avoid unnecessary built-in carpentry, use feature finishes only where they are most visible, choose durable mid-range materials and avoid late design changes. Good space planning often matters more than using the most expensive material everywhere.'
+    },
+    {
+      q: 'When should I ask for a renovation quotation?',
+      a: 'Ask for a quotation after you have a floor plan, rough design direction, budget range, preferred move-in date and clear priorities. For resale homes, a site visit is important because existing conditions can change the cost significantly.'
+    },
+    {
+      q: 'Do HDB renovation works need approval?',
+      a: 'Some HDB renovation works require approval, especially hacking, wet-area works, wall changes and certain plumbing or window-related works. Homeowners should work with an HDB-registered renovation contractor and confirm approval requirements before starting site work.'
+    },
+    {
+      q: 'How can I avoid renovation cost overruns?',
+      a: 'Avoid cost overruns by confirming the scope early, checking quotation inclusions, planning electrical and carpentry properly, avoiding last-minute material changes and keeping a realistic contingency buffer. Most overruns come from unclear scope or late changes, not from one single item.'
+    }
+  ];
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -26,7 +77,7 @@ export default function ArticleRenovationCost2026() {
       "logo": { "@type": "ImageObject", "url": "https://idworkstudio.com/logo192.png" }
     },
     "datePublished": "2026-04-23",
-    "dateModified": "2026-04-23",
+    "dateModified": "2026-05-03",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://idworkstudio.com/insights/renovation-cost-singapore-2026"
@@ -41,6 +92,20 @@ export default function ArticleRenovationCost2026() {
       { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://idworkstudio.com/insights" },
       { "@type": "ListItem", "position": 3, "name": t('article_renovation_cost_2026.title'), "item": "https://idworkstudio.com/insights/renovation-cost-singapore-2026" }
     ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://idworkstudio.com/insights/renovation-cost-singapore-2026#faq",
+    "mainEntity": renovationFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
   };
 
   /* Reusable sub-heading component (gold left border, no numbered badge) */
@@ -79,6 +144,7 @@ export default function ArticleRenovationCost2026() {
         <meta name="twitter:image" content="https://idworkstudio.com/images/insights-hero.jpg" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
@@ -287,34 +353,85 @@ export default function ArticleRenovationCost2026() {
             <P>{t('article_renovation_cost_2026.sections.final_p2')}</P>
             <P>{t('article_renovation_cost_2026.sections.final_p3')}</P>
 
+            {/* ── FAQ ── */}
+            <SectionH2>Renovation cost FAQ</SectionH2>
+            <div className="space-y-3 my-8">
+              {renovationFaqs.map((faq, index) => (
+                <details
+                  key={faq.q}
+                  className="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+                  open={index === 0}
+                >
+                  <summary className="cursor-pointer list-none text-base font-bold text-charcoal flex items-start justify-between gap-4">
+                    <span>{faq.q}</span>
+                    <span className="text-gold group-open:rotate-45 transition-transform duration-200">+</span>
+                  </summary>
+                  <p className="text-gray-600 text-sm leading-[1.8] mt-4 mb-0">{faq.a}</p>
+                </details>
+              ))}
+            </div>
+
             {/* ── RELATED READING (INTERNAL LINKING) ── */}
             <div className="mt-16 rounded-3xl border border-gray-200 bg-off-white p-7 md:p-8 shadow-sm">
               <p className="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-3">
-                {t('article_renovation_cost_2026.internal_links.eyebrow')}
+                Related renovation guides
               </p>
               <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5">
-                {t('article_renovation_cost_2026.internal_links.title')}
+                Plan your renovation with clearer cost, timeline and risk control
               </h2>
               <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-5">
-                {t('article_renovation_cost_2026.internal_links.timeline_intro')}{' '}
+                If you are comparing renovation budget against the actual project schedule, read our{' '}
                 <Link
                   to="/insights/hdb-renovation-timeline-singapore"
                   className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors"
                 >
-                  {t('article_renovation_cost_2026.internal_links.timeline_link')}
+                  HDB renovation timeline guide
                 </Link>
-                {t('article_renovation_cost_2026.internal_links.timeline_outro')}
+                {' '}to understand approval, delivery sequencing, carpentry lead time and common move-in delays.
               </p>
-              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-0">
-                {t('article_renovation_cost_2026.internal_links.mistakes_intro')}{' '}
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-5">
+                To avoid unnecessary variation orders, also read our{' '}
                 <Link
                   to="/insights/renovation-mistakes-singapore"
                   className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors"
                 >
-                  {t('article_renovation_cost_2026.internal_links.mistakes_link')}
+                  renovation mistakes Singapore homeowners should avoid
                 </Link>
-                {t('article_renovation_cost_2026.internal_links.mistakes_outro')}
+                {' '}before confirming materials, layout and quotation items.
               </p>
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-0">
+                For a quick starting estimate, use the{' '}
+                <Link
+                  to="/renovation-cost-calculator"
+                  className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors"
+                >
+                  Singapore renovation cost calculator
+                </Link>
+                {' '}before sending your floor plan for a detailed contractor quotation.
+              </p>
+            </div>
+
+            {/* ── CTA ── */}
+            <div className="mt-16 rounded-3xl bg-dark-charcoal p-8 md:p-10 text-white">
+              <div className="flex items-start gap-4 mb-5">
+                <MessageCircle className="w-8 h-8 text-gold flex-shrink-0" />
+                <div>
+                  <p className="text-xs uppercase tracking-[0.24em] text-gold font-bold mb-3">Renovation Budget Planning</p>
+                  <h2 className="text-2xl md:text-4xl font-serif mb-4">Want a more accurate renovation estimate?</h2>
+                  <p className="text-gray-300 text-base leading-[1.8] mb-0">
+                    Send us your floor plan, property type and preferred renovation scope. We can help you check whether your budget is realistic before you commit to materials, carpentry and site works.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/6598333085?text=Hi%20ID%20Work%20Studio%2C%20I%20am%20planning%20a%20home%20renovation.%20Can%20you%20help%20me%20review%20a%20realistic%20budget%20from%20my%20floor%20plan%20and%20scope%3F"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-dark-charcoal text-xs uppercase tracking-[0.22em] hover:bg-gold-hover transition-all duration-300 font-bold rounded-full"
+              >
+                WhatsApp for Renovation Budget Review
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             {/* ── NEXT ARTICLE FOOTER ── */}

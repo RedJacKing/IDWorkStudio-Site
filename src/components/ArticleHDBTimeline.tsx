@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 type StringMap = Record<string, string>;
@@ -9,6 +9,57 @@ export default function ArticleHDBTimeline() {
   const durationItems = t('article_hdb_timeline.sections.duration_items', { returnObjects: true }) as StringMap;
   const phases = t('article_hdb_timeline.sections.phases', { returnObjects: true }) as Record<string, { title: string; desc: string }>;
   const avoidItems = t('article_hdb_timeline.sections.avoid_items', { returnObjects: true }) as StringMap;
+  const hdbTimelineFaqs = [
+    {
+      q: 'How long does HDB renovation usually take in Singapore?',
+      a: 'Most HDB renovations in Singapore take about 8 to 12 weeks for a BTO flat and 10 to 16 weeks for a resale flat. Resale projects usually take longer because hacking, rewiring, plumbing checks, waterproofing and making-good works are more common.'
+    },
+    {
+      q: 'Why does resale HDB renovation take longer than BTO renovation?',
+      a: 'Resale HDB renovation takes longer because the existing condition must be removed and checked first. Old tiles, cabinets, wiring, pipes, uneven floors and hidden defects can affect the sequence before new renovation work starts.'
+    },
+    {
+      q: 'When should I start planning before collecting my HDB keys?',
+      a: 'Start planning 4 to 8 weeks before key collection if your floor plan is ready. This gives time to confirm layout, budget, material direction and quotation so the project can move faster after site measurements and HDB approval.'
+    },
+    {
+      q: 'Which HDB renovation works commonly need approval?',
+      a: 'Hacking, wet-area works, certain wall changes, window-related works and some plumbing works may need HDB approval. A HDB-registered renovation contractor should check the scope before work starts.'
+    },
+    {
+      q: 'Can carpentry start before tiles and electrical work are completed?',
+      a: 'Carpentry measurement usually depends on completed site conditions, especially after tiling, ceiling and electrical points are confirmed. Fabrication can overlap with site work, but wrong early measurements can cause fitting issues.'
+    },
+    {
+      q: 'What causes the most common HDB renovation delays?',
+      a: 'Common delays include late material selection, delayed HDB approval, owner-supplied items arriving late, changes to carpentry layout, aircon piping coordination, countertop measurement delays and external vendor scheduling issues.'
+    },
+    {
+      q: 'Can I move in immediately after renovation handover?',
+      a: 'It is better to allow 1 to 2 extra weeks after handover for cleaning, airing, minor touch-ups, furniture delivery and appliance setup. Moving in too tightly after completion can make defect checking and adjustment harder.'
+    },
+    {
+      q: 'How do Taobao or overseas purchases affect renovation timeline?',
+      a: 'Owner-supplied overseas purchases can delay renovation if items arrive late, arrive damaged, have wrong dimensions or miss fittings. Items such as sinks, taps, lights and accessories should be ordered early and checked before installation.'
+    },
+    {
+      q: 'Should I confirm kitchen appliances before carpentry starts?',
+      a: 'Yes. Hob, hood, oven, fridge, sink and dishwasher dimensions should be confirmed before carpentry fabrication. Late appliance changes can affect cabinet sizes, ventilation space, electrical points and countertop cut-outs.'
+    },
+    {
+      q: 'How can homeowners keep the renovation timeline under control?',
+      a: 'Confirm the layout early, avoid late design changes, decide materials before site work, appoint one main coordinator, check long-lead items and keep the renovation sequence clear. Most delays come from decision and coordination gaps.'
+    },
+    {
+      q: 'How long should I buffer for defects and touch-ups?',
+      a: 'A practical buffer is 1 week for smaller BTO projects and 1 to 2 weeks for larger or resale projects. This allows time for paint touch-ups, carpentry alignment, silicone works, cleaning and small rectifications.'
+    },
+    {
+      q: 'What should I prepare before asking for a HDB renovation timeline estimate?',
+      a: 'Prepare your floor plan, key collection date, target move-in date, renovation scope, appliance list, preferred materials and any owner-supplied items. These details help the contractor give a more realistic timeline.'
+    }
+  ];
+
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -39,6 +90,21 @@ export default function ArticleHDBTimeline() {
     ]
   };
 
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://idworkstudio.com/insights/hdb-renovation-timeline-singapore#faq",
+    "mainEntity": hdbTimelineFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
   const delayKeys = ['1', '2', '3', '4'] as const;
 
   return (
@@ -58,6 +124,7 @@ export default function ArticleHDBTimeline() {
         <meta name="twitter:image" content="https://idworkstudio.com/images/insights-hero.jpg" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
@@ -254,23 +321,26 @@ export default function ArticleHDBTimeline() {
 
 
             {/* ── RELATED PLANNING LINKS ── */}
-            <div className="mb-14 rounded-3xl border border-gray-200 bg-[#fffdf8] p-6 md:p-8 shadow-sm">
+            <div className="mb-14 rounded-3xl border border-gray-200 bg-off-white p-7 md:p-8 shadow-sm">
               <p className="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-3">
-                {t('article_hdb_timeline.internal_links.eyebrow')}
+                Related HDB renovation guides
               </p>
-              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-4">
-                {t('article_hdb_timeline.internal_links.cost_intro')}{' '}
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5">
+                Plan your HDB renovation with clearer budget and fewer delays
+              </h2>
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-5">
+                Before confirming your scope, compare your expected timeline with our{' '}
                 <a href="/insights/renovation-cost-singapore-2026" className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors">
-                  {t('article_hdb_timeline.internal_links.cost_link')}
+                  Singapore renovation cost guide
                 </a>{' '}
-                {t('article_hdb_timeline.internal_links.cost_outro')}
+                so you can plan budget, carpentry, wet works and material decisions together.
               </p>
               <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-0">
-                {t('article_hdb_timeline.internal_links.mistakes_intro')}{' '}
+                To avoid delays from late decisions, owner-supplied items or unclear quotation scope, read our{' '}
                 <a href="/insights/renovation-mistakes-singapore" className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors">
-                  {t('article_hdb_timeline.internal_links.mistakes_link')}
+                  renovation mistakes Singapore homeowners should avoid
                 </a>{' '}
-                {t('article_hdb_timeline.internal_links.mistakes_outro')}
+                before renovation work starts.
               </p>
             </div>
 
@@ -282,6 +352,51 @@ export default function ArticleHDBTimeline() {
               <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
                 {t('article_hdb_timeline.sections.final_p1')}
               </p>
+            </div>
+
+            {/* ── FAQ ── */}
+            <div className="mb-14">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mt-16 mb-5 pb-4 border-b border-gray-200">
+                HDB renovation timeline FAQ
+              </h2>
+              <div className="space-y-3 my-8">
+                {hdbTimelineFaqs.map((faq, index) => (
+                  <details
+                    key={faq.q}
+                    className="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+                    open={index === 0}
+                  >
+                    <summary className="cursor-pointer list-none text-base font-bold text-charcoal flex items-start justify-between gap-4">
+                      <span>{faq.q}</span>
+                      <span className="text-gold group-open:rotate-45 transition-transform duration-200">+</span>
+                    </summary>
+                    <p className="text-gray-600 text-sm leading-[1.8] mt-4 mb-0">{faq.a}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+
+            {/* ── CTA ── */}
+            <div className="mb-14 rounded-3xl bg-dark-charcoal p-8 md:p-10 text-white">
+              <div className="flex items-start gap-4 mb-5">
+                <MessageCircle className="w-8 h-8 text-gold flex-shrink-0" />
+                <div>
+                  <p className="text-xs uppercase tracking-[0.24em] text-gold font-bold mb-3">HDB Renovation Planning</p>
+                  <h2 className="text-2xl md:text-4xl font-serif mb-4">Need a realistic move-in timeline?</h2>
+                  <p className="text-gray-300 text-base leading-[1.8] mb-0">
+                    Send us your floor plan, key collection date and target move-in period. We can help you review the renovation sequence, likely approval items and practical timeline before work starts.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/6598333085?text=Hi%20ID%20Work%20Studio%2C%20I%20am%20planning%20an%20HDB%20renovation.%20Can%20you%20help%20me%20estimate%20a%20realistic%20renovation%20timeline%20from%20my%20floor%20plan%20and%20move-in%20date%3F"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-dark-charcoal text-xs uppercase tracking-[0.22em] hover:bg-gold-hover transition-all duration-300 font-bold rounded-full"
+              >
+                WhatsApp for HDB Timeline Advice
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             {/* ── NEXT ARTICLE FOOTER ── */}
