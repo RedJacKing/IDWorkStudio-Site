@@ -382,7 +382,19 @@ const resources = {
             "q5": "What should I check before signing an office lease?",
             "a5": "Check power capacity, aircon operating hours, ceiling condition, sprinkler layout, reinstatement clause, loading access, floor loading, data point requirements and whether the landlord allows your planned layout.",
             "q6": "Is reinstatement part of office renovation cost?",
-            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out."
+            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out.",
+            "q7": "What documents should I prepare before asking for an office renovation quote?",
+            "a7": "Prepare the floor plan, current site photos, lease agreement or fitting-out handbook, preferred move-in date, headcount, workstation count, pantry needs, meeting room requirements and any landlord reinstatement conditions. With these details, the quotation will be much closer to the real project cost.",
+            "q8": "Will glass partitions increase my office renovation budget?",
+            "a8": "Yes. Glass partitions usually cost more than basic drywall partitions because of aluminium framing, glass specification, door hardware and installation accuracy. They are common for meeting rooms and manager rooms, but the quantity should be planned carefully if the budget is tight.",
+            "q9": "Do office renovation costs include furniture and workstations?",
+            "a9": "Not always. Some quotations include loose furniture, system furniture and workstations, while others only cover renovation works such as partitions, flooring, ceiling, electrical, carpentry and painting. Always check whether office chairs, desks, filing cabinets and loose furniture are included before comparing prices.",
+            "q10": "Can I keep my existing office flooring, ceiling or aircon to save cost?",
+            "a10": "Yes, if they are in good condition and accepted by the landlord or building management. Reusing existing flooring, ceiling grid, lights or aircon layout can reduce cost, but the contractor should check whether they fit the new layout and whether any reinstatement or compliance issue will remain.",
+            "q11": "How early should I start planning an office renovation before moving in?",
+            "a11": "Start planning at least 8 to 12 weeks before your target move-in date. This gives time for layout planning, quotation, landlord or MCST submission, material selection, authority checks and actual renovation works without paying unnecessary rush charges.",
+            "q12": "What causes office renovation delays in Singapore?",
+            "a12": "Common delays include late landlord approval, MCST restrictions, missing as-built drawings, sprinkler or fire alarm changes, delayed carpet or furniture delivery, after-hours access limits, loading bay booking issues and last-minute layout changes by management."
           },
           "cta": {
             "text": "Planning an office renovation? Send us your floor plan, lease condition and rough headcount. We can help you estimate a practical office fit-out budget before work starts.",
@@ -1396,7 +1408,19 @@ const resources = {
             "q5": "签办公室租约前应该检查什么？",
             "a5": "建议检查电力容量、空调供应时间、天花状况、喷淋位置、还原条款、卸货通道、楼面承重、网络点需求以及业主是否允许你的规划布局。",
             "q6": "还原费用是否包含在办公室装修费用内？",
-            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。"
+            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。",
+            "q7": "询问办公室装修报价前需要准备什么资料？",
+            "a7": "建议准备平面图、现场照片、租约或装修手册、预计入驻日期、员工人数、工位数量、茶水间需求、会议室需求以及业主的还原要求。有这些资料，报价会更接近真实工程费用。",
+            "q8": "玻璃隔间会增加办公室装修预算吗？",
+            "a8": "会。玻璃隔间通常比普通石膏板隔间贵，因为涉及铝框、玻璃规格、门五金和安装精度。会议室和经理房常用玻璃隔间，但如果预算有限，应先控制数量。",
+            "q9": "办公室装修费用是否包括家具和工位？",
+            "a9": "不一定。有些报价包含活动家具、系统家具和工位，有些只包括隔间、地面、天花、电气、木工和油漆等装修工程。比较报价前，应确认办公椅、办公桌、文件柜和活动家具是否包含。",
+            "q10": "可以保留现有地面、天花或空调来节省费用吗？",
+            "a10": "可以，前提是现有状况良好，并且业主或大厦管理接受。保留现有地面、天花龙骨、灯具或空调布局可以降低费用，但承包商应检查是否配合新布局，以及是否会留下还原或合规问题。",
+            "q11": "办公室搬迁前应该提前多久开始规划装修？",
+            "a11": "建议至少提前8到12周开始规划。这样才有足够时间处理布局、报价、业主或MCST提交、材料选择、审批检查和现场施工，避免不必要的赶工费用。",
+            "q12": "新加坡办公室装修常见延误原因有哪些？",
+            "a12": "常见延误包括业主批准太迟、MCST限制、缺少原有图纸、喷淋或消防警报需要调整、地毯或家具延迟、夜间施工权限受限、卸货区预约问题，以及管理层临时更改布局。"
           },
           "cta": {
             "text": "准备办公室装修？把平面图、租约条件和预计员工人数发给我们，我们可以在开工前协助你估算实际办公室装修预算。",
@@ -2543,6 +2567,12 @@ enT["insights_page"] = {
       title: "Office Renovation Cost Singapore (2026 Guide)",
       excerpt: "A practical office fit-out cost guide for Singapore businesses, covering budget by office size, M&E, data points, partitions, landlord approvals and reinstatement planning.",
       read_time: "8 min read"
+    },
+    "6": {
+      category: "Office Timeline Guide",
+      title: "Office Renovation Timeline Singapore",
+      excerpt: "A practical timeline guide for Singapore office fit-outs, covering planning, landlord or MCST approval, site works, M&E coordination, handover and common delays.",
+      read_time: "8 min read"
     }
   },
   footer_block: {
@@ -2620,6 +2650,12 @@ zhT["insights_page"] = {
       category: "办公室费用指南",
       title: "新加坡办公室翻新费用（2026 指南）",
       excerpt: "为新加坡企业整理办公室装修与 fit-out 预算，涵盖不同面积、机电工程、数据点、隔断、大厦审批及恢复原状规划。",
+      read_time: "约 8 分钟"
+    },
+    "6": {
+      category: "办公室时间表指南",
+      title: "新加坡办公室翻新时间表",
+      excerpt: "为新加坡办公室 fit-out 整理实际工期，涵盖规划、业主或 MCST 审批、现场施工、机电协调、移交与常见延误。",
       read_time: "约 8 分钟"
     }
   },
@@ -3288,7 +3324,11 @@ enT["article_commercial_renovation_cost"] = {
   cta_text: "WhatsApp us your floor plan, unit condition and business type. We will advise on estimated cost range, approval requirements, feasibility issues and possible hidden costs before renovation starts.",
   cta_whatsapp: "WhatsApp Floor Plan",
   cta_calculator: "Use Cost Calculator",
-  cta_services: "View Commercial Services"
+  cta_services: "View Commercial Services",
+  related_label: "Related commercial renovation guides",
+  related_title: "Plan cost and timeline before renovation starts",
+  related_office_cost: "Office Renovation Cost Singapore",
+  related_office_timeline: "Office Renovation Timeline Singapore"
 };
 
 zhT["article_commercial_renovation_cost"] = {
@@ -3401,7 +3441,11 @@ zhT["article_commercial_renovation_cost"] = {
   cta_text: "请通过 WhatsApp 发送您的平面图、单位现况与业务类型。我们会先协助判断预算范围、审批要求、可行性问题与潜在隐藏成本。",
   cta_whatsapp: "WhatsApp 发送平面图",
   cta_calculator: "使用费用计算器",
-  cta_services: "查看商业服务"
+  cta_services: "查看商业服务",
+  related_label: "相关商业翻新指南",
+  related_title: "开工前先规划费用与时间表",
+  related_office_cost: "新加坡办公室翻新费用",
+  related_office_timeline: "新加坡办公室翻新时间表"
 };
 
 

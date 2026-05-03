@@ -63,6 +63,12 @@ export default function OfficeRenovationCostSingapore() {
     { q: t('insights.officeCost.faq.q4'), a: t('insights.officeCost.faq.a4') },
     { q: t('insights.officeCost.faq.q5'), a: t('insights.officeCost.faq.a5') },
     { q: t('insights.officeCost.faq.q6'), a: t('insights.officeCost.faq.a6') },
+    { q: t('insights.officeCost.faq.q7'), a: t('insights.officeCost.faq.a7') },
+    { q: t('insights.officeCost.faq.q8'), a: t('insights.officeCost.faq.a8') },
+    { q: t('insights.officeCost.faq.q9'), a: t('insights.officeCost.faq.a9') },
+    { q: t('insights.officeCost.faq.q10'), a: t('insights.officeCost.faq.a10') },
+    { q: t('insights.officeCost.faq.q11'), a: t('insights.officeCost.faq.a11') },
+    { q: t('insights.officeCost.faq.q12'), a: t('insights.officeCost.faq.a12') },
   ];
 
   const articleSchema = {
