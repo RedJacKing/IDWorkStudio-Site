@@ -2563,12 +2563,6 @@ enT["insights_page"] = {
       title: "Office Renovation Cost Singapore (2026 Guide)",
       excerpt: "A practical office fit-out cost guide for Singapore businesses, covering budget by office size, M&E, data points, partitions, landlord approvals and reinstatement planning.",
       read_time: "8 min read"
-    },
-    "6": {
-      category: "Office Timeline Guide",
-      title: "Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes",
-      excerpt: "A realistic guide to office renovation timelines in Singapore, covering design confirmation, landlord approval, M&E coordination, site works, furniture delivery and handover.",
-      read_time: "8 min read"
     }
   },
   footer_block: {
@@ -2646,12 +2640,6 @@ zhT["insights_page"] = {
       category: "办公室费用指南",
       title: "新加坡办公室翻新费用（2026 指南）",
       excerpt: "为新加坡企业整理办公室装修与 fit-out 预算，涵盖不同面积、机电工程、数据点、隔断、大厦审批及恢复原状规划。",
-      read_time: "约 8 分钟"
-    },
-    "6": {
-      category: "办公室工期指南",
-      title: "新加坡办公室翻新时间表：办公室 fit-out 实际需要多久",
-      excerpt: "说明新加坡办公室翻新从设计确认、业主审批、机电协调、现场施工、家具进场到交付的实际时间安排。",
       read_time: "约 8 分钟"
     }
   },
@@ -3298,6 +3286,10 @@ enT["article_commercial_renovation_cost"] = {
   },
   reinstatement_p: "For proper planning, start reinstatement budgeting at least 3 to 4 months before lease expiry. You can also review our",
   reinstatement_link: "commercial reinstatement service",
+  related_label: "Related Guides",
+  related_title: "Continue Your Renovation Planning",
+  related_office_cost: "Office Renovation Cost Singapore (2026 Guide)",
+  related_office_timeline: "Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes",
   faq_title: "Commercial renovation FAQ",
   faqs: {
     "1": { q: "How much does commercial renovation cost in Singapore?", a: "A standard office renovation usually costs around $80 to $150 psf. Retail renovation often ranges from $120 to $300 psf. F&B renovation can reach $200 to $500+ psf because of exhaust, plumbing, grease trap, kitchen and fire safety requirements." },
@@ -3411,6 +3403,10 @@ zhT["article_commercial_renovation_cost"] = {
   },
   reinstatement_p: "为更稳妥规划，建议在租约到期前至少 3 至 4 个月开始预算恢复原状。您也可以查看我们的",
   reinstatement_link: "商业恢复原状服务",
+  related_label: "相关文章",
+  related_title: "继续规划您的商业翻新",
+  related_office_cost: "新加坡办公室翻新费用（2026 指南）",
+  related_office_timeline: "新加坡办公室翻新时间表：办公室装修实际需要多久",
   faq_title: "商业翻新常见问题",
   faqs: {
     "1": { q: "新加坡商业翻新费用是多少？", a: "标准办公室翻新通常约 $80 至 $150 psf。零售翻新常见为 $120 至 $300 psf。餐饮翻新可能达到 $200 至 $500+ psf，因为涉及排烟、给排水、隔油池、厨房与消防安全要求。" },
