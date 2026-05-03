@@ -2555,6 +2555,12 @@ enT["insights_page"] = {
       title: "Office Renovation Cost Singapore (2026 Guide)",
       excerpt: "A practical office fit-out cost guide for Singapore businesses, covering budget by office size, M&E, data points, partitions, landlord approvals and reinstatement planning.",
       read_time: "8 min read"
+    },
+    "6": {
+      category: "Office Renovation Guide",
+      title: "Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes",
+      excerpt: "A realistic breakdown of office renovation timelines in Singapore, including approvals, coordination delays, and what actually affects project completion.",
+      read_time: "8 min read"
     }
   },
   footer_block: {
@@ -2632,6 +2638,12 @@ zhT["insights_page"] = {
       category: "办公室费用指南",
       title: "新加坡办公室翻新费用（2026 指南）",
       excerpt: "为新加坡企业整理办公室装修与 fit-out 预算，涵盖不同面积、机电工程、数据点、隔断、大厦审批及恢复原状规划。",
+      read_time: "约 8 分钟"
+    },
+    "6": {
+      category: "办公室翻新指南",
+      title: "新加坡办公室翻新时间表：办公室装修实际需要多久",
+      excerpt: "详细解析新加坡办公室翻新时间，包括审批流程、现场协调以及常见延误因素。",
       read_time: "约 8 分钟"
     }
   },
