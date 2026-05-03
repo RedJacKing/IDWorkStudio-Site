@@ -529,6 +529,9 @@ const resources = {
             "desc": "ID Work Studio is a BCA-registered renovation firm specialising in commercial spaces, permits and practical site execution.",
             "btn1": "Use Renovation Cost Calculator",
             "btn2": "View Commercial Services"
+          },
+          "next": {
+            "cta": "Read Article"
           }
         }
       },
@@ -1512,6 +1515,9 @@ const resources = {
             "desc": "ID Work Studio 是 BCA 注册装修公司，专注于商业空间、许可证协调与实际现场执行。",
             "btn1": "使用装修费用计算器",
             "btn2": "查看商业服务"
+          },
+          "next": {
+            "cta": "阅读文章"
           }
         }
       },
