@@ -323,24 +323,24 @@ export default function ArticleHDBTimeline() {
             {/* ── RELATED PLANNING LINKS ── */}
             <div className="mb-14 rounded-3xl border border-gray-200 bg-off-white p-7 md:p-8 shadow-sm">
               <p className="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-3">
-                Related HDB renovation guides
+                {t('article_hdb_timeline.internal_links.eyebrow')}
               </p>
               <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5">
-                Plan your HDB renovation with clearer budget and fewer delays
+                {t('article_hdb_timeline.internal_links.title')}
               </h2>
               <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-5">
-                Before confirming your scope, compare your expected timeline with our{' '}
+                {t('article_hdb_timeline.internal_links.cost_intro')}{' '}
                 <a href="/insights/renovation-cost-singapore-2026" className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors">
-                  Singapore renovation cost guide
+                  {t('article_hdb_timeline.internal_links.cost_link')}
                 </a>{' '}
-                so you can plan budget, carpentry, wet works and material decisions together.
+                {t('article_hdb_timeline.internal_links.cost_outro')}
               </p>
               <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-0">
-                To avoid delays from late decisions, owner-supplied items or unclear quotation scope, read our{' '}
+                {t('article_hdb_timeline.internal_links.mistakes_intro')}{' '}
                 <a href="/insights/renovation-mistakes-singapore" className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors">
-                  renovation mistakes Singapore homeowners should avoid
+                  {t('article_hdb_timeline.internal_links.mistakes_link')}
                 </a>{' '}
-                before renovation work starts.
+                {t('article_hdb_timeline.internal_links.mistakes_outro')}
               </p>
             </div>
 
@@ -357,7 +357,7 @@ export default function ArticleHDBTimeline() {
             {/* ── FAQ ── */}
             <div className="mb-14">
               <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mt-16 mb-5 pb-4 border-b border-gray-200">
-                HDB renovation timeline FAQ
+                {t('article_hdb_timeline.faq.title')}
               </h2>
               <div className="space-y-3 my-8">
                 {hdbTimelineFaqs.map((faq, index) => (
@@ -381,10 +381,10 @@ export default function ArticleHDBTimeline() {
               <div className="flex items-start gap-4 mb-5">
                 <MessageCircle className="w-8 h-8 text-gold flex-shrink-0" />
                 <div>
-                  <p className="text-xs uppercase tracking-[0.24em] text-gold font-bold mb-3">HDB Renovation Planning</p>
-                  <h2 className="text-2xl md:text-4xl font-serif mb-4">Need a realistic move-in timeline?</h2>
+                  <p className="text-xs uppercase tracking-[0.24em] text-gold font-bold mb-3">{t('article_hdb_timeline.cta.eyebrow')}</p>
+                  <h2 className="text-2xl md:text-4xl font-serif mb-4">{t('article_hdb_timeline.cta.title')}</h2>
                   <p className="text-gray-300 text-base leading-[1.8] mb-0">
-                    Send us your floor plan, key collection date and target move-in period. We can help you review the renovation sequence, likely approval items and practical timeline before work starts.
+                    {t('article_hdb_timeline.cta.body')}
                   </p>
                 </div>
               </div>
@@ -394,7 +394,7 @@ export default function ArticleHDBTimeline() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-dark-charcoal text-xs uppercase tracking-[0.22em] hover:bg-gold-hover transition-all duration-300 font-bold rounded-full"
               >
-                WhatsApp for HDB Timeline Advice
+                {t('article_hdb_timeline.cta.button')}
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>

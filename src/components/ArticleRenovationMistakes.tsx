@@ -9,6 +9,9 @@ export default function ArticleRenovationMistakes() {
   const { t } = useTranslation();
   const mistakes = t('article_renovation_mistakes.sections.mistakes', { returnObjects: true }) as Record<string, { title: string; body: string }>;
   const avoidItems = t('article_renovation_mistakes.sections.avoid_items', { returnObjects: true }) as StringMap;
+  const renovationMistakesFaqs = Object.values(
+    t('article_renovation_mistakes.faq.items', { returnObjects: true }) as Record<string, { q: string; a: string }>
+  );
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -39,6 +42,20 @@ export default function ArticleRenovationMistakes() {
     ]
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://idworkstudio.com/insights/renovation-mistakes-singapore#faq",
+    "mainEntity": renovationMistakesFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
   return (
     <>
       <Helmet>
@@ -56,6 +73,7 @@ export default function ArticleRenovationMistakes() {
         <meta name="twitter:image" content="https://idworkstudio.com/images/insights-hero.jpg" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <div className="min-h-screen bg-off-white selection:bg-gold selection:text-dark-charcoal">
@@ -214,32 +232,53 @@ export default function ArticleRenovationMistakes() {
 
             <section className="mb-16 rounded-3xl border border-gray-200 bg-[#fffdf8] p-7 shadow-sm md:p-9">
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-gold">
-                {t('article_internal_links.residential_label')}
+                {t('article_renovation_mistakes.internal_links.eyebrow')}
               </p>
               <h2 className="mb-5 font-serif text-2xl font-semibold text-charcoal md:text-3xl">
-                {t('article_internal_links.renovation_mistakes.title')}
+                {t('article_renovation_mistakes.internal_links.title')}
               </h2>
               <div className="space-y-4 text-base leading-[1.85] text-gray-600 md:text-[1.05rem]">
                 <p>
-                  {t('article_internal_links.renovation_mistakes.cost_prefix')}{' '}
+                  {t('article_renovation_mistakes.internal_links.cost_prefix')}{' '}
                   <Link
                     to="/insights/renovation-cost-singapore-2026"
                     className="text-charcoal underline decoration-gold/50 underline-offset-4 transition-colors hover:text-gold"
                   >
-                    {t('article_internal_links.renovation_mistakes.cost_link')}
+                    {t('article_renovation_mistakes.internal_links.cost_link')}
                   </Link>
-                  {t('article_internal_links.renovation_mistakes.cost_suffix')}
+                  {t('article_renovation_mistakes.internal_links.cost_suffix')}
                 </p>
                 <p>
-                  {t('article_internal_links.renovation_mistakes.timeline_prefix')}{' '}
+                  {t('article_renovation_mistakes.internal_links.timeline_prefix')}{' '}
                   <Link
                     to="/insights/hdb-renovation-timeline-singapore"
                     className="text-charcoal underline decoration-gold/50 underline-offset-4 transition-colors hover:text-gold"
                   >
-                    {t('article_internal_links.renovation_mistakes.timeline_link')}
+                    {t('article_renovation_mistakes.internal_links.timeline_link')}
                   </Link>
-                  {t('article_internal_links.renovation_mistakes.timeline_suffix')}
+                  {t('article_renovation_mistakes.internal_links.timeline_suffix')}
                 </p>
+              </div>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="mb-5 border-b border-gray-200 pb-4 font-serif text-2xl font-semibold text-charcoal md:text-3xl">
+                {t('article_renovation_mistakes.faq.title')}
+              </h2>
+              <div className="space-y-3 my-8">
+                {renovationMistakesFaqs.map((faq, index) => (
+                  <details
+                    key={faq.q}
+                    className="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+                    open={index === 0}
+                  >
+                    <summary className="cursor-pointer list-none text-base font-bold text-charcoal flex items-start justify-between gap-4">
+                      <span>{faq.q}</span>
+                      <span className="text-gold group-open:rotate-45 transition-transform duration-200">+</span>
+                    </summary>
+                    <p className="text-gray-600 text-sm leading-[1.8] mt-4 mb-0">{faq.a}</p>
+                  </details>
+                ))}
               </div>
             </section>
 
@@ -247,10 +286,10 @@ export default function ArticleRenovationMistakes() {
               <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-gold">
-                    {t('article_common.back_to_start')}
+                    {t('article_renovation_mistakes.cta.eyebrow')}
                   </p>
                   <h3 className="font-serif text-2xl text-white">
-                    {t('article_renovation_mistakes.next_title')}
+                    {t('article_renovation_mistakes.cta.title')}
                   </h3>
                 </div>
 
@@ -262,7 +301,7 @@ export default function ArticleRenovationMistakes() {
                     className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white transition-colors hover:bg-gold-hover"
                   >
                     <MessageCircle className="h-4 w-4" />
-                    WhatsApp
+                    {t('article_renovation_mistakes.cta.button')}
                   </a>
 
                   <Link

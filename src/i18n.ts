@@ -3840,6 +3840,55 @@ zhT["article_renovation_cost_2026"].cta = {
   button: "WhatsApp 咨询翻新预算"
 };
 
+// Additional affected article link-box translations.
+enT["article_hdb_timeline"].internal_links = {
+  ...enT["article_hdb_timeline"].internal_links,
+  cost_intro: "Before confirming your scope, compare your expected timeline with our",
+  cost_link: "Singapore renovation cost guide",
+  cost_outro: "so you can plan budget, carpentry, wet works and material decisions together.",
+  mistakes_intro: "To avoid delays from late decisions, owner-supplied items or unclear quotation scope, read our",
+  mistakes_link: "renovation mistakes Singapore homeowners should avoid",
+  mistakes_outro: "before renovation work starts."
+};
+zhT["article_hdb_timeline"].internal_links = {
+  ...zhT["article_hdb_timeline"].internal_links,
+  cost_intro: "确认工程范围前，可以先对照我们的",
+  cost_link: "新加坡翻新费用指南",
+  cost_outro: "一起规划预算、木作、湿作和材料决定。",
+  mistakes_intro: "为了避免因决定太迟、自购材料或报价范围不清造成延误，也建议阅读",
+  mistakes_link: "新加坡业主应避免的翻新错误",
+  mistakes_outro: "再开始安排翻新工程。"
+};
+
+enT["article_renovation_mistakes"].internal_links = {
+  ...enT["article_renovation_mistakes"].internal_links,
+  cost_prefix: "Before confirming your renovation scope, compare your expected budget with our",
+  cost_link: "Singapore renovation cost guide",
+  cost_suffix: "so you can check whether the quotation covers the right cost items.",
+  timeline_prefix: "If your main concern is move-in timing, read our",
+  timeline_link: "HDB renovation timeline guide",
+  timeline_suffix: "to understand where delays usually happen before work starts."
+};
+zhT["article_renovation_mistakes"].internal_links = {
+  ...zhT["article_renovation_mistakes"].internal_links,
+  cost_prefix: "确认翻新范围前，可以先对照我们的",
+  cost_link: "新加坡翻新费用指南",
+  cost_suffix: "检查报价是否包含正确的费用项目。",
+  timeline_prefix: "如果您最担心搬入时间，可以阅读我们的",
+  timeline_link: "HDB 翻新时间表指南",
+  timeline_suffix: "了解开工前最常发生延误的位置。"
+};
+
+enT["article_commercial_renovation_cost"].related_label = "Commercial renovation planning";
+enT["article_commercial_renovation_cost"].related_title = "Plan cost, timeline and office fit-out scope together";
+enT["article_commercial_renovation_cost"].related_office_cost = "For office-specific pricing, read our <officeCost>office renovation cost Singapore guide</officeCost> before confirming your fit-out budget.";
+enT["article_commercial_renovation_cost"].related_office_timeline = "If your lease handover date is fixed, review the <officeTimeline>office renovation timeline Singapore guide</officeTimeline> so approvals, M&E works and move-in planning are not underestimated.";
+zhT["article_commercial_renovation_cost"].related_label = "商业翻新规划";
+zhT["article_commercial_renovation_cost"].related_title = "把费用、工期和办公室装修范围一起规划";
+zhT["article_commercial_renovation_cost"].related_office_cost = "如需办公室专属费用参考，请先阅读我们的 <officeCost>新加坡办公室翻新费用指南</officeCost>，再确认 fit-out 预算。";
+zhT["article_commercial_renovation_cost"].related_office_timeline = "如果租约交场日期已经确定，建议查看 <officeTimeline>新加坡办公室翻新时间表指南</officeTimeline>，避免低估审批、机电工程和搬入安排。";
+
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
