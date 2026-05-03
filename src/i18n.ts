@@ -631,9 +631,9 @@ const resources = {
             "read_time": "8 min read"
           },
           "6": {
-            "category": "Office Renovation Guide",
+            "category": "Office Timeline Guide",
             "title": "Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes",
-            "excerpt": "A practical office fit-out timeline guide covering approvals, site coordination, renovation sequencing and common delays in Singapore office projects.",
+            "excerpt": "A realistic breakdown of office renovation timelines in Singapore, including approvals, landlord coordination, site works and common delay points.",
             "read_time": "8 min read"
           }
         },
@@ -1651,9 +1651,9 @@ const resources = {
             "read_time": "约 8 分钟"
           },
           "6": {
-            "category": "办公室翻新指南",
+            "category": "办公室时间指南",
             "title": "新加坡办公室翻新时间表：办公室装修实际需要多久",
-            "excerpt": "一篇实用的办公室装修时间指南，涵盖新加坡办公室项目中的审批、现场协调、施工顺序与常见延误。",
+            "excerpt": "实际说明新加坡办公室翻新的时间安排，包括审批、业主协调、现场工程与常见延误点。",
             "read_time": "约 8 分钟"
           }
         },
