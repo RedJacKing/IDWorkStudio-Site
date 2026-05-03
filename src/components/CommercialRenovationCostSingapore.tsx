@@ -16,7 +16,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 
-const ARTICLE_KEY = 'insights.article_commercial_renovation_cost';
+const ARTICLE_KEY = 'article_commercial_renovation_cost';
 const KEYS_3 = ['1', '2', '3'];
 const KEYS_4 = ['1', '2', '3', '4'];
 const KEYS_5 = ['1', '2', '3', '4', '5'];
