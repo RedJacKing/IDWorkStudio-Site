@@ -9,6 +9,18 @@ export default function Commercial() {
   const whatsappNumber = "6598333085";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%20ID%20Work%20Studio,%20I'd%20like%20a%20free%20consultation%20for%20my%20commercial%20project.`;
 
+  const faqIconMap = [Clock, Building2, Clock, ShieldCheck, FileCheck, HardHat, CheckCircle, FileCheck, Building2, HardHat, CheckCircle, ShieldCheck];
+
+  const commercialFaqs = Array.from({ length: 12 }, (_, index) => {
+    const Icon = faqIconMap[index];
+    const key = `commercial_page.faq.q${index + 1}`;
+    return {
+      q: t(`${key}.q`),
+      a: t(`${key}.a`),
+      icon: <Icon className="w-5 h-5 text-champagne flex-shrink-0 mt-0.5" />,
+    };
+  });
+
   const stripHtmlForSchema = (html: string) =>
     html
       .replace(/<br\s*\/?>/gi, ' ')
@@ -22,8 +34,8 @@ export default function Commercial() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Commercial Interior Design & Office Fit-Out Singapore",
-    "description": "BCA-registered commercial interior design and office fit-out services in Singapore. Specialising in office interiors, retail spaces, F&B environments, and commercial renovation across Singapore. Based in Woodlands, Singapore.",
+    "name": "Commercial Renovation Singapore | Office Renovation Contractor",
+    "description": "BCA-registered commercial renovation and office renovation services in Singapore. Practical cost guidance, timeline planning, landlord and MCST coordination, SCDF-aware renovation support, office fit-out, retail renovation and F&B renovation.",
     "serviceType": "Commercial Renovation",
     "areaServed": {
       "@type": "City",
@@ -65,24 +77,24 @@ export default function Commercial() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": ['q1','q2','q3','q4','q5','q6'].map(k => ({
+    "mainEntity": commercialFaqs.map((item) => ({
       "@type": "Question",
-      "name": t(`commercial_page.faq.${k}.q`),
-      "acceptedAnswer": { "@type": "Answer", "text": stripHtmlForSchema(t(`commercial_page.faq.${k}.a`)) }
+      "name": item.q,
+      "acceptedAnswer": { "@type": "Answer", "text": stripHtmlForSchema(item.a) }
     }))
   };
 
   return (
     <>
       <Helmet>
-        <title>Commercial Interior Design Singapore | Office Fit-Out | ID Work Studio</title>
+        <title>Commercial Renovation Singapore | Office Renovation Contractor | ID Work Studio</title>
         <meta
           name="description"
-          content="BCA-registered commercial interior design and office fit-out services in Singapore. From offices and retail spaces to F&B environments, ID Work Studio delivers tailored commercial interiors from our Woodlands studio."
+          content="Commercial renovation Singapore guide by ID Work Studio. Office renovation, retail fit-out and F&B renovation cost, timeline, process, landlord approval, MCST and SCDF-aware renovation support."
         />
         <meta
           name="keywords"
-          content="office renovation Singapore, commercial fit-out Singapore, office interior design Singapore, retail fit-out Singapore, F&B renovation Singapore, BCA registered firm Singapore, commercial interior design Singapore, ID Work Studio"
+          content="commercial renovation Singapore, office renovation Singapore, office renovation contractor Singapore, commercial contractor Singapore, retail renovation Singapore, F&B renovation Singapore, commercial fit-out Singapore, BCA registered renovation company Singapore, ID Work Studio"
         />
 
         <meta name="geo.region" content="SG" />
@@ -94,10 +106,10 @@ export default function Commercial() {
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://idworkstudio.com/commercial" />
-        <meta property="og:title" content="Commercial Interior Design Singapore | Office Fit-Out | ID Work Studio" />
+        <meta property="og:title" content="Commercial Renovation Singapore | Office Renovation Contractor | ID Work Studio" />
         <meta
           property="og:description"
-          content="BCA-registered commercial interior design and office fit-out services in Singapore for offices, retail spaces and F&B environments."
+          content="BCA-registered commercial renovation services in Singapore for offices, retail shops and F&B spaces. Includes cost guidance, timeline, approval process and practical contractor advice."
         />
         <meta property="og:image" content="https://idworkstudio.com/WALANDING.jpg" />
         <meta property="og:image:width" content="1200" />
@@ -106,10 +118,10 @@ export default function Commercial() {
         <meta property="og:locale" content="en_SG" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Commercial Interior Design Singapore | Office Fit-Out | ID Work Studio" />
+        <meta name="twitter:title" content="Commercial Renovation Singapore | Office Renovation Contractor | ID Work Studio" />
         <meta
           name="twitter:description"
-          content="BCA-registered commercial interior design and office fit-out services in Singapore. Offices, retail spaces and F&B environments."
+          content="Commercial renovation Singapore guide for offices, retail spaces and F&B environments. Cost, timeline, landlord approval and contractor process."
         />
         <meta name="twitter:image" content="https://idworkstudio.com/WALANDING.jpg" />
 
@@ -181,6 +193,147 @@ export default function Commercial() {
                   {t('commercial_page.hero.cta_reinstatement')}
                 </Link>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20 bg-off-white border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-stretch">
+              <div className="bg-white rounded-2xl p-7 md:p-10 border border-gray-100 shadow-sm">
+                <p className="text-[11px] uppercase tracking-[0.25em] text-gold font-bold mb-4">{t('commercial_page.direct_answer.eyebrow')}</p>
+                <h2 className="text-3xl md:text-4xl font-serif text-charcoal mb-5 leading-tight">{t('commercial_page.direct_answer.title')}</h2>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  <span dangerouslySetInnerHTML={{ __html: t('commercial_page.direct_answer.p1') }} />
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('commercial_page.direct_answer.p2')}
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-3 lg:grid-cols-1 gap-4">
+                {[1, 2, 3].map((n) => {
+                  const item = {
+                    label: t(`commercial_page.direct_answer.cards.${n}.label`),
+                    range: t(`commercial_page.direct_answer.cards.${n}.range`),
+                    note: t(`commercial_page.direct_answer.cards.${n}.note`),
+                  };
+                  return (
+                  <div key={item.label} className="bg-charcoal text-white rounded-2xl p-6 border border-white/10">
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-gold font-bold mb-2">{item.label}</p>
+                    <p className="text-2xl font-serif mb-2">{item.range}</p>
+                    <p className="text-sm text-gray-300 leading-relaxed">{item.note}</p>
+                  </div>
+                );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <h2 className="text-3xl font-serif mb-4 text-charcoal">{t('commercial_page.cost_breakdown.title')}</h2>
+              <div className="w-24 h-1 bg-champagne mx-auto mb-4"></div>
+              <p className="text-gray-500 text-sm max-w-2xl mx-auto">{t('commercial_page.cost_breakdown.subtitle')}</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {[1, 2, 3].map((n) => {
+                const item = {
+                  title: t(`commercial_page.cost_breakdown.items.${n}.title`),
+                  cost: t(`commercial_page.cost_breakdown.items.${n}.cost`),
+                  points: [1, 2, 3].map((point) => t(`commercial_page.cost_breakdown.items.${n}.points.${point}`)),
+                };
+                return (
+                <div key={item.title} className="rounded-2xl border border-gray-100 bg-off-white p-6 hover:border-gold/40 transition-colors">
+                  <h3 className="font-bold text-charcoal text-lg mb-2">{item.title}</h3>
+                  <p className="text-2xl font-serif text-gold mb-4">{item.cost}</p>
+                  <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
+                    {item.points.map((point) => (
+                      <li key={point} className="flex gap-3"><CheckCircle className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" /> <span>{point}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              );
+              })}
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-gold/30 bg-gold/5 p-6 md:p-8">
+              <h3 className="font-serif text-2xl text-charcoal mb-3">{t('commercial_page.cost_breakdown.retail_fnb.title')}</h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span dangerouslySetInnerHTML={{ __html: t('commercial_page.cost_breakdown.retail_fnb.body') }} />
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20 bg-off-white border-y border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div>
+                <h2 className="text-3xl font-serif mb-4 text-charcoal">{t('commercial_page.timeline_guide.title')}</h2>
+                <p className="text-gray-600 leading-relaxed mb-8">{t('commercial_page.timeline_guide.subtitle')}</p>
+                <div className="space-y-4">
+                  {[1, 2, 3].map((n) => {
+                    const item = {
+                      step: `0${n}`,
+                      title: t(`commercial_page.timeline_guide.steps.${n}.title`),
+                      time: t(`commercial_page.timeline_guide.steps.${n}.time`),
+                      desc: t(`commercial_page.timeline_guide.steps.${n}.desc`),
+                    };
+                    return (
+                    <div key={item.step} className="flex gap-5 bg-white rounded-2xl p-5 border border-gray-100">
+                      <div className="w-12 h-12 rounded-full bg-gold text-dark-charcoal flex items-center justify-center font-bold flex-shrink-0">{item.step}</div>
+                      <div>
+                        <div className="flex flex-wrap items-center gap-3 mb-1">
+                          <h3 className="font-bold text-charcoal">{item.title}</h3>
+                          <span className="text-[10px] text-gold uppercase tracking-[0.15em] font-semibold bg-gold/10 px-2 py-0.5 rounded-full">{item.time}</span>
+                        </div>
+                        <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  );
+                  })}
+                </div>
+              </div>
+
+              <div className="bg-charcoal rounded-2xl p-7 md:p-9 text-white self-start">
+                <h3 className="font-serif text-3xl mb-5">{t('commercial_page.timeline_guide.approval_title')}</h3>
+                <div className="space-y-4 text-sm text-gray-300 leading-relaxed">
+                  {[1, 2, 3, 4, 5].map((n) => {
+                    const item = t(`commercial_page.timeline_guide.approval_items.${n}`);
+                    return (
+                    <div key={item} className="flex gap-3"><FileCheck className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" /> <span>{item}</span></div>
+                  );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.25em] text-gold font-bold mb-4">{t('commercial_page.content_cluster.eyebrow')}</p>
+                <h2 className="text-3xl font-serif mb-4 text-charcoal">{t('commercial_page.content_cluster.title')}</h2>
+                <p className="text-gray-600 leading-relaxed">{t('commercial_page.content_cluster.body')}</p>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Link to="/insights/commercial-renovation-cost-singapore" className="group rounded-2xl border border-gray-100 bg-off-white p-6 hover:border-gold/40 transition-colors">
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-gold font-bold mb-2">{t('commercial_page.content_cluster.cost_card.eyebrow')}</p>
+                  <h3 className="font-bold text-charcoal mb-2 group-hover:text-gold transition-colors">{t('commercial_page.content_cluster.cost_card.title')}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{t('commercial_page.content_cluster.cost_card.desc')}</p>
+                </Link>
+                <Link to="/insights/office-renovation-timeline-singapore" className="group rounded-2xl border border-gray-100 bg-off-white p-6 hover:border-gold/40 transition-colors">
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-gold font-bold mb-2">{t('commercial_page.content_cluster.timeline_card.eyebrow')}</p>
+                  <h3 className="font-bold text-charcoal mb-2 group-hover:text-gold transition-colors">{t('commercial_page.content_cluster.timeline_card.title')}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{t('commercial_page.content_cluster.timeline_card.desc')}</p>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -370,29 +523,25 @@ export default function Commercial() {
         </section>
 
         <section className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-serif mb-12 text-center text-charcoal">{t('commercial_page.faq.title')}</h2>
-            <div className="space-y-5">
-              {[
-                { n:"q1", icon:<Clock className="w-5 h-5 text-champagne flex-shrink-0 mt-0.5" /> },
-                { n:"q2", icon:<ShieldCheck className="w-5 h-5 text-champagne flex-shrink-0 mt-0.5" /> },
-                { n:"q3", icon:<Building2 className="w-5 h-5 text-champagne flex-shrink-0 mt-0.5" /> },
-                { n:"q4", icon:<FileCheck className="w-5 h-5 text-champagne flex-shrink-0 mt-0.5" /> },
-                { n:"q5", icon:<HardHat className="w-5 h-5 text-champagne flex-shrink-0 mt-0.5" /> },
-                { n:"q6", icon:<CheckCircle className="w-5 h-5 text-champagne flex-shrink-0 mt-0.5" /> },
-              ].map(({ n, icon }) => (
-                <div key={n} className="bg-off-white p-6 rounded-xl border border-gray-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-serif mb-4 text-charcoal">{t('commercial_page.faq.title')}</h2>
+              <div className="w-24 h-1 bg-champagne mx-auto mb-4"></div>
+              <p className="text-gray-500 text-sm max-w-2xl mx-auto">{t('commercial_page.faq.subtitle')}</p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-2">
+              {commercialFaqs.map((item) => (
+                <div key={item.q} className="bg-off-white p-6 rounded-xl border border-gray-100">
                   <h3 className="font-bold text-charcoal mb-2 flex items-start gap-3 text-sm md:text-base">
-                    {icon}
-                    {t(`commercial_page.faq.${n}.q`)}
+                    {item.icon}
+                    {item.q}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed pl-8 text-sm" dangerouslySetInnerHTML={{ __html: t(`commercial_page.faq.${n}.a`) }} />
+                  <p className="text-gray-600 leading-relaxed pl-8 text-sm">{item.a}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         <section className="py-24 bg-white border-t border-gray-100 relative overflow-hidden">
           <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.02]"
                style={{ backgroundImage: 'linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)', backgroundSize: '40px 40px' }}>

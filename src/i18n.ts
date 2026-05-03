@@ -559,6 +559,86 @@ const resources = {
           "cta": "Book a Site Survey",
           "cta_reinstatement": "Explore Reinstatement Services"
         },
+        "direct_answer": {
+          "eyebrow": "Direct answer for Singapore business owners",
+          "title": "Commercial renovation in Singapore: cost, timeline and approvals",
+          "p1": "Commercial renovation in Singapore typically costs <strong>$30 to $180 psf for offices</strong>, <strong>$80 to $150 psf for retail shops</strong>, and <strong>$120 to $250 psf for F&B outlets</strong>. Most projects take <strong>6 to 12 weeks</strong> including design, landlord or MCST approval, authority checks and renovation works.",
+          "p2": "The main difference from residential renovation is compliance. Commercial projects may involve landlord fitting-out rules, MCST requirements, fire safety checks, exhaust requirements, working-hour restrictions and reinstatement obligations at lease end.",
+          "cards": {
+            "1": { "label": "Office renovation", "range": "$30 – $180 psf", "note": "Basic office refresh to premium fit-out" },
+            "2": { "label": "Retail renovation", "range": "$80 – $150 psf", "note": "Shopfront, lighting, display and storage works" },
+            "3": { "label": "F&B renovation", "range": "$120 – $250 psf", "note": "Kitchen, exhaust, plumbing and fire safety factors" }
+          }
+        },
+        "cost_breakdown": {
+          "title": "Commercial renovation cost breakdown in Singapore",
+          "subtitle": "Use these as practical planning ranges before a site visit. A confirmed quotation still needs floor plan review, site measurement, building rules and material selection.",
+          "items": {
+            "1": {
+              "title": "Basic office fit-out",
+              "cost": "$30 – $60 psf",
+              "points": {
+                "1": "Paint, simple flooring and loose furniture coordination",
+                "2": "Basic electrical and lighting points",
+                "3": "Suitable for small offices with limited built-in works"
+              }
+            },
+            "2": {
+              "title": "Mid-range office renovation",
+              "cost": "$60 – $100 psf",
+              "points": {
+                "1": "Meeting rooms, pantry and manager rooms",
+                "2": "Carpet/vinyl, ceiling, lighting and data works",
+                "3": "Glass partitions and practical carpentry"
+              }
+            },
+            "3": {
+              "title": "Premium commercial fit-out",
+              "cost": "$100 – $180 psf",
+              "points": {
+                "1": "Custom reception, feature walls and acoustic rooms",
+                "2": "Higher-grade finishes and more M&E coordination",
+                "3": "Best for client-facing offices and brand-led spaces"
+              }
+            }
+          },
+          "retail_fnb": {
+            "title": "Retail and F&B usually need a higher budget",
+            "body": "Retail spaces usually need stronger lighting, display fixtures, shopfront works and landlord design compliance. F&B spaces are more demanding because of kitchen equipment coordination, exhaust, grease trap, waterproofing, plumbing, fire safety and cleaning access. This is why F&B renovation can reach <strong>$120 to $250 psf</strong> even before equipment cost is fully confirmed."
+          }
+        },
+        "timeline_guide": {
+          "title": "Typical commercial renovation timeline",
+          "subtitle": "For most Singapore commercial projects, a realistic timeline is 6 to 12 weeks. The approval stage is usually where delays happen, especially when landlord, MCST, SCDF or building management comments require drawing revisions.",
+          "steps": {
+            "1": { "title": "Design and planning", "time": "2 – 3 weeks", "desc": "Site visit, layout planning, design direction, budget alignment and material direction." },
+            "2": { "title": "Landlord / MCST / authority submission", "time": "2 – 4 weeks", "desc": "Submission of drawings, contractor documents, insurance, method statements and fire-safety-related checks where needed." },
+            "3": { "title": "Renovation works and handover", "time": "4 – 8 weeks", "desc": "Protection, demolition, M&E, ceiling, flooring, carpentry, painting, cleaning and final handover." }
+          },
+          "approval_title": "Common commercial approval items",
+          "approval_items": {
+            "1": "Landlord or building management fitting-out permit",
+            "2": "MCST approval for strata-titled commercial units",
+            "3": "SCDF checks if fire safety, sprinkler, alarm or exit route is affected",
+            "4": "Work-at-height, noisy-work and after-hours work restrictions",
+            "5": "Public liability insurance, renovation deposit and protection requirements"
+          }
+        },
+        "content_cluster": {
+          "eyebrow": "Commercial content cluster",
+          "title": "Helpful guides before you renovate",
+          "body": "Commercial renovation has more approval and lease-risk considerations than residential work. These guides explain cost and timeline in more detail before you speak to a contractor.",
+          "cost_card": {
+            "eyebrow": "Cost guide",
+            "title": "Commercial Renovation Cost Singapore",
+            "desc": "Read the detailed commercial cost guide for offices, retail units and F&B spaces."
+          },
+          "timeline_card": {
+            "eyebrow": "Timeline guide",
+            "title": "Office Renovation Timeline Singapore",
+            "desc": "Understand planning, approval, site works and handover sequencing."
+          }
+        },
         "solutions": {
           "title": "Commercial Renovation Solutions",
           "items": {
@@ -623,30 +703,55 @@ const resources = {
           }
         },
         "faq": {
-          "title": "Frequently Asked Questions",
+          "title": "Commercial renovation Singapore FAQ",
+          "subtitle": "Practical answers for office, retail and F&B renovation in Singapore, including cost, timeline, landlord approval, MCST and SCDF considerations.",
           "q1": {
-            "q": "What is the average timeline for an office fit-out in Singapore?",
-            "a": "For a standard office fit-out in Singapore (approx. 2,000 - 5,000 sqft), the timeline typically ranges from <strong>4 to 8 weeks</strong>. This includes 1-2 weeks for design and material selection, 1-2 weeks for BCA/Fire Safety submissions, and 4-6 weeks for renovation works. Complex projects requiring extensive M&E works or structural changes may take 8-12 weeks."
+            "q": "How much does commercial renovation cost in Singapore?",
+            "a": "Commercial renovation in Singapore typically costs $30 to $180 psf for offices, $80 to $150 psf for retail shops, and $120 to $250 psf for F&B outlets. The final range is mainly affected by M&E works, fire safety requirements, carpentry, flooring, ceiling works and landlord reinstatement conditions."
           },
           "q2": {
-            "q": "How does a BCA-registered firm ensure commercial safety compliance?",
-            "a": "As a BCA-registered firm, we ensure compliance through a rigorous 3-step process:<br/><br/>1. <strong>Pre-Submission Checks:</strong> Our Qualified Persons (QP) review all designs against current SCDF Fire Code and BCA accessibility standards.<br/>2. <strong>Permit Management:</strong> We handle all necessary submissions to BCA, URA, and FSSD before work commences.<br/>3. <strong>Site Supervision:</strong> Licensed CoreTrade personnel supervise critical works to ensure they meet approved specifications and safety regulations."
+            "q": "How much does office renovation cost in Singapore?",
+            "a": "A basic office renovation usually starts from $30 to $60 psf. A mid-range office with meeting rooms, pantry, flooring, ceiling and electrical works is usually $60 to $100 psf. Premium office fit-outs with feature walls, acoustic rooms, customised carpentry and higher-grade finishes can reach $100 to $180 psf."
           },
           "q3": {
-            "q": "What are the permit requirements for commercial renovation in Singapore?",
-            "a": "Commercial renovation in Singapore typically requires submissions to multiple authorities depending on scope: <strong>BCA</strong> for structural works, <strong>SCDF</strong> for fire safety modifications (sprinklers, fire doors, emergency lighting), <strong>URA</strong> for change of use, and <strong>MCST</strong> for mall or office tower fit-outs. As a BCA-registered firm, we manage all submissions in-house to keep your project on schedule."
+            "q": "How long does commercial renovation usually take?",
+            "a": "Most commercial renovation projects take 6 to 12 weeks. Design and planning usually takes 2 to 3 weeks, landlord or MCST submission takes 2 to 4 weeks, and actual renovation works usually take 4 to 8 weeks depending on project size and approval conditions."
           },
           "q4": {
-            "q": "How much does a commercial renovation cost in Singapore?",
-            "a": "Commercial renovation costs in Singapore vary by space type and fit-out level:<br/><br/>• <strong>Office renovation:</strong> S$50–S$180 per sqft<br/>• <strong>Retail / mall fit-out:</strong> S$65–S$150 per sqft<br/>• <strong>F&B / shophouse:</strong> S$80–S$200 per sqft<br/>• <strong>Office reinstatement:</strong> S$8–S$25 per sqft<br/><br/>These ranges cover M&E works, false ceilings, partitioning, flooring, joinery, and permit fees. Request a free itemised quotation for your specific project."
+            "q": "Do I need landlord or MCST approval before renovation?",
+            "a": "Yes. Most offices, retail units, clinics, gyms and F&B spaces require landlord, building management or MCST approval before renovation starts. Drawings, method statements, insurance documents and contractor details may be required before work permits are issued."
           },
           "q5": {
-            "q": "What is the difference between office reinstatement and renovation?",
-            "a": "Office <strong>renovation</strong> involves fitting out a space to your requirements — partitions, flooring, ceilings, M&E, and joinery. Office <strong>reinstatement</strong> is the reverse process: stripping a space back to its original bare-shell condition as required by your lease agreement at the end of tenancy. Reinstatement typically includes demolition of all tenant-installed works, restoration of original flooring and walls, and relocation of fire safety systems back to their original positions."
+            "q": "Does commercial renovation need SCDF submission?",
+            "a": "SCDF submission may be required if the renovation affects fire-rated partitions, sprinkler points, fire alarm systems, exit routes, emergency lighting, occupancy load or F&B exhaust systems. Simple office refresh works may not need SCDF submission, but this should be checked before work starts."
           },
           "q6": {
-            "q": "How do I choose the right commercial renovation firm in Singapore?",
-            "a": "Key criteria when selecting a commercial renovation contractor in Singapore:<br/><br/>1. <strong>BCA Registration:</strong> Verify the firm is listed on the BCA Directory when structural works are involved.<br/>2. <strong>Track Record:</strong> Ask for references and photos of completed commercial projects of similar scope.<br/>3. <strong>In-house Permit Management:</strong> Choose a firm that handles MCST, BCA and SCDF submissions in-house rather than outsourcing.<br/>4. <strong>Fixed-Price Contract:</strong> Avoid firms that provide vague quotations without full itemisation.<br/>5. <strong>Insurance:</strong> Ensure the firm carries Public Liability Insurance and Work Injury Compensation coverage."
+            "q": "Can office renovation be done after office hours?",
+            "a": "Yes, but it depends on the building rules. Many commercial buildings only allow noisy works after office hours or during approved time windows. Hacking, drilling and delivery timing must follow landlord, MCST or building management requirements."
+          },
+          "q7": {
+            "q": "What affects commercial renovation cost the most?",
+            "a": "The biggest cost drivers are electrical and data points, air-conditioning changes, ceiling works, fire safety compliance, flooring, carpentry, glass partitions, pantry works, plumbing and whether reinstatement is required at the end of the lease."
+          },
+          "q8": {
+            "q": "What is office reinstatement in Singapore?",
+            "a": "Office reinstatement means returning the unit to the landlord's original handover condition before lease exit. It may include removing partitions, flooring, ceiling, wiring, signage, carpentry and making good affected surfaces according to the tenancy agreement."
+          },
+          "q9": {
+            "q": "Is retail renovation more expensive than office renovation?",
+            "a": "Retail renovation is often higher than a basic office because shopfront, lighting, display fixtures, signage, customer flow, storage and landlord design guidelines are more involved. Typical retail renovation in Singapore ranges from $80 to $150 psf."
+          },
+          "q10": {
+            "q": "Why is F&B renovation usually more expensive?",
+            "a": "F&B renovation usually costs more because of exhaust, grease trap, plumbing, waterproofing, kitchen equipment coordination, fire safety, pest control requirements and stricter authority or landlord conditions. A practical F&B budget is usually $120 to $250 psf."
+          },
+          "q11": {
+            "q": "What should I prepare before requesting a commercial renovation quotation?",
+            "a": "Prepare the floor plan, unit size, tenancy agreement or landlord fitting-out guide, preferred handover date, rough layout requirements, headcount, pantry needs, meeting room count and any existing reinstatement conditions. These details make the quotation more accurate."
+          },
+          "q12": {
+            "q": "Can ID Work Studio handle both design and renovation works?",
+            "a": "Yes. ID Work Studio can support layout planning, design coordination, renovation works, site coordination and commercial handover. For commercial projects, we also coordinate practical site requirements such as access timing, protection works and building management submissions."
           }
         },
         "subpages": {
@@ -1352,6 +1457,86 @@ const resources = {
           "cta": "预约现场勘察",
           "cta_reinstatement": "了解更多原状修复服务"
         },
+        "direct_answer": {
+          "eyebrow": "给新加坡商业业主的直接答案",
+          "title": "新加坡商业翻新：费用、时间表与审批",
+          "p1": "新加坡商业翻新通常为：<strong>办公室每平方英尺 $30 至 $180</strong>、<strong>零售店每平方英尺 $80 至 $150</strong>、<strong>餐饮空间每平方英尺 $120 至 $250</strong>。多数项目连同设计、业主或 MCST 审批、相关检查与施工，通常需要 <strong>6 至 12 周</strong>。",
+          "p2": "商业翻新与住宅翻新的主要差别在于合规要求。商业项目可能涉及业主装修指南、MCST 要求、消防安全检查、排气系统、施工时段限制，以及租约结束时的原状修复责任。",
+          "cards": {
+            "1": { "label": "办公室翻新", "range": "$30 – $180 / 平方英尺", "note": "从基础办公室更新到高级办公室装修" },
+            "2": { "label": "零售店翻新", "range": "$80 – $150 / 平方英尺", "note": "店面、灯光、陈列与储物工程" },
+            "3": { "label": "餐饮空间翻新", "range": "$120 – $250 / 平方英尺", "note": "厨房、排气、给排水与消防安全因素" }
+          }
+        },
+        "cost_breakdown": {
+          "title": "新加坡商业翻新费用 breakdown",
+          "subtitle": "以下可作为现场勘察前的实际预算参考。正式报价仍需查看平面图、现场尺寸、大厦规定与材料选择。",
+          "items": {
+            "1": {
+              "title": "基础办公室装修",
+              "cost": "$30 – $60 / 平方英尺",
+              "points": {
+                "1": "油漆、简单地面与活动家具协调",
+                "2": "基础电位与灯位工程",
+                "3": "适合木作较少的小型办公室"
+              }
+            },
+            "2": {
+              "title": "中档办公室翻新",
+              "cost": "$60 – $100 / 平方英尺",
+              "points": {
+                "1": "会议室、茶水间与经理房",
+                "2": "地毯/乙烯基地板、天花、灯光与网络点",
+                "3": "玻璃隔间与实用木作"
+              }
+            },
+            "3": {
+              "title": "高级商业装修",
+              "cost": "$100 – $180 / 平方英尺",
+              "points": {
+                "1": "定制接待区、特色墙与隔音房",
+                "2": "更高等级饰面与更多机电协调",
+                "3": "适合客户接待型办公室与品牌导向空间"
+              }
+            }
+          },
+          "retail_fnb": {
+            "title": "零售与餐饮通常需要更高预算",
+            "body": "零售空间通常需要更强的灯光、展示道具、店面工程与业主设计规范配合。餐饮空间要求更高，因为涉及厨房设备协调、排气、隔油池、防水、给排水、消防安全与清洁通道。因此餐饮翻新即使设备费用尚未完全确认，也可能达到 <strong>$120 至 $250 / 平方英尺</strong>。"
+          }
+        },
+        "timeline_guide": {
+          "title": "常见商业翻新时间表",
+          "subtitle": "新加坡多数商业项目较实际的时间为 6 至 12 周。审批阶段通常最容易延误，尤其当业主、MCST、SCDF 或大厦管理方要求修改图纸时。",
+          "steps": {
+            "1": { "title": "设计与规划", "time": "2 – 3 周", "desc": "现场勘察、布局规划、设计方向、预算确认与材料方向。" },
+            "2": { "title": "业主 / MCST / 相关单位提交", "time": "2 – 4 周", "desc": "提交图纸、承包商文件、保险、施工方法说明，以及必要的消防安全相关检查。" },
+            "3": { "title": "翻新施工与交付", "time": "4 – 8 周", "desc": "现场保护、拆除、机电、天花、地面、木作、油漆、清洁与最终交付。" }
+          },
+          "approval_title": "常见商业审批项目",
+          "approval_items": {
+            "1": "业主或大厦管理方装修许可证",
+            "2": "分层商业单位的 MCST 批准",
+            "3": "若影响消防、喷淋、警报或逃生路线，需进行 SCDF 检查",
+            "4": "高空作业、噪音工程与非办公时段施工限制",
+            "5": "公共责任保险、装修押金与现场保护要求"
+          }
+        },
+        "content_cluster": {
+          "eyebrow": "商业内容主题群",
+          "title": "装修前可先阅读的实用指南",
+          "body": "商业翻新比住宅工程涉及更多审批与租约风险。这些指南会在您联系承包商前，更详细说明费用与时间表。",
+          "cost_card": {
+            "eyebrow": "费用指南",
+            "title": "新加坡商业翻新费用",
+            "desc": "查看办公室、零售单位与餐饮空间的详细商业翻新费用指南。"
+          },
+          "timeline_card": {
+            "eyebrow": "时间表指南",
+            "title": "新加坡办公室翻新时间表",
+            "desc": "了解规划、审批、现场施工与交付安排。"
+          }
+        },
         "solutions": {
           "title": "商业翻新解决方案",
           "items": {
@@ -1416,30 +1601,55 @@ const resources = {
           }
         },
         "faq": {
-          "title": "常见问题",
+          "title": "新加坡商业翻新常见问题",
+          "subtitle": "针对办公室、零售与餐饮翻新的实用解答，包括费用、时间、业主审批、MCST 与 SCDF 注意事项。",
           "q1": {
-            "q": "新加坡办公室装修一般需要多久？",
-            "a": "标准办公室装修（约 2,000–5,000 平方英尺）通常需要 <strong>4 到 8 周</strong>。其中包括 1–2 周设计与选材、1–2 周 BCA / 消防安全报批，以及 4–6 周施工时间。若涉及大量机电工程或结构改动，整体时间可能延长至 8–12 周。"
+            "q": "新加坡商业翻新费用大概是多少？",
+            "a": "新加坡商业翻新通常为办公室每平方英尺 $30 至 $180，零售店每平方英尺 $80 至 $150，餐饮空间每平方英尺 $120 至 $250。最终费用主要受机电工程、消防安全要求、木作、地面、天花工程及租约原状修复条件影响。"
           },
           "q2": {
-            "q": "BCA 注册公司如何确保商业项目的安全合规？",
-            "a": "作为 BCA 注册公司，我们通常通过三步确保合规：<br/><br/>1. <strong>报批前检查：</strong>由合格人员（QP）审查设计是否符合现行 SCDF 消防规范与 BCA 无障碍标准。<br/>2. <strong>许可证管理：</strong>在开工前处理所需的 BCA、URA 与 FSSD 相关报批。<br/>3. <strong>现场监督：</strong>由持牌 CoreTrade 人员监督关键工序，确保与已批准方案及安全法规一致。"
+            "q": "新加坡办公室翻新费用大概是多少？",
+            "a": "基础办公室翻新通常从每平方英尺 $30 至 $60 起。包含会议室、茶水间、地面、天花与电位工程的中档办公室通常为每平方英尺 $60 至 $100。若涉及特色墙、隔音房、定制木作与较高等级饰面，高级办公室装修可达每平方英尺 $100 至 $180。"
           },
           "q3": {
-            "q": "新加坡商业翻新通常需要哪些许可证？",
-            "a": "商业翻新通常需按工程范围向不同单位提交申请：<strong>BCA</strong> 负责结构工程，<strong>SCDF</strong> 负责消防安全更改（如喷淋、防火门、应急照明），<strong>URA</strong> 负责用途变更，而商场或办公楼装修常涉及 <strong>MCST</strong>。作为 BCA 注册公司，我们可内部统筹相关报批流程，帮助项目更有序推进。"
+            "q": "商业翻新通常需要多久？",
+            "a": "多数商业翻新项目需要 6 至 12 周。设计与规划通常需 2 至 3 周，业主或 MCST 提交通常需 2 至 4 周，实际施工通常需 4 至 8 周，视项目大小与审批条件而定。"
           },
           "q4": {
-            "q": "新加坡商业翻新费用大概是多少？",
-            "a": "商业翻新费用会因空间类型及装修标准而异：<br/><br/>• <strong>办公室翻新：</strong>每平方英尺 S$50–S$180<br/>• <strong>零售 / 商场店铺装修：</strong>每平方英尺 S$65–S$150<br/>• <strong>餐饮 / 店屋：</strong>每平方英尺 S$80–S$200<br/>• <strong>办公室原状修复：</strong>每平方英尺 S$8–S$25<br/><br/>以上通常涵盖机电工程、天花、隔间、地面、木作及许可证费用。"
+            "q": "装修前是否需要业主或 MCST 批准？",
+            "a": "需要。多数办公室、零售单位、诊所、健身房与餐饮空间在开工前都需要业主、大厦管理方或 MCST 批准。开工许可证通常需要提交图纸、施工方法说明、保险文件与承包商资料。"
           },
           "q5": {
-            "q": "办公室原状修复与翻新有什么不同？",
-            "a": "办公室<strong>翻新</strong>是根据您的营运需求打造空间，包括隔间、地板、天花、机电及木作工程。办公室<strong>原状修复</strong>则是在租约结束时，将空间恢复至原始清水房状态。通常包括拆除租户加装项目、恢复原有墙地面，并将消防系统移回原位。"
+            "q": "商业翻新是否需要 SCDF 提交？",
+            "a": "如翻新影响防火隔间、喷淋点、火警系统、逃生路线、应急照明、容纳人数或餐饮排气系统，可能需要 SCDF 提交。简单办公室更新未必需要 SCDF 提交，但开工前应先确认。"
           },
           "q6": {
-            "q": "如何在新加坡选择合适的商业翻新公司？",
-            "a": "选择商业翻新公司时，可重点留意：<br/><br/>1. <strong>BCA 注册：</strong>如涉及结构工程，应先确认公司是否列入 BCA 名录。<br/>2. <strong>项目经验：</strong>查看是否有类似规模商业项目的案例与照片。<br/>3. <strong>内部报批能力：</strong>优先考虑可内部处理 MCST、BCA 与 SCDF 流程的团队。<br/>4. <strong>固定价格与明细报价：</strong>避免仅提供模糊总价而缺乏分项说明。<br/>5. <strong>保险保障：</strong>确认具备公共责任险与工伤赔偿保险。"
+            "q": "办公室翻新可以在办公时间后施工吗？",
+            "a": "可以，但需视大厦规定而定。许多商业大厦只允许噪音工程在办公时间后或指定时段进行。拆除、钻孔与材料运输时间都必须符合业主、MCST 或大厦管理方要求。"
+          },
+          "q7": {
+            "q": "哪些项目最影响商业翻新费用？",
+            "a": "主要费用因素包括电位与网络点、冷气改动、天花工程、消防安全合规、地面、木作、玻璃隔间、茶水间工程、给排水，以及租约结束时是否需要原状修复。"
+          },
+          "q8": {
+            "q": "新加坡办公室原状修复是什么？",
+            "a": "办公室原状修复是指在租约结束前，将单位恢复至业主原始交付状态。通常包括拆除隔间、地面、天花、线路、招牌、木作，并按租约要求修补受影响表面。"
+          },
+          "q9": {
+            "q": "零售店翻新是否比办公室翻新更贵？",
+            "a": "零售店翻新通常比基础办公室更高，因为涉及店面、灯光、展示道具、招牌、顾客动线、储物空间与业主设计规范。新加坡零售翻新通常为每平方英尺 $80 至 $150。"
+          },
+          "q10": {
+            "q": "为什么餐饮翻新通常更贵？",
+            "a": "餐饮翻新通常更贵，因为涉及排气、隔油池、给排水、防水、厨房设备协调、消防安全、虫害防治要求，以及更严格的相关单位或业主条件。实际餐饮预算通常为每平方英尺 $120 至 $250。"
+          },
+          "q11": {
+            "q": "申请商业翻新报价前应准备什么？",
+            "a": "建议准备平面图、单位面积、租约或业主装修指南、目标交付日期、初步布局需求、员工人数、茶水间需求、会议室数量，以及现有原状修复条件。这些资料可让报价更准确。"
+          },
+          "q12": {
+            "q": "ID Work Studio 是否能同时处理设计与装修工程？",
+            "a": "可以。ID Work Studio 可协助布局规划、设计协调、装修施工、现场协调与商业空间交付。商业项目中，我们也会协调进场时间、现场保护与大厦管理提交等实际要求。"
           }
         },
         "subpages": {
@@ -2068,7 +2278,7 @@ enT["insights_page"] = {
   listing: {
     eyebrow: "Featured Articles",
     title: "Current Perspectives",
-    subtitle: "Four high-impact articles to anchor your authority in Singapore renovation search and future AI citations.",
+    subtitle: "Five high-impact articles to anchor your authority in Singapore renovation search and future AI citations.",
     read_more: "Read Article"
   },
   articles: {
@@ -2095,6 +2305,12 @@ enT["insights_page"] = {
       title: "Commercial Renovation Cost Singapore (2026 Guide)",
       excerpt: "Real contractor pricing for office, retail, F&B and industrial renovation in Singapore — including permits, timeline, hidden costs and common site mistakes.",
       read_time: "9 min read"
+    },
+    "5": {
+      category: "Office Cost Guide",
+      title: "Office Renovation Cost Singapore (2026 Guide)",
+      excerpt: "A practical office fit-out cost guide for Singapore businesses, covering budget by office size, M&E, data points, partitions, landlord approvals and reinstatement planning.",
+      read_time: "8 min read"
     }
   },
   footer_block: {
@@ -2140,7 +2356,7 @@ zhT["insights_page"] = {
   listing: {
     eyebrow: "精选文章",
     title: "当前观点",
-    subtitle: "四篇高影响力文章，帮助建立您在新加坡翻新搜索与未来 AI 引用中的专业地位。",
+    subtitle: "五篇高影响力文章，帮助建立您在新加坡翻新搜索与未来 AI 引用中的专业地位。",
     read_more: "阅读全文"
   },
   articles: {
@@ -2167,6 +2383,12 @@ zhT["insights_page"] = {
       title: "新加坡商业翻新费用（2026 指南）",
       excerpt: "以承包商角度说明新加坡办公室、零售、餐饮与工业空间翻新费用，包括许可证、工期、隐藏成本与常见现场问题。",
       read_time: "约 9 分钟"
+    },
+    "5": {
+      category: "办公室费用指南",
+      title: "新加坡办公室翻新费用（2026 指南）",
+      excerpt: "为新加坡企业整理办公室装修与 fit-out 预算，涵盖不同面积、机电工程、数据点、隔断、大厦审批及恢复原状规划。",
+      read_time: "约 8 分钟"
     }
   },
   footer_block: {
@@ -2193,6 +2415,154 @@ zhT["article_common"] = {
   continue_reading: "继续阅读",
   back_to_start: "返回起点",
   read_article: "阅读文章"
+};
+
+enT["article_office_renovation_cost"] = {
+  meta: {
+    title: "Office Renovation Cost Singapore (2026 Guide) | ID Work Studio",
+    description: "A practical Singapore office renovation cost guide by office size, with fit-out cost ranges, M&E, data cabling, landlord approval, timeline, mistakes and FAQ."
+  },
+  hero_badge: "Office Cost Guide",
+  title: "Office Renovation Cost Singapore (2026 Guide)",
+  subtitle: "A practical contractor guide for Singapore businesses planning an office fit-out, covering real budget ranges by office size, key cost drivers, approvals, timeline and mistakes to avoid.",
+  read_time: "8 min read",
+  intro: "Office renovation in Singapore is different from a general commercial renovation because most of the cost is shaped by workstation planning, meeting rooms, data points, power loading, air-conditioning coordination, glass partitions, landlord rules and reinstatement obligations. A useful budget must look at how the office will actually operate, not only the floor area.",
+  direct_answer: {
+    title: "How much does office renovation cost in Singapore?",
+    body: "Office renovation in Singapore typically costs $50 to $80 psf for a basic fit-out, $80 to $130 psf for a mid-range office, and $130 to $200+ psf for a premium or Grade A office. A 1,000 sqft office commonly budgets around $50,000 to $120,000, while a 3,000 sqft SME office can range from $180,000 to $390,000 depending on partitions, electrical/data points, meeting rooms and air-conditioning work."
+  },
+  sections: {
+    cost_by_size_title: "Office renovation cost by office size",
+    cost_by_size_intro: "These are practical Singapore budget ranges for planning before a site visit and detailed measurement.",
+    size_rows: {
+      "1": ["800–1,200 sqft small office", "$40,000 – $120,000", "Suitable for startups, small teams and simple open-plan layouts with limited enclosed rooms."],
+      "2": ["1,500–3,000 sqft SME office", "$120,000 – $390,000", "Common for growing teams with meeting rooms, pantry, storage, manager rooms and more data/power points."],
+      "3": ["3,000–5,000 sqft office", "$300,000 – $750,000", "Usually includes more M&E coordination, glass partitions, acoustic rooms, feature reception and staged handover planning."],
+      "4": ["5,000 sqft+ corporate office", "$650,000 – $1.5M+", "Premium finishes, workplace strategy, boardrooms, collaboration zones, phone booths and tighter landlord/compliance requirements."]
+    },
+    psf_title: "Office fit-out cost per square foot",
+    psf_rows: {
+      "1": ["Basic office fit-out", "$50 – $80 psf", "Open-plan layout, simple flooring, basic lighting, limited carpentry and standard electrical works."],
+      "2": ["Mid-range office fit-out", "$80 – $130 psf", "More meeting rooms, glass partitions, pantry, feature walls, better lighting and more electrical/data points."],
+      "3": ["Premium office fit-out", "$130 – $200+ psf", "Grade A finishes, acoustic treatment, custom carpentry, boardroom, advanced M&E and stronger branding details."]
+    },
+    cost_drivers_title: "What affects office renovation cost?",
+    cost_drivers: {
+      "1": { title: "1. Layout and number of enclosed rooms", body: "Open-plan offices are cheaper than layouts with many meeting rooms, manager rooms, phone booths and focus rooms. Every enclosed room adds partitions, doors, lighting, air-conditioning coordination, power points and sometimes acoustic treatment." },
+      "2": { title: "2. Electrical and data points", body: "Office renovation cost rises quickly when the project needs many workstation power points, data points, server points, floor boxes, UPS planning or higher electrical loading. This is one of the most commonly underestimated items." },
+      "3": { title: "3. Glass partitions and acoustic rooms", body: "Glass meeting rooms improve light and openness, but cost more than basic drywall partitions. Acoustic glass, double-glazed systems and special door hardware increase the budget further." },
+      "4": { title: "4. Air-conditioning modification", body: "Office layouts often require aircon diffuser relocation, return air coordination, thermostat changes or additional FCU planning. These works must follow building rules and can affect both cost and timeline." },
+      "5": { title: "5. Landlord, MCST and SCDF requirements", body: "Most commercial buildings require submission before work starts. If fire safety systems, exit routes, sprinklers or fire-rated partitions are affected, SCDF-related review may be needed. Delays in approval can affect handover dates." },
+      "6": { title: "6. Reinstatement planning", body: "Tenants should plan reinstatement from the start. Some design choices look attractive now but become expensive to remove at lease end. This is especially important for partitions, flooring, ceiling changes and built-in carpentry." }
+    },
+    timeline_title: "Typical office renovation timeline in Singapore",
+    timeline_rows: {
+      "1": ["Design and space planning", "2–3 weeks", "Confirm headcount, layout, meeting rooms, pantry, reception and operational needs."],
+      "2": ["Landlord / MCST / building submission", "2–4 weeks", "Prepare drawings, method statements, insurance documents and renovation schedules."],
+      "3": ["Site renovation works", "4–8 weeks", "Hacking, partitions, M&E, ceiling, flooring, carpentry, painting, cleaning and handover."],
+      "4": ["Defects and move-in coordination", "1–2 weeks", "Final touch-ups, furniture coordination, IT setup and staff move-in planning."]
+    },
+    mistakes_title: "Common office renovation budget mistakes",
+    mistakes: {
+      "1": "Signing the lease before checking power supply, air-conditioning capacity, floor loading and landlord renovation rules.",
+      "2": "Budgeting only for design finishes while underestimating electrical, data cabling, fire safety and air-conditioning works.",
+      "3": "Forgetting reinstatement cost at the end of lease.",
+      "4": "Assuming all works can be done during office hours when the building may require noisy works after hours.",
+      "5": "Buying loose furniture before confirming workstation spacing, power access and circulation clearance."
+    },
+    cta_title: "Planning an office renovation?",
+    cta_body: "Send us your floor plan, current site photos, headcount and preferred move-in date. ID Work Studio can review the practical scope and prepare an itemised office renovation quote based on your actual site conditions.",
+    cta_button: "WhatsApp for Office Renovation Quote"
+  },
+  faq: {
+    title: "Office renovation cost FAQ",
+    items: {
+      "1": { q: "How much does a 1,000 sqft office renovation cost in Singapore?", a: "A 1,000 sqft office renovation commonly costs around $50,000 to $120,000. A simple open-plan office may stay closer to the lower range, while a layout with meeting rooms, pantry, glass partitions and more M&E points will cost more." },
+      "2": { q: "How much should I budget per employee for office renovation?", a: "For early planning, many Singapore offices can budget roughly $6,000 to $15,000 per employee depending on workstation density, room requirements, M&E complexity and furniture specification." },
+      "3": { q: "Why are office electrical and data works so expensive?", a: "Each workstation may need power, data, cable routing and sometimes floor boxes. Meeting rooms need AV points, lighting control, power, data and sometimes acoustic or conferencing infrastructure. These items add up quickly." },
+      "4": { q: "Do I need landlord or MCST approval for office renovation?", a: "Yes. Most Singapore office buildings require landlord, building management or MCST approval before work starts. The submission usually includes layout drawings, work schedule, contractor insurance and method statements." },
+      "5": { q: "Does office renovation need SCDF submission?", a: "SCDF submission may be required if the work affects fire safety systems, exit routes, sprinkler layout, fire alarm devices or fire-rated partitions. Larger offices and layouts with many enclosed rooms need closer review." },
+      "6": { q: "How long does office renovation take?", a: "Most office renovation projects take 6 to 10 weeks after the main design direction is confirmed. Larger offices or projects requiring more approvals can take 10 to 16 weeks." },
+      "7": { q: "Can office renovation be done after working hours?", a: "Yes, but it depends on the building rules. Night or weekend work may require special approval and can increase labour cost because of restricted working hours and coordination requirements." },
+      "8": { q: "What is the biggest hidden cost in office renovation?", a: "The biggest hidden costs are usually electrical/data works, air-conditioning modification, fire safety compliance, after-hours work and reinstatement obligations." },
+      "9": { q: "Should I include reinstatement in my office renovation budget?", a: "Yes. Reinstatement should be considered from the start because most leases require the tenant to return the unit to landlord handover condition when the lease ends." },
+      "10": { q: "What information is needed for an office renovation quote?", a: "Prepare the floor plan, site photos, headcount, number of meeting rooms, pantry requirements, IT/data needs, preferred move-in date and landlord renovation guidelines if available." }
+    }
+  }
+};
+
+zhT["article_office_renovation_cost"] = {
+  meta: {
+    title: "新加坡办公室翻新费用（2026 指南）| ID Work Studio",
+    description: "新加坡办公室装修费用指南，按办公室面积说明预算、机电工程、数据点、大厦审批、工期、常见错误与 FAQ。"
+  },
+  hero_badge: "办公室费用指南",
+  title: "新加坡办公室翻新费用（2026 指南）",
+  subtitle: "为新加坡企业规划办公室装修与 fit-out 的实用承包商指南，涵盖真实预算范围、影响费用的关键因素、审批、工期与常见错误。",
+  read_time: "约 8 分钟",
+  intro: "办公室翻新不同于一般商业翻新，因为费用很大程度取决于员工座位规划、会议室、数据点、电力负荷、空调协调、玻璃隔断、大厦规定及租约结束时的恢复原状责任。一个有用的预算不能只看面积，也要看办公室实际如何运作。",
+  direct_answer: {
+    title: "新加坡办公室翻新费用是多少？",
+    body: "新加坡办公室翻新通常为基础 fit-out 每平方英尺 $50 至 $80，中档办公室每平方英尺 $80 至 $130，高端或 Grade A 办公室每平方英尺 $130 至 $200 以上。1,000 平方英尺办公室常见预算约 $50,000 至 $120,000；3,000 平方英尺 SME 办公室则可能在 $180,000 至 $390,000，视隔断、机电、数据点、会议室和空调工程而定。"
+  },
+  sections: {
+    cost_by_size_title: "按办公室面积划分的装修费用",
+    cost_by_size_intro: "以下为新加坡办公室在现场勘查及详细测量前，可用于规划的实际预算范围。",
+    size_rows: {
+      "1": ["800–1,200 平方英尺小型办公室", "$40,000 – $120,000", "适合初创公司、小团队及简单开放式布局，封闭房间较少。"],
+      "2": ["1,500–3,000 平方英尺 SME 办公室", "$120,000 – $390,000", "常见于成长型团队，包含会议室、茶水间、储物区、经理房及更多数据/电源点。"],
+      "3": ["3,000–5,000 平方英尺办公室", "$300,000 – $750,000", "通常需要更多机电协调、玻璃隔断、隔音房、接待区特色设计及分阶段移交规划。"],
+      "4": ["5,000 平方英尺以上企业办公室", "$650,000 – $1.5M+", "高端材料、职场策略规划、董事会议室、协作区、电话亭及更严格的大厦/合规要求。"]
+    },
+    psf_title: "办公室 fit-out 每平方英尺费用",
+    psf_rows: {
+      "1": ["基础办公室 fit-out", "$50 – $80 psf", "开放式布局、简单地板、基础照明、有限木工及标准电气工程。"],
+      "2": ["中档办公室 fit-out", "$80 – $130 psf", "更多会议室、玻璃隔断、茶水间、特色墙、更好的照明及更多电源/数据点。"],
+      "3": ["高端办公室 fit-out", "$130 – $200+ psf", "Grade A 材料、隔音处理、定制木工、董事会议室、复杂机电及更强品牌设计。"]
+    },
+    cost_drivers_title: "影响办公室翻新费用的因素",
+    cost_drivers: {
+      "1": { title: "1. 布局与封闭房间数量", body: "开放式办公室通常比有大量会议室、经理房、电话亭和专注室的布局便宜。每个封闭房间都会增加隔断、门、照明、空调协调、电源点，有时还需要隔音处理。" },
+      "2": { title: "2. 电气与数据点", body: "当项目需要大量工作位电源、数据点、服务器点、地插、UPS 规划或更高电力负荷时，费用会快速上升。这是办公室装修最常被低估的项目之一。" },
+      "3": { title: "3. 玻璃隔断与隔音房", body: "玻璃会议室能提升采光和通透感，但比普通石膏板隔断更贵。隔音玻璃、双层玻璃系统及特殊门五金会进一步提高预算。" },
+      "4": { title: "4. 空调修改", body: "办公室布局常需要移动出风口、协调回风、调整温控器或规划额外 FCU。这些工程必须符合大厦规定，并会影响费用和工期。" },
+      "5": { title: "5. 业主、MCST 与 SCDF 要求", body: "大多数商业大厦要求开工前提交申请。若影响消防系统、逃生通道、喷淋或防火隔断，可能需要 SCDF 相关审查。审批延误会影响移交日期。" },
+      "6": { title: "6. 恢复原状规划", body: "租户应从一开始就考虑恢复原状。有些设计当前看起来理想，但租约结束时拆除成本很高，特别是隔断、地板、天花改动和固定木工。" }
+    },
+    timeline_title: "新加坡办公室翻新常见工期",
+    timeline_rows: {
+      "1": ["设计与空间规划", "2–3 周", "确认员工人数、布局、会议室、茶水间、接待区及运营需求。"],
+      "2": ["业主 / MCST / 大厦提交", "2–4 周", "准备图纸、施工方法说明、保险文件及施工时间表。"],
+      "3": ["现场装修工程", "4–8 周", "拆除、隔断、机电、天花、地板、木工、油漆、清洁及移交。"],
+      "4": ["缺陷修正与搬迁协调", "1–2 周", "最终修补、家具协调、IT 设置及员工搬迁安排。"]
+    },
+    mistakes_title: "常见办公室装修预算错误",
+    mistakes: {
+      "1": "签租约前没有检查电力供应、空调容量、楼板承重及大厦装修规定。",
+      "2": "只为设计材料做预算，却低估电气、数据布线、消防安全及空调工程。",
+      "3": "忘记租约结束时的恢复原状费用。",
+      "4": "假设所有工程都能在办公时间进行，但大厦可能规定噪音工程只能在下班后施工。",
+      "5": "在确认工作位距离、电源位置及走道空间前就购买办公家具。"
+    },
+    cta_title: "正在规划办公室翻新？",
+    cta_body: "把平面图、现场照片、员工人数和预期搬入日期发给我们。ID Work Studio 可根据实际现场条件评估工程范围，并准备办公室装修明细报价。",
+    cta_button: "WhatsApp 获取办公室翻新报价"
+  },
+  faq: {
+    title: "办公室翻新费用常见问题",
+    items: {
+      "1": { q: "新加坡 1,000 平方英尺办公室翻新多少钱？", a: "1,000 平方英尺办公室翻新通常约 $50,000 至 $120,000。简单开放式办公室会接近较低范围；若包含会议室、茶水间、玻璃隔断和更多机电点位，费用会更高。" },
+      "2": { q: "办公室装修每位员工应预算多少？", a: "早期规划时，新加坡办公室可粗略按每位员工 $6,000 至 $15,000 预算，视工作位密度、房间需求、机电复杂度及家具规格而定。" },
+      "3": { q: "为什么办公室电气和数据工程费用高？", a: "每个工作位可能需要电源、数据、走线，有时还需要地插。会议室也需要 AV 点、照明控制、电源、数据以及会议设备基础设施，因此费用会快速累积。" },
+      "4": { q: "办公室翻新需要业主或 MCST 批准吗？", a: "需要。大多数新加坡办公室大厦在开工前都要求业主、大厦管理或 MCST 批准。提交内容通常包括布局图、施工时间表、承包商保险和施工方法说明。" },
+      "5": { q: "办公室翻新需要 SCDF 提交吗？", a: "如果工程影响消防系统、逃生通道、喷淋、火警设备或防火隔断，可能需要 SCDF 提交。面积较大或封闭房间较多的办公室更需要仔细审查。" },
+      "6": { q: "办公室翻新需要多久？", a: "大多数办公室翻新在主要设计方向确认后需要 6 至 10 周。较大办公室或审批要求较多的项目可能需要 10 至 16 周。" },
+      "7": { q: "办公室翻新可以在下班后施工吗？", a: "可以，但取决于大厦规定。夜间或周末施工可能需要特别批准，并因施工时间受限和协调要求而增加人工费用。" },
+      "8": { q: "办公室翻新最大的隐藏成本是什么？", a: "常见隐藏成本包括电气/数据工程、空调修改、消防安全合规、下班后施工及恢复原状责任。" },
+      "9": { q: "办公室装修预算需要包含恢复原状吗？", a: "需要。多数租约要求租户在租约结束时把单位恢复至业主要求的交还状态，因此恢复原状应在一开始就纳入考虑。" },
+      "10": { q: "办公室装修报价需要提供什么资料？", a: "请准备平面图、现场照片、员工人数、会议室数量、茶水间需求、IT/数据需求、预期搬入日期，以及如有的大厦装修指引。" }
+    }
+  }
 };
 
 enT["article_renovation_cost_2026"] = {
