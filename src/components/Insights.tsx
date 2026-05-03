@@ -56,6 +56,14 @@ export default function Insights() {
       date: '2026-05-04',
       readTime: t('insights_page.articles.5.read_time'),
     },
+    {
+      slug: '/insights/office-renovation-timeline-singapore',
+      category: t('insights_page.articles.6.category'),
+      title: t('insights_page.articles.6.title'),
+      excerpt: t('insights_page.articles.6.excerpt'),
+      date: '2026-05-04',
+      readTime: t('insights_page.articles.6.read_time'),
+    },
   ];
 
   const itemListSchema = {

@@ -84,6 +84,14 @@ const pageMetaMap = {
     ogDesc: 'How much does office renovation cost in Singapore? Real fit-out pricing by size, timeline, approvals and hidden costs explained.',
     ogUrl: 'https://idworkstudio.com/insights/office-renovation-cost-singapore',
   },
+  'insights/office-renovation-timeline-singapore.html': {
+    canonical: 'https://idworkstudio.com/insights/office-renovation-timeline-singapore',
+    title: 'Office Renovation Timeline Singapore | How Long Fit-Out Takes | ID Work Studio',
+    description: 'Office renovation timeline Singapore guide. See realistic fit-out timelines, Gantt schedule, landlord approval, MCST, SCDF, M&E coordination, delays and FAQ.',
+    ogTitle: 'Office Renovation Timeline Singapore',
+    ogDesc: 'How long does office renovation take in Singapore? Realistic timeline, Gantt schedule, approvals, site works and handover explained by ID Work Studio.',
+    ogUrl: 'https://idworkstudio.com/insights/office-renovation-timeline-singapore',
+  },
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',
@@ -410,6 +418,63 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'It depends on building rules. Some buildings restrict noisy works, loading bay use and lift access. Night work may need separate approval and can increase labour cost by 15% to 25%.',
+          },
+        },
+      ],
+    });
+  }
+
+
+  if (relativeFile === 'insights/office-renovation-timeline-singapore.html') {
+    schema['@graph'].push({
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How long does office renovation take in Singapore?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Small offices usually take 3 to 6 weeks, medium offices take 6 to 10 weeks, and large corporate offices take 10 to 16 weeks including planning, approvals, site works, testing and handover.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can office renovation be completed in 2 weeks?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Only very small cosmetic refresh works can be completed in about 2 weeks. A proper office fit-out with partition, electrical, data, aircon and landlord approval usually needs more time.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do I need landlord approval for office renovation?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Most Singapore office renovations require landlord or building management approval before work can start. Required documents may include drawings, work schedule, method statement, contractor details and insurance.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'When is SCDF submission required for office renovation?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'SCDF-related submission may be required if the renovation affects fire safety systems, sprinkler layout, fire alarm, smoke detector, exit route, fire-rated partition or occupant load. Such submissions are handled by Qualified Persons where applicable.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What causes office renovation delays in Singapore?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Common delays come from landlord or MCST approval, after-hours work restrictions, electrical and data coordination, aircon modification, sprinkler coordination, furniture delivery and late client changes.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can we continue operating during office renovation?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'It is possible for some offices, but the renovation must be phased with dust control, noise planning, safety barricades and careful power or data cutover. Phased works usually take longer than a vacant-site renovation.',
           },
         },
       ],

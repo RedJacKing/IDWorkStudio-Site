@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
-import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 type StringMap = Record<string, string>;
@@ -57,169 +58,192 @@ export default function ArticleRenovationMistakes() {
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
-      <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
-
-        {/* ── HERO ─────────────────────────────────────────────────────── */}
-        <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-black text-white pt-28 pb-20">
+      <div className="min-h-screen bg-off-white selection:bg-gold selection:text-dark-charcoal">
+        <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden bg-black pt-28 pb-20 text-white md:pt-32">
           <div className="absolute inset-0 z-0">
             <img
               src="/images/insights-hero.jpg"
               alt="Renovation planning mistakes in Singapore homes"
-              className="w-full h-full object-cover object-center opacity-55 scale-105"
+              className="h-full w-full scale-105 object-cover object-center opacity-50"
               fetchPriority="high"
               decoding="async"
             />
-            <div className="absolute inset-0 bg-black/45" />
+            <div className="absolute inset-0 bg-black/50" />
           </div>
 
-          <div className="relative z-10 max-w-4xl text-center px-4">
-            <span className="text-xs tracking-[0.25em] uppercase border px-4 py-1 mb-5 inline-block">
+          <div className="relative z-10 mx-auto max-w-5xl px-4 text-center">
+            <span className="mb-5 inline-block rounded-full border border-champagne px-4 py-1 text-xs uppercase tracking-[0.25em] text-champagne">
               {t('article_renovation_mistakes.hero_badge')}
             </span>
-            <h1 className="text-4xl md:text-6xl font-serif uppercase mb-6">
+
+            <h1 className="mb-6 font-serif text-4xl uppercase leading-tight tracking-tight sm:text-5xl md:text-7xl">
               {t('article_renovation_mistakes.title')}
             </h1>
-            <p className="text-lg text-gray-200">{t('article_renovation_mistakes.subtitle')}</p>
-            <div className="flex justify-center gap-6 mt-6 text-xs uppercase">
-              <span className="flex items-center gap-2"><CalendarDays className="w-4 h-4" />2026-04-23</span>
-              <span className="flex items-center gap-2"><Clock3 className="w-4 h-4" />{t('article_renovation_mistakes.read_time')}</span>
+
+            <p className="mx-auto max-w-3xl text-lg font-light leading-relaxed text-gray-200 md:text-xl">
+              {t('article_renovation_mistakes.subtitle')}
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-300">
+              <span className="inline-flex items-center gap-2">
+                <CalendarDays className="h-4 w-4" />
+                2026-04-23
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Clock3 className="h-4 w-4" />
+                {t('article_renovation_mistakes.read_time')}
+              </span>
             </div>
           </div>
         </section>
 
-        {/* ── BACK NAV ─────────────────────────────────────────────────── */}
-        <section className="py-8 border-b bg-white border-gray-100">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <a
-              href="/insights"
-              className="inline-flex items-center gap-2 text-charcoal hover:text-gold text-xs uppercase tracking-[0.22em] font-bold transition-colors duration-200"
+        <section className="border-b border-gray-100 bg-white py-8">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Link
+              to="/insights"
+              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-charcoal transition-colors duration-200 hover:text-gold"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="h-4 w-4" />
               {t('article_common.back_to_insights')}
-            </a>
+            </Link>
           </div>
         </section>
 
-        {/* ── ARTICLE BODY ─────────────────────────────────────────────── */}
-        <article className="py-16 md:py-24 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            {/* ── INTRO ── */}
-            <div className="mb-14">
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5 pb-4 border-b border-gray-200">
+        <article className="bg-white py-16 md:py-24">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <section className="mb-16">
+              <h2 className="mb-5 border-b border-gray-200 pb-4 font-serif text-2xl font-semibold text-charcoal md:text-3xl">
                 {t('article_renovation_mistakes.sections.intro_title')}
               </h2>
-              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-0">
-                {t('article_renovation_mistakes.sections.intro_p1')}
-              </p>
-            </div>
+              <div className="rounded-2xl border-l-4 border-gold bg-[#fbf6ec] p-6">
+                <p className="mb-0 text-base leading-[1.85] text-gray-700 md:text-[1.05rem]">
+                  {t('article_renovation_mistakes.sections.intro_p1')}
+                </p>
+              </div>
+            </section>
 
-            {/* ── MISTAKES PARENT HEADING ── */}
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-10 pb-4 border-b border-gray-200">
-              {t('article_renovation_mistakes.sections.mistakes_title')}
-            </h2>
-
-            {/* ── MISTAKE ITEMS ── */}
-            <div className="space-y-0">
-              {Object.entries(mistakes).map(([key, item], index) => (
-                <div
-                  key={key}
-                  className="pb-12 mb-12 border-b border-gray-100 last:border-b-0 last:mb-0 last:pb-0"
-                >
-                  {/* Numbered badge + headline */}
-                  <div className="flex items-start gap-4 mb-5">
-                    <span
-                      className="flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full bg-gold flex items-center justify-center text-sm md:text-base font-bold text-white mt-0.5 shadow-sm"
-                      aria-hidden="true"
-                    >
-                      {index + 1}
-                    </span>
-                    <h3 className="text-xl md:text-2xl font-bold text-charcoal leading-snug pt-1">
-                      {item.title}
-                    </h3>
-                  </div>
-
-                  {/* Inline image for mistake 3 (over-design) */}
-                  {key === '3' && (
-                    <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm mb-6">
-                      <img
-                        src="/images/article3-overdesign.jpg"
-                        alt="Overdesigned living room with excessive features reducing usability"
-                        className="w-full h-[280px] md:h-[420px] object-cover"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  )}
-
-                  {/* Inline image for mistake 4 (storage) */}
-                  {key === '4' && (
-                    <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm mb-6">
-                      <img
-                        src="/images/article3-storage.jpg"
-                        alt="Example of poor storage planning leading to clutter in a compact home"
-                        className="w-full h-[280px] md:h-[420px] object-cover"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  )}
-
-                  {/* Body copy */}
-                  <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] pl-0 md:pl-14">
-                    {item.body}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* ── AVOID SECTION ── */}
-            <div className="mt-16">
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-8 pb-4 border-b border-gray-200">
-                {t('article_renovation_mistakes.sections.avoid_title')}
+            <section className="mb-16">
+              <h2 className="mb-8 border-b border-gray-200 pb-4 font-serif text-2xl font-semibold text-charcoal md:text-3xl">
+                {t('article_renovation_mistakes.sections.mistakes_title')}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {Object.values(avoidItems).map((item) => (
+
+              <div className="space-y-5">
+                {Object.entries(mistakes).map(([key, item], index) => (
                   <div
-                    key={item}
-                    className="bg-white border border-gray-200 rounded-2xl p-5 flex items-start gap-3 shadow-sm hover:border-gold hover:shadow-md transition-all duration-200"
+                    key={key}
+                    className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-gold mt-0.5 shrink-0" />
-                    <p className="text-sm text-gray-600 leading-7">{item}</p>
+                    <div className="p-6 md:p-7">
+                      <div className="mb-5 flex items-start gap-4">
+                        <span
+                          className="mt-0.5 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#fbf6ec] text-base font-bold text-gold"
+                          aria-hidden="true"
+                        >
+                          {index + 1}
+                        </span>
+                        <div>
+                          <p className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-gold">
+                            <AlertTriangle className="h-4 w-4" />
+                            {t('article_renovation_mistakes.hero_badge')}
+                          </p>
+                          <h3 className="font-serif text-xl leading-snug text-charcoal md:text-2xl">
+                            {item.title}
+                          </h3>
+                        </div>
+                      </div>
+
+                      {key === '3' && (
+                        <div className="mb-6 overflow-hidden rounded-2xl border border-gray-100 shadow-sm">
+                          <img
+                            src="/images/article3-overdesign.jpg"
+                            alt="Overdesigned living room with excessive features reducing usability"
+                            className="h-[280px] w-full object-cover md:h-[420px]"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                      )}
+
+                      {key === '4' && (
+                        <div className="mb-6 overflow-hidden rounded-2xl border border-gray-100 shadow-sm">
+                          <img
+                            src="/images/article3-storage.jpg"
+                            alt="Example of poor storage planning leading to clutter in a compact home"
+                            className="h-[280px] w-full object-cover md:h-[420px]"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                      )}
+
+                      <p className="mb-0 text-base leading-[1.85] text-gray-600 md:text-[1.05rem]">
+                        {item.body}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
 
-            {/* ── CLOSING ── */}
-            <div className="mt-16">
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5 pb-4 border-b border-gray-200">
+            <section className="mb-16">
+              <h2 className="mb-8 border-b border-gray-200 pb-4 font-serif text-2xl font-semibold text-charcoal md:text-3xl">
+                {t('article_renovation_mistakes.sections.avoid_title')}
+              </h2>
+
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {Object.values(avoidItems).map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 rounded-2xl border border-gray-200 bg-[#fffdf8] p-5 shadow-sm transition-all duration-200 hover:border-gold hover:shadow-md"
+                  >
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                    <p className="mb-0 text-sm leading-7 text-gray-600">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="mb-5 border-b border-gray-200 pb-4 font-serif text-2xl font-semibold text-charcoal md:text-3xl">
                 {t('article_renovation_mistakes.sections.final_title')}
               </h2>
-              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
+              <p className="text-base leading-[1.85] text-gray-600 md:text-[1.05rem]">
                 {t('article_renovation_mistakes.sections.final_p1')}
               </p>
-            </div>
+            </section>
 
-            {/* ── NEXT ARTICLE FOOTER ── */}
-            <div className="mt-14 border-t pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-              <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-2">
-                  {t('article_common.back_to_start')}
-                </p>
-                <h3 className="text-2xl font-serif text-charcoal">
-                  {t('article_renovation_mistakes.next_title')}
-                </h3>
+            <section className="rounded-3xl bg-[#151515] p-7 text-white md:p-10">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-gold">
+                    {t('article_common.back_to_start')}
+                  </p>
+                  <h3 className="font-serif text-2xl text-white">
+                    {t('article_renovation_mistakes.next_title')}
+                  </h3>
+                </div>
+
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="https://wa.me/6598333085"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white transition-colors hover:bg-gold-hover"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    WhatsApp
+                  </a>
+
+                  <Link
+                    to="/insights/renovation-cost-singapore-2026"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white transition-colors hover:bg-white hover:text-charcoal"
+                  >
+                    {t('article_common.read_article')}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
-              <a
-                href="/insights/renovation-cost-singapore-2026"
-                className="inline-flex items-center gap-2 text-charcoal hover:text-gold text-xs uppercase tracking-[0.22em] font-bold transition-colors duration-200 whitespace-nowrap"
-              >
-                {t('article_common.read_article')}
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-
+            </section>
           </div>
         </article>
       </div>

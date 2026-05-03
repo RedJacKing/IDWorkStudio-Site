@@ -310,6 +310,85 @@ const resources = {
       },
 
       "insights": {
+        "officeCost": {
+          "meta": {
+            "title": "Office Renovation Cost Singapore (2026 Guide) | ID Work Studio",
+            "desc": "Real office renovation cost in Singapore by office size. Includes cost breakdown, timeline, landlord approval, M&E works and hidden costs explained by a BCA-registered contractor."
+          },
+          "title": "Office Renovation Cost Singapore (2026 Guide)",
+          "intro": {
+            "line1": "Office renovation in Singapore typically costs:",
+            "cost1": "$50 – $80 psf for a basic office fit-out",
+            "cost2": "$80 – $130 psf for a mid-range office renovation",
+            "cost3": "$130 – $200+ psf for premium or Grade A office interiors",
+            "line2": "A typical office renovation takes 6 to 10 weeks, depending on landlord approval, MCST rules, SCDF requirements, M&E coordination and whether noisy works must be done after office hours."
+          },
+          "size": {
+            "title": "Office Renovation Cost by Size",
+            "small": {
+              "title": "Small office (800 – 1,200 sqft)",
+              "cost": "Estimated cost: $40,000 – $100,000",
+              "desc": "Suitable for startups and small teams with a simple open-plan layout, basic flooring, lighting, limited partitions and minimal built-in carpentry."
+            },
+            "mid": {
+              "title": "Mid-size office (1,500 – 3,000 sqft)",
+              "cost": "Estimated cost: $100,000 – $300,000",
+              "desc": "Usually includes meeting rooms, a pantry, reception counter, glass partitions, more electrical points, data cabling and air-conditioning adjustments."
+            },
+            "large": {
+              "title": "Large office (3,000 – 5,000 sqft)",
+              "cost": "Estimated cost: $250,000 – $800,000",
+              "desc": "Requires heavier project coordination, more workstations, acoustic treatment, feature walls, storage, M&E works and phased handover planning."
+            },
+            "corp": {
+              "title": "Corporate / Grade A office (5,000 sqft+)",
+              "cost": "Estimated cost: $800,000 – $2M+",
+              "desc": "Often involves premium finishes, branded reception areas, boardrooms, specialist lighting, AV systems, strict building rules and more detailed authority coordination."
+            }
+          },
+          "breakdown": {
+            "title": "What Makes Up the Cost",
+            "item1": "Partition works, including drywall rooms, glass meeting rooms and acoustic partitions",
+            "item2": "Electrical and data points for workstations, meeting rooms, server racks and pantry equipment",
+            "item3": "Lighting and ceiling works, including office lighting layout and sprinkler coordination",
+            "item4": "Flooring such as carpet tiles, vinyl, raised flooring or existing floor protection",
+            "item5": "Carpentry such as reception counters, storage cabinets, pantry cabinets and feature walls",
+            "item6": "Air-conditioning modification, especially in buildings with central aircon or after-hours usage needs",
+            "item7": "Fire safety and SCDF-related compliance when partitions, ceiling or fire systems are affected"
+          },
+          "timeline": {
+            "title": "Timeline Breakdown",
+            "step1": "Design and planning: 2–3 weeks for layout, material selection, budget review and landlord requirements checking",
+            "step2": "Submission: 2–4 weeks for landlord, MCST, building management or SCDF-related approval depending on scope",
+            "step3": "Renovation works: 4–8 weeks for partition, electrical, flooring, ceiling, carpentry, M&E coordination and handover"
+          },
+          "mistakes": {
+            "title": "Common Cost Mistakes",
+            "item1": "Underestimating electrical and data cabling cost, especially when every workstation needs power and network access",
+            "item2": "Ignoring landlord, MCST or building management requirements before confirming the renovation budget",
+            "item3": "Forgetting future reinstatement cost, which can affect the real cost of taking over an office unit",
+            "item4": "Rushing the timeline and paying extra for night works, weekend works or urgent material coordination"
+          },
+          "faq": {
+            "title": "FAQ",
+            "q1": "How much does a 1,000 sqft office renovation cost in Singapore?",
+            "a1": "A 1,000 sqft office renovation in Singapore usually costs around $50,000 to $120,000. A simple open-plan office sits near the lower range, while offices with meeting rooms, glass partitions, pantry, data cabling and aircon works will cost more.",
+            "q2": "Why do office renovations become expensive?",
+            "a2": "Office renovations become expensive mainly because of electrical loading, data cabling, glass partitions, aircon modification, fire safety requirements, after-hours restrictions and landlord or MCST submission requirements.",
+            "q3": "Do I need approval before renovating an office?",
+            "a3": "Yes. Most Singapore office buildings require landlord, MCST or building management approval before renovation starts. If partitions, ceiling, sprinklers, fire alarm or escape routes are affected, SCDF-related review may also be needed.",
+            "q4": "Can office renovation be done after office hours?",
+            "a4": "It depends on the building. Many CBD and Grade A buildings restrict noisy works, lift access and loading bay usage. Night or weekend work may need approval and can increase labour cost.",
+            "q5": "What should I check before signing an office lease?",
+            "a5": "Check power capacity, aircon operating hours, ceiling condition, sprinkler layout, reinstatement clause, loading access, floor loading, data point requirements and whether the landlord allows your planned layout.",
+            "q6": "Is reinstatement part of office renovation cost?",
+            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out."
+          },
+          "cta": {
+            "text": "Planning an office renovation? Send us your floor plan, lease condition and rough headcount. We can help you estimate a practical office fit-out budget before work starts.",
+            "button": "WhatsApp for Office Renovation Quote"
+          }
+        },
         "article4": {
           "meta": {
             "title": "Commercial Renovation Cost Singapore (2026) | ID Work Studio",
@@ -486,7 +565,7 @@ const resources = {
         "listing": {
           "eyebrow": "Featured Articles",
           "title": "Current Perspectives",
-          "subtitle": "Four high-impact articles to anchor your authority in Singapore renovation search and future AI citations.",
+          "subtitle": "Five high-impact articles to anchor your authority in Singapore renovation search and future AI citations.",
           "read_more": "Read Article"
         },
         "articles": {
@@ -513,6 +592,12 @@ const resources = {
             "title": "Commercial Renovation Cost Singapore (2026 Guide)",
             "excerpt": "Real contractor pricing for office, retail, F&B and industrial renovation in Singapore — including permits, timeline, hidden costs and common site mistakes.",
             "read_time": "9 min read"
+          },
+          "5": {
+            "category": "Office Cost Guide",
+            "title": "Office Renovation Cost Singapore (2026 Guide)",
+            "excerpt": "A practical contractor guide to office renovation cost by size, including workstations, meeting rooms, data cabling, landlord approvals and reinstatement planning.",
+            "read_time": "8 min read"
           }
         },
         "footer_block": {
@@ -1208,6 +1293,85 @@ const resources = {
       },
       
       "insights": {
+        "officeCost": {
+          "meta": {
+            "title": "新加坡办公室装修费用（2026指南）| ID Work Studio",
+            "desc": "根据办公室面积说明新加坡办公室装修真实费用，包括费用拆解、工期、业主审批、机电工程与隐藏成本。"
+          },
+          "title": "新加坡办公室装修费用（2026指南）",
+          "intro": {
+            "line1": "新加坡办公室装修通常费用：",
+            "cost1": "$50 – $80 每平方英尺（基础办公室装修）",
+            "cost2": "$80 – $130 每平方英尺（中档办公室装修）",
+            "cost3": "$130 – $200+ 每平方英尺（高端或 Grade A 办公室）",
+            "line2": "一般办公室装修需要6到10周，取决于业主审批、MCST规定、SCDF要求、机电协调以及是否需要夜间或周末施工。"
+          },
+          "size": {
+            "title": "不同面积办公室装修费用",
+            "small": {
+              "title": "小型办公室（800 – 1,200 sqft）",
+              "cost": "预计费用：$40,000 – $100,000",
+              "desc": "适合初创公司或小团队，通常为简单开放式布局、基础地面、灯具、少量隔间与较少定制木工。"
+            },
+            "mid": {
+              "title": "中型办公室（1,500 – 3,000 sqft）",
+              "cost": "预计费用：$100,000 – $300,000",
+              "desc": "通常包括会议室、茶水间、接待台、玻璃隔间、更多电源点、网络布线与空调调整。"
+            },
+            "large": {
+              "title": "大型办公室（3,000 – 5,000 sqft）",
+              "cost": "预计费用：$250,000 – $800,000",
+              "desc": "需要更完整的项目协调，包括更多工位、隔音处理、特色墙、储物空间、机电工程与分阶段交付安排。"
+            },
+            "corp": {
+              "title": "企业级 / Grade A 办公室（5,000 sqft以上）",
+              "cost": "预计费用：$800,000 – $2M+",
+              "desc": "通常涉及高端材料、品牌接待区、董事会议室、专业灯光、影音系统、严格大厦规定与更详细的审批协调。"
+            }
+          },
+          "breakdown": {
+            "title": "费用构成",
+            "item1": "隔间工程，包括石膏板房间、玻璃会议室与隔音隔间",
+            "item2": "电力与网络点位，包括工位、会议室、服务器柜与茶水间设备",
+            "item3": "灯光与天花工程，包括办公室灯光布局与喷淋协调",
+            "item4": "地面工程，例如方块地毯、vinyl、架高地板或现有地面保护",
+            "item5": "定制木工，例如接待台、储物柜、茶水间柜与特色墙",
+            "item6": "空调调整，特别是中央空调大厦或需要下班后使用空调的办公室",
+            "item7": "消防与SCDF相关合规要求，尤其在隔间、天花或消防系统受影响时"
+          },
+          "timeline": {
+            "title": "装修时间",
+            "step1": "设计与规划：2–3周，用于布局、材料选择、预算审核与业主要求检查",
+            "step2": "审批提交：2–4周，视工程范围可能涉及业主、MCST、大厦管理或SCDF相关审批",
+            "step3": "现场施工：4–8周，包括隔间、电气、地面、天花、木工、机电协调与交付"
+          },
+          "mistakes": {
+            "title": "常见费用错误",
+            "item1": "低估电力与网络布线费用，尤其每个工位都需要电源和网络点时",
+            "item2": "在确认预算前忽略业主、MCST或大厦管理要求",
+            "item3": "没有预先考虑未来还原费用，导致承租办公室的真实成本被低估",
+            "item4": "赶工导致额外夜间施工、周末施工或紧急材料协调费用"
+          },
+          "faq": {
+            "title": "常见问题",
+            "q1": "新加坡1000平方英尺办公室装修多少钱？",
+            "a1": "新加坡1000平方英尺办公室装修通常约$50,000至$120,000。简单开放式办公室会接近低位；若有会议室、玻璃隔间、茶水间、网络布线和空调工程，费用会更高。",
+            "q2": "为什么办公室装修费用会变高？",
+            "a2": "主要原因包括电力负荷、网络布线、玻璃隔间、空调调整、消防安全要求、夜间施工限制以及业主或MCST审批要求。",
+            "q3": "办公室装修前需要审批吗？",
+            "a3": "需要。大多数新加坡办公室大厦在开工前都需要业主、MCST或大厦管理批准。如果工程影响隔间、天花、喷淋、消防警报或逃生路线，也可能需要SCDF相关审核。",
+            "q4": "办公室装修可以在下班后施工吗？",
+            "a4": "视大厦规定而定。许多CBD和Grade A大厦会限制噪音工程、电梯使用和卸货区时间。夜间或周末施工通常需要额外批准，也可能增加人工成本。",
+            "q5": "签办公室租约前应该检查什么？",
+            "a5": "建议检查电力容量、空调供应时间、天花状况、喷淋位置、还原条款、卸货通道、楼面承重、网络点需求以及业主是否允许你的规划布局。",
+            "q6": "还原费用是否包含在办公室装修费用内？",
+            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。"
+          },
+          "cta": {
+            "text": "准备办公室装修？把平面图、租约条件和预计员工人数发给我们，我们可以在开工前协助你估算实际办公室装修预算。",
+            "button": "WhatsApp 咨询办公室装修报价"
+          }
+        },
         "article4": {
           "meta": {
             "title": "新加坡商业装修费用（2026）| ID Work Studio",
@@ -1384,7 +1548,7 @@ const resources = {
         "listing": {
           "eyebrow": "精选文章",
           "title": "当前观点",
-          "subtitle": "四篇高影响力文章，帮助建立您在新加坡翻新搜索与未来 AI 引用中的专业地位。",
+          "subtitle": "五篇高影响力文章，帮助建立您在新加坡翻新搜索与未来 AI 引用中的专业地位。",
           "read_more": "阅读全文"
         },
         "articles": {
@@ -1411,6 +1575,12 @@ const resources = {
             "title": "新加坡商业翻新费用（2026 指南）",
             "excerpt": "以承包商角度说明新加坡办公室、零售、餐饮与工业空间翻新费用，包括许可证、工期、隐藏成本与常见现场问题。",
             "read_time": "约 9 分钟"
+          },
+          "5": {
+            "category": "办公室费用指南",
+            "title": "新加坡办公室装修费用（2026指南）",
+            "excerpt": "从承包商角度说明不同面积办公室装修费用，包括工位、会议室、网络布线、业主审批与还原规划。",
+            "read_time": "约 8 分钟"
           }
         },
         "footer_block": {
@@ -2311,6 +2481,12 @@ enT["insights_page"] = {
       title: "Office Renovation Cost Singapore (2026 Guide)",
       excerpt: "A practical office fit-out cost guide for Singapore businesses, covering budget by office size, M&E, data points, partitions, landlord approvals and reinstatement planning.",
       read_time: "8 min read"
+    },
+    "6": {
+      category: "Office Timeline Guide",
+      title: "Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes",
+      excerpt: "A practical Singapore office fit-out schedule showing 3–6, 6–10 and 10–16 week timelines, Gantt sequencing, landlord approval, MCST, SCDF and handover planning.",
+      read_time: "9 min read"
     }
   },
   footer_block: {
@@ -2389,6 +2565,12 @@ zhT["insights_page"] = {
       title: "新加坡办公室翻新费用（2026 指南）",
       excerpt: "为新加坡企业整理办公室装修与 fit-out 预算，涵盖不同面积、机电工程、数据点、隔断、大厦审批及恢复原状规划。",
       read_time: "约 8 分钟"
+    },
+    "6": {
+      category: "办公室工期指南",
+      title: "新加坡办公室翻新时间表：办公室 Fit-Out 实际需要多久",
+      excerpt: "以新加坡办公室装修实际排期说明 3–6 周、6–10 周与 10–16 周工期、甘特图施工顺序、业主审批、MCST、SCDF 与移交规划。",
+      read_time: "约 9 分钟"
     }
   },
   footer_block: {
@@ -3171,6 +3353,229 @@ zhT["article_commercial_renovation_cost"] = {
   cta_calculator: "使用费用计算器",
   cta_services: "查看商业服务"
 };
+
+enT["article_office_renovation_timeline"] = {
+  meta: {
+    title: "Office Renovation Timeline Singapore | How Long Fit-Out Takes | ID Work Studio",
+    description: "Office renovation timeline Singapore guide. See realistic fit-out timelines, Gantt schedule, landlord approval, MCST, SCDF, M&E coordination, delays and FAQ."
+  },
+  hero_badge: "Office Timeline Guide",
+  hero_alt: "Modern office renovation timeline planning in Singapore",
+  title: "Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes",
+  subtitle: "A practical contractor guide to office renovation scheduling, approvals, site sequencing, delay risks and handover planning in Singapore.",
+  read_time: "9 min read",
+  intro: "A realistic office renovation timeline in Singapore is not just the number of days spent on site. It must include design confirmation, landlord or MCST approval, possible SCDF/QP review, site works, M&E coordination, furniture delivery, testing and handover. This guide explains the timeline the way a contractor schedules it on a real project.",
+  direct_answer: {
+    title: "How long does office renovation take in Singapore?",
+    body: "As a working guide, a small office usually takes 3 to 6 weeks, a medium office takes 6 to 10 weeks, and a large or corporate office takes 10 to 16 weeks. These ranges include planning, approval, site works and handover. A simple refresh can be faster, but once partition, electrical, data, aircon or fire safety works are involved, the schedule must allow proper coordination."
+  },
+  timeline_ranges: {
+    "1": { title: "Small office", body: "3–6 weeks" },
+    "2": { title: "Medium office", body: "6–10 weeks" },
+    "3": { title: "Large / corporate", body: "10–16 weeks" }
+  },
+  client_concerns: {
+    eyebrow: "Client concerns",
+    title: "What business owners usually worry about",
+    items: {
+      "1": "How long will the office be down before the team can move in?",
+      "2": "Can renovation be done while the business is still operating?",
+      "3": "Will landlord, MCST or building management delay approval?",
+      "4": "Do sprinkler, fire alarm or exit changes require SCDF/QP review?",
+      "5": "Can noisy works be done after office hours or on weekends?",
+      "6": "Will electrical, data and aircon works be ready before handover?"
+    }
+  },
+  gantt: {
+    title: "Typical office renovation Gantt schedule",
+    intro: "Office renovation works overlap. The Gantt chart below is easier for clients to read than a long site schedule, but it still shows the real sequencing: approval before major works, wet and partition works before final finishes, and testing before handover.",
+    headers: { stage: "Stage", note: "Contractor note" },
+    weeks: ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8"],
+    rows: {
+      "1": { stage: "Planning & design", weeks: ["1", "1", "0", "0", "0", "0", "0", "0"], note: "Site survey, layout, M&E planning and quotation alignment." },
+      "2": { stage: "Landlord / MCST / SCDF approval", weeks: ["0", "1", "1", "0", "0", "0", "0", "0"], note: "Runs in parallel after drawings are ready; complex fire safety items can extend this." },
+      "3": { stage: "Hacking & dismantling", weeks: ["0", "0", "1", "0", "0", "0", "0", "0"], note: "Removal of existing partition, ceiling, flooring or built-ins where approved." },
+      "4": { stage: "Masonry & partition", weeks: ["0", "0", "1", "1", "0", "0", "0", "0"], note: "New layout formation, drywall partition, wet works and base preparation." },
+      "5": { stage: "Electrical & data", weeks: ["0", "0", "0", "1", "1", "0", "0", "0"], note: "Power points, lighting points, network cabling, server and workstation coordination." },
+      "6": { stage: "Aircon works", weeks: ["0", "0", "0", "1", "1", "0", "0", "0"], note: "Diffuser relocation, thermostat adjustment, FCU coordination or duct changes." },
+      "7": { stage: "Carpentry & furniture", weeks: ["0", "0", "0", "0", "1", "1", "0", "0"], note: "Fabrication is usually off-site; final installation depends on confirmed site measurements." },
+      "8": { stage: "Finishing works", weeks: ["0", "0", "0", "0", "1", "1", "0", "0"], note: "Painting, flooring, glass works, lighting installation and final touch-ups." },
+      "9": { stage: "Testing & handover", weeks: ["0", "0", "0", "0", "0", "1", "1", "0"], note: "Power, data, aircon, defects, cleaning and handover readiness." }
+    },
+    note: "This is a working schedule, not a fixed promise. In Singapore office renovation, approval delays, after-hours restrictions, aircon shutdown coordination and supplier lead times can shift the programme by 1 to 3 weeks. A proper contractor schedule should always include buffer time."
+  },
+  phases: {
+    title: "Full timeline breakdown",
+    intro: "A proper office fit-out should be planned in phases. Each phase affects the next phase, so rushing early decisions usually creates delay later on site.",
+    items: {
+      "1": { title: "1. Planning & design", duration: "1–3 weeks", body: "This includes site measurement, workspace layout, meeting room planning, pantry planning, electrical and data point planning, ceiling layout, lighting layout and aircon impact review. If the layout keeps changing, the programme will move before site works even start." },
+      "2": { title: "2. Submission & approval", duration: "1–4 weeks", body: "Most office projects require landlord or building management approval. Strata offices may require MCST approval. Submission documents can include layout drawings, reflected ceiling plan, M&E details, method statement, work schedule, contractor details, insurance and renovation deposit. If fire safety systems are affected, SCDF-related review by a Qualified Person may be required." },
+      "3": { title: "3. Hacking, partition and wet works", duration: "1–3 weeks", body: "This phase covers dismantling, hacking, new partition, pantry wet works, ceiling base works and making good. In occupied buildings, noisy works are often restricted to certain hours, so even simple works can take longer than expected." },
+      "4": { title: "4. Electrical, data and aircon coordination", duration: "1–2 weeks", body: "Office renovation depends heavily on power, lighting, data, server, Wi-Fi and aircon routing. These trades must be coordinated together because partition and ceiling changes affect cable routing, diffuser position, return air and lighting placement." },
+      "5": { title: "5. Carpentry, furniture and finishing", duration: "2–4 weeks", body: "Carpentry is usually fabricated off-site, but final measurement should only be taken after site conditions are ready. Flooring, painting, glass works, loose furniture, signage and accessories are usually installed toward the end of the project." },
+      "6": { title: "6. Testing, defects and handover", duration: "3–7 days", body: "Before handover, power points, lights, data points, aircon, doors, glass works, locks and furniture placement should be checked. Final cleaning and defect rectification should be included before staff move in." }
+    }
+  },
+  delay_factors: {
+    title: "Real delay factors in Singapore office renovation",
+    intro: "Most office renovation delays do not come from hacking or painting. They usually come from approvals, building restrictions and coordination between different trades.",
+    items: {
+      "1": { title: "Landlord or MCST approval delays", body: "Building management may request revised drawings, method statements, insurance documents, lift protection details or contractor registration before issuing approval to start work." },
+      "2": { title: "After-hours work restrictions", body: "Many commercial buildings limit noisy works to evenings, nights or weekends. This can slow the programme by 30% to 50%, especially when hacking, drilling or material delivery is involved." },
+      "3": { title: "Electrical and data coordination", body: "If workstation count, server location, meeting room AV or data point quantity is not confirmed early, wiring may need to be revised after partitions are built." },
+      "4": { title: "Aircon modification", body: "Aircon works may require building approval, shutdown timing or coordination with the building's central system. Diffusers, thermostats and return air paths must match the new layout." },
+      "5": { title: "SCDF or QP review", body: "If the works affect sprinkler layout, fire alarm, smoke detector, exit route, fire-rated partition or occupant load, SCDF-related submission may be required. This should be checked early, not after site work starts." },
+      "6": { title: "Third-party supplier delays", body: "Furniture, glass, signage, access control, IT equipment and loose furniture are often supplied by separate vendors. Late confirmation can delay final handover even when renovation works are nearly completed." }
+    }
+  },
+  mistakes: {
+    title: "Common office renovation mistakes",
+    intro: "The best way to shorten an office renovation timeline is not to rush site work. It is to avoid decisions that create rework.",
+    items: {
+      "1": { title: "Confirming move-in date before approval", body: "Do not lock in the staff move-in date until landlord, MCST or building management approval is secured. A one-week approval delay can affect furniture delivery, IT setup and handover." },
+      "2": { title: "Treating office renovation like home renovation", body: "Office renovation needs compliance documents, building rules, lift booking, loading bay timing, insurance and M&E coordination. It cannot be planned like a simple residential project." },
+      "3": { title: "Not planning data points early", body: "Data points, server rack position, Wi-Fi coverage, meeting room AV and floor boxes should be planned before partition and ceiling works. Late changes create rewiring and patching." },
+      "4": { title: "Ignoring aircon and sprinkler impact", body: "Changing partitions can affect aircon airflow, sprinkler coverage and fire safety requirements. These items should be reviewed during planning, not after walls are built." },
+      "5": { title: "Ordering furniture too late", body: "Loose furniture often has a separate lead time. If table sizes, workstation count or delivery dates are confirmed too late, the office may be renovated but not ready for operation." }
+    }
+  },
+  faqs: {
+    title: "Office renovation timeline FAQ",
+    items: {
+      "1": { q: "How long does office renovation take in Singapore?", a: "Small offices usually take 3 to 6 weeks, medium offices take 6 to 10 weeks, and large corporate offices take 10 to 16 weeks including planning, approvals, site works, testing and handover." },
+      "2": { q: "Can office renovation be completed in 2 weeks?", a: "Only very small cosmetic refresh works can be completed in about 2 weeks. A proper office fit-out with partition, electrical, data, aircon and landlord approval usually needs more time." },
+      "3": { q: "Do I need landlord approval for office renovation?", a: "Yes. Most Singapore office renovations require landlord or building management approval before work can start. Required documents may include drawings, work schedule, method statement, contractor details and insurance." },
+      "4": { q: "Do I need MCST approval?", a: "If the office is inside a strata-titled building, MCST or managing agent approval is commonly required before renovation works can start." },
+      "5": { q: "When is SCDF submission required?", a: "SCDF-related submission may be required if the renovation affects fire safety systems, sprinkler layout, fire alarm, smoke detector, exit route, fire-rated partition or occupant load. A Qualified Person should assess this where applicable." },
+      "6": { q: "Can renovation be done after office hours?", a: "Yes, if the building allows it. However, night and weekend work may need separate approval and can slow the schedule or increase labour cost." },
+      "7": { q: "Can we operate during renovation?", a: "It is possible for some offices, but the work must be phased with dust control, noise planning, safety barricades and careful power or data cutover. Phased work usually takes longer than renovating a vacant office." },
+      "8": { q: "What delays office renovation the most?", a: "Approval delay, after-hours restriction, aircon coordination, electrical and data changes, sprinkler review, late furniture delivery and late client decisions are the most common delay factors." },
+      "9": { q: "How early should we start planning before lease start?", a: "Start planning at least 1 to 2 months before lease commencement. For larger offices or projects involving SCDF/QP review, start 2 to 4 months earlier if possible." },
+      "10": { q: "Does office size affect timeline?", a: "Yes. Larger offices need more drawings, more M&E coordination, more trades, more approval checks and more handover testing. The timeline is not only based on square footage, but also layout complexity." },
+      "11": { q: "How long does handover take?", a: "Testing, defects, cleaning and handover usually take 3 to 7 days. Larger offices may need a longer defects and IT coordination period before staff move in." },
+      "12": { q: "How can ID Work Studio reduce downtime?", a: "We review the floor plan, building rules, approval requirements, M&E constraints and target move-in date early. This allows the schedule to be planned around real site constraints instead of an unrealistic handover date." }
+    }
+  },
+  cta: {
+    eyebrow: "Plan before you commit",
+    title: "Need a realistic office renovation timeline?",
+    body: "WhatsApp us your floor plan, lease handover date and target move-in date. ID Work Studio can advise a realistic programme before you commit to your renovation schedule.",
+    whatsapp: "WhatsApp Floor Plan",
+    office_service: "View Office Renovation Service"
+  }
+};
+
+zhT["article_office_renovation_timeline"] = {
+  meta: {
+    title: "新加坡办公室翻新时间表 | 办公室 Fit-Out 需要多久 | ID Work Studio",
+    description: "新加坡办公室翻新时间表指南，说明实际工期、甘特图、大厦审批、MCST、SCDF、机电协调、常见延误与 FAQ。"
+  },
+  hero_badge: "办公室工期指南",
+  hero_alt: "新加坡现代办公室翻新时间规划",
+  title: "新加坡办公室翻新时间表：办公室 Fit-Out 实际需要多久",
+  subtitle: "以承包商角度说明新加坡办公室装修的排期、审批、现场施工顺序、延误风险与移交规划。",
+  read_time: "约 9 分钟",
+  intro: "新加坡办公室翻新的实际工期，不只是现场施工天数。它还包括设计确认、业主或 MCST 审批、可能涉及的 SCDF/QP 审查、现场施工、机电协调、家具交付、测试与移交。本指南以承包商实际排期方式说明整个流程。",
+  direct_answer: {
+    title: "新加坡办公室翻新需要多久？",
+    body: "作为实际规划参考，小型办公室通常需要 3 至 6 周，中型办公室需要 6 至 10 周，大型或企业办公室需要 10 至 16 周。这些时间包括规划、审批、现场施工与移交。简单翻新可能更快，但只要涉及隔墙、电工、网络、空调或消防安全工程，就必须预留协调时间。"
+  },
+  timeline_ranges: {
+    "1": { title: "小型办公室", body: "3–6 周" },
+    "2": { title: "中型办公室", body: "6–10 周" },
+    "3": { title: "大型 / 企业办公室", body: "10–16 周" }
+  },
+  client_concerns: {
+    eyebrow: "客户常见顾虑",
+    title: "企业负责人通常最担心什么",
+    items: {
+      "1": "办公室需要停用多久，员工什么时候能搬入？",
+      "2": "公司仍在运作时，是否可以分阶段装修？",
+      "3": "业主、MCST 或大厦管理会不会拖慢审批？",
+      "4": "洒水器、火警或逃生路线改变是否需要 SCDF/QP 审查？",
+      "5": "噪音工程是否可以在下班后或周末进行？",
+      "6": "电力、网络与空调是否能在移交前全部完成测试？"
+    }
+  },
+  gantt: {
+    title: "办公室翻新常见甘特图排期",
+    intro: "办公室翻新的工程通常是重叠进行的。以下甘特图比完整现场排期更容易让客户理解，但仍保留实际施工逻辑：先审批、再主要施工，湿作与隔墙先行，最后才做饰面与移交测试。",
+    headers: { stage: "阶段", note: "承包商说明" },
+    weeks: ["第1周", "第2周", "第3周", "第4周", "第5周", "第6周", "第7周", "第8周"],
+    rows: {
+      "1": { stage: "规划与设计", weeks: ["1", "1", "0", "0", "0", "0", "0", "0"], note: "现场测量、平面规划、机电规划与报价确认。" },
+      "2": { stage: "业主 / MCST / SCDF 审批", weeks: ["0", "1", "1", "0", "0", "0", "0", "0"], note: "图纸完成后同步进行；复杂消防项目会拉长时间。" },
+      "3": { stage: "拆除与清拆", weeks: ["0", "0", "1", "0", "0", "0", "0", "0"], note: "按批准范围拆除原有隔墙、天花、地板或固定家具。" },
+      "4": { stage: "泥水与隔墙", weeks: ["0", "0", "1", "1", "0", "0", "0", "0"], note: "新格局成型、石膏板隔墙、茶水间湿作与基层处理。" },
+      "5": { stage: "电工与网络", weeks: ["0", "0", "0", "1", "1", "0", "0", "0"], note: "电源点、灯光点、网络线、服务器与工位点位协调。" },
+      "6": { stage: "空调工程", weeks: ["0", "0", "0", "1", "1", "0", "0", "0"], note: "风口移位、温控器调整、FCU 协调或风管修改。" },
+      "7": { stage: "木工与家具", weeks: ["0", "0", "0", "0", "1", "1", "0", "0"], note: "木工通常场外制作；最终安装取决于现场尺寸确认。" },
+      "8": { stage: "饰面工程", weeks: ["0", "0", "0", "0", "1", "1", "0", "0"], note: "油漆、地板、玻璃、灯具安装与最终修补。" },
+      "9": { stage: "测试与移交", weeks: ["0", "0", "0", "0", "0", "1", "1", "0"], note: "电力、网络、空调、缺陷修补、清洁与移交准备。" }
+    },
+    note: "这是工作排期，不是固定承诺。新加坡办公室翻新中，审批延误、下班后施工限制、空调停机协调与供应商交期，都可能让整体工期移动 1 至 3 周。专业排期应预留缓冲时间。"
+  },
+  phases: {
+    title: "完整工期拆解",
+    intro: "办公室 fit-out 应分阶段规划。每个阶段都会影响下一个阶段，因此前期决策若仓促，后期现场就容易出现延误或返工。",
+    items: {
+      "1": { title: "1. 规划与设计", duration: "1–3 周", body: "包括现场测量、工位规划、会议室规划、茶水间规划、电力与网络点位规划、天花图、灯光图与空调影响检查。如果平面不断更改，现场还未开工，排期已经会受影响。" },
+      "2": { title: "2. 提交与审批", duration: "1–4 周", body: "多数办公室工程需要业主或大厦管理批准。分层产权办公室可能需要 MCST 批准。提交资料可能包括平面图、天花图、机电资料、施工方法说明、工程时间表、承包商资料、保险与装修押金。若影响消防安全系统，可能需要 Qualified Person 处理 SCDF 相关审查。" },
+      "3": { title: "3. 拆除、隔墙与湿作", duration: "1–3 周", body: "此阶段包括清拆、拆除、新隔墙、茶水间湿作、天花基层与修补。若办公楼限制噪音工程时间，即使简单工程也可能比预期更久。" },
+      "4": { title: "4. 电工、网络与空调协调", duration: "1–2 周", body: "办公室装修非常依赖电力、灯光、网络、服务器、Wi-Fi 与空调走向。这些工种必须一起协调，因为隔墙与天花改变会影响线槽、风口、回风与灯位。" },
+      "5": { title: "5. 木工、家具与饰面", duration: "2–4 周", body: "木工多数在场外制作，但最终尺寸应等现场条件稳定后确认。地板、油漆、玻璃、活动家具、招牌与配件通常在项目后段安装。" },
+      "6": { title: "6. 测试、修补与移交", duration: "3–7 天", body: "移交前应检查电源点、灯具、网络点、空调、门、玻璃、锁具与家具摆位。最终清洁与缺陷修补应在员工搬入前完成。" }
+    }
+  },
+  delay_factors: {
+    title: "新加坡办公室翻新的真实延误因素",
+    intro: "多数办公室翻新延误不是来自拆除或油漆，而是来自审批、大厦限制，以及不同工种之间的协调问题。",
+    items: {
+      "1": { title: "业主或 MCST 审批延误", body: "大厦管理可能要求修改图纸、补交施工方法说明、保险文件、电梯保护细节或承包商资料，才批准开工。" },
+      "2": { title: "下班后施工限制", body: "很多商业大厦只允许傍晚、夜间或周末进行噪音工程。这可能让工期放慢 30% 至 50%，尤其是拆除、钻孔与材料运输。" },
+      "3": { title: "电力与网络协调", body: "若工位数量、服务器位置、会议室 AV 或网络点数量没有早定，隔墙完成后可能需要重新拉线与修补。" },
+      "4": { title: "空调修改", body: "空调工程可能需要大厦批准、停机时间安排，或与中央空调系统协调。风口、温控器与回风路径必须配合新格局。" },
+      "5": { title: "SCDF 或 QP 审查", body: "若工程影响洒水器、火警、烟感、逃生路线、防火隔墙或使用人数，可能需要 SCDF 相关提交。这应在前期检查，而不是开工后才处理。" },
+      "6": { title: "第三方供应商延误", body: "家具、玻璃、招牌、门禁、IT 设备与活动家具常由不同供应商负责。若确认太迟，即使装修接近完成，也会影响最终移交。" }
+    }
+  },
+  mistakes: {
+    title: "办公室翻新常见错误",
+    intro: "缩短办公室翻新工期的最好方式，不是盲目催促现场施工，而是避免会造成返工的决策。",
+    items: {
+      "1": { title: "审批前就确认搬入日期", body: "在业主、MCST 或大厦管理批准前，不建议锁定员工搬入日期。审批延误一周，就可能影响家具、IT 设置与移交。" },
+      "2": { title: "把办公室翻新当成住宅翻新", body: "办公室装修需要合规文件、大厦规则、电梯预约、卸货时间、保险与机电协调，不能像简单住宅工程一样安排。" },
+      "3": { title: "太迟规划网络点", body: "网络点、服务器机柜、Wi-Fi 覆盖、会议室 AV 与地插应在隔墙和天花前确认。后期更改会造成重新拉线与修补。" },
+      "4": { title: "忽略空调与洒水器影响", body: "改变隔墙会影响空调气流、洒水器覆盖与消防安全要求。这些项目应在设计阶段检查，而不是墙体完成后才发现。" },
+      "5": { title: "家具订购太迟", body: "活动家具通常有独立交期。若桌子尺寸、工位数量或送货日期太迟确认，办公室可能装修完成但仍无法正式运作。" }
+    }
+  },
+  faqs: {
+    title: "办公室翻新时间表 FAQ",
+    items: {
+      "1": { q: "新加坡办公室翻新需要多久？", a: "小型办公室通常需要 3 至 6 周，中型办公室需要 6 至 10 周，大型企业办公室需要 10 至 16 周，包括规划、审批、现场施工、测试与移交。" },
+      "2": { q: "办公室翻新可以 2 周完成吗？", a: "只有非常小型、纯表面更新的工程有可能约 2 周完成。若是包含隔墙、电工、网络、空调与业主审批的完整办公室 fit-out，通常需要更长时间。" },
+      "3": { q: "办公室翻新需要业主批准吗？", a: "需要。多数新加坡办公室翻新在开工前都需要业主或大厦管理批准。常见文件包括图纸、工程时间表、施工方法说明、承包商资料与保险。" },
+      "4": { q: "是否需要 MCST 批准？", a: "如果办公室位于分层产权大厦，通常需要 MCST 或管理代理批准后才能开工。" },
+      "5": { q: "什么时候需要 SCDF 提交？", a: "若工程影响消防安全系统、洒水器、火警、烟感、逃生路线、防火隔墙或使用人数，可能需要 SCDF 相关提交。适用时应由 Qualified Person 评估。" },
+      "6": { q: "办公室装修可以下班后施工吗？", a: "可以，但必须视大厦规定而定。夜间或周末施工可能需要额外批准，并可能拉长工期或增加人工费用。" },
+      "7": { q: "公司营运期间可以装修吗？", a: "部分办公室可以，但必须分阶段施工，并处理防尘、噪音、安全围挡、电力或网络切换。分阶段施工通常比空置单位装修更久。" },
+      "8": { q: "办公室翻新最常见的延误原因是什么？", a: "审批延误、下班后施工限制、空调协调、电力与网络更改、洒水器审查、家具交付延误与客户后期决定，是最常见的延误因素。" },
+      "9": { q: "租约开始前多久应开始规划？", a: "建议至少在租约开始前 1 至 2 个月开始规划。若是较大办公室或涉及 SCDF/QP 审查，最好提前 2 至 4 个月。" },
+      "10": { q: "办公室面积会影响工期吗？", a: "会。大型办公室需要更多图纸、机电协调、工种配合、审批检查与移交测试。工期不只看面积，也取决于格局复杂度。" },
+      "11": { q: "移交通常需要多久？", a: "测试、缺陷修补、清洁与移交通常需要 3 至 7 天。大型办公室可能需要更长的缺陷处理与 IT 协调时间，员工才能搬入。" },
+      "12": { q: "ID Work Studio 如何减少停工时间？", a: "我们会尽早审查平面图、大厦规定、审批要求、机电限制与目标搬入日期，让排期建立在真实现场条件上，而不是不切实际的交付日期。" }
+    }
+  },
+  cta: {
+    eyebrow: "先规划，再承诺",
+    title: "需要实际办公室翻新时间表？",
+    body: "请通过 WhatsApp 发送您的平面图、租约交场日期与目标搬入日期。ID Work Studio 可先为您判断实际工期，再确认装修排期。",
+    whatsapp: "WhatsApp 发送平面图",
+    office_service: "查看办公室翻新服务"
+  }
+};
+
 
 i18n
   .use(LanguageDetector)

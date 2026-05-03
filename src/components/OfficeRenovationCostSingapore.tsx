@@ -1,67 +1,68 @@
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 
 export default function OfficeRenovationCostSingapore() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Helmet>
-        <title>Office Renovation Cost Singapore (2026 Guide) | ID Work Studio</title>
-        <meta
-          name="description"
-          content="Real office renovation cost in Singapore by size. Practical contractor breakdown for 1,000 sqft, 2,000 sqft and larger offices. Includes timeline, approvals and hidden costs."
+        <title>{t("insights.officeCost.meta.title")}</title>
+        <meta name="description" content={t("insights.officeCost.meta.desc")} />
+        <link
+          rel="canonical"
+          href="https://idworkstudio.com/insights/office-renovation-cost-singapore"
         />
-        <link rel="canonical" href="https://idworkstudio.com/insights/office-renovation-cost-singapore" />
       </Helmet>
 
       <main className="max-w-5xl mx-auto px-6 py-12 text-neutral-800 leading-relaxed">
-        
+        {/* Title */}
         <h1 className="text-3xl font-semibold mb-6">
-          Office Renovation Cost Singapore (2026 Guide)
+          {t("insights.officeCost.title")}
         </h1>
 
-        {/* Direct Answer */}
-        <section className="mb-10">
-          <p className="text-lg">
-            Office renovation in Singapore typically costs:
-          </p>
-          <ul className="list-disc pl-6 mt-3">
-            <li>$50 – $80 psf (basic fit-out)</li>
-            <li>$80 – $130 psf (mid-range office)</li>
-            <li>$130 – $200+ psf (premium / Grade A office)</li>
+        {/* Intro */}
+        <section className="mb-10 space-y-4">
+          <p>{t("insights.officeCost.intro.line1")}</p>
+
+          <ul className="list-disc pl-6">
+            <li>{t("insights.officeCost.intro.cost1")}</li>
+            <li>{t("insights.officeCost.intro.cost2")}</li>
+            <li>{t("insights.officeCost.intro.cost3")}</li>
           </ul>
-          <p className="mt-3">
-            A typical office renovation takes <strong>6 to 10 weeks</strong>, depending on approvals, design complexity and after-hours work requirements.
-          </p>
+
+          <p>{t("insights.officeCost.intro.line2")}</p>
         </section>
 
         {/* Cost by Size */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4">
-            Office Renovation Cost by Size
+            {t("insights.officeCost.size.title")}
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-5">
             <div>
-              <strong>Small office (800 – 1,200 sqft)</strong><br/>
-              Estimated cost: $40,000 – $100,000<br/>
-              Suitable for startups, basic layout, minimal partition.
+              <strong>{t("insights.officeCost.size.small.title")}</strong>
+              <p>{t("insights.officeCost.size.small.cost")}</p>
+              <p>{t("insights.officeCost.size.small.desc")}</p>
             </div>
 
             <div>
-              <strong>Mid-size office (1,500 – 3,000 sqft)</strong><br/>
-              Estimated cost: $100,000 – $300,000<br/>
-              Includes meeting rooms, pantry, glass partitions.
+              <strong>{t("insights.officeCost.size.mid.title")}</strong>
+              <p>{t("insights.officeCost.size.mid.cost")}</p>
+              <p>{t("insights.officeCost.size.mid.desc")}</p>
             </div>
 
             <div>
-              <strong>Large office (3,000 – 5,000 sqft)</strong><br/>
-              Estimated cost: $250,000 – $800,000<br/>
-              More carpentry, branding, and M&E coordination required.
+              <strong>{t("insights.officeCost.size.large.title")}</strong>
+              <p>{t("insights.officeCost.size.large.cost")}</p>
+              <p>{t("insights.officeCost.size.large.desc")}</p>
             </div>
 
             <div>
-              <strong>Corporate / Grade A office (5,000 sqft+)</strong><br/>
-              Estimated cost: $800,000 – $2M+<br/>
-              High-end materials, full design concept, complex approvals.
+              <strong>{t("insights.officeCost.size.corp.title")}</strong>
+              <p>{t("insights.officeCost.size.corp.cost")}</p>
+              <p>{t("insights.officeCost.size.corp.desc")}</p>
             </div>
           </div>
         </section>
@@ -69,88 +70,87 @@ export default function OfficeRenovationCostSingapore() {
         {/* Cost Breakdown */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4">
-            What Makes Up the Cost
+            {t("insights.officeCost.breakdown.title")}
           </h2>
 
           <ul className="list-disc pl-6 space-y-2">
-            <li>Partition works (drywall / glass)</li>
-            <li>Electrical & data points (very significant for offices)</li>
-            <li>Lighting & ceiling</li>
-            <li>Flooring (carpet tiles / vinyl)</li>
-            <li>Carpentry (workstations, cabinets)</li>
-            <li>Air-conditioning modification</li>
-            <li>Fire safety / SCDF compliance</li>
+            <li>{t("insights.officeCost.breakdown.item1")}</li>
+            <li>{t("insights.officeCost.breakdown.item2")}</li>
+            <li>{t("insights.officeCost.breakdown.item3")}</li>
+            <li>{t("insights.officeCost.breakdown.item4")}</li>
+            <li>{t("insights.officeCost.breakdown.item5")}</li>
+            <li>{t("insights.officeCost.breakdown.item6")}</li>
+            <li>{t("insights.officeCost.breakdown.item7")}</li>
           </ul>
         </section>
 
         {/* Timeline */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4">
-            Timeline Breakdown
+            {t("insights.officeCost.timeline.title")}
           </h2>
 
           <ul className="list-disc pl-6 space-y-2">
-            <li>Design & planning: 2–3 weeks</li>
-            <li>Submission (MCST / landlord / SCDF): 2–4 weeks</li>
-            <li>Renovation works: 4–8 weeks</li>
+            <li>{t("insights.officeCost.timeline.step1")}</li>
+            <li>{t("insights.officeCost.timeline.step2")}</li>
+            <li>{t("insights.officeCost.timeline.step3")}</li>
           </ul>
         </section>
 
         {/* Mistakes */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4">
-            Common Cost Mistakes
+            {t("insights.officeCost.mistakes.title")}
           </h2>
 
           <ul className="list-disc pl-6 space-y-2">
-            <li>Underestimating electrical and data cabling cost</li>
-            <li>Ignoring landlord requirements</li>
-            <li>Not planning reinstatement cost</li>
-            <li>Rushing timeline and paying for night works</li>
+            <li>{t("insights.officeCost.mistakes.item1")}</li>
+            <li>{t("insights.officeCost.mistakes.item2")}</li>
+            <li>{t("insights.officeCost.mistakes.item3")}</li>
+            <li>{t("insights.officeCost.mistakes.item4")}</li>
           </ul>
         </section>
 
         {/* FAQ */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4">FAQ</h2>
+          <h2 className="text-2xl font-semibold mb-4">
+            {t("insights.officeCost.faq.title")}
+          </h2>
 
           <div className="space-y-4">
             <div>
-              <strong>How much does a 1,000 sqft office renovation cost?</strong><br/>
-              Typically $50,000 to $120,000 depending on design and M&E requirements.
+              <strong>{t("insights.officeCost.faq.q1")}</strong>
+              <p>{t("insights.officeCost.faq.a1")}</p>
             </div>
 
             <div>
-              <strong>Why do office renovations become expensive?</strong><br/>
-              Mainly due to electrical, data points, aircon modification and compliance works.
+              <strong>{t("insights.officeCost.faq.q2")}</strong>
+              <p>{t("insights.officeCost.faq.a2")}</p>
             </div>
 
             <div>
-              <strong>Do I need approval before renovation?</strong><br/>
-              Yes, most offices require landlord or MCST approval before works begin.
+              <strong>{t("insights.officeCost.faq.q3")}</strong>
+              <p>{t("insights.officeCost.faq.a3")}</p>
             </div>
 
             <div>
-              <strong>Can renovation be done after office hours?</strong><br/>
-              Depends on building rules. Night work usually increases cost.
+              <strong>{t("insights.officeCost.faq.q4")}</strong>
+              <p>{t("insights.officeCost.faq.a4")}</p>
             </div>
           </div>
         </section>
 
         {/* CTA */}
         <section className="border-t pt-8">
-          <p className="mb-4">
-            Planning an office renovation? Get a practical cost estimate based on your layout and requirements.
-          </p>
+          <p className="mb-4">{t("insights.officeCost.cta.text")}</p>
 
           <a
             href="https://wa.me/6568162872"
             className="inline-block bg-black text-white px-6 py-3 rounded-md"
           >
-            WhatsApp for Quote
+            {t("insights.officeCost.cta.button")}
           </a>
         </section>
-
       </main>
     </>
   );
