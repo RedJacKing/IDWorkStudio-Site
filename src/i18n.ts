@@ -382,7 +382,19 @@ const resources = {
             "q5": "What should I check before signing an office lease?",
             "a5": "Check power capacity, aircon operating hours, ceiling condition, sprinkler layout, reinstatement clause, loading access, floor loading, data point requirements and whether the landlord allows your planned layout.",
             "q6": "Is reinstatement part of office renovation cost?",
-            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out."
+            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out.",
+            "q7": "What documents should I prepare before asking for an office renovation quote?",
+            "a7": "Prepare the floor plan, current site photos, lease agreement or fitting-out handbook, preferred move-in date, headcount, workstation count, pantry needs, meeting room requirements and any landlord reinstatement conditions. With these details, the quotation will be much closer to the real project cost.",
+            "q8": "Will glass partitions increase my office renovation budget?",
+            "a8": "Yes. Glass partitions usually cost more than basic drywall partitions because of aluminium framing, glass specification, door hardware and installation accuracy. They are common for meeting rooms and manager rooms, but the quantity should be planned carefully if the budget is tight.",
+            "q9": "Do office renovation costs include furniture and workstations?",
+            "a9": "Not always. Some quotations include loose furniture, system furniture and workstations, while others only cover renovation works such as partitions, flooring, ceiling, electrical, carpentry and painting. Always check whether office chairs, desks, filing cabinets and loose furniture are included before comparing prices.",
+            "q10": "Can I keep my existing office flooring, ceiling or aircon to save cost?",
+            "a10": "Yes, if they are in good condition and accepted by the landlord or building management. Reusing existing flooring, ceiling grid, lights or aircon layout can reduce cost, but the contractor should check whether they fit the new layout and whether any reinstatement or compliance issue will remain.",
+            "q11": "How early should I start planning an office renovation before moving in?",
+            "a11": "Start planning at least 8 to 12 weeks before your target move-in date. This gives time for layout planning, quotation, landlord or MCST submission, material selection, authority checks and actual renovation works without paying unnecessary rush charges.",
+            "q12": "What causes office renovation delays in Singapore?",
+            "a12": "Common delays include late landlord approval, MCST restrictions, missing as-built drawings, sprinkler or fire alarm changes, delayed carpet or furniture delivery, after-hours access limits, loading bay booking issues and last-minute layout changes by management."
           },
           "cta": {
             "text": "Planning an office renovation? Send us your floor plan, lease condition and rough headcount. We can help you estimate a practical office fit-out budget before work starts.",
@@ -1396,7 +1408,19 @@ const resources = {
             "q5": "签办公室租约前应该检查什么？",
             "a5": "建议检查电力容量、空调供应时间、天花状况、喷淋位置、还原条款、卸货通道、楼面承重、网络点需求以及业主是否允许你的规划布局。",
             "q6": "还原费用是否包含在办公室装修费用内？",
-            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。"
+            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。",
+            "q7": "咨询办公室装修报价前需要准备哪些资料？",
+            "a7": "建议准备平面图、现场照片、租约或装修手册、预计搬入日期、员工人数、工位数量、茶水间需求、会议室需求，以及业主还原条件。有这些资料，报价会更接近真实项目费用。",
+            "q8": "玻璃隔间会增加办公室装修预算吗？",
+            "a8": "会。玻璃隔间通常比普通石膏板隔间更贵，因为涉及铝框、玻璃规格、门五金和安装精度。会议室和经理室常用玻璃隔间，但如果预算有限，数量要提前规划。",
+            "q9": "办公室装修费用包含家具和工位吗？",
+            "a9": "不一定。有些报价会包括活动家具、系统家具和工位，有些只包括隔间、地面、天花、电气、木工和油漆等装修工程。比较报价前，应确认办公椅、桌子、文件柜和活动家具是否包含。",
+            "q10": "可以保留原有地板、天花或空调来节省费用吗？",
+            "a10": "可以，前提是状况良好，并且业主或大厦管理接受。保留原有地板、天花龙骨、灯具或空调布局可以降低费用，但承包商应检查它们是否适合新布局，以及是否会留下还原或合规问题。",
+            "q11": "办公室装修应提前多久开始规划？",
+            "a11": "建议至少在目标搬入日期前8至12周开始规划。这样有足够时间处理布局、报价、业主或MCST提交、材料选择、审批检查和实际施工，避免不必要的赶工费用。",
+            "q12": "新加坡办公室装修常见延误原因是什么？",
+            "a12": "常见延误包括业主审批迟、MCST限制、缺少竣工图、喷淋或消防警报修改、地毯或家具延迟、下班后施工时间限制、卸货区预约问题，以及管理层临时更改布局。"
           },
           "cta": {
             "text": "准备办公室装修？把平面图、租约条件和预计员工人数发给我们，我们可以在开工前协助你估算实际办公室装修预算。",
@@ -1671,7 +1695,60 @@ const resources = {
         },
         "hero_badge": "规划指南",
         "title": "新加坡 HDB 翻新时间表（2026 指南）",
-        "subtitle": "一篇实用指南，说明翻新真正需要多久、常见延误从何而来，以及您何时能较实际地准备入住。"
+        "subtitle": "一篇实用指南，说明翻新真正需要多久、常见延误从何而来，以及您何时能较实际地准备入住。",
+        "faq": {
+          "title": "HDB 翻新时间 FAQ",
+          "items": {
+            "1": {
+              "q": "新加坡 HDB 翻新通常需要多久？",
+              "a": "多数新加坡 HDB 翻新，BTO 通常需要约 8 至 12 周， resale 组屋通常需要 10 至 16 周。Resale 项目一般更久，因为较常涉及拆除、重拉电线、给排水检查、防水和修补工程。"
+            },
+            "2": {
+              "q": "为什么 resale HDB 翻新通常比 BTO 更久？",
+              "a": "Resale HDB 通常有旧地砖、旧橱柜、旧电线、隐藏漏水或墙地面状况不平等问题。施工前需要先拆除、清理和检查现场情况，之后才能确认防水、泥水、电工和木工安排。"
+            },
+            "3": {
+              "q": "拿钥匙前应该提早多久开始规划 HDB 翻新？",
+              "a": "建议在拿钥匙前至少 2 至 3 个月开始规划。这样有足够时间确认平面布局、预算、材料、HDB 申请项目、橱柜设计和主要供应商，避免拿钥匙后才仓促决定。"
+            },
+            "4": {
+              "q": "哪些 HDB 翻新工程通常需要申请批准？",
+              "a": "常见需要申请或遵守 HDB 规定的工程包括墙体拆除、地面铺设、厕所防水、窗户工程、部分结构相关工程，以及可能影响邻居或建筑结构的项目。实际要求需根据单位情况和施工范围确认。"
+            },
+            "5": {
+              "q": "HDB 翻新中最容易造成延误的项目是什么？",
+              "a": "常见延误来自 HDB 申请、材料迟到、橱柜图纸反复修改、台面测量排期、厕所防水和试水、第三方供应商配合，以及业主临时更改设计或材料。"
+            },
+            "6": {
+              "q": "木工和台面工程会影响入住时间吗？",
+              "a": "会。木工需要现场量尺、确认图纸、工厂制作和安装。厨房台面通常要在橱柜安装后才能复尺和制作，如果水槽、龙头或电器迟到，台面和后续收尾也会被影响。"
+            },
+            "7": {
+              "q": "厕所翻新通常需要多久？",
+              "a": "一个厕所翻新通常需要约 2 至 4 周，视乎是否拆除旧砖、重做防水、铺砖、安装洁具和淋浴屏。两个厕所同时做可以节省部分时间，但仍要配合防水、试水和泥水工序。"
+            },
+            "8": {
+              "q": "可以一边住在家里一边进行 HDB 翻新吗？",
+              "a": "如果只是局部工程，有时可以安排分阶段施工。但如果是全屋翻新、厕所重做、地面更换或大量拆除工程，通常不建议入住，因为灰尘、噪音、用水和用电安排都会受影响。"
+            },
+            "9": {
+              "q": "如果材料是业主自己购买，会影响时间表吗？",
+              "a": "会。海外网购、Taobao 商品、定制灯具、电器、水槽或龙头如果迟到，可能影响木工、台面、电工和水喉安装。建议在施工前确认尺寸、规格和到货日期。"
+            },
+            "10": {
+              "q": "HDB 翻新时间表会不会因为农历新年或假期延长？",
+              "a": "会。农历新年前后、公共假期和旺季通常会影响工人安排、材料供应、工厂制作和运输时间。如果目标是在节日前入住，最好提早至少 3 至 4 个月规划。"
+            },
+            "11": {
+              "q": "应该预留多久给缺陷修补和收尾？",
+              "a": "建议预留至少 1 至 2 周给清洁、检查、补漆、五金调整、门缝调整、玻璃或台面小修，以及业主验收后的 touch-up。不要把搬家日期安排得太贴近完工日。"
+            },
+            "12": {
+              "q": "申请 HDB 翻新时间估算前，我应该准备什么？",
+              "a": "建议准备平面图、拿钥匙日期、目标入住日期、预算范围、需要保留或拆除的项目、厨房和厕所需求、主要电器尺寸，以及是否有第三方供应商。资料越完整，时间表越准确。"
+            }
+          }
+        }
       },
       "article_renovation_mistakes": {
         "meta": {
@@ -2543,6 +2620,12 @@ enT["insights_page"] = {
       title: "Office Renovation Cost Singapore (2026 Guide)",
       excerpt: "A practical office fit-out cost guide for Singapore businesses, covering budget by office size, M&E, data points, partitions, landlord approvals and reinstatement planning.",
       read_time: "8 min read"
+    },
+    "6": {
+      category: "Office Timeline Guide",
+      title: "Office Renovation Timeline Singapore (2026 Guide)",
+      excerpt: "A practical timeline guide for Singapore office renovation, covering landlord approval, MCST rules, M&E coordination, noisy works and handover planning.",
+      read_time: "9 min read"
     }
   },
   footer_block: {
@@ -2621,6 +2704,12 @@ zhT["insights_page"] = {
       title: "新加坡办公室翻新费用（2026 指南）",
       excerpt: "为新加坡企业整理办公室装修与 fit-out 预算，涵盖不同面积、机电工程、数据点、隔断、大厦审批及恢复原状规划。",
       read_time: "约 8 分钟"
+    },
+    "6": {
+      category: "办公室工期指南",
+      title: "新加坡办公室翻新时间表（2026 指南）",
+      excerpt: "为新加坡企业整理办公室装修工期，包括业主审批、MCST 规则、机电协调、噪音工程安排与交付规划。",
+      read_time: "约 9 分钟"
     }
   },
   footer_block: {
@@ -3839,125 +3928,6 @@ zhT["article_renovation_cost_2026"].cta = {
   body: "把您的平面图、房屋类型和预计翻新范围发给我们。我们可以在您确认材料、木作和现场工程前，协助判断预算是否实际。",
   button: "WhatsApp 咨询翻新预算"
 };
-
-
-// Final Day 2 translation corrections for the three residential insight articles and commercial article link box.
-// These override only affected keys and are placed before i18n.init so both EN/ZH render correctly.
-Object.assign(enT["article_hdb_timeline"].internal_links, {
-  eyebrow: "Related HDB renovation guides",
-  title: "Plan your HDB renovation with clearer budget and fewer delays",
-  cost_intro: "Before confirming your scope, compare your expected timeline with our",
-  cost_link: "Singapore renovation cost guide",
-  cost_outro: "so you can plan budget, carpentry, wet works and material decisions together.",
-  mistakes_intro: "To avoid delays from late decisions, owner-supplied items or unclear quotation scope, read our",
-  mistakes_link: "renovation mistakes Singapore homeowners should avoid",
-  mistakes_outro: "before renovation work starts."
-});
-Object.assign(zhT["article_hdb_timeline"].internal_links, {
-  eyebrow: "相关 HDB 翻新指南",
-  title: "用更清晰的预算与时间规划 HDB 翻新",
-  cost_intro: "确认工程范围前，可以先对照我们的",
-  cost_link: "新加坡翻新费用指南",
-  cost_outro: "一起规划预算、木作、湿作和材料决定。",
-  mistakes_intro: "为了避免因决定太迟、自购材料或报价范围不清造成延误，也建议阅读",
-  mistakes_link: "新加坡业主应避免的翻新错误",
-  mistakes_outro: "再开始安排翻新工程。"
-});
-Object.assign(enT["article_hdb_timeline"].cta, {
-  eyebrow: "HDB Renovation Planning",
-  title: "Need a realistic move-in timeline?",
-  body: "Send us your floor plan, key collection date and target move-in period. We can help you review the renovation sequence, likely approval items and practical timeline before work starts.",
-  button: "WhatsApp for HDB Timeline Advice"
-});
-Object.assign(zhT["article_hdb_timeline"].cta, {
-  eyebrow: "HDB 翻新规划",
-  title: "需要更实际的入住时间表？",
-  body: "把您的平面图、拿钥匙日期和目标入住时间发给我们。我们可以协助您预估工序、可能的审批项目和实际施工时间。",
-  button: "WhatsApp 咨询 HDB 翻新时间"
-});
-
-Object.assign(enT["article_renovation_cost_2026"].internal_links, {
-  eyebrow: "Related renovation guides",
-  title: "Plan your renovation with clearer cost, timeline and risk control",
-  timeline_intro: "If you are comparing renovation budget against the actual project schedule, read our",
-  timeline_link: "HDB renovation timeline guide",
-  timeline_outro: "to understand approval, delivery sequencing, carpentry lead time and common move-in delays.",
-  mistakes_intro: "To avoid unnecessary variation orders, also read our",
-  mistakes_link: "renovation mistakes Singapore homeowners should avoid",
-  mistakes_outro: "before confirming materials, layout and quotation items.",
-  calculator_intro: "For a quick starting estimate, use the",
-  calculator_link: "Singapore renovation cost calculator",
-  calculator_outro: "before sending your floor plan for a detailed contractor quotation."
-});
-Object.assign(zhT["article_renovation_cost_2026"].internal_links, {
-  eyebrow: "相关翻新指南",
-  title: "用更清楚的费用、工期和风险规划翻新",
-  timeline_intro: "如果你想把翻新预算和实际工期一起规划，可以阅读我们的",
-  timeline_link: "HDB 翻新时间表指南",
-  timeline_outro: "了解审批、施工顺序、木作交期和常见搬入延误。",
-  mistakes_intro: "为了避免不必要的追加费用，也建议阅读",
-  mistakes_link: "新加坡业主常见翻新错误",
-  mistakes_outro: "再确认材料、布局和报价项目。",
-  calculator_intro: "如果需要先做初步预算，可以使用",
-  calculator_link: "新加坡翻新费用计算器",
-  calculator_outro: "再把平面图发给我们准备更详细的承包商报价。"
-});
-Object.assign(enT["article_renovation_cost_2026"].cta, {
-  eyebrow: "Renovation Budget Planning",
-  title: "Want a more accurate renovation estimate?",
-  body: "Send us your floor plan, property type and preferred renovation scope. We can help you check whether your budget is realistic before you commit to materials, carpentry and site works.",
-  button: "WhatsApp for Renovation Budget Review"
-});
-Object.assign(zhT["article_renovation_cost_2026"].cta, {
-  eyebrow: "翻新预算规划",
-  title: "想获得更准确的翻新预算吗？",
-  body: "把您的平面图、房屋类型和预计翻新范围发给我们。我们可以在您确认材料、木作和现场工程前，协助判断预算是否实际。",
-  button: "WhatsApp 咨询翻新预算"
-});
-
-Object.assign(enT["article_renovation_mistakes"].internal_links, {
-  eyebrow: "Related renovation planning guides",
-  title: "Plan your renovation with clearer cost, timeline and scope control",
-  cost_prefix: "Before confirming your renovation scope, compare your expected budget with our",
-  cost_link: "Singapore renovation cost guide",
-  cost_suffix: "so you can check whether the quotation covers the right cost items.",
-  timeline_prefix: "If your main concern is move-in timing, read our",
-  timeline_link: "HDB renovation timeline guide",
-  timeline_suffix: "to understand where delays usually happen before work starts."
-});
-Object.assign(zhT["article_renovation_mistakes"].internal_links, {
-  eyebrow: "相关翻新规划指南",
-  title: "用更清晰的预算、时间与范围控制规划翻新",
-  cost_prefix: "确认翻新范围前，可以先对照我们的",
-  cost_link: "新加坡翻新费用指南",
-  cost_suffix: "检查报价是否包含正确的费用项目。",
-  timeline_prefix: "如果您最担心搬入时间，可以阅读我们的",
-  timeline_link: "HDB 翻新时间表指南",
-  timeline_suffix: "了解开工前最常发生延误的位置。"
-});
-Object.assign(enT["article_renovation_mistakes"].cta, {
-  eyebrow: "Avoid Costly Renovation Mistakes",
-  title: "Need a clearer renovation scope before signing?",
-  button: "WhatsApp for Scope Review"
-});
-Object.assign(zhT["article_renovation_mistakes"].cta, {
-  eyebrow: "避开昂贵翻新错误",
-  title: "签约前需要更清楚的工程范围吗？",
-  button: "WhatsApp 咨询范围检查"
-});
-
-Object.assign(enT["article_commercial_renovation_cost"], {
-  related_label: "Commercial renovation planning",
-  related_title: "Plan cost, timeline and office fit-out scope together",
-  related_office_cost: "For office-specific pricing, read our <officeCostLink>office renovation cost Singapore guide</officeCostLink> before confirming your fit-out budget.",
-  related_office_timeline: "If your lease handover date is fixed, review the <officeTimelineLink>office renovation timeline Singapore guide</officeTimelineLink> so approvals, M&E works and move-in planning are not underestimated."
-});
-Object.assign(zhT["article_commercial_renovation_cost"], {
-  related_label: "商业翻新规划",
-  related_title: "把费用、工期和办公室装修范围一起规划",
-  related_office_cost: "如需办公室专属费用参考，请先阅读我们的 <officeCostLink>新加坡办公室翻新费用指南</officeCostLink>，再确认 fit-out 预算。",
-  related_office_timeline: "如果租约交场日期已经确定，建议查看 <officeTimelineLink>新加坡办公室翻新时间表指南</officeTimelineLink>，避免低估审批、机电工程和搬入安排。"
-});
 
 i18n
   .use(LanguageDetector)
