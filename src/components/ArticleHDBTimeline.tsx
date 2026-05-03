@@ -251,6 +251,29 @@ export default function ArticleHDBTimeline() {
               </div>
             </div>
 
+
+
+            {/* ── RELATED PLANNING LINKS ── */}
+            <div className="mb-14 rounded-3xl border border-gray-200 bg-[#fffdf8] p-6 md:p-8 shadow-sm">
+              <p className="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-3">
+                {t('article_hdb_timeline.internal_links.eyebrow')}
+              </p>
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-4">
+                {t('article_hdb_timeline.internal_links.cost_intro')}{' '}
+                <a href="/insights/renovation-cost-singapore-2026" className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors">
+                  {t('article_hdb_timeline.internal_links.cost_link')}
+                </a>{' '}
+                {t('article_hdb_timeline.internal_links.cost_outro')}
+              </p>
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-0">
+                {t('article_hdb_timeline.internal_links.mistakes_intro')}{' '}
+                <a href="/insights/renovation-mistakes-singapore" className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors">
+                  {t('article_hdb_timeline.internal_links.mistakes_link')}
+                </a>{' '}
+                {t('article_hdb_timeline.internal_links.mistakes_outro')}
+              </p>
+            </div>
+
             {/* ── FINAL ── */}
             <div className="mb-14">
               <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5 pb-4 border-b border-gray-200">

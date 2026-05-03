@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function OfficeRenovationCostSingapore() {
@@ -138,6 +139,35 @@ export default function OfficeRenovationCostSingapore() {
               <p>{t("insights.officeCost.faq.a4")}</p>
             </div>
           </div>
+        </section>
+
+        {/* Related Reading */}
+        <section className="mb-10 border-t border-neutral-200 pt-8">
+          <h2 className="text-2xl font-semibold mb-4">
+            {t("insights.officeCost.related.title")}
+          </h2>
+
+          <p className="mb-4">
+            {t("insights.officeCost.related.timelinePrefix")}{" "}
+            <Link
+              to="/insights/office-renovation-timeline-singapore"
+              className="underline underline-offset-4 hover:text-neutral-950"
+            >
+              {t("insights.officeCost.related.timelineLink")}
+            </Link>
+            {t("insights.officeCost.related.timelineSuffix")}
+          </p>
+
+          <p>
+            {t("insights.officeCost.related.servicePrefix")}{" "}
+            <Link
+              to="/commercial/office-renovation"
+              className="underline underline-offset-4 hover:text-neutral-950"
+            >
+              {t("insights.officeCost.related.serviceLink")}
+            </Link>
+            {t("insights.officeCost.related.serviceSuffix")}
+          </p>
         </section>
 
         {/* CTA */}

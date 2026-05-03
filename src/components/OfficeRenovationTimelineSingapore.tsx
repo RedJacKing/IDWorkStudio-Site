@@ -177,6 +177,16 @@ export default function OfficeRenovationTimelineSingapore() {
               ))}
             </div>
 
+            <div className="rounded-2xl border border-gray-200 bg-off-white p-6 my-8">
+              <p className="text-gray-600 text-base leading-[1.8] mb-0">
+                {t('article_office_renovation_timeline.internal_links.cost_intro')}{' '}
+                <a href="/insights/office-renovation-cost-singapore" className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors">
+                  {t('article_office_renovation_timeline.internal_links.cost_link')}
+                </a>{' '}
+                {t('article_office_renovation_timeline.internal_links.cost_outro')}
+              </p>
+            </div>
+
             <div className="bg-dark-charcoal text-white rounded-2xl p-7 md:p-8 my-10">
               <p className="text-xs uppercase tracking-[0.24em] text-gold font-bold mb-3">
                 {t('article_office_renovation_timeline.client_concerns.eyebrow')}
@@ -233,6 +243,16 @@ export default function OfficeRenovationTimelineSingapore() {
             <div className="rounded-2xl border border-gold/30 bg-gold/10 p-6 my-8">
               <p className="text-charcoal text-base leading-[1.8] mb-0">
                 {t('article_office_renovation_timeline.gantt.note')}
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 my-8 shadow-sm">
+              <p className="text-gray-600 text-base leading-[1.8] mb-0">
+                {t('article_office_renovation_timeline.internal_links.service_intro')}{' '}
+                <a href="/commercial/office-renovation" className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors">
+                  {t('article_office_renovation_timeline.internal_links.service_link')}
+                </a>{' '}
+                {t('article_office_renovation_timeline.internal_links.service_outro')}
               </p>
             </div>
 

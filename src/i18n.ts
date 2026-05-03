@@ -3369,6 +3369,14 @@ enT["article_office_renovation_timeline"] = {
     title: "How long does office renovation take in Singapore?",
     body: "As a working guide, a small office usually takes 3 to 6 weeks, a medium office takes 6 to 10 weeks, and a large or corporate office takes 10 to 16 weeks. These ranges include planning, approval, site works and handover. A simple refresh can be faster, but once partition, electrical, data, aircon or fire safety works are involved, the schedule must allow proper coordination."
   },
+  internal_links: {
+    cost_intro: "If you are planning your office renovation timeline based on budget, read our",
+    cost_link: "office renovation cost guide in Singapore",
+    cost_outro: "to understand how scope, M&E works, landlord requirements and approvals affect your total project cost.",
+    service_intro: "For a full overview of office renovation requirements, including landlord approval, MCST submission and SCDF coordination where applicable, refer to our",
+    service_link: "office renovation Singapore service page",
+    service_outro: "before confirming your lease handover and move-in schedule."
+  },
   timeline_ranges: {
     "1": { title: "Small office", body: "3–6 weeks" },
     "2": { title: "Medium office", body: "6–10 weeks" },
@@ -3480,6 +3488,14 @@ zhT["article_office_renovation_timeline"] = {
     title: "新加坡办公室翻新需要多久？",
     body: "作为实际规划参考，小型办公室通常需要 3 至 6 周，中型办公室需要 6 至 10 周，大型或企业办公室需要 10 至 16 周。这些时间包括规划、审批、现场施工与移交。简单翻新可能更快，但只要涉及隔墙、电工、网络、空调或消防安全工程，就必须预留协调时间。"
   },
+  internal_links: {
+    cost_intro: "如果你是根据预算来规划办公室翻新工期，也可以先阅读我们的",
+    cost_link: "新加坡办公室翻新费用指南",
+    cost_outro: "了解工程范围、机电工程、大厦要求和审批如何影响整体项目费用。",
+    service_intro: "如果你需要了解办公室翻新的完整要求，包括业主审批、MCST 申请以及适用情况下的 SCDF 协调，可以参考我们的",
+    service_link: "新加坡办公室翻新服务页面",
+    service_outro: "再确认租约交接日期和搬入时间。"
+  },
   timeline_ranges: {
     "1": { title: "小型办公室", body: "3–6 周" },
     "2": { title: "中型办公室", body: "6–10 周" },
@@ -3576,6 +3592,121 @@ zhT["article_office_renovation_timeline"] = {
   }
 };
 
+
+
+// ─────────────────────────────────────────────
+// Internal link text additions for article cluster
+// Added only for contextual internal links across the six Insights articles.
+// ─────────────────────────────────────────────
+Object.assign(enT["article_hdb_timeline"], {
+  internal_links: {
+    eyebrow: "Related planning guides",
+    cost_intro: "For budget planning, compare this schedule with our",
+    cost_link: "Renovation Cost in Singapore (2026 Guide)",
+    cost_outro: "so you can see how scope, wet works and carpentry affect both time and budget.",
+    mistakes_intro: "Before starting works, also read our",
+    mistakes_link: "renovation mistakes guide",
+    mistakes_outro: "to avoid late decisions, missing materials and rework that can delay handover."
+  }
+});
+
+Object.assign(zhT["article_hdb_timeline"], {
+  internal_links: {
+    eyebrow: "相关规划指南",
+    cost_intro: "做预算规划时，可以同时参考我们的",
+    cost_link: "新加坡翻新费用指南（2026）",
+    cost_outro: "了解工程范围、湿作与木作如何同时影响工期和预算。",
+    mistakes_intro: "开工前也建议阅读我们的",
+    mistakes_link: "翻新常见错误指南",
+    mistakes_outro: "避免太迟决定、材料未到位或返工，影响最终交付。"
+  }
+});
+
+Object.assign(enT["article_renovation_cost_2026"], {
+  internal_links: {
+    eyebrow: "Related planning guides",
+    title: "Plan budget and timeline together",
+    timeline_intro: "To understand how renovation stages affect budget, read our",
+    timeline_link: "HDB renovation timeline guide",
+    timeline_outro: ".",
+    mistakes_intro: "You should also review common pitfalls in our",
+    mistakes_link: "renovation mistakes guide",
+    mistakes_outro: "to avoid unnecessary cost overruns."
+  }
+});
+
+Object.assign(zhT["article_renovation_cost_2026"], {
+  internal_links: {
+    eyebrow: "相关规划指南",
+    title: "把预算和工期一起规划",
+    timeline_intro: "如要了解翻新阶段如何影响预算，可阅读我们的",
+    timeline_link: "HDB 翻新时间表指南",
+    timeline_outro: "。",
+    mistakes_intro: "也建议查看我们的",
+    mistakes_link: "翻新常见错误指南",
+    mistakes_outro: "以避免不必要的超支。"
+  }
+});
+
+enT["article_internal_links"] = {
+  residential_label: "Residential planning",
+  renovation_mistakes: {
+    title: "Plan your budget and timeline before works start",
+    cost_prefix: "For realistic budget ranges, start with our",
+    cost_link: "renovation cost guide",
+    cost_suffix: ".",
+    timeline_prefix: "To understand site sequencing and handover timing, read our",
+    timeline_link: "HDB renovation timeline guide",
+    timeline_suffix: "."
+  }
+};
+
+zhT["article_internal_links"] = {
+  residential_label: "住宅翻新规划",
+  renovation_mistakes: {
+    title: "开工前先规划预算与工期",
+    cost_prefix: "如要了解实际预算范围，可先阅读我们的",
+    cost_link: "翻新费用指南",
+    cost_suffix: "。",
+    timeline_prefix: "如要了解现场工序和交付时间，可阅读我们的",
+    timeline_link: "HDB 翻新时间表指南",
+    timeline_suffix: "。"
+  }
+};
+
+Object.assign(enT.insights.article4, {
+  related_label: "Related office planning",
+  related_title: "Office cost and timeline guides",
+  related_office_cost: "If your commercial project is mainly an office fit-out, compare the broad commercial ranges with our <officeCostLink>office renovation cost guide</officeCostLink> for workstation, meeting room, M&E and landlord approval budgeting.",
+  related_office_timeline: "For scheduling, approval and handover planning, read our <officeTimelineLink>office renovation timeline guide</officeTimelineLink> before committing to your lease move-in date."
+});
+
+Object.assign(zhT.insights.article4, {
+  related_label: "办公室规划相关阅读",
+  related_title: "办公室费用与工期指南",
+  related_office_cost: "如果您的商业项目主要是办公室 fit-out，可对照我们的 <officeCostLink>办公室翻新费用指南</officeCostLink>，了解工作位、会议室、机电工程和业主审批如何影响预算。",
+  related_office_timeline: "如要规划排期、审批和交付，请在确认租约搬入日期前阅读我们的 <officeTimelineLink>办公室翻新时间表指南</officeTimelineLink>。"
+});
+
+enT.insights.officeCost.related = {
+  title: "Related office planning guides",
+  timelinePrefix: "To plan your handover date properly, read our",
+  timelineLink: "office renovation timeline guide",
+  timelineSuffix: " before confirming your move-in schedule.",
+  servicePrefix: "For the full service scope, review our",
+  serviceLink: "office renovation Singapore service page",
+  serviceSuffix: "."
+};
+
+zhT.insights.officeCost.related = {
+  title: "办公室规划相关阅读",
+  timelinePrefix: "如要更准确规划交付日期，可阅读我们的",
+  timelineLink: "办公室翻新时间表指南",
+  timelineSuffix: "，再确认搬入时间。",
+  servicePrefix: "如要了解完整服务范围，可查看我们的",
+  serviceLink: "新加坡办公室翻新服务页面",
+  serviceSuffix: "。"
+};
 
 i18n
   .use(LanguageDetector)

@@ -523,6 +523,43 @@ export default function CommercialRenovationCostSingapore() {
               </p>
             </section>
 
+            <section className="mb-16 rounded-3xl border border-gray-200 bg-[#fffdf8] p-7 md:p-9 shadow-sm">
+              <p className="text-xs uppercase tracking-[0.22em] text-gold font-bold mb-3">
+                {t(`${ARTICLE_KEY}.related_label`)}
+              </p>
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5">
+                {t(`${ARTICLE_KEY}.related_title`)}
+              </h2>
+              <div className="space-y-5 text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
+                <p>
+                  <Trans
+                    i18nKey={`${ARTICLE_KEY}.related_office_cost`}
+                    components={{
+                      officeCostLink: (
+                        <Link
+                          to="/insights/office-renovation-cost-singapore"
+                          className="text-charcoal font-semibold underline underline-offset-4 hover:text-gold transition-colors"
+                        />
+                      ),
+                    }}
+                  />
+                </p>
+                <p>
+                  <Trans
+                    i18nKey={`${ARTICLE_KEY}.related_office_timeline`}
+                    components={{
+                      officeTimelineLink: (
+                        <Link
+                          to="/insights/office-renovation-timeline-singapore"
+                          className="text-charcoal font-semibold underline underline-offset-4 hover:text-gold transition-colors"
+                        />
+                      ),
+                    }}
+                  />
+                </p>
+              </div>
+            </section>
+
             <section className="mb-16">
               <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5 pb-4 border-b border-gray-200">
                 {t(`${ARTICLE_KEY}.faq_title`)}

@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 type StringMap = Record<string, string>;
@@ -285,6 +286,36 @@ export default function ArticleRenovationCost2026() {
             <P>{t('article_renovation_cost_2026.sections.final_p1')}</P>
             <P>{t('article_renovation_cost_2026.sections.final_p2')}</P>
             <P>{t('article_renovation_cost_2026.sections.final_p3')}</P>
+
+            {/* ── RELATED READING (INTERNAL LINKING) ── */}
+            <div className="mt-16 rounded-3xl border border-gray-200 bg-off-white p-7 md:p-8 shadow-sm">
+              <p className="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-3">
+                {t('article_renovation_cost_2026.internal_links.eyebrow')}
+              </p>
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5">
+                {t('article_renovation_cost_2026.internal_links.title')}
+              </h2>
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-5">
+                {t('article_renovation_cost_2026.internal_links.timeline_intro')}{' '}
+                <Link
+                  to="/insights/hdb-renovation-timeline-singapore"
+                  className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors"
+                >
+                  {t('article_renovation_cost_2026.internal_links.timeline_link')}
+                </Link>
+                {t('article_renovation_cost_2026.internal_links.timeline_outro')}
+              </p>
+              <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85] mb-0">
+                {t('article_renovation_cost_2026.internal_links.mistakes_intro')}{' '}
+                <Link
+                  to="/insights/renovation-mistakes-singapore"
+                  className="text-charcoal underline underline-offset-4 decoration-gold hover:text-gold transition-colors"
+                >
+                  {t('article_renovation_cost_2026.internal_links.mistakes_link')}
+                </Link>
+                {t('article_renovation_cost_2026.internal_links.mistakes_outro')}
+              </p>
+            </div>
 
             {/* ── NEXT ARTICLE FOOTER ── */}
             <div className="mt-14 pt-8 border-t border-gray-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">

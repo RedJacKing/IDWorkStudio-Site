@@ -212,6 +212,37 @@ export default function ArticleRenovationMistakes() {
               </p>
             </section>
 
+            <section className="mb-16 rounded-3xl border border-gray-200 bg-[#fffdf8] p-7 shadow-sm md:p-9">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-gold">
+                {t('article_internal_links.residential_label')}
+              </p>
+              <h2 className="mb-5 font-serif text-2xl font-semibold text-charcoal md:text-3xl">
+                {t('article_internal_links.renovation_mistakes.title')}
+              </h2>
+              <div className="space-y-4 text-base leading-[1.85] text-gray-600 md:text-[1.05rem]">
+                <p>
+                  {t('article_internal_links.renovation_mistakes.cost_prefix')}{' '}
+                  <Link
+                    to="/insights/renovation-cost-singapore-2026"
+                    className="text-charcoal underline decoration-gold/50 underline-offset-4 transition-colors hover:text-gold"
+                  >
+                    {t('article_internal_links.renovation_mistakes.cost_link')}
+                  </Link>
+                  {t('article_internal_links.renovation_mistakes.cost_suffix')}
+                </p>
+                <p>
+                  {t('article_internal_links.renovation_mistakes.timeline_prefix')}{' '}
+                  <Link
+                    to="/insights/hdb-renovation-timeline-singapore"
+                    className="text-charcoal underline decoration-gold/50 underline-offset-4 transition-colors hover:text-gold"
+                  >
+                    {t('article_internal_links.renovation_mistakes.timeline_link')}
+                  </Link>
+                  {t('article_internal_links.renovation_mistakes.timeline_suffix')}
+                </p>
+              </div>
+            </section>
+
             <section className="rounded-3xl bg-[#151515] p-7 text-white md:p-10">
               <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
