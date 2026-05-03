@@ -3840,54 +3840,124 @@ zhT["article_renovation_cost_2026"].cta = {
   button: "WhatsApp 咨询翻新预算"
 };
 
-// Additional affected article link-box translations.
-enT["article_hdb_timeline"].internal_links = {
-  ...enT["article_hdb_timeline"].internal_links,
+
+// Final Day 2 translation corrections for the three residential insight articles and commercial article link box.
+// These override only affected keys and are placed before i18n.init so both EN/ZH render correctly.
+Object.assign(enT["article_hdb_timeline"].internal_links, {
+  eyebrow: "Related HDB renovation guides",
+  title: "Plan your HDB renovation with clearer budget and fewer delays",
   cost_intro: "Before confirming your scope, compare your expected timeline with our",
   cost_link: "Singapore renovation cost guide",
   cost_outro: "so you can plan budget, carpentry, wet works and material decisions together.",
   mistakes_intro: "To avoid delays from late decisions, owner-supplied items or unclear quotation scope, read our",
   mistakes_link: "renovation mistakes Singapore homeowners should avoid",
   mistakes_outro: "before renovation work starts."
-};
-zhT["article_hdb_timeline"].internal_links = {
-  ...zhT["article_hdb_timeline"].internal_links,
+});
+Object.assign(zhT["article_hdb_timeline"].internal_links, {
+  eyebrow: "相关 HDB 翻新指南",
+  title: "用更清晰的预算与时间规划 HDB 翻新",
   cost_intro: "确认工程范围前，可以先对照我们的",
   cost_link: "新加坡翻新费用指南",
   cost_outro: "一起规划预算、木作、湿作和材料决定。",
   mistakes_intro: "为了避免因决定太迟、自购材料或报价范围不清造成延误，也建议阅读",
   mistakes_link: "新加坡业主应避免的翻新错误",
   mistakes_outro: "再开始安排翻新工程。"
-};
+});
+Object.assign(enT["article_hdb_timeline"].cta, {
+  eyebrow: "HDB Renovation Planning",
+  title: "Need a realistic move-in timeline?",
+  body: "Send us your floor plan, key collection date and target move-in period. We can help you review the renovation sequence, likely approval items and practical timeline before work starts.",
+  button: "WhatsApp for HDB Timeline Advice"
+});
+Object.assign(zhT["article_hdb_timeline"].cta, {
+  eyebrow: "HDB 翻新规划",
+  title: "需要更实际的入住时间表？",
+  body: "把您的平面图、拿钥匙日期和目标入住时间发给我们。我们可以协助您预估工序、可能的审批项目和实际施工时间。",
+  button: "WhatsApp 咨询 HDB 翻新时间"
+});
 
-enT["article_renovation_mistakes"].internal_links = {
-  ...enT["article_renovation_mistakes"].internal_links,
+Object.assign(enT["article_renovation_cost_2026"].internal_links, {
+  eyebrow: "Related renovation guides",
+  title: "Plan your renovation with clearer cost, timeline and risk control",
+  timeline_intro: "If you are comparing renovation budget against the actual project schedule, read our",
+  timeline_link: "HDB renovation timeline guide",
+  timeline_outro: "to understand approval, delivery sequencing, carpentry lead time and common move-in delays.",
+  mistakes_intro: "To avoid unnecessary variation orders, also read our",
+  mistakes_link: "renovation mistakes Singapore homeowners should avoid",
+  mistakes_outro: "before confirming materials, layout and quotation items.",
+  calculator_intro: "For a quick starting estimate, use the",
+  calculator_link: "Singapore renovation cost calculator",
+  calculator_outro: "before sending your floor plan for a detailed contractor quotation."
+});
+Object.assign(zhT["article_renovation_cost_2026"].internal_links, {
+  eyebrow: "相关翻新指南",
+  title: "用更清楚的费用、工期和风险规划翻新",
+  timeline_intro: "如果你想把翻新预算和实际工期一起规划，可以阅读我们的",
+  timeline_link: "HDB 翻新时间表指南",
+  timeline_outro: "了解审批、施工顺序、木作交期和常见搬入延误。",
+  mistakes_intro: "为了避免不必要的追加费用，也建议阅读",
+  mistakes_link: "新加坡业主常见翻新错误",
+  mistakes_outro: "再确认材料、布局和报价项目。",
+  calculator_intro: "如果需要先做初步预算，可以使用",
+  calculator_link: "新加坡翻新费用计算器",
+  calculator_outro: "再把平面图发给我们准备更详细的承包商报价。"
+});
+Object.assign(enT["article_renovation_cost_2026"].cta, {
+  eyebrow: "Renovation Budget Planning",
+  title: "Want a more accurate renovation estimate?",
+  body: "Send us your floor plan, property type and preferred renovation scope. We can help you check whether your budget is realistic before you commit to materials, carpentry and site works.",
+  button: "WhatsApp for Renovation Budget Review"
+});
+Object.assign(zhT["article_renovation_cost_2026"].cta, {
+  eyebrow: "翻新预算规划",
+  title: "想获得更准确的翻新预算吗？",
+  body: "把您的平面图、房屋类型和预计翻新范围发给我们。我们可以在您确认材料、木作和现场工程前，协助判断预算是否实际。",
+  button: "WhatsApp 咨询翻新预算"
+});
+
+Object.assign(enT["article_renovation_mistakes"].internal_links, {
+  eyebrow: "Related renovation planning guides",
+  title: "Plan your renovation with clearer cost, timeline and scope control",
   cost_prefix: "Before confirming your renovation scope, compare your expected budget with our",
   cost_link: "Singapore renovation cost guide",
   cost_suffix: "so you can check whether the quotation covers the right cost items.",
   timeline_prefix: "If your main concern is move-in timing, read our",
   timeline_link: "HDB renovation timeline guide",
   timeline_suffix: "to understand where delays usually happen before work starts."
-};
-zhT["article_renovation_mistakes"].internal_links = {
-  ...zhT["article_renovation_mistakes"].internal_links,
+});
+Object.assign(zhT["article_renovation_mistakes"].internal_links, {
+  eyebrow: "相关翻新规划指南",
+  title: "用更清晰的预算、时间与范围控制规划翻新",
   cost_prefix: "确认翻新范围前，可以先对照我们的",
   cost_link: "新加坡翻新费用指南",
   cost_suffix: "检查报价是否包含正确的费用项目。",
   timeline_prefix: "如果您最担心搬入时间，可以阅读我们的",
   timeline_link: "HDB 翻新时间表指南",
   timeline_suffix: "了解开工前最常发生延误的位置。"
-};
+});
+Object.assign(enT["article_renovation_mistakes"].cta, {
+  eyebrow: "Avoid Costly Renovation Mistakes",
+  title: "Need a clearer renovation scope before signing?",
+  button: "WhatsApp for Scope Review"
+});
+Object.assign(zhT["article_renovation_mistakes"].cta, {
+  eyebrow: "避开昂贵翻新错误",
+  title: "签约前需要更清楚的工程范围吗？",
+  button: "WhatsApp 咨询范围检查"
+});
 
-enT["article_commercial_renovation_cost"].related_label = "Commercial renovation planning";
-enT["article_commercial_renovation_cost"].related_title = "Plan cost, timeline and office fit-out scope together";
-enT["article_commercial_renovation_cost"].related_office_cost = "For office-specific pricing, read our <officeCost>office renovation cost Singapore guide</officeCost> before confirming your fit-out budget.";
-enT["article_commercial_renovation_cost"].related_office_timeline = "If your lease handover date is fixed, review the <officeTimeline>office renovation timeline Singapore guide</officeTimeline> so approvals, M&E works and move-in planning are not underestimated.";
-zhT["article_commercial_renovation_cost"].related_label = "商业翻新规划";
-zhT["article_commercial_renovation_cost"].related_title = "把费用、工期和办公室装修范围一起规划";
-zhT["article_commercial_renovation_cost"].related_office_cost = "如需办公室专属费用参考，请先阅读我们的 <officeCost>新加坡办公室翻新费用指南</officeCost>，再确认 fit-out 预算。";
-zhT["article_commercial_renovation_cost"].related_office_timeline = "如果租约交场日期已经确定，建议查看 <officeTimeline>新加坡办公室翻新时间表指南</officeTimeline>，避免低估审批、机电工程和搬入安排。";
-
+Object.assign(enT["article_commercial_renovation_cost"], {
+  related_label: "Commercial renovation planning",
+  related_title: "Plan cost, timeline and office fit-out scope together",
+  related_office_cost: "For office-specific pricing, read our <officeCostLink>office renovation cost Singapore guide</officeCostLink> before confirming your fit-out budget.",
+  related_office_timeline: "If your lease handover date is fixed, review the <officeTimelineLink>office renovation timeline Singapore guide</officeTimelineLink> so approvals, M&E works and move-in planning are not underestimated."
+});
+Object.assign(zhT["article_commercial_renovation_cost"], {
+  related_label: "商业翻新规划",
+  related_title: "把费用、工期和办公室装修范围一起规划",
+  related_office_cost: "如需办公室专属费用参考，请先阅读我们的 <officeCostLink>新加坡办公室翻新费用指南</officeCostLink>，再确认 fit-out 预算。",
+  related_office_timeline: "如果租约交场日期已经确定，建议查看 <officeTimelineLink>新加坡办公室翻新时间表指南</officeTimelineLink>，避免低估审批、机电工程和搬入安排。"
+});
 
 i18n
   .use(LanguageDetector)
