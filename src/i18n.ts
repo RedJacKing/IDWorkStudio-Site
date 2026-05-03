@@ -382,17 +382,7 @@ const resources = {
             "q5": "What should I check before signing an office lease?",
             "a5": "Check power capacity, aircon operating hours, ceiling condition, sprinkler layout, reinstatement clause, loading access, floor loading, data point requirements and whether the landlord allows your planned layout.",
             "q6": "Is reinstatement part of office renovation cost?",
-            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out.",
-            "q7": "How long does office renovation take in Singapore?",
-            "a7": "Most office renovation projects in Singapore take about 6 to 10 weeks, including design, landlord or building management approval, site works and handover. Larger offices, Grade A buildings, SCDF-related works and after-hours restrictions can extend the timeline.",
-            "q8": "What is the cheapest way to renovate an office?",
-            "a8": "The cheapest practical way is to keep the existing ceiling, flooring, aircon layout and electrical trunking where possible. Use loose furniture instead of excessive built-in carpentry, avoid unnecessary glass rooms and confirm building rules before committing to the layout.",
-            "q9": "Do office renovation costs include furniture?",
-            "a9": "Usually, office renovation costs do not include loose furniture unless stated in the quotation. Built-in carpentry such as reception counters, pantry cabinets and storage cabinets may be included, while workstations, chairs and loose tables are often priced separately.",
-            "q10": "Why is office renovation more complex than residential renovation?",
-            "a10": "Office renovation involves landlord approval, building management rules, MCST requirements, fire safety coordination, M&E services, data cabling, working-hour restrictions and reinstatement obligations. These commercial requirements add more coordination than a typical residential renovation.",
-            "q11": "Can ID Work Studio help estimate office renovation before lease signing?",
-            "a11": "Yes. If you provide the floor plan, lease condition, building requirements and estimated headcount, ID Work Studio can help assess the likely fit-out budget, approval risks and key cost drivers before you commit to the office unit."
+            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out."
           },
           "cta": {
             "text": "Planning an office renovation? Send us your floor plan, lease condition and rough headcount. We can help you estimate a practical office fit-out budget before work starts.",
@@ -638,12 +628,6 @@ const resources = {
             "category": "Office Cost Guide",
             "title": "Office Renovation Cost Singapore (2026 Guide)",
             "excerpt": "A practical contractor guide to office renovation cost by size, including workstations, meeting rooms, data cabling, landlord approvals and reinstatement planning.",
-            "read_time": "8 min read"
-          },
-          "6": {
-            "category": "Timeline Guide",
-            "title": "Office Renovation Timeline Singapore",
-            "excerpt": "A practical guide to office renovation timelines in Singapore, covering landlord approval, M&E coordination, site works, move-in planning and common causes of delay.",
             "read_time": "8 min read"
           }
         },
@@ -1412,17 +1396,7 @@ const resources = {
             "q5": "签办公室租约前应该检查什么？",
             "a5": "建议检查电力容量、空调供应时间、天花状况、喷淋位置、还原条款、卸货通道、楼面承重、网络点需求以及业主是否允许你的规划布局。",
             "q6": "还原费用是否包含在办公室装修费用内？",
-            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。",
-            "q7": "新加坡办公室装修一般需要多久？",
-            "a7": "多数新加坡办公室装修项目需要约6至10周，包括设计、业主或大厦管理审批、现场施工与交付。较大型办公室、Grade A大厦、涉及SCDF的工程或只能在下班后施工的项目，时间可能更长。",
-            "q8": "办公室装修最省钱的方法是什么？",
-            "a8": "较实际的省钱方法是尽量保留现有天花、地面、空调布局与电线槽。可多使用活动家具，减少过多固定木工和玻璃房，并在确认布局前先了解大厦施工规定。",
-            "q9": "办公室装修费用包括家具吗？",
-            "a9": "通常办公室装修费用不包括活动家具，除非报价中明确列明。接待台、茶水间柜和储物柜等固定木工可能包含在装修范围内，但工位、椅子和活动桌一般会另外报价。",
-            "q10": "为什么办公室装修比住宅装修复杂？",
-            "a10": "办公室装修涉及业主审批、大厦管理规定、MCST要求、消防协调、机电服务、网络布线、施工时段限制和未来还原责任。这些商业要求比一般住宅装修需要更多协调。",
-            "q11": "ID Work Studio可以在签租约前协助估算办公室装修费用吗？",
-            "a11": "可以。如果你提供平面图、租约条件、大厦装修规定和预计员工人数，ID Work Studio可以在你确认办公室单位前，协助评估大概装修预算、审批风险和主要费用因素。"
+            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。"
           },
           "cta": {
             "text": "准备办公室装修？把平面图、租约条件和预计员工人数发给我们，我们可以在开工前协助你估算实际办公室装修预算。",
@@ -1668,12 +1642,6 @@ const resources = {
             "category": "办公室费用指南",
             "title": "新加坡办公室装修费用（2026指南）",
             "excerpt": "从承包商角度说明不同面积办公室装修费用，包括工位、会议室、网络布线、业主审批与还原规划。",
-            "read_time": "约 8 分钟"
-          },
-          "6": {
-            "category": "时间指南",
-            "title": "新加坡办公室装修时间表",
-            "excerpt": "实用说明新加坡办公室装修工期，包括业主审批、机电协调、现场施工、搬入安排与常见延误原因。",
             "read_time": "约 8 分钟"
           }
         },
