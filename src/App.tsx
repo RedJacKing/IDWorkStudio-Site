@@ -252,8 +252,8 @@ function LandingPage() {
 
       <Hero />
       <Services />
-      <Process />
       <HomepageAuthoritySections />
+      <Process />
       <Contact />
       <StickyMobileNav />
     </>
