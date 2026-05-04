@@ -247,3 +247,13 @@
   to     = "/renovation-cost-calculator.html"
   status = 200
   force  = true
+
+# =========================================================
+# 8) HDB RENOVATION STYLE QUIZ STANDALONE PAGE
+# =========================================================
+
+[[redirects]]
+  from   = "/hdb-renovation-style-quiz"
+  to     = "/hdb-renovation-style-quiz.html"
+  status = 200
+  force  = true
