@@ -247,7 +247,7 @@ function HomepageInternalLinks() {
   }>;
 
   return (
-    <section className="bg-[#f8f5ef] px-4 pb-20 sm:px-6 lg:px-8">
+    <section className="bg-[#f8f5ef] px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl rounded-[2rem] border border-black/5 bg-white/80 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-8">
         <h2 className="text-center font-serif text-3xl font-bold leading-tight text-dark-charcoal md:text-4xl">
           {t('homepage_authority.internal_links.title')}
