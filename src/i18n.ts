@@ -10,6 +10,7 @@ const resources = {
         "home": "Home",
         "residential": "Residential",
         "commercial": "Commercial",
+        "styleQuiz": "Style Quiz",
         "insights": "Insights",
         "gallery": "Gallery",
         "contact": "Contact"
@@ -1030,6 +1031,7 @@ const resources = {
         "home": "首页",
         "residential": "住宅设计",
         "commercial": "商业空间",
+        "styleQuiz": "风格测验",
         "insights": "见解",
         "gallery": "作品集",
         "contact": "联系我们"

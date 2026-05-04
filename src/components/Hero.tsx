@@ -152,6 +152,14 @@ export default function Hero() {
               {t('hero.cta')}
             </Link>
 
+            {/* Style Quiz */}
+            <a
+              href="/hdb-renovation-style-quiz"
+              className="w-full sm:w-[260px] px-8 py-4 bg-transparent text-white/80 text-sm uppercase tracking-[0.2em] hover:text-gold hover:border-gold/60 transition-all duration-300 font-medium border border-white/25 rounded-full backdrop-blur-[5px] text-center"
+            >
+              Style Quiz
+            </a>
+
             {/* WhatsApp */}
             <a
               href="https://wa.me/6598333085"
