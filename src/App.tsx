@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import type { RouteRecord } from 'vite-react-ssg';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { MapPin, Phone, Mail, Building2 } from 'lucide-react';
@@ -70,6 +70,173 @@ function LanguagePersistence() {
   return null;
 }
 
+
+function HomepageAuthoritySections() {
+  const { t } = useTranslation();
+
+  const quickAnswers = t('homepage_authority.quick_answers.items', { returnObjects: true }) as Array<{
+    title: string;
+    text: string;
+    link: string;
+    label: string;
+  }>;
+  const featuredInsights = t('homepage_authority.featured_insights.items', { returnObjects: true }) as Array<{
+    title: string;
+    text: string;
+    link: string;
+  }>;
+  const planningTools = t('homepage_authority.planning_tools.items', { returnObjects: true }) as Array<{
+    title: string;
+    text: string;
+    href: string;
+    label: string;
+  }>;
+  const trustSignals = t('homepage_authority.trust.signals', { returnObjects: true }) as string[];
+  const projectSnippets = t('homepage_authority.project_snippets.items', { returnObjects: true }) as Array<{
+    type: string;
+    size: string;
+    range: string;
+    duration: string;
+  }>;
+  const homepageFaqs = t('homepage_authority.faq.items', { returnObjects: true }) as Array<{
+    question: string;
+    answer: string;
+    link: string;
+  }>;
+
+  return (
+    <main className="bg-[#f8f5ef] text-dark-charcoal">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 max-w-3xl">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{t('homepage_authority.quick_answers.eyebrow')}</p>
+            <h2 className="font-serif text-3xl font-bold leading-tight md:text-5xl">{t('homepage_authority.quick_answers.title')}</h2>
+            <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base">
+              {t('homepage_authority.quick_answers.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {quickAnswers.map((item) => (
+              <article key={item.title} className="rounded-[2rem] border border-black/5 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
+                <h3 className="font-serif text-2xl font-semibold text-dark-charcoal">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-gray-600">{item.text}</p>
+                <Link to={item.link} className="mt-5 inline-flex text-xs font-semibold uppercase tracking-[0.18em] text-gold hover:text-gold-hover">
+                  {item.label}
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{t('homepage_authority.featured_insights.eyebrow')}</p>
+            <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{t('homepage_authority.featured_insights.title')}</h2>
+            <p className="mt-4 text-sm leading-7 text-gray-600">
+              {t('homepage_authority.featured_insights.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid gap-4">
+            {featuredInsights.map((item) => (
+              <Link
+                key={item.title}
+                to={item.link}
+                className="group rounded-[1.75rem] border border-black/5 bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(0,0,0,0.09)]"
+              >
+                <h3 className="font-serif text-2xl font-semibold text-dark-charcoal group-hover:text-gold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600">{item.text}</p>
+                <span className="mt-4 inline-flex text-xs font-semibold uppercase tracking-[0.18em] text-gold">{t('homepage_authority.featured_insights.read_article')}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-[2.5rem] bg-dark-charcoal p-6 text-white shadow-[0_30px_90px_rgba(0,0,0,0.18)] md:p-10">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{t('homepage_authority.planning_tools.eyebrow')}</p>
+              <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{t('homepage_authority.planning_tools.title')}</h2>
+              <p className="mt-4 text-sm leading-7 text-white/60">
+                {t('homepage_authority.planning_tools.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {planningTools.map((tool) => (
+                <a key={tool.title} href={tool.href} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:bg-gold/10">
+                  <h3 className="font-serif text-2xl font-semibold text-white">{tool.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/60">{tool.text}</p>
+                  <span className="mt-5 inline-flex rounded-full bg-gold px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-dark-charcoal transition-colors hover:bg-gold-hover">
+                    {tool.label}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
+          <div className="rounded-[2.5rem] border border-black/5 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)] md:p-8">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{t('homepage_authority.trust.eyebrow')}</p>
+            <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{t('homepage_authority.trust.title')}</h2>
+            <div className="mt-6 grid gap-3">
+              {trustSignals.map((item) => (
+                <div key={item} className="rounded-2xl border border-black/5 bg-[#f8f5ef] p-4 text-sm leading-6 text-gray-700">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[2.5rem] border border-black/5 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)] md:p-8">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{t('homepage_authority.project_snippets.eyebrow')}</p>
+            <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{t('homepage_authority.project_snippets.title')}</h2>
+            <div className="mt-6 grid gap-4">
+              {projectSnippets.map((project) => (
+                <article key={project.type} className="rounded-2xl border border-gold/20 bg-[#f8f5ef] p-5">
+                  <h3 className="font-serif text-2xl font-semibold text-dark-charcoal">{project.type}</h3>
+                  <p className="mt-2 text-sm text-gray-600">{project.size}</p>
+                  <p className="mt-2 text-sm font-semibold text-dark-charcoal">{project.range}</p>
+                  <p className="mt-1 text-sm text-gray-600">{project.duration}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{t('homepage_authority.faq.eyebrow')}</p>
+            <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{t('homepage_authority.faq.title')}</h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {homepageFaqs.map((item) => (
+              <div key={item.question} className="rounded-[1.75rem] border border-black/5 bg-white p-6 shadow-[0_16px_45px_rgba(0,0,0,0.045)]">
+                <h3 className="text-base font-semibold text-dark-charcoal">{item.question}</h3>
+                <p className="mt-3 text-sm leading-7 text-gray-600">{item.answer}</p>
+                <Link to={item.link} className="mt-4 inline-flex text-xs font-semibold uppercase tracking-[0.18em] text-gold hover:text-gold-hover">
+                  {t('homepage_authority.faq.learn_more')}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
 function LandingPage() {
   return (
     <>
@@ -83,6 +250,7 @@ function LandingPage() {
       </Helmet>
 
       <Hero />
+      <HomepageAuthoritySections />
       <Process />
       <Services />
       <Contact />

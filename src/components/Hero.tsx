@@ -110,7 +110,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.28, ease: 'easeOut' }}
             className="text-sm md:text-base text-gray-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
           >
-            Singapore interior design and renovation firm for HDB, condo and commercial spaces, with expertise in bespoke home interiors, office fit-outs and reinstatement works.
+            {t('hero.supporting_line')}
           </motion.p>
 
           {/* Row 1 — Primary CTAs */}
@@ -160,15 +160,13 @@ export default function Hero() {
               Style Quiz
             </a>
 
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/6598333085"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-[260px] px-8 py-4 bg-transparent text-gold text-sm uppercase tracking-[0.2em] hover:bg-[#25D366]/20 hover:border-[#25D366]/70 hover:text-[#25D366] transition-all duration-300 font-medium border border-gold/60 rounded-full backdrop-blur-[5px] text-center"
+            {/* Calculator */}
+            <Link
+              to="/renovation-cost-calculator"
+              className="w-full sm:w-[260px] px-8 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_25px_rgba(197,160,89,0.45)] transition-all duration-300 font-bold rounded-full text-center"
             >
-              {t('hero.whatsapp')}
-            </a>
+              Calculator
+            </Link>
           </motion.div>
 
         </div>

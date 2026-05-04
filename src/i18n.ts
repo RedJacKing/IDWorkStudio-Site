@@ -24,8 +24,138 @@ const resources = {
         "title_main": "Curated Interiors ",
         "title_sub": "for Refined Living",
         "subtitle": "Singapore interior design and renovation studio creating refined homes, workplaces and retail spaces with thoughtful detail, regulatory confidence and timeless appeal.",
+        "supporting_line": "Singapore interior design and renovation firm for HDB, condo and commercial spaces, with expertise in bespoke home interiors, office fit-outs and reinstatement works.",
         "cta": "View Our Work",
         "whatsapp": "WhatsApp Us"
+      },
+      "homepage_authority": {
+        "quick_answers": {
+          "eyebrow": "Quick renovation answers",
+          "title": "Plan your renovation with clearer cost, timeline and process expectations.",
+          "subtitle": "Short answers for homeowners and business owners comparing Singapore renovation options before speaking to a designer.",
+          "items": [
+            {
+              "title": "Renovation cost in Singapore",
+              "text": "Most HDB, condo and office renovation budgets depend on property condition, carpentry scope, hacking, electrical works and material selection.",
+              "link": "/insights/renovation-cost-singapore-2026",
+              "label": "Read cost guide"
+            },
+            {
+              "title": "Residential vs commercial timeline",
+              "text": "A typical HDB renovation may take weeks, while office projects depend on approvals, reinstatement needs, landlord rules and fit-out sequencing.",
+              "link": "/insights/hdb-renovation-timeline-singapore",
+              "label": "View timeline guide"
+            },
+            {
+              "title": "Renovation process",
+              "text": "A smoother project usually follows a clear path: consult, space planning, design confirmation, quotation, build, inspection and handover.",
+              "link": "#process",
+              "label": "See our process"
+            }
+          ]
+        },
+        "featured_insights": {
+          "eyebrow": "Featured insights",
+          "title": "Helpful guides for Singapore renovation planning.",
+          "subtitle": "Read the deeper guides after getting the overview. These pages support budget planning, approval awareness and project sequencing.",
+          "read_article": "Read article",
+          "items": [
+            {
+              "title": "Renovation Cost Singapore 2026",
+              "text": "A practical guide to HDB, condo and home renovation budget planning in Singapore.",
+              "link": "/insights/renovation-cost-singapore-2026"
+            },
+            {
+              "title": "HDB Renovation Timeline Singapore",
+              "text": "Understand sequencing, approvals, material lead times and common causes of delay.",
+              "link": "/insights/hdb-renovation-timeline-singapore"
+            },
+            {
+              "title": "Office Renovation Timeline Singapore",
+              "text": "A commercial planning guide for office fit-out, reinstatement and handover timelines.",
+              "link": "/insights/office-renovation-timeline-singapore"
+            }
+          ]
+        },
+        "planning_tools": {
+          "eyebrow": "Planning tools",
+          "title": "Start with budget clarity and style direction.",
+          "subtitle": "Use these tools before consultation so your renovation discussion starts with clearer expectations.",
+          "items": [
+            {
+              "title": "Renovation Cost Calculator",
+              "text": "Estimate your HDB, condo, resale, kitchen or toilet renovation budget before requesting a quotation.",
+              "href": "/renovation-cost-calculator",
+              "label": "Open calculator"
+            },
+            {
+              "title": "HDB Renovation Style Quiz",
+              "text": "Explore suitable interior directions before your consultation, from Japandi to modern luxury and warm minimalism.",
+              "href": "/hdb-renovation-style-quiz",
+              "label": "Take style quiz"
+            }
+          ]
+        },
+        "trust": {
+          "eyebrow": "Why ID Work Studio",
+          "title": "Registered, structured and design-led.",
+          "signals": [
+            "BCA-registered renovation and interior design firm in Singapore.",
+            "HDB-approved for residential renovation works and HDB project coordination.",
+            "Experience across HDB homes, condos, office fit-outs and commercial reinstatement.",
+            "Premium positioning with practical budgeting, sequencing and handover planning."
+          ]
+        },
+        "project_snippets": {
+          "eyebrow": "Example project snippets",
+          "title": "Budget and timing examples for planning.",
+          "items": [
+            {
+              "type": "HDB Resale Renovation",
+              "size": "4-room HDB · about 969 sqft",
+              "range": "Planning range: $45k–$70k",
+              "duration": "Typical duration: 8–10 weeks"
+            },
+            {
+              "type": "Office Fit-Out",
+              "size": "Commercial office · about 1,200 sqft",
+              "range": "Planning range: $70–$120 per sqft",
+              "duration": "Typical duration: 5–8 weeks"
+            }
+          ]
+        },
+        "faq": {
+          "eyebrow": "Renovation FAQ",
+          "title": "Short answers before you start planning.",
+          "learn_more": "Learn more",
+          "items": [
+            {
+              "question": "How much should I budget for renovation in Singapore?",
+              "answer": "Budget depends on property type, condition and scope. Start with a planning range, then confirm after floor plan review and site measurement.",
+              "link": "/insights/renovation-cost-singapore-2026"
+            },
+            {
+              "question": "How long does an HDB renovation usually take?",
+              "answer": "Many HDB renovations take several weeks, with timing affected by hacking, carpentry, permits, material lead time and supplier coordination.",
+              "link": "/insights/hdb-renovation-timeline-singapore"
+            },
+            {
+              "question": "Do commercial renovations need more planning?",
+              "answer": "Yes. Office and retail projects may involve landlord rules, building management, reinstatement, fire safety and permit requirements.",
+              "link": "/commercial"
+            },
+            {
+              "question": "Can I estimate my renovation cost before meeting a designer?",
+              "answer": "Yes. Use our calculator as a first planning guide, then request an itemised quotation after scope and measurements are checked.",
+              "link": "/renovation-cost-calculator"
+            },
+            {
+              "question": "How do I choose a renovation style?",
+              "answer": "Start with lifestyle, storage needs, lighting preference and maintenance level. The style quiz helps narrow your direction before consultation.",
+              "link": "/hdb-renovation-style-quiz"
+            }
+          ]
+        }
       },
       "process": {
         "title": "Our Process",
@@ -1045,8 +1175,138 @@ const resources = {
         "title_main": "精心打造的室内设计 ",
         "title_sub": "致敬现代有识之士",
         "subtitle": "新加坡优质室内设计与翻新服务。凭借十多年的卓越信誉，我们将住宅、办公室和零售空间转化为杰作。",
+        "supporting_line": "新加坡室内设计与翻新公司，服务 HDB、私人公寓与商业空间，专注于定制住宅室内设计、办公室装修及恢复原状工程。",
         "cta": "查看我们的作品",
         "whatsapp": "WhatsApp 立即咨询"
+      },
+      "homepage_authority": {
+        "quick_answers": {
+          "eyebrow": "翻新快速指南",
+          "title": "更清楚掌握翻新预算、工期与流程。",
+          "subtitle": "为正在比较新加坡翻新方案的屋主与商业客户，提供简洁清楚的规划重点。",
+          "items": [
+            {
+              "title": "新加坡翻新费用",
+              "text": "HDB、公寓与办公室翻新预算，通常取决于房屋状况、木工范围、拆除工程、电工工程与材料选择。",
+              "link": "/insights/renovation-cost-singapore-2026",
+              "label": "阅读费用指南"
+            },
+            {
+              "title": "住宅与商业翻新工期",
+              "text": "HDB 翻新通常需要数周；办公室项目则会受审批、恢复原状、大厦规定与装修流程安排影响。",
+              "link": "/insights/hdb-renovation-timeline-singapore",
+              "label": "查看工期指南"
+            },
+            {
+              "title": "翻新流程",
+              "text": "更顺利的项目通常会经过咨询、空间规划、设计确认、报价、施工、检查与移交。",
+              "link": "#process",
+              "label": "查看我们的流程"
+            }
+          ]
+        },
+        "featured_insights": {
+          "eyebrow": "精选见解",
+          "title": "帮助您规划新加坡翻新的实用指南。",
+          "subtitle": "先了解重点，再阅读更深入的指南。这些内容有助于预算规划、审批意识与项目工期安排。",
+          "read_article": "阅读全文",
+          "items": [
+            {
+              "title": "新加坡翻新费用 2026",
+              "text": "为 HDB、公寓与住宅翻新预算规划整理的实用指南。",
+              "link": "/insights/renovation-cost-singapore-2026"
+            },
+            {
+              "title": "新加坡 HDB 翻新时间表",
+              "text": "了解施工顺序、审批、材料交期以及常见延误原因。",
+              "link": "/insights/hdb-renovation-timeline-singapore"
+            },
+            {
+              "title": "新加坡办公室翻新时间表",
+              "text": "办公室装修、恢复原状与移交工期的商业规划指南。",
+              "link": "/insights/office-renovation-timeline-singapore"
+            }
+          ]
+        },
+        "planning_tools": {
+          "eyebrow": "规划工具",
+          "title": "先掌握预算，再确认风格方向。",
+          "subtitle": "咨询前先使用这些工具，让翻新讨论从更清楚的预算与设计预期开始。",
+          "items": [
+            {
+              "title": "Renovation Cost Calculator",
+              "text": "在索取正式报价前，先估算 HDB、公寓、转售屋、厨房或厕所翻新的预算范围。",
+              "href": "/renovation-cost-calculator",
+              "label": "打开计算器"
+            },
+            {
+              "title": "HDB Renovation Style Quiz",
+              "text": "在咨询前探索适合您的室内风格方向，从 Japandi 到现代奢华与温暖极简。",
+              "href": "/hdb-renovation-style-quiz",
+              "label": "开始风格测验"
+            }
+          ]
+        },
+        "trust": {
+          "eyebrow": "为什么选择 ID Work Studio",
+          "title": "注册合规、流程清晰、以设计为核心。",
+          "signals": [
+            "新加坡 BCA 注册室内设计与翻新公司。",
+            "HDB 注册承包商，可协调住宅翻新与 HDB 工程事项。",
+            "具备 HDB 住宅、公寓、办公室装修与商业恢复原状经验。",
+            "以高质感定位结合实际预算、工期安排与移交规划。"
+          ]
+        },
+        "project_snippets": {
+          "eyebrow": "项目预算参考",
+          "title": "用于前期规划的预算与工期例子。",
+          "items": [
+            {
+              "type": "HDB 转售屋翻新",
+              "size": "4房式 HDB · 约 969 sqft",
+              "range": "规划预算：$45k–$70k",
+              "duration": "典型工期：8–10 周"
+            },
+            {
+              "type": "办公室装修",
+              "size": "商业办公室 · 约 1,200 sqft",
+              "range": "规划预算：每 sqft $70–$120",
+              "duration": "典型工期：5–8 周"
+            }
+          ]
+        },
+        "faq": {
+          "eyebrow": "翻新常见问题",
+          "title": "开始规划前的简短解答。",
+          "learn_more": "了解更多",
+          "items": [
+            {
+              "question": "在新加坡翻新应该准备多少预算？",
+              "answer": "预算取决于房屋类型、屋况与工程范围。建议先用规划预算开始，再通过平面图审查与现场测量确认。",
+              "link": "/insights/renovation-cost-singapore-2026"
+            },
+            {
+              "question": "HDB 翻新通常需要多久？",
+              "answer": "许多 HDB 翻新需要数周，实际工期会受拆除、木工、许可证、材料交期与供应商协调影响。",
+              "link": "/insights/hdb-renovation-timeline-singapore"
+            },
+            {
+              "question": "商业翻新是否需要更多规划？",
+              "answer": "是的。办公室与零售项目可能涉及业主规定、大厦管理、恢复原状、消防安全与许可证要求。",
+              "link": "/commercial"
+            },
+            {
+              "question": "见设计师前可以先估算翻新费用吗？",
+              "answer": "可以。您可以先使用我们的计算器作为预算参考，再在确认范围与测量后索取详细分项报价。",
+              "link": "/renovation-cost-calculator"
+            },
+            {
+              "question": "我应该如何选择翻新风格？",
+              "answer": "先从生活习惯、收纳需求、灯光偏好与维护难度开始。风格测验可帮助您在咨询前缩小方向。",
+              "link": "/hdb-renovation-style-quiz"
+            }
+          ]
+        }
       },
       "process": {
         "title": "我们的流程",
