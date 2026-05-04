@@ -48,19 +48,19 @@ export default function Navbar() {
               <Link to="/" className="font-sans text-2xl md:max-lg:text-[1.2rem] font-black tracking-tighter text-charcoal uppercase">ID WORK STUDIO</Link>
             </div>
 
-            <div className="hidden md:flex space-x-4 lg:space-x-8 items-center">
-              <Link to="/#home" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.12rem] font-light font-sans">{t('nav.home')}</Link>
-              <Link to="/residential" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/residential') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.residential')}</Link>
-              <Link to="/commercial" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/commercial') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.commercial')}</Link>
-              <a href="/hdb-renovation-style-quiz" className="text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors text-charcoal/80 hover:text-champagne">Style Quiz</a>
-              <a href="/renovation-cost-calculator" className="text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors text-charcoal/80 hover:text-champagne">Calculator</a>
-              <Link to="/insights" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/insights') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.insights')}</Link>
-              <Link to="/gallery" className={`text-sm uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/gallery') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.gallery')}</Link>
-              <Link to="/#contact" className="text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.12rem] font-light font-sans">{t('nav.contact')}</Link>
+            <div className="hidden md:flex gap-3 lg:gap-5 items-center">
+              <Link to="/#home" className="text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-[0.12rem] font-light font-sans">{t('nav.home')}</Link>
+              <Link to="/residential" className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/residential') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.residential')}</Link>
+              <Link to="/commercial" className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/commercial') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.commercial')}</Link>
+              <a href="/hdb-renovation-style-quiz" className="text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors text-charcoal/80 hover:text-champagne">Style Quiz</a>
+              <a href="/renovation-cost-calculator" className="text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors text-charcoal/80 hover:text-champagne">Calculator</a>
+              <Link to="/insights" className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/insights') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.insights')}</Link>
+              <Link to="/gallery" className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/gallery') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.gallery')}</Link>
+              <Link to="/#contact" className="text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-[0.12rem] font-light font-sans">{t('nav.contact')}</Link>
 
               <button 
                 onClick={toggleLanguage}
-                className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-sm uppercase tracking-[0.12rem] font-light font-sans ml-4 border border-charcoal/20 px-3 py-1 rounded-full"
+                className="flex items-center space-x-1 text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-[0.12rem] font-light font-sans ml-4 border border-charcoal/20 px-3 py-1 rounded-full"
               >
                 <Globe size={14} />
                 <span>{i18n.language === 'en' ? '中文' : 'EN'}</span>
