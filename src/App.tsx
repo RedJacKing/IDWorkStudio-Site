@@ -261,7 +261,7 @@ function HomepageInternalLinks() {
             <Link
               key={item.to}
               to={item.to}
-              className="rounded-2xl border border-black/5 bg-[#f8f5ef] px-5 py-4 text-sm font-semibold text-dark-charcoal transition-colors duration-200 hover:border-gold/40 hover:text-gold"
+              className={`rounded-2xl border border-black/5 bg-[#f8f5ef] px-5 py-4 text-sm font-semibold text-dark-charcoal transition-colors duration-200 hover:border-gold/40 hover:text-gold ${item.to === '/contact' ? 'lg:col-start-2' : ''}`}
             >
               {item.label}
             </Link>

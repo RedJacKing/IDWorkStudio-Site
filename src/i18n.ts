@@ -96,6 +96,39 @@ const resources = {
             }
           ]
         },
+        "internal_links": {
+          "title": "Explore Our Renovation Services",
+          "items": [
+            {
+              "label": "Residential Renovation Singapore",
+              "to": "/residential"
+            },
+            {
+              "label": "Commercial Renovation Singapore",
+              "to": "/commercial"
+            },
+            {
+              "label": "Renovation Guides & Insights",
+              "to": "/insights"
+            },
+            {
+              "label": "Renovation Cost Calculator Singapore",
+              "to": "/renovation-cost-calculator"
+            },
+            {
+              "label": "HDB Renovation Style Quiz",
+              "to": "/hdb-renovation-style-quiz"
+            },
+            {
+              "label": "Renovation Portfolio Singapore",
+              "to": "/gallery"
+            },
+            {
+              "label": "Contact ID Work Studio",
+              "to": "/contact"
+            }
+          ]
+        },
         "trust": {
           "eyebrow": "Why ID Work Studio",
           "title": "Registered, structured and design-led.",
@@ -1256,6 +1289,39 @@ const resources = {
               "text": "在咨询前探索适合您的室内风格方向，从 Japandi 到现代奢华与温暖极简。",
               "href": "/hdb-renovation-style-quiz",
               "label": "开始风格测验"
+            }
+          ]
+        },
+        "internal_links": {
+          "title": "探索我们的翻新服务",
+          "items": [
+            {
+              "label": "新加坡住宅翻新",
+              "to": "/residential"
+            },
+            {
+              "label": "新加坡商业翻新",
+              "to": "/commercial"
+            },
+            {
+              "label": "翻新指南与见解",
+              "to": "/insights"
+            },
+            {
+              "label": "新加坡翻新费用计算器",
+              "to": "/renovation-cost-calculator"
+            },
+            {
+              "label": "HDB 翻新风格测验",
+              "to": "/hdb-renovation-style-quiz"
+            },
+            {
+              "label": "新加坡翻新作品集",
+              "to": "/gallery"
+            },
+            {
+              "label": "联系 ID Work Studio",
+              "to": "/contact"
             }
           ]
         },
