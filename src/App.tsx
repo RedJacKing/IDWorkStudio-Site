@@ -118,10 +118,10 @@ function HomepageAuthoritySections() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {quickAnswers.map((item) => (
-              <article key={item.title} className="rounded-[2rem] border border-black/5 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
+              <article key={item.title} className="flex h-full flex-col rounded-[2rem] border border-black/5 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
                 <h3 className="font-serif text-2xl font-semibold text-dark-charcoal">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-gray-600">{item.text}</p>
-                <Link to={item.link} className="mt-5 inline-flex text-xs font-semibold uppercase tracking-[0.18em] text-gold hover:text-gold-hover">
+                <Link to={item.link} className="mt-auto inline-flex pt-5 text-xs font-semibold uppercase tracking-[0.18em] text-gold hover:text-gold-hover">
                   {item.label}
                 </Link>
               </article>
@@ -132,7 +132,7 @@ function HomepageAuthoritySections() {
 
       <section className="px-4 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <div className="rounded-[2rem] border border-gold/15 bg-white/75 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-8">
+          <div className="rounded-[2rem] border border-[#d8c3a0]/40 bg-[#f3ede3]/80 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-8">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{t('homepage_authority.featured_insights.eyebrow')}</p>
             <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{t('homepage_authority.featured_insights.title')}</h2>
             <p className="mt-4 text-sm leading-7 text-gray-600">
@@ -213,9 +213,11 @@ function HomepageAuthoritySections() {
         </div>
       </section>
 
+      <Process />
+
       <section className="px-4 pb-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-8 max-w-3xl rounded-[2rem] border border-gold/15 bg-white/75 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-8">
+          <div className="mb-8 max-w-3xl rounded-[2rem] border border-[#cbb38a]/45 bg-[#eee6d8]/85 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-8">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{t('homepage_authority.faq.eyebrow')}</p>
             <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{t('homepage_authority.faq.title')}</h2>
           </div>
@@ -250,9 +252,8 @@ function LandingPage() {
       </Helmet>
 
       <Hero />
-      <HomepageAuthoritySections />
-      <Process />
       <Services />
+      <HomepageAuthoritySections />
       <Contact />
       <StickyMobileNav />
     </>
