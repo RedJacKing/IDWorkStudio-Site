@@ -106,6 +106,33 @@ function HomepageAuthoritySections() {
 
   return (
     <main className="bg-[#f8f5ef] text-dark-charcoal">
+      <section className="px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-[2.5rem] bg-dark-charcoal p-6 text-white shadow-[0_30px_90px_rgba(0,0,0,0.18)] md:p-10">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{t('homepage_authority.planning_tools.eyebrow')}</p>
+              <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{t('homepage_authority.planning_tools.title')}</h2>
+              <p className="mt-4 text-sm leading-7 text-white/60">
+                {t('homepage_authority.planning_tools.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {planningTools.map((tool) => (
+                <a key={tool.title} href={tool.href} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:bg-gold/10">
+                  <h3 className="font-serif text-2xl font-semibold text-white">{tool.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/60">{tool.text}</p>
+                  <span className="mt-5 inline-flex rounded-full bg-gold px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-dark-charcoal transition-colors hover:bg-gold-hover">
+                    {tool.label}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl">
@@ -152,32 +179,6 @@ function HomepageAuthoritySections() {
                 <span className="mt-4 inline-flex text-xs font-semibold uppercase tracking-[0.18em] text-gold">{t('homepage_authority.featured_insights.read_article')}</span>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-[2.5rem] bg-dark-charcoal p-6 text-white shadow-[0_30px_90px_rgba(0,0,0,0.18)] md:p-10">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{t('homepage_authority.planning_tools.eyebrow')}</p>
-              <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{t('homepage_authority.planning_tools.title')}</h2>
-              <p className="mt-4 text-sm leading-7 text-white/60">
-                {t('homepage_authority.planning_tools.subtitle')}
-              </p>
-            </div>
-
-            <div className="grid gap-4 md:grid-cols-2">
-              {planningTools.map((tool) => (
-                <a key={tool.title} href={tool.href} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:bg-gold/10">
-                  <h3 className="font-serif text-2xl font-semibold text-white">{tool.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-white/60">{tool.text}</p>
-                  <span className="mt-5 inline-flex rounded-full bg-gold px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-dark-charcoal transition-colors hover:bg-gold-hover">
-                    {tool.label}
-                  </span>
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -250,9 +251,9 @@ function LandingPage() {
       </Helmet>
 
       <Hero />
-      <HomepageAuthoritySections />
-      <Process />
       <Services />
+      <Process />
+      <HomepageAuthoritySections />
       <Contact />
       <StickyMobileNav />
     </>
