@@ -239,21 +239,18 @@ function HomepageAuthoritySections() {
   );
 }
 function HomepageInternalLinks() {
-  const links = [
-    { label: 'Residential Renovation Singapore', to: '/residential' },
-    { label: 'Commercial Renovation Singapore', to: '/commercial' },
-    { label: 'Renovation Guides & Insights', to: '/insights' },
-    { label: 'Renovation Cost Calculator Singapore', to: '/renovation-cost-calculator' },
-    { label: 'HDB Renovation Style Quiz', to: '/hdb-renovation-style-quiz' },
-    { label: 'Renovation Portfolio Singapore', to: '/gallery' },
-    { label: 'Contact ID Work Studio', to: '/contact' },
-  ];
+  const { t } = useTranslation();
+
+  const links = t('homepage_authority.internal_links.items', { returnObjects: true }) as Array<{
+    label: string;
+    to: string;
+  }>;
 
   return (
     <section className="bg-[#f8f5ef] px-4 pb-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl rounded-[2rem] border border-black/5 bg-white/80 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-8">
         <h2 className="text-center font-serif text-3xl font-bold leading-tight text-dark-charcoal md:text-4xl">
-          Explore Our Renovation Services
+          {t('homepage_authority.internal_links.title')}
         </h2>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
