@@ -161,12 +161,12 @@ export default function Hero() {
             </a>
 
             {/* Calculator */}
-            <Link
-              to="/renovation-cost-calculator"
+            <a
+              href="/renovation-cost-calculator"
               className="w-full sm:w-[260px] px-8 py-4 bg-gold text-dark-charcoal text-sm uppercase tracking-[0.2em] hover:bg-gold-hover hover:shadow-[0_0_25px_rgba(197,160,89,0.45)] transition-all duration-300 font-bold rounded-full text-center"
             >
               Calculator
-            </Link>
+            </a>
           </motion.div>
 
         </div>

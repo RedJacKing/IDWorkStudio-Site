@@ -513,7 +513,19 @@ const resources = {
             "q5": "What should I check before signing an office lease?",
             "a5": "Check power capacity, aircon operating hours, ceiling condition, sprinkler layout, reinstatement clause, loading access, floor loading, data point requirements and whether the landlord allows your planned layout.",
             "q6": "Is reinstatement part of office renovation cost?",
-            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out."
+            "a6": "It is usually not part of the initial renovation cost, but it should be planned from the start. Reinstatement can cost around $10 to $40+ psf depending on landlord handover requirements and how much was built during the fit-out.",
+            "q7": "How long does an office renovation take in Singapore?",
+            "a7": "Most office renovations in Singapore take around 6 to 10 weeks, including design, landlord approval, site works, M&E coordination and handover. Larger offices or stricter buildings may take longer.",
+            "q8": "What is included in an office renovation quotation?",
+            "a8": "An office renovation quotation usually includes partition works, flooring, ceiling, lighting, electrical points, data cabling, carpentry, pantry works, painting and project coordination. M&E and authority-related items should be clearly stated.",
+            "q9": "Do office renovation costs include furniture?",
+            "a9": "Loose furniture is usually quoted separately from renovation works. Built-in carpentry, reception counters, pantry cabinets and storage cabinets may be included if they are part of the confirmed scope.",
+            "q10": "Can I renovate an office while staff are still working?",
+            "a10": "It is possible for some partial office renovations, but it requires careful phasing, dust control, noise planning and after-hours work. Full office fit-outs are usually easier when the space is vacant.",
+            "q11": "What hidden costs should I prepare for?",
+            "a11": "Common hidden costs include extra electrical loading, aircon modification, after-hours work, landlord requirements, protection works, fire safety adjustments, reinstatement obligations and changes after site inspection.",
+            "q12": "How can I reduce office renovation cost without making it look cheap?",
+            "a12": "Keep the layout efficient, reuse suitable existing services where possible, focus premium finishes on key areas such as reception or meeting rooms, and avoid unnecessary custom details in low-visibility zones."
           },
           "cta": {
             "text": "Planning an office renovation? Send us your floor plan, lease condition and rough headcount. We can help you estimate a practical office fit-out budget before work starts.",
@@ -1664,7 +1676,19 @@ const resources = {
             "q5": "签办公室租约前应该检查什么？",
             "a5": "建议检查电力容量、空调供应时间、天花状况、喷淋位置、还原条款、卸货通道、楼面承重、网络点需求以及业主是否允许你的规划布局。",
             "q6": "还原费用是否包含在办公室装修费用内？",
-            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。"
+            "a6": "通常不包含在初期装修费用内，但应该从一开始就规划。还原费用大约$10至$40+每平方英尺，取决于业主交还要求以及装修时建造了多少固定工程。",
+            "q7": "新加坡办公室装修通常需要多久？",
+            "a7": "新加坡办公室装修通常需要约6到10周，包括设计、业主审批、现场施工、机电协调与交付。较大型办公室或规定较严格的大厦可能需要更长时间。",
+            "q8": "办公室装修报价通常包括什么？",
+            "a8": "办公室装修报价通常包括隔间、地面、天花、灯光、电源点、网络布线、木工、茶水间工程、油漆与项目协调。机电和审批相关项目应在报价中清楚列明。",
+            "q9": "办公室装修费用是否包括家具？",
+            "a9": "活动家具通常会与装修工程分开报价。如果接待台、茶水间柜、储物柜或其他固定木工属于确认范围，则可能包含在装修报价内。",
+            "q10": "员工还在办公时可以进行办公室装修吗？",
+            "a10": "部分办公室翻新可以分阶段施工，但需要仔细安排施工区域、防尘、噪音控制与下班后施工。完整办公室装修通常在空置状态下更容易进行。",
+            "q11": "办公室装修有哪些隐藏费用需要预留？",
+            "a11": "常见隐藏费用包括额外电力负荷、空调调整、夜间或周末施工、业主要求、保护工程、消防调整、还原责任以及现场检查后的变更。",
+            "q12": "如何降低办公室装修费用但不显得廉价？",
+            "a12": "保持布局高效，尽量保留合适的现有设备，把较好的材料集中在接待区或会议室等重点区域，并减少低曝光区域的不必要定制细节。"
           },
           "cta": {
             "text": "准备办公室装修？把平面图、租约条件和预计员工人数发给我们，我们可以在开工前协助你估算实际办公室装修预算。",
