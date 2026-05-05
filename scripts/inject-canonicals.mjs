@@ -297,7 +297,7 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
           name: 'How much does commercial renovation cost in Singapore?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Commercial renovation in Singapore typically costs $30 to $180 per square foot for offices, $80 to $150 per square foot for retail shops, and $120 to $250 per square foot for F&B outlets depending on scope, compliance and site condition.',
+            text: 'Commercial renovation in Singapore typically costs $30 to $180 psf for offices, $80 to $150 psf for retail shops, and $120 to $250 psf for F&B outlets. The final range is mainly affected by M&E works, fire safety requirements, carpentry, flooring, ceiling works and landlord reinstatement conditions.',
           },
         },
         {
@@ -305,87 +305,87 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
           name: 'How much does office renovation cost in Singapore?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Office renovation in Singapore commonly ranges from $30 to $60 per square foot for basic fit-outs, $60 to $100 per square foot for mid-range offices, and $100 to $180 per square foot for premium office interiors.',
+            text: 'A basic office renovation usually starts from $30 to $60 psf. A mid-range office with meeting rooms, pantry, flooring, ceiling and electrical works is usually $60 to $100 psf. Premium office fit-outs with feature walls, acoustic rooms, customised carpentry and higher-grade finishes can reach $100 to $180 psf.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How long does commercial renovation take in Singapore?',
+          name: 'How long does commercial renovation usually take?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Most commercial renovation projects take 6 to 12 weeks. Design and planning usually takes 2 to 3 weeks, approval submission takes 2 to 4 weeks, and site renovation works commonly take 4 to 8 weeks.',
+            text: 'Most commercial renovation projects take 6 to 12 weeks. Design and planning usually takes 2 to 3 weeks, landlord or MCST submission takes 2 to 4 weeks, and actual renovation works usually take 4 to 8 weeks depending on project size and approval conditions.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Do I need MCST or landlord approval for commercial renovation?',
+          name: 'Do I need landlord or MCST approval before renovation?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. Most offices, retail units and F&B spaces require landlord, building management or MCST approval before renovation works can start. Submission requirements usually include layout drawings, method statements, work schedules and insurance documents.',
+            text: 'Yes. Most offices, retail units, clinics, gyms and F&B spaces require landlord, building management or MCST approval before renovation starts. Drawings, method statements, insurance documents and contractor details may be required before work permits are issued.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Do commercial renovations need SCDF submission?',
+          name: 'Does commercial renovation need SCDF submission?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'SCDF submission may be required if the renovation affects fire safety systems, exit routes, sprinkler layout, fire-rated partitions, kitchen exhaust, fire alarm systems or occupant load. F&B and larger office projects are more likely to require fire safety review.',
+            text: 'SCDF submission may be required if the renovation affects fire-rated partitions, sprinkler points, fire alarm systems, exit routes, emergency lighting, occupancy load or F&B exhaust systems. Simple office refresh works may not need SCDF submission, but this should be checked before work starts.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Can commercial renovation be done after office hours?',
+          name: 'Can office renovation be done after office hours?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'After-hours work depends on building rules. Many commercial buildings restrict noisy works, lift access and loading bay use. Night or weekend work may need separate approval and may increase labour cost.',
+            text: 'Yes, but it depends on the building rules. Many commercial buildings only allow noisy works after office hours or during approved time windows. Hacking, drilling and delivery timing must follow landlord, MCST or building management requirements.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is included in commercial renovation?',
+          name: 'What affects commercial renovation cost the most?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Commercial renovation can include space planning, design development, authority submission, hacking, partition works, ceiling, flooring, electrical works, lighting, air-conditioning coordination, carpentry, signage coordination, final cleaning and handover.',
+            text: 'The biggest cost drivers are electrical and data points, air-conditioning changes, ceiling works, fire safety compliance, flooring, carpentry, glass partitions, pantry works, plumbing and whether reinstatement is required at the end of the lease.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why does F&B renovation cost more than office renovation?',
+          name: 'What is office reinstatement in Singapore?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'F&B renovation costs more because it often involves exhaust systems, grease traps, drainage, waterproofing, gas piping, heavy electrical loading, fire safety requirements and tighter authority or landlord compliance.',
+            text: "Office reinstatement means returning the unit to the landlord's original handover condition before lease exit. It may include removing partitions, flooring, ceiling, wiring, signage, carpentry and making good affected surfaces according to the tenancy agreement.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What is commercial reinstatement?',
+          name: 'Is retail renovation more expensive than office renovation?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Commercial reinstatement is the process of returning a rented office, retail or F&B unit to the landlord-required handover condition. It usually includes removing partitions, fixtures, flooring, ceiling works, signage and making good affected surfaces.',
+            text: 'Retail renovation is often higher than a basic office because shopfront, lighting, display fixtures, signage, customer flow, storage and landlord design guidelines are more involved. Typical retail renovation in Singapore ranges from $80 to $150 psf.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Should I renovate before lease signing?',
+          name: 'Why is F&B renovation usually more expensive?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'You should review renovation feasibility before finalising the lease. Important checks include power supply, air-conditioning capacity, exhaust route, floor trap availability, loading access, reinstatement clauses and landlord renovation rules.',
+            text: 'F&B renovation usually costs more because of exhaust, grease trap, plumbing, waterproofing, kitchen equipment coordination, fire safety, pest control requirements and stricter authority or landlord conditions. A practical F&B budget is usually $120 to $250 psf.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What affects the final commercial renovation cost?',
+          name: 'What should I prepare before requesting a commercial renovation quotation?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Final cost is affected by unit size, existing site condition, design complexity, M&E requirements, air-conditioning, fire safety work, carpentry quantity, landlord requirements and whether night work or staged renovation is needed.',
+            text: 'Prepare the floor plan, unit size, tenancy agreement or landlord fitting-out guide, preferred handover date, rough layout requirements, headcount, pantry needs, meeting room count and any existing reinstatement conditions. These details make the quotation more accurate.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How do I get a commercial renovation quote from ID Work Studio?',
+          name: 'Can ID Work Studio handle both design and renovation works?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Send your floor plan, site photos, lease details and renovation brief to ID Work Studio. A site visit can then be arranged to check actual conditions before preparing an itemised commercial renovation quotation.',
+            text: 'Yes. ID Work Studio can support layout planning, design coordination, renovation works, site coordination and commercial handover. For commercial projects, we also coordinate practical site requirements such as access timing, protection works and building management submissions.',
           },
         },
       ],
