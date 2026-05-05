@@ -116,8 +116,8 @@ export default function CommercialRenovationCostSingapore() {
   return (
     <>
       <Helmet>
-        <title>{t(`${ARTICLE_KEY}.meta.title`)}</title>
-        <meta name="description" content={t(`${ARTICLE_KEY}.meta.description`)} />
+        <title>Commercial Renovation Cost Singapore (2026 Guide) | ID Work Studio</title>
+        <meta name="description" content="Real contractor pricing, approval requirements and hidden cost risks for office, retail, F&B and commercial renovation projects in Singapore." />
         <meta
           name="keywords"
           content="commercial renovation cost Singapore, office renovation cost Singapore, retail renovation Singapore, F&B renovation cost Singapore, MCST permit to work Singapore, commercial fit out Singapore"
@@ -127,8 +127,8 @@ export default function CommercialRenovationCostSingapore() {
           href="https://idworkstudio.com/insights/commercial-renovation-cost-singapore"
         />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={t(`${ARTICLE_KEY}.meta.title`)} />
-        <meta property="og:description" content={t(`${ARTICLE_KEY}.meta.description`)} />
+        <meta property="og:title" content="Commercial Renovation Cost Singapore (2026 Guide) | ID Work Studio" />
+        <meta property="og:description" content="Real contractor pricing, approval requirements and hidden cost risks for office, retail, F&B and commercial renovation projects in Singapore." />
         <meta
           property="og:url"
           content="https://idworkstudio.com/insights/commercial-renovation-cost-singapore"
