@@ -6,9 +6,9 @@ const distDir = path.resolve('dist');
 const pageMetaMap = {
   'index.html': {
     canonical: 'https://idworkstudio.com/',
-    title: 'ID Work Studio | Renovation & Interior Design Singapore | Woodlands',
+    title: 'Commercial & Office Renovation Singapore | BCA-Registered Contractor | ID Work Studio',
     description: "Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB-approved.",
-    ogTitle: 'ID Work Studio | Interior Design & Renovation Firm in Singapore',
+    ogTitle: 'Commercial & Office Renovation Singapore | BCA-Registered Contractor',
     ogDesc: 'Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB-approved.',
     ogUrl: 'https://idworkstudio.com/',
   },
