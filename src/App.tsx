@@ -235,6 +235,17 @@ function HomepageAuthoritySections() {
           </div>
         </div>
       </section>
+
+      <nav aria-label="Primary renovation service pages" className="sr-only">
+        <ul>
+          <li>
+            <Link to="/residential">Residential Renovation Singapore</Link>
+          </li>
+          <li>
+            <Link to="/commercial">Commercial Renovation Singapore</Link>
+          </li>
+        </ul>
+      </nav>
     </main>
   );
 }
