@@ -6,10 +6,10 @@ const distDir = path.resolve('dist');
 const pageMetaMap = {
   'index.html': {
     canonical: 'https://idworkstudio.com/',
-    title: 'Commercial & Office Renovation Singapore | BCA-Registered Contractor | ID Work Studio',
-    description: "Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB-approved.",
-    ogTitle: 'Commercial & Office Renovation Singapore | BCA-Registered Contractor',
-    ogDesc: 'Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB-approved.',
+    title: 'Renovation Contractor Singapore | HDB, Condo & Commercial | ID Work Studio',
+    description: 'ID Work Studio is a BCA-registered and HDB-registered renovation firm in Singapore for HDB, condo, office, retail and commercial interiors. Get a free site consultation.',
+    ogTitle: 'Renovation Contractor Singapore | HDB, Condo & Commercial | ID Work Studio',
+    ogDesc: 'BCA-registered and HDB-registered renovation firm for homes, offices, retail and commercial spaces in Singapore.',
     ogUrl: 'https://idworkstudio.com/',
   },
   'residential.html': {
@@ -76,6 +76,14 @@ const pageMetaMap = {
     ogDesc: 'Common renovation mistakes Singapore homeowners make — and how to avoid them with better planning.',
     ogUrl: 'https://idworkstudio.com/insights/renovation-mistakes-singapore',
   },
+  'insights/commercial-renovation-cost-singapore.html': {
+    canonical: 'https://idworkstudio.com/insights/commercial-renovation-cost-singapore',
+    title: 'Commercial Renovation Cost Singapore (2026 Guide) | ID Work Studio',
+    description: 'Commercial renovation cost Singapore guide for office, retail and F&B spaces. See realistic 2026 pricing, approval requirements, hidden costs and budget planning tips.',
+    ogTitle: 'Commercial Renovation Cost Singapore (2026 Guide)',
+    ogDesc: 'Realistic commercial renovation costs in Singapore for office, retail and F&B spaces, including approvals, hidden costs and budget planning.',
+    ogUrl: 'https://idworkstudio.com/insights/commercial-renovation-cost-singapore',
+  },
    'insights/office-renovation-cost-singapore.html': {
     canonical: 'https://idworkstudio.com/insights/office-renovation-cost-singapore',
     title: 'Office Renovation Cost Singapore (2026 Guide) | ID Work Studio',
@@ -139,6 +147,14 @@ const pageMetaMap = {
     ogTitle: 'Singapore Renovation Cost Calculator 2026 | ID Work Studio',
     ogDesc: "Estimate your HDB, condo or landed renovation budget in minutes with ID Work Studio's free Singapore renovation cost calculator.",
     ogUrl: 'https://idworkstudio.com/renovation-cost-calculator',
+  },
+  'hdb-renovation-style-quiz.html': {
+    canonical: 'https://idworkstudio.com/hdb-renovation-style-quiz',
+    title: 'HDB Renovation Style Quiz Singapore | Find Your Home Design Style | ID Work Studio',
+    description: 'Take ID Work Studio’s HDB renovation style quiz to discover your preferred Singapore home design direction, from Japandi and Muji to modern luxury and Scandinavian.',
+    ogTitle: 'HDB Renovation Style Quiz Singapore | ID Work Studio',
+    ogDesc: 'Discover your ideal HDB interior design style with a Singapore-focused renovation style quiz by ID Work Studio.',
+    ogUrl: 'https://idworkstudio.com/hdb-renovation-style-quiz',
   },
 };
 
