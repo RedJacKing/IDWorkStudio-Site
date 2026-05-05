@@ -7,9 +7,9 @@ const pageMetaMap = {
   'index.html': {
     canonical: 'https://idworkstudio.com/',
     title: 'ID Work Studio | Renovation & Interior Design Singapore | Woodlands',
-    description: "Singapore's trusted renovation and interior design firm. BCA & HDB registered. Specialising in commercial fit-outs, reinstatement & residential renovations.",
+    description: "Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB-approved.",
     ogTitle: 'ID Work Studio | Interior Design & Renovation Firm in Singapore',
-    ogDesc: 'HDB-licensed and BCA-registered interior design and renovation firm in Singapore for residential homes, commercial spaces, and office reinstatement works.',
+    ogDesc: 'Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB-approved.',
     ogUrl: 'https://idworkstudio.com/',
   },
   'residential.html': {

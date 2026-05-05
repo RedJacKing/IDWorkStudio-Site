@@ -277,7 +277,7 @@ function LandingPage() {
         <title>ID Work Studio | Renovation & Interior Design Singapore | Woodlands</title>
         <meta
           name="description"
-          content="Singapore's trusted renovation and interior design firm. BCA & HDB registered. Specialising in commercial fit-outs, reinstatement & residential renovations."
+          content="Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB-approved."
         />
         <link rel="canonical" href="https://idworkstudio.com/" />
       </Helmet>

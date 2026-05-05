@@ -32,16 +32,16 @@ export default function Hero() {
   return (
     <>
       <Helmet>
-        <title>ID Work Studio | Interior Design & Renovation Firm in Singapore</title>
+       <title>Commercial & Office Renovation Singapore (2026 Cost Guide) | ID Work Studio</title>
         <meta
           name="description"
-          content="Singapore interior design and renovation firm based in Woodlands. HDB-licensed and BCA-registered, specialising in residential renovations, commercial fit-outs, office reinstatement, and bespoke interior spaces across Singapore."
+          content="Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB-approved."
         />
         <link rel="canonical" href="https://idworkstudio.com/" />
-        <meta property="og:title" content="ID Work Studio | Interior Design & Renovation Firm in Singapore" />
+        <meta property="og:title" content="Commercial & Office Renovation Singapore (2026 Cost Guide) | ID Work Studio" />
         <meta
-          property="og:description"
-          content="HDB-licensed and BCA-registered interior design and renovation firm in Singapore for residential homes, commercial spaces, and office reinstatement works."
+  property="og:description"
+  content="Planning an office or commercial renovation in Singapore? See 2026 cost ranges,timelines, and real project insights. BCA-registered & HDB-approved."
         />
         <meta property="og:url" content="https://idworkstudio.com/" />
       </Helmet>
