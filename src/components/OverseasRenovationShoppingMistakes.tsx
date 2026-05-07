@@ -827,24 +827,20 @@ export default function OverseasRenovationShoppingMistakes() {
         <meta property="og:url" content={t.canonical} />
         <meta property="og:image" content={`https://idworkstudio.com${heroImage}`} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
-        <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(faqSchema),
-  }}
-/>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <main className="bg-[#FAF8F3] text-[#2C2C2C]">
-        <section className="relative overflow-hidden bg-[#111] px-6 py-20 text-white md:py-28">
+        <section className="relative overflow-hidden bg-[#111] px-6 pb-20 pt-28 text-white md:pb-24 md:pt-36">
           <div className="absolute inset-0">
             <img
               src={heroImage}
               alt={t.heroAlt}
-              className="h-full w-full object-cover opacity-35"
+              className="h-full w-full object-cover opacity-75"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#111]/80 via-[#111]/72 to-[#111]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#111]/78 via-[#111]/45 to-[#111]/18" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#111]/18 via-transparent to-[#111]/38" />
           </div>
           <div className="relative mx-auto max-w-6xl">
             <div className="max-w-4xl">
