@@ -24,6 +24,7 @@ import ArticleRenovationMistakes from './components/ArticleRenovationMistakes';
 import CommercialRenovationCostSingapore from './components/CommercialRenovationCostSingapore';
 import OfficeRenovationCostSingapore from './components/OfficeRenovationCostSingapore';
 import OfficeRenovationTimelineSingapore from './components/OfficeRenovationTimelineSingapore';
+import OverseasRenovationShoppingMistakes from './components/OverseasRenovationShoppingMistakes';
 import StickyMobileNav from './components/StickyMobileNav';
 import ScrollToHashElement from './components/ScrollToHashElement';
 
@@ -407,6 +408,7 @@ export const routes: RouteRecord[] = [
       { path: 'insights/commercial-renovation-cost-singapore', element: <CommercialRenovationCostSingapore /> },
       { path: 'insights/office-renovation-cost-singapore', element: <OfficeRenovationCostSingapore /> },
       { path: 'insights/office-renovation-timeline-singapore', element: <OfficeRenovationTimelineSingapore /> },
+      { path: 'insights/overseas-renovation-shopping-singapore', element: <OverseasRenovationShoppingMistakes /> },
 
       { path: 'gallery', element: <Gallery /> },
       { path: 'contact', element: <Contact /> },

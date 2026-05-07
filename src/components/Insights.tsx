@@ -64,6 +64,14 @@ export default function Insights() {
       date: '2026-05-04',
       readTime: t('insights_page.articles.6.read_time'),
     },
+    {
+      slug: '/insights/overseas-renovation-shopping-singapore',
+      category: t('insights_page.articles.7.category'),
+      title: t('insights_page.articles.7.title'),
+      excerpt: t('insights_page.articles.7.excerpt'),
+      date: '2026-05-07',
+      readTime: t('insights_page.articles.7.read_time'),
+    },
   ];
 
   const itemListSchema = {

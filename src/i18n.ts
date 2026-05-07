@@ -2913,6 +2913,12 @@ enT["insights_page"] = {
       title: "Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes",
       excerpt: "A realistic breakdown of office renovation timelines in Singapore, including approvals, coordination delays, and what actually affects project completion.",
       read_time: "8 min read"
+    },
+    "7": {
+      category: "Home Planning Guide",
+      title: "Mistakes Singapore Homeowners Make When Buying Renovation Items Overseas",
+      excerpt: "A practical Singapore guide to buying furniture, tiles, taps, shower sets, appliances and decor from overseas platforms — including sizing, voltage, WELS, SAFETY Mark, warranty and shipping risks.",
+      read_time: "10 min read"
     }
   },
   footer_block: {
@@ -2997,6 +3003,12 @@ zhT["insights_page"] = {
       title: "新加坡办公室翻新时间表：办公室装修实际需要多久",
       excerpt: "详细解析新加坡办公室翻新时间，包括审批流程、现场协调以及常见延误因素。",
       read_time: "约 8 分钟"
+    },
+    "7": {
+      category: "住宅规划指南",
+      title: "新加坡业主海外购买翻新用品常见错误",
+      excerpt: "从海外平台购买家具、瓷砖、水龙头、花洒、电器与软装前应注意的实用指南，涵盖尺寸、电压、WELS 节水标签、SAFETY Mark、安全、保修与运输风险。",
+      read_time: "约 10 分钟"
     }
   },
   footer_block: {

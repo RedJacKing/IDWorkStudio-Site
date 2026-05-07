@@ -100,6 +100,16 @@ const pageMetaMap = {
     ogDesc: 'How long does office renovation take in Singapore? Realistic timeline, Gantt schedule, approvals, site works and handover explained by ID Work Studio.',
     ogUrl: 'https://idworkstudio.com/insights/office-renovation-timeline-singapore',
   },
+
+   'insights/overseas-renovation-shopping-singapore.html': {
+  canonical: 'https://idworkstudio.com/insights/overseas-renovation-shopping-singapore',
+  title: 'Mistakes Singapore Homeowners Make When Buying Renovation Items From Overseas | ID Work Studio',
+  description: 'Buying furniture, tiles, taps, lighting and appliances from Taobao, Amazon or overseas suppliers can save money, but many Singapore homeowners underestimate the risks involving sizing, compatibility, shipping delays, warranty and renovation coordination.',
+  ogTitle: 'Mistakes Singapore Homeowners Make When Buying Renovation Items From Overseas',
+  ogDesc: 'A practical Singapore guide covering overseas renovation shopping risks including furniture sizing, tiles, plumbing fittings, voltage compatibility, SAFETY Mark concerns and shipping delays.',
+  ogUrl: 'https://idworkstudio.com/insights/overseas-renovation-shopping-singapore',
+},
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',
@@ -491,6 +501,101 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'It is possible for some offices, but the renovation must be phased with dust control, noise planning, safety barricades and careful power or data cutover. Phased works usually take longer than a vacant-site renovation.',
+          },
+        },
+      ],
+    });
+  }
+  if (relativeFile === 'insights/overseas-renovation-shopping-singapore.html') {
+    schema['@graph'].push({
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Is it worth buying renovation items from Taobao or overseas platforms?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'It can be worth it for selected loose furniture and decorative items, but high-risk items such as tiles, concealed plumbing fittings, electrical appliances and oversized furniture should be checked carefully before ordering.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can US or Japan appliances be used in Singapore?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Not always. Singapore commonly uses 230V at 50Hz, while many US appliances use around 110V to 120V and Japan commonly uses 100V. A plug adapter does not solve voltage incompatibility. Check the appliance label and local safety requirements first.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do imported electrical appliances need a Singapore SAFETY Mark?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Certain controlled goods sold in Singapore require a valid SAFETY Mark. Homeowners should check whether the appliance category is regulated and avoid assuming that overseas certification is the same as Singapore compliance.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Will home insurance cover a fire caused by an imported appliance?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Insurance terms vary. In a fire investigation, insurers may look at whether a non-compliant, unsuitable or wrongly installed appliance contributed to the incident. Homeowners should check their policy and avoid using appliances that do not suit Singapore electrical conditions.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Why do overseas taps or rain shower sets sometimes not fit in Singapore?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Fitting size, thread type, connector design, water pressure and installation depth can differ. For concealed fittings, the risk is higher because rectification may require hacking after tiles are installed.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is WELS and why does it matter for taps and flushing products?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'WELS is Singapore’s Water Efficiency Labelling Scheme. It uses tick ratings to show water efficiency for covered products such as taps, mixers and flushing fittings. Homeowners should check whether imported water fittings are suitable for Singapore requirements.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Should I buy tiles from China for my Singapore renovation?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'It is possible, but risky. You must plan quantity, wastage, shipping damage, batch variation and replacement timeline carefully. If you buy too few or receive damaged tiles, tiling work may be delayed.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How many extra tiles should I order?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The exact allowance depends on tile size, layout, cutting pattern and site condition. Homeowners should ask the tiler or contractor before ordering. Buying too little may delay the job, while buying too much creates waste and storage problems.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Should bulky furniture arrive before renovation is completed?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Usually no. Bulky furniture can block workers, collect dust or get damaged during painting, carpentry or electrical work. It is better to use warehouse holding and deliver after major works are completed.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What renovation items should I not rush to buy?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Do not rush cushions, lamps, rugs, display items and other soft decoration. These can be added after moving in, when you understand your lifestyle, lighting habits and storage needs better.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What should I ask my contractor before buying overseas?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ask whether the item fits the design, whether it affects plumbing or electrical works, whether it can be installed safely, whether delivery timing suits the schedule and whether spare parts or replacements are available locally.',
           },
         },
       ],
