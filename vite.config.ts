@@ -18,6 +18,41 @@ export default defineConfig(({mode}) => {
     ssr: {
       noExternal: ['react-helmet-async'],
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (!id.includes('node_modules')) return undefined;
+
+            if (id.includes('react-ga4')) {
+              return 'analytics';
+            }
+
+            if (
+              id.includes('lucide-react') ||
+              id.includes('motion') ||
+              id.includes('framer-motion')
+            ) {
+              return 'ui';
+            }
+
+            if (
+              id.includes('i18next') ||
+              id.includes('react-i18next') ||
+              id.includes('i18next-browser-languagedetector')
+            ) {
+              return 'i18n';
+            }
+
+            if (id.includes('react-router') || id.includes('react-router-dom')) {
+              return 'router';
+            }
+
+            return undefined;
+          },
+        },
+      },
+    },
     server: {
       hmr: process.env.DISABLE_HMR !== 'true',
     },

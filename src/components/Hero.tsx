@@ -38,6 +38,7 @@ export default function Hero() {
           content="Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB-approved."
         />
         <link rel="canonical" href="https://idworkstudio.com/" />
+        <link rel="preload" as="image" href="/hero.webp" fetchPriority="high" />
         <meta property="og:title" content="Commercial & Office Renovation Singapore (2026 Cost Guide) | ID Work Studio" />
         <meta
   property="og:description"
@@ -61,6 +62,7 @@ export default function Hero() {
             alt="Luxury interior design and renovation in Singapore"
             className="w-full h-full object-cover object-center opacity-60 scale-110"
             fetchPriority="high"
+            loading="eager"
             decoding="async"
           />
           <div className="absolute inset-0 bg-black/40" />
