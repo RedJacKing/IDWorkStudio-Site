@@ -37,20 +37,20 @@ const articleHdbTimelineContent = {
     delays_title: "Why renovations get delayed",
     delays: {
       "1": {
-        title: "1. Project sequencing issues",
+        title: "Project sequencing issues",
         p1: "Renovation follows a Gantt chart sequence. If one stage is delayed, everything after it shifts. For example, if aircon piping is not completed, tiling and carpentry may be delayed as well.",
         p2: "One common example is the kitchen sink. If the project uses an undermount sink, the sink needs to be installed before the countertop can be placed. If the sink is delayed, the kitchen installation is delayed too."
       },
       "2": {
-        title: "2. External contractors",
+        title: "External contractors",
         p1: "Engaging separate vendors often leads to coordination issues and schedule misalignment. If one external contractor cannot keep to the project sequence, the rest of the work can be pushed back."
       },
       "3": {
-        title: "3. Owner-supplied materials",
+        title: "Owner-supplied materials",
         p1: "Items sourced from overseas can be delayed or incorrect, which stops installation work. This has become increasingly common when homeowners order kitchen systems, taps, accessories or fixtures from overseas platforms."
       },
       "4": {
-        title: "4. Late decisions & design changes",
+        title: "Late decisions & design changes",
         p1: "Indecision, adding features late or changing cabinet designs midway can cause major delays. When clients continue exploring materials for too long, or cannot agree on finishes, the timeline is affected because drawings, procurement and coordination cannot be finalised.",
         p2: "Small changes can also create large ripple effects. If a cabinet layout is revised after lighting or electrical points have already been planned, those drawings and sequences may need to be redone."
       }
@@ -133,20 +133,20 @@ const articleHdbTimelineContent = {
     delays_title: "翻新为什么会延误？",
     delays: {
       "1": {
-        title: "1. 工序衔接问题",
+        title: "工序衔接问题",
         p1: "翻新通常按甘特图工序推进。如果前一项工作延误，后面的工程就会整体往后推。例如冷气铜管若未及时完成，铺砖和木作安装都可能受到影响。",
         p2: "厨房水槽就是常见例子之一。如果项目使用下嵌式水槽，水槽必须先到位并安装好，台面才能继续施工。若水槽延误，整个厨房安装也会被拖慢。"
       },
       "2": {
-        title: "2. 外部承包商介入",
+        title: "外部承包商介入",
         p1: "当业主分别找不同供应商处理某些项目时，往往更容易出现协调失衡与时间错位。只要其中一方无法按工序配合，后续工作就会被拖延。"
       },
       "3": {
-        title: "3. 业主自购材料",
+        title: "业主自购材料",
         p1: "从海外采购的材料可能出现延误、规格不合或配件不齐，直接导致安装无法进行。现在越来越多业主会自行购买厨房系统、水龙头、卫浴配件或其他五金，这类问题也因此更常见。"
       },
       "4": {
-        title: "4. 太迟做决定或中途改设计",
+        title: "太迟做决定或中途改设计",
         p1: "材料一直定不下来、临时加功能，或木作设计做到一半又改变，都会造成明显延误。若夫妻双方迟迟无法对材料、颜色或风格达成一致，图纸、采购与工序安排都难以定案。",
         p2: "很多看似小的改动，其实会带来连锁反应。例如柜体布局一旦改变，原本规划好的灯位与电位往往也要重画重配，整个工序就得重新协调。"
       }
