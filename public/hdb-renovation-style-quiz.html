@@ -315,7 +315,6 @@ function selectAnswer(i){
     }
     const updated=[...selected,i].slice(0,2);
     answers[current]=updated;
-    trackQuizProgress();
     renderQuiz();
     if(updated.length>=2){
       setTimeout(()=>{
