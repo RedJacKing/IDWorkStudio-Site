@@ -265,12 +265,35 @@ const copy = {
   'Modern Classic':{desc:'You like elegance, symmetry and timeless detail. For HDB renovation, a simplified version usually works best so trims and features do not make the space feel smaller.',palette:'Ivory, warm grey, taupe, champagne and muted darker accents.',materials:'Panel details, refined laminates, glass, stone-look finishes and soft fabric.',lighting:'Elegant warm lighting, wall lights or statement pendants.',mood:'Refined, graceful and timeless.',maint:'Medium',cost:'$$–$$$',suitable:'4-room, 5-room and resale'},
   'Mid-Century Modern':{desc:'You enjoy personality, warmer wood tones and stylish furniture. This can work well in HDB homes when built-ins stay simple and character comes from furniture, lighting and colour accents.',palette:'Walnut, cream, olive, rust, mustard and warm neutral tones.',materials:'Wood veneer look, fabric, curved furniture and retro-inspired details.',lighting:'Lamps, pendants and warm mood lighting.',mood:'Stylish, warm and expressive.',maint:'Medium',cost:'$$',suitable:'BTO and resale'}
 };
+function trackQuizEvent(eventName, params={}){
+  const payload = Object.assign({
+    event_category: 'HDB Style Quiz',
+    page_path: window.location.pathname
+  }, params);
+  if(typeof gtag === 'function'){
+    gtag('event', eventName, payload);
+  }
+  console.log('[GA4 quiz event]', eventName, payload);
+}
+function trackQuizMilestoneView(){
+  const questionNumber = current + 1;
+  const milestones = [5,10,15,20,25];
+  if(milestones.includes(questionNumber) && !quizProgressTracked.has(questionNumber)){
+    trackQuizEvent('quiz_progress', {
+      event_label: `Viewed question ${questionNumber}`,
+      milestone_question: questionNumber,
+      questions_answered: answers.filter(v=>Array.isArray(v)?v.length>0:v!==undefined).length
+    });
+    quizProgressTracked.add(questionNumber);
+  }
+}
 function renderQuiz(){
   const q=questions[current]; const pct=Math.round(((current+1)/questions.length)*100);
   const multi=isMultiSelectQuestion(current);
   const helperText=multi?`${q.h}<br><strong>You may select up to 2 choices. Tap the same choice again to continue with only one.</strong>`:q.h;
   document.getElementById('quizContent').innerHTML=`<div class="fade-up"><div class="question-top"><div><div class="progress-meta">${q.section}</div><div style="font-size:12px;color:#746b61;margin-top:4px">Question ${current+1} / ${questions.length}</div></div><button class="btn btn-ghost" onclick="resetQuiz()" type="button">Reset</button></div><div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div><p class="progress-note">The 30 questions help us zone down your renovation style more accurately by checking lifestyle, storage, lighting, maintenance and design preference together.</p><h2 class="question-title">${q.q}</h2><p class="question-help">${helperText}</p><div class="answers">${q.a.map((ans,i)=>`<button class="answer-btn ${isAnswerSelected(current,i)?'active':''}" onclick="selectAnswer(${i})" type="button"><span class="answer-letter">${'ABCD'[i]}</span><span class="answer-text">${ans[0]}</span></button>`).join('')}</div><div class="nav-row"><button class="btn btn-ghost" onclick="prevQuestion()" ${current===0?'disabled':''} type="button">Back</button></div></div>`;
   renderSide();
+  trackQuizMilestoneView();
 }
 function renderSide(){
   const answered=answers.filter(v=>Array.isArray(v)?v.length>0:v!==undefined).length; const r=calcResult(); const topTags=Object.entries(r.tagCounts).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([t])=>t);
@@ -293,12 +316,10 @@ function scrollToResult(){
   window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
 }
 function selectAnswer(i){
-  if(!quizStartTracked && typeof gtag === 'function'){
-    gtag('event', 'quiz_start', {
-      event_category: 'HDB Style Quiz',
+  if(!quizStartTracked){
+    trackQuizEvent('quiz_start', {
       event_label: 'User started quiz',
-      question_number: current + 1,
-      page_path: window.location.pathname
+      question_number: current + 1
     });
     quizStartTracked = true;
   }
@@ -340,39 +361,20 @@ function selectAnswer(i){
     }
   },250);
 }
-function trackQuizProgress(){
-  const answered=answers.filter(v=>Array.isArray(v)?v.length>0:v!==undefined).length;
-  const milestones=[5,10,15,20,25];
-  milestones.forEach(milestone=>{
-    if(answered>=milestone && !quizProgressTracked.has(milestone) && typeof gtag === 'function'){
-      gtag('event', 'quiz_progress', {
-        event_category: 'HDB Style Quiz',
-        event_label: `Reached question ${milestone}`,
-        questions_answered: answered,
-        milestone_question: milestone,
-        page_path: window.location.pathname
-      });
-      quizProgressTracked.add(milestone);
-    }
-  });
-}
-function nextQuestion(){ if(getSelectedAnswers(current).length===0) return; trackQuizProgress(); if(current<questions.length-1){current++; renderQuiz(); scrollToQuizCard();} else showResult(); }
+function nextQuestion(){ if(getSelectedAnswers(current).length===0) return; if(current<questions.length-1){current++; renderQuiz(); scrollToQuizCard();} else showResult(); }
 function prevQuestion(){ if(current>0){current--; renderQuiz(); scrollToQuizCard();} }
 function resetQuiz(){ current=0; answers=[]; quizStartTracked=false; quizCompleteTracked=false; whatsappClickTracked=false; quizProgressTracked=new Set(); document.getElementById('result').classList.remove('show'); document.getElementById('quizShell').classList.remove('hide'); renderQuiz(); }
 function showResult(){
   const r=calcResult(); const c=copy[r.primary]; const displayPrimary=r.adjustment?`${r.primary} (${r.adjustment})`:r.primary;
-  trackQuizProgress();
-  if(!quizCompleteTracked && typeof gtag === 'function'){
-    gtag('event', 'quiz_complete', {
-      event_category: 'HDB Style Quiz',
+  if(!quizCompleteTracked){
+    trackQuizEvent('quiz_complete', {
       event_label: r.primary,
       style_result: r.primary,
       secondary_style: r.secondary,
       confidence: r.confidence,
       result_difference_percent: r.diffPct,
       completed_questions: answers.filter(v=>Array.isArray(v)?v.length>0:v!==undefined).length,
-      result_image: r.image,
-      page_path: window.location.pathname
+      result_image: r.image
     });
     quizCompleteTracked = true;
   }
@@ -385,20 +387,14 @@ function submitLead(e){
   const normalisedContact=contact.replace(/\s+/g,'').replace(/^\+65/,''); const sgMobile=/^[89]\d{7}$/.test(normalisedContact); const email=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
   if(name.length<2){ alert('Please enter a name with at least 2 characters.'); return; }
   if(!sgMobile&&!email){ alert('Please enter a valid Singapore mobile number or email address.'); return; }
-  if(!whatsappClickTracked && typeof gtag === 'function'){
-    gtag('event', 'whatsapp_click', {
-      event_category: 'HDB Style Quiz',
+  if(!whatsappClickTracked){
+    trackQuizEvent('whatsapp_click', {
       event_label: style,
-      source: 'style_quiz_result_form',
       style_result: style,
-      primary_style: r.primary,
       secondary_style: r.secondary,
-      confidence: r.confidence,
-      result_difference_percent: r.diffPct,
       hdb_type: hdb,
       property_condition: cond,
-      key_collection_timeline: timeline,
-      page_path: window.location.pathname
+      key_collection_timeline: timeline
     });
     whatsappClickTracked = true;
   }
