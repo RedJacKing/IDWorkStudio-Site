@@ -164,6 +164,7 @@ let answers = [];
 let quizStartTracked = false;
 let quizCompleteTracked = false;
 let whatsappClickTracked = false;
+let quizProgressTracked = new Set();
 const questions = [
 {section:'Visual Preference',q:'When you imagine your living room, what feeling should it give first?',h:'Choose the option that feels closest to your ideal HDB living room.',a:[['Calm, warm and simple',{'Japandi':4,'Soft Minimalism':2,'Contemporary Warm':2},['warm','minimal','calm']],['Natural, textured and relaxed',{'Wabi-Sabi':4,'Japandi':2,'Industrial':1},['texture','warm','natural']],['Elegant, polished and hotel-like',{'Modern Luxe':4,'Modern Classic':2,'Contemporary Warm':1},['luxury','dark','elegant']],['Bright, clean and easy-going',{'Scandinavian':4,'Soft Minimalism':3,'Muji / Japanese Minimalist':1},['bright','clean','practical']]]},
 {section:'Visual Preference',q:'Which colour direction do you naturally like?',h:'Think about what you would be happy seeing every day.',a:[['Beige, cream, light wood',{'Japandi':3,'Scandinavian':2,'Soft Minimalism':2},['warm','bright','minimal']],['Clay, stone, taupe and uneven texture',{'Wabi-Sabi':4,'Contemporary Warm':1,'Japandi':1},['texture','warm','earthy']],['Charcoal, bronze, marble-like accents',{'Modern Luxe':4,'Industrial':2,'Modern Classic':1},['dark','luxury']],['Walnut, olive, mustard or retro wood',{'Mid-Century Modern':4,'Contemporary Warm':2,'Modern Classic':1},['warm','retro']]]},
@@ -295,7 +296,9 @@ function selectAnswer(i){
   if(!quizStartTracked && typeof gtag === 'function'){
     gtag('event', 'quiz_start', {
       event_category: 'HDB Style Quiz',
-      event_label: 'User started quiz'
+      event_label: 'User started quiz',
+      question_number: current + 1,
+      page_path: window.location.pathname
     });
     quizStartTracked = true;
   }
@@ -328,7 +331,6 @@ function selectAnswer(i){
     return;
   }
   answers[current]=i;
-  trackQuizProgress();
   renderQuiz();
   setTimeout(()=>{
     if(current < questions.length-1){
@@ -338,17 +340,39 @@ function selectAnswer(i){
     }
   },250);
 }
-function nextQuestion(){ if(getSelectedAnswers(current).length===0) return; if(current<questions.length-1){current++; renderQuiz(); scrollToQuizCard();} else showResult(); }
+function trackQuizProgress(){
+  const answered=answers.filter(v=>Array.isArray(v)?v.length>0:v!==undefined).length;
+  const milestones=[5,10,15,20,25];
+  milestones.forEach(milestone=>{
+    if(answered>=milestone && !quizProgressTracked.has(milestone) && typeof gtag === 'function'){
+      gtag('event', 'quiz_progress', {
+        event_category: 'HDB Style Quiz',
+        event_label: `Reached question ${milestone}`,
+        questions_answered: answered,
+        milestone_question: milestone,
+        page_path: window.location.pathname
+      });
+      quizProgressTracked.add(milestone);
+    }
+  });
+}
+function nextQuestion(){ if(getSelectedAnswers(current).length===0) return; trackQuizProgress(); if(current<questions.length-1){current++; renderQuiz(); scrollToQuizCard();} else showResult(); }
 function prevQuestion(){ if(current>0){current--; renderQuiz(); scrollToQuizCard();} }
-function resetQuiz(){ current=0; answers=[]; document.getElementById('result').classList.remove('show'); document.getElementById('quizShell').classList.remove('hide'); renderQuiz(); }
+function resetQuiz(){ current=0; answers=[]; quizStartTracked=false; quizCompleteTracked=false; whatsappClickTracked=false; quizProgressTracked=new Set(); document.getElementById('result').classList.remove('show'); document.getElementById('quizShell').classList.remove('hide'); renderQuiz(); }
 function showResult(){
   const r=calcResult(); const c=copy[r.primary]; const displayPrimary=r.adjustment?`${r.primary} (${r.adjustment})`:r.primary;
+  trackQuizProgress();
   if(!quizCompleteTracked && typeof gtag === 'function'){
     gtag('event', 'quiz_complete', {
       event_category: 'HDB Style Quiz',
       event_label: r.primary,
       style_result: r.primary,
-      secondary_style: r.secondary
+      secondary_style: r.secondary,
+      confidence: r.confidence,
+      result_difference_percent: r.diffPct,
+      completed_questions: answers.filter(v=>Array.isArray(v)?v.length>0:v!==undefined).length,
+      result_image: r.image,
+      page_path: window.location.pathname
     });
     quizCompleteTracked = true;
   }
@@ -365,10 +389,16 @@ function submitLead(e){
     gtag('event', 'whatsapp_click', {
       event_category: 'HDB Style Quiz',
       event_label: style,
+      source: 'style_quiz_result_form',
       style_result: style,
+      primary_style: r.primary,
+      secondary_style: r.secondary,
+      confidence: r.confidence,
+      result_difference_percent: r.diffPct,
       hdb_type: hdb,
       property_condition: cond,
-      key_collection_timeline: timeline
+      key_collection_timeline: timeline,
+      page_path: window.location.pathname
     });
     whatsappClickTracked = true;
   }
