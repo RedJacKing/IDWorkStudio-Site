@@ -2230,6 +2230,12 @@ enT["insights_page"] = {
       title: "Mistakes Singapore Homeowners Make When Buying Renovation Items Overseas",
       excerpt: "A practical Singapore guide to buying furniture, tiles, taps, shower sets, appliances and decor from overseas platforms — including sizing, voltage, WELS, SAFETY Mark, warranty and shipping risks.",
       read_time: "10 min read"
+    },
+    "8": {
+      category: "Wellness Design Guide",
+      title: "Beyond Superstition: A Data-Driven Guide to Feng Shui Renovations in Singapore",
+      excerpt: "A practical Singapore guide to modern feng shui through environmental psychology, stress-reduction layouts, lighting, storage, Japandi interiors and HDB or condo planning.",
+      read_time: "11 min read"
     }
   },
   footer_block: {
@@ -2320,6 +2326,12 @@ zhT["insights_page"] = {
       title: "新加坡业主海外购买翻新用品常见错误",
       excerpt: "从海外平台购买家具、瓷砖、水龙头、花洒、电器与软装前应注意的实用指南，涵盖尺寸、电压、WELS 节水标签、SAFETY Mark、安全、保修与运输风险。",
       read_time: "约 10 分钟"
+    },
+    "8": {
+      category: "疗愈设计指南",
+      title: "超越迷信：新加坡风水装修的数据化与实用设计指南",
+      excerpt: "从环境心理学、减压空间规划、灯光、收纳、Japandi风格与HDB或公寓装修角度，重新理解现代风水。",
+      read_time: "约 11 分钟"
     }
   },
   footer_block: {

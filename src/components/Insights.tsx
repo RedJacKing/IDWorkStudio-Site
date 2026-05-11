@@ -72,6 +72,14 @@ export default function Insights() {
       date: '2026-05-07',
       readTime: t('insights_page.articles.7.read_time'),
     },
+    {
+      slug: '/insights/feng-shui-renovation-singapore',
+      category: t('insights_page.articles.8.category'),
+      title: t('insights_page.articles.8.title'),
+      excerpt: t('insights_page.articles.8.excerpt'),
+      date: '2026-05-11',
+      readTime: t('insights_page.articles.8.read_time'),
+    },
   ];
 
   const itemListSchema = {

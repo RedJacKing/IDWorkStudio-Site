@@ -110,6 +110,15 @@ const pageMetaMap = {
   ogUrl: 'https://idworkstudio.com/insights/overseas-renovation-shopping-singapore',
 },
 
+  'insights/feng-shui-renovation-singapore.html': {
+  canonical: 'https://idworkstudio.com/insights/feng-shui-renovation-singapore',
+  title: 'Feng Shui Renovation Singapore: Data-Driven Wellness Design | ID Work Studio',
+  description: 'A practical Singapore guide to feng shui renovation through environmental psychology, stress-reduction layouts, lighting, storage, Japandi interiors and HDB or condo planning.',
+  ogTitle: 'Feng Shui Renovation Singapore: Data-Driven Wellness Design',
+  ogDesc: 'Modern feng shui for Singapore HDB and condo renovation, explained through environmental psychology, lighting, storage, workflow and wellness-focused design.',
+  ogUrl: 'https://idworkstudio.com/insights/feng-shui-renovation-singapore',
+},
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',
