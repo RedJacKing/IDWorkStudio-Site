@@ -369,7 +369,7 @@ function submitLead(e){
     });
     whatsappClickTracked = true;
   }
-  const msg=encodeURIComponent(`Hi ID Work Studio, I completed the HDB Renovation Style Quiz.\n\nName: ${name}\nProperty Type: ${property}\nBTO/Resale: ${cond}\n\nStyle result: ${style}\nSecondary style: ${r.secondary}\nConfidence: ${r.confidence} (${r.diffPct}% difference)\n\nI would like to ask whether this style suits my layout, budget or lifestyle.`);
+  const msg=encodeURIComponent(`Hi ID Work Studio! 👋\n\nI just finished the quiz and my result was ${style}!\n\nI'm still in the early “dreaming” stage for my ${cond}, but I'm curious if this style is actually practical for a Singapore HDB layout like mine 😊\n\nNo rush at all — just hoping to get some professional advice when you're free!`);
   document.getElementById('leadSuccess').style.display='block'; setTimeout(()=>{ window.open(`https://wa.me/6598333085?text=${msg}`,'_blank'); },400);
 }
 document.querySelectorAll('a[href="#quiz"]').forEach(a=>{
