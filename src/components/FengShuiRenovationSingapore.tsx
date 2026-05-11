@@ -683,15 +683,13 @@ export default function FengShuiRenovationSingapore() {
         </section>
 
         <section className="space-y-14 px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-          {t.sections.map((section, index) => (
+          {t.sections.map((section) => (
             <div
               key={section.title}
-              className={`mx-auto grid max-w-7xl gap-8 rounded-[2rem] border border-[#dfd0be] bg-white/75 p-4 shadow-sm md:p-6 lg:grid-cols-2 lg:items-center ${
-                index % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''
-              }`}
+              className="mx-auto max-w-7xl rounded-[2rem] border border-[#dfd0be] bg-white/75 p-4 shadow-sm md:p-6"
             >
               <div className="overflow-hidden rounded-[1.6rem] bg-[#eadfce]">
-                <img src={section.image.src} alt={section.image.alt} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                <img src={section.image.src} alt={section.image.alt} className="h-auto w-full object-contain" loading="lazy" decoding="async" />
               </div>
               <div className="p-4 md:p-8">
                 <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold">{section.eyebrow}</span>
