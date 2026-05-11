@@ -164,7 +164,6 @@ let answers = [];
 let quizStartTracked = false;
 let quizCompleteTracked = false;
 let whatsappClickTracked = false;
-let quizProgressTracked = new Set();
 const questions = [
 {section:'Visual Preference',q:'When you imagine your living room, what feeling should it give first?',h:'Choose the option that feels closest to your ideal HDB living room.',a:[['Calm, warm and simple',{'Japandi':4,'Soft Minimalism':2,'Contemporary Warm':2},['warm','minimal','calm']],['Natural, textured and relaxed',{'Wabi-Sabi':4,'Japandi':2,'Industrial':1},['texture','warm','natural']],['Elegant, polished and hotel-like',{'Modern Luxe':4,'Modern Classic':2,'Contemporary Warm':1},['luxury','dark','elegant']],['Bright, clean and easy-going',{'Scandinavian':4,'Soft Minimalism':3,'Muji / Japanese Minimalist':1},['bright','clean','practical']]]},
 {section:'Visual Preference',q:'Which colour direction do you naturally like?',h:'Think about what you would be happy seeing every day.',a:[['Beige, cream, light wood',{'Japandi':3,'Scandinavian':2,'Soft Minimalism':2},['warm','bright','minimal']],['Clay, stone, taupe and uneven texture',{'Wabi-Sabi':4,'Contemporary Warm':1,'Japandi':1},['texture','warm','earthy']],['Charcoal, bronze, marble-like accents',{'Modern Luxe':4,'Industrial':2,'Modern Classic':1},['dark','luxury']],['Walnut, olive, mustard or retro wood',{'Mid-Century Modern':4,'Contemporary Warm':2,'Modern Classic':1},['warm','retro']]]},
@@ -265,35 +264,12 @@ const copy = {
   'Modern Classic':{desc:'You like elegance, symmetry and timeless detail. For HDB renovation, a simplified version usually works best so trims and features do not make the space feel smaller.',palette:'Ivory, warm grey, taupe, champagne and muted darker accents.',materials:'Panel details, refined laminates, glass, stone-look finishes and soft fabric.',lighting:'Elegant warm lighting, wall lights or statement pendants.',mood:'Refined, graceful and timeless.',maint:'Medium',cost:'$$–$$$',suitable:'4-room, 5-room and resale'},
   'Mid-Century Modern':{desc:'You enjoy personality, warmer wood tones and stylish furniture. This can work well in HDB homes when built-ins stay simple and character comes from furniture, lighting and colour accents.',palette:'Walnut, cream, olive, rust, mustard and warm neutral tones.',materials:'Wood veneer look, fabric, curved furniture and retro-inspired details.',lighting:'Lamps, pendants and warm mood lighting.',mood:'Stylish, warm and expressive.',maint:'Medium',cost:'$$',suitable:'BTO and resale'}
 };
-function trackQuizEvent(eventName, params={}){
-  const payload = Object.assign({
-    event_category: 'HDB Style Quiz',
-    page_path: window.location.pathname
-  }, params);
-  if(typeof gtag === 'function'){
-    gtag('event', eventName, payload);
-  }
-  console.log('[GA4 quiz event]', eventName, payload);
-}
-function trackQuizMilestoneView(){
-  const questionNumber = current + 1;
-  const milestones = [5,10,15,20,25];
-  if(milestones.includes(questionNumber) && !quizProgressTracked.has(questionNumber)){
-    trackQuizEvent('quiz_progress', {
-      event_label: `Viewed question ${questionNumber}`,
-      milestone_question: questionNumber,
-      questions_answered: answers.filter(v=>Array.isArray(v)?v.length>0:v!==undefined).length
-    });
-    quizProgressTracked.add(questionNumber);
-  }
-}
 function renderQuiz(){
   const q=questions[current]; const pct=Math.round(((current+1)/questions.length)*100);
   const multi=isMultiSelectQuestion(current);
   const helperText=multi?`${q.h}<br><strong>You may select up to 2 choices. Tap the same choice again to continue with only one.</strong>`:q.h;
   document.getElementById('quizContent').innerHTML=`<div class="fade-up"><div class="question-top"><div><div class="progress-meta">${q.section}</div><div style="font-size:12px;color:#746b61;margin-top:4px">Question ${current+1} / ${questions.length}</div></div><button class="btn btn-ghost" onclick="resetQuiz()" type="button">Reset</button></div><div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div><p class="progress-note">The 30 questions help us zone down your renovation style more accurately by checking lifestyle, storage, lighting, maintenance and design preference together.</p><h2 class="question-title">${q.q}</h2><p class="question-help">${helperText}</p><div class="answers">${q.a.map((ans,i)=>`<button class="answer-btn ${isAnswerSelected(current,i)?'active':''}" onclick="selectAnswer(${i})" type="button"><span class="answer-letter">${'ABCD'[i]}</span><span class="answer-text">${ans[0]}</span></button>`).join('')}</div><div class="nav-row"><button class="btn btn-ghost" onclick="prevQuestion()" ${current===0?'disabled':''} type="button">Back</button></div></div>`;
   renderSide();
-  trackQuizMilestoneView();
 }
 function renderSide(){
   const answered=answers.filter(v=>Array.isArray(v)?v.length>0:v!==undefined).length; const r=calcResult(); const topTags=Object.entries(r.tagCounts).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([t])=>t);
@@ -316,10 +292,10 @@ function scrollToResult(){
   window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
 }
 function selectAnswer(i){
-  if(!quizStartTracked){
-    trackQuizEvent('quiz_start', {
-      event_label: 'User started quiz',
-      question_number: current + 1
+  if(!quizStartTracked && typeof gtag === 'function'){
+    gtag('event', 'quiz_start', {
+      event_category: 'HDB Style Quiz',
+      event_label: 'User started quiz'
     });
     quizStartTracked = true;
   }
@@ -363,42 +339,37 @@ function selectAnswer(i){
 }
 function nextQuestion(){ if(getSelectedAnswers(current).length===0) return; if(current<questions.length-1){current++; renderQuiz(); scrollToQuizCard();} else showResult(); }
 function prevQuestion(){ if(current>0){current--; renderQuiz(); scrollToQuizCard();} }
-function resetQuiz(){ current=0; answers=[]; quizStartTracked=false; quizCompleteTracked=false; whatsappClickTracked=false; quizProgressTracked=new Set(); document.getElementById('result').classList.remove('show'); document.getElementById('quizShell').classList.remove('hide'); renderQuiz(); }
+function resetQuiz(){ current=0; answers=[]; document.getElementById('result').classList.remove('show'); document.getElementById('quizShell').classList.remove('hide'); renderQuiz(); }
 function showResult(){
   const r=calcResult(); const c=copy[r.primary]; const displayPrimary=r.adjustment?`${r.primary} (${r.adjustment})`:r.primary;
-  if(!quizCompleteTracked){
-    trackQuizEvent('quiz_complete', {
+  if(!quizCompleteTracked && typeof gtag === 'function'){
+    gtag('event', 'quiz_complete', {
+      event_category: 'HDB Style Quiz',
       event_label: r.primary,
       style_result: r.primary,
-      secondary_style: r.secondary,
-      confidence: r.confidence,
-      result_difference_percent: r.diffPct,
-      completed_questions: answers.filter(v=>Array.isArray(v)?v.length>0:v!==undefined).length,
-      result_image: r.image
+      secondary_style: r.secondary
     });
     quizCompleteTracked = true;
   }
   document.getElementById('quizShell').classList.add('hide'); const result=document.getElementById('result'); result.classList.add('show');
-  result.innerHTML=`<div class="result-hero"><div class="soft-card result-panel"><div class="result-kicker">Your renovation style result</div><h2 class="result-style">${displayPrimary}</h2><div class="confidence">${r.confidence} · ${r.diffPct}% difference</div><p class="lead" style="margin-left:0">Your secondary style is <strong>${r.secondary}</strong>. ${c.desc}</p><div class="tag-cloud">${Object.entries(r.tagCounts).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([t])=>`<span class="tag" style="color:#6f5830;border-color:#d8cec0;background:#fffaf4">${t}</span>`).join('')}</div></div><img class="result-img" loading="eager" src="${r.image}" alt="${displayPrimary} HDB living room interior style result" onerror="this.onerror=null;this.src='${fallbackImage}'" /></div><div class="breakdown-grid"><div class="breakdown-card"><h4>Colour palette</h4><p>${c.palette}</p></div><div class="breakdown-card"><h4>Materials</h4><p>${c.materials}</p></div><div class="breakdown-card"><h4>Lighting</h4><p>${c.lighting}</p></div><div class="breakdown-card"><h4>Mood</h4><p>${c.mood}</p></div></div><div class="reality-grid"><div class="reality-item"><div class="reality-label">Maintenance</div><div class="reality-value">${c.maint}</div></div><div class="reality-item"><div class="reality-label">Cost level</div><div class="reality-value">${c.cost}</div></div><div class="reality-item"><div class="reality-label">Suitable for</div><div class="reality-value">${c.suitable}</div></div></div><div class="lead-box"><h3>Want us to adapt this style to your actual HDB layout?</h3><p style="color:#746b61;line-height:1.7;margin:0">Send your result to ID Work Studio. We can review your HDB type, lifestyle and key collection timeline before proposing a practical renovation direction.</p><form id="leadForm" onsubmit="submitLead(event)"><div class="form-grid"><div class="field"><label>Name</label><input class="inp" id="leadName" required placeholder="Your name" /></div><div class="field"><label>Contact</label><input class="inp" id="leadContact" required placeholder="Mobile or email" /></div><div class="field"><label>HDB Type</label><select class="inp" id="leadHdb"><option>3 room</option><option selected>4 room</option><option>5 room</option></select></div><div class="field"><label>BTO / Resale</label><select class="inp" id="leadCondition"><option>BTO</option><option selected>Resale</option></select></div><div class="field full"><label>Key collection timeline</label><select class="inp" id="leadTimeline"><option>Already collected</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>More than 6 months</option><option>Not sure yet</option></select></div></div><p style="margin:14px 0 0;color:#746b61;font-size:12px;line-height:1.6">You will be redirected to WhatsApp. Please press Send to complete your enquiry.</p><button class="btn btn-gold" style="margin-top:18px;width:100%" type="submit">Send Result via WhatsApp</button><div class="success" id="leadSuccess">Opening WhatsApp with your style result. Please send the message there to complete the enquiry.</div></form><button class="btn btn-ghost" style="margin-top:12px;width:100%" onclick="resetQuiz()" type="button">Retake Quiz</button></div>`;
+  result.innerHTML=`<div class="result-hero"><div class="soft-card result-panel"><div class="result-kicker">Your renovation style result</div><h2 class="result-style">${displayPrimary}</h2><div class="confidence">${r.confidence} · ${r.diffPct}% difference</div><p class="lead" style="margin-left:0">Your secondary style is <strong>${r.secondary}</strong>. ${c.desc}</p><div class="tag-cloud">${Object.entries(r.tagCounts).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([t])=>`<span class="tag" style="color:#6f5830;border-color:#d8cec0;background:#fffaf4">${t}</span>`).join('')}</div></div><img class="result-img" loading="eager" src="${r.image}" alt="${displayPrimary} HDB living room interior style result" onerror="this.onerror=null;this.src='${fallbackImage}'" /></div><div class="breakdown-grid"><div class="breakdown-card"><h4>Colour palette</h4><p>${c.palette}</p></div><div class="breakdown-card"><h4>Materials</h4><p>${c.materials}</p></div><div class="breakdown-card"><h4>Lighting</h4><p>${c.lighting}</p></div><div class="breakdown-card"><h4>Mood</h4><p>${c.mood}</p></div></div><div class="reality-grid"><div class="reality-item"><div class="reality-label">Maintenance</div><div class="reality-value">${c.maint}</div></div><div class="reality-item"><div class="reality-label">Cost level</div><div class="reality-value">${c.cost}</div></div><div class="reality-item"><div class="reality-label">Suitable for</div><div class="reality-value">${c.suitable}</div></div></div><div class="lead-box"><h3>Want us to adapt this style to your actual layout?</h3><p style="color:#746b61;line-height:1.7;margin:0">You can simply ask whether this style suits your layout, budget or lifestyle. No hard selling. No obligation quotation required.</p><form id="leadForm" onsubmit="submitLead(event)"><div class="form-grid"><div class="field"><label>Name</label><input class="inp" id="leadName" required placeholder="Your name" /></div><div class="field"><label>Property Type</label><select class="inp" id="leadProperty"><option>3-Room HDB</option><option selected>4-Room HDB</option><option>5-Room HDB</option><option>Executive HDB</option><option>Condo</option><option>Private Estate</option></select></div><div class="field"><label>BTO / Resale</label><select class="inp" id="leadCondition"><option>BTO</option><option selected>Resale</option></select></div></div><p style="margin:14px 0 0;color:#746b61;font-size:12px;line-height:1.6">Opens directly in WhatsApp with your quiz result pre-filled.</p><button class="btn btn-gold" style="margin-top:18px;width:100%" type="submit">Discuss This Style on WhatsApp</button><div class="success" id="leadSuccess">Opening WhatsApp with your style result.</div></form><button class="btn btn-ghost" style="margin-top:12px;width:100%" onclick="resetQuiz()" type="button">Retake Quiz</button></div>`;
   scrollToResult();
 }
 function submitLead(e){
-  e.preventDefault(); const r=calcResult(); const name=document.getElementById('leadName').value.trim(); const contact=document.getElementById('leadContact').value.trim(); const hdb=document.getElementById('leadHdb').value; const cond=document.getElementById('leadCondition').value; const timeline=document.getElementById('leadTimeline').value; const style=r.adjustment?`${r.primary} (${r.adjustment})`:r.primary;
-  const normalisedContact=contact.replace(/\s+/g,'').replace(/^\+65/,''); const sgMobile=/^[89]\d{7}$/.test(normalisedContact); const email=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
+  e.preventDefault(); const r=calcResult(); const name=document.getElementById('leadName').value.trim(); const property=document.getElementById('leadProperty').value; const cond=document.getElementById('leadCondition').value; const style=r.adjustment?`${r.primary} (${r.adjustment})`:r.primary;
   if(name.length<2){ alert('Please enter a name with at least 2 characters.'); return; }
-  if(!sgMobile&&!email){ alert('Please enter a valid Singapore mobile number or email address.'); return; }
-  if(!whatsappClickTracked){
-    trackQuizEvent('whatsapp_click', {
+  if(!whatsappClickTracked && typeof gtag === 'function'){
+    gtag('event', 'whatsapp_click', {
+      event_category: 'HDB Style Quiz',
       event_label: style,
       style_result: style,
       secondary_style: r.secondary,
-      hdb_type: hdb,
-      property_condition: cond,
-      key_collection_timeline: timeline
+      property_type: property,
+      property_condition: cond
     });
     whatsappClickTracked = true;
   }
-  const msg=encodeURIComponent(`Hi ID Work Studio, I completed the HDB Renovation Style Quiz.\n\nName: ${name}\nContact: ${contact}\nHDB Type: ${hdb}\nBTO/Resale: ${cond}\nKey collection timeline: ${timeline}\n\nStyle result: ${style}\nSecondary style: ${r.secondary}\nConfidence: ${r.confidence} (${r.diffPct}% difference)\n\nI would like help adapting this style to my actual HDB layout.`);
+  const msg=encodeURIComponent(`Hi ID Work Studio, I completed the HDB Renovation Style Quiz.\n\nName: ${name}\nProperty Type: ${property}\nBTO/Resale: ${cond}\n\nStyle result: ${style}\nSecondary style: ${r.secondary}\nConfidence: ${r.confidence} (${r.diffPct}% difference)\n\nI would like to ask whether this style suits my layout, budget or lifestyle.`);
   document.getElementById('leadSuccess').style.display='block'; setTimeout(()=>{ window.open(`https://wa.me/6598333085?text=${msg}`,'_blank'); },400);
 }
 document.querySelectorAll('a[href="#quiz"]').forEach(a=>{
