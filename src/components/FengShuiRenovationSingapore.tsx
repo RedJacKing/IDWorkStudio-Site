@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -542,7 +541,6 @@ const content: Record<'en' | 'zh', ArticleContent> = {
 };
 
 export default function FengShuiRenovationSingapore() {
-  const [expandedImage, setExpandedImage] = useState<ImageBlock | null>(null);
   const { i18n } = useTranslation();
   const lang = i18n.language === 'zh' ? 'zh' : 'en';
   const t = content[lang];
@@ -692,14 +690,9 @@ export default function FengShuiRenovationSingapore() {
                 index % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''
               }`}
             >
-              <button
-                type="button"
-                onClick={() => setExpandedImage(section.image)}
-                className="overflow-hidden rounded-[1.6rem] bg-[#eadfce] text-left cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-gold/60 focus:ring-offset-2 focus:ring-offset-[#f7f2ea]"
-                aria-label={`Open larger view: ${section.image.alt}`}
-              >
+              <div className="overflow-hidden rounded-[1.6rem] bg-[#eadfce]">
                 <img src={section.image.src} alt={section.image.alt} className="h-full w-full object-cover" loading="lazy" decoding="async" />
-              </button>
+              </div>
               <div className="p-4 md:p-8">
                 <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold">{section.eyebrow}</span>
                 <h2 className="mt-4 font-serif text-3xl font-bold leading-tight text-[#241f1b] md:text-4xl">{section.title}</h2>
@@ -822,30 +815,6 @@ export default function FengShuiRenovationSingapore() {
             </div>
           </div>
         </section>
-
-        {expandedImage && (
-          <div
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-3 backdrop-blur-sm sm:p-6"
-            role="dialog"
-            aria-modal="true"
-            onClick={() => setExpandedImage(null)}
-          >
-            <button
-              type="button"
-              className="absolute right-4 top-4 z-[101] flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-2xl leading-none text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-              onClick={() => setExpandedImage(null)}
-              aria-label="Close image"
-            >
-              ×
-            </button>
-            <img
-              src={expandedImage.src}
-              alt={expandedImage.alt}
-              className="max-h-[88vh] w-full max-w-7xl rounded-2xl object-contain shadow-2xl"
-              onClick={(event) => event.stopPropagation()}
-            />
-          </div>
-        )}
 
         <section className="bg-[#1f1a17] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
