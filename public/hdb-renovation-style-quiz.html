@@ -369,7 +369,7 @@ function submitLead(e){
     });
     whatsappClickTracked = true;
   }
-  const msg=encodeURIComponent(`Hi ID Work Studio 👋\n\nI just finished the style quiz and my result was ${style}.\n\nI’m ${name}, currently planning a ${cond.toLowerCase()} ${property}, and I’m curious if this style usually works well for layouts like mine 😊\n\nWould love to hear your thoughts. Thanks!`);
+  const msg=encodeURIComponent(`Hi ID Work Studio\n\nI just finished the style quiz and my result was ${style}.\n\nI’m ${name}, currently planning a ${cond.toLowerCase()} ${property}, and I’m curious if this style usually works well for layouts like mine.\n\nWould love to hear your thoughts. Thanks!`);
   document.getElementById('leadSuccess').style.display='block'; setTimeout(()=>{ window.open(`https://wa.me/6598333085?text=${msg}`,'_blank'); },400);
 }
 document.querySelectorAll('a[href="#quiz"]').forEach(a=>{
