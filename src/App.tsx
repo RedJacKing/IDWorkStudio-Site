@@ -129,24 +129,24 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
   en: {
         "quick_answers": {
           "eyebrow": "Quick renovation answers",
-          "title": "Plan your renovation with clearer cost, timeline and process expectations.",
+          "title": "Plan your Singapore renovation with clearer budget, timeline and approval expectations.",
           "subtitle": "Short answers for homeowners and business owners comparing Singapore renovation options before speaking to a designer.",
           "items": [
             {
               "title": "Renovation cost in Singapore",
-              "text": "Most HDB, condo and office renovation budgets depend on property condition, carpentry scope, hacking, electrical works and material selection.",
+              "text": "BTO, resale, condo and office renovation costs in Singapore are usually shaped by site condition, hacking scope, carpentry, electrical works, permits and material selection.",
               "link": "/insights/renovation-cost-singapore-2026",
               "label": "Read cost guide"
             },
             {
               "title": "Residential vs commercial timeline",
-              "text": "A typical HDB renovation may take weeks, while office projects depend on approvals, reinstatement needs, landlord rules and fit-out sequencing.",
+              "text": "HDB, condo and commercial renovation timelines differ because of hacking permits, carpentry lead time, building management rules, reinstatement work and handover dates.",
               "link": "/insights/hdb-renovation-timeline-singapore",
               "label": "View timeline guide"
             },
             {
               "title": "Renovation process",
-              "text": "A smoother project usually follows a clear path: consult, space planning, design confirmation, quotation, build, inspection and handover.",
+              "text": "A smoother renovation usually starts with floor plan review, budget discussion, design confirmation, quotation, permit checks, build coordination and final handover.",
               "link": "#process",
               "label": "See our process"
             }
@@ -154,7 +154,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "featured_insights": {
           "eyebrow": "Featured insights",
-          "title": "Helpful guides for Singapore renovation planning.",
+          "title": "Renovation planning guides for Singapore homes, offices and commercial spaces.",
           "subtitle": "Read the deeper guides after getting the overview. These pages support budget planning, approval awareness and project sequencing.",
           "read_article": "Read article",
           "items": [
@@ -177,7 +177,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "planning_tools": {
           "eyebrow": "Planning tools",
-          "title": "Start with budget clarity and style direction.",
+          "title": "Start with a renovation budget estimate, then narrow your design direction.",
           "subtitle": "Use these tools before consultation so your renovation discussion starts with clearer expectations.",
           "items": [
             {
@@ -229,7 +229,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "trust": {
           "eyebrow": "Why ID Work Studio",
-          "title": "Registered, structured and design-led.",
+          "title": "Registered, design-led and familiar with Singapore renovation requirements.",
           "signals": [
             "BCA-registered renovation and interior design firm in Singapore.",
             "HDB-approved for residential renovation works and HDB project coordination.",
@@ -257,7 +257,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "faq": {
           "eyebrow": "Renovation FAQ",
-          "title": "Short answers before you start planning.",
+          "title": "Short answers on renovation cost, timeline, permits and planning.",
           "learn_more": "Learn more",
           "items": [
             {
@@ -291,24 +291,24 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
   zh: {
         "quick_answers": {
           "eyebrow": "翻新快速指南",
-          "title": "更清楚掌握翻新预算、工期与流程。",
+          "title": "更清楚掌握新加坡翻新的预算、工期与审批预期。",
           "subtitle": "为正在比较新加坡翻新方案的屋主与商业客户，提供简洁清楚的规划重点。",
           "items": [
             {
               "title": "新加坡翻新费用",
-              "text": "HDB、公寓与办公室翻新预算，通常取决于房屋状况、木工范围、拆除工程、电工工程与材料选择。",
+              "text": "BTO、转售屋、公寓与办公室翻新费用，通常会受现场状况、拆除范围、木工、电工、许可证与材料选择影响。",
               "link": "/insights/renovation-cost-singapore-2026",
               "label": "阅读费用指南"
             },
             {
               "title": "住宅与商业翻新工期",
-              "text": "HDB 翻新通常需要数周；办公室项目则会受审批、恢复原状、大厦规定与装修流程安排影响。",
+              "text": "HDB、公寓与商业翻新工期各有不同，常受拆除许可证、木工交期、大厦管理规定、恢复原状工程与移交日期影响。",
               "link": "/insights/hdb-renovation-timeline-singapore",
               "label": "查看工期指南"
             },
             {
               "title": "翻新流程",
-              "text": "更顺利的项目通常会经过咨询、空间规划、设计确认、报价、施工、检查与移交。",
+              "text": "更顺利的翻新通常会从平面图审查、预算讨论、设计确认、报价、许可证检查、施工协调到最终移交。",
               "link": "#process",
               "label": "查看我们的流程"
             }
@@ -316,7 +316,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "featured_insights": {
           "eyebrow": "精选见解",
-          "title": "帮助您规划新加坡翻新的实用指南。",
+          "title": "适用于新加坡住宅、办公室与商业空间的翻新规划指南。",
           "subtitle": "先了解重点，再阅读更深入的指南。这些内容有助于预算规划、审批意识与项目工期安排。",
           "read_article": "阅读全文",
           "items": [
@@ -339,7 +339,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "planning_tools": {
           "eyebrow": "规划工具",
-          "title": "先掌握预算，再确认风格方向。",
+          "title": "先估算翻新预算，再缩小设计风格方向。",
           "subtitle": "咨询前先使用这些工具，让翻新讨论从更清楚的预算与设计预期开始。",
           "items": [
             {
@@ -391,7 +391,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "trust": {
           "eyebrow": "为什么选择 ID Work Studio",
-          "title": "注册合规、流程清晰、以设计为核心。",
+          "title": "注册合规、以设计为核心，并熟悉新加坡翻新要求。",
           "signals": [
             "新加坡 BCA 注册室内设计与翻新公司。",
             "HDB 注册承包商，可协调住宅翻新与 HDB 工程事项。",
@@ -419,7 +419,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "faq": {
           "eyebrow": "翻新常见问题",
-          "title": "开始规划前的简短解答。",
+          "title": "关于翻新费用、工期、许可证与规划的简短解答。",
           "learn_more": "了解更多",
           "items": [
             {
