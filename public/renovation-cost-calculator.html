@@ -11,6 +11,12 @@
     gtag('js', new Date());
 
     gtag('config', 'G-0R2LXVRM0R');
+
+    function trackGAEvent(eventName, params = {}) {
+      if (typeof gtag === 'function') {
+        gtag('event', eventName, params);
+      }
+    }
   </script>
   <title>Singapore Renovation Cost Calculator 2025 | Free Budget Estimate | ID Work Studio</title>
   <meta name="description" content="Estimate HDB, condo, resale, BTO, kitchen and toilet renovation costs in Singapore with ID Work Studio’s renovation cost calculator."/>
@@ -1174,6 +1180,12 @@ function renderStep(){
   }
 
   if(step===3){
+    trackGAEvent('calculator_complete',{
+      property_type: form.propertyType,
+      project_type: form.projectType,
+      property_condition: form.propertyCondition
+    });
+
     const est=calcEst();
     const waLink=buildWa(est);
     const propLabel=form.propertyType==='hdb'?`${HDB_TYPES[form.hdbFlatType]?.label||'HDB'} · ${Math.round(sqft()).toLocaleString()} sqft`:`${PROPERTY[form.propertyType].label} · ${Math.round(sqft()).toLocaleString()} sqft`;
@@ -1185,7 +1197,7 @@ function renderStep(){
       </div><div class="mb-7"><div class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-4">Cost breakdown</div><div class="divide-y divide-stone-100 rounded-2xl border border-stone-100 overflow-hidden">${est.mods.map(m=>{const r=rng(m.cost);return`<div class="flex items-center justify-between px-5 py-3.5 hover:bg-stone-50 transition-colors"><span class="text-sm text-stone-700">${m.name}</span><span class="text-sm font-semibold text-stone-900 ml-4 whitespace-nowrap">${SGD.format(r.low)} – ${SGD.format(r.high)}</span></div>`;}).join('')}</div></div><div class="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 mb-5 text-xs text-amber-800 leading-5"><strong>Reality buffer:</strong> Based on your ${form.propertyCondition==='resale'?'resale':'new/BTO'} selection, most projects may adjust by <strong>${est.reality.label}</strong> after site validation. ${est.reality.note}</div>
       <div class="rounded-2xl border border-stone-100 bg-stone-50 px-5 py-4 mb-5 text-xs text-stone-600 leading-5"><strong class="text-stone-800">Market benchmark:</strong> Typical ${propLabel} ${form.propertyCondition==='resale'?'resale':'new/BTO'} renovation: <strong>${SGD.format(est.benchmark.low)} – ${SGD.format(est.benchmark.high)}</strong>. Your estimate is <strong>${getBenchmarkStatus(est.total.low,est.total.high)}</strong>.</div>
       <div class="rounded-2xl border border-stone-100 bg-white px-5 py-4 mb-7 text-xs text-stone-600 leading-5"><strong class="text-stone-800">Biggest cost drivers:</strong><div class="mt-2 space-y-1">${est.drivers.map(d=>`<div class="flex justify-between"><span>${d.name}</span><strong>${d.pct}%</strong></div>`).join('')}</div></div>
-      <div class="rounded-2xl border border-stone-100 bg-stone-50 px-5 py-4 mb-7 text-xs text-stone-500 leading-5"><strong class="text-stone-700">Planning estimate, not a quotation.</strong> Actual cost depends on site conditions, confirmed measurements, material grade, and HDB/BCA approvals. ID Work Studio is BCA-registered and HDB-approved.</div><div class="rounded-3xl border-2 border-stone-900 p-7"><h3 class="serif text-2xl font-bold mb-1">Want an itemised quote?</h3><p class="text-sm text-stone-500 mb-6 leading-relaxed">Our designers convert this into a detailed line-item quotation — typically within 1–2 business days.</p><div class="grid gap-4 sm:grid-cols-2 mb-5"><label><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Your name <span class="font-normal normal-case text-stone-400">(optional)</span></div><input type="text" value="${form.name}" oninput="form.name=this.value;document.getElementById('waCta')?.setAttribute('onclick',\'window.open(buildWa(calcEst()),\\\'_blank\\\')\');" placeholder="Name" class="inp"/></label><label><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Your email <span class="font-normal normal-case text-stone-400">(optional)</span></div><input type="email" value="${form.email}" oninput="form.email=this.value;" placeholder="you@email.com" class="inp"/></label></div><button id="waCta" type="button" onclick="window.open(buildWa(calcEst()),'_blank')" class="flex items-center justify-center gap-2 w-full rounded-2xl py-4 font-semibold text-sm transition-all mb-3 cursor-pointer" style="background:#25D366;color:#fff;border:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Send via WhatsApp — Get Itemised Quote</button><button type="button" onclick="window.location.href=buildMailto(calcEst())" class="flex items-center justify-center gap-2 w-full rounded-2xl py-3.5 font-semibold text-sm transition-all cursor-pointer" style="background:#f3efe7;color:#2C2C2C;border:1px solid #d8cec0"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Send via Email Instead</button><p class="text-center text-xs text-stone-400 mt-3">Replied within 2 business hours · BCA-Registered · HDB-Approved</p></div></div>`;
+      <div class="rounded-2xl border border-stone-100 bg-stone-50 px-5 py-4 mb-7 text-xs text-stone-500 leading-5"><strong class="text-stone-700">Planning estimate, not a quotation.</strong> Actual cost depends on site conditions, confirmed measurements, material grade, and HDB/BCA approvals. ID Work Studio is BCA-registered and HDB-approved.</div><div class="rounded-3xl border-2 border-stone-900 p-7"><h3 class="serif text-2xl font-bold mb-1">Want an itemised quote?</h3><p class="text-sm text-stone-500 mb-6 leading-relaxed">Our designers convert this into a detailed line-item quotation — typically within 1–2 business days.</p><div class="grid gap-4 sm:grid-cols-2 mb-5"><label><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Your name <span class="font-normal normal-case text-stone-400">(optional)</span></div><input type="text" value="${form.name}" oninput="form.name=this.value;document.getElementById('waCta')?.setAttribute('onclick',\'window.open(buildWa(calcEst()),\\\'_blank\\\')\');" placeholder="Name" class="inp"/></label><label><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Your email <span class="font-normal normal-case text-stone-400">(optional)</span></div><input type="email" value="${form.email}" oninput="form.email=this.value;" placeholder="you@email.com" class="inp"/></label></div><button id="waCta" type="button" onclick="trackGAEvent('whatsapp_click',{source:'calculator'});window.open(buildWa(calcEst()),'_blank')" class="flex items-center justify-center gap-2 w-full rounded-2xl py-4 font-semibold text-sm transition-all mb-3 cursor-pointer" style="background:#25D366;color:#fff;border:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Send via WhatsApp — Get Itemised Quote</button><button type="button" onclick="trackGAEvent('email_click',{source:'calculator'});window.location.href=buildMailto(calcEst())" class="flex items-center justify-center gap-2 w-full rounded-2xl py-3.5 font-semibold text-sm transition-all cursor-pointer" style="background:#f3efe7;color:#2C2C2C;border:1px solid #d8cec0"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Send via Email Instead</button><p class="text-center text-xs text-stone-400 mt-3">Replied within 2 business hours · BCA-Registered · HDB-Approved</p></div></div>`;
   }
 
   document.getElementById('backBtn').disabled=step===0;
@@ -1304,7 +1316,18 @@ function scrollToCalculatorTop(){
 }
 
 document.getElementById('backBtn').addEventListener('click',()=>{ step=Math.max(0,step-1); render(); scrollToCalculatorTop(); });
-document.getElementById('nextBtn').addEventListener('click',()=>{ step=Math.min(3,step+1); render(); scrollToCalculatorTop(); });
+document.getElementById('nextBtn').addEventListener('click',()=>{
+  if(step===0){
+    trackGAEvent('calculator_start',{
+      property_type: form.propertyType,
+      project_type: form.projectType
+    });
+  }
+
+  step=Math.min(3,step+1);
+  render();
+  scrollToCalculatorTop();
+});
 
 render();
 </script>
