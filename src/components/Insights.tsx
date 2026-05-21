@@ -80,6 +80,14 @@ export default function Insights() {
       date: '2026-05-11',
       readTime: t('insights_page.articles.8.read_time'),
     },
+    {
+      slug: '/insights/kitchen-renovation-cost-singapore-2026',
+      category: t('insights_page.articles.9.category'),
+      title: t('insights_page.articles.9.title'),
+      excerpt: t('insights_page.articles.9.excerpt'),
+      date: '2026-05-21',
+      readTime: t('insights_page.articles.9.read_time'),
+    },
   ];
 
   const itemListSchema = {

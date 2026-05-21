@@ -2236,6 +2236,12 @@ enT["insights_page"] = {
       title: "Beyond Superstition: A Data-Driven Guide to Feng Shui Renovations in Singapore",
       excerpt: "A practical Singapore guide to modern feng shui through environmental psychology, stress-reduction layouts, lighting, storage, Japandi interiors and HDB or condo planning.",
       read_time: "11 min read"
+    },
+    "9": {
+      category: "Kitchen Cost Guide",
+      title: "Kitchen Renovation Cost Singapore (2026 Guide)",
+      excerpt: "A realistic Singapore kitchen renovation cost breakdown covering HDB, resale and condo kitchens — including carpentry, worktops, hacking, plumbing, electrical works and hidden site conditions.",
+      read_time: "9 min read"
     }
   },
   footer_block: {
@@ -2332,6 +2338,12 @@ zhT["insights_page"] = {
       title: "超越迷信：新加坡风水装修的数据化与实用设计指南",
       excerpt: "从环境心理学、减压空间规划、灯光、收纳、Japandi风格与HDB或公寓装修角度，重新理解现代风水。",
       read_time: "约 11 分钟"
+    },
+    "9": {
+      category: "厨房费用指南",
+      title: "新加坡厨房翻新费用（2026 指南）",
+      excerpt: "新加坡厨房翻新费用的实际解析，涵盖 HDB、转售组屋与公寓厨房，包括木作、台面、拆除、水喉、电工及隐藏现场问题。",
+      read_time: "约 9 分钟"
     }
   },
   footer_block: {

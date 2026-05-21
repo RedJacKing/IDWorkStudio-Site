@@ -1,0 +1,1098 @@
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+type CostRow = {
+  label: string;
+  value: string;
+  note: string;
+};
+
+type ComparisonRow = {
+  item: string;
+  cost: string;
+  note: string;
+};
+
+type Section = {
+  title: string;
+  eyebrow?: string;
+  paragraphs: string[];
+  bullets?: string[];
+};
+
+type Scenario = {
+  title: string;
+  cost: string;
+  details: string[];
+};
+
+type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+type ArticleContent = {
+  metaTitle: string;
+  metaDescription: string;
+  canonical: string;
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  readTime: string;
+  category: string;
+  heroImageAlt: string;
+  quickAnswerTitle: string;
+  quickAnswer: string;
+  costRows: CostRow[];
+  costTableTitle: string;
+  costTableIntro: string;
+  kitchenTypes: ComparisonRow[];
+  costDriversTitle: string;
+  costDrivers: ComparisonRow[];
+  sections: Section[];
+  worktopTitle: string;
+  worktopIntro: string;
+  worktopRows: ComparisonRow[];
+  sinkSupportTitle: string;
+  sinkSupportParagraphs: string[];
+  sinkSupportBullets: string[];
+  overlayTitle: string;
+  overlayIntro: string;
+  overlayRows: ComparisonRow[];
+  scenariosTitle: string;
+  scenarios: Scenario[];
+  budgetingTitle: string;
+  budgetingTips: string[];
+  internalLinksTitle: string;
+  internalLinks: { label: string; to: string; text: string }[];
+  faqTitle: string;
+  faqs: FaqItem[];
+  ctaTitle: string;
+  ctaText: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
+  breadcrumbCurrent: string;
+};
+
+const heroImage = "/insights/kitchen-renovation-cost-singapore-2026-hero.webp";
+
+const content: Record<"en" | "zh", ArticleContent> = {
+  en: {
+    metaTitle: "Kitchen Renovation Cost Singapore 2026 Guide | ID Work Studio",
+    metaDescription:
+      "Realistic Singapore kitchen renovation cost guide for HDB, condo and resale homes. Learn carpentry, worktop, hacking, plumbing, electrical and hidden cost factors.",
+    canonical: "https://idworkstudio.com/insights/kitchen-renovation-cost-singapore-2026",
+    eyebrow: "Singapore Renovation Cost Guide",
+    title: "How Much Does Kitchen Renovation Cost in Singapore? (2026 Guide)",
+    subtitle:
+      "In Singapore, a kitchen renovation usually costs between S$8,000 and S$35,000+, depending on hacking, carpentry, worktop material, plumbing, electrical works and site condition. Resale HDB kitchens often cost more because older finishes, sink supports and concealed services can create extra rectification work after demolition.",
+    readTime: "8 min read",
+    category: "Renovation Cost",
+    heroImageAlt:
+      "Premium warm neutral Singapore kitchen renovation with custom carpentry and stone worktop",
+    quickAnswerTitle: "Quick answer",
+    quickAnswer:
+      "A simple BTO kitchen refresh may stay around S$8,000–S$15,000, while a full resale HDB kitchen rebuild with hacking, new tiles, custom cabinetry, plumbing and electrical works can reach S$20,000–S$35,000 or more. The final number depends less on the word “kitchen” and more on what must be removed, rebuilt, concealed and customised.",
+    costRows: [
+      {
+        label: "Basic BTO kitchen refresh",
+        value: "S$8,000 – S$15,000",
+        note: "Usually lighter works, less hacking and fewer hidden site issues.",
+      },
+      {
+        label: "HDB resale kitchen renovation",
+        value: "S$15,000 – S$28,000+",
+        note: "Often includes hacking, haulage, tiling, plumbing updates and rectification.",
+      },
+      {
+        label: "Condo kitchen renovation",
+        value: "S$18,000 – S$35,000+",
+        note: "Costs may increase with management rules, protection works and appliance integration.",
+      },
+      {
+        label: "Premium custom kitchen",
+        value: "S$35,000 – S$60,000+",
+        note: "Applies when there are premium slabs, tall units, island counters and complex detailing.",
+      },
+    ],
+    costTableTitle: "Typical kitchen renovation cost in Singapore",
+    costTableIntro:
+      "These ranges are planning references, not fixed packages. Two kitchens with the same floor area can differ greatly if one requires hacking, plumbing rerouting, premium worktops or full-height custom carpentry.",
+    kitchenTypes: [
+      {
+        item: "BTO kitchen",
+        cost: "S$8,000 – S$15,000",
+        note: "Suitable when the layout is simple and major hacking is not required.",
+      },
+      {
+        item: "4-room or 5-room HDB resale kitchen",
+        cost: "S$15,000 – S$28,000+",
+        note: "Budget more when existing cabinets, sink support, wall tiles and floor tiles must be removed.",
+      },
+      {
+        item: "Condo kitchen",
+        cost: "S$18,000 – S$35,000+",
+        note: "MCST rules, lift protection, hacking hours and concealed services can affect planning.",
+      },
+      {
+        item: "Open-concept or island kitchen",
+        cost: "S$30,000 – S$50,000+",
+        note: "The cost rises with island carpentry, large worktops, lighting and appliance coordination.",
+      },
+    ],
+    costDriversTitle: "What actually makes a kitchen renovation expensive?",
+    costDrivers: [
+      {
+        item: "Carpentry",
+        cost: "Often 30–50% of the kitchen budget",
+        note: "Top and bottom cabinets, tall units, internal hardware and custom finishing add up quickly.",
+      },
+      {
+        item: "Worktop material",
+        cost: "Moderate to high impact",
+        note: "Quartz is practical for many homes; sintered stone costs more but gives better heat resistance and a premium look.",
+      },
+      {
+        item: "Hacking and haulage",
+        cost: "High impact for resale homes",
+        note: "Old wall tiles, floor tiles, sink supports and built-in structures require labour and disposal.",
+      },
+      {
+        item: "Plumbing and electrical",
+        cost: "Depends on layout changes",
+        note: "Sink relocation, hood points, oven points, concealed wiring and older pipes can increase cost.",
+      },
+      {
+        item: "Appliance integration",
+        cost: "Often underestimated",
+        note: "Built-in ovens, dishwashers, fridge panels and exact dimensions must be planned before fabrication.",
+      },
+    ],
+    sections: [
+      {
+        eyebrow: "Carpentry",
+        title: "Kitchen carpentry is usually the biggest cost component",
+        paragraphs: [
+          "For most Singapore kitchens, cabinetry has the biggest influence on the final price. A kitchen with only bottom cabinets will cost very differently from one with top cabinets, tall units, internal pull-out baskets, appliance towers and special finishes.",
+          "The cheapest cabinet is not always the cheapest long-term decision. Kitchens face heat, moisture, oil, cleaning chemicals and daily use. Poor-quality laminate, weak hinges or badly planned storage can become expensive to rectify later.",
+        ],
+        bullets: [
+          "Bottom cabinets and top cabinets are usually priced by length.",
+          "Tall units, appliance towers and full-height storage cost more because they use more material and internal structure.",
+          "Soft-closing systems, premium hinges, drawers and pull-out accessories increase cost but improve durability and daily use.",
+          "Curved panels, fluted details, hidden handles and boutique profiles should be budgeted as custom carpentry, not basic carpentry.",
+        ],
+      },
+      {
+        eyebrow: "Resale homes",
+        title: "Why resale kitchen renovation costs more",
+        paragraphs: [
+          "Resale kitchens usually cost more because the contractor is not starting from a clean base. Before the new kitchen can be built, the old cabinets, worktop, wall tiles, floor tiles, plumbing points and electrical points may need to be removed or corrected.",
+          "After hacking, the real condition of the site becomes clearer. Uneven walls, hollow tiles, old pipe routes, damaged plaster and missing tiles under old built-ins can all create additional work before carpentry can be installed properly.",
+        ],
+        bullets: [
+          "Hacking and haulage are common in resale kitchens.",
+          "Old wall and floor finishes may reveal uneven surfaces after removal.",
+          "Existing plumbing points may not suit the new sink, dishwasher or washing machine location.",
+          "Older electrical points may not be suitable for modern ovens, hobs, hoods or additional appliances.",
+        ],
+      },
+      {
+        eyebrow: "Hidden costs",
+        title: "Hidden kitchen renovation costs homeowners often forget",
+        paragraphs: [
+          "The kitchen quote can increase when small technical items are missed at planning stage. These items are not always visually obvious, but they affect labour, coordination and site readiness.",
+          "A good renovation discussion should clarify these early, especially for resale HDB flats and older condos where previous renovation work may not match current design intentions.",
+        ],
+        bullets: [
+          "Gas pipe adjustment or coordination with the relevant service provider.",
+          "Additional electrical points for oven, hood, hob, fridge, dishwasher or small appliances.",
+          "Solid-top sink and hob cut-outs, edge details and backsplash integration.",
+          "Wall plastering, floor levelling or patching after hacking.",
+          "Protection works, lift padding, debris removal and site cleaning.",
+          "Appliance size mismatch after carpentry has already been fabricated.",
+        ],
+      },
+      {
+        eyebrow: "Approvals",
+        title: "HDB, condo and site constraints matter",
+        paragraphs: [
+          "For HDB flats, renovation works are subject to HDB guidelines, and some works require approval before commencement. Hacking, changes to wall or floor finishes, and works affecting wet areas should never be treated casually.",
+          "For condos, the management office and MCST rules can affect renovation hours, lift protection, debris disposal, noisy works and application procedures. Even when the design is simple, the approval and site-management process can affect the renovation timeline.",
+        ],
+        bullets: [
+          "Confirm permit and approval requirements before hacking starts.",
+          "Check condo management rules before scheduling noisy works.",
+          "Plan material delivery, lift protection and debris removal early.",
+          "Do not finalise carpentry before plumbing, appliance dimensions and site conditions are confirmed.",
+        ],
+      },
+    ],
+    worktopTitle: "Quartz vs sintered stone worktops",
+    worktopIntro:
+      "Worktop choice affects not only cost, but also cooking habits, maintenance and the overall feel of the kitchen. In Singapore homes, quartz remains a practical choice for many families, while sintered stone is often selected for a more premium finish and better heat resistance.",
+    worktopRows: [
+      {
+        item: "Quartz",
+        cost: "Moderate",
+        note: "Durable and practical for most homes, but homeowners should still avoid placing very hot cookware directly on the surface.",
+      },
+      {
+        item: "Sintered stone",
+        cost: "Higher",
+        note: "More heat-resistant and visually premium, suitable when the kitchen design calls for a thinner or more refined slab look.",
+      },
+      {
+        item: "Waterfall edge or large backsplash",
+        cost: "Additional cost",
+        note: "Looks premium, but increases material usage, fabrication and installation complexity.",
+      },
+      {
+        item: "Sink and hob cut-outs",
+        cost: "Must be included",
+        note: "Cut-outs, joints and edge finishing should be checked before comparing worktop quotations.",
+      },
+    ],
+    sinkSupportTitle: "Older HDB sink supports can increase renovation complexity",
+    sinkSupportParagraphs: [
+      "Some older Singapore HDB kitchens use tiled concrete sink supports instead of modern modular kitchen bottom cabinets. This means tiles or masonry were used to build up the base that supports the sink and countertop.",
+      "When this old sink support is hacked away, there may not be finished floor tiles beneath it. The support may have been built directly onto the original slab or over an unfinished area during an earlier renovation.",
+      "This is why older resale HDB kitchens need careful site inspection. Removing the sink support can expose missing tiles, uneven floor levels, old pipe routes or surfaces that need patching before new cabinets can be installed properly.",
+    ],
+    sinkSupportBullets: [
+      "Patching missing floor areas after demolition.",
+      "Levelling uneven surfaces before new carpentry goes in.",
+      "Additional tiling or making-good works.",
+      "Concealed plumbing adjustments around the sink area.",
+      "Extra hacking, haulage and site-cleaning labour.",
+    ],
+    overlayTitle: "Should you overlay or hack existing kitchen tiles?",
+    overlayIntro:
+      "Overlaying tiles can reduce cost and mess, but it is not always the right answer. The existing tile condition, floor height, drainage slope and long-term durability must be checked before deciding.",
+    overlayRows: [
+      {
+        item: "Overlay existing tiles",
+        cost: "Lower upfront cost",
+        note: "Works best when existing tiles are sound, flat and suitable for overlay. Not ideal if tiles are hollow, loose or uneven.",
+      },
+      {
+        item: "Hack and relay tiles",
+        cost: "Higher upfront cost",
+        note: "More labour and disposal, but gives a cleaner base when existing finishes are old or unreliable.",
+      },
+      {
+        item: "Partial making-good",
+        cost: "Depends on condition",
+        note: "Common in resale kitchens after cabinets, sink supports or built-ins are removed.",
+      },
+    ],
+    scenariosTitle: "Realistic kitchen renovation budget examples",
+    scenarios: [
+      {
+        title: "4-room BTO kitchen",
+        cost: "Around S$10,000 – S$15,000",
+        details: [
+          "Standard top and bottom cabinets",
+          "Quartz worktop",
+          "Basic plumbing connection",
+          "Limited hacking or no hacking",
+          "Simple lighting and power-point planning",
+        ],
+      },
+      {
+        title: "4-room HDB resale kitchen",
+        cost: "Around S$22,000 – S$35,000",
+        details: [
+          "Full hacking of old cabinets, tiles and sink support",
+          "New wall and floor finishes",
+          "Custom carpentry with quartz or sintered stone",
+          "Plumbing adjustment and electrical upgrades",
+          "Making-good works after demolition",
+        ],
+      },
+      {
+        title: "Condo open-concept kitchen",
+        cost: "Around S$30,000 – S$50,000+",
+        details: [
+          "Island counter or extended peninsula",
+          "Premium worktop and backsplash",
+          "Integrated appliances",
+          "Concealed lighting details",
+          "MCST coordination and protection works",
+        ],
+      },
+    ],
+    budgetingTitle: "How to budget properly for a kitchen renovation",
+    budgetingTips: [
+      "Start with the workflow: sink, hob, fridge, preparation area and storage should be planned before choosing decorative finishes.",
+      "Set aside a contingency buffer, especially for resale HDB and older condo kitchens.",
+      "Confirm appliance dimensions early so the carpentry can be fabricated accurately.",
+      "Spend first on durable areas: cabinet structure, worktop, hinges, plumbing and electrical safety.",
+      "Avoid comparing quotations only by total price. Check whether hacking, haulage, sink support removal, cut-outs, GST and making-good works are included.",
+    ],
+    internalLinksTitle: "Useful planning tools and related guides",
+    internalLinks: [
+      {
+        label: "Renovation Cost Calculator",
+        to: "/renovation-cost-calculator",
+        text: "Estimate a realistic planning range before asking for quotations.",
+      },
+      {
+        label: "Renovation Cost Singapore Guide",
+        to: "/insights/renovation-cost-singapore-2026",
+        text: "Understand whole-home renovation cost ranges for HDB, condo and resale homes.",
+      },
+      {
+        label: "Renovation Mistakes Singapore Homeowners Make",
+        to: "/insights/renovation-mistakes-singapore",
+        text: "Avoid common planning, quotation and site coordination mistakes.",
+      },
+      {
+        label: "HDB Renovation Timeline Singapore",
+        to: "/insights/hdb-renovation-timeline-singapore",
+        text: "Plan the renovation sequence, approval timing and handover expectations.",
+      },
+    ],
+    faqTitle: "Kitchen renovation cost FAQ",
+    faqs: [
+      {
+        question: "How much does kitchen renovation cost in Singapore?",
+        answer:
+          "Most kitchen renovations in Singapore range from S$8,000 to S$35,000+. A basic BTO kitchen can be below S$15,000, while a full resale kitchen rebuild with hacking, tiling, custom carpentry, plumbing and electrical works can exceed S$30,000.",
+      },
+      {
+        question: "Why do resale HDB kitchen renovations cost more?",
+        answer:
+          "Resale kitchens usually involve removal of old cabinets, tiles, worktops and sometimes tiled sink supports. After hacking, the contractor may also need to patch missing tiles, level surfaces, adjust plumbing and make good old wall or floor areas.",
+      },
+      {
+        question: "What is an HDB kitchen sink support?",
+        answer:
+          "Some older HDB kitchens use tiled concrete or masonry sink supports instead of modern cabinet bases. When removed, there may be no finished floor tiles below the support, which can create extra patching, tiling and levelling works.",
+      },
+      {
+        question: "How much does kitchen carpentry cost in Singapore?",
+        answer:
+          "Kitchen carpentry cost depends on length, cabinet height, internal hardware, material selection and design complexity. It is often the largest part of the kitchen budget and can account for 30–50% of the total cost.",
+      },
+      {
+        question: "Is quartz or sintered stone better for kitchen worktops?",
+        answer:
+          "Quartz is practical and commonly used for Singapore homes. Sintered stone costs more but offers better heat resistance and a more premium appearance. The better choice depends on cooking habits, budget and design expectations.",
+      },
+      {
+        question: "Can I renovate my kitchen without hacking?",
+        answer:
+          "Yes, if the existing tiles and layout are suitable. Some homeowners keep the floor and wall finishes, then change carpentry, worktop and fittings. However, for older resale kitchens with hollow tiles, sink supports or poor existing finishes, hacking may be more reliable.",
+      },
+      {
+        question: "Should I overlay or hack kitchen tiles?",
+        answer:
+          "Overlaying is usually cheaper and faster, but it depends on existing tile condition. If the tiles are hollow, uneven, loose or affected by old works, hacking and relaying may provide a better long-term base.",
+      },
+      {
+        question: "How long does a kitchen renovation take?",
+        answer:
+          "A straightforward kitchen renovation may take a few weeks, while resale kitchens with hacking, tiling, plumbing, electrical works and custom carpentry coordination can take longer. Carpentry fabrication and site readiness are usually key timeline factors.",
+      },
+      {
+        question: "Why do kitchen renovation quotations vary so much?",
+        answer:
+          "Quotations vary because some include hacking, haulage, making-good works, sink support removal, worktop cut-outs, GST and electrical points, while others only show basic carpentry and visible finishes. Always compare scope, not only total price.",
+      },
+      {
+        question: "How much contingency should I prepare for a kitchen renovation?",
+        answer:
+          "For a new BTO kitchen, a smaller contingency may be enough. For resale HDB or older condo kitchens, it is safer to prepare a larger buffer because hidden site conditions are only fully revealed after demolition.",
+      },
+    ],
+    ctaTitle: "Planning a kitchen renovation in Singapore?",
+    ctaText:
+      "Use ID Work Studio’s renovation cost calculator first to understand a realistic budget range. If you are renovating a resale HDB kitchen, we can also review the likely hacking, sink support, tiling and carpentry considerations before you commit to a scope.",
+    ctaPrimary: "Use Cost Calculator",
+    ctaSecondary: "Request Kitchen Quote",
+    breadcrumbCurrent: "Kitchen Renovation Cost Singapore",
+  },
+  zh: {
+    metaTitle: "新加坡厨房装修费用 2026 指南 | ID Work Studio",
+    metaDescription:
+      "新加坡厨房装修费用指南，适用于HDB、共管公寓和二手房。了解橱柜、台面、拆除、水电、铺砖和隐藏费用。",
+    canonical: "https://idworkstudio.com/insights/kitchen-renovation-cost-singapore-2026",
+    eyebrow: "新加坡装修费用指南",
+    title: "新加坡厨房装修多少钱？（2026指南）",
+    subtitle:
+      "在新加坡，厨房装修通常约为 S$8,000 至 S$35,000+，主要取决于是否需要拆除、橱柜范围、台面材料、水电工程和现场状况。二手HDB厨房通常更贵，因为旧瓷砖、旧水电、砖砌洗碗盆支撑和拆除后的修补工程都会影响最终费用。",
+    readTime: "约8分钟阅读",
+    category: "装修费用",
+    heroImageAlt: "新加坡高级暖色系厨房装修，定制橱柜与石材台面",
+    quickAnswerTitle: "快速答案",
+    quickAnswer:
+      "简单的BTO厨房翻新可能约 S$8,000–S$15,000；如果是二手HDB厨房，需要拆除、重铺墙地砖、定制橱柜、调整水电和处理现场修补，费用可能达到 S$20,000–S$35,000 或更高。真正影响价格的不是“厨房”两个字，而是需要拆掉什么、重做什么、隐藏什么，以及橱柜要做到多复杂。",
+    costRows: [
+      {
+        label: "基本BTO厨房翻新",
+        value: "S$8,000 – S$15,000",
+        note: "工程较轻，通常较少拆除，隐藏问题也较少。",
+      },
+      {
+        label: "HDB二手厨房装修",
+        value: "S$15,000 – S$28,000+",
+        note: "常见项目包括拆除、清运、铺砖、水电调整和修补工程。",
+      },
+      {
+        label: "共管公寓厨房装修",
+        value: "S$18,000 – S$35,000+",
+        note: "管理处规定、保护工程、施工时间限制和电器整合都会影响费用。",
+      },
+      {
+        label: "高级定制厨房",
+        value: "S$35,000 – S$60,000+",
+        note: "适用于高级台面、高柜、中岛、复杂细节和整合式电器。",
+      },
+    ],
+    costTableTitle: "新加坡常见厨房装修费用",
+    costTableIntro:
+      "以下范围适合作为预算参考，并不是固定配套。两个面积相近的厨房，如果一个需要拆除、改水电、高级台面和大量定制橱柜，费用会相差很多。",
+    kitchenTypes: [
+      {
+        item: "BTO厨房",
+        cost: "S$8,000 – S$15,000",
+        note: "适合简单布局、无需大量拆除的厨房。",
+      },
+      {
+        item: "4房或5房HDB二手厨房",
+        cost: "S$15,000 – S$28,000+",
+        note: "如果旧橱柜、砖砌支撑、墙砖和地砖都需要拆除，预算需要更充足。",
+      },
+      {
+        item: "共管公寓厨房",
+        cost: "S$18,000 – S$35,000+",
+        note: "MCST规定、电梯保护、拆除时间限制和隐藏管线都会影响规划。",
+      },
+      {
+        item: "开放式或中岛厨房",
+        cost: "S$30,000 – S$50,000+",
+        note: "中岛橱柜、大型台面、灯光和电器整合都会提高费用。",
+      },
+    ],
+    costDriversTitle: "厨房装修真正贵在哪里？",
+    costDrivers: [
+      {
+        item: "橱柜",
+        cost: "通常占厨房预算30–50%",
+        note: "上下柜、高柜、内部五金和定制饰面都会快速增加费用。",
+      },
+      {
+        item: "台面材料",
+        cost: "中至高影响",
+        note: "石英石实用；岩板价格较高，但耐热性和高级感更强。",
+      },
+      {
+        item: "拆除与清运",
+        cost: "二手房影响较大",
+        note: "旧墙砖、地砖、砖砌洗碗盆支撑和旧结构都需要人工与清运。",
+      },
+      {
+        item: "水电工程",
+        cost: "视布局改变而定",
+        note: "洗碗盆移位、抽油烟机点、烤箱点、暗线和旧水管都会影响费用。",
+      },
+      {
+        item: "电器整合",
+        cost: "常被低估",
+        note: "嵌入式烤箱、洗碗机、冰箱位置和尺寸必须在橱柜制作前确认。",
+      },
+    ],
+    sections: [
+      {
+        eyebrow: "橱柜",
+        title: "厨房橱柜通常是最大费用项目",
+        paragraphs: [
+          "在多数新加坡厨房装修中，橱柜对最终价格影响最大。只有下柜的厨房，与有上柜、高柜、拉篮、嵌入式电器柜和特殊饰面的厨房，价格会完全不同。",
+          "最便宜的橱柜，不一定是长期最省钱的选择。厨房每天面对油烟、湿气、清洁剂和频繁使用，如果板材、铰链或收纳规划不好，后期修补反而更麻烦。",
+        ],
+        bullets: [
+          "下柜和上柜通常按长度计算。",
+          "高柜、电器柜和全高收纳用料更多，内部结构也更复杂。",
+          "缓冲铰链、抽屉、拉篮和五金会增加费用，但能提升耐用度和使用体验。",
+          "弧形板、格栅细节、隐藏把手和特殊造型应按定制橱柜预算，不应当作基础橱柜。",
+        ],
+      },
+      {
+        eyebrow: "二手房",
+        title: "为什么二手厨房装修通常更贵",
+        paragraphs: [
+          "二手厨房通常更贵，因为施工不是从干净的空屋开始。新的厨房还没安装之前，旧橱柜、台面、墙砖、地砖、水管和电位都可能需要拆除或修正。",
+          "拆除后，现场真实状况才会完全显现。不平整的墙面、空鼓瓷砖、旧水管路线、损坏的批荡，以及旧柜底下没有完整地砖，都会影响橱柜安装前的准备工程。",
+        ],
+        bullets: [
+          "二手厨房常见拆除和清运费用。",
+          "旧墙砖和地砖拆除后，墙面或地面可能需要修补。",
+          "原有水位可能不适合新的洗碗盆、洗碗机或洗衣机位置。",
+          "旧电位可能无法满足现代烤箱、炉具、抽油烟机和小家电需求。",
+        ],
+      },
+      {
+        eyebrow: "隐藏费用",
+        title: "屋主常忽略的厨房隐藏费用",
+        paragraphs: [
+          "厨房报价会增加，很多时候不是因为设计突然变豪华，而是前期没有把技术细节问清楚。这些项目不一定一眼看得见，但会影响人工、协调和现场准备。",
+          "特别是二手HDB和较旧的共管公寓，过去装修留下来的水电、墙地面和橱柜结构，未必适合新的设计。",
+        ],
+        bullets: [
+          "煤气管调整或相关服务单位协调。",
+          "烤箱、抽油烟机、炉具、冰箱、洗碗机和小家电所需电位。",
+          "台面开孔、边角处理和挡水板整合。",
+          "拆除后的墙面批荡、地面找平或修补。",
+          "保护工程、电梯保护、垃圾清运和现场清洁。",
+          "橱柜制作后才发现电器尺寸不合。",
+        ],
+      },
+      {
+        eyebrow: "审批与限制",
+        title: "HDB、共管公寓和现场限制都会影响厨房装修",
+        paragraphs: [
+          "HDB单位的装修必须遵守HDB规定，有些工程需要在开工前申请批准。涉及拆除、墙地面饰面、水位或湿区相关工程时，不应随便处理。",
+          "如果是共管公寓，管理处和MCST规定可能影响施工时间、电梯保护、垃圾清运、噪音工程和申请流程。即使设计不复杂，审批和现场管理也会影响工期。",
+        ],
+        bullets: [
+          "拆除前先确认是否需要相关批准。",
+          "安排噪音工程前，先查看公寓管理处规定。",
+          "提早规划材料运输、电梯保护和垃圾清运。",
+          "水位、电器尺寸和现场状况确认前，不要急着定制橱柜。",
+        ],
+      },
+    ],
+    worktopTitle: "石英石 vs 岩板厨房台面",
+    worktopIntro:
+      "台面选择不只影响预算，也影响烹饪习惯、保养方式和整体厨房质感。在新加坡家庭中，石英石仍然是实用选择；岩板费用较高，但耐热性和视觉效果更高级。",
+    worktopRows: [
+      {
+        item: "石英石",
+        cost: "中等",
+        note: "多数家庭实用耐用，但仍不建议把高温锅具直接放在台面上。",
+      },
+      {
+        item: "岩板",
+        cost: "较高",
+        note: "耐热性更好，视觉更高级，适合追求薄板和精致效果的厨房。",
+      },
+      {
+        item: "瀑布边或大面积挡水板",
+        cost: "额外费用",
+        note: "效果高级，但材料用量、加工和安装复杂度都会增加。",
+      },
+      {
+        item: "洗碗盆和炉具开孔",
+        cost: "必须确认",
+        note: "比较报价时，要确认开孔、接口、边角和收口是否已经包括。",
+      },
+    ],
+    sinkSupportTitle: "旧HDB厨房的砖砌洗碗盆支撑可能增加复杂度",
+    sinkSupportParagraphs: [
+      "一些较旧的新加坡HDB厨房，不是用现代橱柜来承托洗碗盆，而是用瓷砖或砖砌结构做成洗碗盆支撑。也就是说，洗碗盆和台面底部原本是由砖墙或瓷砖结构支撑。",
+      "当这个旧支撑被拆除时，底下未必有完整铺好的地砖。有些旧支撑是在早期装修时直接建在原始地面或未完成区域上。",
+      "因此，较旧的二手HDB厨房一定要更仔细检查现场。拆掉支撑后，可能会看到缺失地砖、不平地面、旧水管路线，或需要先修补才能安装新橱柜的区域。",
+    ],
+    sinkSupportBullets: [
+      "拆除后补回缺失地面区域。",
+      "新橱柜安装前需要找平。",
+      "额外铺砖或修补工程。",
+      "洗碗盆附近的隐藏水管调整。",
+      "额外拆除、清运和现场清洁人工。",
+    ],
+    overlayTitle: "厨房地砖应该覆盖还是拆除重铺？",
+    overlayIntro:
+      "覆盖旧砖可以降低费用和减少灰尘，但不一定适合所有厨房。决定前应检查旧砖状况、地面高度、排水坡度和长期耐用性。",
+    overlayRows: [
+      {
+        item: "覆盖旧砖",
+        cost: "前期费用较低",
+        note: "适合旧砖稳固、平整、没有空鼓的情况。不适合松动、不平或空鼓的旧砖。",
+      },
+      {
+        item: "拆除重铺",
+        cost: "前期费用较高",
+        note: "人工和清运较多，但如果旧饰面不可靠，重做基层会更稳妥。",
+      },
+      {
+        item: "局部修补",
+        cost: "视现场而定",
+        note: "常见于拆除旧橱柜、砖砌支撑或固定家具之后。",
+      },
+    ],
+    scenariosTitle: "真实厨房装修预算例子",
+    scenarios: [
+      {
+        title: "4房BTO厨房",
+        cost: "约 S$10,000 – S$15,000",
+        details: [
+          "标准上下柜",
+          "石英石台面",
+          "基本水位连接",
+          "少量或无需拆除",
+          "简单灯光和电位规划",
+        ],
+      },
+      {
+        title: "4房HDB二手厨房",
+        cost: "约 S$22,000 – S$35,000",
+        details: [
+          "拆除旧橱柜、旧砖和砖砌洗碗盆支撑",
+          "重新铺墙砖和地砖",
+          "定制橱柜配石英石或岩板台面",
+          "水位调整和电位升级",
+          "拆除后的修补工程",
+        ],
+      },
+      {
+        title: "共管公寓开放式厨房",
+        cost: "约 S$30,000 – S$50,000+",
+        details: [
+          "中岛或半岛台设计",
+          "高级台面和挡水板",
+          "嵌入式电器",
+          "隐藏灯光细节",
+          "MCST协调和保护工程",
+        ],
+      },
+    ],
+    budgetingTitle: "如何正确规划厨房装修预算",
+    budgetingTips: [
+      "先规划动线：洗碗盆、炉具、冰箱、备餐区和收纳位置应先确定，再选择装饰材料。",
+      "预留预算缓冲，尤其是二手HDB和较旧公寓厨房。",
+      "提早确认电器尺寸，避免橱柜制作后才发现不合。",
+      "优先把钱花在耐用位置：橱柜结构、台面、铰链、水电安全。",
+      "不要只比较总价，要确认报价是否包括拆除、清运、砖砌支撑拆除、台面开孔、GST和修补工程。",
+    ],
+    internalLinksTitle: "实用预算工具与相关指南",
+    internalLinks: [
+      {
+        label: "装修费用计算器",
+        to: "/renovation-cost-calculator",
+        text: "在索取报价前，先估算一个实际预算范围。",
+      },
+      {
+        label: "新加坡装修费用指南",
+        to: "/insights/renovation-cost-singapore-2026",
+        text: "了解HDB、公寓和二手房整体装修费用。",
+      },
+      {
+        label: "新加坡屋主常见装修错误",
+        to: "/insights/renovation-mistakes-singapore",
+        text: "避免预算、报价和现场协调上的常见问题。",
+      },
+      {
+        label: "HDB装修时间表",
+        to: "/insights/hdb-renovation-timeline-singapore",
+        text: "规划装修流程、审批时间和交屋预期。",
+      },
+    ],
+    faqTitle: "厨房装修费用常见问题",
+    faqs: [
+      {
+        question: "新加坡厨房装修多少钱？",
+        answer:
+          "多数新加坡厨房装修约 S$8,000 至 S$35,000+。基本BTO厨房可能低于 S$15,000；如果是二手厨房，需要拆除、铺砖、定制橱柜、水电和修补，费用可能超过 S$30,000。",
+      },
+      {
+        question: "为什么二手HDB厨房装修更贵？",
+        answer:
+          "二手厨房通常要拆除旧橱柜、瓷砖、台面，有些还有砖砌洗碗盆支撑。拆除后可能还要补砖、找平、调整水管，并修补旧墙面或地面。",
+      },
+      {
+        question: "什么是HDB厨房砖砌洗碗盆支撑？",
+        answer:
+          "一些旧HDB厨房使用砖砌或瓷砖结构来支撑洗碗盆，而不是现代橱柜底座。拆除后，底下可能没有完整地砖，因此需要额外修补、铺砖和找平。",
+      },
+      {
+        question: "新加坡厨房橱柜多少钱？",
+        answer:
+          "厨房橱柜费用取决于长度、高度、内部五金、材料和设计复杂度。它通常是厨房装修最大费用之一，可能占整体预算30–50%。",
+      },
+      {
+        question: "厨房台面选石英石还是岩板？",
+        answer:
+          "石英石实用、常见，适合多数新加坡家庭。岩板价格较高，但耐热性和高级感更好。选择取决于烹饪习惯、预算和设计要求。",
+      },
+      {
+        question: "厨房可以不拆除直接翻新吗？",
+        answer:
+          "可以，但前提是现有瓷砖和布局适合保留。有些屋主只更换橱柜、台面和配件。但如果旧砖空鼓、旧支撑复杂或基础状况不好，拆除重做会更稳妥。",
+      },
+      {
+        question: "厨房地砖应该覆盖还是拆除？",
+        answer:
+          "覆盖通常较便宜较快，但要看旧砖是否稳固、平整、没有空鼓。如果旧砖松动、不平或受旧装修影响，拆除重铺会更可靠。",
+      },
+      {
+        question: "厨房装修需要多久？",
+        answer:
+          "简单厨房装修可能数周完成；如果涉及拆除、铺砖、水电、定制橱柜和现场协调，时间会更长。橱柜制作和现场准备通常是关键。",
+      },
+      {
+        question: "为什么厨房装修报价差别这么大？",
+        answer:
+          "因为有些报价包括拆除、清运、修补、砖砌支撑拆除、台面开孔、GST和电位，有些只包括基本橱柜和表面材料。比较时应看范围，不只是总价。",
+      },
+      {
+        question: "厨房装修要预留多少备用预算？",
+        answer:
+          "BTO厨房可以预留较小缓冲；二手HDB或旧公寓厨房建议预留更多，因为许多隐藏问题要拆除后才会真正看见。",
+      },
+    ],
+    ctaTitle: "正在规划新加坡厨房装修？",
+    ctaText:
+      "先使用 ID Work Studio 的装修费用计算器，了解一个实际预算范围。如果你准备装修二手HDB厨房，我们也可以先帮你判断拆除、砖砌洗碗盆支撑、铺砖和橱柜规划可能带来的费用差异。",
+    ctaPrimary: "使用费用计算器",
+    ctaSecondary: "索取厨房报价",
+    breadcrumbCurrent: "新加坡厨房装修费用",
+  },
+};
+
+export default function KitchenRenovationCostSingapore() {
+  const { i18n } = useTranslation();
+  const lang = i18n.language === "zh" ? "zh" : "en";
+  const t = content[lang];
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: t.title,
+    description: t.metaDescription,
+    url: t.canonical,
+    image: `https://idworkstudio.com${heroImage}`,
+    author: {
+      "@type": "Organization",
+      name: "ID Work Studio",
+      url: "https://idworkstudio.com/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ID Work Studio",
+      url: "https://idworkstudio.com/",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": t.canonical,
+    },
+    inLanguage: lang === "zh" ? "zh-SG" : "en-SG",
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: t.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: lang === "zh" ? "首页" : "Home",
+        item: "https://idworkstudio.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: lang === "zh" ? "装修文章" : "Insights",
+        item: "https://idworkstudio.com/insights",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: t.breadcrumbCurrent,
+        item: t.canonical,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>{t.metaTitle}</title>
+        <meta name="description" content={t.metaDescription} />
+        <link rel="canonical" href={t.canonical} />
+        <meta property="og:title" content={t.metaTitle} />
+        <meta property="og:description" content={t.metaDescription} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={t.canonical} />
+        <meta property="og:image" content={`https://idworkstudio.com${heroImage}`} />
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      </Helmet>
+
+      <main className="bg-[#FAF8F3] text-[#2C2C2C]">
+        <section className="relative overflow-hidden bg-[#111] px-6 py-20 text-white md:py-28">
+          <div className="absolute inset-0">
+            <img
+              src={heroImage}
+              alt={t.heroImageAlt}
+              className="h-full w-full object-cover opacity-35"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/70 to-[#111]" />
+          </div>
+          <div className="relative z-10 mx-auto max-w-5xl text-center">
+            <p className="mb-5 inline-flex rounded-full border border-[#C5A059]/40 bg-black/25 px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#C5A059] backdrop-blur">
+              {t.eyebrow}
+            </p>
+            <h1 className="font-serif text-4xl font-semibold leading-tight md:text-6xl">
+              {t.title}
+            </h1>
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/75 md:text-lg">
+              {t.subtitle}
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3 text-xs uppercase tracking-[0.16em] text-white/55">
+              <span>{t.category}</span>
+              <span>•</span>
+              <span>{t.readTime}</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-[#e8e1d7] bg-white px-6 py-5">
+          <div className="mx-auto max-w-5xl">
+            <Link
+              to="/insights"
+              className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6f6a63] hover:text-[#C5A059]"
+            >
+              ← {lang === "zh" ? "返回装修文章" : "Back to insights"}
+            </Link>
+          </div>
+        </section>
+
+        <article className="mx-auto max-w-5xl px-6 py-14 md:py-20">
+          <section className="mb-14 rounded-3xl border border-[#e8e1d7] bg-white p-6 shadow-sm md:p-8">
+            <h2 className="font-serif text-3xl font-semibold">{t.quickAnswerTitle}</h2>
+            <p className="mt-4 text-base leading-8 text-[#5f5a54]">{t.quickAnswer}</p>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {t.costRows.map((row) => (
+                <div key={row.label} className="rounded-2xl border border-[#e8e1d7] bg-[#fffdf8] p-5">
+                  <p className="text-sm font-semibold text-[#6f6a63]">{row.label}</p>
+                  <p className="mt-2 text-2xl font-bold text-[#2C2C2C]">{row.value}</p>
+                  <p className="mt-2 text-sm leading-6 text-[#6f6a63]">{row.note}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-14">
+            <h2 className="border-b border-[#e8e1d7] pb-4 font-serif text-3xl font-semibold">
+              {t.costTableTitle}
+            </h2>
+            <p className="mt-6 text-base leading-8 text-[#5f5a54]">{t.costTableIntro}</p>
+            <div className="mt-6 overflow-hidden rounded-3xl border border-[#e8e1d7] bg-white shadow-sm">
+              {t.kitchenTypes.map((row) => (
+                <div key={row.item} className="grid gap-2 border-b border-[#e8e1d7] p-5 last:border-b-0 md:grid-cols-[1.1fr_0.8fr_1.6fr] md:gap-5">
+                  <p className="font-semibold text-[#2C2C2C]">{row.item}</p>
+                  <p className="font-bold text-[#9a7a3f]">{row.cost}</p>
+                  <p className="text-sm leading-6 text-[#6f6a63]">{row.note}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-14">
+            <h2 className="border-b border-[#e8e1d7] pb-4 font-serif text-3xl font-semibold">
+              {t.costDriversTitle}
+            </h2>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {t.costDrivers.map((row) => (
+                <div key={row.item} className="rounded-2xl border border-[#e8e1d7] bg-white p-5 shadow-sm">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#C5A059]">{row.cost}</p>
+                  <h3 className="mt-2 text-lg font-semibold">{row.item}</h3>
+                  <p className="mt-2 text-sm leading-7 text-[#5f5a54]">{row.note}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {t.sections.map((section) => (
+            <section key={section.title} className="mb-14">
+              {section.eyebrow && (
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#C5A059]">
+                  {section.eyebrow}
+                </p>
+              )}
+              <h2 className="border-b border-[#e8e1d7] pb-4 font-serif text-3xl font-semibold">
+                {section.title}
+              </h2>
+              <div className="mt-6 space-y-4">
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="text-base leading-8 text-[#5f5a54]">
+                    {paragraph}
+                  </p>
+                ))}
+                {section.bullets && (
+                  <ul className="space-y-3 pt-2">
+                    {section.bullets.map((bullet) => (
+                      <li key={bullet} className="flex gap-3 text-base leading-7 text-[#5f5a54]">
+                        <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#C5A059]" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </section>
+          ))}
+
+          <section className="mb-14 rounded-3xl border border-[#e8e1d7] bg-white p-6 shadow-sm md:p-8">
+            <h2 className="font-serif text-3xl font-semibold">{t.sinkSupportTitle}</h2>
+            <div className="mt-6 space-y-4">
+              {t.sinkSupportParagraphs.map((paragraph) => (
+                <p key={paragraph} className="text-base leading-8 text-[#5f5a54]">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <div className="mt-6 rounded-2xl border border-[#C5A059]/35 bg-[#fff9eb] p-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#9a7a3f]">
+                {lang === "zh" ? "可能增加的工程" : "Possible added works"}
+              </p>
+              <ul className="mt-4 grid gap-3 md:grid-cols-2">
+                {t.sinkSupportBullets.map((bullet) => (
+                  <li key={bullet} className="flex gap-3 text-sm leading-7 text-[#5f5a54]">
+                    <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#C5A059]" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <section className="mb-14">
+            <h2 className="border-b border-[#e8e1d7] pb-4 font-serif text-3xl font-semibold">
+              {t.worktopTitle}
+            </h2>
+            <p className="mt-6 text-base leading-8 text-[#5f5a54]">{t.worktopIntro}</p>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {t.worktopRows.map((row) => (
+                <div key={row.item} className="rounded-2xl border border-[#e8e1d7] bg-white p-5 shadow-sm">
+                  <h3 className="text-lg font-semibold">{row.item}</h3>
+                  <p className="mt-1 text-sm font-semibold text-[#9a7a3f]">{row.cost}</p>
+                  <p className="mt-2 text-sm leading-7 text-[#5f5a54]">{row.note}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-14">
+            <h2 className="border-b border-[#e8e1d7] pb-4 font-serif text-3xl font-semibold">
+              {t.overlayTitle}
+            </h2>
+            <p className="mt-6 text-base leading-8 text-[#5f5a54]">{t.overlayIntro}</p>
+            <div className="mt-6 overflow-hidden rounded-3xl border border-[#e8e1d7] bg-white shadow-sm">
+              {t.overlayRows.map((row) => (
+                <div key={row.item} className="grid gap-2 border-b border-[#e8e1d7] p-5 last:border-b-0 md:grid-cols-[1fr_0.8fr_1.8fr] md:gap-5">
+                  <p className="font-semibold text-[#2C2C2C]">{row.item}</p>
+                  <p className="font-bold text-[#9a7a3f]">{row.cost}</p>
+                  <p className="text-sm leading-6 text-[#6f6a63]">{row.note}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-14">
+            <h2 className="border-b border-[#e8e1d7] pb-4 font-serif text-3xl font-semibold">
+              {t.scenariosTitle}
+            </h2>
+            <div className="mt-6 grid gap-4 lg:grid-cols-3">
+              {t.scenarios.map((scenario) => (
+                <div key={scenario.title} className="rounded-3xl border border-[#e8e1d7] bg-white p-6 shadow-sm">
+                  <h3 className="text-xl font-semibold">{scenario.title}</h3>
+                  <p className="mt-2 text-lg font-bold text-[#9a7a3f]">{scenario.cost}</p>
+                  <ul className="mt-4 space-y-3">
+                    {scenario.details.map((detail) => (
+                      <li key={detail} className="flex gap-3 text-sm leading-6 text-[#5f5a54]">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#C5A059]" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-14 rounded-3xl border border-[#e8e1d7] bg-[#fffdf8] p-6 shadow-sm md:p-8">
+            <h2 className="font-serif text-3xl font-semibold">{t.budgetingTitle}</h2>
+            <ul className="mt-6 space-y-3">
+              {t.budgetingTips.map((tip) => (
+                <li key={tip} className="flex gap-3 text-base leading-7 text-[#5f5a54]">
+                  <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#C5A059]" />
+                  <span>{tip}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="mb-14">
+            <h2 className="border-b border-[#e8e1d7] pb-4 font-serif text-3xl font-semibold">
+              {t.internalLinksTitle}
+            </h2>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {t.internalLinks.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="rounded-2xl border border-[#e8e1d7] bg-white p-5 shadow-sm transition hover:border-[#C5A059] hover:shadow-md"
+                >
+                  <h3 className="text-base font-semibold text-[#2C2C2C]">{item.label}</h3>
+                  <p className="mt-2 text-sm leading-7 text-[#5f5a54]">{item.text}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-14">
+            <h2 className="border-b border-[#e8e1d7] pb-4 font-serif text-3xl font-semibold">
+              {t.faqTitle}
+            </h2>
+            <div className="mt-6 space-y-3">
+              {t.faqs.map((faq) => (
+                <details key={faq.question} className="rounded-2xl border border-[#e8e1d7] bg-[#fffdf8] p-5">
+                  <summary className="cursor-pointer text-base font-semibold">{faq.question}</summary>
+                  <p className="mt-3 text-sm leading-7 text-[#5f5a54]">{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <section className="rounded-3xl bg-[#151515] p-7 text-white md:p-9">
+            <h2 className="font-serif text-3xl font-semibold">{t.ctaTitle}</h2>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/70">{t.ctaText}</p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                to="/renovation-cost-calculator"
+                className="rounded-full bg-[#C5A059] px-6 py-3 text-sm font-semibold text-white hover:bg-[#D6B26B]"
+              >
+                {t.ctaPrimary}
+              </Link>
+              <Link
+                to="/contact"
+                className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-[#C5A059] hover:text-[#C5A059]"
+              >
+                {t.ctaSecondary}
+              </Link>
+            </div>
+          </section>
+        </article>
+      </main>
+    </>
+  );
+}

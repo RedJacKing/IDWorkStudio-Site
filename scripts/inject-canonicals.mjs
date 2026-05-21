@@ -119,6 +119,15 @@ const pageMetaMap = {
   ogUrl: 'https://idworkstudio.com/insights/feng-shui-renovation-singapore',
 },
 
+  'insights/kitchen-renovation-cost-singapore-2026.html': {
+  canonical: 'https://idworkstudio.com/insights/kitchen-renovation-cost-singapore-2026',
+  title: 'Kitchen Renovation Cost Singapore (2026 Guide) | ID Work Studio',
+  description: 'A realistic Singapore kitchen renovation cost guide for HDB, resale and condo homes, covering carpentry, worktops, hacking, plumbing, electrical works and hidden site conditions.',
+  ogTitle: 'Kitchen Renovation Cost Singapore (2026 Guide)',
+  ogDesc: 'Realistic kitchen renovation costs in Singapore for HDB, resale and condo homes, including carpentry, worktops, hacking and hidden site conditions.',
+  ogUrl: 'https://idworkstudio.com/insights/kitchen-renovation-cost-singapore-2026',
+},
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',
