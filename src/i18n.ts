@@ -2242,6 +2242,12 @@ enT["insights_page"] = {
       title: "Kitchen Renovation Cost Singapore (2026 Guide)",
       excerpt: "A realistic Singapore kitchen renovation cost breakdown covering HDB, resale and condo kitchens — including carpentry, worktops, hacking, plumbing, electrical works and hidden site conditions.",
       read_time: "9 min read"
+    },
+    "10": {
+      category: "Quotation Guide",
+      title: "Why Renovation Quotations in Singapore Vary So Much",
+      excerpt: "A practical guide for Singapore homeowners comparing renovation quotes — covering hidden exclusions, resale risk, variation orders, material specs and line-by-line checks.",
+      read_time: "9 min read"
     }
   },
   footer_block: {
@@ -2343,6 +2349,12 @@ zhT["insights_page"] = {
       category: "厨房费用指南",
       title: "新加坡厨房翻新费用（2026 指南）",
       excerpt: "新加坡厨房翻新费用的实际解析，涵盖 HDB、转售组屋与公寓厨房，包括木作、台面、拆除、水喉、电工及隐藏现场问题。",
+      read_time: "约 9 分钟"
+    },
+    "10": {
+      category: "报价指南",
+      title: "为什么新加坡装修报价差这么多？",
+      excerpt: "帮助新加坡业主比较装修报价的实用指南，涵盖隐藏遗漏、转售屋风险、追加费用、材料规格与逐项检查重点。",
       read_time: "约 9 分钟"
     }
   },

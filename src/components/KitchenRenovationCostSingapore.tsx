@@ -835,27 +835,27 @@ export default function KitchenRenovationCostSingapore() {
       </Helmet>
 
       <main className="bg-[#FAF8F3] text-[#2C2C2C]">
-        <section className="relative overflow-hidden bg-[#111] px-6 py-20 text-white md:py-28">
+        <section className="relative flex min-h-[720px] items-center justify-center overflow-hidden bg-[#111] px-6 py-24 text-white md:min-h-[820px] md:py-32">
           <div className="absolute inset-0">
             <img
               src={heroImage}
               alt={t.heroImageAlt}
-              className="h-full w-full object-cover opacity-60"
+              className="h-full w-full object-cover object-center opacity-70"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/45 to-[#111]/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-[#111]/80" />
           </div>
-          <div className="relative z-10 mx-auto max-w-5xl text-center">
-            <p className="mb-5 inline-flex rounded-full border border-[#C5A059]/40 bg-black/25 px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#C5A059] backdrop-blur">
+          <div className="relative z-10 mx-auto max-w-6xl text-center">
+            <p className="mb-7 inline-flex rounded-full border border-[#C5A059]/45 bg-black/25 px-6 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#C5A059] backdrop-blur">
               {t.eyebrow}
             </p>
-            <h1 className="font-serif text-4xl font-semibold leading-tight md:text-6xl">
+            <h1 className="mx-auto max-w-5xl font-serif text-4xl font-semibold leading-[1.08] md:text-7xl">
               {t.title}
             </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/75 md:text-lg">
+            <p className="mx-auto mt-7 max-w-4xl text-base leading-8 text-white/80 md:text-xl md:leading-9">
               {t.subtitle}
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-3 text-xs uppercase tracking-[0.16em] text-white/55">
+            <div className="mt-9 flex flex-wrap justify-center gap-3 text-xs uppercase tracking-[0.18em] text-white/65">
               <span>{t.category}</span>
               <span>•</span>
               <span>{t.readTime}</span>

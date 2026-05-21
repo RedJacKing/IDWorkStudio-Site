@@ -27,6 +27,7 @@ import OfficeRenovationTimelineSingapore from './components/OfficeRenovationTime
 import OverseasRenovationShoppingMistakes from './components/OverseasRenovationShoppingMistakes';
 import FengShuiRenovationSingapore from './components/FengShuiRenovationSingapore';
 import KitchenRenovationCostSingapore from './components/KitchenRenovationCostSingapore';
+import RenovationQuotationSingapore from './components/RenovationQuotationSingapore';
 import StickyMobileNav from './components/StickyMobileNav';
 import ScrollToHashElement from './components/ScrollToHashElement';
 
@@ -770,6 +771,7 @@ export const routes: RouteRecord[] = [
       { path: 'insights/overseas-renovation-shopping-singapore', element: <OverseasRenovationShoppingMistakes /> },
       { path: 'insights/feng-shui-renovation-singapore', element: <FengShuiRenovationSingapore /> },
       { path: 'insights/kitchen-renovation-cost-singapore-2026', element: <KitchenRenovationCostSingapore /> },
+      { path: 'insights/renovation-quotation-singapore', element: <RenovationQuotationSingapore /> },
 
       { path: 'gallery', element: <Gallery /> },
       { path: 'contact', element: <Contact /> },

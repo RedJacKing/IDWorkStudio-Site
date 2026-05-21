@@ -88,6 +88,14 @@ export default function Insights() {
       date: '2026-05-21',
       readTime: t('insights_page.articles.9.read_time'),
     },
+    {
+      slug: '/insights/renovation-quotation-singapore',
+      category: t('insights_page.articles.10.category'),
+      title: t('insights_page.articles.10.title'),
+      excerpt: t('insights_page.articles.10.excerpt'),
+      date: '2026-05-21',
+      readTime: t('insights_page.articles.10.read_time'),
+    },
   ];
 
   const itemListSchema = {

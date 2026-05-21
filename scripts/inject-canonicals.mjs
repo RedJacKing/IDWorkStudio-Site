@@ -128,6 +128,15 @@ const pageMetaMap = {
   ogUrl: 'https://idworkstudio.com/insights/kitchen-renovation-cost-singapore-2026',
 },
 
+  'insights/renovation-quotation-singapore.html': {
+  canonical: 'https://idworkstudio.com/insights/renovation-quotation-singapore',
+  title: 'Why Renovation Quotations in Singapore Vary So Much | ID Work Studio',
+  description: 'A practical Singapore guide explaining why renovation quotations differ so much, including hidden exclusions, resale risks, variation orders, material specifications and how homeowners should compare quotes.',
+  ogTitle: 'Why Renovation Quotations in Singapore Vary So Much',
+  ogDesc: 'Understand hidden exclusions, resale risk, variation orders and line-by-line quote checks before choosing a renovation contractor in Singapore.',
+  ogUrl: 'https://idworkstudio.com/insights/renovation-quotation-singapore',
+},
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',
