@@ -840,10 +840,10 @@ export default function KitchenRenovationCostSingapore() {
             <img
               src={heroImage}
               alt={t.heroImageAlt}
-              className="h-full w-full object-cover opacity-35"
+              className="h-full w-full object-cover opacity-60"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/70 to-[#111]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/45 to-[#111]/90" />
           </div>
           <div className="relative z-10 mx-auto max-w-5xl text-center">
             <p className="mb-5 inline-flex rounded-full border border-[#C5A059]/40 bg-black/25 px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#C5A059] backdrop-blur">
