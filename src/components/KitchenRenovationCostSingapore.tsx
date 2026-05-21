@@ -339,6 +339,16 @@ const content: Record<"en" | "zh", ArticleContent> = {
         text: "Estimate a realistic planning range before asking for quotations.",
       },
       {
+        label: "Renovation Quotation Singapore",
+        to: "/insights/renovation-quotation-singapore",
+        text: "Learn why kitchen quotations can vary depending on exclusions, site risks and material specifications.",
+      },
+      {
+        label: "Buying Renovation Items Overseas",
+        to: "/insights/overseas-renovation-shopping-singapore",
+        text: "Check what to confirm before sourcing sinks, taps, appliances or kitchen fittings from overseas.",
+      },
+      {
         label: "Renovation Cost Singapore Guide",
         to: "/insights/renovation-cost-singapore-2026",
         text: "Understand whole-home renovation cost ranges for HDB, condo and resale homes.",
@@ -672,6 +682,16 @@ const content: Record<"en" | "zh", ArticleContent> = {
         label: "装修费用计算器",
         to: "/renovation-cost-calculator",
         text: "在索取报价前，先估算一个实际预算范围。",
+      },
+      {
+        label: "新加坡装修报价指南",
+        to: "/insights/renovation-quotation-singapore",
+        text: "了解为什么厨房装修报价会因为排除项目、现场风险和材料规格而不同。",
+      },
+      {
+        label: "海外购买装修材料注意事项",
+        to: "/insights/overseas-renovation-shopping-singapore",
+        text: "购买水槽、水龙头、电器或厨房五金前，先确认尺寸、保修和安装责任。",
       },
       {
         label: "新加坡装修费用指南",

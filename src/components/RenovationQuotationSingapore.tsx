@@ -271,6 +271,16 @@ const content: Record<"en" | "zh", ArticleContent> = {
         "text": "See how kitchen-specific items like carpentry, worktops, hacking and plumbing affect pricing."
       },
       {
+        "label": "HDB Renovation Timeline Singapore",
+        "to": "/insights/hdb-renovation-timeline-singapore",
+        "text": "Understand how renovation timing, approvals and site coordination can affect quotation planning."
+      },
+      {
+        "label": "Buying Renovation Items Overseas",
+        "to": "/insights/overseas-renovation-shopping-singapore",
+        "text": "Check what homeowners should confirm before excluding owner-supplied items from a quotation."
+      },
+      {
         "label": "Renovation Mistakes Singapore Homeowners Make",
         "to": "/insights/renovation-mistakes-singapore",
         "text": "Avoid common decisions that lead to delays, rework and unnecessary variation orders."
@@ -530,6 +540,16 @@ const content: Record<"en" | "zh", ArticleContent> = {
         "label": "新加坡厨房翻新费用",
         "to": "/insights/kitchen-renovation-cost-singapore-2026",
         "text": "了解厨房木作、台面、拆除和水喉工程如何影响报价。"
+      },
+      {
+        "label": "HDB装修时间表",
+        "to": "/insights/hdb-renovation-timeline-singapore",
+        "text": "了解装修时间、审批和现场协调如何影响报价规划。"
+      },
+      {
+        "label": "海外购买装修材料注意事项",
+        "to": "/insights/overseas-renovation-shopping-singapore",
+        "text": "在报价中排除业主自购项目之前，先确认尺寸、保修和安装责任。"
       },
       {
         "label": "新加坡业主常见翻新错误",
