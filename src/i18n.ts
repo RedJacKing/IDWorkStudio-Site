@@ -260,7 +260,9 @@ const resources = {
           "badge": "2026 Design Trends",
           "title": "HDB & Condo Interior Design Singapore — Refined Living, Thoughtfully Crafted",
           "subtitle": "HDB-licensed and BCA-registered firm creating tailored homes for modern living, with careful planning, permit coordination and polished execution.",
-          "cta": "Book a Home Consultation"
+          "cta": "Book a Home Consultation",
+          "calculatorCta": "Renovation Cost Calculator",
+          "quizCta": "Find Your Renovation Style"
         },
         "lifestyle": {
           "title": "Lifestyle-First Design Solutions",
@@ -1215,7 +1217,9 @@ const resources = {
           "badge": "2026 设计趋势",
           "title": "新加坡 HDB 与公寓室内设计 — 精致生活，匠心打造",
           "subtitle": "具备 HDB 执照与 BCA 注册资质，为现代居住需求打造专属住宅，涵盖规划、报批与精致施工。",
-          "cta": "预约家居咨询"
+          "cta": "预约家居咨询",
+          "calculatorCta": "装修费用计算器",
+          "quizCta": "寻找您的装修风格"
         },
         "lifestyle": {
           "title": "生活方式优先的设计解决方案",

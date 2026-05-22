@@ -210,6 +210,22 @@ export default function Residential() {
                 {t('residential_page.hero.cta')}
               </a>
             </div>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="/renovation-cost-calculator"
+                className="px-6 py-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white text-xs uppercase tracking-[0.18em] hover:border-gold hover:text-gold transition-all duration-300 rounded-full"
+              >
+                {t('residential_page.hero.calculatorCta')}
+              </a>
+
+              <a
+                href="/hdb-renovation-style-quiz"
+                className="px-6 py-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white text-xs uppercase tracking-[0.18em] hover:border-gold hover:text-gold transition-all duration-300 rounded-full"
+              >
+                {t('residential_page.hero.quizCta')}
+              </a>
+            </div>
           </div>
         </section>
 
@@ -316,7 +332,7 @@ export default function Residential() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <a href="/insights/renovation-cost-singapore-2026" className="block bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center mb-5">
                   <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mr-3">
                     <Home className="w-5 h-5 text-gold" />
@@ -331,9 +347,9 @@ export default function Residential() {
                 <p className="text-gray-500 text-sm leading-relaxed">
                   {t('residential_page.pricing.items.bto3.desc')}
                 </p>
-              </div>
+              </a>
 
-              <div className="bg-dark-charcoal rounded-2xl p-8 shadow-xl border-2 border-gold relative overflow-hidden hover:-translate-y-1 transition-all duration-300">
+              <a href="/insights/renovation-cost-singapore-2026" className="block bg-dark-charcoal rounded-2xl p-8 shadow-xl border-2 border-gold relative overflow-hidden hover:-translate-y-1 transition-all duration-300">
                 <div className="absolute top-5 right-5 bg-gold text-dark-charcoal text-[9px] uppercase tracking-widest px-3 py-1 rounded-full font-bold">
                   Most Popular
                 </div>
@@ -351,9 +367,9 @@ export default function Residential() {
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {t('residential_page.pricing.items.bto4.desc')}
                 </p>
-              </div>
+              </a>
 
-              <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <a href="/insights/renovation-cost-singapore-2026" className="block bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center mb-5">
                   <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mr-3">
                     <Home className="w-5 h-5 text-gold" />
@@ -368,11 +384,11 @@ export default function Residential() {
                 <p className="text-gray-500 text-sm leading-relaxed">
                   {t('residential_page.pricing.items.bto5.desc')}
                 </p>
-              </div>
+              </a>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-              <div className="bg-white rounded-2xl p-8 shadow-md border-l-4 border-gold hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <a href="/insights/renovation-quotation-singapore" className="block bg-white rounded-2xl p-8 shadow-md border-l-4 border-gold hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center mb-5">
                   <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mr-3">
                     <Building className="w-5 h-5 text-gold" />
@@ -387,9 +403,9 @@ export default function Residential() {
                 <p className="text-gray-500 text-sm leading-relaxed">
                   {t('residential_page.pricing.items.resale.desc')}
                 </p>
-              </div>
+              </a>
 
-              <div className="bg-white rounded-2xl p-8 shadow-md border-l-4 border-gold hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <a href="/insights/kitchen-renovation-cost-singapore-2026" className="block bg-white rounded-2xl p-8 shadow-md border-l-4 border-gold hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center mb-5">
                   <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mr-3">
                     <Layout className="w-5 h-5 text-gold" />
@@ -404,7 +420,7 @@ export default function Residential() {
                 <p className="text-gray-500 text-sm leading-relaxed">
                   {t('residential_page.pricing.items.condo.desc')}
                 </p>
-              </div>
+              </a>
             </div>
 
             <div className="bg-gold/10 border border-gold/30 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -444,9 +460,10 @@ export default function Residential() {
                 };
 
                 return (
-                  <div
+                  <a
                     key={key}
-                    className="bg-off-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
+                    href="/insights/hdb-renovation-timeline-singapore"
+                    className="block bg-off-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
                   >
                     <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-5">
                       {icons[key]}
@@ -457,7 +474,7 @@ export default function Residential() {
                     <p className="text-gray-500 text-sm leading-relaxed">
                       {t(`residential_page.timeline.items.${key}.desc`)}
                     </p>
-                  </div>
+                  </a>
                 );
               })}
             </div>
@@ -485,9 +502,10 @@ export default function Residential() {
                 };
 
                 return (
-                  <div
+                  <a
                     key={key}
-                    className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
+                    href="/insights/renovation-mistakes-singapore"
+                    className="block bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
                   >
                     <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-5">
                       {icons[key]}
@@ -498,7 +516,7 @@ export default function Residential() {
                     <p className="text-gray-500 text-sm leading-relaxed">
                       {t(`residential_page.mistakes.items.${key}.desc`)}
                     </p>
-                  </div>
+                  </a>
                 );
               })}
             </div>
