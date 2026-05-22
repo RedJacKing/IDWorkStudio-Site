@@ -210,22 +210,6 @@ export default function Residential() {
                 {t('residential_page.hero.cta')}
               </a>
             </div>
-
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href="/renovation-cost-calculator"
-                className="px-6 py-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white text-xs uppercase tracking-[0.18em] hover:border-gold hover:text-gold transition-all duration-300 rounded-full"
-              >
-                {t('residential_page.hero.calculatorCta')}
-              </a>
-
-              <a
-                href="/hdb-renovation-style-quiz"
-                className="px-6 py-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white text-xs uppercase tracking-[0.18em] hover:border-gold hover:text-gold transition-all duration-300 rounded-full"
-              >
-                {t('residential_page.hero.quizCta')}
-              </a>
-            </div>
           </div>
         </section>
 
