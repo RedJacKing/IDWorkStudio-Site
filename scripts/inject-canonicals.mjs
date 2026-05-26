@@ -292,10 +292,21 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
           postalCode: '737853',
           addressCountry: 'SG',
         },
-        areaServed: {
-          '@type': 'Country',
-          name: 'Singapore',
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 1.4380,
+          longitude: 103.7927,
         },
+        areaServed: [
+          {
+            '@type': 'Country',
+            name: 'Singapore',
+          },
+          {
+            '@type': 'City',
+            name: 'Singapore',
+          },
+        ],
       },
       {
         '@type': 'WebPage',
@@ -704,6 +715,11 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
     '</head>',
     `    <script type="application/ld+json">${JSON.stringify(schema)}</script>\n</head>`
   );
+
+  html = html.replace(/<link\s+rel=["']alternate["'][^>]*hreflang=["'][^"']+["'][^>]*>\s*/gi, '');
+
+  const geoTags = `    <link rel="alternate" hreflang="en-SG" href="${meta.canonical}" />\n    <link rel="alternate" hreflang="x-default" href="${meta.canonical}" />\n`;
+  html = html.replace('</head>', `${geoTags}</head>`);
 
   const canonicalTag = `    <link rel="canonical" href="${meta.canonical}" />\n`;
   html = html.replace('</head>', `${canonicalTag}</head>`);
