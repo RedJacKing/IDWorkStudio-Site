@@ -96,6 +96,14 @@ export default function Insights() {
       date: '2026-05-21',
       readTime: t('insights_page.articles.10.read_time'),
     },
+    {
+      slug: '/insights/real-cost-moving-home-singapore',
+      category: t('insights_page.articles.11.category'),
+      title: t('insights_page.articles.11.title'),
+      excerpt: t('insights_page.articles.11.excerpt'),
+      date: '2026-05-26',
+      readTime: t('insights_page.articles.11.read_time'),
+    },
   ];
 
   const itemListSchema = {

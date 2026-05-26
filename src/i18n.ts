@@ -2252,6 +2252,12 @@ enT["insights_page"] = {
       title: "Why Renovation Quotations in Singapore Vary So Much",
       excerpt: "A practical guide for Singapore homeowners comparing renovation quotes — covering hidden exclusions, resale risk, variation orders, material specs and line-by-line checks.",
       read_time: "9 min read"
+    },
+    "11": {
+      category: "Move-In Budget Guide",
+      title: "The Real Cost of Moving Into a New Home in Singapore",
+      excerpt: "A realistic Singapore guide to move-in budgeting, covering renovation works, appliances, furniture, renovation loans, MOP resale value and what happens if plans change.",
+      read_time: "10 min read"
     }
   },
   footer_block: {
@@ -2360,6 +2366,12 @@ zhT["insights_page"] = {
       title: "为什么新加坡装修报价差这么多？",
       excerpt: "帮助新加坡业主比较装修报价的实用指南，涵盖隐藏遗漏、转售屋风险、追加费用、材料规格与逐项检查重点。",
       read_time: "约 9 分钟"
+    },
+    "11": {
+      category: "搬家预算指南",
+      title: "搬进新加坡新家真正需要多少钱？",
+      excerpt: "从翻新工程、电器、家具、装修贷款、MOP 后转售价值，到计划改变时的财务压力，整理新加坡屋主更真实的搬家预算规划。",
+      read_time: "约 10 分钟"
     }
   },
   footer_block: {

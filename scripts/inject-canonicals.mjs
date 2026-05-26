@@ -137,6 +137,15 @@ const pageMetaMap = {
   ogUrl: 'https://idworkstudio.com/insights/renovation-quotation-singapore',
 },
 
+  'insights/real-cost-moving-home-singapore.html': {
+  canonical: 'https://idworkstudio.com/insights/real-cost-moving-home-singapore',
+  title: 'The Real Cost of Moving Into a New Home in Singapore | ID Work Studio',
+  description: 'A realistic Singapore move-in budget guide covering renovation works, appliances, furniture, renovation loans, MOP resale value and what homeowners should plan before spending.',
+  ogTitle: 'The Real Cost of Moving Into a New Home in Singapore',
+  ogDesc: 'Renovation is only one part of the real move-in cost. Plan for appliances, furniture, loans, MOP resale value and what happens if plans change.',
+  ogUrl: 'https://idworkstudio.com/insights/real-cost-moving-home-singapore',
+},
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',
