@@ -188,10 +188,10 @@ const pageMetaMap = {
   },
   'renovation-cost-calculator.html': {
     canonical: 'https://idworkstudio.com/renovation-cost-calculator',
-    title: 'Singapore Renovation Cost Calculator 2026 | Free Budget Estimate | ID Work Studio',
-    description: 'Free renovation cost calculator for HDB, BTO, resale, condo and landed homes in Singapore. Estimate your budget in minutes — no sign-up required.',
-    ogTitle: 'Singapore Renovation Cost Calculator 2026 | ID Work Studio',
-    ogDesc: "Estimate your HDB, condo or landed renovation budget in minutes with ID Work Studio's free Singapore renovation cost calculator.",
+    title: 'Free Singapore Renovation Cost Calculator (No Email Needed) | ID Work Studio',
+description: 'Estimate your renovation budget instantly with our free Singapore Renovation Cost Calculator. No email needed. Updated for 2026 HDB, condo, resale, and landed renovation pricing.',
+ogTitle: 'Free Singapore Renovation Cost Calculator (No Email Needed) | ID Work Studio',
+ogDesc: 'Estimate your Singapore renovation budget instantly for HDB, condo, resale and landed homes. No email needed.',
     ogUrl: 'https://idworkstudio.com/renovation-cost-calculator',
   },
   'total-home-budget-calculator.html': {
