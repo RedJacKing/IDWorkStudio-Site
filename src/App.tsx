@@ -190,19 +190,19 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
           "subtitle": "Three focused tools for renovation budget, full move-in cost and style direction.",
           "items": [
             {
-              "title": "Renovation Cost Calculator",
+              "title": "Renovation Cost Estimator",
               "text": "Estimate renovation contract costs before requesting a quotation.",
               "href": "/renovation-cost-calculator",
               "label": "Estimate costs"
             },
             {
-              "title": "Total Move-In Budget Planner",
+              "title": "Move-In Budget Planner",
               "text": "Plan renovation, furniture, appliances and safety buffer together.",
               "href": "/total-home-budget-calculator",
               "label": "Plan budget"
             },
             {
-              "title": "HDB Renovation Style Quiz",
+              "title": "Style Discovery Quiz",
               "text": "Narrow your style direction before consultation.",
               "href": "/hdb-renovation-style-quiz",
               "label": "Discover style"
@@ -236,15 +236,15 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
               "to": "/insights"
             },
             {
-              "label": "Renovation Cost Calculator Singapore",
+              "label": "Renovation Cost Estimator",
               "to": "/renovation-cost-calculator"
             },
             {
-              "label": "Total Move-In Budget Planner Singapore",
+              "label": "Move-In Budget Planner",
               "to": "/total-home-budget-calculator"
             },
             {
-              "label": "HDB Renovation Style Quiz",
+              "label": "Style Discovery Quiz",
               "to": "/hdb-renovation-style-quiz"
             },
             {
@@ -373,19 +373,19 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
           "subtitle": "三个工具分别协助预算、完整入住成本与风格判断。",
           "items": [
             {
-              "title": "Renovation Cost Calculator",
+              "title": "Renovation Cost Estimator",
               "text": "先估算翻新工程费用，再索取详细报价。",
               "href": "/renovation-cost-calculator",
               "label": "估算费用"
             },
             {
-              "title": "Total Move-In Budget Planner",
+              "title": "Move-In Budget Planner",
               "text": "同时规划翻新、家具、电器与安全缓冲。",
               "href": "/total-home-budget-calculator",
               "label": "规划预算"
             },
             {
-              "title": "HDB Renovation Style Quiz",
+              "title": "Style Discovery Quiz",
               "text": "咨询前先缩小适合您的风格方向。",
               "href": "/hdb-renovation-style-quiz",
               "label": "开始测验"
@@ -570,29 +570,38 @@ function HomepageAuthoritySections() {
       </section>
 
       <section className="px-4 pb-10 sm:px-6 lg:px-8 md:pb-12">
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-gray-100 bg-[#FBFAF7] p-5 shadow-[0_20px_60px_rgba(44,44,44,0.07)] md:p-8">
-          <div className="grid gap-5 lg:grid-cols-[0.75fr_1.25fr] lg:items-stretch">
-            <div className="rounded-[1.75rem] border border-gray-100 bg-white p-5 md:p-7">
-              <div className="mb-4 h-px w-12 bg-gold" />
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.planning_tools.eyebrow}</p>
-              <h2 className="font-serif text-3xl font-bold leading-tight text-dark-charcoal md:text-4xl">{content.planning_tools.title}</h2>
-              <p className="mt-4 max-w-xl text-sm leading-6 text-gray-600">
-                {content.planning_tools.subtitle}
-              </p>
-            </div>
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-gray-100 bg-[#FBFAF7] p-5 shadow-[0_20px_60px_rgba(44,44,44,0.07)] md:p-7">
+          <div className="mb-6 text-center md:mb-8">
+            <div className="mx-auto mb-4 h-px w-12 bg-gold" />
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.planning_tools.eyebrow}</p>
+            <h2 className="mx-auto max-w-3xl font-serif text-3xl font-bold leading-tight text-dark-charcoal md:text-4xl">{content.planning_tools.title}</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-gray-600">
+              {content.planning_tools.subtitle}
+            </p>
+          </div>
 
-            <div className="grid gap-4 md:grid-cols-3">
-              {planningTools.map((tool) => (
-                <a key={tool.title} href={tool.href} className="group flex h-full flex-col rounded-[1.75rem] border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_18px_45px_rgba(44,44,44,0.10)]">
-                  <div className="mb-4 h-px w-10 bg-gold/70 transition-all duration-300 group-hover:w-16" />
-                  <h3 className="font-serif text-2xl font-semibold leading-snug text-dark-charcoal">{tool.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-6 text-gray-600">{tool.text}</p>
-                  <span className="mt-5 inline-flex w-fit rounded-full border border-gold/60 px-4 py-2.5 text-xs font-bold uppercase tracking-[0.14em] text-dark-charcoal transition-colors group-hover:bg-gold group-hover:text-white">
-                    {tool.label}
+          <div className="grid gap-4 md:grid-cols-3">
+            {planningTools.map((tool, index) => (
+              <a
+                key={tool.title}
+                href={tool.href}
+                className={`group flex h-full flex-col rounded-[1.75rem] border bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_18px_45px_rgba(44,44,44,0.10)] ${
+                  index === 1 ? 'border-gold/30 md:scale-[1.015]' : 'border-gray-100'
+                }`}
+              >
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <div className="h-px w-10 bg-gold/70 transition-all duration-300 group-hover:w-16" />
+                  <span className="rounded-full bg-[#f8f5ef] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold">
+                    {index === 0 ? 'Cost' : index === 1 ? 'Budget' : 'Style'}
                   </span>
-                </a>
-              ))}
-            </div>
+                </div>
+                <h3 className="font-serif text-2xl font-semibold leading-snug text-dark-charcoal">{tool.title}</h3>
+                <p className="mt-3 flex-1 text-sm leading-6 text-gray-600">{tool.text}</p>
+                <span className="mt-5 inline-flex w-fit rounded-full border border-gold/60 px-4 py-2.5 text-xs font-bold uppercase tracking-[0.14em] text-dark-charcoal transition-colors group-hover:bg-gold group-hover:text-white">
+                  {tool.label}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
       </section>
