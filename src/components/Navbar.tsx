@@ -10,6 +10,11 @@ export default function Navbar() {
 
   // Helper to determine if link is active
   const isActive = (path: string) => location.pathname === path;
+  const isPlanningToolsActive = [
+    '/renovation-cost-calculator',
+    '/total-home-budget-calculator',
+    '/hdb-renovation-style-quiz',
+  ].includes(location.pathname);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'zh' : 'en';
@@ -52,8 +57,32 @@ export default function Navbar() {
               <Link to="/#home" className="text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-[0.12rem] font-light font-sans">{t('nav.home')}</Link>
               <Link to="/residential" className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/residential') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.residential')}</Link>
               <Link to="/commercial" className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/commercial') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.commercial')}</Link>
-              <a href="/hdb-renovation-style-quiz" className="text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors text-charcoal/80 hover:text-champagne">Style Quiz</a>
-              <a href="/renovation-cost-calculator" className="text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors text-charcoal/80 hover:text-champagne">Calculator</a>
+
+              <div className="relative group py-7">
+                <button
+                  type="button"
+                  className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors flex items-center gap-1 ${isPlanningToolsActive ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}
+                >
+                  Planning Tools
+                  <span className="text-[9px] leading-none">▼</span>
+                </button>
+
+                <div className="pointer-events-none absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 -translate-y-2 rounded-2xl border border-gray-100 bg-white/98 p-3 opacity-0 shadow-2xl shadow-black/10 transition-all duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+                  <a href="/renovation-cost-calculator" className="block rounded-xl px-4 py-3 text-left transition-colors hover:bg-stone-50">
+                    <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">Renovation Cost Calculator</span>
+                    <span className="mt-1 block text-xs leading-5 text-charcoal/55">Estimate renovation contract costs.</span>
+                  </a>
+                  <a href="/total-home-budget-calculator" className="block rounded-xl px-4 py-3 text-left transition-colors hover:bg-stone-50">
+                    <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">Total Move-In Budget Planner</span>
+                    <span className="mt-1 block text-xs leading-5 text-charcoal/55">Plan furniture, appliances and cash buffer.</span>
+                  </a>
+                  <a href="/hdb-renovation-style-quiz" className="block rounded-xl px-4 py-3 text-left transition-colors hover:bg-stone-50">
+                    <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">HDB Renovation Style Quiz</span>
+                    <span className="mt-1 block text-xs leading-5 text-charcoal/55">Discover a suitable interior style direction.</span>
+                  </a>
+                </div>
+              </div>
+
               <Link to="/insights" className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/insights') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.insights')}</Link>
               <Link to="/gallery" className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/gallery') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.gallery')}</Link>
               <Link to="/#contact" className="text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-[0.12rem] font-light font-sans">{t('nav.contact')}</Link>
@@ -89,8 +118,12 @@ export default function Navbar() {
               <Link to="/#home" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.home')}</Link>
               <Link to="/residential" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.residential')}</Link>
               <Link to="/commercial" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.commercial')}</Link>
-              <a href="/hdb-renovation-style-quiz" className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">Style Quiz</a>
-              <a href="/renovation-cost-calculator" className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">Calculator</a>
+
+              <div className="px-3 pt-4 pb-2 text-[11px] font-semibold uppercase tracking-[0.18rem] text-champagne">Planning Tools</div>
+              <a href="/renovation-cost-calculator" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Renovation Cost Calculator</a>
+              <a href="/total-home-budget-calculator" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Total Move-In Budget Planner</a>
+              <a href="/hdb-renovation-style-quiz" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">HDB Renovation Style Quiz</a>
+
               <Link to="/insights" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.insights')}</Link>
               <Link to="/gallery" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.gallery')}</Link>
               <Link to="/#contact" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.contact')}</Link>

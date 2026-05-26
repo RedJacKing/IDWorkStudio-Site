@@ -106,6 +106,12 @@ type HomepageAuthorityContent = {
     subtitle: string;
     items: Array<{ title: string; text: string; href: string; label: string }>;
   };
+  planning_authority: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    signals: string[];
+  };
   internal_links: {
     title: string;
     items: Array<{ label: string; to: string }>;
@@ -132,24 +138,24 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
   en: {
         "quick_answers": {
           "eyebrow": "Quick renovation answers",
-          "title": "Plan your Singapore renovation with clearer budget, timeline and approval expectations.",
-          "subtitle": "Short answers for homeowners and business owners comparing Singapore renovation options before speaking to a designer.",
+          "title": "Clearer Singapore renovation planning, without the guesswork.",
+          "subtitle": "Fast planning links for cost, common mistakes and process clarity before consultation.",
           "items": [
             {
               "title": "Renovation cost in Singapore",
-              "text": "BTO, resale, condo and office renovation costs in Singapore are usually shaped by site condition, hacking scope, carpentry, electrical works, permits and material selection.",
+              "text": "Cost depends on site condition, hacking, carpentry, electrical works, permits and materials.",
               "link": "/insights/renovation-cost-singapore-2026",
               "label": "Read cost guide"
             },
             {
-              "title": "Residential vs commercial timeline",
-              "text": "HDB, condo and commercial renovation timelines differ because of hacking permits, carpentry lead time, building management rules, reinstatement work and handover dates.",
-              "link": "/insights/hdb-renovation-timeline-singapore",
-              "label": "View timeline guide"
+              "title": "Renovation mistakes to avoid",
+              "text": "Avoid unclear scopes, weak budget planning, late material decisions and permit assumptions.",
+              "link": "/insights/renovation-mistakes-singapore",
+              "label": "Read mistakes guide"
             },
             {
               "title": "Renovation process",
-              "text": "A smoother renovation usually starts with floor plan review, budget discussion, design confirmation, quotation, permit checks, build coordination and final handover.",
+              "text": "A smoother project starts with floor plan review, budget discussion, quotation, permits and coordinated handover.",
               "link": "#process",
               "label": "See our process"
             }
@@ -158,7 +164,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         "featured_insights": {
           "eyebrow": "Featured insights",
           "title": "Renovation planning guides for Singapore homes, offices and commercial spaces.",
-          "subtitle": "Read the deeper guides after getting the overview. These pages support budget planning, approval awareness and project sequencing.",
+          "subtitle": "Deeper guides for budget planning, approvals and project sequencing.",
           "read_article": "Read article",
           "items": [
             {
@@ -180,21 +186,38 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "planning_tools": {
           "eyebrow": "Planning tools",
-          "title": "Start with a renovation budget estimate, then narrow your design direction.",
-          "subtitle": "Use these tools before consultation so your renovation discussion starts with clearer expectations.",
+          "title": "Plan cost, cashflow and design direction clearly.",
+          "subtitle": "Three focused tools for renovation budget, full move-in cost and style direction.",
           "items": [
             {
               "title": "Renovation Cost Calculator",
-              "text": "Estimate your HDB, condo, resale, kitchen or toilet renovation budget before requesting a quotation.",
+              "text": "Estimate renovation contract costs before requesting a quotation.",
               "href": "/renovation-cost-calculator",
-              "label": "Open calculator"
+              "label": "Estimate costs"
+            },
+            {
+              "title": "Total Move-In Budget Planner",
+              "text": "Plan renovation, furniture, appliances and safety buffer together.",
+              "href": "/total-home-budget-calculator",
+              "label": "Plan budget"
             },
             {
               "title": "HDB Renovation Style Quiz",
-              "text": "Explore suitable interior directions before your consultation, from Japandi to modern luxury and warm minimalism.",
+              "text": "Narrow your style direction before consultation.",
               "href": "/hdb-renovation-style-quiz",
-              "label": "Take style quiz"
+              "label": "Discover style"
             }
+          ]
+        },
+        "planning_authority": {
+          "eyebrow": "Planning clarity",
+          "title": "Renovation planning is more than choosing finishes.",
+          "text": "Singapore homeowners often underestimate furniture, appliances, delivery and contingency. Our tools help you see the full picture before work begins.",
+          "signals": [
+            "BCA Registered",
+            "HDB Registered",
+            "Residential & Commercial",
+            "Singapore-based since 2015"
           ]
         },
         "internal_links": {
@@ -215,6 +238,10 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
             {
               "label": "Renovation Cost Calculator Singapore",
               "to": "/renovation-cost-calculator"
+            },
+            {
+              "label": "Total Move-In Budget Planner Singapore",
+              "to": "/total-home-budget-calculator"
             },
             {
               "label": "HDB Renovation Style Quiz",
@@ -294,24 +321,24 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
   zh: {
         "quick_answers": {
           "eyebrow": "翻新快速指南",
-          "title": "更清楚掌握新加坡翻新的预算、工期与审批预期。",
-          "subtitle": "为正在比较新加坡翻新方案的屋主与商业客户，提供简洁清楚的规划重点。",
+          "title": "更清楚规划新加坡翻新预算、流程与风格方向。",
+          "subtitle": "用较短的路径了解费用、常见错误与翻新流程。",
           "items": [
             {
               "title": "新加坡翻新费用",
-              "text": "BTO、转售屋、公寓与办公室翻新费用，通常会受现场状况、拆除范围、木工、电工、许可证与材料选择影响。",
+              "text": "费用通常受屋况、拆除、木工、电工、许可证与材料选择影响。",
               "link": "/insights/renovation-cost-singapore-2026",
               "label": "阅读费用指南"
             },
             {
-              "title": "住宅与商业翻新工期",
-              "text": "HDB、公寓与商业翻新工期各有不同，常受拆除许可证、木工交期、大厦管理规定、恢复原状工程与移交日期影响。",
-              "link": "/insights/hdb-renovation-timeline-singapore",
-              "label": "查看工期指南"
+              "title": "应避免的翻新错误",
+              "text": "避免范围不清、预算不足、材料决定太迟、许可证假设与施工顺序混乱。",
+              "link": "/insights/renovation-mistakes-singapore",
+              "label": "阅读错误指南"
             },
             {
               "title": "翻新流程",
-              "text": "更顺利的翻新通常会从平面图审查、预算讨论、设计确认、报价、许可证检查、施工协调到最终移交。",
+              "text": "顺利翻新通常从平面图审查、预算、报价、许可证与现场协调开始。",
               "link": "#process",
               "label": "查看我们的流程"
             }
@@ -320,7 +347,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         "featured_insights": {
           "eyebrow": "精选见解",
           "title": "适用于新加坡住宅、办公室与商业空间的翻新规划指南。",
-          "subtitle": "先了解重点，再阅读更深入的指南。这些内容有助于预算规划、审批意识与项目工期安排。",
+          "subtitle": "更深入了解预算、审批与项目工期安排。",
           "read_article": "阅读全文",
           "items": [
             {
@@ -342,21 +369,38 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "planning_tools": {
           "eyebrow": "规划工具",
-          "title": "先估算翻新预算，再缩小设计风格方向。",
-          "subtitle": "咨询前先使用这些工具，让翻新讨论从更清楚的预算与设计预期开始。",
+          "title": "更清楚规划费用、现金流与风格方向。",
+          "subtitle": "三个工具分别协助预算、完整入住成本与风格判断。",
           "items": [
             {
               "title": "Renovation Cost Calculator",
-              "text": "在索取正式报价前，先估算 HDB、公寓、转售屋、厨房或厕所翻新的预算范围。",
+              "text": "先估算翻新工程费用，再索取详细报价。",
               "href": "/renovation-cost-calculator",
-              "label": "打开计算器"
+              "label": "估算费用"
+            },
+            {
+              "title": "Total Move-In Budget Planner",
+              "text": "同时规划翻新、家具、电器与安全缓冲。",
+              "href": "/total-home-budget-calculator",
+              "label": "规划预算"
             },
             {
               "title": "HDB Renovation Style Quiz",
-              "text": "在咨询前探索适合您的室内风格方向，从 Japandi 到现代奢华与温暖极简。",
+              "text": "咨询前先缩小适合您的风格方向。",
               "href": "/hdb-renovation-style-quiz",
-              "label": "开始风格测验"
+              "label": "开始测验"
             }
+          ]
+        },
+        "planning_authority": {
+          "eyebrow": "规划清晰度",
+          "title": "翻新规划不只是选择材料与风格。",
+          "text": "许多屋主会低估家具、电器、配送与备用预算。我们的工具帮助您在开工前看清完整费用。",
+          "signals": [
+            "BCA 注册",
+            "HDB 注册",
+            "住宅与商业项目",
+            "2015 年起服务新加坡"
           ]
         },
         "internal_links": {
@@ -377,6 +421,10 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
             {
               "label": "新加坡翻新费用计算器",
               "to": "/renovation-cost-calculator"
+            },
+            {
+              "label": "完整入住预算规划器",
+              "to": "/total-home-budget-calculator"
             },
             {
               "label": "HDB 翻新风格测验",
@@ -464,17 +512,18 @@ function HomepageAuthoritySections() {
   const quickAnswers = content.quick_answers.items;
   const featuredInsights = content.featured_insights.items;
   const planningTools = content.planning_tools.items;
+  const planningAuthority = content.planning_authority;
   const trustSignals = content.trust.signals;
   const projectSnippets = content.project_snippets.items;
   const homepageFaqs = content.faq.items;
 
   return (
     <main className="bg-[#f8f5ef] text-dark-charcoal">
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-10 sm:px-6 lg:px-8 md:py-12">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-10 max-w-3xl rounded-[2rem] border border-gold/15 bg-white/75 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-8">
+          <div className="mb-6 max-w-3xl rounded-[2rem] border border-gold/15 bg-white/75 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-7">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.quick_answers.eyebrow}</p>
-            <h2 className="font-serif text-3xl font-bold leading-tight md:text-5xl">{content.quick_answers.title}</h2>
+            <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{content.quick_answers.title}</h2>
             <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base">
               {content.quick_answers.subtitle}
             </p>
@@ -482,9 +531,9 @@ function HomepageAuthoritySections() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {quickAnswers.map((item) => (
-              <article key={item.title} className="flex h-full flex-col rounded-[2rem] border border-black/5 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
+              <article key={item.title} className="flex h-full flex-col rounded-[1.75rem] border border-black/5 bg-white p-5 shadow-[0_16px_45px_rgba(0,0,0,0.05)]">
                 <h3 className="font-serif text-2xl font-semibold text-dark-charcoal">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-gray-600">{item.text}</p>
+                <p className="mt-2 text-sm leading-6 text-gray-600">{item.text}</p>
                 <Link to={item.link} className="mt-auto inline-flex pt-5 text-xs font-semibold uppercase tracking-[0.18em] text-gold hover:text-gold-hover">
                   {item.label}
                 </Link>
@@ -494,9 +543,9 @@ function HomepageAuthoritySections() {
         </div>
       </section>
 
-      <section className="px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 pb-10 sm:px-6 lg:px-8 md:pb-12">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <div className="rounded-[2rem] border border-[#d8c3a0]/40 bg-[#f3ede3]/80 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-8">
+          <div className="rounded-[2rem] border border-[#d8c3a0]/40 bg-[#f3ede3]/80 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.05)] md:p-7">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.featured_insights.eyebrow}</p>
             <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{content.featured_insights.title}</h2>
             <p className="mt-4 text-sm leading-7 text-gray-600">
@@ -520,23 +569,25 @@ function HomepageAuthoritySections() {
         </div>
       </section>
 
-      <section className="px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-[2.5rem] bg-dark-charcoal p-6 text-white shadow-[0_30px_90px_rgba(0,0,0,0.18)] md:p-10">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.planning_tools.eyebrow}</p>
-              <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{content.planning_tools.title}</h2>
-              <p className="mt-4 text-sm leading-7 text-white/60">
+      <section className="px-4 pb-10 sm:px-6 lg:px-8 md:pb-12">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-gray-100 bg-[#FBFAF7] p-5 shadow-[0_20px_60px_rgba(44,44,44,0.07)] md:p-8">
+          <div className="grid gap-5 lg:grid-cols-[0.75fr_1.25fr] lg:items-stretch">
+            <div className="rounded-[1.75rem] border border-gray-100 bg-white p-5 md:p-7">
+              <div className="mb-4 h-px w-12 bg-gold" />
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.planning_tools.eyebrow}</p>
+              <h2 className="font-serif text-3xl font-bold leading-tight text-dark-charcoal md:text-4xl">{content.planning_tools.title}</h2>
+              <p className="mt-4 max-w-xl text-sm leading-6 text-gray-600">
                 {content.planning_tools.subtitle}
               </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-3">
               {planningTools.map((tool) => (
-                <a key={tool.title} href={tool.href} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:bg-gold/10">
-                  <h3 className="font-serif text-2xl font-semibold text-white">{tool.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-white/60">{tool.text}</p>
-                  <span className="mt-5 inline-flex rounded-full bg-gold px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-dark-charcoal transition-colors hover:bg-gold-hover">
+                <a key={tool.title} href={tool.href} className="group flex h-full flex-col rounded-[1.75rem] border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_18px_45px_rgba(44,44,44,0.10)]">
+                  <div className="mb-4 h-px w-10 bg-gold/70 transition-all duration-300 group-hover:w-16" />
+                  <h3 className="font-serif text-2xl font-semibold leading-snug text-dark-charcoal">{tool.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-6 text-gray-600">{tool.text}</p>
+                  <span className="mt-5 inline-flex w-fit rounded-full border border-gold/60 px-4 py-2.5 text-xs font-bold uppercase tracking-[0.14em] text-dark-charcoal transition-colors group-hover:bg-gold group-hover:text-white">
                     {tool.label}
                   </span>
                 </a>
@@ -546,9 +597,28 @@ function HomepageAuthoritySections() {
         </div>
       </section>
 
-      <section className="px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
-          <div className="rounded-[2.5rem] border border-black/5 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)] md:p-8">
+      <section className="px-4 pb-10 sm:px-6 lg:px-8 md:pb-12">
+        <div className="mx-auto max-w-7xl rounded-[1.75rem] border border-gold/15 bg-white/80 px-5 py-5 shadow-[0_14px_40px_rgba(0,0,0,0.04)] md:px-7">
+          <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold">{planningAuthority.eyebrow}</p>
+              <h2 className="font-serif text-2xl font-bold leading-tight text-dark-charcoal md:text-3xl">{planningAuthority.title}</h2>
+              <p className="mt-3 text-sm leading-6 text-gray-600">{planningAuthority.text}</p>
+            </div>
+            <div className="flex flex-wrap gap-2 lg:justify-end">
+              {planningAuthority.signals.map((signal) => (
+                <span key={signal} className="rounded-full border border-gold/25 bg-[#f8f5ef] px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-dark-charcoal">
+                  {signal}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-10 sm:px-6 lg:px-8 md:pb-12">
+        <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
+          <div className="rounded-[2rem] border border-black/5 bg-white p-5 shadow-[0_16px_45px_rgba(0,0,0,0.05)] md:p-7">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.trust.eyebrow}</p>
             <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{content.trust.title}</h2>
             <div className="mt-6 grid gap-3">
@@ -560,7 +630,7 @@ function HomepageAuthoritySections() {
             </div>
           </div>
 
-          <div className="rounded-[2.5rem] border border-black/5 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)] md:p-8">
+          <div className="rounded-[2rem] border border-black/5 bg-white p-5 shadow-[0_16px_45px_rgba(0,0,0,0.05)] md:p-7">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.project_snippets.eyebrow}</p>
             <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{content.project_snippets.title}</h2>
             <div className="mt-6 grid gap-4">
@@ -579,9 +649,9 @@ function HomepageAuthoritySections() {
 
       <Process />
 
-      <section className="px-4 pb-20 sm:px-6 lg:px-8">
+      <section className="px-4 pb-14 sm:px-6 lg:px-8 md:pb-16">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-8 max-w-3xl rounded-[2rem] border border-[#cbb38a]/45 bg-[#eee6d8]/85 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-8">
+          <div className="mb-6 max-w-3xl rounded-[2rem] border border-[#cbb38a]/45 bg-[#eee6d8]/85 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.05)] md:p-7">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.faq.eyebrow}</p>
             <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{content.faq.title}</h2>
           </div>
@@ -620,13 +690,13 @@ function HomepageInternalLinks() {
   const links = content.internal_links.items;
 
   return (
-    <section className="bg-[#f8f5ef] px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-5xl rounded-[2rem] border border-black/5 bg-white/80 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-8">
+    <section className="bg-[#f8f5ef] px-4 py-12 sm:px-6 lg:px-8 md:py-14">
+      <div className="mx-auto max-w-5xl rounded-[2rem] border border-black/5 bg-white/80 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.05)] md:p-7">
         <h2 className="text-center font-serif text-3xl font-bold leading-tight text-dark-charcoal md:text-4xl">
           {content.internal_links.title}
         </h2>
 
-        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {links.map((item) => (
             <Link
               key={item.to}

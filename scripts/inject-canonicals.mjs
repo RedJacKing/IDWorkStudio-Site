@@ -194,6 +194,14 @@ const pageMetaMap = {
     ogDesc: "Estimate your HDB, condo or landed renovation budget in minutes with ID Work Studio's free Singapore renovation cost calculator.",
     ogUrl: 'https://idworkstudio.com/renovation-cost-calculator',
   },
+  'total-home-budget-calculator.html': {
+    canonical: 'https://idworkstudio.com/total-home-budget-calculator',
+    title: 'Total Home Budget Calculator Singapore | Renovation, Furniture & Appliances | ID Work Studio',
+    description: 'Estimate the realistic total move-in budget for a Singapore home, including renovation, loose furniture, appliances, hidden costs and safety buffer.',
+    ogTitle: 'Total Home Budget Calculator Singapore | ID Work Studio',
+    ogDesc: 'Plan renovation, loose furniture, appliances and hidden move-in costs before committing to your Singapore home budget.',
+    ogUrl: 'https://idworkstudio.com/total-home-budget-calculator',
+  },
   'hdb-renovation-style-quiz.html': {
     canonical: 'https://idworkstudio.com/hdb-renovation-style-quiz',
     title: 'HDB Renovation Style Quiz Singapore | Find Your Home Design Style | ID Work Studio',
@@ -331,6 +339,55 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
         name: 'Singapore',
       },
     });
+  }
+
+  if (relativeFile === 'total-home-budget-calculator.html') {
+    schema['@graph'].push(
+      {
+        '@type': 'SoftwareApplication',
+        name: 'Total Home Budget Calculator',
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web browser',
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'SGD',
+        },
+        provider: {
+          '@id': 'https://idworkstudio.com/#business',
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${meta.canonical}#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Why is this different from a renovation calculator?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A renovation calculator focuses on renovation works. This calculator also includes loose furniture, appliances, contingency and comfort planning so homeowners can understand the real move-in budget.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Are built-in wardrobes counted as furniture?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Usually no. In Singapore renovation planning, built-in wardrobes and fixed carpentry are normally renovation works, while this calculator treats furniture as loose furniture such as sofa, mattress, bedframe, dining set, curtains, rugs and decor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Should I buy all furniture before moving in?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Usually no. It is often better to buy essential furniture first, live in the space, then add loose furniture and decor after understanding your habits.',
+            },
+          },
+        ],
+      }
+    );
   }
 
   if (relativeFile === 'commercial.html') {
