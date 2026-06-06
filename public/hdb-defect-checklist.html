@@ -18,6 +18,7 @@
 :root{--charcoal:#2C2C2C;--black:#111;--gold:#C5A059;--gold2:#D6B26B;--cream:#F7F3EA;--soft:#FBF8F2;--muted:#6F6A60;--line:#DDD4C7;--paper:#fffdf8;}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(135deg,#efe7dc 0%,#fbf8f2 45%,#e9dfd1 100%);color:var(--charcoal);font-family:Montserrat,Arial,sans-serif;}
 a{color:inherit}.serif{font-family:'Playfair Display',Georgia,serif}
+.site-nav{height:68px;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(221,212,199,.8);display:flex;align-items:center;justify-content:center;position:relative;z-index:10}.site-nav-inner{width:100%;max-width:1120px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:28px}.site-logo{font-size:20px;font-weight:800;letter-spacing:-.04em;text-decoration:none;color:#2C2C2C;white-space:nowrap}.site-menu{display:flex;align-items:center;gap:28px}.site-menu a,.site-menu span{font-size:11px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:#3f3a35;white-space:nowrap}.site-menu a:hover{color:var(--gold)}.site-menu-item{position:relative}.site-menu-item:hover .site-dropdown{opacity:1;visibility:visible;transform:translateY(0)}.site-dropdown{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);min-width:250px;background:#fff;border:1px solid rgba(221,212,199,.9);border-radius:18px;box-shadow:0 18px 42px rgba(44,44,44,.12);padding:10px;opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease}.site-dropdown a{display:block;border-radius:12px;padding:11px 12px;letter-spacing:.12em;line-height:1.5}.site-dropdown a:hover{background:#fbf8f2}.mobile-nav-toggle{display:none;background:none;border:0;font-size:22px;color:#2C2C2C;cursor:pointer}@media(max-width:900px){.site-nav{height:auto;min-height:64px}.site-nav-inner{padding:18px 20px;align-items:flex-start}.mobile-nav-toggle{display:block}.site-menu{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(221,212,199,.9);padding:12px 20px 18px;flex-direction:column;align-items:stretch;gap:0}.site-menu.open{display:flex}.site-menu a,.site-menu span{display:block;padding:12px 0}.site-menu-item:hover .site-dropdown{opacity:1;visibility:visible;transform:none}.site-dropdown{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:0;padding:0 0 0 14px;min-width:0}.site-dropdown a{padding:10px 0;font-size:10px}}
 .hero{min-height:620px;background:linear-gradient(rgba(15,15,15,.62),rgba(15,15,15,.72)),url('/calculatorhero/hdb-defect-checklist-hero.webp') center/cover no-repeat;display:flex;align-items:center;justify-content:center;padding:110px 22px 72px;position:relative;overflow:hidden}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(197,160,89,.24),transparent 35%),linear-gradient(90deg,rgba(0,0,0,.45),transparent 55%);pointer-events:none}
 .hero-inner{position:relative;z-index:2;max-width:980px;text-align:center;color:#fff}
@@ -73,6 +74,29 @@ function track(eventName, params){
 </script>
 </head>
 <body>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a class="site-logo" href="/">ID WORK STUDIO</a>
+    <button class="mobile-nav-toggle" type="button" aria-label="Toggle navigation" onclick="document.querySelector('.site-menu').classList.toggle('open')">☰</button>
+    <div class="site-menu">
+      <a href="/">Home</a>
+      <a href="/residential">Residential</a>
+      <a href="/commercial">Commercial</a>
+      <div class="site-menu-item">
+        <span>Planning Tools ▾</span>
+        <div class="site-dropdown">
+          <a href="/renovation-cost-calculator.html">Renovation Cost Calculator</a>
+          <a href="/total-home-budget-calculator.html">Total Home Budget Calculator</a>
+          <a href="/hdb-renovation-style-quiz">HDB Renovation Style Quiz</a>
+          <a href="/hdb-defect-checklist.html">HDB Defect Inspection Checklist</a>
+        </div>
+      </div>
+      <a href="/insights">Insights</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+</nav>
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-kicker">Free Planning Tool · Singapore HDB Defect Check</div>

@@ -98,12 +98,25 @@
       letter-spacing:-.03em; text-transform:uppercase; color:#2C2C2C; text-decoration:none;
     }
     .nav-links { display:flex; align-items:center; gap:24px; }
-    .nav-links a {
+    .nav-links a,
+    .nav-tools-trigger {
       font-size:11.5px; text-transform:uppercase; letter-spacing:.12em;
       font-weight:300; color:rgba(44,44,44,.75); text-decoration:none; transition:color .2s;
       font-family:'Montserrat',sans-serif;
     }
-    .nav-links a:hover { color:#D4AF37; }
+    .nav-links a:hover,
+    .nav-tools-trigger:hover { color:#D4AF37; }
+    .nav-tools { position:relative; }
+    .nav-tools-trigger { cursor:default; white-space:nowrap; }
+    .nav-tools-menu {
+      position:absolute; top:100%; left:50%; transform:translate(-50%,10px);
+      min-width:260px; background:#fff; border:1px solid #f0f0f0; border-radius:18px;
+      box-shadow:0 18px 42px rgba(44,44,44,.12); padding:10px; opacity:0; visibility:hidden;
+      transition:opacity .18s ease,transform .18s ease; z-index:80;
+    }
+    .nav-tools:hover .nav-tools-menu { opacity:1; visibility:visible; transform:translate(-50%,0); }
+    .nav-tools-menu a { display:block; padding:11px 12px; border-radius:12px; line-height:1.45; }
+    .nav-tools-menu a:hover { background:#fbf8f2; }
     .nav-cta {
       font-size:11.5px; text-transform:uppercase; letter-spacing:.14em; font-weight:600;
       background:#C5A059; color:#fff; padding:9px 20px; border-radius:999px;
@@ -121,7 +134,14 @@
         background:#fff; padding:16px 24px 24px; gap:4px;
         border-bottom:1px solid #f0f0f0; box-shadow:0 8px 20px rgba(0,0,0,.08);
       }
-      .mobile-nav-open .nav-links a { padding:12px 8px; border-bottom:1px solid #f5f5f5; }
+      .mobile-nav-open .nav-links a,
+      .mobile-nav-open .nav-tools-trigger { padding:12px 8px; border-bottom:1px solid #f5f5f5; }
+      .mobile-nav-open .nav-tools { position:static; }
+      .mobile-nav-open .nav-tools-menu {
+        position:static; transform:none; opacity:1; visibility:visible; box-shadow:none;
+        border:0; border-radius:0; padding:0 0 0 14px; min-width:0;
+      }
+      .mobile-nav-open .nav-tools-menu a { padding:10px 8px; font-size:10.5px; }
       .mobile-nav-open .nav-cta { margin-top:8px; text-align:center; }
     }
 
@@ -235,11 +255,19 @@
         <a href="https://idworkstudio.com/#home">Home</a>
         <a href="https://idworkstudio.com/residential">Residential</a>
         <a href="https://idworkstudio.com/commercial">Commercial</a>
-        <a href="https://idworkstudio.com/gallery">Gallery</a>
-        <a href="https://idworkstudio.com/hdb-renovation-style-quiz">Style Quiz</a>
+        <div class="nav-tools">
+          <span class="nav-tools-trigger">Planning Tools ▾</span>
+          <div class="nav-tools-menu">
+            <a href="https://idworkstudio.com/renovation-cost-calculator.html">Renovation Cost Calculator</a>
+            <a href="https://idworkstudio.com/total-home-budget-calculator.html">Total Home Budget Calculator</a>
+            <a href="https://idworkstudio.com/hdb-renovation-style-quiz">HDB Renovation Style Quiz</a>
+            <a href="https://idworkstudio.com/hdb-defect-checklist.html">HDB Defect Inspection Checklist</a>
+          </div>
+        </div>
         <a href="https://idworkstudio.com/insights">Insights</a>
+        <a href="https://idworkstudio.com/gallery">Gallery</a>
         <a href="https://idworkstudio.com/#contact">Contact</a>
-        <a href="https://wa.me/6598333085" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+        
       </div>
       <button id="mobile-menu-btn" aria-label="Toggle menu" onclick="document.getElementById('mainNav').classList.toggle('mobile-nav-open')">
         <svg width="24" height="24" fill="none" stroke="#2C2C2C" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
