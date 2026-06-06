@@ -104,6 +104,14 @@ export default function Insights() {
       date: '2026-05-26',
       readTime: t('insights_page.articles.11.read_time'),
     },
+    {
+      slug: '/insights/hdb-defect-checklist-before-renovation-singapore',
+      category: t('insights_page.articles.12.category'),
+      title: t('insights_page.articles.12.title'),
+      excerpt: t('insights_page.articles.12.excerpt'),
+      date: '2026-06-06',
+      readTime: t('insights_page.articles.12.read_time'),
+    },
   ];
 
   const itemListSchema = {

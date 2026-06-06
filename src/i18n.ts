@@ -2258,6 +2258,12 @@ enT["insights_page"] = {
       title: "The Real Cost of Moving Into a New Home in Singapore",
       excerpt: "A realistic Singapore guide to move-in budgeting, covering renovation works, appliances, furniture, renovation loans, MOP resale value and what happens if plans change.",
       read_time: "10 min read"
+    },
+    "12": {
+      category: "HDB Defect Guide",
+      title: "HDB Defect Checklist Before Renovation Starts in Singapore",
+      excerpt: "A practical pre-renovation defect inspection guide for BTO and resale homeowners, including tools to bring, floor gradient checks, window water tests, meter records and Tengah district cooling checks.",
+      read_time: "13 min read"
     }
   },
   footer_block: {

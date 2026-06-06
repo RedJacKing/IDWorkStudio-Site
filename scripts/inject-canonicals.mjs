@@ -146,6 +146,15 @@ const pageMetaMap = {
   ogUrl: 'https://idworkstudio.com/insights/real-cost-moving-home-singapore',
 },
 
+  'insights/hdb-defect-checklist-before-renovation-singapore.html': {
+    canonical: 'https://idworkstudio.com/insights/hdb-defect-checklist-before-renovation-singapore',
+    title: 'HDB Defect Checklist Before Renovation Singapore (2026 Guide) | ID Work Studio',
+    description: 'A practical HDB defect checklist for Singapore BTO and resale homeowners before renovation starts, including tools to bring, floor gradient, window water tests, Tengah district cooling checks and renovation-sensitive defects.',
+    ogTitle: 'HDB Defect Checklist Before Renovation Singapore (2026 Guide)',
+    ogDesc: 'What HDB homeowners should check before renovation starts: tools, water tests, windows, doors, meters, Tengah district cooling and renovation-sensitive defects.',
+    ogUrl: 'https://idworkstudio.com/insights/hdb-defect-checklist-before-renovation-singapore',
+  },
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',
