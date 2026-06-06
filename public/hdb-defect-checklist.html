@@ -137,6 +137,14 @@ function submitDefectChecklistLead(event){
     return false;
   }
 
+  const cleanPhone = phone.replace(/\s+/g, '');
+  if (!/^[89]\d{7}$/.test(cleanPhone)) {
+    if (status) status.textContent = 'Please enter a valid Singapore mobile number (8 digits starting with 8 or 9).';
+    return false;
+  }
+
+  data.set('phone', cleanPhone);
+
   track('defect_checklist_lead_submit',{source:'hdb_defect_checklist_html_bottom'});
   track('defect_checklist_download',{file_name:'hdb-defect-inspection-checklist-id-work-studio.pdf',source:'hdb_defect_checklist_html_bottom'});
 
@@ -160,6 +168,12 @@ function submitDefectChecklistLead(event){
 </script>
 </head>
 <body>
+<form name="hdb-defect-checklist-download" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="hdb-defect-checklist-download" />
+  <input name="name" />
+  <input name="phone" />
+  <input name="bot-field" />
+</form>
 <nav class="site-nav" aria-label="Main navigation">
   <div class="site-nav-inner">
     <a class="site-logo" href="/">ID WORK STUDIO</a>
@@ -282,7 +296,7 @@ function submitDefectChecklistLead(event){
         </label>
         <label>
           Mobile Number
-          <input type="tel" name="phone" placeholder="Your mobile number" required/>
+          <input type="tel" name="phone" placeholder="Your mobile number" inputmode="numeric" maxlength="8" pattern="[89][0-9]{7}" required/>
         </label>
       </div>
       <p class="lead-disclaimer">By downloading this checklist, you consent to ID Work Studio contacting you via phone call, SMS or WhatsApp regarding your checklist download, renovation planning and related renovation services. Your information will not be sold or shared with third parties.</p>
