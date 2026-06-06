@@ -62,6 +62,58 @@ h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.7rem,3vw,2.4re
   padding-top:24px;
   padding-bottom:24px;
 }
+.lead-form{
+  max-width:680px;
+  margin:26px auto 0;
+  display:grid;
+  gap:14px;
+}
+.lead-form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.lead-form label{
+  text-align:left;
+  color:rgba(255,255,255,.82);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.lead-form input{
+  width:100%;
+  margin-top:7px;
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  border-radius:14px;
+  min-height:48px;
+  padding:0 14px;
+  font-family:Montserrat,Arial,sans-serif;
+  font-size:14px;
+  outline:none;
+}
+.lead-form input::placeholder{
+  color:rgba(255,255,255,.42);
+}
+.lead-form input:focus{
+  border-color:rgba(197,160,89,.8);
+  box-shadow:0 0 0 4px rgba(197,160,89,.18);
+}
+.lead-disclaimer{
+  margin:0;
+  color:rgba(255,255,255,.55);
+  font-size:11px;
+  line-height:1.65;
+}
+.lead-status{
+  min-height:18px;
+  color:#E7CF9A;
+  font-size:12px;
+  line-height:1.5;
+}
+@media(max-width:560px){.lead-form-grid{grid-template-columns:1fr}}
 
 </style>
 <script>
@@ -70,6 +122,40 @@ function track(eventName, params){
     if (typeof gtag === 'function') { gtag('event', eventName, params || {}); }
     if (typeof fbq === 'function') { fbq('trackCustom', eventName, params || {}); }
   } catch(e) {}
+}
+function submitDefectChecklistLead(event){
+  event.preventDefault();
+  const form = event.target;
+  const status = document.getElementById('leadStatus');
+  const data = new FormData(form);
+  const name = (data.get('name') || '').toString().trim();
+  const phone = (data.get('phone') || '').toString().trim();
+  const pdfUrl = '/downloads/hdb-defect-inspection-checklist-id-work-studio.pdf';
+
+  if (!name || !phone) {
+    if (status) status.textContent = 'Please enter your name and mobile number to download the checklist.';
+    return false;
+  }
+
+  track('defect_checklist_lead_submit',{source:'hdb_defect_checklist_html_bottom'});
+  track('defect_checklist_download',{file_name:'hdb-defect-inspection-checklist-id-work-studio.pdf',source:'hdb_defect_checklist_html_bottom'});
+
+  fetch('/', {
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:new URLSearchParams(data).toString()
+  }).catch(function(){}).finally(function(){
+    if (status) status.textContent = 'Your PDF download is starting.';
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'hdb-defect-inspection-checklist-id-work-studio.pdf';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    form.reset();
+  });
+
+  return false;
 }
 </script>
 </head>
@@ -104,7 +190,7 @@ function track(eventName, params){
     <p>A practical checklist for BTO, SBF, resale, condo and Tengah homeowners to inspect defects before renovation begins. Download the PDF, bring it to your unit, and record defects clearly before works start.</p>
     <div class="hero-actions">
       <a class="btn btn-gold" href="https://wa.me/6598333085?text=Hi%20ID%20Work%20Studio,%20I%20just%20downloaded%20the%20HDB%20Defect%20Inspection%20Checklist%20and%20would%20like%20some%20advice%20on%20my%20upcoming%20renovation." target="_blank" rel="noopener" onclick="track('whatsapp_click',{source:'hdb_defect_checklist_html_hero'})">WhatsApp Us</a>
-      <a class="btn btn-outline" href="/downloads/hdb-defect-inspection-checklist-id-work-studio.pdf" download onclick="track('defect_checklist_download',{file_name:'hdb-defect-inspection-checklist-id-work-studio.pdf',source:'hdb_defect_checklist_html_hero'})">Download PDF Checklist</a>
+      <a class="btn btn-outline" href="#pdf-download-form" onclick="track('defect_checklist_download_intent',{source:'hdb_defect_checklist_html_hero'});document.getElementById('pdf-download-form')?.scrollIntoView({behavior:'smooth',block:'center'});return false;">Download PDF Checklist</a>
     </div>
   </div>
 </header>
@@ -183,10 +269,26 @@ function track(eventName, params){
 
   <section class="section danger"><div class="section-head"><div class="num">!</div><h2>Renovation-Sensitive Defects</h2></div><div class="grid"><div class="full"><p>Resolve or document these defects before renovation starts because they can affect carpentry, waterproofing, tiling, ceiling works or future maintenance access.</p><table><tr><th>Priority Defect</th><th>Mark</th><th>Notes</th></tr><tr><td>Floor gradient or ponding issue</td><td class="check">□</td><td class="notes"></td></tr><tr><td>Window leakage or water ingress</td><td class="check">□</td><td class="notes"></td></tr><tr><td>Uneven wall affecting carpentry</td><td class="check">□</td><td class="notes"></td></tr><tr><td>Waterproofing or seepage concern</td><td class="check">□</td><td class="notes"></td></tr><tr><td>Electrical issue or DB box concern</td><td class="check">□</td><td class="notes"></td></tr><tr><td>Central cooling access issue</td><td class="check">□</td><td class="notes"></td></tr></table></div></div></section>
 
-  <section class="cta">
+  <section class="cta" id="pdf-download-form">
     <h2>Download The Printable PDF</h2>
     <p>Save a copy to your phone before your key collection or defect inspection appointment. The PDF is designed for printing, marking defects and submitting notes clearly.</p>
-    <a class="btn btn-gold" href="/downloads/hdb-defect-inspection-checklist-id-work-studio.pdf" download onclick="track('defect_checklist_download',{file_name:'hdb-defect-inspection-checklist-id-work-studio.pdf',source:'hdb_defect_checklist_html_bottom'})">Download PDF Checklist</a>
+    <form class="lead-form" name="hdb-defect-checklist-download" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return submitDefectChecklistLead(event)">
+      <input type="hidden" name="form-name" value="hdb-defect-checklist-download"/>
+      <p style="display:none"><label>Do not fill this in: <input name="bot-field"/></label></p>
+      <div class="lead-form-grid">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required/>
+        </label>
+        <label>
+          Mobile Number
+          <input type="tel" name="phone" placeholder="Your mobile number" required/>
+        </label>
+      </div>
+      <p class="lead-disclaimer">By downloading this checklist, you consent to ID Work Studio contacting you via phone call, SMS or WhatsApp regarding your checklist download, renovation planning and related renovation services. Your information will not be sold or shared with third parties.</p>
+      <button class="btn btn-gold" type="submit">Download PDF Checklist</button>
+      <div class="lead-status" id="leadStatus" aria-live="polite"></div>
+    </form>
   </section>
 
   <section class="section related-guides">
