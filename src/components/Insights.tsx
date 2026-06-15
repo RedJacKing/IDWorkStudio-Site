@@ -112,6 +112,14 @@ export default function Insights() {
       date: '2026-06-06',
       readTime: t('insights_page.articles.12.read_time'),
     },
+    {
+      slug: '/insights/15-renovation-decisions-singapore-homeowners-should-not-get-wrong',
+      category: t('insights_page.articles.13.category'),
+      title: t('insights_page.articles.13.title'),
+      excerpt: t('insights_page.articles.13.excerpt'),
+      date: '2026-06-15',
+      readTime: t('insights_page.articles.13.read_time'),
+    },
   ];
 
   const itemListSchema = {

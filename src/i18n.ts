@@ -2264,6 +2264,12 @@ enT["insights_page"] = {
       title: "HDB Defect Checklist Before Renovation Starts in Singapore",
       excerpt: "A practical pre-renovation defect inspection guide for BTO and resale homeowners, including tools to bring, floor gradient checks, window water tests, meter records and Tengah district cooling checks.",
       read_time: "13 min read"
+    },
+    "13": {
+      category: "Home Planning Guide",
+      title: "15 Renovation Decisions Singapore Homeowners Should Not Get Wrong",
+      excerpt: "A practical Singapore guide to the renovation choices that affect daily living after move-in, from power points and kitchen layout to flooring, storage and built-in carpentry.",
+      read_time: "16 min read"
     }
   },
   footer_block: {
@@ -2384,6 +2390,12 @@ zhT["insights_page"] = {
       title: "新加坡装修前 HDB 缺陷检查清单",
       excerpt: "为 BTO 与转售组屋屋主准备的装修前缺陷检查指南，涵盖需要携带的工具、地面坡度、窗户喷水测试、电表水表记录，以及 Tengah 区域供冷系统检查。",
       read_time: "约 13 分钟"
+    },
+    "13": {
+      category: "住宅规划指南",
+      title: "新加坡屋主不应选错的 15 个装修决定",
+      excerpt: "从插座、厨房布局、地板、收纳到固定木作，帮助新加坡屋主避免入住后才出现的装修后悔。",
+      read_time: "约 16 分钟"
     }
   },
   footer_block: {
