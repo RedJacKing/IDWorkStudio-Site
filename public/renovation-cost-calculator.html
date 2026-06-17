@@ -106,8 +106,10 @@
     }
     .nav-links a:hover,
     .nav-tools-trigger:hover { color:#D4AF37; }
+    .nav-links > a,
+    .nav-tools { display:flex; align-items:center; height:68px; }
+    .nav-tools-trigger { display:flex; align-items:center; height:68px; line-height:1; cursor:default; white-space:nowrap; }
     .nav-tools { position:relative; }
-    .nav-tools-trigger { cursor:default; white-space:nowrap; }
     .nav-tools-menu {
       position:absolute; top:100%; left:50%; transform:translate(-50%,10px);
       min-width:260px; background:#fff; border:1px solid #f0f0f0; border-radius:18px;
@@ -256,10 +258,11 @@
         <a href="https://idworkstudio.com/residential">Residential</a>
         <a href="https://idworkstudio.com/commercial">Commercial</a>
         <div class="nav-tools">
-          <span class="nav-tools-trigger">Planning Tools ▾</span>
+          <a href="javascript:void(0)" class="nav-tools-trigger">Planning Tools ▾</a>
           <div class="nav-tools-menu">
             <a href="https://idworkstudio.com/renovation-cost-calculator.html">Renovation Cost Calculator</a>
             <a href="https://idworkstudio.com/total-home-budget-calculator.html">Total Home Budget Calculator</a>
+            <a href="https://idworkstudio.com/renovation-timeline-planner-singapore">Renovation Timeline Planner</a>
             <a href="https://idworkstudio.com/hdb-renovation-style-quiz">HDB Renovation Style Quiz</a>
             <a href="https://idworkstudio.com/hdb-defect-checklist.html">HDB Defect Inspection Checklist</a>
           </div>
