@@ -151,55 +151,27 @@ function track(eventName, params){
     if (typeof fbq === 'function') { fbq('trackCustom', eventName, params || {}); }
   } catch(e) {}
 }
-function submitDefectChecklistLead(event){
-  event.preventDefault();
-  const form = event.target;
-  const status = document.getElementById('leadStatus');
-  const data = new FormData(form);
-  const phone = (data.get('phone') || '').toString().trim();
+function downloadDefectChecklistPdf(source){
   const pdfUrl = '/downloads/hdb-defect-inspection-checklist-id-work-studio.pdf';
+  const fileName = 'hdb-defect-inspection-checklist-id-work-studio.pdf';
+  const status = document.getElementById('leadStatus');
 
-  if (!phone) {
-    if (status) status.textContent = 'Please enter your mobile number to download the checklist.';
-    return false;
-  }
+  track('defect_checklist_pdf_download',{file_name:fileName,source:source || 'hdb_defect_checklist_html_bottom'});
 
-  const cleanPhone = phone.replace(/\s+/g, '');
-  if (!/^[89]\d{7}$/.test(cleanPhone)) {
-    if (status) status.textContent = 'Please enter a valid Singapore mobile number (8 digits starting with 8 or 9).';
-    return false;
-  }
+  if (status) status.textContent = 'Your PDF download is starting.';
 
-  data.set('phone', cleanPhone);
-
-  track('defect_checklist_lead_submit',{source:'hdb_defect_checklist_html_bottom'});
-  track('defect_checklist_download',{file_name:'hdb-defect-inspection-checklist-id-work-studio.pdf',source:'hdb_defect_checklist_html_bottom'});
-
-  fetch('/', {
-    method:'POST',
-    headers:{'Content-Type':'application/x-www-form-urlencoded'},
-    body:new URLSearchParams(data).toString()
-  }).catch(function(){}).finally(function(){
-    if (status) status.textContent = 'Your PDF download is starting.';
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'hdb-defect-inspection-checklist-id-work-studio.pdf';
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    form.reset();
-  });
+  const link = document.createElement('a');
+  link.href = pdfUrl;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
 
   return false;
 }
 </script>
 </head>
 <body>
-<form name="hdb-defect-checklist-download" data-netlify="true" netlify-honeypot="bot-field" hidden>
-  <input type="hidden" name="form-name" value="hdb-defect-checklist-download" />
-  <input name="phone" />
-  <input name="bot-field" />
-</form>
 <nav class="site-nav" aria-label="Main navigation">
   <div class="site-nav-inner">
     <a class="site-logo" href="/">ID WORK STUDIO</a>
@@ -357,19 +329,10 @@ function submitDefectChecklistLead(event){
       <span>Bring during key collection</span>
       <span>Record defects clearly</span>
     </div>
-    <form class="lead-form" name="hdb-defect-checklist-download" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return submitDefectChecklistLead(event)">
-      <input type="hidden" name="form-name" value="hdb-defect-checklist-download"/>
-      <p style="display:none"><label>Do not fill this in: <input name="bot-field"/></label></p>
-      <div class="lead-form-grid">
-        <label>
-          Mobile Number
-          <input type="tel" name="phone" placeholder="Your mobile number" inputmode="numeric" maxlength="8" pattern="[89][0-9]{7}" required/>
-        </label>
-      </div>
-      <p class="lead-disclaimer">We respect your privacy. Your mobile number will only be used to send your checklist and provide assistance if you request renovation advice. We do not sell or share your information with third parties.</p>
-      <button class="btn btn-gold" type="submit">Download PDF Checklist</button>
+    <div class="lead-form">
+      <a class="btn btn-gold" href="/downloads/hdb-defect-inspection-checklist-id-work-studio.pdf" download="hdb-defect-inspection-checklist-id-work-studio.pdf" onclick="return downloadDefectChecklistPdf('hdb_defect_checklist_html_bottom')">Download PDF Checklist</a>
       <div class="lead-status" id="leadStatus" aria-live="polite"></div>
-    </form>
+    </div>
   </section>
 
   <section class="section next-step-guides" aria-label="Recommended next renovation planning step">
