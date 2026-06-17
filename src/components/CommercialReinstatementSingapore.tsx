@@ -391,9 +391,7 @@ const content: Record<"en" | "zh", ArticleContent> = {
           "Choose a contractor who understands commercial handover",
           "Reserve time for final inspection and rectification"
         ]
-      }
-    ],
-    
+      },
       {
         "eyebrow": "Real-world landlord requirements",
         "title": "Why shopping mall and retail reinstatement can be more complex than office reinstatement",
@@ -425,8 +423,9 @@ const content: Record<"en" | "zh", ArticleContent> = {
           "Utility termination planning",
           "Joint inspections and final acceptance"
         ]
-      },
-"checklistTitle": "Office reinstatement checklist for Singapore tenants",
+      }
+    ],
+    "checklistTitle": "Commercial reinstatement checklist for Singapore tenants",
     "checklistIntro": "Use this checklist before appointing a contractor or confirming your lease handover timeline.",
     "checklist": [
       "Lease clause reviewed",
