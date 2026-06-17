@@ -11,7 +11,7 @@ const resources = {
         "residential": "Residential",
         "commercial": "Commercial",
         "styleQuiz": "Style Quiz",
-        "insights": "Insights",
+        "insights": "Guides",
         "gallery": "Gallery",
         "contact": "Contact"
       },
@@ -516,7 +516,7 @@ const resources = {
             "meta1": "2026 Guide",
             "meta2": "Commercial Renovation"
           },
-          "back": "Back to insights",
+          "back": "Back to Guides",
           "next": {
             "cta": "Read Guide"
           },
@@ -968,7 +968,7 @@ const resources = {
         "residential": "住宅设计",
         "commercial": "商业空间",
         "styleQuiz": "风格测验",
-        "insights": "见解",
+        "insights": "指南",
         "gallery": "作品集",
         "contact": "联系我们"
       },
@@ -2159,12 +2159,12 @@ zhT["compliance_reno_page"] = {
 // ─── Insights + article translations ──────────────────────────────────────
 enT["insights_page"] = {
   meta: {
-    title: "Insights | ID Work Studio Singapore",
-    description: "Design-led renovation insights, cost guides and project planning perspectives for homeowners and businesses in Singapore."
+    title: "Guides | ID Work Studio Singapore",
+    description: "Design-led renovation guides, cost guides and project planning perspectives for homeowners and businesses in Singapore."
   },
   hero: {
-    badge: "Design Perspectives",
-    title: "Insights",
+    badge: "Renovation & Design Guides",
+    title: "Guides",
     subtitle: "Thoughtful perspectives on renovation, interiors and project planning in Singapore — designed to help homeowners and businesses make better decisions."
   },
   intro: {
@@ -2291,12 +2291,12 @@ enT["insights_page"] = {
 
 zhT["insights_page"] = {
   meta: {
-    title: "见解 | ID Work Studio Singapore",
-    description: "关于新加坡翻新、室内设计与项目规划的专业见解，帮助住宅与商业客户做出更明智的决定。"
+    title: "指南 | ID Work Studio Singapore",
+    description: "关于新加坡翻新、室内设计与项目规划的专业指南，帮助住宅与商业客户做出更明智的决定。"
   },
   hero: {
-    badge: "设计观点",
-    title: "见解",
+    badge: "翻新与设计指南",
+    title: "指南",
     subtitle: "围绕新加坡翻新、室内设计与项目规划的深度观点，帮助住宅与商业客户作出更清晰、更从容的决定。"
   },
   intro: {
@@ -2422,14 +2422,14 @@ zhT["insights_page"] = {
 };
 
 enT["article_common"] = {
-  back_to_insights: "Back to Insights",
+  back_to_insights: "Back to Guides",
   next_article: "Next Article",
   continue_reading: "Continue Reading",
   back_to_start: "Back to Start",
   read_article: "Read Article"
 };
 zhT["article_common"] = {
-  back_to_insights: "返回见解",
+  back_to_insights: "返回指南",
   next_article: "下一篇文章",
   continue_reading: "继续阅读",
   back_to_start: "返回起点",
