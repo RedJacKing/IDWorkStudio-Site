@@ -155,6 +155,15 @@ const pageMetaMap = {
     ogUrl: 'https://idworkstudio.com/insights/hdb-defect-checklist-before-renovation-singapore',
   },
 
+  'insights/commercial-reinstatement-singapore.html': {
+    canonical: 'https://idworkstudio.com/insights/commercial-reinstatement-singapore',
+    title: 'Commercial Reinstatement Singapore: Cost, Timeline, Checklist & Landlord Requirements | ID Work Studio',
+    description: 'Commercial reinstatement Singapore guide for office, retail and mall tenants. Plan lease handover, landlord requirements, hidden costs, nominated contractors and deposit recovery risks.',
+    ogTitle: 'Commercial Reinstatement Singapore: Cost, Timeline, Checklist & Landlord Requirements',
+    ogDesc: 'A practical Singapore commercial reinstatement and lease handover guide covering offices, retail shops, mall units, landlord requirements, hidden costs and security deposit risks.',
+    ogUrl: 'https://idworkstudio.com/insights/commercial-reinstatement-singapore',
+  },
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',

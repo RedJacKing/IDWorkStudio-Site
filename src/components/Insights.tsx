@@ -120,6 +120,14 @@ export default function Insights() {
       date: '2026-06-15',
       readTime: t('insights_page.articles.13.read_time'),
     },
+    {
+      slug: '/insights/commercial-reinstatement-singapore',
+      category: t('insights_page.articles.14.category'),
+      title: t('insights_page.articles.14.title'),
+      excerpt: t('insights_page.articles.14.excerpt'),
+      date: '2026-06-17',
+      readTime: t('insights_page.articles.14.read_time'),
+    },
   ];
 
   const itemListSchema = {

@@ -2270,6 +2270,12 @@ enT["insights_page"] = {
       title: "15 Renovation Decisions Singapore Homeowners Should Not Get Wrong",
       excerpt: "A practical Singapore guide to the renovation choices that affect daily living after move-in, from power points and kitchen layout to flooring, storage and built-in carpentry.",
       read_time: "16 min read"
+    },
+    "14": {
+      category: "Commercial Handover Guide",
+      title: "Commercial Reinstatement Singapore: Cost, Timeline, Checklist & Landlord Requirements",
+      excerpt: "A practical lease handover guide for Singapore commercial tenants covering office, retail and mall reinstatement, landlord requirements, hidden costs, nominated contractors and deposit recovery risks.",
+      read_time: "18 min read"
     }
   },
   footer_block: {
@@ -2396,6 +2402,12 @@ zhT["insights_page"] = {
       title: "新加坡屋主不应选错的 15 个装修决定",
       excerpt: "从插座、厨房布局、地板、收纳到固定木作，帮助新加坡屋主避免入住后才出现的装修后悔。",
       read_time: "约 16 分钟"
+    },
+    "14": {
+      category: "商业交还指南",
+      title: "新加坡商业恢复原状：费用、时间表、清单与业主要求",
+      excerpt: "为新加坡商业租户整理的租约交还指南，涵盖办公室、零售店与商场单位恢复原状、业主要求、隐藏成本、指定承包商与押金风险。",
+      read_time: "约 18 分钟"
     }
   },
   footer_block: {
