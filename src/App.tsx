@@ -188,8 +188,8 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "planning_tools": {
           "eyebrow": "Planning tools",
-          "title": "Plan cost, cashflow and design direction clearly.",
-          "subtitle": "Three focused tools for renovation budget, full move-in cost and style direction.",
+          "title": "Plan cost, cashflow, timeline and design direction clearly.",
+          "subtitle": "Four focused tools for renovation budget, full move-in cost, timeline planning and style direction.",
           "items": [
             {
               "title": "Renovation Cost Estimator",
@@ -202,6 +202,12 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
               "text": "Plan renovation, furniture, appliances and safety buffer together.",
               "href": "/total-home-budget-calculator",
               "label": "Plan budget"
+            },
+            {
+              "title": "Renovation Timeline Planner",
+              "text": "Estimate your renovation schedule, move-in date and progress status.",
+              "href": "/renovation-timeline-planner-singapore",
+              "label": "Plan timeline"
             },
             {
               "title": "Style Discovery Quiz",
@@ -371,8 +377,8 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "planning_tools": {
           "eyebrow": "规划工具",
-          "title": "更清楚规划费用、现金流与风格方向。",
-          "subtitle": "三个工具分别协助预算、完整入住成本与风格判断。",
+          "title": "更清楚规划费用、现金流、工期与风格方向。",
+          "subtitle": "四个工具分别协助预算、完整入住成本、翻新工期与风格判断。",
           "items": [
             {
               "title": "Renovation Cost Estimator",
@@ -385,6 +391,12 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
               "text": "同时规划翻新、家具、电器与安全缓冲。",
               "href": "/total-home-budget-calculator",
               "label": "规划预算"
+            },
+            {
+              "title": "Renovation Timeline Planner",
+              "text": "估算翻新工期、入住日期与工程进度状态。",
+              "href": "/renovation-timeline-planner-singapore",
+              "label": "规划工期"
             },
             {
               "title": "Style Discovery Quiz",
@@ -582,8 +594,11 @@ function HomepageAuthoritySections() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
-            {planningTools.map((tool, index) => (
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {planningTools.map((tool, index) => {
+              const toolTags = ['Cost', 'Budget', 'Timeline', 'Style'];
+
+              return (
               <a
                 key={tool.title}
                 href={tool.href}
@@ -594,7 +609,7 @@ function HomepageAuthoritySections() {
                 <div className="mb-4 flex items-center justify-between gap-3">
                   <div className="h-px w-10 bg-gold/70 transition-all duration-300 group-hover:w-16" />
                   <span className="rounded-full bg-[#f8f5ef] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold">
-                    {index === 0 ? 'Cost' : index === 1 ? 'Budget' : 'Style'}
+                    {toolTags[index] || 'Tool'}
                   </span>
                 </div>
                 <h3 className="font-serif text-2xl font-semibold leading-snug text-dark-charcoal">{tool.title}</h3>
@@ -603,7 +618,8 @@ function HomepageAuthoritySections() {
                   {tool.label}
                 </span>
               </a>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -211,6 +211,14 @@ ogDesc: 'Estimate your Singapore renovation budget instantly for HDB, condo, res
     ogDesc: 'Plan renovation, loose furniture, appliances and hidden move-in costs before committing to your Singapore home budget.',
     ogUrl: 'https://idworkstudio.com/total-home-budget-calculator',
   },
+  'renovation-timeline-planner-singapore.html': {
+    canonical: 'https://idworkstudio.com/renovation-timeline-planner-singapore',
+    title: 'Renovation Timeline Planner Singapore | ID Work Studio',
+    description: 'Estimate your Singapore renovation timeline, move-in date, weekly progress, HDB or condo approval buffer, owner decisions, appliance dependencies and common delay risks.',
+    ogTitle: 'Renovation Timeline Planner Singapore | ID Work Studio',
+    ogDesc: 'Plan your Singapore renovation schedule, move-in date and progress status with ID Work Studio’s free timeline planner.',
+    ogUrl: 'https://idworkstudio.com/renovation-timeline-planner-singapore',
+  },
   'hdb-renovation-style-quiz.html': {
     canonical: 'https://idworkstudio.com/hdb-renovation-style-quiz',
     title: 'HDB Renovation Style Quiz Singapore | Find Your Home Design Style | ID Work Studio',
