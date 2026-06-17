@@ -14,6 +14,8 @@ export default function Navbar() {
     '/renovation-cost-calculator',
     '/total-home-budget-calculator',
     '/hdb-renovation-style-quiz',
+    '/hdb-defect-checklist.html',
+    '/renovation-timeline-planner-singapore',
   ].includes(location.pathname);
 
   const toggleLanguage = () => {
@@ -84,6 +86,10 @@ export default function Navbar() {
                     <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">HDB Defect Inspection Checklist</span>
                     <span className="mt-1 block text-xs leading-5 text-charcoal/55">Inspect defects before renovation begins.</span>
                   </a>
+                  <a href="/renovation-timeline-planner-singapore" className="block rounded-xl px-4 py-3 text-left transition-colors hover:bg-stone-50">
+                    <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">Renovation Timeline Planner</span>
+                    <span className="mt-1 block text-xs leading-5 text-charcoal/55">Estimate renovation schedule and move-in timing.</span>
+                  </a>
                 </div>
               </div>
 
@@ -128,6 +134,7 @@ export default function Navbar() {
               <a href="/total-home-budget-calculator" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Total Move-In Budget Planner</a>
               <a href="/hdb-renovation-style-quiz" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">HDB Renovation Style Quiz</a>
               <a href="/hdb-defect-checklist.html" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">HDB Defect Inspection Checklist</a>
+              <a href="/renovation-timeline-planner-singapore" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Renovation Timeline Planner</a>
 
               <Link to="/insights" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.insights')}</Link>
               <Link to="/gallery" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.gallery')}</Link>
