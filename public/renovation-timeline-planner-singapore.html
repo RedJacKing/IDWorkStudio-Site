@@ -200,7 +200,16 @@
       <aside id="input-panel" class="soft-card rounded-3xl p-5 md:p-6 lg:self-start">
         <h2 class="serif text-3xl font-bold mb-1">Build your timeline</h2>
         <p class="text-sm text-[#746b61] leading-6 mb-3">Use this as a planning guide. Final timeline still depends on approvals, site condition, owner decisions, supplier stock, and management rules.</p>
-        <div class="rounded-2xl border border-amber-200 bg-amber-50 p-4 mb-6 text-sm leading-6 no-print"><strong>💡 Best viewed on desktop:</strong> The timeline chart is wide and works best on a laptop or desktop screen.</div>
+        <div class="rounded-2xl border border-amber-200 bg-amber-50 p-4 mb-4 text-sm leading-6 no-print"><strong>💡 Desktop or laptop recommended:</strong> This planner works on mobile, but the wide timeline chart and progress review are easier to compare on a larger screen.</div>
+        <div class="rounded-2xl border border-[#d8cec0] bg-white/70 p-4 mb-6 text-sm leading-6 no-print">
+          <strong>Before you start:</strong>
+          <div class="grid gap-2 mt-3 text-[#746b61]">
+            <div>✓ Use this if you know your intended renovation start period.</div>
+            <div>✓ Select your property type, scope, approval status and working-day rules.</div>
+            <div>✓ Then review the schedule, safe move-in date and progress checker.</div>
+          </div>
+          <div class="mt-3 text-xs font-bold uppercase tracking-widest text-[#a99683]">Estimated setup time: less than 3 minutes</div>
+        </div>
 
         <div class="space-y-6">
           <div><label class="text-xs font-bold uppercase tracking-widest text-stone-500">Renovation start date</label><input id="startDate" type="date" class="inp mt-2" /></div>
@@ -223,6 +232,15 @@
           </div>
           <div><div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Current project stage</div><select id="currentStage" class="inp"><option value="notStarted">Not started</option><option value="hacking">Hacking / demolition</option><option value="tiling">Tiling / masonry</option><option value="electrical1">Electrical first fix</option><option value="ceiling">Ceiling & partition</option><option value="measurement">Carpentry measurement</option><option value="approval">Drawing / material approval</option><option value="fabrication">Carpentry fabrication</option><option value="carpentryInstall">Carpentry installation</option><option value="painting">Painting final coat</option><option value="flooring">Vinyl / final flooring</option><option value="electrical2">Electrical / plumbing final fix</option><option value="glass">Glass / shower screen final installation</option><option value="handover">Cleaning / handover</option></select></div>
           <div><label class="text-xs font-bold uppercase tracking-widest text-stone-500">Today's date for progress check</label><input id="todayDate" type="date" class="inp mt-2" /></div>
+          <div class="rounded-2xl border border-[#d8cec0] bg-white/70 p-4 text-sm leading-6 no-print">
+            <strong>Timeline planning tips:</strong>
+            <div class="grid gap-2 mt-3 text-[#746b61]">
+              <div>✓ Confirm appliance sizes before carpentry measurement.</div>
+              <div>✓ Finalise laminate, tiles and sanitary fittings before fabrication starts.</div>
+              <div>✓ Avoid design changes after approvals, hacking or carpentry confirmation.</div>
+              <div>✓ Keep supplier delivery dates away from painting, flooring and final cleaning.</div>
+            </div>
+          </div>
         </div>
       </aside>
 
@@ -233,6 +251,7 @@
             <div id="actions" class="flex flex-wrap gap-2"><button onclick="window.print()" class="rounded-full bg-[#171514] text-white px-5 py-3 text-xs font-bold uppercase tracking-widest">Download / Print PDF</button><button onclick="regenerate()" class="rounded-full border border-[#d8cec0] bg-white px-5 py-3 text-xs font-bold uppercase tracking-widest">Refresh</button></div>
           </div>
           <div id="summaryCards" class="grid sm:grid-cols-2 xl:grid-cols-4 gap-3 mt-6"></div>
+          <div id="nextMilestoneOutput" class="mt-4 no-print"></div>
         </section>
 
         <section class="soft-card rounded-3xl p-5 md:p-7">
@@ -628,6 +647,85 @@ function renderSummary(tasks) {
     document.getElementById('summaryCards').innerHTML = `<div class="rounded-2xl bg-white/70 border border-[#d8cec0] p-4"><div class="text-xs uppercase tracking-widest text-[#746b61] font-bold">Estimated Handover</div><div class="serif text-3xl font-bold mt-1">${fmt(end)}</div></div><div class="rounded-2xl bg-white/70 border border-[#d8cec0] p-4"><div class="text-xs uppercase tracking-widest text-[#746b61] font-bold">Safe Move-In</div><div class="serif text-3xl font-bold mt-1">${fmt(safe)}</div><div class="text-[11px] text-[#746b61] mt-1">${state.propertyType === 'condo' ? '+7 calendar days (condo)' : '+5 calendar days (HDB)'}</div></div><div class="rounded-2xl bg-white/70 border border-[#d8cec0] p-4"><div class="text-xs uppercase tracking-widest text-[#746b61] font-bold">Calendar Duration</div><div class="serif text-3xl font-bold mt-1">${diffDays(start, safe)} days</div></div><div class="rounded-2xl ${ok ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'} border p-4"><div class="text-xs uppercase tracking-widest ${ok ? 'text-green-700' : 'text-red-700'} font-bold">Move-In Target</div><div class="serif text-3xl font-bold mt-1">${ok ? 'On Track' : 'At Risk'}</div></div>`;
 }
 
+function nextMilestonePrepText(task) {
+    if (!task) return 'Prepare for handover, defects rectification, furniture delivery and move-in coordination.';
+    const key = task.key || '';
+    const label = task.label || '';
+    if (key === 'approval' || key === 'qp') return 'Check permit, MCST, lift padding, hacking notice and any QP/PE requirement before works start.';
+    if (key === 'hacking') return 'Protect existing items, confirm hacking scope and prepare for debris removal and noisy works.';
+    if (key === 'tiling' || key === 'hipPipes') return 'Confirm tile layout, floor trap position, grout colour, waterproofing concerns and pipe coordination.';
+    if (key === 'electrical1' || key === 'ceilingPartition' || key === 'airconPipe') return 'Confirm switch points, lighting layout, aircon trunking route, ceiling height and appliance locations.';
+    if (key === 'measurement' || key === 'drawing' || key === 'ownerApproval') return 'Prepare appliance dimensions, laminate choices, quartz/top material, handle profile and cabinet internal layout.';
+    if (key === 'fabrication') return 'Avoid changing carpentry design now. Late changes can affect fabrication sequence and installation date.';
+    if (key === 'carpentryInstall') return 'Clear access space, confirm delivery timing and check that site conditions are ready for installation.';
+    if (key === 'paint1' || key === 'paint2' || key === 'touchup') return 'Confirm final paint colours, feature wall decisions and areas that need touch-up before handover.';
+    if (key === 'flooring') return 'Check floor readiness, skirting details, door clearance and protection before furniture delivery.';
+    if (key === 'electrical2' || key === 'plumbing2' || key === 'tabletop' || key === 'gas') return 'Confirm lighting, switches, sanitary fittings, gas appointment, hob and sink details.';
+    if (key === 'glass' || key === 'airconInstall') return 'Confirm final site measurement, shower screen details, mirror size and blower installation access.';
+    if (key === 'handover' || label.includes('handover')) return 'Prepare defect checks, cleaning, furniture delivery, appliance testing and move-in buffer.';
+    return 'Review this milestone with your contractor and confirm any owner decision needed before the next stage.';
+}
+
+function renderNextMilestone(tasks) {
+    const el = document.getElementById('nextMilestoneOutput');
+    if (!el) return;
+    if (!tasks.length) { el.innerHTML = ''; return; }
+
+    const todayInput = document.getElementById('todayDate')?.value;
+    const today = todayInput ? parseDate(todayInput) : new Date();
+    const startDate = parseDate(document.getElementById('startDate').value);
+    const handoverTask = taskByKey(tasks, 'handover');
+    const completionDate = handoverTask ? handoverTask.end : tasks[tasks.length - 1].end;
+
+    let currentLabel = 'Pre-renovation planning';
+    let nextTask = tasks[0];
+    let title = 'Your next key milestone';
+
+    if (startDate && today < startDate) {
+        title = 'Before works start';
+        currentLabel = 'Planning and approvals';
+        nextTask = tasks[0];
+    } else if (completionDate && today > completionDate) {
+        title = 'After handover';
+        currentLabel = 'Renovation completed';
+        nextTask = null;
+    } else {
+        const currentTask = tasks.find(t => t.start <= today && t.end >= today);
+        nextTask = tasks.find(t => t.start > today);
+        if (currentTask) currentLabel = currentTask.label;
+        else if (nextTask) currentLabel = 'Between scheduled tasks';
+    }
+
+    const nextLabel = nextTask ? `${nextTask.label} · ${fmt(nextTask.start)}` : 'Defect check, cleaning, furniture delivery and move-in';
+    const prepText = nextMilestonePrepText(nextTask || handoverTask);
+
+    el.innerHTML = `
+        <div class="rounded-2xl border border-[#d8cec0] bg-white/70 p-5">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                <div>
+                    <p class="eyebrow text-xs font-bold uppercase text-[#a99683]">${title}</p>
+                    <h3 class="serif text-2xl font-bold mt-1">What this schedule means now</h3>
+                </div>
+                <span class="tag dark">Planner Guidance</span>
+            </div>
+            <div class="grid md:grid-cols-3 gap-3 mt-4 text-sm leading-6">
+                <div class="rounded-2xl bg-[#fffaf4] border border-[#d8cec0] p-4">
+                    <div class="text-xs uppercase tracking-widest text-[#746b61] font-bold mb-1">Current phase</div>
+                    <strong>${currentLabel}</strong>
+                </div>
+                <div class="rounded-2xl bg-[#fffaf4] border border-[#d8cec0] p-4">
+                    <div class="text-xs uppercase tracking-widest text-[#746b61] font-bold mb-1">Next milestone</div>
+                    <strong>${nextLabel}</strong>
+                </div>
+                <div class="rounded-2xl bg-[#fffaf4] border border-[#d8cec0] p-4">
+                    <div class="text-xs uppercase tracking-widest text-[#746b61] font-bold mb-1">Owner preparation</div>
+                    <span>${prepText}</span>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 function renderMoveIn(tasks) {
     if (!tasks.length) { document.getElementById('moveInOutput').innerHTML = '<div class="p-4 text-center">Select a start date above</div>'; return; }
     const labels = ['Hacking & demolition', 'Masonry & tiling works', 'Ceiling & partition works', 'Carpentry factory fabrication', 'Carpentry installation', 'Vinyl / laminate final flooring', 'Glass / mirror / shower screen final installation', 'Professional cleaning, defect check & handover'];
@@ -757,7 +855,10 @@ function renderProgress(tasks) {
                 <div class="rounded-2xl border border-yellow-200 bg-yellow-50 p-5 mb-4">
                     <span class="tag yellow">⏳ Between Tasks</span>
                     <p class="mt-3 text-sm leading-7">
-                        Next upcoming task: <strong>${upcoming.label}</strong> starting on ${fmt(upcoming.start)}.
+                        No major task is scheduled for <strong>${fmt(today)}</strong>. Next upcoming task: <strong>${upcoming.label}</strong> starting on ${fmt(upcoming.start)}.
+                    </p>
+                    <p class="mt-2 text-xs leading-6 text-[#746b61]">
+                        This usually means the plan is between two scheduled activities, waiting for the next working window, approval, delivery or trade handover.
                     </p>
                 </div>
                 <div class="rounded-2xl border border-[#d8cec0] bg-white/70 p-5">
@@ -821,9 +922,12 @@ function renderProgress(tasks) {
     let progressHtml = `${stageSelectHtml}<div class="rounded-2xl border ${statusBorder} p-5 mb-4">
         <span class="tag ${statusColor}">${statusText}</span>
         <p class="mt-3 text-sm leading-7">
-            Expected today: <strong>${expected.label}</strong><br>
+            Planned stage around <strong>${fmt(today)}</strong>: <strong>${expected.label}</strong><br>
             Your selected stage: <strong>${currentText}</strong><br>
             <strong>${stageMessage}</strong>
+        </p>
+        <p class="mt-2 text-xs leading-6 text-[#746b61]">
+            This status compares your selected site stage against the planned sequence from this tool. Some works may overlap, so use it as a discussion guide with your contractor, not as a final site certification.
         </p>
     </div>
     <div class="rounded-2xl border border-[#d8cec0] bg-white/70 p-5">
@@ -837,7 +941,7 @@ function renderProgress(tasks) {
         progressHtml = `${stageSelectHtml}<div class="rounded-2xl border border-[#d8cec0] bg-white/70 p-5 mb-4">
             <span class="tag dark">Expected Progress</span>
             <p class="mt-3 text-sm leading-7">By <strong>${fmt(today)}</strong>, the expected stage is around: <strong>${expected.label}</strong>.</p>
-            <p class="mt-2 text-xs leading-6 text-[#746b61]">Progress tracking is optional. Select your current renovation stage if you want to compare actual progress against this planned timeline.</p>
+            <p class="mt-2 text-xs leading-6 text-[#746b61]">Progress tracking is optional. Select your actual site stage above if you want to compare current progress against the planned sequence. The result explains whether the site appears on track, ahead, or at delay risk.</p>
         </div>
         <div class="rounded-2xl border border-[#d8cec0] bg-white/70 p-5">
             <h4 class="font-bold mb-3">Completed milestones</h4>
@@ -870,10 +974,10 @@ function initButtons() { document.querySelectorAll('[data-group]').forEach(g => 
 function regenerate() {
     state.propertyType = selected('propertyType'); state.scope = selected('scope'); state.hacking = selected('hacking');
     const startDateInput = document.getElementById('startDate').value;
-    if (!startDateInput) { document.getElementById('timelineOutput').innerHTML = '<div class="p-4 text-center">Please select a start date to generate timeline.</div>'; document.getElementById('summaryCards').innerHTML = '<div class="p-4 text-center">Select a start date above</div>'; document.getElementById('moveInOutput').innerHTML = '<div class="p-4 text-center">Select a start date above</div>'; document.getElementById('progressOutput').innerHTML = '<div class="p-4 text-center">Select a start date above</div>'; return; }
+    if (!startDateInput) { document.getElementById('timelineOutput').innerHTML = '<div class="p-4 text-center">Please select a start date to generate timeline.</div>'; document.getElementById('summaryCards').innerHTML = '<div class="p-4 text-center">Select a start date above</div>'; const nextMilestoneEl = document.getElementById('nextMilestoneOutput'); if (nextMilestoneEl) nextMilestoneEl.innerHTML = ''; document.getElementById('moveInOutput').innerHTML = '<div class="p-4 text-center">Select a start date above</div>'; document.getElementById('progressOutput').innerHTML = '<div class="p-4 text-center">Select a start date above</div>'; return; }
     const tasks = buildTasks();
     if (!tasks.length) { document.getElementById('timelineOutput').innerHTML = '<div class="p-4 text-center">Please select a valid start date to generate timeline.</div>'; return; }
-    renderTimeline(tasks); renderSummary(tasks); renderMoveIn(tasks); renderProgress(tasks); renderCritical(); renderChecklist();
+    renderTimeline(tasks); renderSummary(tasks); renderNextMilestone(tasks); renderMoveIn(tasks); renderProgress(tasks); renderCritical(); renderChecklist();
 }
 
 function setDefaults() {
@@ -894,5 +998,89 @@ setDefaults();
     <span>ID Work Studio · Professional renovation planning document</span>
     <span>Renovation Timeline Planner Singapore</span>
   </div>
+
+
+
+
+  <section class="max-w-7xl mx-auto px-5 pb-16 no-print">
+    <div class="soft-card rounded-[28px] p-6 md:p-8">
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <p class="eyebrow text-[#c5a059] text-xs font-bold uppercase">Renovation Journey</p>
+        <h2 class="serif text-3xl md:text-4xl mt-2">How Renovation Timelines Are Usually Structured</h2>
+        <p class="text-sm md:text-base text-[#746b61] mt-3 leading-7">Use this as a simple planning map after generating your timeline. It keeps the page useful without forcing you to read a long renovation guide.</p>
+      </div>
+
+      <div class="grid md:grid-cols-5 gap-3">
+        <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4">
+          <div class="text-[11px] font-bold tracking-[.14em] uppercase text-[#c5a059]">01</div>
+          <h3 class="font-bold mt-1">Planning</h3>
+          <p class="text-sm text-[#746b61] mt-2 leading-6">Confirm scope, budget and key priorities before locking in dates.</p>
+        </div>
+        <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4">
+          <div class="text-[11px] font-bold tracking-[.14em] uppercase text-[#c5a059]">02</div>
+          <h3 class="font-bold mt-1">Design</h3>
+          <p class="text-sm text-[#746b61] mt-2 leading-6">Finalise layouts, materials and selections early to reduce later changes.</p>
+        </div>
+        <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4">
+          <div class="text-[11px] font-bold tracking-[.14em] uppercase text-[#c5a059]">03</div>
+          <h3 class="font-bold mt-1">Approvals</h3>
+          <p class="text-sm text-[#746b61] mt-2 leading-6">Allow time for HDB, condo management or site access requirements.</p>
+        </div>
+        <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4">
+          <div class="text-[11px] font-bold tracking-[.14em] uppercase text-[#c5a059]">04</div>
+          <h3 class="font-bold mt-1">Works</h3>
+          <p class="text-sm text-[#746b61] mt-2 leading-6">Coordinate hacking, masonry, electrical, carpentry, painting and installation.</p>
+        </div>
+        <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4">
+          <div class="text-[11px] font-bold tracking-[.14em] uppercase text-[#c5a059]">05</div>
+          <h3 class="font-bold mt-1">Move-In</h3>
+          <p class="text-sm text-[#746b61] mt-2 leading-6">Complete testing, touch-ups, cleaning and delivery coordination before moving in.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-6 mt-6">
+      <div class="soft-card rounded-[28px] p-6 md:p-8">
+        <p class="eyebrow text-[#c5a059] text-xs font-bold uppercase">Common Delays</p>
+        <h2 class="serif text-2xl md:text-3xl mt-2">Why Renovation Projects Run Behind Schedule</h2>
+        <div class="grid sm:grid-cols-2 gap-3 mt-5">
+          <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4 text-sm font-semibold">Late owner decisions</div>
+          <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4 text-sm font-semibold">Material or colour changes</div>
+          <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4 text-sm font-semibold">Appliance delivery delays</div>
+          <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4 text-sm font-semibold">Additional works found on site</div>
+          <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4 text-sm font-semibold">Building approval requirements</div>
+          <div class="bg-[#fffaf4] border border-[#d8cec0]/70 rounded-2xl p-4 text-sm font-semibold">Trade coordination issues</div>
+        </div>
+      </div>
+
+      <div class="soft-card rounded-[28px] p-6 md:p-8">
+        <p class="eyebrow text-[#c5a059] text-xs font-bold uppercase">Move-In Readiness</p>
+        <h2 class="serif text-2xl md:text-3xl mt-2">Before You Confirm Your Move-In Date</h2>
+        <div class="grid sm:grid-cols-2 gap-3 mt-5 text-sm text-[#312c28]">
+          <div>✓ Major works completed</div>
+          <div>✓ Electrical testing completed</div>
+          <div>✓ Plumbing testing completed</div>
+          <div>✓ Carpentry installed</div>
+          <div>✓ Appliance delivery confirmed</div>
+          <div>✓ Furniture delivery confirmed</div>
+          <div>✓ Touch-ups completed</div>
+          <div>✓ Professional cleaning arranged</div>
+          <div>✓ Defects documented</div>
+          <div>✓ Access and keys confirmed</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="soft-card rounded-[28px] p-6 md:p-8 mt-6 text-center">
+      <p class="eyebrow text-[#c5a059] text-xs font-bold uppercase">Next Step</p>
+      <h2 class="serif text-2xl md:text-3xl mt-2">Need help planning your renovation timeline?</h2>
+      <p class="text-sm md:text-base text-[#746b61] mt-3 leading-7 max-w-2xl mx-auto">Use the generated timeline as a planning guide, then speak with ID Work Studio if you need help coordinating renovation scope, sequencing, approvals and move-in readiness.</p>
+      <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="https://idworkstudio.com/#contact" class="inline-flex justify-center rounded-full bg-[#171514] text-white px-6 py-3 text-xs font-bold uppercase tracking-[.14em] no-underline">Speak With A Designer</a>
+        <a href="https://idworkstudio.com/planning-tools" class="inline-flex justify-center rounded-full border border-[#d8cec0] bg-[#fffaf4] px-6 py-3 text-xs font-bold uppercase tracking-[.14em] no-underline">View Planning Tools</a>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
