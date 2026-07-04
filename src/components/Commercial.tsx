@@ -11,22 +11,22 @@ const commercialPageContent = {
     "direct_answer": {
       "eyebrow": "Direct answer for Singapore business owners",
       "title": "Commercial renovation in Singapore: cost, timeline and approvals",
-      "p1": "Commercial renovation in Singapore typically costs <strong>$30 to $180 psf for offices</strong>, <strong>$80 to $150 psf for retail shops</strong>, and <strong>$120 to $250 psf for F&B outlets</strong>. Most projects take <strong>6 to 12 weeks</strong> including design, landlord or MCST approval, authority checks and renovation works.",
+      "p1": "Commercial renovation in Singapore typically costs <strong>$80 to $150 psf for most office renovations</strong>, with premium office fit-outs reaching <strong>up to $300 psf</strong>. Retail shops usually range from <strong>$120 to $300 psf</strong>, while F&B outlets commonly require <strong>$200 to $500+ psf</strong>. Most projects take <strong>6 to 12 weeks</strong> including design, landlord or MCST approval, authority checks and renovation works.",
       "p2": "The main difference from residential renovation is compliance. Commercial projects may involve landlord fitting-out rules, MCST requirements, fire safety checks, exhaust requirements, working-hour restrictions and reinstatement obligations at lease end.",
       "cards": {
         "1": {
           "label": "Office renovation",
-          "range": "$30 – $180 psf",
-          "note": "Basic office refresh to premium fit-out"
+          "range": "$80 – $150 psf",
+          "note": "Standard office renovation; premium fit-outs may reach $300 psf"
         },
         "2": {
           "label": "Retail renovation",
-          "range": "$80 – $150 psf",
+          "range": "$120 – $300 psf",
           "note": "Shopfront, lighting, display and storage works"
         },
         "3": {
           "label": "F&B renovation",
-          "range": "$120 – $250 psf",
+          "range": "$200 – $500+ psf",
           "note": "Kitchen, exhaust, plumbing and fire safety factors"
         }
       }
@@ -37,16 +37,16 @@ const commercialPageContent = {
       "items": {
         "1": {
           "title": "Basic office fit-out",
-          "cost": "$30 – $60 psf",
+          "cost": "$80 – $100 psf",
           "points": {
-            "1": "Paint, simple flooring and loose furniture coordination",
+            "1": "Paint, flooring, basic ceiling touch-up and loose furniture coordination",
             "2": "Basic electrical and lighting points",
-            "3": "Suitable for small offices with limited built-in works"
+            "3": "Suitable for small offices with limited built-in works and simple M&E scope"
           }
         },
         "2": {
           "title": "Mid-range office renovation",
-          "cost": "$60 – $100 psf",
+          "cost": "$100 – $180 psf",
           "points": {
             "1": "Meeting rooms, pantry and manager rooms",
             "2": "Carpet/vinyl, ceiling, lighting and data works",
@@ -55,7 +55,7 @@ const commercialPageContent = {
         },
         "3": {
           "title": "Premium commercial fit-out",
-          "cost": "$100 – $180 psf",
+          "cost": "$180 – $300 psf",
           "points": {
             "1": "Custom reception, feature walls and acoustic rooms",
             "2": "Higher-grade finishes and more M&E coordination",
@@ -65,7 +65,7 @@ const commercialPageContent = {
       },
       "retail_fnb": {
         "title": "Retail and F&B usually need a higher budget",
-        "body": "Retail spaces usually need stronger lighting, display fixtures, shopfront works and landlord design compliance. F&B spaces are more demanding because of kitchen equipment coordination, exhaust, grease trap, waterproofing, plumbing, fire safety and cleaning access. This is why F&B renovation can reach <strong>$120 to $250 psf</strong> even before equipment cost is fully confirmed."
+        "body": "Retail spaces usually need stronger lighting, display fixtures, shopfront works and landlord design compliance. F&B spaces are more demanding because of kitchen equipment coordination, exhaust, grease trap, waterproofing, plumbing, fire safety and cleaning access. This is why F&B renovation can reach <strong>$200 to $500+ psf</strong> depending on kitchen, exhaust, fire-safety and equipment coordination."
       }
     },
     "timeline_guide": {
@@ -98,18 +98,18 @@ const commercialPageContent = {
       }
     },
     "content_cluster": {
-      "eyebrow": "Commercial content cluster",
-      "title": "Helpful guides before you renovate",
-      "body": "Commercial renovation has more approval and lease-risk considerations than residential work. These guides explain cost and timeline in more detail before you speak to a contractor.",
+      "eyebrow": "Next commercial decision",
+      "title": "Choose the next decision to clarify",
+      "body": "Commercial renovation decisions usually move from budget to timing, unit type and lease obligations. Use the next guide based on the question you are trying to answer now.",
       "cost_card": {
-        "eyebrow": "Cost guide",
+        "eyebrow": "If you are budgeting",
         "title": "Commercial Renovation Cost Singapore",
-        "desc": "Read the detailed commercial cost guide for offices, retail units and F&B spaces."
+        "desc": "Start here if you need realistic office, retail or F&B renovation ranges before requesting quotations."
       },
       "timeline_card": {
-        "eyebrow": "Timeline guide",
+        "eyebrow": "If you already have a budget",
         "title": "Office Renovation Timeline Singapore",
-        "desc": "Understand planning, approval, site works and handover sequencing."
+        "desc": "Next, check how design, landlord approval, site works and handover affect your opening date."
       }
     },
     "project_management": {
@@ -135,11 +135,11 @@ const commercialPageContent = {
       "subtitle": "Practical answers for office, retail and F&B renovation in Singapore, including cost, timeline, landlord approval, MCST and SCDF considerations.",
       "q1": {
         "q": "How much does commercial renovation cost in Singapore?",
-        "a": "Commercial renovation in Singapore typically costs $30 to $180 psf for offices, $80 to $150 psf for retail shops, and $120 to $250 psf for F&B outlets. The final range is mainly affected by M&E works, fire safety requirements, carpentry, flooring, ceiling works and landlord reinstatement conditions."
+        "a": "Commercial renovation in Singapore typically costs $80 to $150 psf for most office renovations, with premium office fit-outs reaching up to $300 psf. Retail shops usually range from $120 to $300 psf, while F&B outlets commonly require $200 to $500+ psf. The final range is mainly affected by M&E works, fire safety requirements, carpentry, flooring, ceiling works and landlord reinstatement conditions."
       },
       "q2": {
         "q": "How much does office renovation cost in Singapore?",
-        "a": "A basic office renovation usually starts from $30 to $60 psf. A mid-range office with meeting rooms, pantry, flooring, ceiling and electrical works is usually $60 to $100 psf. Premium office fit-outs with feature walls, acoustic rooms, customised carpentry and higher-grade finishes can reach $100 to $180 psf."
+        "a": "A basic office renovation usually starts from $80 to $100 psf. A mid-range office with meeting rooms, pantry, flooring, ceiling and electrical works is usually $100 to $150 psf. Premium office fit-outs with feature walls, acoustic rooms, customised carpentry and higher-grade finishes can reach $150 to $300 psf."
       },
       "q3": {
         "q": "How long does commercial renovation usually take?",
@@ -167,11 +167,11 @@ const commercialPageContent = {
       },
       "q9": {
         "q": "Is retail renovation more expensive than office renovation?",
-        "a": "Retail renovation is often higher than a basic office because shopfront, lighting, display fixtures, signage, customer flow, storage and landlord design guidelines are more involved. Typical retail renovation in Singapore ranges from $80 to $150 psf."
+        "a": "Retail renovation is often higher than a basic office because shopfront, lighting, display fixtures, signage, customer flow, storage and landlord design guidelines are more involved. Typical retail renovation in Singapore ranges from $120 to $300 psf."
       },
       "q10": {
         "q": "Why is F&B renovation usually more expensive?",
-        "a": "F&B renovation usually costs more because of exhaust, grease trap, plumbing, waterproofing, kitchen equipment coordination, fire safety, pest control requirements and stricter authority or landlord conditions. A practical F&B budget is usually $120 to $250 psf."
+        "a": "F&B renovation usually costs more because of exhaust, grease trap, plumbing, waterproofing, kitchen equipment coordination, fire safety, pest control requirements and stricter authority or landlord conditions. A practical F&B budget is usually $200 to $500+ psf."
       },
       "q11": {
         "q": "What should I prepare before requesting a commercial renovation quotation?",
@@ -187,22 +187,22 @@ const commercialPageContent = {
     "direct_answer": {
       "eyebrow": "给新加坡商业业主的直接答案",
       "title": "新加坡商业翻新：费用、时间表与审批",
-      "p1": "新加坡商业翻新通常为：<strong>办公室每平方英尺 $30 至 $180</strong>、<strong>零售店每平方英尺 $80 至 $150</strong>、<strong>餐饮空间每平方英尺 $120 至 $250</strong>。多数项目连同设计、业主或 MCST 审批、相关检查与施工，通常需要 <strong>6 至 12 周</strong>。",
+      "p1": "新加坡商业翻新通常为：<strong>多数办公室每平方英尺 $80 至 $150</strong>，高级办公室装修可达 <strong>每平方英尺 $300</strong>；<strong>零售店每平方英尺 $120 至 $300</strong>；<strong>餐饮空间每平方英尺 $200 至 $500+</strong>。多数项目连同设计、业主或 MCST 审批、相关检查与施工，通常需要 <strong>6 至 12 周</strong>。",
       "p2": "商业翻新与住宅翻新的主要差别在于合规要求。商业项目可能涉及业主装修指南、MCST 要求、消防安全检查、排气系统、施工时段限制，以及租约结束时的原状修复责任。",
       "cards": {
         "1": {
           "label": "办公室翻新",
-          "range": "$30 – $180 / 平方英尺",
-          "note": "从基础办公室更新到高级办公室装修"
+          "range": "$80 – $150 / 平方英尺",
+          "note": "标准办公室装修；高级装修可达 $300 / 平方英尺"
         },
         "2": {
           "label": "零售店翻新",
-          "range": "$80 – $150 / 平方英尺",
+          "range": "$120 – $300 / 平方英尺",
           "note": "店面、灯光、陈列与储物工程"
         },
         "3": {
           "label": "餐饮空间翻新",
-          "range": "$120 – $250 / 平方英尺",
+          "range": "$200 – $500+ / 平方英尺",
           "note": "厨房、排气、给排水与消防安全因素"
         }
       }
@@ -213,16 +213,16 @@ const commercialPageContent = {
       "items": {
         "1": {
           "title": "基础办公室装修",
-          "cost": "$30 – $60 / 平方英尺",
+          "cost": "$80 – $100 / 平方英尺",
           "points": {
-            "1": "油漆、简单地面与活动家具协调",
+            "1": "油漆、地面、基础天花修补与活动家具协调",
             "2": "基础电位与灯位工程",
-            "3": "适合木作较少的小型办公室"
+            "3": "适合木作较少、机电范围较简单的小型办公室"
           }
         },
         "2": {
           "title": "中档办公室翻新",
-          "cost": "$60 – $100 / 平方英尺",
+          "cost": "$100 – $180 / 平方英尺",
           "points": {
             "1": "会议室、茶水间与经理房",
             "2": "地毯/乙烯基地板、天花、灯光与网络点",
@@ -231,7 +231,7 @@ const commercialPageContent = {
         },
         "3": {
           "title": "高级商业装修",
-          "cost": "$100 – $180 / 平方英尺",
+          "cost": "$180 – $300 / 平方英尺",
           "points": {
             "1": "定制接待区、特色墙与隔音房",
             "2": "更高等级饰面与更多机电协调",
@@ -241,7 +241,7 @@ const commercialPageContent = {
       },
       "retail_fnb": {
         "title": "零售与餐饮通常需要更高预算",
-        "body": "零售空间通常需要更强的灯光、展示道具、店面工程与业主设计规范配合。餐饮空间要求更高，因为涉及厨房设备协调、排气、隔油池、防水、给排水、消防安全与清洁通道。因此餐饮翻新即使设备费用尚未完全确认，也可能达到 <strong>$120 至 $250 / 平方英尺</strong>。"
+        "body": "零售空间通常需要更强的灯光、展示道具、店面工程与业主设计规范配合。餐饮空间要求更高，因为涉及厨房设备协调、排气、隔油池、防水、给排水、消防安全与清洁通道。因此餐饮翻新可因厨房、排气、消防安全与设备协调而达到 <strong>$200 至 $500+ / 平方英尺</strong>。"
       }
     },
     "timeline_guide": {
@@ -274,18 +274,18 @@ const commercialPageContent = {
       }
     },
     "content_cluster": {
-      "eyebrow": "商业内容主题群",
-      "title": "装修前可先阅读的实用指南",
-      "body": "商业翻新比住宅工程涉及更多审批与租约风险。这些指南会在您联系承包商前，更详细说明费用与时间表。",
+      "eyebrow": "下一步商业决策",
+      "title": "先厘清您现在最需要决定的问题",
+      "body": "商业翻新的决策通常会从预算、时间、单位类型到租约责任逐步推进。请根据您现在最需要回答的问题，选择下一份指南。",
       "cost_card": {
-        "eyebrow": "费用指南",
+        "eyebrow": "如果您正在做预算",
         "title": "新加坡商业翻新费用",
-        "desc": "查看办公室、零售单位与餐饮空间的详细商业翻新费用指南。"
+        "desc": "如果您需要在索取报价前了解办公室、零售或餐饮空间的实际预算范围，请先看这里。"
       },
       "timeline_card": {
-        "eyebrow": "时间表指南",
+        "eyebrow": "如果您已有初步预算",
         "title": "新加坡办公室翻新时间表",
-        "desc": "了解规划、审批、现场施工与交付安排。"
+        "desc": "接下来了解设计、业主审批、现场施工与交付如何影响开业或搬迁日期。"
       }
     },
     "project_management": {
@@ -311,11 +311,11 @@ const commercialPageContent = {
       "subtitle": "针对办公室、零售与餐饮翻新的实用解答，包括费用、时间、业主审批、MCST 与 SCDF 注意事项。",
       "q1": {
         "q": "新加坡商业翻新费用大概是多少？",
-        "a": "新加坡商业翻新通常为办公室每平方英尺 $30 至 $180，零售店每平方英尺 $80 至 $150，餐饮空间每平方英尺 $120 至 $250。最终费用主要受机电工程、消防安全要求、木作、地面、天花工程及租约原状修复条件影响。"
+        "a": "新加坡商业翻新通常为多数办公室每平方英尺 $80 至 $150，高级办公室装修可达每平方英尺 $300。零售店通常为每平方英尺 $120 至 $300，餐饮空间通常需要每平方英尺 $200 至 $500+。最终费用主要受机电工程、消防安全要求、木作、地面、天花工程及租约原状修复条件影响。"
       },
       "q2": {
         "q": "新加坡办公室翻新费用大概是多少？",
-        "a": "基础办公室翻新通常从每平方英尺 $30 至 $60 起。包含会议室、茶水间、地面、天花与电位工程的中档办公室通常为每平方英尺 $60 至 $100。若涉及特色墙、隔音房、定制木作与较高等级饰面，高级办公室装修可达每平方英尺 $100 至 $180。"
+        "a": "基础办公室翻新通常从每平方英尺 $80 至 $100 起。包含会议室、茶水间、地面、天花与电位工程的中档办公室通常为每平方英尺 $100 至 $150。若涉及特色墙、隔音房、定制木作与较高等级饰面，高级办公室装修可达每平方英尺 $150 至 $300。"
       },
       "q3": {
         "q": "商业翻新通常需要多久？",
@@ -343,11 +343,11 @@ const commercialPageContent = {
       },
       "q9": {
         "q": "零售店翻新是否比办公室翻新更贵？",
-        "a": "零售店翻新通常比基础办公室更高，因为涉及店面、灯光、展示道具、招牌、顾客动线、储物空间与业主设计规范。新加坡零售翻新通常为每平方英尺 $80 至 $150。"
+        "a": "零售店翻新通常比基础办公室更高，因为涉及店面、灯光、展示道具、招牌、顾客动线、储物空间与业主设计规范。新加坡零售翻新通常为每平方英尺 $120 至 $300。"
       },
       "q10": {
         "q": "为什么餐饮翻新通常更贵？",
-        "a": "餐饮翻新通常更贵，因为涉及排气、隔油池、给排水、防水、厨房设备协调、消防安全、虫害防治要求，以及更严格的相关单位或业主条件。实际餐饮预算通常为每平方英尺 $120 至 $250。"
+        "a": "餐饮翻新通常更贵，因为涉及排气、隔油池、给排水、防水、厨房设备协调、消防安全、虫害防治要求，以及更严格的相关单位或业主条件。实际餐饮预算通常为每平方英尺 $200 至 $500+。"
       },
       "q11": {
         "q": "申请商业翻新报价前应准备什么？",
@@ -588,79 +588,6 @@ export default function Commercial() {
 
         <section className="py-16 md:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
-              <h2 className="text-3xl font-serif mb-4 text-charcoal">{commercialContent.cost_breakdown.title}</h2>
-              <div className="w-24 h-1 bg-champagne mx-auto mb-4"></div>
-              <p className="text-gray-500 text-sm max-w-2xl mx-auto">{commercialContent.cost_breakdown.subtitle}</p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {Object.values(commercialContent.cost_breakdown.items).map((item) => {
-                const points = Object.values(item.points);
-                return (
-                <div key={item.title} className="rounded-2xl border border-gray-100 bg-off-white p-6 hover:border-gold/40 transition-colors">
-                  <h3 className="font-bold text-charcoal text-lg mb-2">{item.title}</h3>
-                  <p className="text-2xl font-serif text-gold mb-4">{item.cost}</p>
-                  <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
-                    {points.map((point) => (
-                      <li key={point} className="flex gap-3"><CheckCircle className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" /> <span>{point}</span></li>
-                    ))}
-                  </ul>
-                </div>
-              );
-              })}
-            </div>
-
-            <div className="mt-8 rounded-2xl border border-gold/30 bg-gold/5 p-6 md:p-8">
-              <h3 className="font-serif text-2xl text-charcoal mb-3">{commercialContent.cost_breakdown.retail_fnb.title}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                <span dangerouslySetInnerHTML={{ __html: commercialContent.cost_breakdown.retail_fnb.body }} />
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 md:py-20 bg-off-white border-y border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-8">
-              <div>
-                <h2 className="text-3xl font-serif mb-4 text-charcoal">{commercialContent.timeline_guide.title}</h2>
-                <p className="text-gray-600 leading-relaxed mb-8">{commercialContent.timeline_guide.subtitle}</p>
-                <div className="space-y-4">
-                  {Object.values(commercialContent.timeline_guide.steps).map((item, index) => {
-                    const step = `0${index + 1}`;
-                    return (
-                    <div key={step} className="flex gap-5 bg-white rounded-2xl p-5 border border-gray-100">
-                      <div className="w-12 h-12 rounded-full bg-gold text-dark-charcoal flex items-center justify-center font-bold flex-shrink-0">{step}</div>
-                      <div>
-                        <div className="flex flex-wrap items-center gap-3 mb-1">
-                          <h3 className="font-bold text-charcoal">{item.title}</h3>
-                          <span className="text-[10px] text-gold uppercase tracking-[0.15em] font-semibold bg-gold/10 px-2 py-0.5 rounded-full">{item.time}</span>
-                        </div>
-                        <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  );
-                  })}
-                </div>
-              </div>
-
-              <div className="bg-charcoal rounded-2xl p-7 md:p-9 text-white self-start">
-                <h3 className="font-serif text-3xl mb-5">{commercialContent.timeline_guide.approval_title}</h3>
-                <div className="space-y-4 text-sm text-gray-300 leading-relaxed">
-                  {Object.values(commercialContent.timeline_guide.approval_items).map((item) => {
-                    return (
-                    <div key={item} className="flex gap-3"><FileCheck className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" /> <span>{item}</span></div>
-                  );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 md:py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
               <div>
                 <p className="text-[11px] uppercase tracking-[0.25em] text-gold font-bold mb-4">{commercialContent.content_cluster.eyebrow}</p>
@@ -754,6 +681,79 @@ export default function Commercial() {
                   </div>
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <h2 className="text-3xl font-serif mb-4 text-charcoal">{commercialContent.cost_breakdown.title}</h2>
+              <div className="w-24 h-1 bg-champagne mx-auto mb-4"></div>
+              <p className="text-gray-500 text-sm max-w-2xl mx-auto">{commercialContent.cost_breakdown.subtitle}</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {Object.values(commercialContent.cost_breakdown.items).map((item) => {
+                const points = Object.values(item.points);
+                return (
+                <div key={item.title} className="rounded-2xl border border-gray-100 bg-off-white p-6 hover:border-gold/40 transition-colors">
+                  <h3 className="font-bold text-charcoal text-lg mb-2">{item.title}</h3>
+                  <p className="text-2xl font-serif text-gold mb-4">{item.cost}</p>
+                  <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
+                    {points.map((point) => (
+                      <li key={point} className="flex gap-3"><CheckCircle className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" /> <span>{point}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              );
+              })}
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-gold/30 bg-gold/5 p-6 md:p-8">
+              <h3 className="font-serif text-2xl text-charcoal mb-3">{commercialContent.cost_breakdown.retail_fnb.title}</h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span dangerouslySetInnerHTML={{ __html: commercialContent.cost_breakdown.retail_fnb.body }} />
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20 bg-off-white border-y border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div>
+                <h2 className="text-3xl font-serif mb-4 text-charcoal">{commercialContent.timeline_guide.title}</h2>
+                <p className="text-gray-600 leading-relaxed mb-8">{commercialContent.timeline_guide.subtitle}</p>
+                <div className="space-y-4">
+                  {Object.values(commercialContent.timeline_guide.steps).map((item, index) => {
+                    const step = `0${index + 1}`;
+                    return (
+                    <div key={step} className="flex gap-5 bg-white rounded-2xl p-5 border border-gray-100">
+                      <div className="w-12 h-12 rounded-full bg-gold text-dark-charcoal flex items-center justify-center font-bold flex-shrink-0">{step}</div>
+                      <div>
+                        <div className="flex flex-wrap items-center gap-3 mb-1">
+                          <h3 className="font-bold text-charcoal">{item.title}</h3>
+                          <span className="text-[10px] text-gold uppercase tracking-[0.15em] font-semibold bg-gold/10 px-2 py-0.5 rounded-full">{item.time}</span>
+                        </div>
+                        <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  );
+                  })}
+                </div>
+              </div>
+
+              <div className="bg-charcoal rounded-2xl p-7 md:p-9 text-white self-start">
+                <h3 className="font-serif text-3xl mb-5">{commercialContent.timeline_guide.approval_title}</h3>
+                <div className="space-y-4 text-sm text-gray-300 leading-relaxed">
+                  {Object.values(commercialContent.timeline_guide.approval_items).map((item) => {
+                    return (
+                    <div key={item} className="flex gap-3"><FileCheck className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" /> <span>{item}</span></div>
+                  );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </section>
