@@ -497,6 +497,371 @@ export default function OfficeRenovationTimelineSingapore() {
               </p>
             </div>
 
+
+            <SectionH2>Owner Decision Timeline Before Renovation</SectionH2>
+            <P>
+              One of the biggest misconceptions about office renovation is that the programme starts when work begins on site.
+              In reality, the most important timeline belongs to the business owner. Decisions made several weeks before
+              mobilisation determine whether the project progresses smoothly or suffers avoidable delays.
+            </P>
+            <div className="overflow-x-auto my-8">
+              <table className="min-w-full border border-gray-200 text-sm">
+                <thead className="bg-off-white">
+                  <tr>
+                    <th className="p-3 text-left">When</th>
+                    <th className="p-3 text-left">Owner decision</th>
+                    <th className="p-3 text-left">Why it matters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td className="p-3">6–8 weeks before</td><td className="p-3">Confirm lease, approvals and renovation objectives.</td><td className="p-3">Changing the project brief later usually affects cost and programme.</td></tr>
+                  <tr><td className="p-3">4–6 weeks before</td><td className="p-3">Approve office layout, workstation count and meeting rooms.</td><td className="p-3">Electrical, data, air-conditioning and furniture planning all depend on the final layout.</td></tr>
+                  <tr><td className="p-3">3–4 weeks before</td><td className="p-3">Confirm materials, finishes and long-lead items.</td><td className="p-3">Imported flooring, glass or custom carpentry can extend the overall timeline if ordered late.</td></tr>
+                  <tr><td className="p-3">1–2 weeks before</td><td className="p-3">Coordinate IT, internet, furniture delivery and staff relocation.</td><td className="p-3">Business continuity depends on these activities being aligned with the construction programme.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <P>
+              Experienced commercial contractors do not simply plan construction activities—they help clients make the right
+              decisions at the right time so approvals, procurement and site work can progress together.
+            </P>
+
+            <SectionH2>Understand the Critical Path Before You Promise a Move-In Date</SectionH2>
+            <P>
+              A renovation timeline is not delayed by every task equally. It is delayed by the tasks that control the next task.
+              This is called the critical path. For an office renovation, the critical path is usually not painting or loose furniture.
+              It is layout approval, building approval, M&amp;E coordination, ceiling access, partition setting-out and handover testing.
+            </P>
+            <div className="overflow-x-auto my-8">
+              <table className="min-w-full border border-gray-200 text-sm">
+                <thead className="bg-off-white">
+                  <tr>
+                    <th className="p-3 text-left">Critical path item</th>
+                    <th className="p-3 text-left">What it blocks</th>
+                    <th className="p-3 text-left">Consultant advice</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="p-3">Final layout approval</td>
+                    <td className="p-3">Partition, electrical, data, lighting, air-conditioning and furniture planning.</td>
+                    <td className="p-3">Do not start site work with a layout that is still changing. One moved meeting room can affect multiple trades.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Landlord or building management approval</td>
+                    <td className="p-3">Site access, lift booking, noisy work timing, protection works and commencement date.</td>
+                    <td className="p-3">Treat approval time as part of the renovation programme, not an administrative afterthought.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">M&amp;E coordination</td>
+                    <td className="p-3">Power points, data points, lighting, air-conditioning, ceiling works and fire safety coordination.</td>
+                    <td className="p-3">Confirm workstation count, server needs, meeting room equipment and pantry requirements before electrical works begin.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Ceiling and partition sequence</td>
+                    <td className="p-3">Lighting installation, aircon works, sprinkler or detector coordination and final painting.</td>
+                    <td className="p-3">Do not view ceiling, partition and services as separate items. They physically affect each other on site.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Testing and handover</td>
+                    <td className="p-3">Staff move-in, IT setup, furniture use, access control and operational readiness.</td>
+                    <td className="p-3">Leave time for testing. A finished-looking office is not ready if power, data, lighting or access systems are not tested.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <P>
+              This is why two office renovation projects of similar size can have very different timelines. The faster project is
+              usually not the one that rushes site work—it is the one where the blocking decisions are settled early and the trades
+              are sequenced correctly.
+            </P>
+
+            <SectionH2>Timeline Risk Matrix for Office Renovation Projects</SectionH2>
+            <P>
+              A realistic office renovation timeline should not only show the expected sequence. It should also show the risks that
+              can change the programme. In commercial projects, the common delay is not always slow workmanship. It is often an
+              unresolved approval, a late owner decision, a service coordination issue or a building restriction that was not allowed
+              for before work started.
+            </P>
+            <div className="overflow-x-auto my-8">
+              <table className="min-w-full border border-gray-200 text-sm">
+                <thead className="bg-off-white">
+                  <tr>
+                    <th className="p-3 text-left">Timeline risk</th>
+                    <th className="p-3 text-left">Possible delay</th>
+                    <th className="p-3 text-left">How to reduce the risk</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="p-3">Landlord or building management approval</td>
+                    <td className="p-3">Several days to a few weeks, depending on the building's review process.</td>
+                    <td className="p-3">Submit drawings, method statements, insurance documents, protection plans and noisy-work requests before mobilisation.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Change-of-use or authority approval</td>
+                    <td className="p-3">Can affect the start date if the intended business use needs approval before renovation commitment.</td>
+                    <td className="p-3">Check the approved use early. Do not treat lease signing, change-of-use approval and renovation start as the same milestone.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Fire safety coordination</td>
+                    <td className="p-3">Depends on whether the new layout affects fire safety provisions or requires QP submission.</td>
+                    <td className="p-3">Flag enclosed rooms, altered partitions, ceiling changes and service routes early so fire safety implications can be checked before site work.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Electrical and data assumptions</td>
+                    <td className="p-3">Several days or more if the existing supply, DB location, workstation count or server needs were underestimated.</td>
+                    <td className="p-3">Confirm headcount, equipment load, server requirements, meeting room AV and pantry appliances before electrical works are priced and scheduled.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Late material or furniture confirmation</td>
+                    <td className="p-3">One to several weeks if selected finishes, loose furniture or custom items have lead times.</td>
+                    <td className="p-3">Separate fast-confirmation items from long-lead items. Do not wait until site work starts to choose critical finishes.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Occupied-office renovation</td>
+                    <td className="p-3">Longer programme because work may need to be phased around staff, meetings and business hours.</td>
+                    <td className="p-3">Decide early whether the office will be vacant, partially occupied or renovated in phases. This affects access, protection and productivity.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <P>
+              The purpose of a risk matrix is not to make the timeline look longer. It is to make the timeline honest. A business
+              owner should know which items can be controlled by early decisions, which items depend on third parties, and which
+              items should never be promised to staff or management until they are confirmed.
+            </P>
+
+            <SectionH2>Business Continuity Planning During Office Renovation</SectionH2>
+            <P>
+              An office renovation timeline should not only protect the construction programme. It should also protect business
+              operations. For many companies, the real cost of delay is not the contractor's extra time on site. It is staff disruption,
+              missed client meetings, unstable internet, late furniture delivery or a move-in date that was promised before the
+              office was operationally ready.
+            </P>
+            <P>
+              Before confirming the renovation start date, decide how the business will continue operating while the office is being
+              renovated. A vacant unit is usually simpler to schedule. An occupied office, phased renovation or live relocation needs a
+              different programme because the contractor must work around access, safety, noise, dust, meetings, IT systems and staff movement.
+            </P>
+            <div className="overflow-x-auto my-8">
+              <table className="min-w-full border border-gray-200 text-sm">
+                <thead className="bg-off-white">
+                  <tr>
+                    <th className="p-3 text-left">Business item to plan</th>
+                    <th className="p-3 text-left">Why it affects the renovation timeline</th>
+                    <th className="p-3 text-left">Consultant's advice</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="p-3">Temporary work arrangement</td>
+                    <td className="p-3">Staff may need to work from home, another branch or a temporary office while noisy or dusty work is carried out.</td>
+                    <td className="p-3">Confirm this before site starts. Do not decide only after demolition or partition works disrupt daily operations.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Phased renovation</td>
+                    <td className="p-3">Keeping part of the office operational usually increases protection, cleaning, access control and sequencing time.</td>
+                    <td className="p-3">Use phasing only when business continuity is more important than the shortest renovation duration.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Internet, server and IT migration</td>
+                    <td className="p-3">The office may look completed but remain unusable if network points, server equipment, Wi-Fi, phones or printers are not ready.</td>
+                    <td className="p-3">Involve the IT vendor before electrical and data works are finalised, not during the last week of renovation.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Furniture and workstation move-in</td>
+                    <td className="p-3">Loose furniture, system furniture and storage units can block final cleaning, testing and staff move-in if delivery is mistimed.</td>
+                    <td className="p-3">Coordinate furniture delivery after dusty works and major touch-ups, but before final operational testing.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Client-facing rooms</td>
+                    <td className="p-3">Reception, meeting rooms and discussion areas often need to be ready earlier than back-office areas.</td>
+                    <td className="p-3">Prioritise business-critical areas in the programme if client meetings must continue during renovation.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Move-in readiness</td>
+                    <td className="p-3">Handover is not the same as staff readiness. Access cards, pantry use, meeting room AV, printers and defect touch-ups still affect the first working day.</td>
+                    <td className="p-3">Keep a short buffer between contractor handover and full staff return whenever the business cannot afford disruption.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <P>
+              A good timeline should therefore include two tracks: the renovation track and the business continuity track. The
+              renovation track asks when the site can be completed. The business continuity track asks when the company can operate
+              normally again. For commercial clients, the second question is often the more important one.
+            </P>
+
+            <SectionH2>Client Decisions That Commonly Delay Office Renovation</SectionH2>
+            <P>
+              Many office renovation delays are not caused by slow site work. They happen because important client decisions are
+              made too late, changed after approval, or left unclear until the contractor is already on site. A contractor can manage
+              sequencing, manpower and suppliers, but the client still controls several decisions that affect the programme directly.
+            </P>
+            <P>
+              The most useful way to protect the timeline is to separate decisions that must be locked before work starts from
+              decisions that can safely remain flexible. Layout, authority-related items, M&amp;E points, furniture sizes and key
+              material selections should not be treated as last-minute choices.
+            </P>
+            <div className="overflow-x-auto my-8">
+              <table className="min-w-full border border-gray-200 text-sm">
+                <thead className="bg-off-white">
+                  <tr>
+                    <th className="p-3 text-left">Late client decision</th>
+                    <th className="p-3 text-left">How it delays the timeline</th>
+                    <th className="p-3 text-left">What to confirm early</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="p-3">Changing workstation count</td>
+                    <td className="p-3">Affects desk layout, power points, data points, lighting, circulation space and furniture order quantities.</td>
+                    <td className="p-3">Confirm current headcount, near-term hiring plan and hot-desk ratio before final layout approval.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Moving meeting rooms or enclosed rooms</td>
+                    <td className="p-3">Can affect partition setting-out, ceiling works, aircon distribution, sprinkler/fire alarm coordination and acoustic requirements.</td>
+                    <td className="p-3">Lock the enclosed-room layout before submission, M&amp;E planning and partition work begin.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Confirming finishes too late</td>
+                    <td className="p-3">Flooring, laminates, glass, doors, lighting and loose furniture may have different stock availability and lead times.</td>
+                    <td className="p-3">Approve practical, available finishes before procurement starts, not after site works are already progressing.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Changing power, data or server requirements</td>
+                    <td className="p-3">Electrical and data routing may need to be revised after partition or ceiling works have already been completed.</td>
+                    <td className="p-3">Get input from the IT vendor and internal operations team before electrical and data works are marked on drawings.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Delaying furniture confirmation</td>
+                    <td className="p-3">Furniture size affects walkway clearance, meeting room capacity, power/data location and final move-in sequence.</td>
+                    <td className="p-3">Confirm system furniture, loose furniture and storage dimensions before the contractor finalises site coordination.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Adding scope after award</td>
+                    <td className="p-3">New scope can require revised pricing, additional materials, extra manpower, approval updates and re-sequencing.</td>
+                    <td className="p-3">Separate must-have scope from nice-to-have scope before awarding the renovation contract.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <P>
+              For business owners, the key lesson is simple: do not treat design approval as a formality. Every late decision has a
+              timing consequence. The best office renovation timeline is usually created before site work begins, when the client,
+              contractor, landlord, IT vendor and furniture supplier are all working from the same confirmed plan.
+            </P>
+
+
+            <SectionH2>Office Renovation Decision Journey: What to Do Next</SectionH2>
+            <P>
+              A renovation timeline is only useful if it tells the business what to do next. Once you understand the likely
+              duration, the next decision should depend on your current stage: whether you are still budgeting, comparing
+              contractors, preparing for lease handover, or planning a future reinstatement obligation.
+            </P>
+            <div className="overflow-x-auto my-8">
+              <table className="min-w-full border border-gray-200 text-sm">
+                <thead className="bg-off-white">
+                  <tr>
+                    <th className="p-3 text-left">If you are at this stage</th>
+                    <th className="p-3 text-left">Next decision to make</th>
+                    <th className="p-3 text-left">Recommended next page</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="p-3">You need a renovation budget before management approval</td>
+                    <td className="p-3">Estimate whether your planned scope fits the budget before confirming the move-in date.</td>
+                    <td className="p-3">
+                      <a href="/commercial/renovation-cost" className="font-semibold text-gold hover:underline">
+                        Commercial renovation cost guide
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">You are comparing contractors</td>
+                    <td className="p-3">Check whether each contractor understands office workflow, building rules, M&amp;E coordination and handover requirements.</td>
+                    <td className="p-3">
+                      <a href="/commercial/office-renovation" className="font-semibold text-gold hover:underline">
+                        Office renovation service guide
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">You are moving out of an existing office</td>
+                    <td className="p-3">Plan reinstatement early so move-out, renovation and landlord handover do not clash.</td>
+                    <td className="p-3">
+                      <a href="/commercial/reinstatement" className="font-semibold text-gold hover:underline">
+                        Commercial reinstatement guide
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">You already have a floor plan and target move-in date</td>
+                    <td className="p-3">Ask for a realistic programme that includes approval time, site sequence, procurement, testing and business move-in readiness.</td>
+                    <td className="p-3">
+                      <a href="https://wa.me/6598333085" target="_blank" rel="noopener noreferrer" className="font-semibold text-gold hover:underline">
+                        WhatsApp ID Work Studio
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <P>
+              This is the decision journey we recommend for commercial clients: confirm budget, confirm timeline, check the
+              renovation scope, then plan move-in or reinstatement obligations. It keeps the project practical and prevents the
+              common mistake of choosing a contractor based on price before the programme and operational risks are understood.
+            </P>
+
+
+            <SectionH2>Office Renovation Timeline: Direct Answer for Business Owners</SectionH2>
+            <P>
+              A realistic office renovation timeline in Singapore depends less on the floor area alone and more on approval status,
+              building rules, M&amp;E coordination, procurement, and how quickly the business can confirm key decisions. A simple
+              office refresh may be planned around a shorter programme, while a full office fit-out with partitions, ceiling works,
+              electrical/data points, air-conditioning coordination and handover testing needs a more structured schedule.
+            </P>
+            <div className="overflow-x-auto my-8">
+              <table className="min-w-full border border-gray-200 text-sm">
+                <thead className="bg-off-white">
+                  <tr>
+                    <th className="p-3 text-left">Common timeline question</th>
+                    <th className="p-3 text-left">Consultant-level answer</th>
+                    <th className="p-3 text-left">What to check before committing</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="p-3">How long does an office renovation take?</td>
+                    <td className="p-3">Most office projects should be planned as a sequence of approval, procurement, site works, testing and move-in readiness—not just construction days.</td>
+                    <td className="p-3">Confirm landlord rules, working hours, submission needs, material lead times and IT/furniture coordination.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Can the renovation be rushed?</td>
+                    <td className="p-3">Some site tasks can overlap, but critical-path items such as approvals, layout confirmation, M&amp;E coordination and testing cannot be ignored safely.</td>
+                    <td className="p-3">Ask which activities are truly parallel and which activities block the handover date.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Why do similar offices have different timelines?</td>
+                    <td className="p-3">Two offices of similar size can differ because of building restrictions, ceiling/services condition, fire-safety impact, after-hours access and client decision speed.</td>
+                    <td className="p-3">Compare the actual scope, not only the square footage or quoted completion period.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">When should a business contact a contractor?</td>
+                    <td className="p-3">Before promising a move-in date internally. A contractor should review layout, scope, access rules and handover requirements before the programme is fixed.</td>
+                    <td className="p-3">Prepare the floor plan, target move-in date, landlord handbook, office headcount and key operational requirements.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <P>
+              The practical answer is this: do not treat the office renovation timeline as a date printed on a quotation. Treat it
+              as a project plan that links owner decisions, landlord requirements, procurement, site sequencing and business
+              continuity. That is the difference between a fast-looking schedule and a realistic programme your company can rely on.
+            </P>
+
             <SectionH2>{article.phases.title}</SectionH2>
             <P>{article.phases.intro}</P>
 

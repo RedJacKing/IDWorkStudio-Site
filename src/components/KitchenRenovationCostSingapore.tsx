@@ -171,6 +171,24 @@ const content: Record<"en" | "zh", ArticleContent> = {
     ],
     sections: [
       {
+        eyebrow: "Quotation check",
+        title: "How to compare kitchen renovation quotations properly",
+        paragraphs: [
+          "A kitchen quotation should not be judged by the total price alone. In Singapore, the real difference is often whether the quote includes hacking, haulage, making-good works, plumbing coordination, electrical points, worktop cut-outs, GST and appliance-related preparation.",
+          "This matters because kitchen renovation touches regulated and technical works. HDB renovation works may require approval before works begin, regulated plumbing works must be carried out by Licensed Plumbers, and electrical wiring or new power points should be handled by Licensed Electrical Workers. Gas-related works also need proper safety coordination before renovation starts.",
+          "Before signing, ask the contractor to separate visible finishes from site-preparation and technical works. A cheaper quote may only cover carpentry and surface materials, while a more complete quote may already include demolition, disposal, sink support removal, wall patching, plumbing reconnection, electrical additions and final cleaning.",
+        ],
+        bullets: [
+          "Check whether hacking, haulage, disposal and site cleaning are included.",
+          "Confirm whether making-good works after removing old cabinets, sink supports, tiles or built-ins are included or provisional.",
+          "Ask whether plumbing reconnection, sink relocation, drainage adjustments and Licensed Plumber coordination are included.",
+          "Clarify whether electrical points for oven, hood, hob, fridge, dishwasher and small appliances are included or charged separately.",
+          "Confirm whether worktop sink and hob cut-outs, edge finishing, backsplash, joints and silicone works are included.",
+          "Check whether GST, condo protection works, lift padding, management application fees or debris handling are included.",
+          "Do not finalise the quote until appliance dimensions, sink model, hob type, hood type and gas or induction decision are confirmed.",
+        ],
+      },
+      {
         eyebrow: "Carpentry",
         title: "Kitchen carpentry is usually the biggest cost component",
         paragraphs: [
@@ -182,6 +200,23 @@ const content: Record<"en" | "zh", ArticleContent> = {
           "Tall units, appliance towers and full-height storage cost more because they use more material and internal structure.",
           "Soft-closing systems, premium hinges, drawers and pull-out accessories increase cost but improve durability and daily use.",
           "Curved panels, fluted details, hidden handles and boutique profiles should be budgeted as custom carpentry, not basic carpentry.",
+        ],
+      },
+      {
+        eyebrow: "Specifications",
+        title: "The same-looking kitchen can be priced differently because the specifications are different",
+        paragraphs: [
+          "Two kitchen quotations can show the same cabinet length and still describe very different products. The difference is often hidden in the specifications: cabinet carcass material, internal laminate, door finish, hinges, drawer runners, worktop thickness, backsplash height, edge profile, number of drawers and how appliances are integrated.",
+          "This is why a homeowner should not compare kitchen carpentry by length alone. A basic cabinet with simple swing doors is not the same as a kitchen with tall storage, heavy-duty drawers, soft-closing hardware, internal accessories, a full-height backsplash and a premium worktop.",
+          "For worktops, quartz is commonly selected because it is practical and low-maintenance, while sintered stone is usually chosen when the homeowner wants better heat resistance, a thinner premium look or larger-format surfaces. The correct choice depends on cooking habits, budget, edge detail, installation complexity and how carefully the surface will be used.",
+        ],
+        bullets: [
+          "Ask what cabinet carcass material is being used, and whether exposed or internal areas are properly finished.",
+          "Confirm whether the quoted cabinet price includes top cabinets, tall units, drawer units, internal accessories and soft-closing hardware.",
+          "Check whether the worktop price includes backsplash, sink and hob cut-outs, edge profile, joints, silicone and installation.",
+          "Compare quartz and sintered stone by usage, heat exposure, chip risk, repairability, visual effect and budget — not only by material name.",
+          "Clarify whether premium details such as fluted panels, curved corners, hidden handles, glass doors, LED lighting and appliance towers are included.",
+          "Before signing, ask the contractor to write down the specification clearly so later upgrades do not become variation orders.",
         ],
       },
       {
@@ -199,19 +234,39 @@ const content: Record<"en" | "zh", ArticleContent> = {
         ],
       },
       {
-        eyebrow: "Hidden costs",
-        title: "Hidden kitchen renovation costs homeowners often forget",
+        eyebrow: "Site assessment",
+        title: "Hidden kitchen costs are usually discovered before or during hacking",
         paragraphs: [
-          "The kitchen quote can increase when small technical items are missed at planning stage. These items are not always visually obvious, but they affect labour, coordination and site readiness.",
-          "A good renovation discussion should clarify these early, especially for resale HDB flats and older condos where previous renovation work may not match current design intentions.",
+          "The most dangerous kitchen budget is one that assumes the site is already ready for new carpentry. In resale HDB flats and older condos, many cost differences only appear after the old cabinets, tiles, sink support and existing services are inspected or removed.",
+          "This is why a site assessment matters before accepting a quotation. HDB renovation works may require approval before commencement, regulated plumbing work must be handled by a PUB Licensed Plumber, and new wiring or electrical extensions should be carried out by Licensed Electrical Workers. These are not decorative choices; they affect whether the kitchen can be built safely and correctly.",
+          "A proper kitchen discussion should therefore separate design cost from site-readiness cost. The homeowner should know what is confirmed, what is provisional, and what can only be finalised after hacking or inspection.",
         ],
         bullets: [
-          "Gas pipe adjustment or coordination with the relevant service provider.",
-          "Additional electrical points for oven, hood, hob, fridge, dishwasher or small appliances.",
-          "Solid-top sink and hob cut-outs, edge details and backsplash integration.",
-          "Wall plastering, floor levelling or patching after hacking.",
-          "Protection works, lift padding, debris removal and site cleaning.",
-          "Appliance size mismatch after carpentry has already been fabricated.",
+          "Old tiled sink support: removal may reveal missing floor tiles, uneven levels or old pipe routes.",
+          "Wall and floor condition: hollow tiles, weak plaster or uneven surfaces can require patching, screeding or relaying before new work starts.",
+          "Concealed plumbing: sink, washer or dishwasher relocation may need Licensed Plumber coordination and cannot be priced like a simple cabinet change.",
+          "Electrical loading and points: ovens, induction hobs, hoods, fridges and dishwashers may require additional points or circuit planning by a Licensed Electrical Worker.",
+          "Gas coordination: gas pipe alteration, termination or reconnection should be planned before carpentry and appliance positions are fixed.",
+          "Appliance mismatch: late confirmation of fridge, hob, hood, oven or dishwasher dimensions can lead to carpentry variation or rework.",
+          "Condo logistics: MCST rules, lift protection, hacking hours and debris handling can affect cost even when the kitchen size is similar.",
+        ],
+      },
+      {
+        eyebrow: "Planning sequence",
+        title: "Plan appliances, power, plumbing and gas before carpentry",
+        paragraphs: [
+          "A kitchen layout should not be finalised from cabinet dimensions alone. Before carpentry is fabricated, the homeowner should confirm the appliance list, sink position, hob type, hood type, fridge clearance, oven height, dishwasher or washer location, lighting points, power points, plumbing route and gas requirement.",
+          "This is where many kitchen renovation variations happen. HDB advises homeowners to know the flat's electrical loading when planning electrical appliances, PUB requires regulated plumbing works to be carried out by Licensed Plumbers, and gas pipe alteration or supply turn-on has to be coordinated safely before the kitchen is completed.",
+          "A practical way to plan is to lock the technical items first, then design the cabinets around them. If the induction hob, oven, dishwasher, hood or gas pipe route is confirmed too late, the carpentry may need to be altered, additional points may be required, or installation may be delayed.",
+        ],
+        bullets: [
+          "Confirm the exact fridge, oven, hob, hood, dishwasher and washer dimensions before carpentry measurement.",
+          "Decide early between gas hob and induction hob because this affects gas coordination, electrical loading and countertop cut-outs.",
+          "Check whether the oven, induction hob or other high-capacity appliances need dedicated power points or circuit planning.",
+          "Plan sink, dishwasher and washing machine positions together so plumbing and drainage are not treated as an afterthought.",
+          "Allow clearance for fridge doors, drawer opening, tall cabinet doors, service access and ventilation around built-in appliances.",
+          "Confirm hood type and ducting or recirculation approach before designing top cabinets.",
+          "Finalise appliance specifications before worktop fabrication because sink and hob cut-outs cannot be guessed accurately.",
         ],
       },
       {
@@ -420,7 +475,7 @@ const content: Record<"en" | "zh", ArticleContent> = {
     ctaTitle: "Planning a kitchen renovation in Singapore?",
     ctaText:
       "Use ID Work Studio’s renovation cost calculator first to understand a realistic budget range. If you are renovating a resale HDB kitchen, we can also review the likely hacking, sink support, tiling and carpentry considerations before you commit to a scope.",
-    ctaPrimary: "Use Cost Calculator",
+    ctaPrimary: "Estimate Your Kitchen Budget",
     ctaSecondary: "Request Kitchen Quote",
     breadcrumbCurrent: "Kitchen Renovation Cost Singapore",
   },
@@ -516,6 +571,24 @@ const content: Record<"en" | "zh", ArticleContent> = {
     ],
     sections: [
       {
+        eyebrow: "报价比较",
+        title: "如何正确比较厨房装修报价",
+        paragraphs: [
+          "厨房装修报价不能只看总价。在新加坡，真正的差别通常在于报价是否包括拆除、清运、修补、水喉协调、电位、台面开孔、GST和电器相关准备工程。",
+          "这很重要，因为厨房装修涉及受监管和技术性的工程。HDB装修有些项目开工前需要批准；受监管的水务和卫生水喉工程必须由持牌水喉工处理；新增或改动电线、电位等电力工程也应由持牌电工进行。涉及煤气的装修，也需要在开工前做好安全协调。",
+          "签约前，应要求承包商把表面材料和现场准备、技术工程分开说明。较便宜的报价可能只包括橱柜和表面材料；较完整的报价可能已经包括拆除、清运、砖砌洗碗盆支撑拆除、墙面修补、水喉重接、电位增加和完工清洁。",
+        ],
+        bullets: [
+          "确认报价是否包括拆除、清运、垃圾处理和现场清洁。",
+          "确认拆除旧橱柜、砖砌支撑、瓷砖或固定家具后的修补工程是否包括，还是暂定项目。",
+          "确认水喉重接、洗碗盆移位、排水调整和持牌水喉工协调是否包括。",
+          "确认烤箱、抽油烟机、炉具、冰箱、洗碗机和小家电所需电位是否包括，还是另外收费。",
+          "确认台面洗碗盆和炉具开孔、收边、挡水板、接缝和硅胶工程是否包括。",
+          "确认GST、公寓保护工程、电梯保护、管理处申请费用和垃圾处理是否包括。",
+          "在电器尺寸、洗碗盆型号、炉具类型、抽油烟机类型，以及煤气或电磁炉选择确认前，不要急着确定报价。",
+        ],
+      },
+      {
         eyebrow: "橱柜",
         title: "厨房橱柜通常是最大费用项目",
         paragraphs: [
@@ -527,6 +600,23 @@ const content: Record<"en" | "zh", ArticleContent> = {
           "高柜、电器柜和全高收纳用料更多，内部结构也更复杂。",
           "缓冲铰链、抽屉、拉篮和五金会增加费用，但能提升耐用度和使用体验。",
           "弧形板、格栅细节、隐藏把手和特殊造型应按定制橱柜预算，不应当作基础橱柜。",
+        ],
+      },
+      {
+        eyebrow: "规格细节",
+        title: "看起来一样的厨房，报价可能因为规格不同而差很多",
+        paragraphs: [
+          "两份厨房报价即使写着相同的橱柜长度，实际内容也可能完全不同。差别通常藏在规格里：柜体板材、内部饰面、门板饰面、铰链、抽屉滑轨、台面厚度、挡水板高度、收边方式、抽屉数量，以及电器如何整合。",
+          "所以屋主不应该只用长度来比较厨房橱柜价格。普通平开门下柜，和有高柜、重型抽屉、缓冲五金、内部拉篮、满高挡水板和高级台面的厨房，并不是同一种报价。",
+          "台面方面，石英石通常因为实用和容易保养而被选择；岩板则多用于追求更高耐热性、较薄的高级视觉或大板面效果的厨房。真正合适的选择，要看烹饪习惯、预算、收边细节、安装复杂度和日常使用方式。",
+        ],
+        bullets: [
+          "确认柜体使用什么板材，外露和内部位置是否有妥善饰面。",
+          "确认橱柜报价是否包括上柜、高柜、抽屉柜、内部五金和缓冲系统。",
+          "确认台面报价是否包括挡水板、洗碗盆和炉具开孔、收边、接缝、硅胶和安装。",
+          "比较石英石和岩板时，不要只看材料名称，也要看使用习惯、受热情况、崩边风险、维修难度、视觉效果和预算。",
+          "确认格栅门板、弧形角、隐藏把手、玻璃门、LED灯和电器高柜等高级细节是否已经包括。",
+          "签约前应要求承包商把规格写清楚，避免后期升级全部变成追加费用。",
         ],
       },
       {
@@ -544,19 +634,39 @@ const content: Record<"en" | "zh", ArticleContent> = {
         ],
       },
       {
-        eyebrow: "隐藏费用",
-        title: "屋主常忽略的厨房隐藏费用",
+        eyebrow: "现场评估",
+        title: "厨房隐藏费用通常在检查或拆除后才真正出现",
         paragraphs: [
-          "厨房报价会增加，很多时候不是因为设计突然变豪华，而是前期没有把技术细节问清楚。这些项目不一定一眼看得见，但会影响人工、协调和现场准备。",
-          "特别是二手HDB和较旧的共管公寓，过去装修留下来的水电、墙地面和橱柜结构，未必适合新的设计。",
+          "最危险的厨房预算，是默认现场已经可以直接做新橱柜。二手HDB和旧公寓厨房常见的问题，往往要等旧橱柜、墙地砖、砖砌洗碗盆支撑和旧水电位置检查或拆除后，才会真正看得清楚。",
+          "这也是为什么签报价前需要做现场评估。HDB装修工程可能需要在开工前申请批准，受监管的水喉和排水工程必须由PUB Licensed Plumber处理，新增电线或电位也应由Licensed Electrical Worker负责。这些不是装饰选择，而是会影响厨房是否能安全、正确施工的技术条件。",
+          "所以一个专业的厨房报价，不应该只谈设计和表面材料，也要分清楚哪些费用已经确定，哪些只是暂估，哪些必须等拆除或现场检查后才能最终确认。",
         ],
         bullets: [
-          "煤气管调整或相关服务单位协调。",
-          "烤箱、抽油烟机、炉具、冰箱、洗碗机和小家电所需电位。",
-          "台面开孔、边角处理和挡水板整合。",
-          "拆除后的墙面批荡、地面找平或修补。",
-          "保护工程、电梯保护、垃圾清运和现场清洁。",
-          "橱柜制作后才发现电器尺寸不合。",
+          "旧砖砌洗碗盆支撑：拆除后可能发现地砖缺失、地面不平或旧水管路线。",
+          "墙面和地面状况：空鼓砖、墙面松动或地面不平，可能需要修补、找平或重新铺设。",
+          "隐藏水喉问题：洗碗盆、洗衣机或洗碗机移位，可能需要Licensed Plumber协调，不能当作简单橱柜更换来计算。",
+          "电力负荷和电位：烤箱、电磁炉、抽油烟机、冰箱和洗碗机，可能需要Licensed Electrical Worker规划额外电位或线路。",
+          "煤气协调：煤气管调整、暂停或重新接驳，应在橱柜和电器位置确定前先规划。",
+          "电器尺寸不合：冰箱、炉具、抽油烟机、烤箱或洗碗机太迟确认，可能造成橱柜改动或返工。",
+          "公寓现场限制：MCST规定、电梯保护、拆除时段和垃圾清运，即使厨房面积相近，也可能影响费用。",
+        ],
+      },
+      {
+        eyebrow: "规划顺序",
+        title: "橱柜定制前，先确认电器、电位、水喉和煤气",
+        paragraphs: [
+          "厨房布局不能只按橱柜尺寸来决定。在橱柜制作前，屋主应先确认电器清单、洗碗盆位置、炉具类型、抽油烟机类型、冰箱开门空间、烤箱高度、洗碗机或洗衣机位置、灯位、电位、水管路线和煤气需求。",
+          "很多厨房装修的追加费用，都是因为这些项目太迟确认。HDB提醒屋主在规划电器时应了解单位的电力负荷；PUB规定受监管的水喉工程必须由持牌水喉工处理；煤气管调整或重新接通也需要在厨房完工前做好安全协调。",
+          "比较实际的做法，是先确认技术条件，再围绕这些条件设计橱柜。如果电磁炉、烤箱、洗碗机、抽油烟机或煤气管路线太迟确认，橱柜可能要修改、电位可能要增加，安装也可能被延误。",
+        ],
+        bullets: [
+          "橱柜量尺前，先确认冰箱、烤箱、炉具、抽油烟机、洗碗机和洗衣机的准确尺寸。",
+          "提早决定使用煤气炉还是电磁炉，因为这会影响煤气协调、电力负荷和台面开孔。",
+          "确认烤箱、电磁炉或其他高功率电器是否需要独立电位或线路规划。",
+          "洗碗盆、洗碗机和洗衣机位置应一起规划，不要把水喉和排水当作后期小事。",
+          "预留冰箱开门、抽屉开启、高柜门、维修空间和嵌入式电器散热空间。",
+          "设计上柜前，先确认抽油烟机类型，以及是否需要排管或使用循环式。",
+          "台面制作前必须确认电器型号，因为洗碗盆和炉具开孔不能靠估算。",
         ],
       },
       {
@@ -764,9 +874,9 @@ const content: Record<"en" | "zh", ArticleContent> = {
     ],
     ctaTitle: "正在规划新加坡厨房装修？",
     ctaText:
-      "先使用 ID Work Studio 的装修费用计算器，了解一个实际预算范围。如果你准备装修二手HDB厨房，我们也可以先帮你判断拆除、砖砌洗碗盆支撑、铺砖和橱柜规划可能带来的费用差异。",
-    ctaPrimary: "使用费用计算器",
-    ctaSecondary: "索取厨房报价",
+      "先使用 ID Work Studio 装修费用计算器建立预算。如果是全屋装修，再使用总装修预算计算器。正式比较报价前，可先让我们协助检视厨房施工范围，提前发现可能影响预算的隐藏项目。",
+    ctaPrimary: "估算厨房预算",
+    ctaSecondary: "预约厨房施工范围评估",
     breadcrumbCurrent: "新加坡厨房装修费用",
   },
 };
