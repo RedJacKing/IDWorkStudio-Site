@@ -22,7 +22,7 @@ const KEYS_4 = ['1', '2', '3', '4'];
 const KEYS_5 = ['1', '2', '3', '4', '5'];
 const KEYS_8 = ['1', '2', '3', '4', '5', '6', '7', '8'];
 const KEYS_15 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'];
-const COST_KEYS = ['office', 'retail', 'fnb', 'industrial'];
+const COST_KEYS = ['office', 'retail', 'clinic', 'fnb', 'industrial'];
 
 const mistakeIcons = [
   <Fan className="h-5 w-5" />,
@@ -36,24 +36,26 @@ const articleContent = {
   en: {
   meta: {
     title: "Commercial Renovation Cost Singapore (2026 Guide) | ID Work Studio",
-    description: "Commercial renovation cost Singapore guide by ID Work Studio. Real contractor pricing for office, retail, F&B, MCST permits, compliance, aircon, water supply and hidden renovation costs."
+    description: "Commercial renovation cost Singapore guide by ID Work Studio. Real contractor pricing for office, retail, clinic, F&B, MCST permits, compliance, aircon, water supply and hidden renovation costs."
   },
   hero_badge: "Commercial Cost Guide",
   title: "Commercial Renovation Cost Singapore (2026 Guide)",
-  subtitle: "Real contractor pricing, approval requirements and hidden cost risks for office, retail, F&B and commercial renovation projects in Singapore.",
+  subtitle: "Real contractor pricing, approval requirements and hidden cost risks for offices, retail shops, clinics, F&B and industrial commercial renovation projects in Singapore.",
   read_time: "10 min read",
   bca_label: "BCA-Registered Firm",
   quick_title: "Commercial renovation cost in Singapore: quick answer",
-  quick_p1: "Based on real commercial renovation work in Singapore, most office renovations fall between <strong>$80 to $150 per sqft</strong> for a standard fit-out. Retail renovation is usually higher, and F&B renovation can be significantly more expensive because of exhaust, plumbing, fire safety and kitchen requirements.",
-  quick_p2: "For example, a 1,200 sqft office may realistically cost <strong>$100,000 to $180,000</strong>. A 2,000 sqft office with glass meeting rooms, reception carpentry, data points and upgraded lighting can reach <strong>$180,000 to $300,000</strong>.",
+  quick_p1: "Commercial renovation cost in Singapore usually starts from <strong>$80 to $150 per sqft</strong> for a standard office fit-out, but the final budget depends heavily on the business type, building rules and approval requirements. Retail shops, clinics and F&B units often cost more because the renovation must support operations, compliance, M&E services and landlord conditions — not just interior finishes.",
+  quick_p2: "For example, a 1,200 sqft office may realistically cost <strong>$100,000 to $180,000</strong>. A 2,000 sqft office with glass meeting rooms, reception carpentry, data points and upgraded lighting can reach <strong>$180,000 to $300,000</strong>. Before comparing quotations, check whether the unit can support your business use, especially if you need water points, drainage, after-hours aircon, exhaust, medical-room planning or stricter landlord approvals.",
+  cost_summary_headers: { type: "Commercial type", cost: "Typical cost", driver: "Main cost driver" },
   cost_summary: {
     office: { title: "Office renovation", range: "$80 – $150 psf", note: "Most standard SME office fit-outs with partition, electrical, flooring and basic carpentry." },
-    retail: { title: "Retail renovation", range: "$120 – $300 psf", note: "Usually higher when shopfront, display carpentry, lighting and mall requirements are involved." },
+    retail: { title: "Retail renovation", range: "$120 – $300 psf", note: "Usually higher when shopfront, display carpentry, lighting intensity and mall requirements are involved." },
+    clinic: { title: "Clinic renovation", range: "$150 – $350+ psf", note: "Depends on room planning, water points, privacy, infection-control expectations, electrical load and landlord or authority requirements." },
     fnb: { title: "F&B renovation", range: "$200 – $500+ psf", note: "Higher-risk projects due to exhaust, grease trap, plumbing, fire safety and kitchen requirements." },
     industrial: { title: "Industrial / light commercial", range: "$80 – $250+ psf", note: "Depends heavily on power loading, office-to-warehouse ratio, approvals and M&E works." }
   },
   insight_title: "Contractor insight",
-  insight_text: "Most commercial renovation cost overruns do not come from design. They usually come from compliance issues, aircon limitations, electrical loading, water and drainage problems, or late changes after submission.",
+  insight_text: "Most commercial renovation cost overruns do not come from design style. They come from practical constraints that were not checked early enough: aircon operating hours, electrical loading, water and drainage points, exhaust feasibility, fire-safety impact, landlord rules or late changes after submission.",
   office_title: "Office renovation cost Singapore",
   office_intro: "Most SME offices in Singapore fall between 1,000 to 3,000 sqft. A basic open office setup may stay below $100 psf, but once glass rooms, meeting rooms, reception carpentry, pantry, lighting design and data points are included, the cost commonly moves closer to $120 to $180 psf.",
   office_note: "CBD offices in areas such as Raffles Place, Marina Bay and Tanjong Pagar can be 15% to 25% higher because of stricter loading bay timing, lift protection, security clearance, night-work requirements and building management rules.",
@@ -64,7 +66,7 @@ const articleContent = {
     "3": ["Premium office fit-out", "$180 – $300 psf", "Higher-end finishes, acoustic rooms, customised carpentry, smart office features and heavier M&E coordination."]
   },
   breakdown_title: "Itemised commercial renovation cost breakdown",
-  breakdown_intro: "A proper commercial renovation quote should not only show a total price. It should separate construction, M&E, carpentry, approval-related items and exclusions so the tenant can compare scope properly.",
+  breakdown_intro: "It is common for two contractors to quote very different prices for the same commercial unit. This does not always mean one contractor is more expensive. More often, the quotations include different scopes of work, assumptions, specifications and exclusions. Before comparing the final price, compare what each quotation actually includes. A proper commercial renovation quotation should clearly separate construction, M&E, carpentry, authority submissions, compliance-related items and exclusions so you can make a like-for-like comparison.",
   breakdown_headers: { item: "Item", cost: "Typical cost", note: "Contractor note" },
   breakdown_rows: {
     "1": ["Partition / drywall", "$8 – $15 psf", "Depends on height, board type and fire-rated requirements."],
@@ -103,13 +105,13 @@ const articleContent = {
     "3": { title: "MCST / landlord / authority approval", duration: "2–6 weeks", text: "Building management may require drawings, method statement, work schedule, contractor documents, insurance and deposit before issuing permit to work." },
     "4": { title: "Renovation and fit-out works", duration: "3–10+ weeks", text: "Office renovation can be faster. Retail and F&B usually take longer due to M&E, fire safety, plumbing, exhaust and landlord inspection requirements." }
   },
-  mistakes_title: "Real mistakes that increase commercial renovation cost",
+  mistakes_title: "Five costly mistakes we regularly help commercial clients avoid",
   mistakes: {
-    "1": { title: "Not checking the aircon system before taking over the unit", text: "Some Singapore office buildings use centralised aircon controlled by the building. The aircon may stop around 6pm. If the tenant needs to work late, a separate cooling solution may be required. This can add roughly $8,000 to $30,000 or more depending on the unit." },
-    "2": { title: "Choosing a unit without water supply or drainage", text: "A unit may look suitable based on size, but some businesses need water inlet and discharge points. Beauty, nail, facial, clinic, cleaning and F&B users must check this early. If there is no proper outlet, a pump system may be needed and can add $3,000 to $10,000+." },
-    "3": { title: "Ignoring MCST or building management permit requirements", text: "Commercial renovation cannot start just because the lease is signed. If drawings, method statements, insurance or contractor documents are incomplete, the permit to work may be rejected. This can delay the project by 1 to 4 weeks or more." },
-    "4": { title: "Reinstatement miscommunication before takeover", text: "In one real case, an incoming tenant asked through the property agent for the landlord not to reinstate the unit. The message was not passed properly. The unit was reinstated to bare shell, the aircon was removed, and the tenant had to spend about $30,000 to reinstall aircon." },
-    "5": { title: "Too many people making decisions", text: "When several owners, partners or managers need to approve every layout and material decision, renovation can stall. Late changes affect quotation, submission drawings, material lead time and site schedule." }
+    "1": { title: "Not checking the aircon system before taking over the unit", text: "One of the first things we check during a site visit is how the building air-conditioning operates. Some offices rely on centralised systems that stop after office hours. If your business requires evening operations, adding an independent cooling solution later can significantly increase your renovation budget and delay opening." },
+    "2": { title: "Choosing a unit without water supply or drainage", text: "A unit may look perfect during viewing, but suitability depends on your business operations. Clinics, beauty salons, F&B outlets and other water-dependent businesses should confirm water supply and drainage before committing to the lease. Discovering this after signing often leads to additional plumbing work, pump systems and redesign." },
+    "3": { title: "Ignoring MCST or building management permit requirements", text: "Signing the lease is only one milestone. Building management, MCST or landlords may require drawings, method statements, insurance certificates and contractor documentation before approving works. Missing documentation can postpone renovation even when contractors are ready to start." },
+    "4": { title: "Reinstatement miscommunication before takeover", text: "We have encountered cases where assumptions made during lease negotiations were never documented. In one project, the landlord reinstated the unit to a bare shell because expectations were not formally confirmed, resulting in substantial reinstatement costs that could have been avoided through early clarification." },
+    "5": { title: "Too many people making decisions", text: "The most expensive design change is usually the one made after work has started. Establishing a clear decision-maker and finalising layouts early helps avoid variation orders, procurement delays and unnecessary rework." }
   },
   reinstatement_title: "Reinstatement cost Singapore",
   reinstatement_intro: "Reinstatement is the cost of returning the commercial unit to the landlord’s required handover condition at the end of lease. Many tenants forget to budget for this when they first sign the lease.",
@@ -121,10 +123,13 @@ const articleContent = {
   },
   reinstatement_p: "For proper planning, start reinstatement budgeting at least 3 to 4 months before lease expiry. You can also review our",
   reinstatement_link: "commercial reinstatement service",
-  related_label: "Related Guides",
-  related_title: "Continue Your Renovation Planning",
+  related_label: "Recommended Next Step",
+  related_title: "Choose the right next step for your commercial renovation",
+  related_intro: "Use these guides depending on where you are now. If you are budgeting for an office, start with office cost. If you are already planning handover, check reinstatement before signing or renewing the lease.",
   related_office_cost: "<officeCostLink>Office Renovation Cost Singapore (2026 Guide)</officeCostLink>",
   related_office_timeline: "<officeTimelineLink>Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes</officeTimelineLink>",
+  related_reinstatement: "<reinstatementLink>Commercial Reinstatement Singapore: Cost, Timeline, Checklist & Landlord Requirements</reinstatementLink>",
+  related_services: "<commercialServicesLink>Commercial renovation services by ID Work Studio</commercialServicesLink>",
   faq_title: "Commercial renovation FAQ",
   faqs: {
     "1": { q: "How much does commercial renovation cost in Singapore?", a: "A standard office renovation usually costs around $80 to $150 psf. Retail renovation often ranges from $120 to $300 psf. F&B renovation can reach $200 to $500+ psf because of exhaust, plumbing, grease trap, kitchen and fire safety requirements." },
@@ -143,11 +148,32 @@ const articleContent = {
     "14": { q: "What documents are usually needed for commercial renovation approval?", a: "Common documents include layout drawings, reflected ceiling plans, M&E drawings, method statement, work schedule, contractor details, public liability insurance and sometimes PE/QP endorsement depending on the scope." },
     "15": { q: "How can I reduce commercial renovation cost?", a: "Keep existing aircon and M&E where possible, avoid unnecessary hacking, finalise decisions early, check utilities before signing the lease, and compare quotation scope instead of only comparing total price." }
   },
-  cta_title: "Get a realistic commercial renovation quote",
-  cta_text: "WhatsApp us your floor plan, unit condition and business type. We will advise on estimated cost range, approval requirements, feasibility issues and possible hidden costs before renovation starts.",
-  cta_whatsapp: "WhatsApp Floor Plan",
-  cta_calculator: "Use Cost Calculator",
-  cta_services: "View Commercial Services"
+  cta_title: "Before you commit to a commercial renovation, let us review your renovation scope",
+  cta_text: "If you are comparing quotations, choosing between units or preparing to sign a lease, the most useful next step is not a generic price estimate. Send us the renovation scope and we will help you check whether the major cost and approval risks have been considered.",
+  cta_checklist_title: "For a useful review, send us:",
+  cta_checklist: {
+    "1": "Floor plan or unit size",
+    "2": "Business type and intended use",
+    "3": "Existing quotation, landlord requirements or photos if available"
+  },
+  cta_review_for_title: "Who is this review for?",
+  cta_review_for: {
+    "1":"You've received one or more quotations.",
+    "2":"You're comparing different contractors.",
+    "3":"You're about to sign a commercial lease.",
+    "4":"You want a second opinion before committing."
+  },
+  cta_whatsapp: "Request a Scope Review",
+  cta_calculator: "Check Reinstatement Scope",
+  cta_services: "View Commercial Services",
+  cta_mid1_text: "Want an exact number instead of a range? Send us your unit size and business type for a realistic estimate.",
+  cta_mid1_button: "Get My Estimate",
+  cta_mid2_title: "Avoid these mistakes on your project",
+  cta_mid2_text: "Get a feasibility check before you sign the lease — we'll flag aircon, water, permit and reinstatement risks early.",
+  cta_mid2_button: "Request a Feasibility Check",
+  cta_mid3_text: "Not sure whether your quotation or renovation plan is complete? We can review your scope, identify common omissions and explain approval requirements before you commit.",
+  cta_mid3_button: "Discuss My Project",
+  sticky_button_label: "WhatsApp Us"
 },
   zh: {
   meta: {
@@ -156,20 +182,22 @@ const articleContent = {
   },
   hero_badge: "商业费用指南",
   title: "新加坡商业翻新费用（2026 指南）",
-  subtitle: "以承包商角度说明新加坡办公室、零售、餐饮与商业空间翻新的真实费用、审批要求与隐藏成本风险。",
+  subtitle: "以承包商角度说明新加坡办公室、零售店、诊所、餐饮与工业商业空间翻新的真实费用、审批要求与隐藏成本风险。",
   read_time: "约 10 分钟",
   bca_label: "BCA 注册公司",
   quick_title: "新加坡商业翻新费用：直接答案",
-  quick_p1: "根据新加坡实际商业翻新项目经验，标准办公室装修多数落在 <strong>每平方英尺 $80 至 $150</strong>。零售空间通常更高，餐饮空间则因排烟、给排水、消防安全与厨房需求而明显更贵。",
-  quick_p2: "举例来说，一个 1,200 平方英尺办公室，合理预算通常约 <strong>$100,000 至 $180,000</strong>。若是 2,000 平方英尺办公室，并包含玻璃会议室、接待区木工、网络点位与升级灯光，费用可达 <strong>$180,000 至 $300,000</strong>。",
+  quick_p1: "新加坡商业翻新费用通常从标准办公室的 <strong>每平方英尺 $80 至 $150</strong> 起，但最终预算很大程度取决于业态、大厦规定与审批要求。零售店、诊所与餐饮单位通常更高，因为装修不只是做室内效果，还必须支持实际营运、合规、机电服务与业主要求。",
+  quick_p2: "举例来说，一个 1,200 平方英尺办公室，合理预算通常约 <strong>$100,000 至 $180,000</strong>。若是 2,000 平方英尺办公室，并包含玻璃会议室、接待区木工、网络点位与升级灯光，费用可达 <strong>$180,000 至 $300,000</strong>。在比较报价前，应先确认单位是否适合你的业态，尤其是需要供水、排水、延长空调、排烟、诊疗房规划或更严格业主审批的项目。",
+  cost_summary_headers: { type: "商业类型", cost: "常见费用", driver: "主要费用因素" },
   cost_summary: {
     office: { title: "办公室翻新", range: "$80 – $150 psf", note: "适用于多数标准中小型办公室，包括隔墙、电工、地板与基础木工。" },
-    retail: { title: "零售店翻新", range: "$120 – $300 psf", note: "若涉及店面门头、展示木工、灯光与商场要求，费用通常更高。" },
+    retail: { title: "零售店翻新", range: "$120 – $300 psf", note: "若涉及店面门头、展示木工、灯光密度与商场要求，费用通常更高。" },
+    clinic: { title: "诊所翻新", range: "$150 – $350+ psf", note: "取决于诊疗房规划、供水点、隐私要求、感染控制期望、电力负荷，以及业主或相关审批要求。" },
     fnb: { title: "餐饮翻新", range: "$200 – $500+ psf", note: "因排烟、隔油池、给排水、消防安全与厨房需求，风险与费用较高。" },
     industrial: { title: "工业 / 轻商业空间", range: "$80 – $250+ psf", note: "费用受电力负荷、办公室与仓储比例、审批及机电工程影响很大。" }
   },
   insight_title: "承包商现场经验",
-  insight_text: "商业翻新超支多数不是来自设计，而是来自合规问题、空调限制、电力负荷、供水排水问题，或提交后才临时更改设计。",
+  insight_text: "商业翻新超支多数不是来自设计风格，而是来自前期没有检查清楚的实际限制：空调运行时间、电力负荷、供水排水点、排烟可行性、消防影响、业主规定，或提交后才临时更改设计。",
   office_title: "新加坡办公室翻新费用",
   office_intro: "新加坡多数中小型办公室面积约 1,000 至 3,000 平方英尺。基础开放式办公室可能低于 $100 psf，但一旦加入玻璃房、会议室、接待木工、茶水间、灯光设计与网络点位，费用通常会接近 $120 至 $180 psf。",
   office_note: "莱佛士坊、滨海湾、丹戎巴葛等 CBD 办公楼，费用可能高出 15% 至 25%，原因包括卸货时间限制、电梯保护、安保通行、夜间施工要求与大厦管理规定。",
@@ -237,10 +265,13 @@ const articleContent = {
   },
   reinstatement_p: "为更稳妥规划，建议在租约到期前至少 3 至 4 个月开始预算恢复原状。您也可以查看我们的",
   reinstatement_link: "商业恢复原状服务",
-  related_label: "相关文章",
-  related_title: "继续规划您的商业翻新",
+  related_label: "建议下一步",
+  related_title: "根据您现在的阶段，选择下一步规划内容",
+  related_intro: "如果您正在做办公室预算，先看办公室费用；如果已经接近签约、交接或续租，则应尽早了解恢复原状要求，避免后期成本被低估。",
   related_office_cost: "<officeCostLink>新加坡办公室翻新费用（2026 指南）</officeCostLink>",
   related_office_timeline: "<officeTimelineLink>新加坡办公室翻新时间表：办公室装修实际需要多久</officeTimelineLink>",
+  related_reinstatement: "<reinstatementLink>新加坡商业恢复原状：费用、时间表、清单与业主要求</reinstatementLink>",
+  related_services: "<commercialServicesLink>ID Work Studio 商业翻新服务</commercialServicesLink>",
   faq_title: "商业翻新常见问题",
   faqs: {
     "1": { q: "新加坡商业翻新费用是多少？", a: "标准办公室翻新通常约 $80 至 $150 psf。零售翻新常见为 $120 至 $300 psf。餐饮翻新可能达到 $200 至 $500+ psf，因为涉及排烟、给排水、隔油池、厨房与消防安全要求。" },
@@ -259,11 +290,25 @@ const articleContent = {
     "14": { q: "商业翻新审批通常需要哪些文件？", a: "常见文件包括平面图、天花图、机电图、施工方法说明、工程时间表、承包商资料、公共责任保险，有些工程还可能需要 PE/QP 签署。" },
     "15": { q: "如何降低商业翻新费用？", a: "尽量保留现有空调与机电系统，避免不必要拆除，尽早定案设计，签租约前确认水电与排水条件，并比较报价范围而不是只看总价。" }
   },
-  cta_title: "获取实际商业翻新报价",
-  cta_text: "请通过 WhatsApp 发送您的平面图、单位现况与业务类型。我们会先协助判断预算范围、审批要求、可行性问题与潜在隐藏成本。",
-  cta_whatsapp: "WhatsApp 发送平面图",
-  cta_calculator: "使用费用计算器",
-  cta_services: "查看商业服务"
+  cta_title: "在决定商业翻新之前，让我们先协助您审核施工范围",
+  cta_text: "如果您正在比较报价、选择单位或准备签租约，最有价值的下一步不是单纯估价，而是确认施工范围是否完整。您可以把现有资料发给我们，我们会协助检查主要费用、审批与潜在风险是否已经被考虑。",
+  cta_checklist_title: "为了更准确审核，请尽量发送：",
+  cta_checklist: {
+    "1": "平面图或单位面积",
+    "2": "业务类型与用途",
+    "3": "现有报价、业主要求或现场照片（如有）"
+  },
+  cta_whatsapp: "申请施工范围审核",
+  cta_calculator: "查看恢复原状范围",
+  cta_services: "查看商业服务",
+  cta_mid1_text: "想知道确切费用而不是范围？请发送单位面积与业务类型，我们会提供实际估算。",
+  cta_mid1_button: "获取我的估算",
+  cta_mid2_title: "避免项目中的这些错误",
+  cta_mid2_text: "在签约前先做可行性检查——我们会及早提醒空调、供水、许可证与恢复原状方面的风险。",
+  cta_mid2_button: "申请可行性检查",
+  cta_mid3_text: "对您的单位有具体疑问？直接 WhatsApp 联系我们，我们会为您解答。",
+  cta_mid3_button: "直接咨询",
+  sticky_button_label: "WhatsApp 联系我们"
 },
 };
 
@@ -273,6 +318,33 @@ const renderStrongHtml = (html: string) => (
 
 const extractTaggedText = (value: string, tag: string) =>
   value.replace(new RegExp(`<${tag}>(.*?)</${tag}>`, 's'), '$1');
+
+// Generates a short lead reference and fires a GA4 event so WhatsApp clicks
+// from this page can be matched back to a lead in the manual lead log later.
+// sectionTag identifies which CTA on the page was clicked (e.g. "top", "mistakes", "faq", "sticky", "final")
+const buildWhatsAppClick = (sectionTag: string, prefilledText: string) => {
+  const leadRef = `${new Date().toISOString().slice(5, 10).replace('-', '')}-${Math.random()
+    .toString(36)
+    .slice(2, 6)
+    .toUpperCase()}`;
+
+  const messageWithRef = `${prefilledText} [ref: ${leadRef}]`;
+  const url = `https://wa.me/6598333085?text=${encodeURIComponent(messageWithRef)}`;
+
+  return {
+    url,
+    onClick: () => {
+      if (typeof window !== 'undefined' && (window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: 'whatsapp_click',
+          lead_ref: leadRef,
+          cta_location: sectionTag,
+          source_page: '/insights/commercial-renovation-cost-singapore',
+        });
+      }
+    },
+  };
+};
 
 export default function CommercialRenovationCostSingapore() {
   const { i18n } = useTranslation();
@@ -289,6 +361,27 @@ export default function CommercialRenovationCostSingapore() {
     t(`${ARTICLE_KEY}.faqs.${key}`, { returnObjects: true }) as { q: string; a: string };
 
   const faqs = KEYS_15.map((key) => getFaq(key));
+
+  const ctaTop = buildWhatsAppClick(
+    'mid_cost_table',
+    'Hi ID Work Studio, I read the Commercial Renovation Cost guide and would like an estimate for my unit.'
+  );
+  const ctaMistakes = buildWhatsAppClick(
+    'mid_mistakes',
+    'Hi ID Work Studio, I would like a feasibility check before signing my commercial lease.'
+  );
+  const ctaFaq = buildWhatsAppClick(
+    'mid_faq',
+    'Hi ID Work Studio, I have a question about commercial renovation for my unit.'
+  );
+  const ctaSticky = buildWhatsAppClick(
+    'sticky_button',
+    'Hi ID Work Studio, I am reading your Commercial Renovation Cost guide and have a question.'
+  );
+  const ctaFinal = buildWhatsAppClick(
+    'final_scope_review',
+    'Hi ID Work Studio, I would like a commercial renovation scope review. I can share my floor plan, unit condition and quotation details.'
+  );
 
   const schema = {
     '@context': 'https://schema.org',
@@ -319,6 +412,7 @@ export default function CommercialRenovationCostSingapore() {
           'commercial renovation Singapore',
           'office renovation cost Singapore',
           'retail renovation Singapore',
+          'clinic renovation Singapore',
           'F&B renovation Singapore',
           'MCST renovation permit Singapore',
         ],
@@ -366,7 +460,7 @@ export default function CommercialRenovationCostSingapore() {
     <>
       <Helmet>
         <title>Commercial Renovation Cost Singapore (2026 Guide) | ID Work Studio</title>
-        <meta name="description" content="Real contractor pricing, approval requirements and hidden cost risks for office, retail, F&B and commercial renovation projects in Singapore." />
+        <meta name="description" content="Real contractor pricing, approval requirements and hidden cost risks for office, retail, clinic, F&B and commercial renovation projects in Singapore." />
         <meta
           name="keywords"
           content="commercial renovation cost Singapore, office renovation cost Singapore, retail renovation Singapore, F&B renovation cost Singapore, MCST permit to work Singapore, commercial fit out Singapore"
@@ -377,7 +471,7 @@ export default function CommercialRenovationCostSingapore() {
         />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Commercial Renovation Cost Singapore (2026 Guide) | ID Work Studio" />
-        <meta property="og:description" content="Real contractor pricing, approval requirements and hidden cost risks for office, retail, F&B and commercial renovation projects in Singapore." />
+        <meta property="og:description" content="Real contractor pricing, approval requirements and hidden cost risks for office, retail, clinic, F&B and commercial renovation projects in Singapore." />
         <meta
           property="og:url"
           content="https://idworkstudio.com/insights/commercial-renovation-cost-singapore"
@@ -453,23 +547,37 @@ export default function CommercialRenovationCostSingapore() {
                 {renderStrongHtml(t(`${ARTICLE_KEY}.quick_p1`) as string)}
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-                {COST_KEYS.map((key) => (
-                  <div
-                    key={key}
-                    className="rounded-2xl border border-gray-200 bg-[#fffdf8] p-6 shadow-sm"
-                  >
-                    <p className="text-xs uppercase tracking-[0.18em] text-gray-500 mb-2">
-                      {t(`${ARTICLE_KEY}.cost_summary.${key}.title`)}
-                    </p>
-                    <p className="text-2xl font-serif font-semibold text-charcoal mb-3">
-                      {t(`${ARTICLE_KEY}.cost_summary.${key}.range`)}
-                    </p>
-                    <p className="text-sm leading-7 text-gray-600 mb-0">
-                      {t(`${ARTICLE_KEY}.cost_summary.${key}.note`)}
-                    </p>
-                  </div>
-                ))}
+              <div className="overflow-hidden rounded-2xl border border-gray-200 bg-[#fffdf8] shadow-sm my-8">
+                <table className="w-full text-left border-collapse">
+                  <thead className="bg-[#f4eee4]">
+                    <tr>
+                      <th className="p-4 text-xs uppercase tracking-[0.16em] text-charcoal">
+                        {t(`${ARTICLE_KEY}.cost_summary_headers.type`)}
+                      </th>
+                      <th className="p-4 text-xs uppercase tracking-[0.16em] text-charcoal">
+                        {t(`${ARTICLE_KEY}.cost_summary_headers.cost`)}
+                      </th>
+                      <th className="p-4 text-xs uppercase tracking-[0.16em] text-charcoal">
+                        {t(`${ARTICLE_KEY}.cost_summary_headers.driver`)}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {COST_KEYS.map((key) => (
+                      <tr key={key} className="border-t border-gray-200">
+                        <td className="p-4 align-top text-sm font-semibold text-charcoal">
+                          {t(`${ARTICLE_KEY}.cost_summary.${key}.title`)}
+                        </td>
+                        <td className="p-4 align-top text-sm font-semibold text-gray-800 whitespace-nowrap">
+                          {t(`${ARTICLE_KEY}.cost_summary.${key}.range`)}
+                        </td>
+                        <td className="p-4 align-top text-sm leading-7 text-gray-600">
+                          {t(`${ARTICLE_KEY}.cost_summary.${key}.note`)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
 
               <div className="rounded-2xl border-l-4 border-gold bg-[#fbf6ec] p-6 my-8">
@@ -482,6 +590,22 @@ export default function CommercialRenovationCostSingapore() {
               <p className="text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
                 {renderStrongHtml(t(`${ARTICLE_KEY}.quick_p2`) as string)}
               </p>
+
+              <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-gold/30 bg-[#fbf6ec] p-6">
+                <p className="text-charcoal text-sm md:text-base leading-7 mb-0">
+                  {t(`${ARTICLE_KEY}.cta_mid1_text`)}
+                </p>
+                <a
+                  href={ctaTop.url}
+                  onClick={ctaTop.onClick}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gold px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white hover:bg-gold-hover transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  {t(`${ARTICLE_KEY}.cta_mid1_button`)}
+                </a>
+              </div>
             </section>
 
             <section className="mb-16">
@@ -713,6 +837,25 @@ export default function CommercialRenovationCostSingapore() {
                   </div>
                 ))}
               </div>
+
+              <div className="mt-8 rounded-3xl bg-[#151515] text-white p-6 md:p-8">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-5">
+                  <div>
+                    <p className="font-serif text-xl mb-2">{t(`${ARTICLE_KEY}.cta_mid2_title`)}</p>
+                    <p className="text-gray-300 text-sm leading-7 mb-0">{t(`${ARTICLE_KEY}.cta_mid2_text`)}</p>
+                  </div>
+                  <a
+                    href={ctaMistakes.url}
+                    onClick={ctaMistakes.onClick}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gold px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white hover:bg-gold-hover transition-colors"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    {t(`${ARTICLE_KEY}.cta_mid2_button`)}
+                  </a>
+                </div>
+              </div>
             </section>
 
             <section className="mb-16">
@@ -770,26 +913,35 @@ export default function CommercialRenovationCostSingapore() {
               <p className="text-xs uppercase tracking-[0.22em] text-gold font-bold mb-3">
                 {t(`${ARTICLE_KEY}.related_label`)}
               </p>
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-5">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-charcoal mb-4">
                 {t(`${ARTICLE_KEY}.related_title`)}
               </h2>
-              <div className="space-y-5 text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
-                <p>
-                  <Link
-                    to="/insights/office-renovation-cost-singapore"
-                    className="text-charcoal font-semibold underline underline-offset-4 hover:text-gold transition-colors"
-                  >
-                    {extractTaggedText(t(`${ARTICLE_KEY}.related_office_cost`) as string, 'officeCostLink')}
-                  </Link>
-                </p>
-                <p>
-                  <Link
-                    to="/insights/office-renovation-timeline-singapore"
-                    className="text-charcoal font-semibold underline underline-offset-4 hover:text-gold transition-colors"
-                  >
-                    {extractTaggedText(t(`${ARTICLE_KEY}.related_office_timeline`) as string, 'officeTimelineLink')}
-                  </Link>
-                </p>
+              <p className="text-gray-600 leading-8 mb-6">{t(`${ARTICLE_KEY}.related_intro`)}</p>
+              <div className="grid gap-3 md:grid-cols-2 text-gray-600 text-base md:text-[1.05rem] leading-[1.85]">
+                <Link
+                  to="/insights/office-renovation-cost-singapore"
+                  className="rounded-2xl border border-gray-200 bg-white px-5 py-4 text-charcoal font-semibold hover:border-gold hover:text-gold transition-colors"
+                >
+                  {extractTaggedText(t(`${ARTICLE_KEY}.related_office_cost`) as string, 'officeCostLink')}
+                </Link>
+                <Link
+                  to="/insights/office-renovation-timeline-singapore"
+                  className="rounded-2xl border border-gray-200 bg-white px-5 py-4 text-charcoal font-semibold hover:border-gold hover:text-gold transition-colors"
+                >
+                  {extractTaggedText(t(`${ARTICLE_KEY}.related_office_timeline`) as string, 'officeTimelineLink')}
+                </Link>
+                <Link
+                  to="/commercial/reinstatement"
+                  className="rounded-2xl border border-gray-200 bg-white px-5 py-4 text-charcoal font-semibold hover:border-gold hover:text-gold transition-colors"
+                >
+                  {extractTaggedText(t(`${ARTICLE_KEY}.related_reinstatement`) as string, 'reinstatementLink')}
+                </Link>
+                <Link
+                  to="/commercial"
+                  className="rounded-2xl border border-gray-200 bg-white px-5 py-4 text-charcoal font-semibold hover:border-gold hover:text-gold transition-colors"
+                >
+                  {extractTaggedText(t(`${ARTICLE_KEY}.related_services`) as string, 'commercialServicesLink')}
+                </Link>
               </div>
             </section>
 
@@ -813,6 +965,22 @@ export default function CommercialRenovationCostSingapore() {
                   </details>
                 ))}
               </div>
+
+              <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-gold/30 bg-[#fbf6ec] p-6">
+                <p className="text-charcoal text-sm md:text-base leading-7 mb-0">
+                  {t(`${ARTICLE_KEY}.cta_mid3_text`)}
+                </p>
+                <a
+                  href={ctaFaq.url}
+                  onClick={ctaFaq.onClick}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gold px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white hover:bg-gold-hover transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  {t(`${ARTICLE_KEY}.cta_mid3_button`)}
+                </a>
+              </div>
             </section>
 
             <section className="rounded-3xl bg-[#151515] text-white p-7 md:p-10">
@@ -824,13 +992,27 @@ export default function CommercialRenovationCostSingapore() {
                   <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-3">
                     {t(`${ARTICLE_KEY}.cta_title`)}
                   </h2>
-                  <p className="text-gray-300 leading-8 mb-0">{t(`${ARTICLE_KEY}.cta_text`)}</p>
+                  <p className="text-gray-300 leading-8 mb-5">{t(`${ARTICLE_KEY}.cta_text`)}</p>
+                  <div className="rounded-2xl border border-white/15 bg-white/5 p-5">
+                    <p className="text-sm font-bold uppercase tracking-[0.16em] text-gold mb-3">
+                      {t(`${ARTICLE_KEY}.cta_checklist_title`)}
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-300">
+                      {KEYS_3.map((key) => (
+                        <li key={key} className="flex gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-gold mt-1 flex-shrink-0" />
+                          <span>{t(`${ARTICLE_KEY}.cta_checklist.${key}`)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 mt-7">
                 <a
-                  href="https://wa.me/6598333085?text=Hi%20ID%20Work%20Studio%2C%20I%20would%20like%20to%20check%20commercial%20renovation%20cost%20for%20my%20unit."
+                  href={ctaFinal.url}
+                  onClick={ctaFinal.onClick}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white hover:bg-gold-hover transition-colors"
@@ -840,7 +1022,7 @@ export default function CommercialRenovationCostSingapore() {
                 </a>
 
                 <Link
-                  to="/renovation-cost-calculator"
+                  to="/commercial/reinstatement"
                   className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white hover:bg-white hover:text-charcoal transition-colors"
                 >
                   {t(`${ARTICLE_KEY}.cta_calculator`)}
@@ -856,6 +1038,17 @@ export default function CommercialRenovationCostSingapore() {
             </section>
           </div>
         </article>
+
+        <a
+          href={ctaSticky.url}
+          onClick={ctaSticky.onClick}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-gold px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-lg hover:bg-gold-hover transition-colors md:bottom-8 md:right-8"
+        >
+          <MessageCircle className="w-4 h-4" />
+          {t(`${ARTICLE_KEY}.sticky_button_label`)}
+        </a>
       </div>
     </>
   );
