@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ShieldCheck, FileCheck, Clock, HardHat, LayoutPanelLeft, Zap, Ruler, PenTool, Search, FileText, Hammer, CheckCircle2, Building2, AlertTriangle, ArrowRight } from 'lucide-react';
 
 export default function OfficeRenovation() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const p = 'office_reno_page';
   const whatsappLink = `https://wa.me/6598333085?text=Hi%20ID%20Work%20Studio,%20I'd%20like%20a%20free%20site%20survey%20for%20office%20renovation.`;
 
@@ -29,6 +29,191 @@ export default function OfficeRenovation() {
   const processIcons = [<Search className="text-dark-charcoal" size={24}/>, <FileText className="text-dark-charcoal" size={24}/>, <Hammer className="text-dark-charcoal" size={24}/>, <CheckCircle2 className="text-dark-charcoal" size={24}/>];
   const relatedKeys = ["retail","shophouse","compliance","reinstatement"];
   const relatedLinks = ["/commercial/retail-mall-renovation","/commercial/shophouse-renovation","/commercial/permits-compliance","/commercial/reinstatement"];
+
+  const lang = i18n.language === 'zh' ? 'zh' : 'en';
+  const content = {
+    en: {
+      planning: {
+        eyebrow: 'Before You Renovate', serif: 'Office Renovation', bold: 'Checks That Affect Cost, Approval & Timeline',
+        p1: 'A good office renovation quotation should not start with carpentry colours or ceiling design. It should start with whether the unit, building rules, authority requirements and M&E capacity can support the way your office needs to operate.',
+        p2: 'This is where many commercial projects become expensive later: the first quotation looks acceptable, but the site conditions, landlord requirements, fire safety impact or electrical load were not checked early enough.',
+        cards: [
+          ['1. Confirm the office use before committing to lease or renovation','If the premises are not already approved for your intended office use, check whether a change of use or lodgment applies before signing off the renovation direction. This matters especially when the space includes training rooms, clinics, showrooms, customer-facing areas or mixed business functions.','Practical next step: ask for the approved use, floor plan, landlord fit-out guide and any existing approval records before design starts.'],
+          ['2. Check fire safety impact before changing partitions and exits','Office partitions, meeting rooms, server rooms, doors, escape routes, fire-rated elements and ceiling works can affect fire safety compliance. When fire safety works are involved, submissions may need to be handled by a Qualified Person rather than treated as simple decoration.','Practical next step: identify whether the proposed layout affects exit access, fire alarm devices, sprinklers, fire hose reels, emergency lighting or fire-rated construction.'],
+          ['3. Verify electrical load before adding workstations and equipment','A modern office may need more than standard power points. Workstations, server racks, pantry appliances, meeting room screens, access control, printers and air-conditioning equipment can change the electrical requirement. This should be checked before finalising layout and quotation.','Practical next step: prepare a simple equipment list and workstation count so the electrical scope can be planned with the correct Licensed Electrical Worker involvement where required.'],
+          ['4. Compare quotations by scope clarity, not only by price per square foot','Office renovation cost can look similar on the surface but differ heavily in partition specification, ceiling works, flooring preparation, data cabling, M&E works, after-hours restrictions, protection works, reinstatement responsibility and authority submissions.','Practical next step: request a line-item quotation that separates builder works, M&E, authority submission, landlord requirements, optional upgrades and exclusions.']
+        ],
+        noteTitle: 'Consultant note', note: 'For office renovation, the safest sequence is: confirm use, check building and landlord rules, review fire safety and M&E constraints, then finalise layout and quotation. This prevents a cheap initial estimate from becoming a delayed or heavily varied project later.'
+      },
+      quotation: {
+        eyebrow: 'Quotation Review', serif: 'Compare Office Renovation Quotations', bold: 'Before You Compare the Final Price',
+        p1: 'Two office renovation quotations can look like they are pricing the same project, but they may be based on very different assumptions. One contractor may include after-hours work, protection, M&E coordination and authority submission support. Another may price only the visible builder works and leave the rest as exclusions or provisional sums.',
+        p2: 'The safest way to compare office renovation contractors is not to ask, “Who is cheaper?” first. Ask, “Are they pricing the same scope, same specification, same restrictions and same handover obligations?” That is how commercial clients avoid variation orders after work has started.',
+        adviceTitle: "Consultant's advice", advice: 'Before awarding an office renovation project, request a quotation comparison that separates builder works, M&E works, authority or landlord submission, protection works, after-hours assumptions, reinstatement obligations, provisional sums and exclusions. If these items are not separated, the lowest quotation may only be the lowest because important work has not been priced yet.',
+        costCta: 'Read Commercial Cost Guide', timelineCta: 'Check Office Timeline',
+        cards: [
+          ['1. Compare scope before comparing price','Check whether demolition, partition, ceiling, flooring preparation, painting, carpentry, lighting, power points, data cabling, air-conditioning coordination, fire protection adjustment, disposal and final cleaning are all included. A cheaper quotation is not cheaper if several necessary scopes are missing.','Practical next step: put quotations side by side and mark every item as included, excluded, provisional or unclear.'],
+          ['2. Watch provisional sums and vague allowances','Provisional sums are sometimes necessary when site conditions are not fully known, but too many provisional items reduce cost certainty. Common examples include electrical upgrading, air-conditioning modification, ceiling repair, fire safety works, landlord requirements and night-work charges.','Practical next step: ask which provisional sums are likely to change after site inspection, landlord review or authority submission.'],
+          ['3. Compare specifications, not descriptions','Descriptions such as “partition”, “vinyl flooring”, “glass door” or “office lighting” are not enough. Commercial specifications should clarify partition type, board thickness, acoustic requirement, flooring thickness, ceiling system, lighting model, glass thickness, ironmongery and finish quality.','Practical next step: request the specification behind each major item, not only the item name.'],
+          ['4. Check M&E assumptions early','Office renovation costs often change when the existing electrical capacity, distribution board, air-conditioning layout, sprinkler positions, fire alarm devices, emergency lighting or data requirements are reviewed properly. These items affect cost, approval, timeline and handover readiness.','Practical next step: provide workstation count, equipment list, server or network requirements, pantry appliance list and meeting room technology needs before final quotation.'],
+          ['5. Confirm building and handover restrictions','Many commercial buildings have fitting-out rules that affect pricing: working hours, noisy work windows, lift booking, loading bay access, protection requirements, deposit conditions, insurance documents and handover checks. These restrictions can change manpower planning and project duration.','Practical next step: obtain the landlord or MCST fitting-out guide before comparing quotations.']
+        ]
+      },
+      hidden: {
+        eyebrow: 'Cost Risk', serif: 'Hidden Cost Drivers', bold: 'That Commonly Affect Office Renovation',
+        p1: 'Office renovation costs rarely increase because of one decorative item alone. The larger cost movements usually come from site constraints, M&E assumptions, authority requirements, landlord rules or work that was not visible during the first discussion.',
+        p2: 'These items should be clarified before a quotation is accepted, especially when the project has a fixed move-in date or business downtime cost.',
+        cards: [
+          ['Existing electrical capacity and distribution board condition','If the office needs more workstations, pantry equipment, meeting room screens, server equipment or access control, the existing electrical capacity may not be enough. Upgrading or rebalancing electrical works can affect cost and timeline.'],
+          ['Air-conditioning and ceiling coordination','Changing meeting rooms, enclosed offices or ceiling layout can affect air-conditioning distribution, access panels, condensate piping, diffuser positions and ceiling works. These items are often missed when only furniture layout is discussed.'],
+          ['Fire safety devices and escape route impact','New partitions, doors, enclosed rooms or ceiling works may affect sprinklers, detectors, fire alarm devices, exit signs, emergency lighting or escape access. If fire safety works are affected, additional professional coordination may be required.'],
+          ['Building management restrictions','Lift booking, loading bay hours, noisy work windows, protection requirements, insurance documents and security registration can all affect manpower planning. These restrictions may also create after-hours or weekend work costs.'],
+          ['Existing site condition and making-good works','Old flooring adhesive, uneven slabs, damaged ceiling grids, concealed defects, previous tenant works and landlord handover requirements can create additional preparation or making-good works after site inspection.']
+        ],
+        noteTitle: 'Consultant note', note: 'If a quotation looks unusually low, check whether these risk items are included, excluded, provisional or not mentioned. A clear quotation reduces dispute risk more than a short quotation with a low total.'
+      },
+      officePlan: {
+        eyebrow: 'Before Layout Approval', serif: 'Plan the Office Around Work', bold: 'Not Around Furniture Alone',
+        p1: 'A functional office renovation starts with how the business works every day. Furniture layout is only one layer. The more important question is how staff, clients, managers, storage, meetings, equipment, sound and privacy need to interact.',
+        p2: 'When these decisions are delayed, the renovation programme becomes unstable because partitions, electrical points, data points, lighting, air-conditioning and furniture orders all depend on the approved layout.',
+        cards: [
+          ['1. Confirm departments and workflow first','Map which teams need to sit together, which teams need privacy, who receives clients, who handles confidential discussions and which areas need quick access to printers, storage or pantry. This avoids rebuilding the layout after the first draft.'],
+          ['2. Decide enclosed rooms before M&E planning','Meeting rooms, director rooms, phone booths, server rooms and training rooms affect partitions, glass, doors, air-conditioning, sprinklers, lighting, acoustic treatment and data cabling. These rooms should be confirmed before detailed costing.'],
+          ['3. Plan power and data from actual working behaviour','Do not count power points only by desk quantity. Consider monitors, docking stations, printers, meeting screens, AV equipment, pantry appliances, access control, server equipment and future hires. Under-planning this area causes expensive rework.'],
+          ['4. Allow for growth, not only current headcount','A layout that fits today but has no expansion logic can become obsolete quickly. Where possible, plan spare power capacity, flexible seating, modular furniture, adaptable meeting rooms and storage that can grow with the team.']
+        ],
+        noteTitle: 'Consultant note', note: 'Before approving any office renovation layout, confirm workflow, room functions, headcount, equipment list and future growth assumptions. That gives the contractor a stable base for quotation, timeline and technical coordination.'
+      },
+      specs: {
+        eyebrow: 'Specification Quality', serif: 'Office Renovation Specifications', bold: 'That Affect Durability and Handover Quality',
+        p1: 'Office renovation specifications should not be vague. Commercial spaces receive heavier use than most homes, so the details behind partitions, flooring, ceiling, lighting, glass, doors and M&E coordination affect durability, maintenance and long-term cost.',
+        p2: 'A professional quotation should make these specifications visible enough for the client to compare quality, not only total price.',
+        rows: [
+          ['Partition systems','Check board type, thickness, insulation, height, acoustic expectation, fire-rated requirement where applicable, door frame coordination and whether the partition stops at ceiling or slab level.'],
+          ['Ceiling systems','Clarify whether works involve existing ceiling repair, new grid ceiling, plasterboard ceiling, access panels, air-conditioning diffusers, sprinkler coordination, emergency lighting and maintenance access.'],
+          ['Flooring','Compare vinyl thickness, carpet tile grade, floor preparation, self-levelling, skirting, transition strips, adhesive type and suitability for office traffic. Cheap flooring may cost more if preparation is not included.'],
+          ['Lighting and power','Clarify lighting model, colour temperature, switching zones, emergency lighting impact, power point quantity, data point quantity, DB works and whether electrical works require Licensed Electrical Worker involvement.'],
+          ['Glass, doors and hardware','Check glass thickness, frame profile, film, lockset, door closer, acoustic expectation, safety requirement and whether hardware is commercial grade. These details affect daily use and maintenance.'],
+          ['Handover quality','Confirm testing, commissioning, touch-up, cleaning, defect rectification, as-built information, manuals and landlord handover requirements before work starts.']
+        ],
+        noteTitle: 'Consultant note', note: 'When comparing office renovation quotations, ask for the specification behind each major line item. A quotation that says “partition” or “lighting” without detail is not enough for a proper commercial comparison.'
+      },
+      journey: {
+        eyebrow: 'What To Do Next', serif: 'Office Renovation Decision Journey', bold: 'Choose the Right Next Step',
+        p1: 'Most business owners do not need more generic renovation information. They need to know what decision comes next. The right next step depends on whether you are still budgeting, comparing contractors, planning a move-in date or preparing to exit an existing office.',
+        cards: [
+          ['If you are still budgeting','Start with the commercial renovation cost guide before comparing contractors. This helps you understand typical cost drivers, why office quotations vary and what should be included before you ask for a site survey.','Commercial Renovation Cost','/insights/commercial-renovation-cost-singapore'],
+          ['If you are planning your move-in date','Read the office renovation timeline guide before committing to an opening date, lease date or staff relocation date. Timeline planning should happen before final contractor appointment.','Office Renovation Timeline','/insights/office-renovation-timeline-singapore'],
+          ['If you are leaving an existing office','Check commercial reinstatement requirements before you finalise the new renovation. Reinstatement obligations, landlord handover and lease-end deadlines can affect both budget and schedule.','Commercial Reinstatement','/commercial/reinstatement']
+        ],
+        noteTitle: 'Consultant note', note: 'If your office renovation involves a fixed move-in date, landlord approval, M&E changes or business downtime, the next step should be a scope review rather than a rough price request. A proper review gives you a clearer budget, timeline and approval path before work begins.',
+        cta: 'Discuss Office Renovation Scope'
+      },
+      geo: {
+        eyebrow: 'Direct Answer', serif: 'Office Renovation Singapore', bold: 'What Business Owners Should Know First',
+        intro: 'Office renovation in Singapore usually involves more than interior design. A proper project should consider approved use, landlord or MCST fitting-out rules, fire safety impact, electrical capacity, air-conditioning coordination, building access, renovation timeline, reinstatement obligations and business continuity.',
+        rows: [
+          ['First decision','Confirm whether the premises, lease, landlord rules and approved use support your intended office operation before committing to design.'],
+          ['Main cost risk','The biggest cost differences usually come from M&E works, partition and ceiling changes, landlord requirements, after-hours work, authority submission support and unclear exclusions.'],
+          ['Main timeline risk','Timeline delays usually come from late layout decisions, building approval, fire safety coordination, electrical changes, long-lead materials, furniture delay and IT relocation.'],
+          ['Best next step','Prepare your floor plan, intended headcount, equipment list, landlord fitting-out guide and move-in target before requesting a detailed quotation.']
+        ],
+        quote: 'The right office renovation contractor should help you clarify scope, timeline, approvals and operational risk before asking you to commit to a final design direction.',
+        cta1: 'Estimate Commercial Renovation Cost', cta2: 'Plan Office Renovation Timeline', cta3: 'Discuss Scope With ID Work Studio'
+      }
+    },
+    zh: {
+      planning: {
+        eyebrow: '装修前先确认', serif: '办公室装修', bold: '会影响预算、审批与工期的关键检查',
+        p1: '一份可靠的办公室装修报价，不应该先从木色、天花造型或设计风格开始，而应该先确认这个单位、楼宇规定、相关审批要求和机电容量，是否能够支持你的办公室实际运作方式。',
+        p2: '很多商业装修后期变贵，并不是因为一开始设计得太复杂，而是因为第一次报价时没有及早检查现场条件、业主要求、消防影响或用电负荷。',
+        cards: [
+          ['1. 租下或装修前，先确认办公室用途','如果该单位还没有获准作为你计划中的办公室用途，应该先确认是否需要用途更改或申报，尤其是空间包含培训室、诊所、展示区、客户接待区或混合业务功能时。','实际下一步：在设计开始前，先向业主或管理方索取核准用途、平面图、装修手册和现有审批记录。'],
+          ['2. 改隔间和出口前，先检查消防影响','办公室隔间、会议室、服务器房、门、逃生路线、防火构件和天花工程，都可能影响消防合规。如果涉及消防安全工程，可能需要由合资格人士处理提交，而不能当成普通装饰工程。','实际下一步：先确认新布局是否影响出口通道、火警设备、喷淋、消防喉辘、紧急照明或防火结构。'],
+          ['3. 增加工位和设备前，先确认用电负荷','现代办公室需要的不只是普通插座。工位、服务器、茶水间电器、会议屏幕、门禁、打印机和冷气设备，都会影响用电需求。这个部分应在确定布局和报价前先检查。','实际下一步：准备设备清单和工位数量，让电力范围能在需要时配合持牌电工规划。'],
+          ['4. 比较报价时看范围清晰度，不只是每平方尺价格','办公室装修表面价格可能接近，但实际差异很大，例如隔间规格、天花工程、地面处理、数据布线、机电工程、非办公时间施工、保护工程、还原责任和审批提交是否包含。','实际下一步：要求逐项报价，把建筑工程、机电、审批、业主要求、可选升级和不包含项目分开列明。']
+        ],
+        noteTitle: '顾问提醒', note: '办公室装修最安全的顺序是：确认用途，检查楼宇和业主规则，审查消防与机电限制，然后才确定布局和报价。这样可以避免低价初步报价，最后变成延误和大量追加费用。'
+      },
+      quotation: {
+        eyebrow: '报价审核', serif: '比较办公室装修报价', bold: '先不要只比较最终总价',
+        p1: '两份办公室装修报价看起来可能是在报同一个项目，但背后的假设可能完全不同。一份报价可能包含非办公时间施工、现场保护、机电协调和审批协助；另一份可能只报看得见的建筑工程，把其他项目列为不包含或暂定金额。',
+        p2: '比较办公室装修承包商时，最安全的做法不是先问“谁比较便宜”，而是先问“他们是否在报同一个范围、同一个规格、同一个限制和同一个交付责任？” 这才是商业客户避免开工后追加费用的方法。',
+        adviceTitle: '顾问建议', advice: '在决定办公室装修承包商前，要求对方把建筑工程、机电工程、审批或业主提交、保护工程、非办公时间施工假设、还原责任、暂定金额和不包含项目分开列明。如果这些项目没有分开，最低报价可能只是因为很多必要工程还没有被报进去。',
+        costCta: '阅读商业装修费用指南', timelineCta: '查看办公室装修时间表',
+        cards: [
+          ['1. 先比较范围，再比较价格','确认拆除、隔间、天花、地面处理、油漆、木作、灯具、插座、数据布线、冷气协调、消防调整、清运和最终清洁是否包含。少了必要范围的报价，并不是真的便宜。','实际下一步：把报价并排比较，把每一项标为包含、不包含、暂定或不清楚。'],
+          ['2. 留意暂定金额和模糊 allowance','有些暂定金额在现场条件未明时是合理的，但太多暂定项目会降低成本确定性。常见例子包括电力升级、冷气修改、天花修补、消防工程、业主要求和夜间施工费。','实际下一步：询问哪些暂定金额最可能在现场检查、业主审核或审批提交后改变。'],
+          ['3. 比较规格，不只是项目名称','“隔间”“vinyl 地板”“玻璃门”“办公室灯具”这些描述并不足够。商业规格应说明隔间类型、板材厚度、隔音要求、地板厚度、天花系统、灯具型号、玻璃厚度、五金和饰面质量。','实际下一步：要求每个主要项目背后的具体规格，而不只是项目名称。'],
+          ['4. 尽早检查机电假设','当现有电力容量、配电箱、冷气布局、喷淋位置、火警设备、紧急照明或数据需求被认真审查后，办公室装修费用经常会改变。这些项目会影响成本、审批、工期和交付。','实际下一步：在最终报价前提供工位数量、设备清单、服务器或网络需求、茶水间电器和会议室科技需求。'],
+          ['5. 确认楼宇和交付限制','许多商业楼宇都有装修规则，会影响价格：施工时间、噪音工程时段、电梯预订、loading bay、保护要求、押金、保险文件和交付检查。这些限制会影响人手安排和工期。','实际下一步：在比较报价前，先取得业主或 MCST 的装修手册。']
+        ]
+      },
+      hidden: {
+        eyebrow: '成本风险', serif: '隐藏成本因素', bold: '常见影响办公室装修的项目',
+        p1: '办公室装修费用很少只是因为某一个装饰项目而大幅增加。真正造成较大变化的，通常是现场限制、机电假设、审批要求、业主规则，或第一次讨论时看不见的工程。',
+        p2: '这些项目应该在接受报价前确认，尤其是项目有固定搬入日期或停业成本时。',
+        cards: [
+          ['现有电力容量和配电箱状态','如果办公室需要更多工位、茶水间设备、会议屏幕、服务器、门禁或其他设备，现有电力容量可能不足。升级或重新分配电力会影响费用和工期。'],
+          ['冷气与天花协调','更改会议室、独立办公室或天花布局，可能影响冷气送风、检修口、冷凝水管、风口位置和天花工程。只讨论家具布局时，这些项目很容易被忽略。'],
+          ['消防设备和逃生路线影响','新隔间、门、封闭房间或天花工程，可能影响喷淋、探测器、火警设备、出口灯、紧急照明或逃生通道。若涉及消防安全工程，可能需要额外专业协调。'],
+          ['楼宇管理限制','电梯预订、loading bay 时间、噪音工程时段、现场保护、保险文件和保安登记，都会影响人手安排，也可能产生非办公时间或周末施工成本。'],
+          ['现有现场状况和修补工程','旧地板胶、地面不平、天花损坏、隐藏缺陷、前租户工程和业主交付要求，都可能在现场检查后产生额外准备或修补工程。']
+        ],
+        noteTitle: '顾问提醒', note: '如果一份报价明显偏低，要检查这些风险项目是包含、不包含、暂定，还是完全没有提到。清楚的报价比低总价但范围简短的报价，更能降低争议风险。'
+      },
+      officePlan: {
+        eyebrow: '布局确认前', serif: '办公室要围绕工作方式规划', bold: '不能只围绕家具摆放',
+        p1: '实用的办公室装修，应从企业每天如何运作开始。家具布局只是其中一层，更重要的是员工、客户、管理层、储物、会议、设备、声音和隐私之间如何配合。',
+        p2: '这些决定一旦拖延，装修进度就会不稳定，因为隔间、插座、数据点、灯光、冷气和家具下单，都依赖已确认的布局。',
+        cards: [
+          ['1. 先确认部门和工作流程','先规划哪些团队需要坐在一起，哪些团队需要隐私，谁接待客户，谁处理机密讨论，哪些区域需要接近打印机、储物或茶水间。这样可以避免第一版布局后又大改。'],
+          ['2. 机电规划前先决定封闭房间','会议室、老板房、电话间、服务器房和培训室，会影响隔间、玻璃、门、冷气、喷淋、灯光、隔音和数据布线。这些房间应在详细报价前确认。'],
+          ['3. 根据实际工作行为规划电源和数据','不要只按桌子数量计算插座。还要考虑显示器、扩展坞、打印机、会议屏幕、影音设备、茶水间电器、门禁、服务器和未来员工。这个部分规划不足，后期返工会很贵。'],
+          ['4. 预留增长，而不只是当前人数','一个只适合今天人数、没有扩展逻辑的布局，很快会过时。可以的话，应规划备用电力容量、灵活座位、模块化家具、可调整会议室和可扩展储物。']
+        ],
+        noteTitle: '顾问提醒', note: '批准办公室装修布局前，先确认工作流程、房间功能、人数、设备清单和未来增长假设。这样承包商才能更稳定地报价、排期和协调技术细节。'
+      },
+      specs: {
+        eyebrow: '规格质量', serif: '办公室装修规格', bold: '会影响耐用度和交付质量',
+        p1: '办公室装修规格不能模糊。商业空间的使用强度通常比住宅高，所以隔间、地板、天花、灯光、玻璃、门和机电协调的细节，会影响耐用度、维修和长期成本。',
+        p2: '专业报价应把这些规格写得足够清楚，让客户比较质量，而不是只比较总价。',
+        rows: [
+          ['隔间系统','检查板材类型、厚度、隔音棉、高度、隔音要求、适用时的防火要求、门框协调，以及隔间是做到天花还是楼板。'],
+          ['天花系统','确认是现有天花修补、新 grid ceiling、石膏板天花、检修口、冷气风口、喷淋协调、紧急照明和维修通道。'],
+          ['地板','比较 vinyl 厚度、方块地毯等级、地面处理、自流平、踢脚线、收口条、胶水类型和是否适合办公室人流。若地面准备未包含，便宜地板反而可能更贵。'],
+          ['灯光与电源','确认灯具型号、色温、开关分区、紧急照明影响、插座数量、数据点数量、配电箱工程，以及是否需要持牌电工参与。'],
+          ['玻璃、门和五金','检查玻璃厚度、框料、贴膜、锁具、闭门器、隔音期望、安全要求，以及五金是否为商业等级。这些细节会影响日常使用和维护。'],
+          ['交付质量','开工前确认测试、调试、修补、清洁、缺陷处理、竣工资料、说明书和业主交付要求。']
+        ],
+        noteTitle: '顾问提醒', note: '比较办公室装修报价时，应要求每个主要项目背后的规格。只写“隔间”或“灯具”的报价，不足以进行商业项目比较。'
+      },
+      journey: {
+        eyebrow: '下一步怎么做', serif: '办公室装修决策路径', bold: '选择正确的下一步',
+        p1: '大多数企业主需要的不是更多普通装修资讯，而是知道下一个该做什么决定。正确的下一步，取决于你还在预算阶段、比较承包商、规划搬入日期，还是准备退出旧办公室。',
+        cards: [
+          ['如果你还在预算阶段','先阅读商业装修费用指南，再比较承包商。这样可以了解常见成本因素、为什么办公室报价差异大，以及安排现场勘查前应包含哪些项目。','商业装修费用','/insights/commercial-renovation-cost-singapore'],
+          ['如果你正在规划搬入日期','在承诺开业日期、租约日期或员工搬迁日期前，先阅读办公室装修时间表。工期规划应在最终委任承包商前完成。','办公室装修时间表','/insights/office-renovation-timeline-singapore'],
+          ['如果你要退出现有办公室','在确定新办公室装修前，先检查商业还原要求。还原责任、业主交付和租约结束期限，会同时影响预算和工期。','商业还原','/commercial/reinstatement']
+        ],
+        noteTitle: '顾问提醒', note: '如果你的办公室装修涉及固定搬入日期、业主审批、机电更改或营业停顿，下一步不应该只是问一个大概价格，而应该先做范围审核。正确的审核能在开工前给你更清楚的预算、工期和审批路径。',
+        cta: '讨论办公室装修范围'
+      },
+      geo: {
+        eyebrow: '直接答案', serif: '新加坡办公室装修', bold: '企业主应先知道什么',
+        intro: '新加坡办公室装修通常不只是室内设计。一个完整项目应考虑核准用途、业主或 MCST 装修规定、消防影响、电力容量、冷气协调、楼宇通行、装修工期、还原责任和业务连续性。',
+        rows: [
+          ['第一个决定','在确定设计前，先确认单位、租约、业主规则和核准用途，是否支持你的办公室实际运作。'],
+          ['主要成本风险','最大的费用差异通常来自机电工程、隔间和天花变化、业主要求、非办公时间施工、审批协助和不清楚的不包含项目。'],
+          ['主要工期风险','常见延误来自布局决定太迟、楼宇审批、消防协调、电力更改、长交期材料、家具延误和 IT 搬迁。'],
+          ['最佳下一步','在要求详细报价前，准备平面图、预计人数、设备清单、业主装修手册和目标搬入日期。']
+        ],
+        quote: '合适的办公室装修承包商，应在你承诺最终设计前，先帮你理清范围、工期、审批和营运风险。',
+        cta1: '估算商业装修费用', cta2: '规划办公室装修时间表', cta3: '与 ID Work Studio 讨论范围'
+      }
+    }
+  };
+  const c = content[lang];
 
   return (
     <>
@@ -111,98 +296,41 @@ export default function OfficeRenovation() {
         </section>
 
 
+
         {/* OFFICE RENOVATION PLANNING CHECKS */}
         <section className="py-24 bg-off-white border-y border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-14 items-start">
               <div className="lg:sticky lg:top-28">
-                <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">Before You Renovate</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">{c.planning.eyebrow}</p>
                 <h2 className="text-3xl md:text-5xl leading-tight mb-6 flex flex-col">
-                  <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">Office Renovation</span>
-                  <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">Checks That Affect Cost, Approval & Timeline</span>
+                  <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">{c.planning.serif}</span>
+                  <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">{c.planning.bold}</span>
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  A good office renovation quotation should not start with carpentry colours or ceiling design. It should start with whether the unit, building rules, authority requirements and M&amp;E capacity can support the way your office needs to operate.
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  This is where many commercial projects become expensive later: the first quotation looks acceptable, but the site conditions, landlord requirements, fire safety impact or electrical load were not checked early enough.
-                </p>
+                <p className="text-gray-600 leading-relaxed mb-6">{c.planning.p1}</p>
+                <p className="text-gray-600 leading-relaxed">{c.planning.p2}</p>
               </div>
 
               <div className="space-y-5">
-                <div className="bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">
-                      <Building2 size={22}/>
+                {c.planning.cards.map((item, i) => {
+                  const icons = [<Building2 size={22}/>, <FileCheck size={22}/>, <Zap size={22}/>, <Ruler size={22}/>];
+                  return (
+                    <div key={i} className="bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
+                      <div className="flex items-start gap-4">
+                        <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">{icons[i]}</div>
+                        <div>
+                          <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item[0]}</h3>
+                          <p className="text-gray-600 text-sm leading-relaxed">{item[1]}</p>
+                          <p className="text-gray-500 text-xs leading-relaxed mt-3">{item[2]}</p>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">1. Confirm the office use before committing to lease or renovation</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        If the premises are not already approved for your intended office use, check whether a change of use or lodgment applies before signing off the renovation direction. This matters especially when the space includes training rooms, clinics, showrooms, customer-facing areas or mixed business functions.
-                      </p>
-                      <p className="text-gray-500 text-xs leading-relaxed mt-3">
-                        Practical next step: ask for the approved use, floor plan, landlord fit-out guide and any existing approval records before design starts.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">
-                      <FileCheck size={22}/>
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">2. Check fire safety impact before changing partitions and exits</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Office partitions, meeting rooms, server rooms, doors, escape routes, fire-rated elements and ceiling works can affect fire safety compliance. When fire safety works are involved, submissions may need to be handled by a Qualified Person rather than treated as simple decoration.
-                      </p>
-                      <p className="text-gray-500 text-xs leading-relaxed mt-3">
-                        Practical next step: identify whether the proposed layout affects exit access, fire alarm devices, sprinklers, fire hose reels, emergency lighting or fire-rated construction.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">
-                      <Zap size={22}/>
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">3. Verify electrical load before adding workstations and equipment</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        A modern office may need more than standard power points. Workstations, server racks, pantry appliances, meeting room screens, access control, printers and air-conditioning equipment can change the electrical requirement. This should be checked before finalising layout and quotation.
-                      </p>
-                      <p className="text-gray-500 text-xs leading-relaxed mt-3">
-                        Practical next step: prepare a simple equipment list and workstation count so the electrical scope can be planned with the correct Licensed Electrical Worker involvement where required.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">
-                      <Ruler size={22}/>
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">4. Compare quotations by scope clarity, not only by price per square foot</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Office renovation cost can look similar on the surface but differ heavily in partition specification, ceiling works, flooring preparation, data cabling, M&amp;E works, after-hours restrictions, protection works, reinstatement responsibility and authority submissions.
-                      </p>
-                      <p className="text-gray-500 text-xs leading-relaxed mt-3">
-                        Practical next step: request a line-item quotation that separates builder works, M&amp;E, authority submission, landlord requirements, optional upgrades and exclusions.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
 
                 <div className="rounded-2xl border border-gold/30 bg-gold/10 p-7">
-                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">Consultant note</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    For office renovation, the safest sequence is: confirm use, check building and landlord rules, review fire safety and M&amp;E constraints, then finalise layout and quotation. This prevents a cheap initial estimate from becoming a delayed or heavily varied project later.
-                  </p>
+                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{c.planning.noteTitle}</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">{c.planning.note}</p>
                 </div>
               </div>
             </div>
@@ -215,85 +343,48 @@ export default function OfficeRenovation() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.95fr] gap-14 items-start">
               <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">Quotation Review</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">{c.quotation.eyebrow}</p>
                 <h2 className="text-3xl md:text-5xl leading-tight mb-6 flex flex-col">
-                  <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">Compare Office Renovation Quotations</span>
-                  <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">Before You Compare the Final Price</span>
+                  <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">{c.quotation.serif}</span>
+                  <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">{c.quotation.bold}</span>
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  Two office renovation quotations can look like they are pricing the same project, but they may be based on very different assumptions. One contractor may include after-hours work, protection, M&amp;E coordination and authority submission support. Another may price only the visible builder works and leave the rest as exclusions or provisional sums.
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  The safest way to compare office renovation contractors is not to ask, “Who is cheaper?” first. Ask, “Are they pricing the same scope, same specification, same restrictions and same handover obligations?” That is how commercial clients avoid variation orders after work has started.
-                </p>
+                <p className="text-gray-600 leading-relaxed mb-6">{c.quotation.p1}</p>
+                <p className="text-gray-600 leading-relaxed mb-8">{c.quotation.p2}</p>
 
                 <div className="rounded-2xl border border-gold/30 bg-gold/10 p-7">
-                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-4">Consultant's advice</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-5">
-                    Before awarding an office renovation project, request a quotation comparison that separates builder works, M&amp;E works, authority or landlord submission, protection works, after-hours assumptions, reinstatement obligations, provisional sums and exclusions. If these items are not separated, the lowest quotation may only be the lowest because important work has not been priced yet.
-                  </p>
+                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-4">{c.quotation.adviceTitle}</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-5">{c.quotation.advice}</p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Link to="/insights/commercial-renovation-cost-singapore" className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 px-5 py-3 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:bg-gold hover:text-dark-charcoal transition-colors">
-                      Read Commercial Cost Guide <ArrowRight size={14}/>
+                      {c.quotation.costCta} <ArrowRight size={14}/>
                     </Link>
                     <Link to="/insights/office-renovation-timeline-singapore" className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 px-5 py-3 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:bg-gold hover:text-dark-charcoal transition-colors">
-                      Check Office Timeline <ArrowRight size={14}/>
+                      {c.quotation.timelineCta} <ArrowRight size={14}/>
                     </Link>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-5">
-                {[
-                  {
-                    icon: <Search size={22}/>,
-                    title: '1. Compare scope before comparing price',
-                    body: 'Check whether demolition, partition, ceiling, flooring preparation, painting, carpentry, lighting, power points, data cabling, air-conditioning coordination, fire protection adjustment, disposal and final cleaning are all included. A cheaper quotation is not cheaper if several necessary scopes are missing.',
-                    next: 'Practical next step: put quotations side by side and mark every item as included, excluded, provisional or unclear.'
-                  },
-                  {
-                    icon: <FileText size={22}/>,
-                    title: '2. Watch provisional sums and vague allowances',
-                    body: 'Provisional sums are sometimes necessary when site conditions are not fully known, but too many provisional items reduce cost certainty. Common examples include electrical upgrading, air-conditioning modification, ceiling repair, fire safety works, landlord requirements and night-work charges.',
-                    next: 'Practical next step: ask which provisional sums are likely to change after site inspection, landlord review or authority submission.'
-                  },
-                  {
-                    icon: <Ruler size={22}/>,
-                    title: '3. Compare specifications, not descriptions',
-                    body: 'Descriptions such as “partition”, “vinyl flooring”, “glass door” or “office lighting” are not enough. Commercial specifications should clarify partition type, board thickness, acoustic requirement, flooring thickness, ceiling system, lighting model, glass thickness, ironmongery and finish quality.',
-                    next: 'Practical next step: request the specification behind each major item, not only the item name.'
-                  },
-                  {
-                    icon: <Zap size={22}/>,
-                    title: '4. Check M&E assumptions early',
-                    body: 'Office renovation costs often change when the existing electrical capacity, distribution board, air-conditioning layout, sprinkler positions, fire alarm devices, emergency lighting or data requirements are reviewed properly. These items affect cost, approval, timeline and handover readiness.',
-                    next: 'Practical next step: provide workstation count, equipment list, server or network requirements, pantry appliance list and meeting room technology needs before final quotation.'
-                  },
-                  {
-                    icon: <Building2 size={22}/>,
-                    title: '5. Confirm building and handover restrictions',
-                    body: 'Many commercial buildings have fitting-out rules that affect pricing: working hours, noisy work windows, lift booking, loading bay access, protection requirements, deposit conditions, insurance documents and handover checks. These restrictions can change manpower planning and project duration.',
-                    next: 'Practical next step: obtain the landlord or MCST fitting-out guide before comparing quotations.'
-                  }
-                ].map((item, i)=>(
-                  <div key={i} className="bg-off-white border border-gray-100 rounded-2xl p-7 hover:border-gold/30 transition-colors">
-                    <div className="flex items-start gap-4">
-                      <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item.title}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">{item.body}</p>
-                        <p className="text-gray-500 text-xs leading-relaxed mt-3">{item.next}</p>
+                {c.quotation.cards.map((item, i) => {
+                  const icons = [<Search size={22}/>, <FileText size={22}/>, <Ruler size={22}/>, <Zap size={22}/>, <Building2 size={22}/>];
+                  return (
+                    <div key={i} className="bg-off-white border border-gray-100 rounded-2xl p-7 hover:border-gold/30 transition-colors">
+                      <div className="flex items-start gap-4">
+                        <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">{icons[i]}</div>
+                        <div>
+                          <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item[0]}</h3>
+                          <p className="text-gray-600 text-sm leading-relaxed">{item[1]}</p>
+                          <p className="text-gray-500 text-xs leading-relaxed mt-3">{item[2]}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
         </section>
-
 
 
         {/* OFFICE RENOVATION HIDDEN COST DRIVERS */}
@@ -301,80 +392,34 @@ export default function OfficeRenovation() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-14 items-start">
               <div className="lg:sticky lg:top-28">
-                <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">Hidden Cost Drivers</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">{c.hidden.eyebrow}</p>
                 <h2 className="text-3xl md:text-5xl leading-tight mb-6 flex flex-col">
-                  <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">Why Office Renovation Costs Change</span>
-                  <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">After the First Quotation</span>
+                  <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">{c.hidden.serif}</span>
+                  <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">{c.hidden.bold}</span>
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  In office renovation, the biggest cost surprises usually do not come from choosing a nicer laminate or a more expensive carpet tile. They come from constraints that were not checked properly before the quotation was confirmed.
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  A responsible office renovation contractor should help you identify these risks early, especially when the layout affects fire safety, electrical load, air-conditioning, building management rules or after-hours work requirements.
-                </p>
-
-                <div className="rounded-2xl border border-gold/30 bg-white p-7 shadow-sm">
-                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-4">Consultant's advice</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    Before you sign, ask the contractor to separate confirmed works from risk items. If existing M&amp;E capacity, sprinkler positions, fire alarm devices, landlord rules and working-hour restrictions have not been reviewed, the quotation may look complete but still carry a high variation-order risk.
-                  </p>
-                </div>
+                <p className="text-gray-600 leading-relaxed mb-6">{c.hidden.p1}</p>
+                <p className="text-gray-600 leading-relaxed">{c.hidden.p2}</p>
               </div>
 
               <div className="space-y-5">
-                {[
-                  {
-                    icon: <Zap size={22}/>,
-                    title: 'Existing electrical capacity',
-                    body: 'More workstations, meeting room screens, pantry appliances, printers, server equipment and access-control systems can increase electrical demand. If the distribution board, isolators, loading or Licensed Electrical Worker requirements are only checked after award, cost and timeline can change.'
-                  },
-                  {
-                    icon: <LayoutPanelLeft size={22}/>,
-                    title: 'Air-conditioning and ceiling coordination',
-                    body: 'New rooms, full-height partitions, enclosed meeting spaces and revised ceiling layouts can affect air-conditioning distribution, return air paths, access panels and condensation risk. This is why layout planning should be coordinated before ceiling and partition pricing is finalised.'
-                  },
-                  {
-                    icon: <ShieldCheck size={22}/>,
-                    title: 'Fire safety impact',
-                    body: 'Partitions, enclosed rooms, exit routes, emergency lighting, fire alarm devices, sprinklers and fire-rated elements may trigger further review. Where fire safety works are affected, Qualified Person involvement and SCDF approval may be required before works can proceed.'
-                  },
-                  {
-                    icon: <Building2 size={22}/>,
-                    title: 'Building management restrictions',
-                    body: 'Office buildings often control work hours, noisy works, lift usage, loading bay access, protection requirements, insurance documents and deposits. These rules affect manpower planning, delivery sequence and whether some works must be done after hours.'
-                  },
-                  {
-                    icon: <HardHat size={22}/>,
-                    title: 'Existing site condition and making-good works',
-                    body: 'Old partitions, uneven floors, damaged ceiling grids, concealed services, previous tenant modifications and landlord handover requirements can create extra works. These are difficult to price accurately without site inspection, as-built information or building management clarification.'
-                  }
-                ].map((item, i)=>(
-                  <div key={i} className="bg-white border border-gray-100 rounded-2xl p-7 hover:border-gold/30 transition-colors shadow-sm">
-                    <div className="flex items-start gap-4">
-                      <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item.title}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">{item.body}</p>
+                {c.hidden.cards.map((item, i) => {
+                  const icons = [<Zap size={22}/>, <LayoutPanelLeft size={22}/>, <FileCheck size={22}/>, <Building2 size={22}/>, <HardHat size={22}/>];
+                  return (
+                    <div key={i} className="bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
+                      <div className="flex items-start gap-4">
+                        <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">{icons[i]}</div>
+                        <div>
+                          <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item[0]}</h3>
+                          <p className="text-gray-600 text-sm leading-relaxed">{item[1]}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
 
-                <div className="rounded-2xl border border-dark-charcoal/10 bg-dark-charcoal p-7 text-white">
-                  <h3 className="font-bold uppercase tracking-wide text-sm mb-3">What to do next</h3>
-                  <p className="text-white/70 text-sm leading-relaxed mb-5">
-                    If you are still budgeting, use the commercial renovation cost guide to understand likely cost ranges. If your lease date or move-in date is already fixed, check the office renovation timeline guide before confirming the renovation start date.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Link to="/insights/commercial-renovation-cost-singapore" className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:bg-gold/90 transition-colors">
-                      Cost Planning Guide <ArrowRight size={14}/>
-                    </Link>
-                    <Link to="/insights/office-renovation-timeline-singapore" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-5 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-white hover:text-dark-charcoal transition-colors">
-                      Timeline Guide <ArrowRight size={14}/>
-                    </Link>
-                  </div>
+                <div className="rounded-2xl border border-gold/30 bg-gold/10 p-7">
+                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{c.hidden.noteTitle}</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">{c.hidden.note}</p>
                 </div>
               </div>
             </div>
@@ -387,80 +432,34 @@ export default function OfficeRenovation() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-14 items-start">
               <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">Office Planning</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">{c.officePlan.eyebrow}</p>
                 <h2 className="text-3xl md:text-5xl leading-tight mb-6 flex flex-col">
-                  <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">Plan the Office Workflow</span>
-                  <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">Before Drawing the Layout</span>
+                  <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">{c.officePlan.serif}</span>
+                  <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">{c.officePlan.bold}</span>
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  A good office renovation is not only about making the workplace look newer. The layout must support how the business actually works: who needs quiet focus, who needs quick collaboration, where clients are received, where confidential discussions happen, and where future headcount can grow without another renovation too soon.
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  This planning stage affects almost every downstream cost item — partitions, doors, lighting, power points, data points, air-conditioning, meeting room technology, storage and fire safety review. If these decisions are made only after construction starts, the project usually becomes slower and more expensive.
-                </p>
-
+                <p className="text-gray-600 leading-relaxed mb-6">{c.officePlan.p1}</p>
+                <p className="text-gray-600 leading-relaxed mb-8">{c.officePlan.p2}</p>
                 <div className="rounded-2xl border border-gold/30 bg-gold/10 p-7">
-                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-4">Consultant's advice</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-5">
-                    Before requesting a final office renovation quotation, prepare a simple operational brief: current headcount, future headcount, team structure, meeting room requirements, pantry use, storage needs, IT equipment, visitor flow and move-in deadline. A contractor can price more accurately when the business workflow is clear.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Link to="/insights/office-renovation-timeline-singapore" className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 px-5 py-3 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:bg-gold hover:text-dark-charcoal transition-colors">
-                      Plan Renovation Timeline <ArrowRight size={14}/>
-                    </Link>
-                    <Link to="/commercial/reinstatement" className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 px-5 py-3 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:bg-gold hover:text-dark-charcoal transition-colors">
-                      Check Reinstatement Risk <ArrowRight size={14}/>
-                    </Link>
-                  </div>
+                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{c.officePlan.noteTitle}</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">{c.officePlan.note}</p>
                 </div>
               </div>
 
-              <div className="space-y-5">
-                {[
-                  {
-                    icon: <LayoutPanelLeft size={22}/>,
-                    title: '1. Map departments before placing desks',
-                    body: 'Start with how teams interact, not where furniture looks best. Sales, admin, finance, operations, management and client-facing staff may need different privacy, storage, access and acoustic conditions. A poor department layout creates daily friction long after the renovation is complete.',
-                    next: 'Practical next step: list each department, number of users, visitor interaction and whether they need quiet work or fast collaboration.'
-                  },
-                  {
-                    icon: <PenTool size={22}/>,
-                    title: '2. Decide which rooms must be enclosed',
-                    body: 'Enclosed meeting rooms, director rooms, phone booths, server rooms and storage rooms affect partition cost, door cost, air-conditioning distribution, emergency lighting, fire protection review and acoustic performance. Too many enclosed rooms can also make the office feel smaller and harder to cool.',
-                    next: 'Practical next step: separate rooms that are truly required from rooms that can be replaced by flexible open collaboration zones.'
-                  },
-                  {
-                    icon: <Zap size={22}/>,
-                    title: '3. Plan power, data and equipment together',
-                    body: 'Workstations, printers, server racks, meeting room screens, access control, pantry appliances and video-conference systems should be planned before the electrical and data quotation is confirmed. EMA advises that electrical work at offices should be carried out or supervised by a Licensed Electrical Worker.',
-                    next: 'Practical next step: prepare workstation count, equipment list, printer locations, server or network location and meeting room technology needs.'
-                  },
-                  {
-                    icon: <ShieldCheck size={22}/>,
-                    title: '4. Check whether the layout affects fire safety',
-                    body: 'New partitions, enclosed rooms, ceiling changes and changes around escape routes, fire alarm devices or sprinklers may affect fire safety review. SCDF states that proposed fire safety works require approval with plans submitted by Qualified Persons.',
-                    next: 'Practical next step: review the proposed layout before confirming partition and ceiling works, especially for enclosed rooms and modified circulation paths.'
-                  },
-                  {
-                    icon: <Building2 size={22}/>,
-                    title: '5. Keep future expansion in the plan',
-                    body: 'Many offices renovate for the current team only, then outgrow the layout within a year. Spare power capacity, flexible workstation zones, modular storage and movable furniture can reduce future disruption when the team grows or departments change.',
-                    next: 'Practical next step: design around a realistic 12- to 24-month headcount plan instead of only today’s staff count.'
-                  }
-                ].map((item, i)=>(
-                  <div key={i} className="bg-off-white border border-gray-100 rounded-2xl p-7 hover:border-gold/30 transition-colors">
-                    <div className="flex items-start gap-4">
-                      <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item.title}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">{item.body}</p>
-                        <p className="text-gray-500 text-xs leading-relaxed mt-3">{item.next}</p>
+              <div className="grid grid-cols-1 gap-5">
+                {c.officePlan.cards.map((item, i) => {
+                  const icons = [<LayoutPanelLeft size={22}/>, <FileCheck size={22}/>, <Zap size={22}/>, <Ruler size={22}/>];
+                  return (
+                    <div key={i} className="bg-off-white border border-gray-100 rounded-2xl p-7 hover:border-gold/30 transition-colors">
+                      <div className="flex items-start gap-4">
+                        <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">{icons[i]}</div>
+                        <div>
+                          <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item[0]}</h3>
+                          <p className="text-gray-600 text-sm leading-relaxed">{item[1]}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -468,180 +467,68 @@ export default function OfficeRenovation() {
 
 
         {/* OFFICE RENOVATION TECHNICAL SPECIFICATIONS */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-off-white border-y border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.95fr] gap-14 items-start">
-              <div className="lg:sticky lg:top-28">
-                <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">Technical Specifications</p>
-                <h2 className="text-3xl md:text-5xl leading-tight mb-6 flex flex-col">
-                  <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">Office Renovation Specifications</span>
-                  <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">That Decide Durability, Comfort & Handover Quality</span>
-                </h2>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  In office renovation, the visible design is only one part of the outcome. The technical specifications behind the partition, ceiling, flooring, lighting, glass, doors, power and data works decide whether the office feels solid, stays comfortable and passes handover smoothly.
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  This is why a professional office renovation quotation should not describe major items too generally. A line that says “partition works” or “office lighting” is not enough for a serious comparison. The specification should explain what is being supplied, how it will perform and what coordination is required with the building, landlord and relevant specialists.
-                </p>
+            <div className="max-w-3xl mb-12">
+              <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">{c.specs.eyebrow}</p>
+              <h2 className="text-3xl md:text-5xl leading-tight mb-6 flex flex-col">
+                <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">{c.specs.serif}</span>
+                <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">{c.specs.bold}</span>
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-6">{c.specs.p1}</p>
+              <p className="text-gray-600 leading-relaxed">{c.specs.p2}</p>
+            </div>
 
-                <div className="rounded-2xl border border-gold/30 bg-gold/10 p-7">
-                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-4">Consultant's advice</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-5">
-                    Before confirming an office renovation contractor, ask for the specifications behind the largest cost items. If the quotation does not define partition build-up, ceiling system, flooring preparation, lighting specification, glass thickness, door hardware, power and data assumptions, you are not comparing workmanship quality — you are comparing incomplete descriptions.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Link to="/insights/commercial-renovation-cost-singapore" className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 px-5 py-3 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:bg-gold hover:text-dark-charcoal transition-colors">
-                      Compare Cost Drivers <ArrowRight size={14}/>
-                    </Link>
-                    <Link to="/insights/office-renovation-timeline-singapore" className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 px-5 py-3 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:bg-gold hover:text-dark-charcoal transition-colors">
-                      Plan Timeline Impact <ArrowRight size={14}/>
-                    </Link>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {c.specs.rows.map((item, i)=>(
+                <div key={i} className="bg-white border border-gray-100 rounded-2xl p-7 shadow-sm hover:border-gold/30 transition-colors">
+                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item[0]}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item[1]}</p>
                 </div>
-              </div>
+              ))}
+            </div>
 
-              <div className="space-y-5">
-                {[
-                  {
-                    icon: <LayoutPanelLeft size={22}/>,
-                    title: '1. Partition and acoustic build-up',
-                    body: 'Office partitions should be specified by board type, frame system, height, insulation, acoustic expectation, fire-rated requirement where applicable, door type and finish. Meeting rooms, director rooms and phone rooms need more attention than general back-of-house partitions because speech privacy affects daily use.',
-                    next: 'Practical next step: identify which rooms need privacy, which walls are only visual separation, and whether any wall affects fire safety or escape routes.'
-                  },
-                  {
-                    icon: <HardHat size={22}/>,
-                    title: '2. Ceiling, access panels and M&E coordination',
-                    body: 'False ceiling works should consider ceiling height, access panels, lighting layout, air-conditioning diffusers, sprinkler heads, smoke detectors, emergency lighting and maintenance access. A ceiling that looks clean but blocks access to services can create problems during handover and future maintenance.',
-                    next: 'Practical next step: review the reflected ceiling plan together with lighting, air-conditioning and fire safety devices before confirming ceiling works.'
-                  },
-                  {
-                    icon: <Ruler size={22}/>,
-                    title: '3. Flooring preparation and lifecycle durability',
-                    body: 'Commercial flooring should be evaluated by subfloor condition, levelling requirement, thickness, wear layer, slip resistance, office-chair durability, maintenance method and replacement strategy. The cheapest flooring item can become expensive if preparation, trimming, skirting or future replacement is not considered.',
-                    next: 'Practical next step: ask whether the quotation includes floor preparation, skirting, transition strips and making-good around existing uneven areas.'
-                  },
-                  {
-                    icon: <Zap size={22}/>,
-                    title: '4. Lighting, power and data readiness',
-                    body: 'Lighting should support work comfort, meeting rooms, video calls, reception impression and maintenance access. Power and data points should follow actual workstation count, printer locations, meeting room equipment and server or network requirements. Electrical works should be carried out or supervised by the appropriate Licensed Electrical Worker where required.',
-                    next: 'Practical next step: finalise workstation count, equipment list and meeting room technology before locking the electrical and data scope.'
-                  },
-                  {
-                    icon: <ShieldCheck size={22}/>,
-                    title: '5. Glass, doors and fire safety implications',
-                    body: 'Glass partitions, framed doors, frameless doors, ironmongery, access-control doors and fire-rated doors should not be treated as purely aesthetic items. Door swing, escape route, access control, fire safety device positions and glass thickness can affect cost, compliance review and daily usability.',
-                    next: 'Practical next step: confirm door schedule, hardware, access-control requirements and whether the layout creates any fire safety submission issue.'
-                  },
-                  {
-                    icon: <Building2 size={22}/>,
-                    title: '6. Handover quality and reinstatement thinking',
-                    body: 'A good office fit-out should already think about handover: protection works, as-built information, testing, cleaning, defect checks, landlord inspection and future reinstatement obligations. This reduces disputes at completion and prevents the tenant from inheriting hidden responsibilities later.',
-                    next: 'Practical next step: request a clear handover checklist covering testing, cleaning, documentation, defects and landlord or building management inspection.'
-                  }
-                ].map((item, i)=>(
-                  <div key={i} className="bg-off-white border border-gray-100 rounded-2xl p-7 hover:border-gold/30 transition-colors">
-                    <div className="flex items-start gap-4">
-                      <div className="w-11 h-11 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item.title}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">{item.body}</p>
-                        <p className="text-gray-500 text-xs leading-relaxed mt-3">{item.next}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="mt-8 rounded-2xl border border-gold/30 bg-gold/10 p-7">
+              <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{c.specs.noteTitle}</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">{c.specs.note}</p>
             </div>
           </div>
         </section>
 
 
         {/* OFFICE RENOVATION DECISION JOURNEY */}
-        <section className="py-24 bg-off-white">
+        <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
-              <div className="lg:sticky lg:top-28">
-                <span className="text-gold uppercase tracking-[0.25em] text-xs font-bold">Decision Journey</span>
-                <h2 className="font-serif text-4xl md:text-5xl text-dark-charcoal mt-4 mb-6">
-                  What should you do after reading an office renovation guide?
-                </h2>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  A good office renovation page should not leave you with general ideas only. It should help you decide what to check next, depending on where your business is in the renovation process.
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  Use the steps below to move from broad planning to a practical scope review before you ask any contractor for a final quotation.
-                </p>
-              </div>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">{c.journey.eyebrow}</p>
+              <h2 className="text-3xl md:text-5xl leading-tight mb-6 flex flex-col items-center">
+                <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">{c.journey.serif}</span>
+                <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">{c.journey.bold}</span>
+              </h2>
+              <p className="text-gray-600 leading-relaxed">{c.journey.p1}</p>
+            </div>
 
-              <div className="space-y-5">
-                {[
-                  {
-                    step: '01',
-                    title: 'If you are still budgeting',
-                    body: 'Start by understanding the realistic cost range for your office size, layout complexity, landlord condition, M&E condition and required timeline. Do not compare design concepts before you know the cost drivers.',
-                    link: '/insights/commercial-renovation-cost-singapore',
-                    label: 'Read the commercial renovation cost guide'
-                  },
-                  {
-                    step: '02',
-                    title: 'If you already have a lease or unit shortlisted',
-                    body: 'Check whether the proposed use, layout, services, fire safety impact and building management requirements are suitable before committing heavily to design or construction.',
-                    link: '/commercial/office-renovation',
-                    label: 'Review this office renovation guide'
-                  },
-                  {
-                    step: '03',
-                    title: 'If you are comparing quotations',
-                    body: 'Ask each contractor to clarify exclusions, provisional sums, after-hours assumptions, M&E scope, permit responsibility, handover requirements and reinstatement-related assumptions.',
-                    link: '/insights/office-renovation-timeline-singapore',
-                    label: 'Check the office renovation timeline'
-                  },
-                  {
-                    step: '04',
-                    title: 'If you are moving out of an existing office',
-                    body: 'Do not treat reinstatement as an afterthought. Reinstatement requirements can affect budget, schedule, handover planning and the way you sequence your new office renovation.',
-                    link: '/commercial/reinstatement',
-                    label: 'Read the commercial reinstatement guide'
-                  }
-                ].map((item)=>(
-                  <div key={item.step} className="bg-white border border-gray-100 rounded-2xl p-7 hover:border-gold/40 hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-start gap-5">
-                      <div className="w-12 h-12 rounded-full bg-gold/10 text-gold flex items-center justify-center flex-shrink-0 font-serif text-xl">
-                        {item.step}
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item.title}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4">{item.body}</p>
-                        <Link to={item.link} className="inline-flex items-center gap-2 text-gold text-xs uppercase tracking-[0.18em] font-bold hover:text-dark-charcoal transition-colors">
-                          {item.label}
-                          <ArrowRight size={14}/>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-
-                <div className="bg-dark-charcoal rounded-2xl p-8 text-white">
-                  <div className="flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-full bg-gold/15 text-gold flex items-center justify-center flex-shrink-0">
-                      <FileCheck size={22}/>
-                    </div>
-                    <div>
-                      <h3 className="font-bold uppercase tracking-wide text-sm mb-3">Consultant's advice before requesting a quote</h3>
-                      <p className="text-white/70 text-sm leading-relaxed">
-                        The most useful enquiry is not "how much is office renovation?" It is a clear scope review: floor plan, landlord handbook, building restrictions, preferred handover date, staff count, rooms required, power and data needs, and whether the existing unit needs reinstatement. That gives the contractor enough context to advise properly instead of guessing.
-                      </p>
-                    </div>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+              {c.journey.cards.map((item, i)=>(
+                <div key={i} className="bg-off-white border border-gray-100 rounded-2xl p-7 hover:border-gold/30 transition-colors flex flex-col">
+                  <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{item[0]}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">{item[1]}</p>
+                  <Link to={item[3]} className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold hover:text-dark-charcoal transition-colors">
+                    {item[2]} <ArrowRight size={14}/>
+                  </Link>
                 </div>
-              </div>
+              ))}
+            </div>
+
+            <div className="rounded-2xl border border-gold/30 bg-gold/10 p-7 text-center">
+              <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">{c.journey.noteTitle}</h3>
+              <p className="text-gray-700 text-sm leading-relaxed max-w-3xl mx-auto mb-6">{c.journey.note}</p>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:bg-gold-hover transition-colors">
+                {c.journey.cta} <ArrowRight size={14}/>
+              </a>
             </div>
           </div>
         </section>
-
-
         {/* SCOPE */}
         <section className="py-24 bg-off-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -746,120 +633,49 @@ export default function OfficeRenovation() {
         </section>
 
 
+
         {/* OFFICE RENOVATION GEO ANSWER SUMMARY */}
-        <section className="py-24 bg-white border-y border-gray-100">
+        <section className="py-24 bg-off-white border-y border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center mb-14">
-              <span className="text-gold uppercase tracking-[0.25em] text-xs font-bold">Quick Answer</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-dark-charcoal mt-4 mb-6">
-                What is the right way to plan office renovation in Singapore?
-              </h2>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                The right way to plan an office renovation is to confirm the approved use, review the landlord or building fit-out rules, check fire safety and electrical implications, then compare quotations by scope and specifications rather than by headline price. For most businesses, this sequence reduces variation orders, approval delays and handover disputes.
-              </p>
-            </div>
-
-            <div className="overflow-hidden rounded-2xl border border-gray-200 bg-off-white shadow-sm mb-10">
-              <div className="grid grid-cols-1 md:grid-cols-[0.9fr_1.4fr_1.2fr] bg-dark-charcoal text-white text-xs uppercase tracking-[0.18em] font-bold">
-                <div className="p-5 border-b md:border-b-0 md:border-r border-white/10">Decision Stage</div>
-                <div className="p-5 border-b md:border-b-0 md:border-r border-white/10">What to Check</div>
-                <div className="p-5">Why It Matters</div>
+            <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-14 items-start">
+              <div className="lg:sticky lg:top-28">
+                <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-4">{c.geo.eyebrow}</p>
+                <h2 className="text-3xl md:text-5xl leading-tight mb-6 flex flex-col">
+                  <span className="font-serif italic text-dark-charcoal/60 text-2xl md:text-3xl mb-2">{c.geo.serif}</span>
+                  <span className="font-sans font-bold text-dark-charcoal uppercase tracking-wider">{c.geo.bold}</span>
+                </h2>
+                <p className="text-gray-600 leading-relaxed">{c.geo.intro}</p>
               </div>
-              {[
-                {
-                  stage: 'Before leasing or design',
-                  check: 'Approved use, landlord guide, building restrictions, handover condition and fit-out deposit requirements.',
-                  reason: 'A unit can look suitable but still create renovation limits, submission requirements or reinstatement obligations later.'
-                },
-                {
-                  stage: 'Before layout confirmation',
-                  check: 'Staff count, department workflow, enclosed rooms, meeting-room needs, storage, pantry, server or network area, and future expansion.',
-                  reason: 'Office layouts are expensive to change after partitions, ceiling, lighting, power and data points are installed.'
-                },
-                {
-                  stage: 'Before quotation comparison',
-                  check: 'Partition type, ceiling works, flooring preparation, lighting, power/data, air-conditioning, fire safety impact, after-hours work and exclusions.',
-                  reason: 'Two office renovation quotations can look similar while carrying very different scope, specification and compliance assumptions.'
-                },
-                {
-                  stage: 'Before work starts',
-                  check: 'Submission responsibility, building management approval, site access, lift protection, noisy-work timing, delivery routes and handover checklist.',
-                  reason: 'Commercial renovation delays often come from operational restrictions rather than design issues alone.'
-                }
-              ].map((row)=> (
-                <div key={row.stage} className="grid grid-cols-1 md:grid-cols-[0.9fr_1.4fr_1.2fr] border-t border-gray-200">
-                  <div className="p-5 font-bold text-dark-charcoal text-sm border-b md:border-b-0 md:border-r border-gray-200">{row.stage}</div>
-                  <div className="p-5 text-gray-600 text-sm leading-relaxed border-b md:border-b-0 md:border-r border-gray-200">{row.check}</div>
-                  <div className="p-5 text-gray-600 text-sm leading-relaxed">{row.reason}</div>
+
+              <div className="space-y-5">
+                <div className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
+                  {c.geo.rows.map((row, i)=>(
+                    <div key={i} className="grid grid-cols-1 md:grid-cols-[0.35fr_0.65fr] border-b border-gray-100 last:border-b-0">
+                      <div className="bg-dark-charcoal text-white px-6 py-5 text-xs font-bold uppercase tracking-wider">{row[0]}</div>
+                      <div className="px-6 py-5 text-sm text-gray-600 leading-relaxed">{row[1]}</div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="bg-off-white border border-gray-100 rounded-2xl p-7">
-                <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">Best next step if you are budgeting</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Start with a realistic commercial renovation cost range, then decide which items are must-have, optional or dependent on site condition.
-                </p>
-                <Link to="/insights/commercial-renovation-cost-singapore" className="inline-flex items-center gap-2 text-gold text-xs uppercase tracking-[0.18em] font-bold hover:text-dark-charcoal transition-colors">
-                  Cost guide <ArrowRight size={14}/>
-                </Link>
-              </div>
-              <div className="bg-off-white border border-gray-100 rounded-2xl p-7">
-                <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">Best next step if you need to move in soon</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Check the likely office renovation timeline before confirming a handover date, especially if building approval, after-hours work or M&amp;E coordination is involved.
-                </p>
-                <Link to="/insights/office-renovation-timeline-singapore" className="inline-flex items-center gap-2 text-gold text-xs uppercase tracking-[0.18em] font-bold hover:text-dark-charcoal transition-colors">
-                  Timeline guide <ArrowRight size={14}/>
-                </Link>
-              </div>
-              <div className="bg-off-white border border-gray-100 rounded-2xl p-7">
-                <h3 className="font-bold text-dark-charcoal uppercase tracking-wide text-sm mb-3">Best next step if you are moving out</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Review reinstatement obligations early so your old office handover does not clash with your new office renovation schedule.
-                </p>
-                <Link to="/commercial/reinstatement" className="inline-flex items-center gap-2 text-gold text-xs uppercase tracking-[0.18em] font-bold hover:text-dark-charcoal transition-colors">
-                  Reinstatement guide <ArrowRight size={14}/>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-24 bg-off-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-serif mb-12 text-center text-dark-charcoal">{t(`${p}.faq.title`)}</h2>
-            <div className="space-y-6">
-              {[{n:1,icon:<Clock className="w-6 h-6 text-gold flex-shrink-0 mt-1"/>},{n:2,icon:<ShieldCheck className="w-6 h-6 text-gold flex-shrink-0 mt-1"/>},{n:3,icon:<FileCheck className="w-6 h-6 text-gold flex-shrink-0 mt-1"/>}].map(({n,icon})=>(
-                <div key={n} className="bg-white p-8 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-bold text-dark-charcoal mb-3 flex items-start gap-3">{icon}{t(`${p}.faq.q${n}`)}</h3>
-                  <p className="text-gray-600 leading-relaxed pl-9 text-sm" dangerouslySetInnerHTML={{__html:t(`${p}.faq.a${n}`)}}/>
+                <div className="rounded-2xl border border-gold/30 bg-gold/10 p-7">
+                  <p className="text-gray-700 text-sm leading-relaxed font-medium">{c.geo.quote}</p>
                 </div>
-              ))}
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <Link to="/insights/commercial-renovation-cost-singapore" className="rounded-2xl border border-gray-100 bg-white p-5 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:border-gold/40 transition-colors">
+                    {c.geo.cta1}
+                  </Link>
+                  <Link to="/insights/office-renovation-timeline-singapore" className="rounded-2xl border border-gray-100 bg-white p-5 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:border-gold/40 transition-colors">
+                    {c.geo.cta2}
+                  </Link>
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="rounded-2xl bg-gold p-5 text-xs font-bold uppercase tracking-wider text-dark-charcoal hover:bg-gold-hover transition-colors">
+                    {c.geo.cta3}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-
-        {/* RELATED */}
-        <section className="py-20 bg-white border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-serif text-center text-dark-charcoal mb-10">{t(`${p}.related.title`)}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {relatedKeys.map((key,i)=>(
-                <Link key={key} to={relatedLinks[i]} className="group flex items-start justify-between p-6 border border-gray-200 rounded-xl hover:border-gold hover:shadow-md transition-all duration-300">
-                  <div>
-                    <h3 className="font-bold text-dark-charcoal mb-2 text-sm uppercase tracking-wide group-hover:text-gold transition-colors">{t(`commercial_page.subpages.${key}.title`)}</h3>
-                    <p className="text-gray-400 text-xs leading-relaxed">{t(`commercial_page.subpages.${key}.desc`)}</p>
-                  </div>
-                  <ArrowRight size={16} className="text-gray-300 group-hover:text-gold transition-colors flex-shrink-0 mt-1 ml-3"/>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA */}
         <section className="py-32 bg-white relative z-10 overflow-hidden">
           <div className="max-w-4xl mx-auto px-4 text-center">
