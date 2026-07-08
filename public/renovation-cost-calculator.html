@@ -1365,7 +1365,7 @@ function renderStep(){
         <div class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:#a99683">Confidence Check</div>
         <h3 class="serif text-2xl font-bold mb-2 text-[#171514]">Did this calculator make your renovation budget clearer?</h3>
         <p class="text-sm text-[#746b61] leading-6 mb-5">Your feedback helps us improve this free planning tool. This is not a quotation request form — it is only for telling us what was useful, unclear, or missing.</p>
-        <form name="idws-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="trackGAEvent('feedback_submit',{source:'renovation_cost_calculator'});" class="space-y-4">
+        <form id="renovationFeedbackForm" name="idws-feedback" method="POST" onsubmit="submitRenovationFeedback(event)" class="space-y-4">
           <input type="hidden" name="form-name" value="idws-feedback"/>
           <input type="hidden" name="source_type" value="planning_tool"/>
           <input type="hidden" name="source_name" value="renovation-cost-calculator"/>
@@ -1420,7 +1420,7 @@ function renderStep(){
             <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">What can we improve?</div>
             <textarea name="improvement_feedback" rows="3" class="inp" placeholder="Example: I still want to understand why quotations can differ so much."></textarea>
           </label>
-          <button type="submit" class="inline-flex items-center justify-center rounded-2xl bg-[#171514] px-5 py-3 text-sm font-semibold text-white hover:bg-[#2b2723] transition-all">Send Feedback</button>
+          <button id="renovationFeedbackSubmit" type="submit" class="inline-flex items-center justify-center rounded-2xl bg-[#171514] px-5 py-3 text-sm font-semibold text-white hover:bg-[#2b2723] transition-all">Send Feedback</button><div id="renovationFeedbackSuccess" class="hidden rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-4 text-sm font-semibold text-emerald-900">Thank you. Your feedback helps us improve this planning tool.</div><div id="renovationFeedbackError" class="hidden rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-sm font-semibold text-red-800">Sorry, the feedback could not be submitted. Please try again.</div>
         </form>
       </div>
       <div class="hidden lg:block rounded-3xl border-2 border-[#171514] bg-[#fbf8f2] p-7 mb-7">
@@ -1533,6 +1533,51 @@ function setFloorUnit(u){
   form.flooringAreaInput=u==='m2'?Math.round(current/M2SF*10)/10:Math.round(current*10)/10;
   form.flooringAreaUnit=u;
   render();
+}
+
+
+function encodeFeedbackFormData(formEl){
+  const formData = new FormData(formEl);
+  return new URLSearchParams(formData).toString();
+}
+
+async function submitRenovationFeedback(event){
+  event.preventDefault();
+  const formEl = event.target;
+  const submitBtn = document.getElementById('renovationFeedbackSubmit');
+  const successEl = document.getElementById('renovationFeedbackSuccess');
+  const errorEl = document.getElementById('renovationFeedbackError');
+
+  if(successEl) successEl.classList.add('hidden');
+  if(errorEl) errorEl.classList.add('hidden');
+  if(submitBtn){
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.classList.add('opacity-70','cursor-not-allowed');
+  }
+
+  try{
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: encodeFeedbackFormData(formEl)
+    });
+
+    if(!response.ok) throw new Error('Netlify form submission failed');
+
+    trackGAEvent('feedback_submit',{source:'renovation_cost_calculator'});
+    formEl.reset();
+    if(successEl) successEl.classList.remove('hidden');
+  }catch(err){
+    console.error(err);
+    if(errorEl) errorEl.classList.remove('hidden');
+  }finally{
+    if(submitBtn){
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Feedback';
+      submitBtn.classList.remove('opacity-70','cursor-not-allowed');
+    }
+  }
 }
 
 // =============================================

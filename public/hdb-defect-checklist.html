@@ -135,6 +135,13 @@ h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.7rem,3vw,2.4re
 @media(max-width:900px){.prep-card-grid{grid-template-columns:1fr 1fr}.jump-nav-links{display:grid;grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.prep-card-grid{grid-template-columns:1fr}.jump-nav-links{grid-template-columns:1fr}.jump-nav-links a{justify-content:flex-start}}
 
+
+/* IDWS post-completion feedback and CTA system */
+.feedback-card{margin-top:28px;background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:26px;padding:24px;box-shadow:0 14px 36px rgba(44,44,44,.06)}
+.feedback-card h2{font-size:28px;margin-bottom:10px}.feedback-card p{margin:0 0 18px}.feedback-form{display:grid;gap:14px}.feedback-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feedback-form label{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#8a6c31}.feedback-form select,.feedback-form textarea{width:100%;margin-top:7px;border:1px solid var(--line);background:#fff;color:var(--charcoal);border-radius:14px;min-height:48px;padding:0 14px;font-family:Montserrat,Arial,sans-serif;font-size:14px;outline:none}.feedback-form textarea{min-height:94px;padding:13px 14px;resize:vertical}.feedback-form select:focus,.feedback-form textarea:focus{border-color:rgba(197,160,89,.8);box-shadow:0 0 0 4px rgba(197,160,89,.16)}.feedback-status{min-height:20px;font-size:13px;line-height:1.5;color:#8a6c31}.feedback-submit{justify-self:start;background:#111;color:#fff;border:0;border-radius:999px;padding:14px 24px;min-height:48px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.feedback-submit:hover{background:#2C2C2C}.feedback-submit:disabled{opacity:.65;cursor:wait}.consult-card{margin-top:28px;background:#111;color:#fff;border-radius:28px;padding:32px;text-align:center;box-shadow:0 18px 48px rgba(0,0,0,.18)}.consult-card h2{color:#fff;margin-bottom:10px}.consult-card p{color:rgba(255,255,255,.72);max-width:720px;margin:0 auto 22px}.consult-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.review-card{margin-top:28px;background:#fffdf8;border:1px solid var(--line);border-radius:26px;padding:24px;box-shadow:0 14px 36px rgba(44,44,44,.05)}.review-card h2{font-size:26px;margin-bottom:10px}.review-card p{margin:0 0 18px}.btn-dark-outline{border-color:var(--line);color:var(--charcoal);background:#fff}
+@media(max-width:720px){.feedback-grid{grid-template-columns:1fr}.feedback-submit{width:100%}.consult-actions{flex-direction:column}.consult-actions .btn{width:100%}}
+@media print{.feedback-card,.consult-card,.review-card{display:none}}
+
 </style>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0R2LXVRM0R"></script>
@@ -169,9 +176,55 @@ function downloadDefectChecklistPdf(source){
 
   return false;
 }
+
+async function submitDefectFeedback(event){
+  event.preventDefault();
+  const form = event.target;
+  const status = document.getElementById('defectFeedbackStatus');
+  const button = form.querySelector('button[type="submit"]');
+  const originalText = button ? button.textContent : '';
+
+  if (status) status.textContent = '';
+  if (button) { button.disabled = true; button.textContent = 'Sending...'; }
+
+  try {
+    const formData = new FormData(form);
+    const body = new URLSearchParams(formData).toString();
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body
+    });
+
+    if (!response.ok) throw new Error('Submission failed');
+
+    track('feedback_submit',{source:'hdb_defect_checklist'});
+    form.reset();
+    if (status) status.textContent = 'Thank you. Your feedback helps us improve this checklist.';
+  } catch (error) {
+    if (status) status.textContent = 'Sorry, the feedback could not be sent. Please try again.';
+  } finally {
+    if (button) { button.disabled = false; button.textContent = originalText || 'Send Feedback'; }
+  }
+}
+
 </script>
 </head>
 <body>
+<!-- Netlify Forms detection: master feedback form for all IDWS planning tools -->
+<form name="idws-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="idws-feedback"/>
+  <input type="hidden" name="source_type"/>
+  <input type="hidden" name="source_name"/>
+  <input type="hidden" name="user_intent"/>
+  <input type="hidden" name="page_url"/>
+  <input type="hidden" name="confidence"/>
+  <input type="hidden" name="inspection_uncertainty"/>
+  <input type="hidden" name="renovation_concern"/>
+  <textarea name="improvement_feedback"></textarea>
+  <input name="bot-field"/>
+</form>
+
 <nav class="site-nav" aria-label="Main navigation">
   <div class="site-nav-inner">
     <a class="site-logo" href="/">ID WORK STUDIO</a>
@@ -316,8 +369,57 @@ function downloadDefectChecklistPdf(source){
       <div class="completion-item"><b>Checked</b>Floors, windows, doors, plumbing, electrical points and cooling access.</div>
       <div class="completion-item"><b>Documented</b>Use photos, notes and meter readings to support your defect submission.</div>
       <div class="completion-item"><b>Ready</b>Report important defects before hacking, tiling, painting or carpentry begins.</div>
-      <div class="completion-item"><b>Next</b>Download the printable copy and keep it with your renovation documents.</div>
+      <div class="completion-item"><b>Next</b>Share quick feedback, then download the printable copy for your inspection.</div>
     </div>
+  </section>
+
+
+  <section class="feedback-card" aria-label="Checklist feedback">
+    <h2>Before You Download</h2>
+    <p>This checklist is meant to help homeowners inspect defects with more confidence before renovation starts. Share what is still unclear so we can improve the checklist and future renovation planning tools.</p>
+    <form class="feedback-form" onsubmit="submitDefectFeedback(event)">
+      <input type="hidden" name="form-name" value="idws-feedback"/>
+      <input type="hidden" name="source_type" value="planning_tool"/>
+      <input type="hidden" name="source_name" value="hdb-defect-checklist"/>
+      <input type="hidden" name="user_intent" value="defect-inspection"/>
+      <input type="hidden" name="page_url" value="https://idworkstudio.com/hdb-defect-checklist"/>
+      <p style="display:none"><label>Do not fill this if you are human: <input name="bot-field"/></label></p>
+      <div class="feedback-grid">
+        <label>How confident are you to inspect your unit?
+          <select name="confidence" required>
+            <option value="">Select one</option>
+            <option value="confident">Confident, the checklist is clear</option>
+            <option value="somewhat_confident">Somewhat confident, but I may miss defects</option>
+            <option value="not_confident">Not confident yet</option>
+          </select>
+        </label>
+        <label>What still feels unclear?
+          <select name="inspection_uncertainty" required>
+            <option value="">Select one</option>
+            <option value="how_to_test_defects">How to test each defect properly</option>
+            <option value="what_is_serious">Which defects are serious</option>
+            <option value="how_to_document">How to document defects clearly</option>
+            <option value="when_to_report">When to report before renovation</option>
+            <option value="nothing_unclear">Nothing, it is clear</option>
+          </select>
+        </label>
+      </div>
+      <label>What is your biggest concern before renovation starts?
+        <select name="renovation_concern">
+          <option value="">Select one</option>
+          <option value="hidden_defects">Missing hidden defects</option>
+          <option value="hdb_rectification_delay">Defect rectification delaying renovation</option>
+          <option value="renovation_responsibility">Whether it is HDB/developer defect or renovation issue</option>
+          <option value="contractor_coordination">Coordinating defect checks with contractor planning</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <label>What would make this checklist more useful?
+        <textarea name="improvement_feedback" placeholder="Example: More photos showing how to check floor gradient or window leakage."></textarea>
+      </label>
+      <button class="feedback-submit" type="submit">Send Feedback</button>
+      <div class="feedback-status" id="defectFeedbackStatus" aria-live="polite"></div>
+    </form>
   </section>
 
   <section class="cta" id="pdf-download-form">
@@ -333,6 +435,22 @@ function downloadDefectChecklistPdf(source){
       <a class="btn btn-gold" href="/downloads/hdb-defect-inspection-checklist-id-work-studio.pdf" download="hdb-defect-inspection-checklist-id-work-studio.pdf" onclick="return downloadDefectChecklistPdf('hdb_defect_checklist_html_bottom')">Download PDF Checklist</a>
       <div class="lead-status" id="leadStatus" aria-live="polite"></div>
     </div>
+  </section>
+
+
+  <section class="consult-card" aria-label="Renovation planning consultation">
+    <h2>Need Help Planning After Your Defect Check?</h2>
+    <p>If you are preparing for renovation, ID Work Studio can help you understand what should be resolved first, what may affect your renovation scope, and how to plan the next step clearly.</p>
+    <div class="consult-actions">
+      <a class="btn btn-gold" href="https://wa.me/6598333085?text=Hi%20ID%20Work%20Studio,%20I%20am%20preparing%20for%20renovation%20and%20would%20like%20help%20understanding%20what%20to%20do%20after%20my%20defect%20inspection." target="_blank" rel="noopener" onclick="track('whatsapp_click',{source:'hdb_defect_checklist_after_download'})">Plan My Renovation After Defect Check</a>
+      <a class="btn btn-outline" href="/renovation-timeline-planner-singapore" onclick="track('defect_checklist_internal_link',{target:'renovation_timeline_planner_after_download'})">Plan Renovation Timeline</a>
+    </div>
+  </section>
+
+  <section class="review-card" aria-label="Existing client Google review prompt">
+    <h2>Already Renovated With ID Work Studio?</h2>
+    <p>If our team has helped with your renovation, consultation or project, your honest Google review helps other Singapore homeowners decide with more confidence. If you only used this free checklist, the feedback form above is the better place to share your thoughts.</p>
+    <a class="btn btn-dark-outline" href="https://www.google.com/search?q=ID+Work+Studio+Google+Review" target="_blank" rel="noopener" onclick="track('google_review_click',{source:'hdb_defect_checklist'})">Leave a Google Review →</a>
   </section>
 
   <section class="section next-step-guides" aria-label="Recommended next renovation planning step">

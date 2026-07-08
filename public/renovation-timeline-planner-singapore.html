@@ -246,12 +246,31 @@
 
       <div class="space-y-6 min-w-0">
         <section class="soft-card rounded-3xl p-5 md:p-7">
-          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <div><p class="eyebrow text-xs font-bold uppercase text-[#a99683]">Timeline Result</p><h2 class="serif text-3xl md:text-4xl font-bold">Estimated renovation schedule</h2><p class="text-sm text-[#746b61] mt-2 leading-6">Dates exclude Sundays and public holidays. <strong>HDB:</strong> Saturday light works only; heavy works are not scheduled on Saturday. <strong>Condo:</strong> Weekdays only — no Saturday work.</p></div>
-            <div id="actions" class="flex flex-wrap gap-2"><button onclick="window.print()" class="rounded-full bg-[#171514] text-white px-5 py-3 text-xs font-bold uppercase tracking-widest">Download / Print PDF</button><button onclick="regenerate()" class="rounded-full border border-[#d8cec0] bg-white px-5 py-3 text-xs font-bold uppercase tracking-widest">Refresh</button></div>
+          <div class="max-w-4xl">
+            <p class="eyebrow text-xs font-bold uppercase text-[#a99683]">Timeline Result</p>
+            <h2 class="serif text-3xl md:text-4xl font-bold">Estimated renovation schedule</h2>
+            <p class="text-sm text-[#746b61] mt-2 leading-6">Dates exclude Sundays and public holidays. <strong>HDB:</strong> Saturday light works only; heavy works are not scheduled on Saturday. <strong>Condo:</strong> Weekdays only — no Saturday work.</p>
           </div>
           <div id="summaryCards" class="grid sm:grid-cols-2 xl:grid-cols-4 gap-3 mt-6"></div>
           <div id="nextMilestoneOutput" class="mt-4 no-print"></div>
+          <div id="resultActions" class="no-print mt-5 grid lg:grid-cols-[1.15fr_.85fr] gap-4 items-stretch">
+            <div class="rounded-[26px] bg-[#171514] text-white p-5 md:p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[.18em] text-[#c5a059]">Recommended Next Step</p>
+                <h3 class="serif text-2xl md:text-3xl font-bold mt-1">Need help making this timeline realistic?</h3>
+                <p class="text-sm leading-6 text-white/75 mt-2 max-w-2xl">Use this as a planning guide. ID Work Studio can help review your scope, approval timing, sequencing and move-in readiness before you commit to a renovation schedule.</p>
+              </div>
+              <a href="https://wa.me/6598333085?text=Hi%20ID%20Work%20Studio%2C%20I%20used%20your%20Renovation%20Timeline%20Planner%20and%20would%20like%20help%20checking%20whether%20my%20renovation%20timeline%20is%20realistic." target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex justify-center rounded-full bg-[#c5a059] text-[#171514] px-6 py-3 text-xs font-black uppercase tracking-widest shadow-lg">Review My Timeline</a>
+            </div>
+            <div class="rounded-[26px] border border-[#d8cec0] bg-white/70 p-5 md:p-6">
+              <p class="text-[10px] font-bold uppercase tracking-[.18em] text-[#a99683]">Save Your Renovation Plan</p>
+              <p class="mt-2 text-sm leading-6 text-[#746b61]">Save the generated timeline for discussion with your contractor or family.</p>
+              <div class="mt-4 flex flex-col sm:flex-row lg:flex-col gap-3">
+                <button type="button" onclick="window.print()" class="rounded-full border border-[#171514] bg-white px-5 py-3 text-xs font-bold uppercase tracking-widest text-[#171514]">Download Timeline Plan</button>
+                <button type="button" onclick="regenerate()" class="rounded-full border border-[#d8cec0] bg-white px-5 py-3 text-xs font-bold uppercase tracking-widest text-[#171514]">Refresh Timeline</button>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="soft-card rounded-3xl p-5 md:p-7">
@@ -279,10 +298,63 @@
 
         <section id="ownerChecklistSection" class="soft-card rounded-3xl p-5 md:p-7 print-break">
           <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-4">
-            <div><p class="eyebrow text-xs font-bold uppercase text-[#a99683]">Owner Action Checklist</p><h3 class="serif text-2xl md:text-3xl font-bold">Items to confirm before fabrication and installation</h3></div>
-            <button type="button" onclick="printOwnerChecklist()" class="no-print rounded-full bg-[#171514] text-white px-5 py-3 text-xs font-bold uppercase tracking-widest">Download / Print Checklist</button>
+            <div>
+              <p class="eyebrow text-xs font-bold uppercase text-[#a99683]">Owner Action Checklist</p>
+              <h3 class="serif text-2xl md:text-3xl font-bold">Items to confirm before fabrication and installation</h3>
+              <p class="mt-2 text-sm leading-6 text-[#746b61] no-print">Print or save your owner action checklist to track key decisions throughout your renovation.</p>
+            </div>
+            <button type="button" onclick="printOwnerChecklist()" class="no-print rounded-full border border-[#171514] bg-white px-5 py-3 text-xs font-bold uppercase tracking-widest text-[#171514]">Download Owner Checklist</button>
           </div>
           <div id="checklistOutput" class="grid lg:grid-cols-2 gap-4"></div>
+        </section>
+
+        <section id="timelineFeedbackSection" class="soft-card rounded-3xl p-5 md:p-7 no-print">
+          <div class="grid lg:grid-cols-[.95fr_1.05fr] gap-6 items-start">
+            <div>
+              <p class="eyebrow text-xs font-bold uppercase text-[#a99683]">Confidence Check</p>
+              <h3 class="serif text-2xl md:text-3xl font-bold">Before you rely on this timeline</h3>
+              <p class="mt-2 text-sm leading-7 text-[#746b61]">A planner can estimate the sequence, but the actual timeline still depends on approvals, site condition, owner decisions and supplier lead times.</p>
+              <div class="mt-5 grid gap-3 text-sm leading-6">
+                <div class="rounded-2xl border border-[#d8cec0] bg-white/65 p-4"><strong>Use this result as a planning guide</strong><br><span class="text-[#746b61]">It is useful for early comparison, move-in planning and contractor discussion.</span></div>
+                <div class="rounded-2xl border border-[#d8cec0] bg-white/65 p-4"><strong>Get help if your move-in date is tight</strong><br><span class="text-[#746b61]">Short buffers, condo approval, resale hacking or late carpentry decisions can quickly affect handover.</span></div>
+              </div>
+            </div>
+            <form name="idws-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="rounded-[26px] border border-[#d8cec0] bg-white/70 p-5 md:p-6">
+              <input type="hidden" name="form-name" value="idws-feedback" />
+              <p class="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
+              <input type="hidden" name="source_type" value="planning_tool" />
+              <input type="hidden" name="source_name" value="renovation_timeline_planner" />
+              <input type="hidden" name="user_intent" value="timeline_planning" />
+              <input type="hidden" name="page_url" value="/renovation-timeline-planner-singapore" />
+              <p class="eyebrow text-xs font-bold uppercase text-[#a99683]">Help Improve This Planner</p>
+              <h3 class="serif text-2xl font-bold mt-1">What still feels uncertain?</h3>
+              <div class="mt-5 space-y-5 text-sm leading-6 text-[#312c28]">
+                <fieldset>
+                  <legend class="font-bold mb-3">What still feels uncertain after using this timeline planner?</legend>
+                  <div class="grid gap-2">
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timeline_uncertainty" value="timeline_realism" required><span>Whether my timeline is realistic</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timeline_uncertainty" value="delay_causes"><span>Which tasks may cause delays</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timeline_uncertainty" value="decision_timing"><span>When I should confirm materials or appliances</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timeline_uncertainty" value="move_in_safety"><span>Whether my move-in date is safe</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timeline_uncertainty" value="clear"><span>Nothing, the timeline is clear</span></label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend class="font-bold mb-3">What is your biggest renovation timing concern now?</legend>
+                  <div class="grid sm:grid-cols-2 gap-2">
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timing_concern" value="keys_start"><span>Getting keys and starting renovation</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timing_concern" value="approval"><span>HDB / condo approval timing</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timing_concern" value="carpentry_material"><span>Carpentry or material delays</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timing_concern" value="delivery_move_in"><span>Coordinating delivery and move-in</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3 sm:col-span-2"><input type="radio" name="timing_concern" value="avoid_delay"><span>Avoiding renovation delays</span></label>
+                  </div>
+                </fieldset>
+                <label class="block"><span class="font-bold">Anything missing or confusing? <span class="font-normal text-[#746b61]">Optional</span></span><textarea name="comments" rows="3" class="inp mt-2" placeholder="Tell us what would have made this planner easier to understand."></textarea></label>
+                <button type="submit" class="w-full rounded-full bg-[#171514] text-white px-5 py-3 text-xs font-bold uppercase tracking-widest">Submit Feedback</button>
+                <p class="text-xs leading-5 text-[#746b61]">This feedback helps ID Work Studio improve the planner and future renovation guides. It is not a renovation enquiry form.</p>
+              </div>
+            </form>
+          </div>
         </section>
 
         <section class="soft-card rounded-3xl p-5 md:p-7">
