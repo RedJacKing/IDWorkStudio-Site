@@ -238,6 +238,21 @@
     <link rel="canonical" href="https://idworkstudio.com/renovation-cost-calculator" />
 </head>
 <body>
+<!-- Netlify Forms detection: master feedback form for all IDWS planning tools -->
+<form name="idws-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="idws-feedback"/>
+  <input type="hidden" name="source_type"/>
+  <input type="hidden" name="source_name"/>
+  <input type="hidden" name="user_intent"/>
+  <input type="hidden" name="page_url"/>
+  <input type="hidden" name="confidence"/>
+  <input type="hidden" name="trying_to_understand"/>
+  <input type="hidden" name="property_type_feedback"/>
+  <input type="hidden" name="missing_help"/>
+  <textarea name="improvement_feedback"></textarea>
+  <input name="bot-field"/>
+</form>
+
 
 <!-- ╔══════════════════════════╗
      ║  SITE NAVBAR            ║
@@ -1346,7 +1361,84 @@ function renderStep(){
       </div><div class="mb-7"><div class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-4">Cost breakdown</div><div class="divide-y divide-stone-100 rounded-2xl border border-stone-100 overflow-hidden">${est.mods.map(m=>{const r=rng(m.cost);return`<div class="flex items-center justify-between px-5 py-3.5 hover:bg-stone-50 transition-colors"><span class="text-sm text-stone-700">${m.name}</span><span class="text-sm font-semibold text-stone-900 ml-4 whitespace-nowrap">${SGD.format(r.low)} – ${SGD.format(r.high)}</span></div>`;}).join('')}</div></div><div class="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 mb-5 text-xs text-amber-800 leading-5"><strong>Reality buffer:</strong> Based on your ${form.propertyCondition==='resale'?'resale':'new/BTO'} selection, most projects may adjust by <strong>${est.reality.label}</strong> after site validation. ${est.reality.note}</div>
       <div class="rounded-2xl border border-stone-100 bg-stone-50 px-5 py-4 mb-5 text-xs text-stone-600 leading-5"><strong class="text-stone-800">Market benchmark:</strong> Typical ${propLabel} ${form.propertyCondition==='resale'?'resale':'new/BTO'} renovation: <strong>${SGD.format(est.benchmark.low)} – ${SGD.format(est.benchmark.high)}</strong>. Your estimate is <strong>${getBenchmarkStatus(est.total.low,est.total.high)}</strong>.</div>
       <div class="rounded-2xl border border-stone-100 bg-white px-5 py-4 mb-7 text-xs text-stone-600 leading-5"><strong class="text-stone-800">Biggest cost drivers:</strong><div class="mt-2 space-y-1">${est.drivers.map(d=>`<div class="flex justify-between"><span>${d.name}</span><strong>${d.pct}%</strong></div>`).join('')}</div></div>
-      <div class="rounded-2xl border border-stone-100 bg-stone-50 px-5 py-4 mb-7 text-xs text-stone-500 leading-5"><strong class="text-stone-700">Planning estimate, not a quotation.</strong> Actual cost depends on site conditions, confirmed measurements, material grade, and HDB/BCA approvals. ID Work Studio is BCA-registered and HDB-approved.</div><div class="rounded-3xl border border-[#d8cec0] bg-[#fbf8f2] p-6 mb-7"><div class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:#a99683">Next financial planning step</div><h3 class="serif text-2xl font-bold mb-2 text-[#171514]">Renovation cost is only one part of moving in.</h3><p class="text-sm text-[#746b61] leading-6 mb-5">Most renovation quotations do not include loose furniture, appliances, curtains, delivery, installation, styling items or safety buffers. Plan the full move-in number before committing your cashflow.</p><a href="https://idworkstudio.com/total-home-budget-calculator" onclick="trackGAEvent('tool_crosslink_click',{source:'renovation_calculator_result',destination:'total_home_budget_calculator'});" class="inline-flex items-center justify-center rounded-2xl bg-[#171514] px-5 py-3 text-sm font-semibold text-white hover:bg-[#2b2723] transition-all">Plan Full Move-In Budget →</a></div><div class="rounded-3xl border-2 border-stone-900 p-7"><h3 class="serif text-2xl font-bold mb-1">Want an itemised quote?</h3><p class="text-sm text-stone-500 mb-6 leading-relaxed">Our designers convert this into a detailed line-item quotation — typically within 1–2 business days.</p><div class="grid gap-4 sm:grid-cols-2 mb-5"><label><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Your name <span class="font-normal normal-case text-stone-400">(optional)</span></div><input type="text" value="${form.name}" oninput="form.name=this.value;document.getElementById('waCta')?.setAttribute('onclick',\'window.open(buildWa(calcEst()),\\\'_blank\\\')\');" placeholder="Name" class="inp"/></label><label><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Your email <span class="font-normal normal-case text-stone-400">(optional)</span></div><input type="email" value="${form.email}" oninput="form.email=this.value;" placeholder="you@email.com" class="inp"/></label></div><button id="waCta" type="button" onclick="trackGAEvent('whatsapp_click',{source:'calculator'});window.open(buildWa(calcEst()),'_blank')" class="flex items-center justify-center gap-2 w-full rounded-2xl py-4 font-semibold text-sm transition-all mb-3 cursor-pointer" style="background:#25D366;color:#fff;border:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Send via WhatsApp — Get Itemised Quote</button><button type="button" onclick="trackGAEvent('email_click',{source:'calculator'});window.location.href=buildMailto(calcEst())" class="flex items-center justify-center gap-2 w-full rounded-2xl py-3.5 font-semibold text-sm transition-all cursor-pointer" style="background:#f3efe7;color:#2C2C2C;border:1px solid #d8cec0"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Send via Email Instead</button><p class="text-center text-xs text-stone-400 mt-3">Replied within 2 business hours · BCA-Registered · HDB-Approved</p></div></div>`;
+      <div class="rounded-2xl border border-stone-100 bg-stone-50 px-5 py-4 mb-7 text-xs text-stone-500 leading-5"><strong class="text-stone-700">Planning estimate, not a quotation.</strong> Actual cost depends on site conditions, confirmed measurements, material grade, and HDB/BCA approvals. ID Work Studio is BCA-registered and HDB-approved.</div><div class="rounded-3xl border border-[#d8cec0] bg-[#fbf8f2] p-6 mb-7"><div class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:#a99683">Next financial planning step</div><h3 class="serif text-2xl font-bold mb-2 text-[#171514]">Renovation cost is only one part of moving in.</h3><p class="text-sm text-[#746b61] leading-6 mb-5">Most renovation quotations do not include loose furniture, appliances, curtains, delivery, installation, styling items or safety buffers. Plan the full move-in number before committing your cashflow.</p><a href="https://idworkstudio.com/total-home-budget-calculator" onclick="trackGAEvent('tool_crosslink_click',{source:'renovation_calculator_result',destination:'total_home_budget_calculator'});" class="inline-flex items-center justify-center rounded-2xl bg-[#171514] px-5 py-3 text-sm font-semibold text-white hover:bg-[#2b2723] transition-all">Plan Full Move-In Budget →</a></div><div class="rounded-3xl border border-[#d8cec0] bg-white p-6 mb-7">
+        <div class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:#a99683">Confidence Check</div>
+        <h3 class="serif text-2xl font-bold mb-2 text-[#171514]">Did this calculator make your renovation budget clearer?</h3>
+        <p class="text-sm text-[#746b61] leading-6 mb-5">Your feedback helps us improve this free planning tool. This is not a quotation request form — it is only for telling us what was useful, unclear, or missing.</p>
+        <form name="idws-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="trackGAEvent('feedback_submit',{source:'renovation_cost_calculator'});" class="space-y-4">
+          <input type="hidden" name="form-name" value="idws-feedback"/>
+          <input type="hidden" name="source_type" value="planning_tool"/>
+          <input type="hidden" name="source_name" value="renovation-cost-calculator"/>
+          <input type="hidden" name="user_intent" value="budget"/>
+          <input type="hidden" name="page_url" value="https://idworkstudio.com/renovation-cost-calculator"/>
+          <p class="hidden"><label>Do not fill this if you are human: <input name="bot-field"/></label></p>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block">
+              <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Did this help?</div>
+              <select name="confidence" class="inp" required>
+                <option value="">Select one</option>
+                <option value="yes_much_clearer">Yes, much clearer now</option>
+                <option value="somewhat">Somewhat, but I still have questions</option>
+                <option value="not_really">Not really</option>
+              </select>
+            </label>
+            <label class="block">
+              <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">What were you trying to understand?</div>
+              <select name="trying_to_understand" class="inp" required>
+                <option value="">Select one</option>
+                <option value="overall_budget">Overall renovation budget</option>
+                <option value="kitchen_toilet_cost">Kitchen / toilet cost</option>
+                <option value="quotation_comparison">Whether my quotation is reasonable</option>
+                <option value="move_in_budget">Full move-in budget</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+          </div>
+          <label class="block">
+            <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">Property type</div>
+            <select name="property_type_feedback" class="inp">
+              <option value="">Select one</option>
+              <option value="bto">BTO / new HDB</option>
+              <option value="resale_hdb">Resale HDB</option>
+              <option value="condo">Condo</option>
+              <option value="landed">Landed</option>
+              <option value="not_sure">Not sure yet</option>
+            </select>
+          </label>
+          <label class="block">
+            <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">What would make this calculator more useful?</div>
+            <select name="missing_help" class="inp">
+              <option value="">Select one</option>
+              <option value="clearer_cost_breakdown">Clearer cost breakdown</option>
+              <option value="more_material_options">More material options</option>
+              <option value="more_explanation_of_quote_difference">More explanation on quotation differences</option>
+              <option value="more_timeline_guidance">More timeline guidance</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label class="block">
+            <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">What can we improve?</div>
+            <textarea name="improvement_feedback" rows="3" class="inp" placeholder="Example: I still want to understand why quotations can differ so much."></textarea>
+          </label>
+          <button type="submit" class="inline-flex items-center justify-center rounded-2xl bg-[#171514] px-5 py-3 text-sm font-semibold text-white hover:bg-[#2b2723] transition-all">Send Feedback</button>
+        </form>
+      </div>
+      <div class="hidden lg:block rounded-3xl border-2 border-[#171514] bg-[#fbf8f2] p-7 mb-7">
+        <div class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:#a99683">Need a checked quotation?</div>
+        <h3 class="serif text-2xl font-bold mb-2 text-[#171514]">Turn this estimate into a proper renovation scope.</h3>
+        <p class="text-sm text-[#746b61] leading-6 mb-5">The calculator gives you a planning range. A confirmed quotation still needs your floor plan, site condition, measurements, material choices and final scope review.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="${waLink}" target="_blank" rel="noopener noreferrer" onclick="trackGAEvent('whatsapp_click',{source:'calculator_bottom_cta'});" class="inline-flex items-center justify-center rounded-2xl bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90">Send Estimate on WhatsApp →</a>
+          <a href="https://idworkstudio.com/insights/renovation-quotation-singapore" onclick="trackGAEvent('guide_click',{source:'calculator_bottom_cta',destination:'quotation_guide'});" class="inline-flex items-center justify-center rounded-2xl border border-[#d8cec0] bg-white px-5 py-3 text-sm font-semibold text-[#171514] transition hover:border-[#c8aa72]">Read Quotation Guide</a>
+        </div>
+      </div>
+      <div class="rounded-3xl border border-[#d8cec0] bg-[#fffaf4] p-6 mb-7">
+        <div class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:#a99683">Already Worked With ID Work Studio?</div>
+        <h3 class="serif text-2xl font-bold mb-2 text-[#171514]">Your honest review helps other homeowners decide with more confidence.</h3>
+        <p class="text-sm text-[#746b61] leading-6 mb-5">If our team has helped with your renovation, consultation or project, we would appreciate your honest Google review. If you only used this free calculator, the feedback form above is the better place to share your thoughts.</p>
+        <a href="https://www.google.com/search?q=ID+Work+Studio+Google+Review" target="_blank" rel="noopener noreferrer" onclick="trackGAEvent('google_review_click',{source:'renovation_cost_calculator'});" class="inline-flex items-center justify-center rounded-2xl border border-[#d8cec0] bg-white px-5 py-3 text-sm font-semibold text-[#171514] transition hover:border-[#c8aa72]">Leave a Google Review →</a>
+      </div>
+      </div>`;
   }
 
   document.getElementById('backBtn').disabled=step===0;
