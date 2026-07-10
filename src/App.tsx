@@ -25,6 +25,7 @@ import CommercialRenovationCostSingapore from './components/CommercialRenovation
 import OfficeRenovationCostSingapore from './components/OfficeRenovationCostSingapore';
 import OfficeRenovationTimelineSingapore from './components/OfficeRenovationTimelineSingapore';
 import CommercialReinstatementSingapore from './components/CommercialReinstatementSingapore';
+import CommercialRenovationApprovalsSingapore from './components/CommercialRenovationApprovalsSingapore';
 import OverseasRenovationShoppingMistakes from './components/OverseasRenovationShoppingMistakes';
 import FengShuiRenovationSingapore from './components/FengShuiRenovationSingapore';
 import KitchenRenovationCostSingapore from './components/KitchenRenovationCostSingapore';
@@ -866,6 +867,7 @@ export const routes: RouteRecord[] = [
       { path: 'insights/renovation-mistakes-singapore', element: <ArticleRenovationMistakes /> },
       { path: 'insights/commercial-renovation-cost-singapore', element: <CommercialRenovationCostSingapore /> },
       { path: 'insights/commercial-reinstatement-singapore', element: <CommercialReinstatementSingapore /> },
+      { path: 'insights/commercial-renovation-approvals-singapore', element: <CommercialRenovationApprovalsSingapore /> },
       { path: 'insights/office-renovation-cost-singapore', element: <OfficeRenovationCostSingapore /> },
       { path: 'insights/office-renovation-timeline-singapore', element: <OfficeRenovationTimelineSingapore /> },
       { path: 'insights/overseas-renovation-shopping-singapore', element: <OverseasRenovationShoppingMistakes /> },

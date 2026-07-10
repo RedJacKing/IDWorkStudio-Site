@@ -2276,6 +2276,12 @@ enT["insights_page"] = {
       title: "Commercial Reinstatement Singapore: Cost, Timeline, Checklist & Landlord Requirements",
       excerpt: "A practical lease handover guide for Singapore commercial tenants covering office, retail and mall reinstatement, landlord requirements, hidden costs, nominated contractors and deposit recovery risks.",
       read_time: "18 min read"
+    },
+    "15": {
+      category: "Commercial Approvals Guide",
+      title: "Commercial Renovation Approvals Singapore: Landlord, MCST, BCA & SCDF Requirements",
+      excerpt: "A practical guide to commercial renovation approvals in Singapore, covering landlord and MCST fit-out rules, BCA and SCDF requirements, submission documents, approval sequencing and common causes of delay.",
+      read_time: "18 min read"
     }
   },
   footer_block: {
@@ -2407,6 +2413,12 @@ zhT["insights_page"] = {
       category: "商业交还指南",
       title: "新加坡商业恢复原状：费用、时间表、清单与业主要求",
       excerpt: "为新加坡商业租户整理的租约交还指南，涵盖办公室、零售店与商场单位恢复原状、业主要求、隐藏成本、指定承包商与押金风险。",
+      read_time: "约 18 分钟"
+    },
+    "15": {
+      category: "商业审批指南",
+      title: "新加坡商业翻新审批：业主、MCST、BCA 与 SCDF 要求",
+      excerpt: "实用说明新加坡商业翻新审批流程，涵盖业主与 MCST 装修规定、BCA 与 SCDF 要求、提交文件、审批顺序及常见延误原因。",
       read_time: "约 18 分钟"
     }
   },

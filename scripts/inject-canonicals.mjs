@@ -164,6 +164,15 @@ const pageMetaMap = {
     ogUrl: 'https://idworkstudio.com/insights/commercial-reinstatement-singapore',
   },
 
+  'insights/commercial-renovation-approvals-singapore.html': {
+    canonical: 'https://idworkstudio.com/insights/commercial-renovation-approvals-singapore',
+    title: 'Commercial Renovation Approvals Singapore (2026) | ID Work Studio',
+    description: 'Understand the approvals, landlord requirements, permits, timeline risks and hidden costs before commercial renovation starts in Singapore.',
+    ogTitle: 'Commercial Renovation Approvals Singapore (2026) | ID Work Studio',
+    ogDesc: 'Understand the approvals, landlord requirements, permits, timeline risks and hidden costs before commercial renovation starts in Singapore.',
+    ogUrl: 'https://idworkstudio.com/insights/commercial-renovation-approvals-singapore',
+  },
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',

@@ -160,6 +160,16 @@ export default function Insights() {
       date: '2026-06-17',
       readTime: t('insights_page.articles.14.read_time'),
     },
+    {
+      slug: '/insights/commercial-renovation-approvals-singapore',
+      sections: ['commercial'],
+      topics: ['approvals', 'commercial', 'compliance'],
+      category: t('insights_page.articles.15.category'),
+      title: t('insights_page.articles.15.title'),
+      excerpt: t('insights_page.articles.15.excerpt'),
+      date: '2026-07-10',
+      readTime: t('insights_page.articles.15.read_time'),
+    },
   ];
 
   const residentialArticles = articles.filter((article) =>
