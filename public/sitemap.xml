@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://idworkstudio.com/</loc>
@@ -192,4 +192,4 @@
     <priority>0.8</priority>
   </url>
 
-</urlset>
+<url><loc>https://idworkstudio.com/hdb-defect-checklist</loc><lastmod>2026-07-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url></urlset>

@@ -239,21 +239,70 @@
   status = 200
 
 # =========================================================
-# 7) RENOVATION CALCULATOR STANDALONE PAGE
+# 7) PLANNING TOOLS — CANONICAL CLEAN URLS
 # =========================================================
+
+# Renovation Cost Calculator
+[[redirects]]
+  from = "/renovation-cost-calculator.html"
+  to = "/renovation-cost-calculator"
+  status = 301
+  force = true
 
 [[redirects]]
-  from   = "/renovation-cost-calculator"
-  to     = "/renovation-cost-calculator.html"
+  from = "/renovation-cost-calculator"
+  to = "/renovation-cost-calculator.html"
   status = 200
-  force  = true
+  force = true
 
-# =========================================================
-# 8) HDB RENOVATION STYLE QUIZ STANDALONE PAGE
-# =========================================================
+# Total Home Budget Calculator
+[[redirects]]
+  from = "/total-home-budget-calculator.html"
+  to = "/total-home-budget-calculator"
+  status = 301
+  force = true
 
 [[redirects]]
-  from   = "/hdb-renovation-style-quiz"
-  to     = "/hdb-renovation-style-quiz.html"
+  from = "/total-home-budget-calculator"
+  to = "/total-home-budget-calculator.html"
   status = 200
-  force  = true
+  force = true
+
+# Renovation Timeline Planner
+[[redirects]]
+  from = "/renovation-timeline-planner-singapore.html"
+  to = "/renovation-timeline-planner-singapore"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/renovation-timeline-planner-singapore"
+  to = "/renovation-timeline-planner-singapore.html"
+  status = 200
+  force = true
+
+# HDB Renovation Style Quiz
+[[redirects]]
+  from = "/hdb-renovation-style-quiz.html"
+  to = "/hdb-renovation-style-quiz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hdb-renovation-style-quiz"
+  to = "/hdb-renovation-style-quiz.html"
+  status = 200
+  force = true
+
+# HDB Defect Checklist
+[[redirects]]
+  from = "/hdb-defect-checklist.html"
+  to = "/hdb-defect-checklist"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hdb-defect-checklist"
+  to = "/hdb-defect-checklist.html"
+  status = 200
+  force = true
