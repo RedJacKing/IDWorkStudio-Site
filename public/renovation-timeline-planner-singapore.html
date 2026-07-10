@@ -330,27 +330,36 @@
               <h3 class="serif text-2xl font-bold mt-1">What still feels uncertain?</h3>
               <div class="mt-5 space-y-5 text-sm leading-6 text-[#312c28]">
                 <fieldset>
+                  <legend class="font-bold mb-3">How confident are you in using this timeline as a planning guide?</legend>
+                  <div class="grid sm:grid-cols-3 gap-2">
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_confidence" value="confident" required><span>Confident</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_confidence" value="somewhat_confident"><span>Somewhat confident</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_confidence" value="need_review"><span>I may need a review</span></label>
+                  </div>
+                </fieldset>
+                <fieldset>
                   <legend class="font-bold mb-3">What still feels uncertain after using this timeline planner?</legend>
                   <div class="grid gap-2">
-                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timeline_uncertainty" value="timeline_realism" required><span>Whether my timeline is realistic</span></label>
-                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timeline_uncertainty" value="delay_causes"><span>Which tasks may cause delays</span></label>
-                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timeline_uncertainty" value="decision_timing"><span>When I should confirm materials or appliances</span></label>
-                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timeline_uncertainty" value="move_in_safety"><span>Whether my move-in date is safe</span></label>
-                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timeline_uncertainty" value="clear"><span>Nothing, the timeline is clear</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_uncertainty" value="timeline_realism" required><span>Whether my timeline is realistic</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_uncertainty" value="delay_causes"><span>Which tasks may cause delays</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_uncertainty" value="decision_timing"><span>When I should confirm materials or appliances</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_uncertainty" value="move_in_safety"><span>Whether my move-in date is safe</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_uncertainty" value="clear"><span>Nothing, the timeline is clear</span></label>
                   </div>
                 </fieldset>
                 <fieldset>
                   <legend class="font-bold mb-3">What is your biggest renovation timing concern now?</legend>
                   <div class="grid sm:grid-cols-2 gap-2">
-                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timing_concern" value="keys_start"><span>Getting keys and starting renovation</span></label>
-                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timing_concern" value="approval"><span>HDB / condo approval timing</span></label>
-                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timing_concern" value="carpentry_material"><span>Carpentry or material delays</span></label>
-                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="timing_concern" value="delivery_move_in"><span>Coordinating delivery and move-in</span></label>
-                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3 sm:col-span-2"><input type="radio" name="timing_concern" value="avoid_delay"><span>Avoiding renovation delays</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_concern" value="keys_start"><span>Getting keys and starting renovation</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_concern" value="approval"><span>HDB / condo approval timing</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_concern" value="carpentry_material"><span>Carpentry or material delays</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3"><input type="radio" name="feedback_concern" value="delivery_move_in"><span>Coordinating delivery and move-in</span></label>
+                    <label class="flex gap-3 rounded-2xl border border-[#d8cec0] bg-[#fffaf4] p-3 sm:col-span-2"><input type="radio" name="feedback_concern" value="avoid_delay"><span>Avoiding renovation delays</span></label>
                   </div>
                 </fieldset>
-                <label class="block"><span class="font-bold">Anything missing or confusing? <span class="font-normal text-[#746b61]">Optional</span></span><textarea name="comments" rows="3" class="inp mt-2" placeholder="Tell us what would have made this planner easier to understand."></textarea></label>
-                <button type="submit" class="w-full rounded-full bg-[#171514] text-white px-5 py-3 text-xs font-bold uppercase tracking-widest">Submit Feedback</button>
+                <label class="block"><span class="font-bold">Anything missing or confusing? <span class="font-normal text-[#746b61]">Optional</span></span><textarea name="feedback_message" rows="3" class="inp mt-2" placeholder="Tell us what would have made this planner easier to understand."></textarea></label>
+                <button id="timelineFeedbackSubmit" type="submit" class="w-full rounded-full bg-[#171514] text-white px-5 py-3 text-xs font-bold uppercase tracking-widest disabled:cursor-not-allowed disabled:opacity-60">Submit Feedback</button>
+                <p id="timelineFeedbackStatus" class="hidden rounded-2xl border px-4 py-3 text-sm leading-6" role="status" aria-live="polite"></p>
                 <p class="text-xs leading-5 text-[#746b61]">This feedback helps ID Work Studio improve the planner and future renovation guides. It is not a renovation enquiry form.</p>
               </div>
             </form>
@@ -1153,6 +1162,91 @@ setDefaults();
       </div>
     </div>
   </section>
+
+
+
+  <script>
+  (() => {
+    const form = document.querySelector('form[name="idws-feedback"]');
+    if (!form) return;
+
+    const submitButton = document.getElementById('timelineFeedbackSubmit');
+    const statusMessage = document.getElementById('timelineFeedbackStatus');
+    const defaultButtonText = submitButton ? submitButton.textContent : 'Submit Feedback';
+    let submissionLocked = false;
+
+    const showStatus = (type, message) => {
+      if (!statusMessage) return;
+      statusMessage.textContent = message;
+      statusMessage.classList.remove(
+        'hidden',
+        'border-[#86a98a]', 'bg-[#eef7ef]', 'text-[#285c30]',
+        'border-[#d7a2a2]', 'bg-[#fff1f1]', 'text-[#8a2424]'
+      );
+
+      if (type === 'success') {
+        statusMessage.classList.add('border-[#86a98a]', 'bg-[#eef7ef]', 'text-[#285c30]');
+      } else {
+        statusMessage.classList.add('border-[#d7a2a2]', 'bg-[#fff1f1]', 'text-[#8a2424]');
+      }
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (submissionLocked || form.dataset.submitting === 'true') return;
+
+      if (!form.reportValidity()) return;
+
+      form.dataset.submitting = 'true';
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Submitting…';
+      }
+      if (statusMessage) statusMessage.classList.add('hidden');
+
+      const formData = new FormData(form);
+      formData.set('form-name', 'idws-feedback');
+      formData.set('page_url', window.location.pathname || '/renovation-timeline-planner-singapore');
+
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString()
+        });
+
+        if (!response.ok) throw new Error(`Submission failed with status ${response.status}`);
+
+        submissionLocked = true;
+        showStatus(
+          'success',
+          'Thank you. Your feedback has been submitted and will help us improve this planner and future renovation guidance.'
+        );
+
+        if (submitButton) {
+          submitButton.textContent = 'Feedback Submitted';
+          submitButton.disabled = true;
+        }
+
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'feedback_submit', {
+            source_type: formData.get('source_type') || 'planning_tool',
+            source_name: formData.get('source_name') || 'renovation_timeline_planner',
+            user_intent: formData.get('user_intent') || 'timeline_planning'
+          });
+        }
+      } catch (error) {
+        console.error('Feedback submission error:', error);
+        showStatus('error', 'We could not submit your feedback. Please check your connection and try again.');
+        form.dataset.submitting = 'false';
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = defaultButtonText;
+        }
+      }
+    });
+  })();
+  </script>
 
 </body>
 </html>

@@ -263,10 +263,10 @@
     <input type="hidden" name="style_result" />
     <input type="hidden" name="secondary_style" />
     <input type="hidden" name="result_confidence" />
-    <input type="hidden" name="style_confidence" />
-    <input type="hidden" name="biggest_concern" />
-    <input type="hidden" name="decision_help" />
-    <textarea name="comments"></textarea>
+    <input type="hidden" name="feedback_confidence" />
+    <input type="hidden" name="feedback_uncertainty" />
+    <input type="hidden" name="feedback_concern" />
+    <textarea name="feedback_message"></textarea>
   </form>
 
 <script>
@@ -467,38 +467,90 @@ function showResult(){
     quizCompleteTracked = true;
   }
   document.getElementById('quizShell').classList.add('hide'); const result=document.getElementById('result'); result.classList.add('show');
-  result.innerHTML=`<div class="result-hero"><div class="soft-card result-panel"><div class="result-kicker">Your renovation style result</div><h2 class="result-style">${displayPrimary}</h2><div class="confidence">${r.confidence} · ${r.diffPct}% difference</div><p class="lead" style="margin-left:0">Your secondary style is <strong>${r.secondary}</strong>. ${c.desc}</p><div class="tag-cloud">${Object.entries(r.tagCounts).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([t])=>`<span class="tag" style="color:#6f5830;border-color:#d8cec0;background:#fffaf4">${t}</span>`).join('')}</div></div><img class="result-img" loading="eager" src="${r.image}" alt="${displayPrimary} HDB living room interior style result" onerror="this.onerror=null;this.src='${fallbackImage}'" /></div><div class="breakdown-grid"><div class="breakdown-card"><h4>Colour palette</h4><p>${c.palette}</p></div><div class="breakdown-card"><h4>Materials</h4><p>${c.materials}</p></div><div class="breakdown-card"><h4>Lighting</h4><p>${c.lighting}</p></div><div class="breakdown-card"><h4>Mood</h4><p>${c.mood}</p></div></div><div class="reality-grid"><div class="reality-item"><div class="reality-label">Maintenance</div><div class="reality-value">${c.maint}</div></div><div class="reality-item"><div class="reality-label">Cost level</div><div class="reality-value">${c.cost}</div></div><div class="reality-item"><div class="reality-label">Suitable for</div><div class="reality-value">${c.suitable}</div></div></div><div class="soft-card" style="margin-top:22px;padding:24px"><div class="result-kicker">Recommended next step</div><h3 class="serif" style="font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.12;margin:0 0 8px;color:#171514">Turn your style result into a renovation plan</h3><p style="color:#746b61;line-height:1.7;font-size:14px;margin:0 0 18px">You have clarified the design direction. The next step is to check whether the style fits your renovation budget, full move-in budget and target timeline.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px"><a href="/renovation-cost-calculator" style="display:block;text-decoration:none;background:#171514;color:#fff;border:1px solid #171514;border-radius:20px;padding:18px;transition:transform .18s,box-shadow .18s"><span style="display:block;color:#c5a059;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px">Step 2</span><strong style="display:block;font-size:14px;margin-bottom:6px">Estimate Renovation Cost</strong><span style="color:#d8cec0;font-size:13px;line-height:1.6">Check if your selected style matches your renovation scope and budget.</span></a><a href="/total-home-budget-calculator" style="display:block;text-decoration:none;background:#fffaf4;border:1px solid var(--line);border-radius:20px;padding:18px"><span style="display:block;color:#a99683;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px">Step 3</span><strong style="display:block;font-size:14px;margin-bottom:6px">Plan Total Move-In Budget</strong><span style="color:#746b61;font-size:13px;line-height:1.6">Add furniture, appliances, curtains and move-in buffer before committing.</span></a><a href="/renovation-timeline-planner-singapore" style="display:block;text-decoration:none;background:#fffaf4;border:1px solid var(--line);border-radius:20px;padding:18px"><span style="display:block;color:#a99683;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px">Step 4</span><strong style="display:block;font-size:14px;margin-bottom:6px">Build Renovation Timeline</strong><span style="color:#746b61;font-size:13px;line-height:1.6">Map the renovation sequence before confirming your move-in date.</span></a></div></div><div class="soft-card" style="margin-top:22px;padding:24px"><div class="result-kicker">Confidence check</div><h3 class="serif" style="font-size:clamp(1.5rem,3vw,2rem);line-height:1.12;margin:0 0 8px;color:#171514">How confident are you about this style direction?</h3><p style="color:#746b61;line-height:1.7;font-size:14px;margin:0 0 16px">Your result is a starting point. The next useful question is whether the style can work with your actual layout, storage needs and daily lifestyle.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px"><label style="display:flex;gap:10px;align-items:flex-start;background:#fffaf4;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:13px;line-height:1.5;color:#746b61"><input type="radio" name="confidencePreview" value="Very confident" style="margin-top:3px">Very confident</label><label style="display:flex;gap:10px;align-items:flex-start;background:#fffaf4;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:13px;line-height:1.5;color:#746b61"><input type="radio" name="confidencePreview" value="Mostly confident" style="margin-top:3px">Mostly confident</label><label style="display:flex;gap:10px;align-items:flex-start;background:#fffaf4;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:13px;line-height:1.5;color:#746b61"><input type="radio" name="confidencePreview" value="Still comparing styles" style="margin-top:3px">Still comparing styles</label><label style="display:flex;gap:10px;align-items:flex-start;background:#fffaf4;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:13px;line-height:1.5;color:#746b61"><input type="radio" name="confidencePreview" value="Not sure this suits me" style="margin-top:3px">Not sure this suits me</label></div></div><div class="soft-card" style="margin-top:22px;padding:24px"><div class="result-kicker">Help us improve this quiz</div><h3 class="serif" style="font-size:clamp(1.5rem,3vw,2rem);line-height:1.12;margin:0 0 8px;color:#171514">What would make this style result more useful?</h3><p style="color:#746b61;line-height:1.7;font-size:14px;margin:0 0 18px">Your feedback helps us improve the quiz and create better renovation planning guidance for Singapore homeowners.</p><form name="idws-feedback" data-netlify="true" method="POST" onsubmit="submitStyleFeedback(event)"><input type="hidden" name="form-name" value="idws-feedback"><input type="hidden" name="source_type" value="planning-tool"><input type="hidden" name="source_name" value="hdb-renovation-style-quiz"><input type="hidden" name="user_intent" value="style-planning"><input type="hidden" name="page_url" value=""><input type="hidden" name="style_result" value="${displayPrimary}"><input type="hidden" name="secondary_style" value="${r.secondary}"><input type="hidden" name="result_confidence" value="${r.confidence}"><div class="form-grid"><div class="field"><label>How confident are you about your style result?</label><select class="inp" name="style_confidence" required><option value="">Select one</option><option>Very confident</option><option>Mostly confident</option><option>Still comparing styles</option><option>Not sure this suits me</option></select></div><div class="field"><label>What is your biggest concern now?</label><select class="inp" name="biggest_concern" required><option value="">Select one</option><option>Choosing the wrong style</option><option>Staying within budget</option><option>Storage planning</option><option>Family practicality</option><option>Finding the right contractor</option></select></div><div class="field full"><label>What would help you decide more confidently?</label><select class="inp" name="decision_help" required><option value="">Select one</option><option>More real renovation examples</option><option>More room-specific images</option><option>Material recommendations</option><option>Budget guidance</option><option>Layout advice</option></select></div><div class="field full"><label>Optional comment</label><textarea class="inp" name="comments" rows="3" placeholder="Tell us what felt unclear or what you wanted to see next."></textarea></div></div><button class="btn btn-ghost" style="margin-top:16px;width:100%" type="submit">Submit Feedback</button><div class="success" id="feedbackSuccess">Thank you. Your feedback helps us improve this planning tool.</div></form></div><div class="lead-box"><h3>Does this style fit your home?</h3><p style="color:#746b61;line-height:1.7;margin:0">Every home layout is different. We can help you understand whether this style suits your floor plan, storage needs and renovation goals before you start designing.</p><button class="btn btn-gold" style="margin-top:18px;width:100%" onclick="contactStyleResult()" type="button">Plan My Renovation With This Style</button></div><div class="soft-card" style="margin-top:18px;padding:22px;border-radius:24px;background:rgba(255,250,244,.72)"><div class="result-kicker">Existing clients only</div><h3 class="serif" style="font-size:clamp(1.35rem,2.6vw,1.8rem);line-height:1.14;margin:0 0 8px;color:#171514">Already renovated with ID Work Studio?</h3><p style="color:#746b61;line-height:1.7;font-size:13.5px;margin:0 0 14px">If we have completed your renovation before and these planning tools are still useful, sharing your experience helps other Singapore homeowners make more confident renovation decisions.</p><a class="btn btn-ghost" style="display:inline-flex;justify-content:center;text-decoration:none;width:100%" href="${googleReviewUrl}" target="_blank" rel="noopener noreferrer" onclick="trackGoogleReviewClick()">Leave a Google Review</a></div><button class="btn btn-ghost" style="margin-top:12px;width:100%" onclick="resetQuiz()" type="button">Retake Quiz</button>`;
+  result.innerHTML=`<div class="result-hero"><div class="soft-card result-panel"><div class="result-kicker">Your renovation style result</div><h2 class="result-style">${displayPrimary}</h2><div class="confidence">${r.confidence} · ${r.diffPct}% difference</div><p class="lead" style="margin-left:0">Your secondary style is <strong>${r.secondary}</strong>. ${c.desc}</p><div class="tag-cloud">${Object.entries(r.tagCounts).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([t])=>`<span class="tag" style="color:#6f5830;border-color:#d8cec0;background:#fffaf4">${t}</span>`).join('')}</div></div><img class="result-img" loading="eager" src="${r.image}" alt="${displayPrimary} HDB living room interior style result" onerror="this.onerror=null;this.src='${fallbackImage}'" /></div><div class="breakdown-grid"><div class="breakdown-card"><h4>Colour palette</h4><p>${c.palette}</p></div><div class="breakdown-card"><h4>Materials</h4><p>${c.materials}</p></div><div class="breakdown-card"><h4>Lighting</h4><p>${c.lighting}</p></div><div class="breakdown-card"><h4>Mood</h4><p>${c.mood}</p></div></div><div class="reality-grid"><div class="reality-item"><div class="reality-label">Maintenance</div><div class="reality-value">${c.maint}</div></div><div class="reality-item"><div class="reality-label">Cost level</div><div class="reality-value">${c.cost}</div></div><div class="reality-item"><div class="reality-label">Suitable for</div><div class="reality-value">${c.suitable}</div></div></div><div class="soft-card" style="margin-top:22px;padding:24px"><div class="result-kicker">Recommended next step</div><h3 class="serif" style="font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.12;margin:0 0 8px;color:#171514">Turn your style result into a renovation plan</h3><p style="color:#746b61;line-height:1.7;font-size:14px;margin:0 0 18px">You have clarified the design direction. The next step is to check whether the style fits your renovation budget, full move-in budget and target timeline.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px"><a href="/renovation-cost-calculator" style="display:block;text-decoration:none;background:#171514;color:#fff;border:1px solid #171514;border-radius:20px;padding:18px;transition:transform .18s,box-shadow .18s"><span style="display:block;color:#c5a059;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px">Step 2</span><strong style="display:block;font-size:14px;margin-bottom:6px">Estimate Renovation Cost</strong><span style="color:#d8cec0;font-size:13px;line-height:1.6">Check if your selected style matches your renovation scope and budget.</span></a><a href="/total-home-budget-calculator" style="display:block;text-decoration:none;background:#fffaf4;border:1px solid var(--line);border-radius:20px;padding:18px"><span style="display:block;color:#a99683;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px">Step 3</span><strong style="display:block;font-size:14px;margin-bottom:6px">Plan Total Move-In Budget</strong><span style="color:#746b61;font-size:13px;line-height:1.6">Add furniture, appliances, curtains and move-in buffer before committing.</span></a><a href="/renovation-timeline-planner-singapore" style="display:block;text-decoration:none;background:#fffaf4;border:1px solid var(--line);border-radius:20px;padding:18px"><span style="display:block;color:#a99683;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px">Step 4</span><strong style="display:block;font-size:14px;margin-bottom:6px">Build Renovation Timeline</strong><span style="color:#746b61;font-size:13px;line-height:1.6">Map the renovation sequence before confirming your move-in date.</span></a></div></div><div class="soft-card" style="margin-top:22px;padding:24px"><div class="result-kicker">Confidence check</div><h3 class="serif" style="font-size:clamp(1.5rem,3vw,2rem);line-height:1.12;margin:0 0 8px;color:#171514">How confident are you about this style direction?</h3><p style="color:#746b61;line-height:1.7;font-size:14px;margin:0 0 16px">Your result is a starting point. The next useful question is whether the style can work with your actual layout, storage needs and daily lifestyle.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px"><label style="display:flex;gap:10px;align-items:flex-start;background:#fffaf4;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:13px;line-height:1.5;color:#746b61"><input type="radio" name="confidencePreview" value="Very confident" style="margin-top:3px">Very confident</label><label style="display:flex;gap:10px;align-items:flex-start;background:#fffaf4;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:13px;line-height:1.5;color:#746b61"><input type="radio" name="confidencePreview" value="Mostly confident" style="margin-top:3px">Mostly confident</label><label style="display:flex;gap:10px;align-items:flex-start;background:#fffaf4;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:13px;line-height:1.5;color:#746b61"><input type="radio" name="confidencePreview" value="Still comparing styles" style="margin-top:3px">Still comparing styles</label><label style="display:flex;gap:10px;align-items:flex-start;background:#fffaf4;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:13px;line-height:1.5;color:#746b61"><input type="radio" name="confidencePreview" value="Not sure this suits me" style="margin-top:3px">Not sure this suits me</label></div></div><div class="soft-card" style="margin-top:22px;padding:24px"><div class="result-kicker">Help us improve this quiz</div><h3 class="serif" style="font-size:clamp(1.5rem,3vw,2rem);line-height:1.12;margin:0 0 8px;color:#171514">What would make this style result more useful?</h3><p style="color:#746b61;line-height:1.7;font-size:14px;margin:0 0 18px">Your feedback helps us improve the quiz and create better renovation planning guidance for Singapore homeowners.</p><form name="idws-feedback" data-netlify="true" method="POST" onsubmit="submitStyleFeedback(event)"><input type="hidden" name="form-name" value="idws-feedback"><input type="hidden" name="source_type" value="planning-tool"><input type="hidden" name="source_name" value="hdb-renovation-style-quiz"><input type="hidden" name="user_intent" value="style-planning"><input type="hidden" name="page_url" value=""><input type="hidden" name="style_result" value="${displayPrimary}"><input type="hidden" name="secondary_style" value="${r.secondary}"><input type="hidden" name="result_confidence" value="${r.confidence}"><div class="form-grid"><div class="field"><label>How confident are you about your style result?</label><select class="inp" name="feedback_confidence" required><option value="">Select one</option><option>Very confident</option><option>Mostly confident</option><option>Still comparing styles</option><option>Not sure this suits me</option></select></div><div class="field"><label>What is your biggest concern now?</label><select class="inp" name="feedback_concern" required><option value="">Select one</option><option>Choosing the wrong style</option><option>Staying within budget</option><option>Storage planning</option><option>Family practicality</option><option>Finding the right contractor</option></select></div><div class="field full"><label>What would help you decide more confidently?</label><select class="inp" name="feedback_uncertainty" required><option value="">Select one</option><option>More real renovation examples</option><option>More room-specific images</option><option>Material recommendations</option><option>Budget guidance</option><option>Layout advice</option></select></div><div class="field full"><label>Optional comment</label><textarea class="inp" name="feedback_message" rows="3" placeholder="Tell us what felt unclear or what you wanted to see next."></textarea></div></div><button class="btn btn-ghost" id="feedbackSubmitButton" style="margin-top:16px;width:100%" type="submit">Submit Feedback</button><div class="success" id="feedbackStatus" role="status" aria-live="polite"></div></form></div><div class="lead-box"><h3>Does this style fit your home?</h3><p style="color:#746b61;line-height:1.7;margin:0">Every home layout is different. We can help you understand whether this style suits your floor plan, storage needs and renovation goals before you start designing.</p><button class="btn btn-gold" style="margin-top:18px;width:100%" onclick="contactStyleResult()" type="button">Plan My Renovation With This Style</button></div><div class="soft-card" style="margin-top:18px;padding:22px;border-radius:24px;background:rgba(255,250,244,.72)"><div class="result-kicker">Existing clients only</div><h3 class="serif" style="font-size:clamp(1.35rem,2.6vw,1.8rem);line-height:1.14;margin:0 0 8px;color:#171514">Already renovated with ID Work Studio?</h3><p style="color:#746b61;line-height:1.7;font-size:13.5px;margin:0 0 14px">If we have completed your renovation before and these planning tools are still useful, sharing your experience helps other Singapore homeowners make more confident renovation decisions.</p><a class="btn btn-ghost" style="display:inline-flex;justify-content:center;text-decoration:none;width:100%" href="${googleReviewUrl}" target="_blank" rel="noopener noreferrer" onclick="trackGoogleReviewClick()">Leave a Google Review</a></div><button class="btn btn-ghost" style="margin-top:12px;width:100%" onclick="resetQuiz()" type="button">Retake Quiz</button>`;
   scrollToResult();
 }
 
+let styleFeedbackSubmitting = false;
 function submitStyleFeedback(e){
   e.preventDefault();
-  const form=e.target;
-  const fd=new FormData(form);
-  fd.set('form-name','idws-feedback');
+
+  if(styleFeedbackSubmitting) return;
+
+  const form = e.target;
+  const button = form.querySelector('button[type="submit"]');
+  const status = form.querySelector('#feedbackStatus');
+  const fd = new FormData(form);
+
+  fd.set('form-name', 'idws-feedback');
   fd.set('page_url', window.location.href);
-  const confidenceChoice=document.querySelector('input[name="confidencePreview"]:checked');
-  if(confidenceChoice && !fd.get('style_confidence')) fd.set('style_confidence', confidenceChoice.value);
-  const button=form.querySelector('button[type="submit"]');
-  if(button){ button.disabled=true; button.textContent='Submitting...'; }
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()})
-    .then(()=>{
-      const success=document.getElementById('feedbackSuccess');
-      if(success) success.style.display='block';
-      if(typeof gtag === 'function'){
-        gtag('event','style_quiz_feedback_submitted',{
-          event_category:'HDB Style Quiz',
-          event_label:fd.get('style_result') || '',
-          style_result:fd.get('style_result') || '',
-          source_name:'hdb-renovation-style-quiz'
-        });
-      }
-      if(button){ button.textContent='Feedback Submitted'; }
-    })
-    .catch(()=>{
-      alert('Sorry, your feedback could not be submitted. Please try again.');
-      if(button){ button.disabled=false; button.textContent='Submit Feedback'; }
-    });
+
+  const confidenceChoice = document.querySelector('input[name="confidencePreview"]:checked');
+  if(confidenceChoice && !fd.get('feedback_confidence')){
+    fd.set('feedback_confidence', confidenceChoice.value);
+  }
+
+  styleFeedbackSubmitting = true;
+
+  if(status){
+    status.style.display = 'none';
+    status.style.borderColor = 'rgba(37,211,102,.35)';
+    status.style.background = 'rgba(37,211,102,.08)';
+    status.style.color = '#235b35';
+    status.textContent = '';
+  }
+
+  if(button){
+    button.disabled = true;
+    button.textContent = 'Submitting...';
+  }
+
+  fetch('/', {
+    method: 'POST',
+    headers: {'Content-Type':'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(fd).toString()
+  })
+  .then(response => {
+    if(!response.ok){
+      throw new Error(`Submission failed: ${response.status}`);
+    }
+
+    if(status){
+      status.textContent = 'Thank you. Your feedback has been submitted and will help us improve this quiz and future renovation guidance.';
+      status.style.display = 'block';
+    }
+
+    if(typeof gtag === 'function'){
+      gtag('event', 'feedback_submit', {
+        event_category: 'Planning Tool Feedback',
+        event_label: 'hdb-renovation-style-quiz',
+        source_type: fd.get('source_type') || '',
+        source_name: fd.get('source_name') || '',
+        user_intent: fd.get('user_intent') || '',
+        style_result: fd.get('style_result') || ''
+      });
+    }
+
+    if(button){
+      button.textContent = 'Feedback Submitted';
+    }
+  })
+  .catch(() => {
+    styleFeedbackSubmitting = false;
+
+    if(status){
+      status.style.borderColor = 'rgba(153,27,27,.28)';
+      status.style.background = 'rgba(153,27,27,.08)';
+      status.style.color = '#991b1b';
+      status.textContent = 'We could not submit your feedback. Please try again.';
+      status.style.display = 'block';
+    }
+
+    if(button){
+      button.disabled = false;
+      button.textContent = 'Submit Feedback';
+    }
+  });
 }
 function trackGoogleReviewClick(){
   if(typeof gtag === 'function'){

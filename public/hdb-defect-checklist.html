@@ -177,34 +177,72 @@ function downloadDefectChecklistPdf(source){
   return false;
 }
 
+let defectFeedbackSubmitting = false;
+
 async function submitDefectFeedback(event){
   event.preventDefault();
+
+  if(defectFeedbackSubmitting) return;
+
   const form = event.target;
   const status = document.getElementById('defectFeedbackStatus');
   const button = form.querySelector('button[type="submit"]');
-  const originalText = button ? button.textContent : '';
+  const originalText = button ? button.textContent : 'Send Feedback';
+  const formData = new FormData(form);
+
+  formData.set('form-name', 'idws-feedback');
+  formData.set('page_url', window.location.href);
+
+  defectFeedbackSubmitting = true;
 
   if (status) status.textContent = '';
-  if (button) { button.disabled = true; button.textContent = 'Sending...'; }
+  if (button) {
+    button.disabled = true;
+    button.textContent = 'Sending...';
+  }
 
   try {
-    const formData = new FormData(form);
-    const body = new URLSearchParams(formData).toString();
     const response = await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body
+      body: new URLSearchParams(formData).toString()
     });
 
-    if (!response.ok) throw new Error('Submission failed');
+    if (!response.ok) {
+      throw new Error(`Submission failed: ${response.status}`);
+    }
 
-    track('feedback_submit',{source:'hdb_defect_checklist'});
-    form.reset();
-    if (status) status.textContent = 'Thank you. Your feedback helps us improve this checklist.';
+    track('feedback_submit',{
+      event_category:'Planning Tool Feedback',
+      event_label:'hdb-defect-checklist',
+      source_type:formData.get('source_type') || '',
+      source_name:formData.get('source_name') || '',
+      user_intent:formData.get('user_intent') || ''
+    });
+
+    form.querySelectorAll('input,select,textarea').forEach(el => {
+      if (el.type !== 'hidden') el.disabled = true;
+    });
+
+    if (status) {
+      status.textContent = 'Thank you. Your feedback has been submitted and will help us improve this checklist and future renovation guidance.';
+    }
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = 'Feedback Submitted';
+    }
   } catch (error) {
-    if (status) status.textContent = 'Sorry, the feedback could not be sent. Please try again.';
-  } finally {
-    if (button) { button.disabled = false; button.textContent = originalText || 'Send Feedback'; }
+    defectFeedbackSubmitting = false;
+
+    if (status) {
+      status.textContent = 'Sorry, the feedback could not be sent. Please try again.';
+    }
+
+    if (button) {
+      button.disabled = false;
+      button.textContent = originalText;
+    }
   }
 }
 
@@ -218,10 +256,10 @@ async function submitDefectFeedback(event){
   <input type="hidden" name="source_name"/>
   <input type="hidden" name="user_intent"/>
   <input type="hidden" name="page_url"/>
-  <input type="hidden" name="confidence"/>
-  <input type="hidden" name="inspection_uncertainty"/>
-  <input type="hidden" name="renovation_concern"/>
-  <textarea name="improvement_feedback"></textarea>
+  <input type="hidden" name="feedback_confidence"/>
+  <input type="hidden" name="feedback_uncertainty"/>
+  <input type="hidden" name="feedback_concern"/>
+  <textarea name="feedback_message"></textarea>
   <input name="bot-field"/>
 </form>
 
@@ -386,7 +424,7 @@ async function submitDefectFeedback(event){
       <p style="display:none"><label>Do not fill this if you are human: <input name="bot-field"/></label></p>
       <div class="feedback-grid">
         <label>How confident are you to inspect your unit?
-          <select name="confidence" required>
+          <select name="feedback_confidence" required>
             <option value="">Select one</option>
             <option value="confident">Confident, the checklist is clear</option>
             <option value="somewhat_confident">Somewhat confident, but I may miss defects</option>
@@ -394,7 +432,7 @@ async function submitDefectFeedback(event){
           </select>
         </label>
         <label>What still feels unclear?
-          <select name="inspection_uncertainty" required>
+          <select name="feedback_uncertainty" required>
             <option value="">Select one</option>
             <option value="how_to_test_defects">How to test each defect properly</option>
             <option value="what_is_serious">Which defects are serious</option>
@@ -405,7 +443,7 @@ async function submitDefectFeedback(event){
         </label>
       </div>
       <label>What is your biggest concern before renovation starts?
-        <select name="renovation_concern">
+        <select name="feedback_concern">
           <option value="">Select one</option>
           <option value="hidden_defects">Missing hidden defects</option>
           <option value="hdb_rectification_delay">Defect rectification delaying renovation</option>
@@ -415,7 +453,7 @@ async function submitDefectFeedback(event){
         </select>
       </label>
       <label>What would make this checklist more useful?
-        <textarea name="improvement_feedback" placeholder="Example: More photos showing how to check floor gradient or window leakage."></textarea>
+        <textarea name="feedback_message" placeholder="Example: More photos showing how to check floor gradient or window leakage."></textarea>
       </label>
       <button class="feedback-submit" type="submit">Send Feedback</button>
       <div class="feedback-status" id="defectFeedbackStatus" aria-live="polite"></div>
