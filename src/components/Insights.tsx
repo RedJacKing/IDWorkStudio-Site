@@ -3,8 +3,12 @@ import { motion } from 'motion/react';
 import { ArrowRight, CalendarDays, MapPin, Mail, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+type GuideSection = 'residential' | 'commercial';
+
 type ArticleCard = {
   slug: string;
+  sections: GuideSection[];
+  topics: string[];
   category: string;
   title: string;
   excerpt: string;
@@ -18,6 +22,8 @@ export default function Insights() {
   const articles: ArticleCard[] = [
     {
       slug: '/insights/renovation-cost-singapore-2026',
+      sections: ['residential'],
+      topics: ['budget', 'cost', 'planning'],
       category: t('insights_page.articles.1.category'),
       title: t('insights_page.articles.1.title'),
       excerpt: t('insights_page.articles.1.excerpt'),
@@ -26,6 +32,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/hdb-renovation-timeline-singapore',
+      sections: ['residential'],
+      topics: ['timeline', 'hdb', 'planning'],
       category: t('insights_page.articles.2.category'),
       title: t('insights_page.articles.2.title'),
       excerpt: t('insights_page.articles.2.excerpt'),
@@ -34,6 +42,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/renovation-mistakes-singapore',
+      sections: ['residential'],
+      topics: ['planning', 'mistakes', 'risk'],
       category: t('insights_page.articles.3.category'),
       title: t('insights_page.articles.3.title'),
       excerpt: t('insights_page.articles.3.excerpt'),
@@ -42,6 +52,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/commercial-renovation-cost-singapore',
+      sections: ['commercial'],
+      topics: ['budget', 'cost', 'commercial'],
       category: t('insights_page.articles.4.category'),
       title: t('insights_page.articles.4.title'),
       excerpt: t('insights_page.articles.4.excerpt'),
@@ -50,6 +62,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/office-renovation-cost-singapore',
+      sections: ['commercial'],
+      topics: ['budget', 'cost', 'office'],
       category: t('insights_page.articles.5.category'),
       title: t('insights_page.articles.5.title'),
       excerpt: t('insights_page.articles.5.excerpt'),
@@ -58,6 +72,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/office-renovation-timeline-singapore',
+      sections: ['commercial'],
+      topics: ['timeline', 'office', 'planning'],
       category: t('insights_page.articles.6.category'),
       title: t('insights_page.articles.6.title'),
       excerpt: t('insights_page.articles.6.excerpt'),
@@ -66,6 +82,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/overseas-renovation-shopping-singapore',
+      sections: ['residential'],
+      topics: ['shopping', 'materials', 'planning'],
       category: t('insights_page.articles.7.category'),
       title: t('insights_page.articles.7.title'),
       excerpt: t('insights_page.articles.7.excerpt'),
@@ -74,6 +92,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/feng-shui-renovation-singapore',
+      sections: ['residential'],
+      topics: ['feng-shui', 'design', 'planning'],
       category: t('insights_page.articles.8.category'),
       title: t('insights_page.articles.8.title'),
       excerpt: t('insights_page.articles.8.excerpt'),
@@ -82,6 +102,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/kitchen-renovation-cost-singapore-2026',
+      sections: ['residential'],
+      topics: ['kitchen', 'budget', 'cost'],
       category: t('insights_page.articles.9.category'),
       title: t('insights_page.articles.9.title'),
       excerpt: t('insights_page.articles.9.excerpt'),
@@ -90,6 +112,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/renovation-quotation-singapore',
+      sections: ['residential'],
+      topics: ['quotation', 'contractor', 'planning'],
       category: t('insights_page.articles.10.category'),
       title: t('insights_page.articles.10.title'),
       excerpt: t('insights_page.articles.10.excerpt'),
@@ -98,6 +122,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/real-cost-moving-home-singapore',
+      sections: ['residential'],
+      topics: ['budget', 'moving', 'planning'],
       category: t('insights_page.articles.11.category'),
       title: t('insights_page.articles.11.title'),
       excerpt: t('insights_page.articles.11.excerpt'),
@@ -106,6 +132,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/hdb-defect-checklist-before-renovation-singapore',
+      sections: ['residential'],
+      topics: ['hdb', 'defects', 'pre-renovation'],
       category: t('insights_page.articles.12.category'),
       title: t('insights_page.articles.12.title'),
       excerpt: t('insights_page.articles.12.excerpt'),
@@ -114,6 +142,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/15-renovation-decisions-singapore-homeowners-should-not-get-wrong',
+      sections: ['residential'],
+      topics: ['decisions', 'planning', 'risk'],
       category: t('insights_page.articles.13.category'),
       title: t('insights_page.articles.13.title'),
       excerpt: t('insights_page.articles.13.excerpt'),
@@ -122,6 +152,8 @@ export default function Insights() {
     },
     {
       slug: '/insights/commercial-reinstatement-singapore',
+      sections: ['commercial'],
+      topics: ['reinstatement', 'commercial', 'landlord'],
       category: t('insights_page.articles.14.category'),
       title: t('insights_page.articles.14.title'),
       excerpt: t('insights_page.articles.14.excerpt'),
@@ -129,6 +161,14 @@ export default function Insights() {
       readTime: t('insights_page.articles.14.read_time'),
     },
   ];
+
+  const residentialArticles = articles.filter((article) =>
+    article.sections.includes('residential')
+  );
+
+  const commercialArticles = articles.filter((article) =>
+    article.sections.includes('commercial')
+  );
 
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -155,6 +195,47 @@ export default function Insights() {
       { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://idworkstudio.com/insights" }
     ]
   };
+
+  const renderArticleCard = (article: ArticleCard, surfaceClass: string) => (
+    <article
+      key={article.slug}
+      className={`${surfaceClass} rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col`}
+    >
+      <div className="p-8 flex flex-col h-full">
+        <div className="flex items-center justify-between gap-3 mb-5">
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-gold/10 text-gold text-[10px] uppercase tracking-[0.25em] font-bold">
+            {article.category}
+          </span>
+          <span className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-bold">
+            {article.readTime}
+          </span>
+        </div>
+
+        <h3 className="text-2xl font-serif text-charcoal leading-tight mb-4">
+          <a href={article.slug} className="hover:text-gold transition-colors duration-200">
+            {article.title}
+          </a>
+        </h3>
+
+        <div className="flex items-center gap-2 text-gray-400 text-xs uppercase tracking-[0.2em] mb-5">
+          <CalendarDays className="w-4 h-4" />
+          <time dateTime={article.date}>{article.date}</time>
+        </div>
+
+        <p className="text-gray-500 text-sm leading-relaxed flex-1">
+          {article.excerpt}
+        </p>
+
+        <a
+          href={article.slug}
+          className="mt-8 inline-flex items-center gap-2 text-charcoal hover:text-gold text-xs uppercase tracking-[0.22em] font-bold transition-colors duration-200"
+        >
+          {t('insights_page.listing.read_more')}
+          <ArrowRight className="w-4 h-4" />
+        </a>
+      </div>
+    </article>
+  );
 
   return (
     <>
@@ -216,65 +297,86 @@ export default function Insights() {
             >
               {t('insights_page.hero.subtitle')}
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto"
+            >
+              <a
+                href="#residential-guides"
+                className="group rounded-2xl border border-white/25 bg-black/25 backdrop-blur-sm px-6 py-5 text-left hover:bg-white hover:text-charcoal transition-all duration-300"
+              >
+                <span className="block text-xs uppercase tracking-[0.24em] text-champagne group-hover:text-gold font-bold mb-2">
+                  {t('insights_page.hero.residential_eyebrow', { defaultValue: 'For Homeowners' })}
+                </span>
+                <span className="flex items-center justify-between gap-4 text-xl font-serif">
+                  {t('insights_page.hero.residential_cta', { defaultValue: 'Residential Renovation' })}
+                  <ArrowRight className="w-5 h-5 shrink-0 group-hover:translate-x-1 transition-transform duration-200" />
+                </span>
+              </a>
+
+              <a
+                href="#commercial-guides"
+                className="group rounded-2xl border border-white/25 bg-black/25 backdrop-blur-sm px-6 py-5 text-left hover:bg-white hover:text-charcoal transition-all duration-300"
+              >
+                <span className="block text-xs uppercase tracking-[0.24em] text-champagne group-hover:text-gold font-bold mb-2">
+                  {t('insights_page.hero.commercial_eyebrow', { defaultValue: 'For Businesses' })}
+                </span>
+                <span className="flex items-center justify-between gap-4 text-xl font-serif">
+                  {t('insights_page.hero.commercial_cta', { defaultValue: 'Commercial Renovation' })}
+                  <ArrowRight className="w-5 h-5 shrink-0 group-hover:translate-x-1 transition-transform duration-200" />
+                </span>
+              </a>
+            </motion.div>
           </div>
         </section>
 
-        <section className="py-24 bg-off-white">
+        <section id="residential-guides" className="scroll-mt-28 py-24 bg-off-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold">
-                {t('insights_page.listing.eyebrow')}
+                {t('insights_page.residential.eyebrow', { defaultValue: 'For Homeowners' })}
               </span>
               <h2 className="text-3xl md:text-5xl font-serif mt-4 mb-6 text-charcoal uppercase tracking-tighter">
-                {t('insights_page.listing.title')}
+                {t('insights_page.residential.title', { defaultValue: 'Residential Renovation Guides' })}
               </h2>
               <div className="w-24 h-1 bg-gold mx-auto mb-6" />
-              <p className="text-gray-500 max-w-2xl mx-auto text-lg font-light">
-                {t('insights_page.listing.subtitle')}
+              <p className="text-gray-500 max-w-3xl mx-auto text-lg font-light">
+                {t('insights_page.residential.subtitle', {
+                  defaultValue:
+                    'Practical guidance for BTO, resale HDB and condominium owners planning renovation costs, timelines, materials and important renovation decisions.',
+                })}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {articles.map((article) => (
-                <article
-                  key={article.slug}
-                  className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col"
-                >
-                  <div className="p-8 flex flex-col h-full">
-                    <div className="flex items-center justify-between gap-3 mb-5">
-                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-gold/10 text-gold text-[10px] uppercase tracking-[0.25em] font-bold">
-                        {article.category}
-                      </span>
-                      <span className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-bold">
-                        {article.readTime}
-                      </span>
-                    </div>
+              {residentialArticles.map((article) => renderArticleCard(article, 'bg-white'))}
+            </div>
+          </div>
+        </section>
 
-                    <h3 className="text-2xl font-serif text-charcoal leading-tight mb-4">
-                      <a href={article.slug} className="hover:text-gold transition-colors duration-200">
-                        {article.title}
-                      </a>
-                    </h3>
+        <section id="commercial-guides" className="scroll-mt-28 py-24 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold">
+                {t('insights_page.commercial.eyebrow', { defaultValue: 'For Businesses' })}
+              </span>
+              <h2 className="text-3xl md:text-5xl font-serif mt-4 mb-6 text-charcoal uppercase tracking-tighter">
+                {t('insights_page.commercial.title', { defaultValue: 'Commercial Renovation Guides' })}
+              </h2>
+              <div className="w-24 h-1 bg-gold mx-auto mb-6" />
+              <p className="text-gray-500 max-w-3xl mx-auto text-lg font-light">
+                {t('insights_page.commercial.subtitle', {
+                  defaultValue:
+                    'Practical guidance for offices, retail spaces and other commercial premises covering renovation costs, timelines, reinstatement and project planning.',
+                })}
+              </p>
+            </div>
 
-                    <div className="flex items-center gap-2 text-gray-400 text-xs uppercase tracking-[0.2em] mb-5">
-                      <CalendarDays className="w-4 h-4" />
-                      <time dateTime={article.date}>{article.date}</time>
-                    </div>
-
-                    <p className="text-gray-500 text-sm leading-relaxed flex-1">
-                      {article.excerpt}
-                    </p>
-
-                    <a
-                      href={article.slug}
-                      className="mt-8 inline-flex items-center gap-2 text-charcoal hover:text-gold text-xs uppercase tracking-[0.22em] font-bold transition-colors duration-200"
-                    >
-                      {t('insights_page.listing.read_more')}
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </div>
-                </article>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {commercialArticles.map((article) => renderArticleCard(article, 'bg-off-white'))}
             </div>
           </div>
         </section>
