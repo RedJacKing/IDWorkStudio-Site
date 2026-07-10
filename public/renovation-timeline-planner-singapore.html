@@ -321,7 +321,7 @@
             </div>
             <form name="idws-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="rounded-[26px] border border-[#d8cec0] bg-white/70 p-5 md:p-6">
               <input type="hidden" name="form-name" value="idws-feedback" />
-              <p class="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
+              <p class="hidden" hidden aria-hidden="true"><label>Do not fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
               <input type="hidden" name="source_type" value="planning_tool" />
               <input type="hidden" name="source_name" value="renovation_timeline_planner" />
               <input type="hidden" name="user_intent" value="timeline_planning" />
