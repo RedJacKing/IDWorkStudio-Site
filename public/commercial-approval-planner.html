@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Commercial Renovation Approval Planner Singapore | ID Work Studio</title>
+<meta content="Find the likely permits required before commercial renovation starts in Singapore, why they are needed, how many working days to allow, and when to sign your tenancy based on your target opening date." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://idworkstudio.com/commercial-approval-planner" rel="canonical"/>
+<meta content="Singapore Commercial Renovation Approval Planner | ID Work Studio" property="og:title"/>
+<meta content="Plan permits, renovation timing, tenancy signing and takeover dates for offices, retail shops, F&amp;B, clinics, tuition centres, childcare, gyms and industrial units." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://idworkstudio.com/commercial-approval-planner" property="og:url"/>
+<meta content="https://idworkstudio.com/og-preview.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{
+      --cream:#f3efe7;--warm:#ede5d8;--stone:#d8cec0;--taupe:#a99683;
+      --charcoal:#171514;--muted:#746b61;--gold:#c5a059;--card:#fbf8f2;
+      --green:#2f7d5d;--amber:#a06b16;--red:#a94442;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;font-family:'Montserrat',sans-serif;color:var(--charcoal);
+      background:radial-gradient(circle at top left,#fbf7ef 0,#f0ebe3 38%,#e8dfd3 100%);
+      overflow-x:hidden
+    }
+    .serif{font-family:'Playfair Display',serif}
+    .eyebrow{letter-spacing:.16em}
+    .soft-card{background:rgba(251,248,242,.92);border:1px solid rgba(169,150,131,.24);box-shadow:0 24px 70px rgba(23,21,20,.08)}
+    .choice{
+      min-height:76px;border:1px solid #d8cec0;background:#fffaf4;border-radius:18px;
+      padding:16px;text-align:left;transition:.18s;cursor:pointer;width:100%
+    }
+    .choice:hover{border-color:var(--gold);transform:translateY(-1px);box-shadow:0 10px 24px rgba(23,21,20,.06)}
+    .choice.active{background:var(--gold);border-color:var(--gold);color:#fff;box-shadow:0 16px 30px rgba(197,160,89,.28)}
+    .choice.active .sub{color:rgba(255,255,255,.72)}
+    .sub{font-size:12px;color:#8b8177;line-height:1.55;margin-top:4px}
+    .inp{
+      width:100%;min-height:48px;border:1px solid #d8cec0;background:#fffaf4;
+      padding:.8rem 1rem;font-size:.9rem;font-family:'Montserrat',sans-serif;outline:none;
+      border-radius:14px;transition:.15s;color:#24211f
+    }
+    .inp:focus{border-color:#b99658;box-shadow:0 0 0 4px rgba(200,170,114,.18);background:#fff}
+    .why{border-left:3px solid var(--gold);background:rgba(197,160,89,.09);padding:12px 14px;border-radius:0 12px 12px 0;color:#6e5b3b;font-size:13px;line-height:1.65}
+    .question-card{border:1px solid rgba(169,150,131,.26);background:rgba(255,252,246,.78);border-radius:22px;padding:22px}
+    .step-pill{border:1px solid #d8cec0;background:#fbf8f2;color:#a99683}
+    .step-pill.active{background:#171514;border-color:#171514;color:#fff}
+    .step-pill.done{background:#d8cec0;border-color:#d8cec0;color:#5f554c}
+    .permit-card{border:1px solid #e1d8cc;background:#fff;border-radius:20px;padding:20px}
+    .tag{display:inline-flex;align-items:center;border-radius:999px;padding:5px 10px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .tag-official{background:#e8f2ed;color:#2f6c52}
+    .tag-idws{background:#f5ead5;color:#88611d}
+    .timeline-bar{height:10px;border-radius:999px;background:#e6ddd1;overflow:hidden}
+    .timeline-fill{height:100%;background:linear-gradient(90deg,#c5a059,#e0c17d)}
+    .result-alert{border-radius:20px;padding:18px;border:1px solid}
+    .result-alert.green{background:#edf7f2;border-color:#bddccc;color:#245d46}
+    .result-alert.amber{background:#fff6e8;border-color:#ead1a3;color:#765317}
+    .result-alert.red{background:#fbefef;border-color:#dfbcbc;color:#7e3434}
+    details summary{list-style:none;cursor:pointer}
+    details summary::-webkit-details-marker{display:none}
+    details summary::after{content:'+';float:right;color:#a99683;font-size:18px}
+    details[open] summary::after{content:'–'}
+
+    #site-nav{position:fixed;width:100%;z-index:60;top:0}
+    .accred-bar{background:#2C2C2C;color:#fff;font-size:11px;padding:7px 16px;text-align:center;letter-spacing:.16em;text-transform:uppercase;font-weight:500;border-bottom:1px solid rgba(212,175,55,.18)}
+    .accred-bar a{color:#D4AF37;font-weight:700;text-decoration:none}
+    .main-nav{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #f0f0f0}
+    .main-nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-size:19px;font-weight:900;letter-spacing:-.03em;text-transform:uppercase;color:#2C2C2C;text-decoration:none}
+    .nav-links{display:flex;align-items:center;gap:24px}
+    .nav-links a,.nav-dropdown-btn{font-size:11.5px;text-transform:uppercase;letter-spacing:.12em;font-weight:300;color:rgba(44,44,44,.75);text-decoration:none}
+    .nav-links a:hover,.nav-dropdown-btn:hover{color:#D4AF37}
+    .nav-dropdown{position:relative}
+    .nav-dropdown-btn{display:inline-flex;align-items:center;gap:5px;border:0;background:none;padding:24px 0;cursor:pointer;font-family:'Montserrat',sans-serif}
+    .nav-dropdown-menu{display:none;position:absolute;top:calc(100% - 8px);left:50%;transform:translateX(-50%);width:310px;background:#fff;border:1px solid #eee5da;border-radius:18px;padding:10px;box-shadow:0 18px 45px rgba(23,21,20,.14)}
+    .nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu,.nav-dropdown.open .nav-dropdown-menu{display:block}
+    .nav-dropdown-menu a{display:block;padding:11px 12px;border-radius:12px;text-transform:none;letter-spacing:0;font-size:12px;font-weight:600;color:#2C2C2C}
+    .nav-dropdown-menu a:hover{background:#fbf8f2;color:#8a6a2f}
+    .nav-dropdown-menu span{display:block;margin-top:3px;font-size:10.5px;font-weight:400;line-height:1.45;color:#8b8177}
+    .nav-cta{font-size:11.5px!important;text-transform:uppercase;letter-spacing:.14em!important;font-weight:600!important;background:#C5A059;color:#fff!important;padding:9px 20px;border-radius:999px}
+    #mobile-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:4px}
+
+    #site-hero{background:linear-gradient(rgba(17,17,17,.72),rgba(17,17,17,.72)),url('/calculatorhero/commercial-approval-planner.webp') center/cover no-repeat;padding-top:138px;padding-bottom:78px;position:relative;overflow:hidden}
+    .hero-glow{position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(197,160,89,.28) 0%,transparent 70%);top:-100px;right:-100px}
+    .hero-pattern{position:absolute;inset:0;opacity:.07;pointer-events:none}
+    .hero-inner{position:relative;z-index:10;max-width:1050px;margin:0 auto;padding:0 24px;text-align:center}
+    .hero-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(197,160,89,.32);background:rgba(197,160,89,.09);border-radius:999px;padding:8px 20px;margin-bottom:28px}
+    .hero-pill span{font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(197,160,89,.92)}
+    .hero-pill i{width:6px;height:6px;background:#C5A059;border-radius:50%}
+    .hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;color:#fff;line-height:1.05;margin:0 0 22px}
+    .hero-h1 em{color:#C5A059;font-style:italic}
+    .hero-sub{font-size:clamp(13px,1.7vw,16px);color:rgba(255,255,255,.63);max-width:720px;margin:0 auto 32px;line-height:1.85;font-weight:300}
+    .hero-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:760px;margin:0 auto 34px}
+    .hero-badge{border:1px solid rgba(197,160,89,.28);background:rgba(197,160,89,.07);border-radius:14px;padding:14px 16px}
+    .hero-badge-title{font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:#C5A059;font-weight:600;margin-bottom:4px}
+    .hero-badge-sub{font-size:11.5px;color:rgba(255,255,255,.52);line-height:1.5}
+    .hero-cta{display:inline-flex;align-items:center;gap:10px;background:#C5A059;color:#fff;padding:13px 30px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+
+    #site-footer{background:#000;color:#fff;padding:56px 24px 72px;border-top:1px solid #1a1a1a}
+    .footer-inner{max-width:1280px;margin:0 auto;text-align:center}
+    .footer-logo{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
+    .footer-nap{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 28px;margin-bottom:28px;color:#777;font-size:11px}
+    .footer-nap a{color:#777;text-decoration:none}
+    .footer-badges{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+    .footer-badge-link{display:inline-flex;border:1px solid rgba(197,160,89,.4);color:#fff;font-size:10.5px;text-transform:uppercase;letter-spacing:.12em;padding:7px 22px;border-radius:999px;text-decoration:none}
+    .footer-copy{color:#444;font-size:12px}
+    #wa-float{position:fixed;bottom:24px;right:24px;z-index:55;background:#25D366;color:#fff;border-radius:999px;padding:13px 22px;font-size:12.5px;font-weight:600;text-decoration:none;box-shadow:0 8px 28px rgba(37,211,102,.42);display:flex;align-items:center;gap:8px}
+
+    @media(max-width:900px){
+      .nav-links{display:none}
+      #mobile-menu-btn{display:block}
+      .mobile-nav-open .nav-links{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;background:#fff;padding:16px 24px 24px;gap:4px;border-bottom:1px solid #f0f0f0;box-shadow:0 8px 20px rgba(0,0,0,.08);max-height:calc(100vh - 100px);overflow-y:auto}
+      .mobile-nav-open .nav-links>a{padding:12px 8px;border-bottom:1px solid #f5f5f5}
+      .mobile-nav-open .nav-dropdown{border-bottom:1px solid #f5f5f5}
+      .mobile-nav-open .nav-dropdown-btn{width:100%;justify-content:space-between;padding:12px 8px}
+      .mobile-nav-open .nav-dropdown-menu{position:static;transform:none;width:100%;border:0;border-radius:0;padding:0 0 8px 10px;box-shadow:none;background:#fbfaf7}
+      .mobile-nav-open .nav-dropdown-menu a{padding:10px 12px}
+      .hero-badges{grid-template-columns:1fr}
+      #wa-float{display:none}
+    }
+  </style>
+</head>
+<body>
+<div id="site-nav">
+<div class="accred-bar">
+<a href="https://services2.hdb.gov.sg/webapp/FI10AWBIZ/" rel="noopener" target="_blank">HDB Registered</a>
+<span style="margin:0 8px;color:#555">|</span>
+<a href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" rel="noopener" target="_blank">BCA Registered</a>
+<span style="margin:0 8px;color:#555">|</span>
+<span style="color:rgba(255,255,255,.45)">Est. 2015 · Singapore</span>
+</div>
+<nav class="main-nav" id="mainNav">
+<div class="main-nav-inner">
+<a class="nav-logo" href="https://idworkstudio.com">ID Work Studio</a>
+<div class="nav-links">
+<a href="https://idworkstudio.com/">Home</a>
+<a href="https://idworkstudio.com/residential">Residential</a>
+<a href="https://idworkstudio.com/commercial">Commercial</a>
+<div class="nav-dropdown" id="planningToolsDropdown">
+<button aria-controls="planningToolsMenu" aria-expanded="false" class="nav-dropdown-btn" onclick="togglePlanningTools(event)" type="button">
+            Planning Tools <span aria-hidden="true">▾</span>
+</button>
+<div class="nav-dropdown-menu" id="planningToolsMenu">
+<a href="https://idworkstudio.com/renovation-cost-calculator">Renovation Cost Calculator<span>Estimate renovation contract costs.</span></a>
+<a href="https://idworkstudio.com/total-home-budget-calculator">Total Home Budget Calculator<span>Plan furniture, appliances and cash buffer.</span></a>
+<a href="https://idworkstudio.com/renovation-timeline-planner-singapore">Renovation Timeline Planner<span>Estimate renovation schedule and move-in timing.</span></a>
+<a href="https://idworkstudio.com/hdb-renovation-style-quiz">HDB Renovation Style Quiz<span>Discover a suitable interior style direction.</span></a>
+<a href="https://idworkstudio.com/hdb-defect-checklist">HDB Defect Inspection Checklist<span>Inspect defects before renovation begins.</span></a>
+<a aria-current="page" href="https://idworkstudio.com/commercial-approval-planner">Commercial Renovation Planner<span>Plan approvals, renovation timing, takeover and business opening.</span></a>
+</div>
+</div>
+<a href="https://idworkstudio.com/insights">Guides</a>
+<a href="https://idworkstudio.com/gallery">Gallery</a>
+<a href="https://idworkstudio.com/#contact">Contact</a>
+<a class="nav-cta" href="https://wa.me/6598333085" rel="noopener" target="_blank">Ask Us</a>
+</div>
+<button aria-label="Toggle menu" id="mobile-menu-btn" onclick="document.getElementById('mainNav').classList.toggle('mobile-nav-open')">
+<svg fill="none" height="24" stroke="#2C2C2C" stroke-width="1.5" viewbox="0 0 24 24" width="24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"></path></svg>
+</button>
+</div>
+</nav>
+</div>
+<section id="site-hero">
+<svg class="hero-pattern" preserveaspectratio="xMidYMid slice" viewbox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg">
+<defs><pattern height="72" id="g1" patternunits="userSpaceOnUse" width="72"><path d="M72 0L0 0 0 72" fill="none" stroke="#C5A059" stroke-width="0.5"></path></pattern></defs>
+<rect fill="url(#g1)" height="560" width="1440"></rect>
+<rect fill="none" height="210" opacity=".5" stroke="#C5A059" width="310" x="120" y="80"></rect>
+<rect fill="none" height="190" opacity=".45" stroke="#C5A059" width="270" x="960" y="90"></rect>
+<circle cx="720" cy="280" fill="none" opacity=".18" r="170" stroke="#C5A059"></circle>
+</svg>
+<div class="hero-glow"></div>
+<div class="hero-inner">
+<div class="hero-pill"><i></i><span>Singapore Commercial Renovation Planning Tool</span></div>
+<h1 class="hero-h1">Commercial Renovation<br/><em>Approval Planner</em></h1>
+<p class="hero-sub">Find the likely permits required before renovation starts, why they are needed, how many working days to allow, and when you should sign your tenancy to meet your target opening date.</p>
+<div class="hero-badges">
+<div class="hero-badge"><div class="hero-badge-title">Permit Path</div><div class="hero-badge-sub">Government and building approvals</div></div>
+<div class="hero-badge"><div class="hero-badge-title">Working Days</div><div class="hero-badge-sub">Concrete planning allowances</div></div>
+<div class="hero-badge"><div class="hero-badge-title">Opening Plan</div><div class="hero-badge-sub">Lease, takeover and renovation dates</div></div>
+</div>
+<a class="hero-cta" href="#planner">Start Planning
+      <svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M19 9l-7 7-7-7" stroke-linecap="round"></path></svg>
+</a>
+</div>
+</section>
+<main class="px-4 py-10 md:py-16" id="planner">
+<section class="mx-auto max-w-[1180px]">
+<header class="mb-9 text-center">
+<p class="eyebrow mb-3 text-xs font-semibold uppercase text-[#a99683]">Plan Before You Commit</p>
+<h2 class="serif text-4xl font-bold md:text-5xl">What must happen before renovation can start?</h2>
+<p class="mx-auto mt-4 max-w-3xl text-sm leading-7 text-[#746b61]">Every question explains why it matters. You do not need to know technical terms—the planner translates your intended changes into likely approval and timeline requirements.</p>
+</header>
+<div class="mb-7 grid grid-cols-5 gap-2">
+<div class="step-pill rounded-full px-2 py-2 text-center text-[10px] font-bold uppercase tracking-wider sm:text-xs" id="pill0">Business</div>
+<div class="step-pill rounded-full px-2 py-2 text-center text-[10px] font-bold uppercase tracking-wider sm:text-xs" id="pill1">Unit</div>
+<div class="step-pill rounded-full px-2 py-2 text-center text-[10px] font-bold uppercase tracking-wider sm:text-xs" id="pill2">Changes</div>
+<div class="step-pill rounded-full px-2 py-2 text-center text-[10px] font-bold uppercase tracking-wider sm:text-xs" id="pill3">Opening</div>
+<div class="step-pill rounded-full px-2 py-2 text-center text-[10px] font-bold uppercase tracking-wider sm:text-xs" id="pill4">Plan</div>
+</div>
+<div class="soft-card rounded-3xl p-5 md:p-10">
+<div id="stepContent"></div>
+<div class="mt-8 flex justify-between gap-3 border-t border-[#d8cec0]/70 pt-6">
+<button class="min-h-[46px] rounded-2xl border border-[#bfb2a2] px-6 py-3 text-sm font-semibold text-stone-600 disabled:opacity-30" id="backBtn">← Back</button>
+<button class="min-h-[46px] rounded-2xl bg-[#171514] px-8 py-3 text-sm font-semibold text-white disabled:opacity-30" id="nextBtn">Next →</button>
+</div>
+</div>
+<section class="mt-12 grid gap-5 md:grid-cols-3">
+<a class="rounded-3xl border border-[#d8cec0]/70 bg-[#fbf8f2]/80 p-6 text-inherit no-underline shadow-sm" href="https://idworkstudio.com/insights/commercial-renovation-approvals-singapore">
+<p class="eyebrow text-[10px] font-bold uppercase text-[#a99683]">Approval Guide</p>
+<h3 class="serif mt-2 text-2xl font-bold">Understand Singapore approvals</h3>
+<p class="mt-3 text-sm leading-6 text-[#746b61]">Read the detailed guide covering the Urban Redevelopment Authority (URA), Singapore Civil Defence Force (SCDF), Building and Construction Authority (BCA), Singapore Food Agency (SFA), landlords and common commercial fit-out requirements.</p>
+</a>
+<a class="rounded-3xl border border-[#d8cec0]/70 bg-[#fbf8f2]/80 p-6 text-inherit no-underline shadow-sm" href="https://idworkstudio.com/insights/commercial-renovation-cost-singapore">
+<p class="eyebrow text-[10px] font-bold uppercase text-[#a99683]">Cost Planning</p>
+<h3 class="serif mt-2 text-2xl font-bold">Estimate your renovation budget</h3>
+<p class="mt-3 text-sm leading-6 text-[#746b61]">Compare realistic Singapore office, retail and F&amp;B renovation cost ranges before committing to a unit.</p>
+</a>
+<a class="rounded-3xl border border-[#d8cec0]/70 bg-[#fbf8f2]/80 p-6 text-inherit no-underline shadow-sm" href="https://idworkstudio.com/commercial">
+<p class="eyebrow text-[10px] font-bold uppercase text-[#a99683]">Practical Help</p>
+<h3 class="serif mt-2 text-2xl font-bold">Plan the unit with our team</h3>
+<p class="mt-3 text-sm leading-6 text-[#746b61]">We can help review the unit, approval path, renovation scope and opening schedule before work begins.</p>
+</a>
+</section>
+<section class="mt-12 rounded-3xl border border-[#d8cec0]/70 bg-[#fbf8f2]/80 p-6 shadow-sm md:p-10">
+<p class="eyebrow mb-2 text-xs font-semibold uppercase text-[#a99683]">Commercial Approval FAQ</p>
+<h2 class="serif text-3xl font-bold md:text-4xl">Questions business owners ask before signing a lease</h2>
+<div class="mt-7 grid gap-3 md:grid-cols-2">
+<details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5" open="">
+<summary class="text-sm font-semibold">Can I apply for approvals before signing the tenancy agreement?</summary>
+<p class="mt-3 text-sm leading-6 text-[#746b61]">Preliminary checks can often start earlier, but many formal submissions require the owner’s or landlord’s authorisation and confirmed premises details. The planner identifies the likely approval path early so you can choose a realistic lease and takeover schedule.</p>
+</details>
+<details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5">
+<summary class="text-sm font-semibold">Does changing the office layout require approval?</summary>
+<p class="mt-3 text-sm leading-6 text-[#746b61]">It often does. Adding, removing or relocating rooms can affect fire safety, lighting, electrical points, sprinklers and air-conditioning distribution. The planner treats the layout change as the root cause and identifies the likely downstream reviews.</p>
+</details>
+<details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5">
+<summary class="text-sm font-semibold">How long does a Singapore Civil Defence Force (SCDF) plan approval take?</summary>
+<p class="mt-3 text-sm leading-6 text-[#746b61]">The Singapore Civil Defence Force (SCDF) published service target is to issue the outcome for a complete fire-safety plan submission within five working days for most cases. Preparation, landlord endorsement and revisions should still be included in the overall project schedule.</p>
+</details>
+<details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5">
+<summary class="text-sm font-semibold">Does an external sign need a licence?</summary>
+<p class="mt-3 text-sm leading-6 text-[#746b61]">Outdoor signs generally require a Building and Construction Authority (BCA) advertisement licence unless an exemption applies. Landlord approval is normally needed first, and conservation or special locations may require additional clearance.</p>
+</details>
+<details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5">
+<summary class="text-sm font-semibold">Why does the planner ask about after-hours air-conditioning?</summary>
+<p class="mt-3 text-sm leading-6 text-[#746b61]">Some buildings provide central air-conditioning only during normal hours. A business needing cooling later may require an approved independent system, chilled-water arrangement, landlord review and an air-balancing report.</p>
+</details>
+<details class="rounded-2xl border border-[#d8cec0]/70 bg-[#fffaf4] p-5">
+<summary class="text-sm font-semibold">Is this a legal approval guarantee?</summary>
+<p class="mt-3 text-sm leading-6 text-[#746b61]">No. It is a personalised planning assessment based on your answers. Final requirements depend on the unit’s approved use, drawings, landlord rules and formal review by the relevant authority or appointed professional.</p>
+</details>
+</div>
+</section>
+</section>
+</main>
+<footer id="site-footer">
+<div class="footer-inner">
+<p class="footer-logo">ID Work Studio</p>
+<div class="footer-nap">
+<span>📍 11 Woodlands Close #03-10 Woodlands 11 Singapore 737853</span>
+<a href="tel:+6568162872">📞 6816 2872</a>
+<a href="mailto:contact@idworkstudio.com">✉ contact@idworkstudio.com</a>
+<span>🏢 UEN 201539658C · HDB Reg: HB-02-5250G</span>
+</div>
+<div class="footer-badges">
+<a class="footer-badge-link" href="https://services2.hdb.gov.sg/webapp/FI10AWBIZ/" rel="noopener" target="_blank">HDB Registered</a>
+<a class="footer-badge-link" href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" rel="noopener" target="_blank">BCA Registered</a>
+</div>
+<p class="footer-copy">© 2026 ID Work Studio. All rights reserved.</p>
+</div>
+</footer>
+<a href="https://wa.me/6598333085?text=Hi%20ID%20Work%20Studio%2C%20I%20need%20help%20planning%20the%20approval%20and%20renovation%20timeline%20for%20a%20commercial%20unit." id="wa-float" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"></path></svg>
+  Ask About Your Unit
+</a>
+<script defer="" src="assets/commercial-planner.aedb310168c3.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"LocalBusiness",
+      "@id":"https://idworkstudio.com/#business",
+      "name":"ID Work Studio",
+      "url":"https://idworkstudio.com/",
+      "telephone":"+65 6816 2872",
+      "email":"contact@idworkstudio.com",
+      "foundingDate":"2015",
+      "address":{"@type":"PostalAddress","streetAddress":"11 Woodlands Close, Woodlands 11, #03-10","addressLocality":"Singapore","postalCode":"737853","addressCountry":"SG"},
+      "areaServed":{"@type":"Country","name":"Singapore"}
+    },
+    {
+      "@type":"WebApplication",
+      "@id":"https://idworkstudio.com/commercial-approval-planner#app",
+      "name":"Singapore Commercial Renovation Approval Planner",
+      "url":"https://idworkstudio.com/commercial-approval-planner",
+      "applicationCategory":"BusinessApplication",
+      "operatingSystem":"Any",
+      "isAccessibleForFree":true,
+      "description":"A Singapore commercial renovation planning tool that identifies likely permits, explains why they are needed, estimates working-day approval allowances and works backwards from a target business opening date."
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://idworkstudio.com/commercial-approval-planner",
+      "url":"https://idworkstudio.com/commercial-approval-planner",
+      "name":"Commercial Renovation Approval Planner Singapore",
+      "about":{"@id":"https://idworkstudio.com/#business"},
+      "mainEntity":{"@id":"https://idworkstudio.com/commercial-approval-planner#app"},
+      "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://idworkstudio.com/"},
+        {"@type":"ListItem","position":2,"name":"Commercial","item":"https://idworkstudio.com/commercial"},
+        {"@type":"ListItem","position":3,"name":"Commercial Approval Planner","item":"https://idworkstudio.com/commercial-approval-planner"}
+      ]}
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://idworkstudio.com/commercial-approval-planner#faq",
+      "mainEntity":[
+        {"@type":"Question","name":"Can I apply for commercial renovation approvals before signing the tenancy agreement?","acceptedAnswer":{"@type":"Answer","text":"Preliminary checks can often start earlier, but many formal submissions require confirmed premises details, landlord consent or an executed tenancy agreement."}},
+        {"@type":"Question","name":"Does changing an office layout require approval in Singapore?","acceptedAnswer":{"@type":"Answer","text":"It often does because adding, removing or relocating rooms can affect fire safety, lighting, electrical points, sprinklers and air-conditioning distribution."}},
+        {"@type":"Question","name":"How long does an SCDF fire safety plan approval take?","acceptedAnswer":{"@type":"Answer","text":"SCDF's published service target is to issue the outcome for a complete fire-safety plan submission within five working days for most cases. Preparation, landlord endorsement and revisions should still be included in the project schedule."}},
+        {"@type":"Question","name":"Does an external commercial sign need a licence in Singapore?","acceptedAnswer":{"@type":"Answer","text":"Outdoor signs generally require a Building and Construction Authority (BCA) advertisement licence unless an exemption applies. Landlord approval is normally needed first and some locations may require additional clearance."}},
+        {"@type":"Question","name":"Why does a commercial renovation planner ask about after-hours air-conditioning?","acceptedAnswer":{"@type":"Answer","text":"Some buildings provide central air-conditioning only during normal operating hours. A business needing cooling later may require an approved independent system, chilled-water arrangement, landlord review and an air-balancing report."}}
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>

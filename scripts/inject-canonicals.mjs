@@ -245,6 +245,14 @@ ogDesc: 'Estimate your Singapore renovation budget instantly for HDB, condo, res
     ogDesc: 'Discover your ideal HDB interior design style with a Singapore-focused renovation style quiz by ID Work Studio.',
     ogUrl: 'https://idworkstudio.com/hdb-renovation-style-quiz',
   },
+  'commercial-approval-planner.html': {
+    canonical: 'https://idworkstudio.com/commercial-approval-planner',
+    title: 'Commercial Renovation Approval Planner Singapore | ID Work Studio',
+    description: 'Find the likely permits required before commercial renovation starts in Singapore, why they are needed, how many working days to allow, and when to sign your tenancy based on your target opening date.',
+    ogTitle: 'Singapore Commercial Renovation Approval Planner | ID Work Studio',
+    ogDesc: 'Plan permits, renovation timing, tenancy signing and takeover dates for offices, retail shops, F&B, clinics, tuition centres, childcare, gyms and industrial units.',
+    ogUrl: 'https://idworkstudio.com/commercial-approval-planner',
+  },
 };
 
 function encodeHtml(str) {
