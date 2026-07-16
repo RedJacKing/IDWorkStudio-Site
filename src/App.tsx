@@ -220,9 +220,9 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
           ]
         },
         "planning_authority": {
-          "eyebrow": "Planning clarity",
-          "title": "Renovation planning is more than choosing finishes.",
-          "text": "Singapore homeowners often underestimate furniture, appliances, delivery and contingency. Our tools help you see the full picture before work begins.",
+          "eyebrow": "Why we built these resources",
+          "title": "Better renovation decisions begin with a clearer understanding.",
+          "text": "We created our guides and planning tools because clients make better decisions when they understand the likely cost, timeline, scope and approvals before committing. That clarity helps us plan the right solution together and reduces avoidable uncertainty later.",
           "signals": [
             "BCA Registered",
             "HDB Registered",
@@ -269,12 +269,12 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "trust": {
           "eyebrow": "Why ID Work Studio",
-          "title": "Registered, design-led and familiar with Singapore renovation requirements.",
+          "title": "Registered, experienced and committed to clearer renovation decisions.",
           "signals": [
             "BCA-registered renovation and interior design firm in Singapore.",
             "HDB-approved for residential renovation works and HDB project coordination.",
             "Experience across HDB homes, condos, office fit-outs and commercial reinstatement.",
-            "Premium positioning with practical budgeting, sequencing and handover planning."
+            "Practical guidance that connects planning, design, execution and handover."
           ]
         },
         "project_snippets": {
@@ -409,9 +409,9 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
           ]
         },
         "planning_authority": {
-          "eyebrow": "规划清晰度",
-          "title": "翻新规划不只是选择材料与风格。",
-          "text": "许多屋主会低估家具、电器、配送与备用预算。我们的工具帮助您在开工前看清完整费用。",
+          "eyebrow": "为什么我们建立这些资源",
+          "title": "先把翻新了解清楚，才能作出更合适的决定。",
+          "text": "我们建立指南与规划工具，是因为客户在签约前先了解预算、工期、工程范围与审批要求，往往更容易作出合适的选择。这样的前期准备，也让我们能一起制定更实际的方案，减少日后不必要的不确定性。",
           "signals": [
             "BCA 注册",
             "HDB 注册",
@@ -458,12 +458,12 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         },
         "trust": {
           "eyebrow": "为什么选择 ID Work Studio",
-          "title": "注册合规、以设计为核心，并熟悉新加坡翻新要求。",
+          "title": "注册合规、经验扎实，并重视每一个翻新决定。",
           "signals": [
             "新加坡 BCA 注册室内设计与翻新公司。",
             "HDB 注册承包商，可协调住宅翻新与 HDB 工程事项。",
             "具备 HDB 住宅、公寓、办公室装修与商业恢复原状经验。",
-            "以高质感定位结合实际预算、工期安排与移交规划。"
+            "以实际建议贯穿规划、设计、施工与最终交付。"
           ]
         },
         "project_snippets": {

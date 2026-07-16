@@ -1,4 +1,4 @@
-import { PenTool, HardHat, Sparkles } from 'lucide-react';
+import { MessageSquareText, ClipboardCheck, CircleCheckBig } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
@@ -9,17 +9,17 @@ export default function Process() {
     {
       title: t('process.steps.1.title'),
       description: t('process.steps.1.desc'),
-      icon: PenTool
+      icon: MessageSquareText
     },
     {
       title: t('process.steps.2.title'),
       description: t('process.steps.2.desc'),
-      icon: HardHat
+      icon: ClipboardCheck
     },
     {
       title: t('process.steps.3.title'),
       description: t('process.steps.3.desc'),
-      icon: Sparkles
+      icon: CircleCheckBig
     }
   ];
 

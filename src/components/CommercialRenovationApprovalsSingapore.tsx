@@ -21,7 +21,7 @@ import { useTranslation } from "react-i18next";
  * Commercial Renovation Approvals Singapore
  *
  * Related Planning Tool:
- * None
+ * /commercial-renovation-planner
  *
  * Related Service Page:
  * /commercial
@@ -111,6 +111,11 @@ type ArticleContent = {
   trustNote: string;
   faqTitle: string;
   faqs: FaqItem[];
+  assuranceEyebrow: string;
+  assuranceTitle: string;
+  assuranceText: string[];
+  assurancePlannerLabel: string;
+  assuranceContactLabel: string;
   ctaTitle: string;
   ctaText: string;
   ctaPrimary: string;
@@ -958,6 +963,13 @@ const content: Record<"en" | "zh", ArticleContent> = {
         label: "View the project portfolio",
       },
       {
+        title: "Commercial Renovation Planner",
+        description:
+          "Answer a few project questions to identify likely approval, permit, landlord and planning requirements before you commit.",
+        to: "/commercial-renovation-planner",
+        label: "Open the commercial planner",
+      },
+      {
         title: "Commercial project review",
         description:
           "Share the unit, fit-out guide, intended trade, target takeover date and opening plan for an initial feasibility discussion.",
@@ -1075,6 +1087,15 @@ const content: Record<"en" | "zh", ArticleContent> = {
           "ID Work Studio can coordinate renovation drawings, management requirements, specialists and the project programme. Where a regulated submission requires a Qualified Person, Professional Engineer, Registered Inspector, Licensed Electrical Worker, Licensed Plumber or another licensed party, we coordinate with the appropriate professional.",
       },
     ],
+    assuranceEyebrow: "You do not have to work this out alone",
+    assuranceTitle: "Commercial approvals can feel overwhelming—but uncertainty at this stage is normal",
+    assuranceText: [
+      "Commercial renovation can involve the landlord, building management, consultants, licensed specialists and different authorities. It is understandable to be unsure which requirements apply or what should happen first.",
+      "The important step is not to guess. Use the Commercial Renovation Planner to organise the likely approval pathway, then let us review the actual unit, fit-out guide and intended business where the remaining uncertainties need professional verification.",
+      "A short discussion before you commit can help prevent avoidable redesign, approval delays, unexpected costs and rent being paid while the business is still unable to open.",
+    ],
+    assurancePlannerLabel: "Open Commercial Renovation Planner",
+    assuranceContactLabel: "Let Us Help Review the Project",
     ctaTitle: "Send us the unit information before approval risk becomes paid rent",
     ctaText:
       "Share the floor plan, fit-out guide, intended trade, equipment list, proposed takeover date and target opening date. We will review the commercial renovation scope, identify the likely approval and specialist dependencies, and explain the main cost and programme risks before you commit to the final works.",
@@ -1920,6 +1941,13 @@ const content: Record<"en" | "zh", ArticleContent> = {
         label: "查看项目案例",
       },
       {
+        title: "商业装修规划工具",
+        description:
+          "回答几个项目问题，先了解可能涉及的审批、准证、业主要求与规划步骤，再决定是否承诺。",
+        to: "/commercial-renovation-planner",
+        label: "打开商业装修规划工具",
+      },
+      {
         title: "商业项目审核",
         description:
           "提供单位、装修指南、营业类型、目标接管日期和开业计划，进行初步可行性讨论。",
@@ -2037,6 +2065,15 @@ const content: Record<"en" | "zh", ArticleContent> = {
           "ID Work Studio可协调装修图纸、管理处要求、专业人士和项目时间。若受监管提交必须由 QP、PE、RI、LEW、持牌水喉匠或其他持牌单位处理，我们会协调适合的专业人士。",
       },
     ],
+    assuranceEyebrow: "您不需要独自弄清所有要求",
+    assuranceTitle: "商业审批令人不安很正常，但不应靠猜测继续前进",
+    assuranceText: [
+      "商业装修可能同时涉及业主、管理处、顾问、持牌专业人士和不同政府部门。现阶段不确定哪些要求适用、应该先做什么，是很常见的情况。",
+      "重要的不是自行猜测。您可以先使用商业装修规划工具整理可能的审批路径；对于仍需专业核实的部分，再让我们根据实际单位、装修指南和营业类型进一步审核。",
+      "在正式承诺前进行一次简短讨论，往往可以减少不必要的重设计、审批延误、额外费用，以及业务尚未开业却已经开始支付租金的风险。",
+    ],
+    assurancePlannerLabel: "打开商业装修规划工具",
+    assuranceContactLabel: "让我们协助审核项目",
     ctaTitle: "在审批风险变成实际租金之前，把单位资料交给我们审核",
     ctaText:
       "提供平面图、装修指南、营业类型、设备清单、计划接管日期和目标开业日期。我们会审核商业装修范围，识别可能的审批与专业依赖，并在您确认最终工程前说明主要费用和时间风险。",
@@ -2566,6 +2603,39 @@ export default function CommercialRenovationApprovalsSingapore() {
                   </p>
                 </details>
               ))}
+            </div>
+          </section>
+
+          <section className="mb-14 rounded-3xl border border-[#d9c7aa] bg-[#fffaf0] p-6 shadow-sm md:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8a6e36]">
+              {t.assuranceEyebrow}
+            </p>
+            <h2 className="mt-3 font-serif text-3xl font-semibold text-[#2C2C2C]">
+              {t.assuranceTitle}
+            </h2>
+            <div className="mt-4 max-w-3xl space-y-3">
+              {t.assuranceText.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="text-base leading-8 text-[#5f5a54]"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                to="/commercial-renovation-planner"
+                className="rounded-full bg-[#C5A059] px-6 py-3 text-sm font-semibold text-white hover:bg-[#D6B26B]"
+              >
+                {t.assurancePlannerLabel}
+              </Link>
+              <Link
+                to="/contact"
+                className="rounded-full border border-[#C5A059]/45 bg-white px-6 py-3 text-sm font-semibold text-[#7c642f] hover:border-[#C5A059]"
+              >
+                {t.assuranceContactLabel}
+              </Link>
             </div>
           </section>
 

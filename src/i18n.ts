@@ -21,10 +21,10 @@ const resources = {
         "firm": "Firm"
       },
       "hero": {
-        "title_main": "Curated Interiors ",
-        "title_sub": "for Refined Living",
-        "subtitle": "Singapore interior design and renovation studio creating refined homes, workplaces and retail spaces with thoughtful detail, regulatory confidence and timeless appeal.",
-        "supporting_line": "Singapore interior design and renovation firm for HDB, condo and commercial spaces, with expertise in bespoke home interiors, office fit-outs and reinstatement works.",
+        "title_main": "Plan Your Renovation ",
+        "title_sub": "With Clarity",
+        "subtitle": "You do not need to have every renovation decision figured out before speaking to us. We help clarify the cost, scope, timeline and requirements that matter before the project moves forward.",
+        "supporting_line": "A Singapore interior design and renovation firm guiding HDB, condo and commercial projects from early planning and approvals through design, execution and handover.",
         "cta": "View Our Work",
         "whatsapp": "WhatsApp Us"
       },
@@ -192,19 +192,19 @@ const resources = {
       },
       "process": {
         "title": "Our Process",
-        "subtitle": "A seamless journey from concept to reality.",
+        "subtitle": "Clear guidance from your first questions to final handover.",
         "steps": {
           "1": {
-            "title": "Consult & Visualize",
-            "desc": "We begin by understanding your vision and lifestyle, translating them into detailed 3D concepts."
+            "title": "Understand & Clarify",
+            "desc": "We begin by understanding your priorities, budget, space and remaining uncertainties before recommending the right direction."
           },
           "2": {
-            "title": "Accredited Execution",
-            "desc": "Our HDB & BCA registered team manages the renovation with precision, ensuring quality and compliance."
+            "title": "Plan & Deliver",
+            "desc": "We align the design, quotation, timeline and required approvals, then coordinate the renovation with clear responsibility."
           },
           "3": {
-            "title": "The Big Reveal",
-            "desc": "Walk into your dream space, perfectly finished, cleaned, and ready for your new chapter."
+            "title": "Inspect & Handover",
+            "desc": "We complete the final checks, address agreed touch-ups and hand over a space prepared for everyday use or business operations."
           }
         }
       },
@@ -232,8 +232,8 @@ const resources = {
         }
       },
       "contact": {
-        "title": "Get in Touch",
-        "subtitle": "Ready to start your renovation journey? Contact us today for a consultation.",
+        "title": "Let's Talk About Your Renovation",
+        "subtitle": "Whether you're comparing quotations, planning your budget, unsure about approvals, or simply want a clearer understanding of the renovation process, we're happy to help. An early conversation often helps you avoid costly mistakes before any commitment is made.",
         "info": {
           "address_title": "Office Address",
           "address_line1": "11 Woodlands Close, Woodlands 11, #03-10",
@@ -243,7 +243,7 @@ const resources = {
           "hours_title": "Opening Hours",
           "hours_weekday": "Mon - Fri: 09:00 - 21:00",
           "hours_weekend": "Sat - Sun: 10:00 - 16:00",
-          "whatsapp": "WhatsApp Us"
+          "whatsapp": "Discuss Your Renovation"
         }
       },
       "gallery": {
@@ -978,10 +978,10 @@ const resources = {
         "firm": "公司"
       },
       "hero": {
-        "title_main": "精心打造的室内设计 ",
-        "title_sub": "致敬现代有识之士",
-        "subtitle": "新加坡优质室内设计与翻新服务。凭借十多年的卓越信誉，我们将住宅、办公室和零售空间转化为杰作。",
-        "supporting_line": "新加坡室内设计与翻新公司，服务 HDB、私人公寓与商业空间，专注于定制住宅室内设计、办公室装修及恢复原状工程。",
+        "title_main": "清晰规划您的翻新 ",
+        "title_sub": "安心推进每一步",
+        "subtitle": "在联系我们之前，您不需要先把所有翻新决定都想清楚。我们会协助厘清费用、工程范围、工期与相关要求，再让项目稳妥推进。",
+        "supporting_line": "新加坡室内设计与翻新公司，为 HDB、私人公寓及商业项目提供从前期规划、审批协调到设计、施工与交付的完整引导。",
         "cta": "查看我们的作品",
         "whatsapp": "WhatsApp 立即咨询"
       },
@@ -1149,19 +1149,19 @@ const resources = {
       },
       "process": {
         "title": "我们的流程",
-        "subtitle": "从概念到现实的无缝体验。",
+        "subtitle": "从最初疑问到最终交付，提供清晰而负责的引导。",
         "steps": {
           "1": {
-            "title": "咨询与构想",
-            "desc": "我们首先了解您的愿景和生活方式，将其转化为详细的3D概念。"
+            "title": "了解与厘清",
+            "desc": "我们先了解您的重点、预算、空间条件与尚未解决的疑问，再建议合适的方向。"
           },
           "2": {
-            "title": "专业施工",
-            "desc": "我们拥有 BCA 注册与 HDB 注册的团队，精准管理翻新工程，确保质量和合规性。"
+            "title": "规划与执行",
+            "desc": "我们协调设计、报价、工期与所需审批，并以清楚的责任安排推进翻新工程。"
           },
           "3": {
-            "title": "完美交付",
-            "desc": "走进您梦想的空间，完美竣工、清洁完毕，准备好迎接您的新篇章。"
+            "title": "检查与交付",
+            "desc": "我们完成最终检查与约定修补，再交付适合日常居住或商业营运的空间。"
           }
         }
       },
@@ -1189,8 +1189,8 @@ const resources = {
         }
       },
       "contact": {
-        "title": "联系我们",
-        "subtitle": "准备好开始您的翻新之旅了吗？立即联系我们进行咨询。",
+        "title": "聊聊您的翻新计划",
+        "subtitle": "无论您正在比较报价、规划预算、了解审批要求，还是希望更清楚整个翻新流程，我们都乐意提供建议。在作出任何决定之前，先交流往往能帮助您避免不必要的错误和额外成本。",
         "info": {
           "address_title": "办公地址",
           "address_line1": "11 Woodlands Close, Woodlands 11, #03-10",
@@ -1200,7 +1200,7 @@ const resources = {
           "hours_title": "营业时间",
           "hours_weekday": "周一至周五: 09:00 - 21:00",
           "hours_weekend": "周六至周日: 10:00 - 16:00",
-          "whatsapp": "WhatsApp 联系我们"
+          "whatsapp": "与我们讨论您的翻新计划"
         }
       },
       "gallery": {
