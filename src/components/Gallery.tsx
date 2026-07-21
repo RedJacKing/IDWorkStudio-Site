@@ -3,7 +3,6 @@ import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { X, Camera, ExternalLink } from "lucide-react";
-import Navbar from "./Navbar";
 import projectsData from "../../public/gallery.json";
 
 type GalleryProject = {
@@ -346,8 +345,6 @@ const Gallery = () => {
           })}
         </script>
       </Helmet>
-
-      <Navbar />
 
       <section className="relative overflow-hidden bg-[#111] pt-32 pb-20 text-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(197,160,89,0.22),transparent_42%)]" />
