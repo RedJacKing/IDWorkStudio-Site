@@ -128,7 +128,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden max-h-[calc(100dvh-5rem)] overflow-y-auto bg-white border-b border-gray-100 pb-20">
+          <div className="md:hidden max-h-[calc(100dvh-12.5rem)] overflow-y-auto bg-white border-b border-gray-100 pb-20">
             <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3">
               <Link to="/#home" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.home')}</Link>
               <Link to="/residential" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.residential')}</Link>

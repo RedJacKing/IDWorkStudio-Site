@@ -19,7 +19,7 @@ export default function StickyMobileNav() {
           <span className="text-xs">{t('sticky_nav.consult')}</span>
         </a>
         <a 
-          href="#contact"
+          href="/contact"
           className="flex items-center justify-center space-x-2 bg-gold text-dark-charcoal py-5 font-bold uppercase tracking-widest active:bg-gold-hover transition-colors"
         >
           <Phone size={18} />
