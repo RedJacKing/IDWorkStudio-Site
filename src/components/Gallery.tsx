@@ -346,7 +346,7 @@ const Gallery = () => {
         </script>
       </Helmet>
 
-      <section className="relative overflow-hidden bg-[#111] pt-32 pb-20 text-center">
+      <section className="relative overflow-hidden bg-[#111] pt-44 pb-20 text-center lg:pt-32">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(197,160,89,0.22),transparent_42%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(197,160,89,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(197,160,89,0.06)_1px,transparent_1px)] bg-[size:72px_72px] opacity-40" />
         <div className="relative z-10 max-w-4xl mx-auto px-4">
@@ -385,7 +385,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      <main className="pb-20 px-4 md:px-8 max-w-7xl mx-auto -mt-10 relative z-10">
+      <main className="pb-20 px-4 md:px-8 max-w-7xl mx-auto mt-0 lg:-mt-10 relative z-10">
         <div className="bg-[#fbf8f2]/90 border border-[#d8cec0]/60 rounded-3xl p-6 md:p-10 shadow-sm">
           <>
             {renderProjectSection(
