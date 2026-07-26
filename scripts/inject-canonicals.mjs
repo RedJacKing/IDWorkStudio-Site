@@ -173,6 +173,15 @@ const pageMetaMap = {
     ogUrl: 'https://idworkstudio.com/insights/commercial-renovation-approvals-singapore',
   },
 
+  'insights/what-to-check-before-signing-fnb-shop-lease-singapore.html': {
+    canonical: 'https://idworkstudio.com/insights/what-to-check-before-signing-fnb-shop-lease-singapore',
+    title: 'What to Check Before Signing an F&B Shop Lease in Singapore | ID Work Studio',
+    description: 'Before signing an F&B shop lease in Singapore, check whether the unit can support your menu, cooking method, exhaust, drainage, power, gas and licensing needs.',
+    ogTitle: 'What Should You Check Before Signing an F&B Shop Lease in Singapore?',
+    ogDesc: 'Check whether an F&B unit can support your menu, cooking methods, exhaust, drainage, power, gas and licensing needs before committing to the lease.',
+    ogUrl: 'https://idworkstudio.com/insights/what-to-check-before-signing-fnb-shop-lease-singapore',
+  },
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',

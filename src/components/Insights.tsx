@@ -170,6 +170,16 @@ export default function Insights() {
       date: '2026-07-10',
       readTime: t('insights_page.articles.15.read_time'),
     },
+    {
+      slug: '/insights/what-to-check-before-signing-fnb-shop-lease-singapore',
+      sections: ['commercial'],
+      topics: ['fnb', 'lease', 'commercial', 'planning'],
+      category: t('insights_page.articles.16.category'),
+      title: t('insights_page.articles.16.title'),
+      excerpt: t('insights_page.articles.16.excerpt'),
+      date: '2026-07-26',
+      readTime: t('insights_page.articles.16.read_time'),
+    },
   ];
 
   const residentialArticles = articles.filter((article) =>

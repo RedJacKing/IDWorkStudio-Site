@@ -2282,6 +2282,12 @@ enT["insights_page"] = {
       title: "Commercial Renovation Approvals Singapore: Landlord, MCST, BCA & SCDF Requirements",
       excerpt: "A practical guide to commercial renovation approvals in Singapore, covering landlord and MCST fit-out rules, BCA and SCDF requirements, submission documents, approval sequencing and common causes of delay.",
       read_time: "18 min read"
+    },
+    "16": {
+      category: "F&B Lease Planning Guide",
+      title: "What Should You Check Before Signing an F&B Shop Lease in Singapore?",
+      excerpt: "A practical guide to checking whether an F&B unit can support your menu, cooking methods, exhaust, drainage, power, gas and licensing needs before you commit to the lease.",
+      read_time: "14 min read"
     }
   },
   footer_block: {
@@ -2420,6 +2426,12 @@ zhT["insights_page"] = {
       title: "新加坡商业翻新审批：业主、MCST、BCA 与 SCDF 要求",
       excerpt: "实用说明新加坡商业翻新审批流程，涵盖业主与 MCST 装修规定、BCA 与 SCDF 要求、提交文件、审批顺序及常见延误原因。",
       read_time: "约 18 分钟"
+    },
+    "16": {
+      category: "餐饮租约规划指南",
+      title: "签署新加坡餐饮店租约前，应该检查什么？",
+      excerpt: "签约前应确认餐饮单位能否配合菜单、烹调方式、排烟、排水、电力、燃气及执照要求，避免租下不适合经营概念的店面。",
+      read_time: "约 14 分钟"
     }
   },
   footer_block: {
