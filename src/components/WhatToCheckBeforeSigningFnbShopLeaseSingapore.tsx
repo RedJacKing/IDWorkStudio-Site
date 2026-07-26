@@ -82,6 +82,10 @@ type ArticleContent = {
   quickAnswerTitle: string;
   quickAnswer: string;
   quickPoints: { label: string; value: string; note: string }[];
+  earlyCtaTitle: string;
+  earlyCtaText: string;
+  earlyCtaPrimary: string;
+  earlyCtaSecondary: string;
   centralTitle: string;
   centralIntro: string;
   centralChain: string[];
@@ -106,6 +110,9 @@ type ArticleContent = {
   suitabilityTitle: string;
   suitabilityIntro: string;
   checks: CheckItem[];
+  comparisonCtaTitle: string;
+  comparisonCtaText: string;
+  comparisonCtaPrimary: string;
   seatingTitle: string;
   seatingParagraphs: string[];
   safetyTitle: string;
@@ -163,6 +170,11 @@ const content: Record<"en" | "zh", ArticleContent> = {
         note: "Resolve material unknowns while you can still compare units or negotiate appropriate lease conditions.",
       },
     ],
+    earlyCtaTitle: "Considering an F&B unit?",
+    earlyCtaText:
+      "If you already have a floor plan, proposed menu or equipment list, ID Work Studio can help you identify the questions that should be clarified before lease commitment.",
+    earlyCtaPrimary: "Check This Unit Before You Sign",
+    earlyCtaSecondary: "Use the Commercial Renovation Planner",
     centralTitle: "Your menu determines your renovation",
     centralIntro:
       "The floor area matters, but it does not tell you what the kitchen must support. The more useful starting point is the proposed menu because it creates a chain of operational and technical decisions.",
@@ -388,6 +400,10 @@ const content: Record<"en" | "zh", ArticleContent> = {
         why: "The renovation must support the eventual licence application and inspection. Approved use alone is not permission to begin food operations.",
       },
     ],
+    comparisonCtaTitle: "Still comparing several units?",
+    comparisonCtaText:
+      "You do not need every technical answer before speaking to us. Share the unit details, proposed menu and any available floor plan, and we can help identify what may require further verification.",
+    comparisonCtaPrimary: "Discuss an F&B Unit on WhatsApp",
     seatingTitle: "Do not separate customer seating from technical planning",
     seatingParagraphs: [
       "Seating is not only a revenue calculation. More seats can affect layout, circulation, sanitary provision, occupant load and the practical capacity of the kitchen and services. The exact implications depend on the premises and proposal.",
@@ -599,6 +615,11 @@ const content: Record<"en" | "zh", ArticleContent> = {
         note: "趁你仍能比较单位或商议租约条件时，先解决会影响可行性的关键未知数。",
       },
     ],
+    earlyCtaTitle: "正在考虑一个餐饮单位？",
+    earlyCtaText:
+      "如果你已有平面图、拟定菜单或设备清单，ID Work Studio 可协助你找出承诺租约前应该确认的问题。",
+    earlyCtaPrimary: "签约前先检查这个单位",
+    earlyCtaSecondary: "使用商业装修规划工具",
     centralTitle: "你的菜单决定你的装修",
     centralIntro:
       "面积当然重要，但面积本身无法说明厨房需要什么。更有效的起点是拟定菜单，因为菜单会引出一连串营运与技术决定。",
@@ -806,6 +827,10 @@ const content: Record<"en" | "zh", ArticleContent> = {
         why: "装修必须配合日后的执照申请和检查。只有核准用途，并不等于可以开始食品营运。",
       },
     ],
+    comparisonCtaTitle: "仍在比较几个不同单位？",
+    comparisonCtaText:
+      "与我们讨论前，你不需要先掌握所有技术答案。分享单位资料、拟定菜单和现有平面图，我们可以协助找出哪些事项需要进一步核实。",
+    comparisonCtaPrimary: "通过 WhatsApp 讨论餐饮单位",
     seatingTitle: "不要把顾客座位与技术规划分开",
     seatingParagraphs: [
       "座位不只是营业额计算。更多座位可能影响布局、通行、卫生设施、使用人数，以及厨房和建筑设备的实际容量。确切影响取决于单位和方案。",
@@ -996,6 +1021,11 @@ export default function FnbShopLeaseChecklistSingapore() {
   const { i18n } = useTranslation();
   const lang = i18n.language === "zh" ? "zh" : "en";
   const t = content[lang];
+  const whatsappMessage =
+    lang === "zh"
+      ? "你好 ID Work Studio，我正在考虑一个餐饮单位，希望在承诺租约前了解它是否适合我的经营概念。我可以提供地点、拟定菜单和现有平面图。"
+      : "Hi ID Work Studio, I’m considering an F&B unit and would like to understand whether it may suit my business concept before I commit to the lease. I can share the location, proposed menu and available floor plan.";
+  const whatsappHref = `https://wa.me/6598333085?text=${encodeURIComponent(whatsappMessage)}`;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -1140,6 +1170,27 @@ export default function FnbShopLeaseChecklistSingapore() {
                   <p className="mt-2 text-sm leading-6 text-[#6f6a63]">{point.note}</p>
                 </div>
               ))}
+            </div>
+          </section>
+
+          <section className="mb-14 rounded-3xl border border-[#d8c59f] bg-[#F4ECDD] p-7 md:p-9">
+            <h2 className="font-serif text-3xl font-semibold">{t.earlyCtaTitle}</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[#5f5a54]">{t.earlyCtaText}</p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-[#C5A059] px-6 py-3 text-sm font-semibold text-white hover:bg-[#D6B26B]"
+              >
+                {t.earlyCtaPrimary}
+              </a>
+              <Link
+                to="/commercial-approval-planner"
+                className="rounded-full border border-[#9A7734] px-6 py-3 text-sm font-semibold text-[#7A5E2D] hover:bg-white"
+              >
+                {t.earlyCtaSecondary}
+              </Link>
             </div>
           </section>
 
@@ -1300,6 +1351,21 @@ export default function FnbShopLeaseChecklistSingapore() {
             </div>
           </section>
 
+          <section className="mb-14 rounded-3xl bg-[#2B2926] p-7 text-white md:p-9">
+            <h2 className="font-serif text-3xl font-semibold">{t.comparisonCtaTitle}</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-white/75">
+              {t.comparisonCtaText}
+            </p>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-flex rounded-full bg-[#C5A059] px-6 py-3 text-sm font-semibold text-white hover:bg-[#D6B26B]"
+            >
+              {t.comparisonCtaPrimary}
+            </a>
+          </section>
+
           <section className="mb-14 rounded-3xl border border-[#d8c59f] bg-[#F4ECDD] p-7 md:p-9">
             <h2 className="font-serif text-3xl font-semibold">{t.seatingTitle}</h2>
             <div className="mt-5 space-y-4">
@@ -1371,10 +1437,14 @@ export default function FnbShopLeaseChecklistSingapore() {
             </h2>
             <p className="mt-6 text-base leading-8 text-[#5f5a54]">{t.nextIntro}</p>
             <div className="mt-7 space-y-4">
-              {t.nextSteps.map((step) => (
+              {t.nextSteps.map((step, index) => (
                 <div
                   key={step.number}
-                  className="grid gap-4 rounded-2xl border border-[#e8e1d7] bg-[#fffdf8] p-5 shadow-sm sm:grid-cols-[44px_1fr]"
+                  className={`grid gap-4 rounded-2xl border p-5 shadow-sm sm:grid-cols-[44px_1fr] ${
+                    index === 0
+                      ? "border-[#C5A059] bg-[#F4ECDD]"
+                      : "border-[#e8e1d7] bg-[#fffdf8]"
+                  }`}
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#C5A059] text-sm font-bold text-white">
                     {step.number}
@@ -1445,12 +1515,14 @@ export default function FnbShopLeaseChecklistSingapore() {
             <h2 className="font-serif text-3xl font-semibold">{t.ctaTitle}</h2>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-white/70">{t.ctaText}</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-full bg-[#C5A059] px-6 py-3 text-sm font-semibold text-white hover:bg-[#D6B26B]"
               >
                 {t.ctaPrimary}
-              </Link>
+              </a>
               <Link
                 to="/commercial"
                 className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-[#C5A059] hover:text-[#C5A059]"
