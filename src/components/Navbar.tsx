@@ -17,6 +17,7 @@ export default function Navbar() {
     '/hdb-defect-checklist.html',
     '/renovation-timeline-planner-singapore',
     '/commercial-approval-planner',
+    '/office-space-planner',
   ].includes(location.pathname);
 
   const toggleLanguage = () => {
@@ -95,6 +96,10 @@ export default function Navbar() {
                     <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">Commercial Renovation Planner</span>
                     <span className="mt-1 block text-xs leading-5 text-charcoal/55">Plan approvals, renovation timing, takeover and business opening.</span>
                   </a>
+                  <a href="/office-space-planner" className="block rounded-xl px-4 py-3 text-left transition-colors hover:bg-stone-50">
+                    <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">Office Space Planner</span>
+                    <span className="mt-1 block text-xs leading-5 text-charcoal/55">Estimate the office size you need from headcount, workstations, rooms and support spaces.</span>
+                  </a>
                 </div>
               </div>
 
@@ -141,6 +146,7 @@ export default function Navbar() {
               <a href="/hdb-defect-checklist.html" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">HDB Defect Inspection Checklist</a>
               <a href="/renovation-timeline-planner-singapore" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Renovation Timeline Planner</a>
               <a href="/commercial-approval-planner" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Commercial Renovation Planner</a>
+              <a href="/office-space-planner" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Office Space Planner</a>
 
               <Link to="/insights" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.insights')}</Link>
               <Link to="/gallery" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.gallery')}</Link>

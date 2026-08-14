@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Singapore Office Space Planner | ID Work Studio</title>
+  <meta name="description" content="Estimate how much office space your team may need in Singapore based on headcount, workstation size, meeting rooms, private offices and support spaces."/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:title" content="Singapore Office Space Planner | ID Work Studio"/>
+  <meta property="og:description" content="Find out how much office space your team may need before you start viewing units."/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{
+      --cream:#f3efe7;--warm:#ede5d8;--stone:#d8cec0;--taupe:#a99683;
+      --charcoal:#171514;--muted:#746b61;--champagne:#c8aa72;--gold:#C5A059;--ux-brown:#6B5545;--ux-brown-dark:#4F3D31;
+      --card:#fbf8f2;--green:#2F7D57;--danger:#8f4338;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;font-family:'Montserrat',sans-serif;
+      background:radial-gradient(circle at top left,#fbf7ef 0,#f0ebe3 38%,#e8dfd3 100%);
+      color:var(--charcoal);overflow-x:hidden
+    }
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    .serif{font-family:'Playfair Display',serif}
+    .eyebrow{letter-spacing:.16em;text-transform:uppercase}
+    .container{max-width:1180px;margin:0 auto;padding:0 20px}
+    .hidden{display:none!important}
+
+    /* Header */
+    #site-nav{position:fixed;top:0;left:0;right:0;z-index:60}
+    .accred-bar{
+      background:#2C2C2C;color:#fff;font-size:11px;padding:7px 16px;text-align:center;
+      letter-spacing:.16em;text-transform:uppercase;font-weight:500;border-bottom:1px solid rgba(212,175,55,.18)
+    }
+    .accred-bar a{color:#D4AF37;font-weight:700;text-decoration:none}
+    .main-nav{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #f0f0f0}
+    .main-nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-weight:900;font-size:19px;letter-spacing:-.03em;text-transform:uppercase;color:#2C2C2C;text-decoration:none}
+    .nav-links{display:flex;align-items:center;gap:24px}
+    .nav-links a,.planning-tools-toggle{font-size:11.5px;text-transform:uppercase;letter-spacing:.12em;font-weight:400;color:rgba(44,44,44,.75);text-decoration:none}
+    .planning-tools{position:relative}
+    .planning-tools-toggle{
+      display:flex;align-items:center;gap:5px;border:none;background:none;padding:24px 0;white-space:nowrap
+    }
+    .planning-tools-toggle span{font-size:9px;line-height:1}
+    .planning-tools-menu{
+      position:absolute;left:50%;top:100%;width:300px;transform:translate(-50%,-8px);
+      padding:10px;background:rgba(255,255,255,.99);border:1px solid #eee7df;border-radius:18px;
+      box-shadow:0 20px 50px rgba(23,21,20,.12);opacity:0;visibility:hidden;pointer-events:none;
+      transition:opacity .18s ease,transform .18s ease,visibility .18s ease
+    }
+    .planning-tools:hover .planning-tools-menu,
+    .planning-tools:focus-within .planning-tools-menu{
+      opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)
+    }
+    .planning-tools-menu a{
+      display:block;padding:11px 12px;border-radius:12px;text-transform:none;letter-spacing:0
+    }
+    .planning-tools-menu a:hover{background:#f7f2eb}
+    .planning-tools-menu strong{
+      display:block;font-size:12px;line-height:1.4;text-transform:uppercase;letter-spacing:.08em;color:#2c2c2c
+    }
+    .planning-tools-menu small{
+      display:block;margin-top:5px;font-size:12px;line-height:1.5;color:#6f655d
+    }
+    .planning-tools-menu a[aria-current="page"]{background:#f2ebe2}
+    .planning-tools-menu a[aria-current="page"] strong{color:var(--ux-brown-dark)}
+    .nav-cta{background:var(--gold);color:#fff!important;padding:10px 20px;border-radius:999px;font-weight:700!important}
+    #mobile-menu-btn{display:none;border:none;background:none;padding:4px}
+
+    /* Hero */
+    #hero{background:linear-gradient(rgba(17,17,17,.72),rgba(17,17,17,.72)),url('/calculatorhero/office-space-planner-hero.webp') center/cover no-repeat;padding:144px 0 74px;position:relative;overflow:hidden}
+    .hero-pattern{position:absolute;inset:0;opacity:.07;pointer-events:none}
+    .hero-glow{
+      position:absolute;width:600px;height:600px;border-radius:50%;
+      background:radial-gradient(circle,rgba(197,160,89,.28) 0%,transparent 70%);
+      top:-140px;right:-100px
+    }
+    .hero-inner{position:relative;z-index:2;text-align:center;max-width:900px;margin:0 auto;padding:0 20px}
+    .hero-pill{
+      display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(107,85,69,.30);
+      background:rgba(197,160,89,.09);border-radius:999px;padding:8px 18px;margin-bottom:25px
+    }
+    .hero-pill i{width:6px;height:6px;background:var(--gold);border-radius:50%}
+    .hero-pill span{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(197,160,89,.92)}
+    .hero-h1{font-size:clamp(2.5rem,6vw,4.3rem);line-height:1.03;color:#fff;margin:0;font-weight:700}
+    .hero-h1 em{color:var(--gold);font-style:italic}
+    .hero-sub{max-width:670px;margin:22px auto 0;color:rgba(255,255,255,.62);line-height:1.8;font-size:15px;font-weight:300}
+    .hero-cta{
+      display:inline-flex;align-items:center;gap:9px;margin-top:30px;background:var(--gold);
+      color:white;text-decoration:none;border-radius:999px;padding:13px 29px;font-size:12px;font-weight:700;
+      letter-spacing:.13em;text-transform:uppercase
+    }
+
+    /* Main */
+    main{padding:70px 0 100px}
+    .intro{text-align:center;margin-bottom:32px}
+    .intro h2{font-size:clamp(2rem,4vw,3rem);margin:0 0 10px}
+    .intro p{max-width:760px;margin:0 auto;color:var(--muted);font-size:14px;line-height:1.8}
+
+    .stepbar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 18px}
+    .step-pill{
+      padding:10px 8px;border-radius:999px;border:1px solid var(--stone);background:rgba(251,248,242,.85);
+      color:var(--taupe);font-size:11px;font-weight:700;text-align:center;transition:.2s
+    }
+    .step-pill.active{background:var(--charcoal);border-color:var(--charcoal);color:#fff}
+    .step-pill.done{background:var(--stone);color:#564d45}
+
+    .shell{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start}
+    .panel{
+      background:rgba(251,248,242,.92);border:1px solid rgba(169,150,131,.24);
+      box-shadow:0 24px 70px rgba(23,21,20,.08);border-radius:28px;padding:30px
+    }
+    .sidebar{
+      background:var(--charcoal);color:#fff;border-radius:28px;padding:24px;position:sticky;top:120px;
+      box-shadow:0 20px 60px rgba(23,21,20,.18)
+    }
+    .sidebar-kicker{color:#f2e8dc;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .sidebar-big{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;margin-top:8px}
+    .sidebar-copy{color:#d8d0c8;font-size:14px;line-height:1.75;margin-top:14px}
+    .sidebar-summary{margin-top:20px;border-top:1px solid #3b342d;padding-top:18px;display:grid;gap:13px}
+    .sidebar-row{display:flex;justify-content:space-between;gap:16px;font-size:14px;line-height:1.45}
+    .sidebar-row span:first-child{color:#c7beb5}.sidebar-row strong{color:#fff;text-align:right}
+
+    .step h3{font-size:31px;margin:0 0 6px}
+    .step-lead{margin:0 0 26px;color:var(--muted);font-size:15px;line-height:1.75}
+    .section-title{font-size:12px;font-weight:800;color:#766a60;letter-spacing:.12em;text-transform:uppercase;margin:28px 0 12px}
+    .section-title.emphasis{
+      display:inline-flex;align-items:center;
+      background:rgba(107,85,69,.10);
+      border:1px solid rgba(197,160,89,.32);
+      color:var(--ux-brown-dark);
+      padding:7px 10px;
+      border-radius:999px;
+      margin-top:30px;
+    }
+    .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .field label,.field .label{display:block;margin-bottom:7px;font-size:12px;font-weight:800;color:#625950;text-transform:uppercase;letter-spacing:.08em}
+    .inp{
+      width:100%;min-height:46px;border:1px solid var(--stone);background:#fffaf4;padding:.78rem 1rem;
+      font-size:15px;outline:none;border-radius:14px;color:#24211f;transition:.15s
+    }
+    select.inp{
+      -webkit-appearance:none;appearance:none;
+      padding-right:2.8rem;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23746b61' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 1rem center;
+      background-size:14px 14px;
+    }
+    .inp:focus{border-color:#b99658;box-shadow:0 0 0 4px rgba(200,170,114,.18);background-color:#fff}
+    .hint{font-size:12.5px;color:#7f7469;margin-top:7px;line-height:1.6}
+
+    .choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .choice{
+      border:1px solid var(--stone);background:#fffaf4;border-radius:16px;padding:15px;text-align:left;
+      color:#2a2623;min-height:76px;transition:.18s
+    }
+    .choice:hover{border-color:var(--ux-brown);transform:translateY(-1px)}
+    .choice.active{background:var(--ux-brown);border-color:var(--ux-brown);color:#fff;box-shadow:0 14px 28px rgba(79,61,49,.20)}
+    .choice strong{display:block;font-size:14px;line-height:1.35}
+    .choice small{display:block;margin-top:6px;font-size:12.5px;line-height:1.55;opacity:.9}
+
+    .counter-row{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 16px;
+      border:1px solid var(--stone);border-radius:16px;background:#fffaf4
+    }
+    .counter-copy strong{font-size:14px;line-height:1.35}.counter-copy small{display:block;color:#766b61;font-size:12.5px;line-height:1.5;margin-top:4px}
+    .counter{display:flex;align-items:center;gap:8px}
+    .counter button{width:34px;height:34px;border-radius:10px;border:1px solid var(--stone);background:#fff;color:#333;font-weight:700}
+    .counter span{min-width:28px;text-align:center;font-weight:800}
+    .room-card{
+      border:1px solid var(--stone);background:#fffaf4;border-radius:16px;padding:15px;margin-top:10px;
+      display:grid;grid-template-columns:1fr 180px auto;gap:10px;align-items:center
+    }
+    .room-card button{border:none;background:#f0e7db;border-radius:10px;width:36px;height:36px;font-size:18px;color:#6b6158}
+    .add-btn{
+      border:1px dashed #b8aa98;background:transparent;border-radius:15px;padding:12px 16px;color:#6c6259;font-weight:700;font-size:12px
+    }
+
+    .toggle-card{
+      border:1px solid var(--stone);background:#fffaf4;border-radius:16px;padding:15px;
+    }
+    .toggle-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .toggle-top strong{font-size:14px;line-height:1.4}.toggle-top small{display:block;color:#766b61;font-size:12.5px;line-height:1.55;margin-top:5px}
+    .switch{position:relative;width:46px;height:26px;flex:0 0 auto}
+    .switch input{opacity:0;width:0;height:0}
+    .slider{position:absolute;inset:0;background:#d7cec3;border-radius:999px;transition:.18s}
+    .slider:before{content:"";position:absolute;width:20px;height:20px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.18s;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+    .switch input:checked + .slider{background:var(--ux-brown)}
+    .switch input:checked + .slider:before{transform:translateX(20px)}
+    .toggle-options{margin-top:12px}
+
+    .nav-row{display:flex;justify-content:space-between;gap:12px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(216,206,192,.7)}
+    .btn{border:none;border-radius:15px;padding:13px 22px;font-size:13px;font-weight:600;min-height:46px}
+    .btn-secondary{background:#f0e8dc;color:#4e463f;border:1px solid var(--stone)}
+    .btn-primary{background:var(--charcoal);color:#fff;padding-left:28px;padding-right:28px}
+    .btn-gold{background:var(--ux-brown);color:#fff}
+    .btn-green{background:var(--green);color:white;width:100%}
+    .error{display:none;background:#fff0ed;border:1px solid #e7b7ae;color:var(--danger);padding:12px 14px;border-radius:13px;margin-bottom:18px;font-size:12px;line-height:1.5}
+
+    /* Result */
+    .result-hero{background:var(--charcoal);color:white;border-radius:24px;padding:28px;margin-bottom:18px;position:relative;overflow:hidden}
+    .result-hero:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-80px;top:-90px;background:radial-gradient(circle,rgba(197,160,89,.28),transparent 70%)}
+    .result-kicker{color:#f0e6da;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .result-number{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1;font-weight:700;margin:10px 0 8px;position:relative;z-index:1}
+    .result-sub{color:#ddd5cc;font-size:14px;line-height:1.75;max-width:680px;position:relative;z-index:1}
+    .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+    .result-card{background:#fffaf4;border:1px solid var(--stone);border-radius:16px;padding:16px}
+    .result-card .k{font-size:11.5px;color:#786d63;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+    .result-card strong{display:block;font-family:'Playfair Display',serif;font-size:25px;line-height:1.15;margin-top:8px}
+    .result-card p{font-size:12.5px;color:#6f655c;line-height:1.6;margin:7px 0 0}
+
+    .result-section{border:1px solid var(--stone);background:#fffaf4;border-radius:20px;padding:20px;margin-top:14px}
+    .result-section h4{font-family:'Playfair Display',serif;font-size:23px;margin:0 0 6px}
+    .result-section > p{font-size:13.5px;color:#695f56;line-height:1.7}
+    .driver{margin-top:12px}
+    .driver-top{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;line-height:1.4}
+    .driver-top strong{font-weight:800}.driver-top span{color:#8d8277}
+    .bar{height:8px;background:#eee4d8;border-radius:99px;overflow:hidden;margin-top:6px}
+    .bar > i{display:block;height:100%;background:var(--ux-brown);border-radius:99px}
+    .rec{border-top:1px solid #eadfd3;padding:13px 0}
+    .impact.high{background:#d9cec2;color:#4f3d31}
+    .impact.medium{background:#ece3d8;color:#65584d}
+    .impact.low{background:#f1ebe4;color:#786d63}
+    .rec:first-of-type{border-top:none}
+    .rec strong{font-size:14px;line-height:1.4}.rec p{font-size:12.5px;color:#695f56;line-height:1.65;margin:6px 0}
+    .impact{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:#eee3d5;color:#66584c}
+    .search-brief{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}
+    .brief-item{background:#f4ecdf;border-radius:12px;padding:11px 12px}
+    .brief-item span{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:#786d63;font-weight:800}
+    .brief-item strong{display:block;font-size:13.5px;line-height:1.45;margin-top:5px}
+    .cta-box{background:#111;color:#fff;border-radius:22px;padding:23px;margin-top:18px}
+    .cta-box h4{font-family:'Playfair Display',serif;font-size:25px;margin:0 0 8px}
+    .cta-box p{color:#d2c9c0;font-size:13.5px;line-height:1.75;margin:0 0 18px}
+
+    .loading{display:none;align-items:center;gap:10px;color:#62584f;font-size:13px;margin-bottom:15px}
+    .loading i{width:16px;height:16px;border:2px solid #d8cec0;border-top-color:var(--ux-brown);border-radius:50%;animation:spin .7s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .supporting-content{padding:0 0 86px}
+    .supporting-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:20px;align-items:start}
+    .support-card{
+      background:rgba(251,248,242,.94);border:1px solid rgba(169,150,131,.24);
+      border-radius:24px;padding:24px;box-shadow:0 18px 55px rgba(23,21,20,.06)
+    }
+    .support-kicker{font-size:11.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--ux-brown)}
+    .support-card h2{font-family:'Playfair Display',serif;font-size:30px;line-height:1.15;margin:8px 0 9px}
+    .support-card > p{font-size:14px;line-height:1.7;color:#6d6259;margin:0}
+    .related-links{display:grid;gap:9px;margin-top:18px}
+    .related-link{
+      display:block;text-decoration:none;border:1px solid #ded3c6;background:#fffaf4;border-radius:15px;
+      padding:14px 15px;transition:.18s
+    }
+    .related-link:hover{border-color:var(--ux-brown);transform:translateY(-1px)}
+    .related-link strong{display:block;color:#292522;font-size:14px;line-height:1.4}
+    .related-link span{display:block;color:#766b61;font-size:12.5px;line-height:1.55;margin-top:4px}
+    .faq-list{display:grid;gap:9px;margin-top:18px}
+    .faq-item{border:1px solid #ded3c6;background:#fffaf4;border-radius:15px;overflow:hidden}
+    .faq-item summary{
+      list-style:none;cursor:pointer;padding:15px 46px 15px 15px;position:relative;
+      font-size:14px;font-weight:700;line-height:1.45;color:#292522
+    }
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary:after{
+      content:'+';position:absolute;right:16px;top:50%;transform:translateY(-50%);
+      font-size:22px;font-weight:400;color:var(--ux-brown)
+    }
+    .faq-item[open] summary:after{content:'−'}
+    .faq-answer{padding:0 15px 15px;font-size:13.5px;line-height:1.7;color:#695f56}
+
+    footer{background:#000;color:#fff;padding:48px 20px 68px;text-align:center}
+    footer .logo{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    footer p{font-size:11px;color:#666;line-height:1.7}
+    footer a{color:#888;text-decoration:none}
+
+    @media(max-width:900px){
+      .shell{grid-template-columns:1fr}
+      .sidebar{position:static}
+      .nav-links{display:none}
+      #mobile-menu-btn{display:block}
+      .main-nav.mobile-open .nav-links{
+        display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:14px 22px 22px;gap:4px;border-bottom:1px solid #eee;
+        max-height:calc(100vh - 110px);overflow-y:auto
+      }
+      .main-nav.mobile-open .nav-links > a{padding:10px 5px}
+      .main-nav.mobile-open .planning-tools{width:100%}
+      .main-nav.mobile-open .planning-tools-toggle{
+        width:100%;justify-content:space-between;padding:12px 5px;color:rgba(44,44,44,.75)
+      }
+      .main-nav.mobile-open .planning-tools-menu{
+        position:static;width:100%;transform:none;opacity:1;visibility:visible;pointer-events:auto;
+        box-shadow:none;border:none;border-left:2px solid #e3d8cb;border-radius:0;background:transparent;
+        padding:0 0 0 10px;margin:0
+      }
+      .main-nav.mobile-open .planning-tools-menu a{padding:10px 10px}
+      .choice-grid{grid-template-columns:1fr}
+      .room-card{grid-template-columns:1fr}
+      .result-grid{grid-template-columns:1fr}
+      .supporting-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .panel{padding:20px;border-radius:22px}
+      main{padding-top:45px}
+      .grid2,.grid3,.search-brief{grid-template-columns:1fr}
+      .stepbar{gap:5px}
+      .step-pill{font-size:10px;padding:9px 4px}
+      .hero-sub{font-size:14px;line-height:1.7}
+      .inp{font-size:16px}
+      .choice{padding:16px}
+      .result-section{padding:18px}
+      .sidebar{padding:22px}
+      .nav-row{position:sticky;bottom:0;background:rgba(251,248,242,.97);margin-left:-20px;margin-right:-20px;padding:14px 20px 4px}
+    }
+  </style>
+</head>
+<body>
+
+<div id="site-nav">
+  <div class="accred-bar">
+    <a href="https://services2.hdb.gov.sg/webapp/FI10AWBIZ/" target="_blank" rel="noopener noreferrer">HDB Registered</a>
+    <span style="margin:0 8px;color:#555">|</span>
+    <a href="https://www.bca.gov.sg/eBACS/BCA_DIRECTORY/Search/SearchResults?searchKey=id%20work%20s" target="_blank" rel="noopener noreferrer">BCA Registered</a>
+    <span style="margin:0 8px;color:#555">|</span>
+    <span style="color:rgba(255,255,255,.45)">Est. 2015 · Singapore</span>
+  </div>
+  <nav class="main-nav" id="mainNav">
+    <div class="main-nav-inner">
+      <a href="https://idworkstudio.com" class="nav-logo">ID Work Studio</a>
+      <div class="nav-links">
+        <a href="https://idworkstudio.com/">Home</a>
+        <a href="https://idworkstudio.com/residential">Residential</a>
+        <a href="https://idworkstudio.com/commercial">Commercial</a>
+
+        <div class="planning-tools">
+          <button class="planning-tools-toggle" type="button">
+            Planning Tools <span>▼</span>
+          </button>
+          <div class="planning-tools-menu">
+            <a href="https://idworkstudio.com/renovation-cost-calculator">
+              <strong>Renovation Cost Calculator</strong>
+              <small>Estimate renovation contract costs.</small>
+            </a>
+            <a href="https://idworkstudio.com/total-home-budget-calculator">
+              <strong>Total Move-In Budget Planner</strong>
+              <small>Plan furniture, appliances and cash buffer.</small>
+            </a>
+            <a href="https://idworkstudio.com/hdb-renovation-style-quiz">
+              <strong>HDB Renovation Style Quiz</strong>
+              <small>Discover a suitable interior style direction.</small>
+            </a>
+            <a href="https://idworkstudio.com/hdb-defect-checklist.html">
+              <strong>HDB Defect Inspection Checklist</strong>
+              <small>Inspect defects before renovation begins.</small>
+            </a>
+            <a href="https://idworkstudio.com/renovation-timeline-planner-singapore">
+              <strong>Renovation Timeline Planner</strong>
+              <small>Estimate renovation schedule and move-in timing.</small>
+            </a>
+            <a href="https://idworkstudio.com/commercial-approval-planner">
+              <strong>Commercial Renovation Planner</strong>
+              <small>Plan approvals, renovation timing, takeover and business opening.</small>
+            </a>
+            <a href="https://idworkstudio.com/office-space-planner" aria-current="page">
+              <strong>Office Space Planner</strong>
+              <small>Estimate office size from headcount, workstations, rooms and support spaces.</small>
+            </a>
+          </div>
+        </div>
+
+        <a href="https://idworkstudio.com/insights">Guides</a>
+        <a href="https://idworkstudio.com/#contact">Contact</a>
+        <a href="https://wa.me/6598333085" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+      </div>
+      <button id="mobile-menu-btn" aria-label="Toggle menu" onclick="document.getElementById('mainNav').classList.toggle('mobile-open')">
+        <svg width="24" height="24" fill="none" stroke="#2C2C2C" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+</div>
+
+<section id="hero">
+  <svg class="hero-pattern" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs><pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M72 0L0 0 0 72" fill="none" stroke="#C5A059" stroke-width=".5"/></pattern></defs>
+    <rect width="1440" height="600" fill="url(#grid)"/>
+    <rect x="170" y="95" width="330" height="230" fill="none" stroke="#C5A059" stroke-width=".7"/>
+    <rect x="210" y="130" width="90" height="80" fill="none" stroke="#C5A059" stroke-width=".4"/>
+    <rect x="335" y="130" width="120" height="150" fill="none" stroke="#C5A059" stroke-width=".4"/>
+    <rect x="930" y="110" width="270" height="195" fill="none" stroke="#C5A059" stroke-width=".7"/>
+  </svg>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-pill"><i></i><span>ID Work Studio · Singapore Office Planning Tool</span></div>
+    <h1 class="hero-h1">Singapore<br><em>Office Space</em><br>Planner</h1>
+    <p class="hero-sub">Find out how much office space your team may actually need — based on people, workstation size, private rooms, meetings and support spaces.</p>
+    <a href="#planner" class="hero-cta">Plan My Office Space ↓</a>
+  </div>
+</section>
+
+<main id="planner">
+  <div class="container">
+    <div class="intro">
+      <div class="eyebrow" style="font-size:10px;color:#968a7e;font-weight:800;margin-bottom:10px">Office Planning Before Commitment</div>
+      <h2 class="serif">Start with what your team really needs</h2>
+      <p>Tell us how your office works. We will estimate a practical search range and show what is driving your space requirement.</p>
+    </div>
+
+    <div class="stepbar">
+      <div id="pill0" class="step-pill active">1 · Your Team</div>
+      <div id="pill1" class="step-pill">2 · Rooms</div>
+      <div id="pill2" class="step-pill">3 · Other Spaces</div>
+      <div id="pill3" class="step-pill">4 · How You Work</div>
+    </div>
+
+    <div class="shell">
+      <section class="panel">
+        <div id="errorBox" class="error"></div>
+        <div id="loading" class="loading"><i></i><span>Calculating your office requirement…</span></div>
+        <div id="stepRoot"></div>
+        <div id="resultRoot" class="hidden"></div>
+
+        <div id="navRow" class="nav-row">
+          <button id="backBtn" class="btn btn-secondary" type="button">← Back</button>
+          <button id="nextBtn" class="btn btn-primary" type="button">Next →</button>
+        </div>
+      </section>
+
+      <aside class="sidebar" id="sidebar"></aside>
+    </div>
+  </div>
+</main>
+
+
+<section class="supporting-content" aria-label="Office planning resources and frequently asked questions">
+  <div class="container">
+    <div class="supporting-grid">
+      <section class="support-card">
+        <div class="support-kicker">Related Office Planning Guides</div>
+        <h2>Plan the unit before you commit</h2>
+        <p>The calculator gives you a practical search range. These related guides help you evaluate cost, timeline and whether a potential unit can support the office you want to build.</p>
+
+        <nav class="related-links" aria-label="Related office planning guides">
+          <a class="related-link" href="/insights/how-much-office-space-do-you-need-singapore">
+            <strong>How Much Office Space Do You Need in Singapore?</strong>
+            <span>Understand headcount, layout, meeting rooms and circulation before choosing a unit.</span>
+          </a>
+          <a class="related-link" href="/insights/office-renovation-cost-singapore">
+            <strong>Office Renovation Cost Singapore</strong>
+            <span>See the main cost drivers behind office fit-out and renovation planning.</span>
+          </a>
+          <a class="related-link" href="/insights/office-renovation-timeline-singapore">
+            <strong>Office Renovation Timeline Singapore</strong>
+            <span>Plan approvals, site works, coordination and handover before your target move-in date.</span>
+          </a>
+          <a class="related-link" href="/commercial/office-renovation">
+            <strong>Office Renovation &amp; Fit-Out</strong>
+            <span>See how ID Work Studio plans and delivers office renovation projects in Singapore.</span>
+          </a>
+        </nav>
+      </section>
+
+      <section class="support-card" id="office-space-planner-faq">
+        <div class="support-kicker">Office Space Planner FAQ</div>
+        <h2>Common questions before you start viewing offices</h2>
+        <p>These answers explain what the planner can estimate and where an actual floor plan still needs professional review.</p>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How much office space do I need per employee in Singapore?</summary>
+            <div class="faq-answer">A single square-foot-per-person figure can be misleading. Two companies with the same headcount may need very different office sizes depending on workstation dimensions, meeting rooms, private offices, pantry, storage and circulation. This planner therefore calculates from your actual requirements rather than using one fixed allowance per employee.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does this planner include meeting rooms and private offices?</summary>
+            <div class="faq-answer">Yes. The recommendation includes the meeting rooms, director rooms, manager rooms, phone or Zoom rooms and support spaces that you select. If you do not select a space, the planner does not automatically add it.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can a small SME use an office below 1,000 sqft?</summary>
+            <div class="faq-answer">Yes. Small teams can operate from offices well below 1,000 sqft when their room requirements are limited and the floor plate is efficient. The planner is designed to handle smaller SMEs as well as larger offices, so it does not impose a 1,000 sqft minimum.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why does circulation affect the recommended office size?</summary>
+            <div class="faq-answer">Furniture and room footprints are not the whole office. People still need workable access between desks, rooms and shared facilities. The planner therefore allows for overall planning and circulation instead of simply adding the physical size of each desk and room.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does this result confirm SCDF compliance?</summary>
+            <div class="faq-answer">No. This is a space-planning and property-search estimate, not an SCDF compliance assessment. Final suitability still depends on the actual unit, exit routes, floor-plan geometry and the final proposed office layout. Fire-safety requirements should be reviewed during detailed design where applicable.</div>
+          </details>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">ID Work Studio</div>
+  <p>11 Woodlands Close #03-10 Woodlands 11 Singapore 737853 · 6816 2872 · contact@idworkstudio.com</p>
+  <p>Planning estimate only. Final suitability depends on the actual unit and floor plan.</p>
+</footer>
+
+<script>
+const API_URL = '/api/office-space-calculate';
+
+const state = {
+  step: 0,
+  result: null,
+  form: {
+    headcount: 8,
+    typicalAttendance: 7,
+    peakAttendance: 8,
+    deskMode: 'assigned',
+    workstations: 8,
+    deskLengthMm: 1500,
+    deskDepthMm: 750,
+
+    directors: {qty:0,type:'standard'},
+    managers: {qty:0,type:'standard'},
+    meetingRooms: [],
+    phoneRooms: 0,
+    training: {enabled:false,capacity:12,setup:'multipurpose'},
+
+    pantry: 'none',
+    pantrySeats: 4,
+    reception: 'none',
+    storage: 'none',
+    it: 'none',
+    printArea: 'none',
+    collaboration: 'none',
+
+    privateCallFrequency: 'rarely',
+    visitorFrequency: 'rarely',
+    futureHeadcount: null
+  }
+};
+
+const $ = id => document.getElementById(id);
+const escapeHtml = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+
+function setField(path, value, rerender=true){
+  const parts = path.split('.');
+  let obj = state.form;
+  for(let i=0;i<parts.length-1;i++) obj = obj[parts[i]];
+  obj[parts[parts.length-1]] = value;
+  if(rerender) render();
+}
+
+function setNum(path, value, rerender=false){
+  const n = Number(value);
+  setField(path, Number.isFinite(n) ? n : 0, rerender);
+  renderSidebar();
+}
+
+function setPeakAttendance(value){
+  const n = Number(value);
+  state.form.peakAttendance = Number.isFinite(n) ? n : 0;
+
+  if(state.form.deskMode === 'assigned'){
+    state.form.workstations = Math.max(1, state.form.peakAttendance);
+
+    const workstationInput = document.querySelector('input[oninput="setNum(\'workstations\',this.value)"]');
+    if(workstationInput) workstationInput.value = state.form.workstations;
+  }
+
+  renderSidebar();
+}
+
+function choice(path, value, label, sub=''){
+  const parts = path.split('.');
+  let obj = state.form;
+  for(const p of parts) obj = obj[p];
+  const active = obj === value;
+  return `<button type="button" class="choice ${active?'active':''}" onclick="setField('${path}','${value}')"><strong>${label}</strong>${sub?`<small>${sub}</small>`:''}</button>`;
+}
+
+function counter(label, path, sub=''){
+  const parts = path.split('.');
+  let val = state.form;
+  for(const p of parts) val = val[p];
+  return `<div class="counter-row">
+    <div class="counter-copy"><strong>${label}</strong>${sub?`<small>${sub}</small>`:''}</div>
+    <div class="counter">
+      <button type="button" onclick="adjustCounter('${path}',-1)">−</button>
+      <span>${val}</span>
+      <button type="button" onclick="adjustCounter('${path}',1)">+</button>
+    </div>
+  </div>`;
+}
+
+function adjustCounter(path, delta){
+  const parts = path.split('.');
+  let obj = state.form;
+  for(let i=0;i<parts.length-1;i++) obj = obj[parts[i]];
+  const key = parts[parts.length-1];
+  obj[key] = Math.max(0, Number(obj[key]||0)+delta);
+  render();
+}
+
+function setDeskPreset(lengthMm, depthMm){
+  state.form.deskLengthMm = lengthMm;
+  state.form.deskDepthMm = depthMm;
+  render();
+}
+
+function setDeskMode(mode){
+  state.form.deskMode = mode;
+  if(mode === 'assigned'){
+    state.form.workstations = Math.max(1, state.form.peakAttendance);
+  }
+  render();
+}
+
+function renderPills(){
+  for(let i=0;i<4;i++){
+    const el = $('pill'+i);
+    el.className = 'step-pill' + (i===state.step?' active':i<state.step?' done':'');
+  }
+}
+
+function renderSidebar(){
+  const f = state.form;
+  $('sidebar').innerHTML = `
+    <div class="sidebar-kicker">Your Planning Brief</div>
+    <div class="sidebar-big">${f.peakAttendance || 0} peak users</div>
+    <div class="sidebar-copy">Your recommendation will be based on peak attendance, actual desk dimensions and the rooms/functions you select.</div>
+    <div class="sidebar-summary">
+      <div class="sidebar-row"><span>Workstations</span><strong>${f.workstations}</strong></div>
+      <div class="sidebar-row"><span>Desk size</span><strong>${f.deskLengthMm} × ${f.deskDepthMm} mm</strong></div>
+      <div class="sidebar-row"><span>Director rooms</span><strong>${f.directors.qty}</strong></div>
+      <div class="sidebar-row"><span>Manager rooms</span><strong>${f.managers.qty}</strong></div>
+      <div class="sidebar-row"><span>Meeting rooms</span><strong>${f.meetingRooms.length}</strong></div>
+      <div class="sidebar-row"><span>Phone / Zoom rooms</span><strong>${f.phoneRooms}</strong></div>
+    </div>
+  `;
+}
+
+function renderStep1(){
+  const f = state.form;
+  return `<div class="step">
+    <h3 class="serif">Your team</h3>
+    <p class="step-lead">Start with the people who actually need to use the office and the workstations you want to provide.</p>
+
+    <div class="grid3">
+      <div class="field"><label>Total employees</label><input class="inp" type="number" min="1" value="${f.headcount}" oninput="setNum('headcount',this.value)"/></div>
+      <div class="field"><label>Usually in office</label><input class="inp" type="number" min="1" value="${f.typicalAttendance}" oninput="setNum('typicalAttendance',this.value)"/></div>
+      <div class="field"><label>Busiest day</label><input class="inp" type="number" min="1" value="${f.peakAttendance}" oninput="setPeakAttendance(this.value)"/></div>
+    </div>
+
+    <div class="section-title">How does your team use desks?</div>
+    <div class="choice-grid">
+      <button type="button" class="choice ${f.deskMode==='assigned'?'active':''}" onclick="setDeskMode('assigned')"><strong>Assigned desks</strong><small>Most people have their own workstation.</small></button>
+      <button type="button" class="choice ${f.deskMode==='shared'?'active':''}" onclick="setDeskMode('shared')"><strong>Shared / hybrid</strong><small>Not every employee needs a permanent desk.</small></button>
+      <button type="button" class="choice ${f.deskMode==='mixed'?'active':''}" onclick="setDeskMode('mixed')"><strong>Mixed</strong><small>Some permanent desks, some shared seats.</small></button>
+    </div>
+
+    <div class="grid2" style="margin-top:16px">
+      <div class="field">
+        <label>Number of workstations</label>
+        <input class="inp" type="number" min="1" value="${f.workstations}" oninput="setNum('workstations',this.value)"/>
+        <div class="hint">${f.deskMode==='assigned'?'Assigned desks are suggested from your busiest-day attendance. You can still change the number manually.':'Count the desks you actually want available, not simply total company headcount.'}</div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="section-title">Choose your workstation size</div>
+    <div class="choice-grid">
+      <button type="button" class="choice ${f.deskLengthMm===1200&&f.deskDepthMm===600?'active':''}" onclick="setDeskPreset(1200,600)">
+        <strong>Small</strong>
+        <small>1200 × 600 mm · Space-efficient for laptop-based work.</small>
+      </button>
+      <button type="button" class="choice ${f.deskLengthMm===1500&&f.deskDepthMm===750?'active':''}" onclick="setDeskPreset(1500,750)">
+        <strong>Medium</strong>
+        <small>1500 × 750 mm · Recommended for general office use.</small>
+      </button>
+      <button type="button" class="choice ${f.deskLengthMm===1800&&f.deskDepthMm===750?'active':''}" onclick="setDeskPreset(1800,750)">
+        <strong>Comfortable</strong>
+        <small>1800 × 750 mm · More working surface for documents or multiple screens.</small>
+      </button>
+    </div>
+    <div class="hint">The planner will also allow for the chair and immediate working zone behind each desk. Main office circulation is calculated separately.</div>
+  </div>`;
+}
+
+function roomPreference(path, director=false){
+  const options = director
+    ? [
+        ['efficient','Efficient · compact desk, 2 visitor chairs + storage'],
+        ['standard','Standard · larger desk, 2 visitor chairs + more storage'],
+        ['generous','Generous · larger work area + comfortable discussion space'],
+        ['executive','Executive · executive desk, storage + sofa / lounge discussion area']
+      ]
+    : [
+        ['efficient','Efficient · compact desk, 1–2 visitor chairs + storage'],
+        ['standard','Standard · comfortable desk, 2 visitor chairs + storage'],
+        ['generous','Generous · larger desk + more comfortable discussion space']
+      ];
+  const current = path==='directors' ? state.form.directors.type : state.form.managers.type;
+  return `<select class="inp" onchange="setField('${path}.type',this.value)">${options.map(([v,l])=>`<option value="${v}" ${current===v?'selected':''}>${l}</option>`).join('')}</select>`;
+}
+
+function addMeeting(){
+  state.form.meetingRooms.push({capacity:4,type:'standard'});
+  render();
+}
+function removeMeeting(i){
+  state.form.meetingRooms.splice(i,1);
+  render();
+}
+function updateMeeting(i,key,val){
+  state.form.meetingRooms[i][key] = key==='capacity' ? Number(val) : val;
+  renderSidebar();
+}
+
+function renderStep2(){
+  const f = state.form;
+  const meetings = f.meetingRooms.map((m,i)=>`
+    <div class="room-card">
+      <strong>Meeting room ${i+1}</strong>
+      <select class="inp" onchange="updateMeeting(${i},'capacity',this.value)">
+        ${[2,4,6,8,10,12,16].map(n=>`<option value="${n}" ${m.capacity===n?'selected':''}>${n} people</option>`).join('')}
+      </select>
+      <button type="button" aria-label="Remove meeting room" onclick="removeMeeting(${i})">×</button>
+      <div></div>
+      <select class="inp" onchange="updateMeeting(${i},'type',this.value)">
+        <option value="standard" ${m.type==='standard'?'selected':''}>Standard meeting room</option>
+        <option value="boardroom" ${m.type==='boardroom'?'selected':''}>Boardroom / formal</option>
+      </select>
+      <div></div>
+    </div>`).join('');
+
+  return `<div class="step">
+    <h3 class="serif">Rooms you need</h3>
+    <p class="step-lead">Tell us what rooms the office needs. You do not need to know their square footage — the planner handles that.</p>
+
+    <div class="section-title">Private offices</div>
+    <div style="display:grid;gap:10px">
+      ${counter('Director rooms','directors.qty','Includes workstation, visitor seating, storage and movement space.')}
+      ${f.directors.qty>0?`<div class="field"><label>Director room preference</label>${roomPreference('directors',true)}</div>`:''}
+      ${counter('Manager rooms','managers.qty','Includes workstation, visitor seating, storage and movement space.')}
+      ${f.managers.qty>0?`<div class="field"><label>Manager room preference</label>${roomPreference('managers',false)}</div>`:''}
+    </div>
+
+    <div class="section-title emphasis">Meeting rooms</div><div class="hint" style="margin:-3px 0 10px">For day-to-day internal or client meetings. Add rooms based on how many people each room needs to seat.</div>
+    ${meetings || '<div class="hint" style="margin-bottom:10px">No meeting rooms added yet.</div>'}
+    <button class="add-btn" type="button" onclick="addMeeting()">+ Add meeting room</button>
+
+    <div class="section-title">Private calls</div>
+    ${counter('Phone / Zoom rooms','phoneRooms','Dedicated one-person spaces for private calls and video meetings.')}
+
+    <div class="section-title">Training / presentation room</div>
+    <div class="toggle-card">
+      <div class="toggle-top">
+        <div><strong>Training / presentation room</strong><small>For larger group briefings, presentations or classroom-style training. This is different from a normal meeting room.</small></div>
+        <label class="switch"><input type="checkbox" ${f.training.enabled?'checked':''} onchange="setField('training.enabled',this.checked)"><span class="slider"></span></label>
+      </div>
+      ${f.training.enabled?`<div class="toggle-options grid2">
+        <div class="field"><label>Capacity</label><input class="inp" type="number" min="2" value="${f.training.capacity}" oninput="setNum('training.capacity',this.value)"/></div>
+        <div class="field"><label>Typical setup</label>
+          <select class="inp" onchange="setField('training.setup',this.value)">
+            <option value="theatre" ${f.training.setup==='theatre'?'selected':''}>Presentation / theatre</option>
+            <option value="classroom" ${f.training.setup==='classroom'?'selected':''}>Classroom / training tables</option>
+            <option value="multipurpose" ${f.training.setup==='multipurpose'?'selected':''}>Flexible / multipurpose</option>
+          </select>
+        </div>
+      </div>`:''}
+    </div>
+  </div>`;
+}
+
+function toggleSupport(key, enabledValue='basic'){
+  const current = state.form[key];
+  state.form[key] = current==='none' ? enabledValue : 'none';
+  render();
+}
+
+function supportCard(title,key,sub,options,defaultValue){
+  const f = state.form;
+  const enabled = f[key] !== 'none';
+  return `<div class="toggle-card">
+    <div class="toggle-top">
+      <div><strong>${title}</strong><small>${sub}</small></div>
+      <label class="switch"><input type="checkbox" ${enabled?'checked':''} onchange="toggleSupport('${key}','${defaultValue}')"><span class="slider"></span></label>
+    </div>
+    ${enabled?`<div class="toggle-options"><select class="inp" onchange="setField('${key}',this.value)">${options.map(([v,l])=>`<option value="${v}" ${f[key]===v?'selected':''}>${l}</option>`).join('')}</select></div>`:''}
+  </div>`;
+}
+
+function renderStep3(){
+  const f = state.form;
+  return `<div class="step">
+    <h3 class="serif">Other spaces</h3>
+    <p class="step-lead">Only select the support spaces your office actually needs. Nothing is added automatically.</p>
+    <div style="display:grid;gap:10px">
+      ${supportCard('Pantry','pantry','Refreshments, meals or staff seating.',
+        [['basic','Basic pantry'],['quick_meals','Pantry + quick meals'],['staff_seating','Pantry + staff seating']],'basic')}
+      ${f.pantry==='staff_seating'?`<div class="field"><label>Pantry seats</label><input class="inp" type="number" min="1" value="${f.pantrySeats}" oninput="setNum('pantrySeats',this.value)"/></div>`:''}
+
+      ${supportCard('Reception / waiting','reception','Useful if visitors regularly wait before meetings.',
+        [['small','Small · 2–3 visitors'],['regular','Regular · 4–6 visitors'],['large','Larger · 7+ visitors']],'small')}
+
+      ${supportCard('Storage','storage','Documents, stationery, samples or operational items.',
+        [['minimal','Minimal'],['normal','Normal'],['heavy','Heavy']],'normal')}
+
+      ${supportCard('Server / IT','it','Only add what your actual IT setup needs.',
+        [['network_cabinet','Network cabinet'],['one_rack','1 server rack'],['two_racks','2 server racks'],['larger','Larger requirement']],'network_cabinet')}
+
+      ${supportCard('Print / utility','printArea','Shared printer point or dedicated print zone.',
+        [['printer_point','Printer point'],['dedicated','Dedicated print / utility area']],'printer_point')}
+
+      ${supportCard('Open discussion / breakout area','collaboration','An open, informal team discussion zone without a meeting-room enclosure — for quick huddles or casual team discussions.',
+        [['four','4 people'],['six_to_eight','6–8 people'],['ten_plus','10+ people']],'four')}
+    </div>
+  </div>`;
+}
+
+function renderStep4(){
+  const f = state.form;
+  return `<div class="step">
+    <h3 class="serif">How your office works</h3>
+    <p class="step-lead">A few final questions help us interpret whether your rooms and support spaces match how the team actually works.</p>
+
+    <div class="section-title">Private / video calls</div>
+    <div class="choice-grid">
+      ${choice('privateCallFrequency','rarely','Rarely')}
+      ${choice('privateCallFrequency','regularly','Regularly')}
+      ${choice('privateCallFrequency','very_often','Very often')}
+    </div>
+
+    <div class="section-title">Clients / visitors</div>
+    <div class="choice-grid">
+      ${choice('visitorFrequency','rarely','Rarely')}
+      ${choice('visitorFrequency','regularly','Regularly')}
+      ${choice('visitorFrequency','very_often','Very often')}
+    </div>
+
+    <div class="section-title">Future growth</div>
+    <div class="toggle-card">
+      <div class="toggle-top">
+        <div><strong>Do you expect the team to grow within 2–3 years?</strong><small>We calculate growth separately instead of simply adding a blanket percentage.</small></div>
+        <label class="switch"><input type="checkbox" ${f.futureHeadcount!==null?'checked':''} onchange="toggleGrowth(this.checked)"><span class="slider"></span></label>
+      </div>
+      ${f.futureHeadcount!==null?`<div class="toggle-options field"><label>Expected total employees in 2–3 years</label><input class="inp" type="number" min="${f.headcount}" value="${f.futureHeadcount}" oninput="setFutureHeadcount(this.value)"/><div class="hint" id="futureGrowthHint">You currently have <strong>${f.headcount}</strong> employees. Enter your expected <strong>total team size</strong>, including your existing employees. ${f.futureHeadcount>=f.headcount?`<br><strong>${f.headcount} now → ${f.futureHeadcount} in future (+${f.futureHeadcount-f.headcount})</strong>`:''}<br>Growth-ready estimate assumes a broadly similar office-attendance pattern.</div></div>`:''}
+    </div>
+  </div>`;
+}
+
+function toggleGrowth(on){
+  state.form.futureHeadcount = on ? Math.max(state.form.headcount, state.form.headcount + 2) : null;
+  render();
+}
+function setFutureHeadcount(v){
+  state.form.futureHeadcount = Number(v)||null;
+  renderSidebar();
+
+  const growthHint = document.getElementById('futureGrowthHint');
+  if(growthHint && state.form.futureHeadcount !== null){
+    const increase = Math.max(0, state.form.futureHeadcount - state.form.headcount);
+    growthHint.innerHTML = `You currently have <strong>${state.form.headcount}</strong> employees. Enter your expected <strong>total team size</strong>, including your existing employees.<br><strong>${state.form.headcount} now → ${state.form.futureHeadcount} in future (+${increase})</strong><br>Growth-ready estimate assumes a broadly similar office-attendance pattern.`;
+  }
+}
+
+function validateStep(){
+  const f = state.form;
+  if(state.step===0){
+    if(f.headcount<1 || f.typicalAttendance<1 || f.peakAttendance<1) return 'Please enter valid employee and attendance numbers.';
+    if(f.typicalAttendance>f.peakAttendance) return 'Usually-in-office attendance cannot exceed busiest-day attendance.';
+    if(f.peakAttendance>f.headcount) return 'Busiest-day attendance cannot exceed total current employees.';
+    if(f.workstations<1) return 'Please enter at least one workstation.';
+    if(f.deskLengthMm<800 || f.deskLengthMm>2500 || f.deskDepthMm<450 || f.deskDepthMm>1200) return 'Please enter a realistic desk size.';
+  }
+  return '';
+}
+
+function showError(msg){
+  const box = $('errorBox');
+  if(!msg){box.style.display='none';box.textContent='';return}
+  box.textContent=msg;box.style.display='block';
+  box.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function buildPayload(){
+  return JSON.parse(JSON.stringify(state.form));
+}
+
+async function calculate(){
+  showError('');
+  $('loading').style.display='flex';
+  $('nextBtn').disabled=true;
+
+  try{
+    const res = await fetch(API_URL,{
+      method:'POST',
+      headers:{'content-type':'application/json'},
+      body:JSON.stringify(buildPayload())
+    });
+    const data = await res.json();
+    if(!res.ok) throw new Error(data.error || 'Unable to calculate.');
+    state.result = data;
+    renderResult();
+  }catch(err){
+    showError(err.message || 'Unable to calculate your office space. Please try again.');
+  }finally{
+    $('loading').style.display='none';
+    $('nextBtn').disabled=false;
+  }
+}
+
+function formatRange(r){
+  return `${Number(r.low).toLocaleString()}–${Number(r.high).toLocaleString()} sqft`;
+}
+
+function resultSummaryText(){
+  const r=state.result, f=state.form;
+  return `Based on ${f.peakAttendance} peak office users, ${f.workstations} workstations at ${f.deskLengthMm} × ${f.deskDepthMm} mm, and your selected rooms and support spaces.`;
+}
+
+function resultWhatsapp(){
+  const r=state.result, f=state.form;
+  const meetings=f.meetingRooms.length?f.meetingRooms.map(m=>`${m.capacity}-pax`).join(', '):'None';
+  const msg=`Hi ID Work Studio, I used your Office Space Planner.
+
+Peak office users: ${f.peakAttendance}
+Recommended office size: ${r.recommended.low}-${r.recommended.high} sqft
+Workstations: ${f.workstations} × ${f.deskLengthMm} × ${f.deskDepthMm} mm
+Director rooms: ${f.directors.qty}
+Manager rooms: ${f.managers.qty}
+Meeting rooms: ${meetings}
+
+I'd like help reviewing a floor plan / office unit.`;
+  return `https://wa.me/6598333085?text=${encodeURIComponent(msg)}`;
+}
+
+function renderResult(){
+  const r=state.result,f=state.form;
+  $('stepRoot').classList.add('hidden');
+  $('resultRoot').classList.remove('hidden');
+  $('navRow').classList.add('hidden');
+
+  const drivers = (r.drivers||[]).map(d=>`
+    <div class="driver">
+      <div class="driver-top"><strong>${escapeHtml(d.label)}</strong><span>${d.sharePercent}%</span></div>
+      <div class="bar"><i style="width:${Math.min(100,d.sharePercent)}%"></i></div>
+    </div>`).join('');
+
+  const recs = (r.recommendations||[]).length
+    ? r.recommendations.map(rec=>`<div class="rec"><span class="impact ${escapeHtml(rec.impact)}">${escapeHtml(rec.impact)} impact</span><strong style="display:block;margin-top:7px">${escapeHtml(rec.title)}</strong><p>${escapeHtml(rec.message)}</p></div>`).join('')
+    : `<p>Your selected requirements are reasonably balanced. The actual unit layout will still determine how efficiently the space can be planned.</p>`;
+
+  const supports = (r.searchBrief.supportSpaces||[]).join(', ') || 'No additional support spaces selected';
+
+  $('resultRoot').innerHTML = `
+    <div class="result-hero">
+      <div class="result-kicker">Your Recommended Office Search Size</div>
+      <div class="result-number">${formatRange(r.recommended)}</div>
+      <div class="result-sub">${escapeHtml(resultSummaryText())}</div>
+    </div>
+
+    <div class="result-grid">
+      <div class="result-card"><div class="k">Space-efficient</div><strong>${formatRange(r.spaceEfficient)}</strong><p>Possible with tighter planning and efficient use of circulation.</p></div>
+      <div class="result-card" style="border-color:#6B5545"><div class="k">Recommended</div><strong>${formatRange(r.recommended)}</strong><p>Best overall balance for the requirements you entered.</p></div>
+      <div class="result-card"><div class="k">Growth-ready</div><strong>${formatRange(r.growthReady)}</strong><p>${f.futureHeadcount?`Based on future headcount of ${f.futureHeadcount}.`:'Same as current because no future growth was entered.'}</p></div>
+    </div>
+
+    <div class="result-section">
+      <h4>Where your space goes</h4>
+      <p>This helps explain what is driving the recommendation rather than giving you one unexplained sqft figure.</p>
+      ${drivers}
+    </div>
+
+    <div class="result-section">
+      <h4>Areas you may be able to improve</h4>
+      <p>The planner highlights trade-offs worth considering. A smaller office is not always better if it compromises how the office actually functions.</p>
+      ${recs}
+    </div>
+
+    <div class="result-section">
+      <h4>Your office search brief</h4>
+      <p>Use this as a starting point when speaking to a property agent or comparing units.</p>
+      <div class="search-brief">
+        <div class="brief-item"><span>Target size</span><strong>${formatRange(r.recommended)}</strong></div>
+        <div class="brief-item"><span>Peak office users</span><strong>${r.searchBrief.peakUsers}</strong></div>
+        <div class="brief-item"><span>Workstations</span><strong>${r.searchBrief.workstations} × ${escapeHtml(r.searchBrief.deskSize)}</strong></div>
+        <div class="brief-item"><span>Private offices</span><strong>${r.searchBrief.directorRooms} director · ${r.searchBrief.managerRooms} manager</strong></div>
+        <div class="brief-item"><span>Meeting rooms</span><strong>${r.searchBrief.meetingRooms.length}</strong></div>
+        <div class="brief-item"><span>Support spaces</span><strong>${escapeHtml(supports)}</strong></div>
+      </div>
+      <div class="hint" style="margin-top:12px">Look for a reasonably regular floor plate. Narrow units, awkward columns, entrances and existing services can materially change how much of the stated area is genuinely usable.</div>
+    </div>
+
+    <div class="cta-box">
+      <h4>Found a unit and have the floor plan?</h4>
+      <p>The floor area alone cannot confirm whether the unit will work. Send us the floor plan and your planner result and we can review whether your requirements can realistically be planned within the space.</p>
+      <a class="btn btn-green" style="display:block;text-align:center;text-decoration:none" href="${resultWhatsapp()}" target="_blank" rel="noopener noreferrer">WhatsApp ID Work Studio</a>
+    </div>
+
+    <div style="display:flex;gap:10px;justify-content:space-between;margin-top:18px">
+      <button class="btn btn-secondary" type="button" onclick="editAnswers()">← Edit Answers</button>
+      <button class="btn btn-gold" type="button" onclick="restart()">Start Again</button>
+    </div>
+  `;
+  window.scrollTo({top:$('planner').offsetTop-90,behavior:'smooth'});
+}
+
+function editAnswers(){
+  $('resultRoot').classList.add('hidden');
+  $('stepRoot').classList.remove('hidden');
+  $('navRow').classList.remove('hidden');
+  state.step=3;
+  render();
+}
+function restart(){
+  location.reload();
+}
+
+function render(){
+  renderPills();
+  renderSidebar();
+  $('resultRoot').classList.add('hidden');
+  $('stepRoot').classList.remove('hidden');
+  $('navRow').classList.remove('hidden');
+
+  let html='';
+  if(state.step===0) html=renderStep1();
+  if(state.step===1) html=renderStep2();
+  if(state.step===2) html=renderStep3();
+  if(state.step===3) html=renderStep4();
+  $('stepRoot').innerHTML=html;
+
+  $('backBtn').disabled = state.step===0;
+  $('nextBtn').textContent = state.step===3 ? 'Calculate My Office Space' : 'Next →';
+}
+
+$('backBtn').addEventListener('click',()=>{
+  showError('');
+  state.step=Math.max(0,state.step-1);
+  render();
+  window.scrollTo({top:$('planner').offsetTop-90,behavior:'smooth'});
+});
+
+$('nextBtn').addEventListener('click',()=>{
+  const err=validateStep();
+  if(err){showError(err);return}
+  showError('');
+  if(state.step<3){
+    state.step++;
+    render();
+    window.scrollTo({top:$('planner').offsetTop-90,behavior:'smooth'});
+  }else{
+    calculate();
+  }
+});
+
+render();
+</script>
+</body>
+</html>

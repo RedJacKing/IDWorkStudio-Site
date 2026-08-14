@@ -271,6 +271,14 @@ ogDesc: 'Estimate your Singapore renovation budget instantly for HDB, condo, res
     ogDesc: 'Plan permits, renovation timing, tenancy signing and takeover dates for offices, retail shops, F&B, clinics, tuition centres, childcare, gyms and industrial units.',
     ogUrl: 'https://idworkstudio.com/commercial-approval-planner',
   },
+  'office-space-planner.html': {
+    canonical: 'https://idworkstudio.com/office-space-planner',
+    title: 'Singapore Office Space Planner | ID Work Studio',
+    description: 'Estimate how much office space your team may need in Singapore based on headcount, workstation size, meeting rooms, private offices and support spaces.',
+    ogTitle: 'Singapore Office Space Planner | ID Work Studio',
+    ogDesc: 'Estimate the office size your team may need before viewing or committing to a unit in Singapore.',
+    ogUrl: 'https://idworkstudio.com/office-space-planner',
+  },
 };
 
 function encodeHtml(str) {
@@ -411,6 +419,75 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
         name: 'Singapore',
       },
     });
+  }
+
+
+  if (relativeFile === 'office-space-planner.html') {
+    schema['@graph'].push(
+      {
+        '@type': 'SoftwareApplication',
+        '@id': `${meta.canonical}#application`,
+        name: 'Singapore Office Space Planner',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web browser',
+        description: meta.description,
+        url: meta.canonical,
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'SGD',
+        },
+        provider: {
+          '@id': 'https://idworkstudio.com/#business',
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${meta.canonical}#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'How much office space do I need per employee in Singapore?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A single square-foot-per-person figure can be misleading. Two companies with the same headcount may need very different office sizes depending on workstation dimensions, meeting rooms, private offices, pantry, storage and circulation. This planner therefore calculates from actual requirements rather than using one fixed allowance per employee.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does this planner include meeting rooms and private offices?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. The recommendation includes the meeting rooms, director rooms, manager rooms, phone or Zoom rooms and support spaces selected by the user. Spaces that are not selected are not automatically added.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can a small SME use an office below 1,000 sqft?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Small teams can operate from offices well below 1,000 sqft when their room requirements are limited and the floor plate is efficient. The planner is designed for smaller SMEs as well as larger offices and does not impose a 1,000 sqft minimum.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Why does circulation affect the recommended office size?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Furniture and room footprints are not the whole office. People still need workable access between desks, rooms and shared facilities. The planner therefore allows for overall planning and circulation rather than simply adding the physical size of each desk and room.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does this result confirm SCDF compliance?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. This is a space-planning and property-search estimate, not an SCDF compliance assessment. Final suitability depends on the actual unit, exit routes, floor-plan geometry and the final proposed office layout. Fire-safety requirements should be reviewed during detailed design where applicable.',
+            },
+          },
+        ],
+      }
+    );
   }
 
   if (relativeFile === 'total-home-budget-calculator.html') {
