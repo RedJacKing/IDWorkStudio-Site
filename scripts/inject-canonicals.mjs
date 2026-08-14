@@ -182,6 +182,15 @@ const pageMetaMap = {
     ogUrl: 'https://idworkstudio.com/insights/what-to-check-before-signing-fnb-shop-lease-singapore',
   },
 
+  'insights/how-much-office-space-do-you-need-singapore.html': {
+    canonical: 'https://idworkstudio.com/insights/how-much-office-space-do-you-need-singapore',
+    title: 'How Much Office Space Do You Need in Singapore? Headcount, Layout & SCDF Guide | ID Work Studio',
+    description: 'Work out how much office space you need in Singapore using headcount, peak occupancy, meeting rooms, phone booths and SCDF fire-safety requirements.',
+    ogTitle: 'How Much Office Space Do You Need in Singapore?',
+    ogDesc: 'Plan office size around headcount, peak occupancy, meeting rooms, private calls and SCDF fire-safety requirements.',
+    ogUrl: 'https://idworkstudio.com/insights/how-much-office-space-do-you-need-singapore',
+  },
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',

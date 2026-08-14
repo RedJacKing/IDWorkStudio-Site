@@ -34,6 +34,7 @@ import RenovationQuotationSingapore from './components/RenovationQuotationSingap
 import RealCostMovingIntoNewHomeSingapore from './components/RealCostMovingIntoNewHomeSingapore';
 import HDBDefectChecklistBeforeRenovationSingapore from './components/HDBDefectChecklistBeforeRenovationSingapore';
 import FifteenRenovationDecisionsSingapore from './components/FifteenRenovationDecisionsSingapore';
+import OfficeSpacePlanningSingapore from './components/OfficeSpacePlanningSingapore';
 import StickyMobileNav from './components/StickyMobileNav';
 import ScrollToHashElement from './components/ScrollToHashElement';
 
@@ -879,6 +880,7 @@ export const routes: RouteRecord[] = [
       { path: 'insights/real-cost-moving-home-singapore', element: <RealCostMovingIntoNewHomeSingapore /> },
       { path: 'insights/hdb-defect-checklist-before-renovation-singapore', element: <HDBDefectChecklistBeforeRenovationSingapore /> },
       { path: 'insights/15-renovation-decisions-singapore-homeowners-should-not-get-wrong', element: <FifteenRenovationDecisionsSingapore /> },
+      { path: 'insights/how-much-office-space-do-you-need-singapore', element: <OfficeSpacePlanningSingapore /> },
 
       { path: 'gallery', element: <Gallery /> },
       { path: 'contact', element: <Contact /> },

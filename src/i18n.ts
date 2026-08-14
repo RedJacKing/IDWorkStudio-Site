@@ -2288,6 +2288,12 @@ enT["insights_page"] = {
       title: "What Should You Check Before Signing an F&B Shop Lease in Singapore?",
       excerpt: "A practical guide to checking whether an F&B unit can support your menu, cooking methods, exhaust, drainage, power, gas and licensing needs before you commit to the lease.",
       read_time: "14 min read"
+    },
+    "17": {
+      category: "Office Space Planning Guide",
+      title: "How Much Office Space Do You Need in Singapore?",
+      excerpt: "Plan office size around headcount, peak attendance, meeting rooms, private calls and SCDF fire-safety requirements instead of relying on one sqft-per-employee rule.",
+      read_time: "14 min read"
     }
   },
   footer_block: {
@@ -2431,6 +2437,12 @@ zhT["insights_page"] = {
       category: "餐饮租约规划指南",
       title: "签署新加坡餐饮店租约前，应该检查什么？",
       excerpt: "签约前应确认餐饮单位能否配合菜单、烹调方式、排烟、排水、电力、燃气及执照要求，避免租下不适合经营概念的店面。",
+      read_time: "约 14 分钟"
+    },
+    "17": {
+      category: "办公室空间规划指南",
+      title: "新加坡办公室需要多大？",
+      excerpt: "不要只用每名员工多少平方英尺来估算办公室；应同时考虑人数、高峰到岗、会议室、私人通话及 SCDF 消防安全要求。",
       read_time: "约 14 分钟"
     }
   },

@@ -180,6 +180,16 @@ export default function Insights() {
       date: '2026-07-26',
       readTime: t('insights_page.articles.16.read_time'),
     },
+    {
+      slug: '/insights/how-much-office-space-do-you-need-singapore',
+      sections: ['commercial'],
+      topics: ['office', 'space-planning', 'headcount', 'scdf'],
+      category: t('insights_page.articles.17.category'),
+      title: t('insights_page.articles.17.title'),
+      excerpt: t('insights_page.articles.17.excerpt'),
+      date: '2026-08-14',
+      readTime: t('insights_page.articles.17.read_time'),
+    },
   ];
 
   const residentialArticles = articles.filter((article) =>
