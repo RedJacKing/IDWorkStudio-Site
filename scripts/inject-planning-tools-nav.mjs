@@ -5,7 +5,7 @@ const distDir = path.resolve('dist');
 
 const planningTools = [
   { slug: 'renovation-cost-calculator', label: 'Renovation Cost Calculator', description: 'Estimate renovation contract costs.' },
-  { slug: 'total-home-budget-calculator', label: 'Total Home Budget Calculator', officeLabel: 'Total Move-In Budget Planner', description: 'Plan furniture, appliances and cash buffer.' },
+  { slug: 'total-home-budget-calculator', label: 'Total Home Budget Calculator', description: 'Plan furniture, appliances and cash buffer.' },
   { slug: 'renovation-timeline-planner-singapore', label: 'Renovation Timeline Planner', description: 'Estimate renovation schedule and move-in timing.' },
   { slug: 'hdb-renovation-style-quiz', label: 'HDB Renovation Style Quiz', description: 'Discover a suitable interior style direction.' },
   { slug: 'hdb-defect-checklist', label: 'HDB Defect Inspection Checklist', description: 'Inspect defects before renovation begins.' },
@@ -35,33 +35,33 @@ function currentAttr(tool, relativeFile) {
   return isCurrent(tool, relativeFile) ? ' aria-current="page"' : '';
 }
 
+function renderToolContent(tool) {
+  return `<span style="display:block;color:#2f2b28;font-size:12px;font-weight:600;line-height:1.35;text-transform:none;letter-spacing:0">${tool.label}</span><span style="display:block;margin-top:3px;color:#756d65;font-size:10.5px;font-weight:400;line-height:1.45;text-transform:none;letter-spacing:0">${tool.description}</span>`;
+}
+
 function renderSimple(relativeFile) {
   return planningTools
-    .map((tool) => `<a href="${href(tool)}"${currentAttr(tool, relativeFile)}>${tool.label}</a>`)
+    .map((tool) => `<a href="${href(tool)}"${currentAttr(tool, relativeFile)}>${renderToolContent(tool)}</a>`)
     .join('');
 }
 
 function renderSimpleDescriptive(relativeFile) {
   return planningTools
-    .map((tool) => `<a href="${href(tool)}"${currentAttr(tool, relativeFile)}>${tool.label}<span style="display:block;margin-top:3px;font-size:10.5px;font-weight:400;line-height:1.45;color:#8b8177;text-transform:none;letter-spacing:0">${tool.description}</span></a>`)
+    .map((tool) => `<a href="${href(tool)}"${currentAttr(tool, relativeFile)}>${renderToolContent(tool)}</a>`)
     .join('');
 }
 
 function renderDescriptive(relativeFile) {
   return planningTools
-    .map((tool) => `<a${currentAttr(tool, relativeFile)} href="${href(tool)}">${tool.label}<span>${tool.description}</span></a>`)
+    .map((tool) => `<a${currentAttr(tool, relativeFile)} href="${href(tool)}">${renderToolContent(tool)}</a>`)
     .join('\n');
 }
 
 function renderOffice(relativeFile) {
   return planningTools
-    .map((tool) => {
-      const label = tool.officeLabel || tool.label;
-      return `            <a href="${href(tool)}"${currentAttr(tool, relativeFile)}>
-              <strong>${label}</strong>
-              <small>${tool.description}</small>
-            </a>`;
-    })
+    .map((tool) => `            <a href="${href(tool)}"${currentAttr(tool, relativeFile)}>
+              ${renderToolContent(tool)}
+            </a>`)
     .join('\n');
 }
 
@@ -70,12 +70,9 @@ function renderTimeline(relativeFile) {
     .map((tool) => {
       const current = isCurrent(tool, relativeFile);
       const classes = current
-        ? 'block rounded-xl bg-[#fbf8f2] px-3 py-2.5 font-semibold text-[#8a6a2f]'
-        : 'block rounded-xl px-3 py-2.5 font-semibold hover:bg-[#fbf8f2] hover:text-[#8a6a2f]';
-      const description = tool.slug === 'commercial-approval-planner'
-        ? 'Plan approvals, renovation timing, takeover and opening.'
-        : tool.description;
-      return `      <a href="${href(tool)}"${current ? ' aria-current="page"' : ''} class="${classes}">${tool.label}<span class="mt-1 block text-[10.5px] font-normal leading-[1.45] text-[#8b8177]">${description}</span></a>`;
+        ? 'block rounded-xl bg-[#fbf8f2] px-3 py-2.5'
+        : 'block rounded-xl px-3 py-2.5 hover:bg-[#fbf8f2]';
+      return `      <a href="${href(tool)}"${current ? ' aria-current="page"' : ''} class="${classes}">${renderToolContent(tool)}</a>`;
     })
     .join('\n');
 }
@@ -112,7 +109,7 @@ function updatePlanningMenu(html, relativeFile) {
       return replaceExactlyOnce(
         html,
         /<div style="position:absolute;top:100%;left:0;background:#fff;border:1px solid #E5E2DA;border-radius:16px;padding:10px 0;min-width:260px;box-shadow:0 14px 34px rgba\(0,0,0,\.08\);display:none" class="planning-dropdown">[\s\S]*?<\/div><\/div><a href="https:\/\/idworkstudio\.com\/insights">Guides<\/a>/g,
-        `<div style="position:absolute;top:100%;left:0;background:#fff;border:1px solid #E5E2DA;border-radius:16px;padding:10px 0;min-width:260px;box-shadow:0 14px 34px rgba(0,0,0,.08);display:none" class="planning-dropdown">${planningTools.map((tool) => `<a href="${href(tool)}"${currentAttr(tool, relativeFile)} style="display:block;padding:10px 18px">${tool.label}</a>`).join('')}</div></div><a href="https://idworkstudio.com/insights">Guides</a>`,
+        `<div style="position:absolute;top:100%;left:0;background:#fff;border:1px solid #E5E2DA;border-radius:16px;padding:10px 0;min-width:260px;box-shadow:0 14px 34px rgba(0,0,0,.08);display:none" class="planning-dropdown">${planningTools.map((tool) => `<a href="${href(tool)}"${currentAttr(tool, relativeFile)} style="display:block;padding:10px 18px">${renderToolContent(tool)}</a>`).join('')}</div></div><a href="https://idworkstudio.com/insights">Guides</a>`,
         relativeFile,
         'style-quiz Planning Tools menu'
       );
