@@ -41,6 +41,12 @@ function renderSimple(relativeFile) {
     .join('');
 }
 
+function renderSimpleDescriptive(relativeFile) {
+  return planningTools
+    .map((tool) => `<a href="${href(tool)}"${currentAttr(tool, relativeFile)}>${tool.label}<span style="display:block;margin-top:3px;font-size:10.5px;font-weight:400;line-height:1.45;color:#8b8177;text-transform:none;letter-spacing:0">${tool.description}</span></a>`)
+    .join('');
+}
+
 function renderDescriptive(relativeFile) {
   return planningTools
     .map((tool) => `<a${currentAttr(tool, relativeFile)} href="${href(tool)}">${tool.label}<span>${tool.description}</span></a>`)
@@ -125,7 +131,7 @@ function updatePlanningMenu(html, relativeFile) {
       return replaceExactlyOnce(
         html,
         /<div class="nav-tools-menu">[\s\S]*?<\/div>\s*<\/div>\s*<a href="https:\/\/idworkstudio\.com\/insights">Guides<\/a>/g,
-        `<div class="nav-tools-menu">${renderSimple(relativeFile)}</div></div><a href="https://idworkstudio.com/insights">Guides</a>`,
+        `<div class="nav-tools-menu">${renderSimpleDescriptive(relativeFile)}</div></div><a href="https://idworkstudio.com/insights">Guides</a>`,
         relativeFile,
         'nav-tools Planning Tools menu'
       );

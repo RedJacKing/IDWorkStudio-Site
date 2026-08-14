@@ -422,6 +422,87 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
   }
 
 
+
+  if (relativeFile === 'renovation-cost-calculator.html') {
+    schema['@graph'].push({
+      '@type': 'SoftwareApplication',
+      '@id': `${meta.canonical}#application`,
+      name: 'Singapore Renovation Cost Calculator',
+      applicationCategory: 'FinanceApplication',
+      operatingSystem: 'Web browser',
+      description: meta.description,
+      url: meta.canonical,
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'SGD',
+      },
+      provider: {
+        '@id': 'https://idworkstudio.com/#business',
+      },
+    });
+  }
+
+  if (relativeFile === 'renovation-timeline-planner-singapore.html') {
+    schema['@graph'].push({
+      '@type': 'SoftwareApplication',
+      '@id': `${meta.canonical}#application`,
+      name: 'Renovation Timeline Planner Singapore',
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Web browser',
+      description: meta.description,
+      url: meta.canonical,
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'SGD',
+      },
+      provider: {
+        '@id': 'https://idworkstudio.com/#business',
+      },
+    });
+  }
+
+  if (relativeFile === 'hdb-renovation-style-quiz.html') {
+    schema['@graph'].push({
+      '@type': 'SoftwareApplication',
+      '@id': `${meta.canonical}#application`,
+      name: 'HDB Renovation Style Quiz Singapore',
+      applicationCategory: 'DesignApplication',
+      operatingSystem: 'Web browser',
+      description: meta.description,
+      url: meta.canonical,
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'SGD',
+      },
+      provider: {
+        '@id': 'https://idworkstudio.com/#business',
+      },
+    });
+  }
+
+  if (relativeFile === 'commercial-approval-planner.html') {
+    schema['@graph'].push({
+      '@type': 'SoftwareApplication',
+      '@id': `${meta.canonical}#application`,
+      name: 'Commercial Renovation Approval Planner Singapore',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web browser',
+      description: meta.description,
+      url: meta.canonical,
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'SGD',
+      },
+      provider: {
+        '@id': 'https://idworkstudio.com/#business',
+      },
+    });
+  }
+
   if (relativeFile === 'office-space-planner.html') {
     schema['@graph'].push(
       {
