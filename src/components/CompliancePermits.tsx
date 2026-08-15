@@ -11,10 +11,9 @@ export default function CompliancePermits() {
 
   const serviceSchema = {
     "@context":"https://schema.org","@type":"Service","name":"Commercial Renovation Permits & Compliance Singapore",
-    "description":"Complete permit management for commercial renovation in Singapore. MCST, BCA, SCDF fire safety, and EMA Licensed Electrical Worker (LEW) compliance — all managed in-house.",
+    "description":"Commercial renovation approval and compliance coordination in Singapore, covering applicable landlord or MCST requirements, BCA and SCDF processes, and EMA Licensed Electrical Worker (LEW) requirements with the relevant appointed professionals where required.",
     "serviceType":"Commercial Renovation Compliance","areaServed":{"@type":"City","name":"Singapore"},
-    "provider":{"@type":"GeneralContractor","name":"ID Work Studio","url":"https://idworkstudio.com","telephone":"+6568162872","email":"contact@idworkstudio.com",
-      "address":{"@type":"PostalAddress","streetAddress":"11 Woodlands Close, Woodlands 11, #03-10","addressLocality":"Woodlands","addressRegion":"Singapore","postalCode":"737853","addressCountry":"SG"}},
+    "provider":{"@id":"https://idworkstudio.com/#business"},
     "mainEntityOfPage":{"@type":"WebPage","@id":"https://idworkstudio.com/commercial/permits-compliance"}
   };
   const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[1,2,3,4].map(n=>({ "@type":"Question","name":t(`${p}.faq.q${n}`),"acceptedAnswer":{"@type":"Answer","text":t(`${p}.faq.a${n}`)} }))};
@@ -34,20 +33,20 @@ export default function CompliancePermits() {
     <>
       <Helmet>
         <title>Commercial Renovation Permits Singapore | SCDF, LEW, BCA & MCST | ID Work Studio</title>
-        <meta name="description" content="Complete permit management for commercial renovation in Singapore. MCST submission, BCA approval, SCDF fire safety, and LEW compliance — all handled in-house. Free consultation."/>
+        <meta name="description" content="Commercial renovation approval and compliance coordination in Singapore, including landlord or MCST requirements, BCA, SCDF fire safety and LEW requirements where applicable. Free consultation."/>
         <meta name="keywords" content="SCDF approval commercial renovation Singapore, LEW requirements Singapore, BCA permit commercial renovation, MCST renovation submission Singapore, commercial renovation permits Singapore 2026"/>
         <meta name="geo.region" content="SG"/><meta name="geo.placename" content="Woodlands, Singapore"/>
         <meta name="geo.position" content="1.4348129;103.7326522"/><meta name="ICBM" content="1.4348129, 103.7326522"/>
         <link rel="canonical" href="https://idworkstudio.com/commercial/permits-compliance"/>
         <meta property="og:type" content="website"/><meta property="og:url" content="https://idworkstudio.com/commercial/permits-compliance"/>
         <meta property="og:title" content="Commercial Renovation Permits Singapore | SCDF, LEW, BCA & MCST | ID Work Studio"/>
-        <meta property="og:description" content="Complete permit management for commercial renovation in Singapore. MCST, BCA, SCDF, and LEW compliance — all handled in-house."/>
+        <meta property="og:description" content="Commercial renovation approval and compliance coordination in Singapore covering applicable landlord or MCST, BCA, SCDF and LEW requirements."/>
         <meta property="og:image" content="https://idworkstudio.com/gallery/commercial-expertise.png"/>
         <meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/>
         <meta property="og:site_name" content="ID Work Studio"/><meta property="og:locale" content="en_SG"/>
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="Commercial Renovation Permits Singapore | SCDF, LEW, BCA & MCST | ID Work Studio"/>
-        <meta name="twitter:description" content="Complete permit management for commercial renovation. MCST, BCA, SCDF, and LEW — all handled in-house."/>
+        <meta name="twitter:description" content="Commercial renovation approval and compliance coordination covering applicable landlord or MCST, BCA, SCDF and LEW requirements."/>
         <meta name="twitter:image" content="https://idworkstudio.com/gallery/commercial-expertise.png"/>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -97,7 +96,7 @@ export default function CompliancePermits() {
         <section className="py-16 bg-dark-charcoal">
           <div className="max-w-5xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {[{v:"S$200K",s:"s1"},{v:"S$10K",s:"s2"},{v:"4",s:"s3"},{v:"0",s:"s4"}].map(({v,s})=>(
+              {[{v:"S$200K",s:"s1"},{v:"45 kVA",s:"s2"},{v:"4",s:"s3"},{v:"QP / LEW",s:"s4"}].map(({v,s})=>(
                 <div key={s} className="flex flex-col items-center">
                   <span className="text-3xl md:text-4xl font-bold text-gold font-sans mb-2">{v}</span>
                   <p className="text-white/50 text-xs uppercase tracking-[0.15em] leading-tight">{t(`${p}.stats.${s}`)}</p>

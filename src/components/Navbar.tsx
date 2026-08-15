@@ -14,7 +14,7 @@ export default function Navbar() {
     '/renovation-cost-calculator',
     '/total-home-budget-calculator',
     '/hdb-renovation-style-quiz',
-    '/hdb-defect-checklist.html',
+    '/hdb-defect-checklist',
     '/renovation-timeline-planner-singapore',
     '/commercial-approval-planner',
     '/office-space-planner',
@@ -77,14 +77,14 @@ export default function Navbar() {
                     <span className="mt-1 block text-xs leading-5 text-charcoal/55">Estimate renovation contract costs.</span>
                   </a>
                   <a href="/total-home-budget-calculator" className="block rounded-xl px-4 py-3 text-left transition-colors hover:bg-stone-50">
-                    <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">Total Move-In Budget Planner</span>
+                    <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">Total Home Budget Calculator</span>
                     <span className="mt-1 block text-xs leading-5 text-charcoal/55">Plan furniture, appliances and cash buffer.</span>
                   </a>
                   <a href="/hdb-renovation-style-quiz" className="block rounded-xl px-4 py-3 text-left transition-colors hover:bg-stone-50">
                     <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">HDB Renovation Style Quiz</span>
                     <span className="mt-1 block text-xs leading-5 text-charcoal/55">Discover a suitable interior style direction.</span>
                   </a>
-                  <a href="/hdb-defect-checklist.html" className="block rounded-xl px-4 py-3 text-left transition-colors hover:bg-stone-50">
+                  <a href="/hdb-defect-checklist" className="block rounded-xl px-4 py-3 text-left transition-colors hover:bg-stone-50">
                     <span className="block text-[11px] font-semibold uppercase tracking-[0.13rem] text-charcoal">HDB Defect Inspection Checklist</span>
                     <span className="mt-1 block text-xs leading-5 text-charcoal/55">Inspect defects before renovation begins.</span>
                   </a>
@@ -141,9 +141,9 @@ export default function Navbar() {
 
               <div className="px-3 pt-4 pb-2 text-[11px] font-semibold uppercase tracking-[0.18rem] text-champagne">Planning Tools</div>
               <a href="/renovation-cost-calculator" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Renovation Cost Calculator</a>
-              <a href="/total-home-budget-calculator" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Total Move-In Budget Planner</a>
+              <a href="/total-home-budget-calculator" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Total Home Budget Calculator</a>
               <a href="/hdb-renovation-style-quiz" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">HDB Renovation Style Quiz</a>
-              <a href="/hdb-defect-checklist.html" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">HDB Defect Inspection Checklist</a>
+              <a href="/hdb-defect-checklist" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">HDB Defect Inspection Checklist</a>
               <a href="/renovation-timeline-planner-singapore" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Renovation Timeline Planner</a>
               <a href="/commercial-approval-planner" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Commercial Renovation Planner</a>
               <a href="/office-space-planner" onClick={() => setIsOpen(false)} className="block rounded-xl px-6 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.12rem]">Office Space Planner</a>

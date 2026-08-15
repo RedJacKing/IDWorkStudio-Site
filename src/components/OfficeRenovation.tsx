@@ -11,11 +11,11 @@ export default function OfficeRenovation() {
 
   const serviceSchema = {
     "@context": "https://schema.org", "@type": "Service", "name": "Office Renovation Singapore",
-    "description": "BCA-registered office renovation and fit-out contractor in Singapore. Turnkey service: space planning, partitioning, M&E, false ceiling, flooring, and all BCA, SCDF, and MCST permit submissions.",
+    "description": "BCA-registered office renovation and fit-out contractor in Singapore. Turnkey service covering space planning, partitioning, M&E, false ceiling, flooring, and coordination of applicable BCA, SCDF and building-management submission processes with the relevant appointed parties where required.",
     "serviceType": "Office Renovation", "areaServed": { "@type": "City", "name": "Singapore" },
     "provider": { "@type": "GeneralContractor", "name": "ID Work Studio", "url": "https://idworkstudio.com", "telephone": "+6568162872", "email": "contact@idworkstudio.com",
       "address": { "@type": "PostalAddress", "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10", "addressLocality": "Woodlands", "addressRegion": "Singapore", "postalCode": "737853", "addressCountry": "SG" } },
-    "offers": { "@type": "Offer", "priceCurrency": "SGD", "description": "Office renovation from S$50 to S$180+ per square foot." },
+    "offers": { "@type": "Offer", "priceCurrency": "SGD", "description": "Office fit-out planning ranges: S$50–S$80 psf basic, S$80–S$130 psf mid-range, and S$130–S$200+ psf premium or Grade A; complex high-spec projects can approach S$300 psf." },
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://idworkstudio.com/commercial/office-renovation" }
   };
 
@@ -219,7 +219,7 @@ export default function OfficeRenovation() {
     <>
       <Helmet>
         <title>Office Renovation Singapore | BCA-Registered Fit-Out Contractor | ID Work Studio</title>
-        <meta name="description" content="BCA-registered office renovation and fit-out contractor in Singapore. Full turnkey service — space planning, partitioning, M&E, and all permit submissions. From $50 psf. Free site survey." />
+        <meta name="description" content="BCA-registered office renovation and fit-out contractor in Singapore. Space planning, partitioning, M&E and coordination of applicable approval and building-management requirements. From $50 psf. Free site survey." />
         <meta name="keywords" content="office renovation Singapore, office fit-out Singapore, BCA registered office contractor Singapore, office renovation cost Singapore 2026" />
         <meta name="geo.region" content="SG"/><meta name="geo.placename" content="Woodlands, Singapore"/>
         <meta name="geo.position" content="1.4348129;103.7326522"/><meta name="ICBM" content="1.4348129, 103.7326522"/>
@@ -555,7 +555,7 @@ export default function OfficeRenovation() {
         <section className="py-16 bg-dark-charcoal">
           <div className="max-w-5xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              {[{v:"$50–$180+",s:"s1"},{v:"6–12",s:"s2"},{v:"2–4",s:"s3"}].map(({v,s})=>(
+              {[{v:"$50–$200+",s:"s1"},{v:"6–12",s:"s2"},{v:"2–4",s:"s3"}].map(({v,s})=>(
                 <div key={s} className="flex flex-col items-center">
                   <div className="flex items-baseline gap-2 mb-2">
                     <span className="text-4xl md:text-5xl font-bold text-gold font-sans">{v}</span>

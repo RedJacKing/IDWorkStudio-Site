@@ -161,6 +161,7 @@ const COLLAB_SQFT = {
 };
 
 const MIN_MICRO_LAYOUT_ALLOWANCE_SQFT = 45;
+const RECOMMENDED_DENSITY_GUARDRAIL_SQFT_PER_PEAK_USER = 80;
 
 // ------------------------------
 // VALIDATION
@@ -679,15 +680,28 @@ function calculate(input: PlannerInput) {
     input.peakAttendance,
   );
 
-  const recommendedRaw = totalAreaWithLayout(
+  const activityBasedRecommendedRaw = totalAreaWithLayout(
     netFunctionalArea,
     efficiency,
   );
 
+  const recommendedDensityGuardrail =
+    input.peakAttendance * RECOMMENDED_DENSITY_GUARDRAIL_SQFT_PER_PEAK_USER;
+
+  const recommendedRaw = Math.max(
+    activityBasedRecommendedRaw,
+    recommendedDensityGuardrail,
+  );
+
   const efficientEfficiency = Math.min(0.86, efficiency + 0.04);
-  const spaceEfficientRaw = totalAreaWithLayout(
-    netFunctionalArea,
-    efficientEfficiency,
+  const spaceEfficientDensityGuardrail =
+    recommendedDensityGuardrail * (efficiency / efficientEfficiency);
+  const spaceEfficientRaw = Math.max(
+    totalAreaWithLayout(
+      netFunctionalArea,
+      efficientEfficiency,
+    ),
+    spaceEfficientDensityGuardrail,
   );
 
   const futureWorkstations = estimateFutureWorkstations(input);
@@ -703,9 +717,27 @@ function calculate(input: PlannerInput) {
     input.futureHeadcount ?? input.peakAttendance,
   );
 
+  const projectedFuturePeakAttendance =
+    input.futureHeadcount && input.futureHeadcount > input.headcount
+      ? Math.max(
+          input.peakAttendance,
+          Math.ceil(
+            input.futureHeadcount *
+              (input.peakAttendance / Math.max(input.headcount, 1)),
+          ),
+        )
+      : input.peakAttendance;
+
+  const futureDensityGuardrail =
+    projectedFuturePeakAttendance *
+    RECOMMENDED_DENSITY_GUARDRAIL_SQFT_PER_PEAK_USER;
+
   const growthReadyRaw =
     input.futureHeadcount && input.futureHeadcount > input.headcount
-      ? totalAreaWithLayout(futureNetFunctionalArea, futureEfficiency)
+      ? Math.max(
+          totalAreaWithLayout(futureNetFunctionalArea, futureEfficiency),
+          futureDensityGuardrail,
+        )
       : recommendedRaw;
 
   const driverParts = [

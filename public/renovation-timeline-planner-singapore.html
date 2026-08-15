@@ -167,10 +167,56 @@
       body.checklist-print-mode input[type="checkbox"]{width:9px!important;height:9px!important;flex:0 0 auto!important;margin-top:.3mm!important}
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://idworkstudio.com/renovation-timeline-planner-singapore",
+        "name": "Renovation Timeline Planner Singapore | ID Work Studio",
+        "description": "Estimate your Singapore renovation timeline, move-in date, weekly progress, HDB/condo approval buffer, owner decisions, appliance dependencies, and common delay risks.",
+        "url": "https://idworkstudio.com/renovation-timeline-planner-singapore",
+        "isPartOf": { "@id": "https://idworkstudio.com/" },
+        "about": { "@id": "https://idworkstudio.com/#business" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://idworkstudio.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Renovation Timeline Planner",
+              "item": "https://idworkstudio.com/renovation-timeline-planner-singapore"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Renovation Timeline Planner",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web browser",
+        "url": "https://idworkstudio.com/renovation-timeline-planner-singapore",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "SGD"
+        },
+        "provider": { "@id": "https://idworkstudio.com/#business" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div id="site-nav" class="fixed top-0 z-50 w-full">
-    <div class="bg-[#2C2C2C] text-white text-[11px] py-2 text-center tracking-[.16em] uppercase">ID Work Studio · BCA-Registered · HDB-Approved · Singapore</div>
+    <div class="bg-[#2C2C2C] text-white text-[11px] py-2 text-center tracking-[.16em] uppercase">ID Work Studio · BCA-Registered · HDB Registered · Singapore</div>
     <nav class="bg-white/95 backdrop-blur border-b border-stone-100"><div class="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between"><a href="https://idworkstudio.com" class="font-black tracking-tight uppercase">ID Work Studio</a><div class="hidden md:flex items-center gap-6 text-[11px] uppercase tracking-[.12em]"><a href="https://idworkstudio.com" class="hover:text-[#c5a059]">Home</a><a href="https://idworkstudio.com/residential" class="hover:text-[#c5a059]">Residential</a><a href="https://idworkstudio.com/commercial" class="hover:text-[#c5a059]">Commercial</a><div class="relative group">
   <button type="button" class="hover:text-[#c5a059] uppercase tracking-[.12em]">Planning Tools ▼</button>
   <div class="absolute left-1/2 top-full z-50 hidden w-[310px] -translate-x-1/2 pt-4 group-hover:block group-focus-within:block">
@@ -191,7 +237,7 @@
     <div>
       <div class="print-brand-name">ID Work Studio</div>
       <div class="print-report-title">Renovation Timeline Planner Singapore</div>
-      <div class="print-report-meta">BCA-Registered · HDB-Approved · Singapore</div>
+      <div class="print-report-meta">BCA-Registered · HDB Registered · Singapore</div>
     </div>
   </div>
 
@@ -227,9 +273,9 @@
           <div><label class="text-xs font-bold uppercase tracking-widest text-stone-500">Target move-in date / tenancy end</label><input id="targetDate" type="date" class="inp mt-2" /></div>
           <div><div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Property type</div><div class="grid grid-cols-3 gap-2" data-group="propertyType"><button data-val="bto" class="btn-card active"><b>BTO</b><br><span class="text-xs opacity-60">HDB new</span></button><button data-val="resale" class="btn-card"><b>Resale</b><br><span class="text-xs opacity-60">HDB resale</span></button><button data-val="condo" class="btn-card"><b>Condo</b><br><span class="text-xs opacity-60">MCST</span></button></div></div>
           <div><div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Renovation scope</div><div class="grid grid-cols-2 gap-2" data-group="scope"><button data-val="full" class="btn-card active"><b>Full Renovation</b></button><button data-val="kitchenToilets" class="btn-card"><b>Kitchen + Toilets</b></button><button data-val="partial" class="btn-card"><b>Partial</b></button><button data-val="carpentry" class="btn-card"><b>Carpentry Only</b></button></div></div>
-          <div><div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Hacking / demolition</div><div class="grid grid-cols-2 gap-2" data-group="hacking"><button data-val="none" class="btn-card"><b>None</b><br><span class="text-xs opacity-60">BTO / no hacking</span></button><button data-val="standard" class="btn-card active"><b>Tiles / Cabinets</b><br><span class="text-xs opacity-60">3–4 days + debris</span></button><button data-val="major" class="btn-card"><b>1–2 Non-Structural Walls</b><br><span class="text-xs opacity-60">Bedroom / service yard · 5–7 days</span></button><button data-val="structural" class="btn-card"><b>Divider Wall + QP</b><br><span class="text-xs opacity-60">10–14 days approval buffer</span></button></div></div>
-          <div><div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Condo / HDB approval status</div><select id="approvalStatus" class="inp"><option value="notNeeded">Not needed / already approved</option><option value="hdbPermit">HDB permit required (+3–7 working days)</option><option value="condoApproval">Condo MCST approval (+3–14 working days)</option></select></div>
-          <div><div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Working days available</div><select id="workingMode" class="inp"><option value="hdbDefault">HDB default: Mon–Fri full, Sat light half-day</option><option value="weekdayOnly">Weekdays only (Mon–Fri)</option><option value="monSatLight">Mon–Sat, Saturday light works only (no heavy works)</option><option value="monSatFull">Mon–Sat, Saturday full day available (if MCST allows)</option></select></div>
+          <div><div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Hacking / demolition</div><div class="grid grid-cols-2 gap-2" data-group="hacking"><button data-val="none" class="btn-card"><b>None</b><br><span class="text-xs opacity-60">BTO / no hacking</span></button><button data-val="standard" class="btn-card active"><b>Tiles / Cabinets</b><br><span class="text-xs opacity-60">3–4 days + debris</span></button><button data-val="major" class="btn-card"><b>1–2 Non-Structural Walls</b><br><span class="text-xs opacity-60">Bedroom / service yard · 5–7 days</span></button><button data-val="structural" class="btn-card"><b>Wall Alteration + QP/PE</b><br><span class="text-xs opacity-60">Select when professional assessment is required</span></button></div></div>
+          <div><div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Condo / HDB approval status</div><select id="approvalStatus" class="inp"><option value="notNeeded">Not needed / already approved</option><option value="hdbPermit">HDB permit required (IDWS planning allowance)</option><option value="condoApproval">Condo MCST approval (+3–14 working days)</option></select></div>
+          <div><div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Working days available</div><select id="workingMode" class="inp"><option value="hdbDefault">HDB default: Mon–Fri, Sat non-noisy works only</option><option value="weekdayOnly">Weekdays only (Mon–Fri)</option><option value="monSatLight">Mon–Sat, Saturday light works only (no heavy works)</option><option value="monSatFull">Mon–Sat, Saturday full day available (if MCST allows)</option></select></div>
           <div class="grid grid-cols-1 gap-3"><label class="flex items-start gap-3 rounded-2xl border border-[#d8cec0] bg-white/60 p-4 text-sm leading-6"><input id="hipOldPipes" type="checkbox" class="mt-1" /> <span><strong>HDB HIP / old pipe replacement required</strong><br><span class="text-[#746b61]">Adds 3–5 working days for pipe replacement coordination before tiling.</span></span></label><label class="flex items-start gap-3 rounded-2xl border border-[#d8cec0] bg-white/60 p-4 text-sm leading-6"><input id="includeAircon" type="checkbox" class="mt-1" /> <span><strong>Include aircon piping / installation</strong><br><span class="text-[#746b61]">Adds trunking/piping before painting and final blower installation before cleaning.</span></span></label></div>
           <div><div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Blackout periods</div><div class="grid grid-cols-2 gap-2 text-sm leading-6"><label><input type="checkbox" class="blackoutPreset" value="cny"> CNY week</label><label><input type="checkbox" class="blackoutPreset" value="hariRaya"> Hari Raya week</label><label><input type="checkbox" class="blackoutPreset" value="deepavali"> Deepavali week</label><label><input type="checkbox" class="blackoutPreset" value="december"> December holiday period</label></div></div>
           <div>
@@ -260,7 +306,7 @@
           <div class="max-w-4xl">
             <p class="eyebrow text-xs font-bold uppercase text-[#a99683]">Timeline Result</p>
             <h2 class="serif text-3xl md:text-4xl font-bold">Estimated renovation schedule</h2>
-            <p class="text-sm text-[#746b61] mt-2 leading-6">Dates exclude Sundays and public holidays. <strong>HDB:</strong> Saturday light works only; heavy works are not scheduled on Saturday. <strong>Condo:</strong> Weekdays only — no Saturday work.</p>
+            <p class="text-sm text-[#746b61] mt-2 leading-6">Dates exclude Sundays and public holidays. <strong>HDB:</strong> non-noisy works may be scheduled on Saturday; noisy works are not scheduled on Saturday. <strong>Condo:</strong> the planner defaults to weekdays only unless you select a Saturday option permitted by your MCST or building management.</p>
           </div>
           <div id="summaryCards" class="grid sm:grid-cols-2 xl:grid-cols-4 gap-3 mt-6"></div>
           <div id="nextMilestoneOutput" class="mt-4 no-print"></div>
@@ -378,8 +424,8 @@
         </section>
 
         <section class="soft-card rounded-3xl p-5 md:p-7">
-          <p class="eyebrow text-xs font-bold uppercase text-[#a99683]">Singapore Renovation Benchmarks</p><h3 class="serif text-2xl md:text-3xl font-bold mb-4">Typical renovation durations</h3>
-          <div class="overflow-auto"><table class="w-full text-sm border-separate border-spacing-0 overflow-hidden rounded-2xl border border-[#d8cec0]"><thead><tr class="bg-[#f3efe7]"><th class="p-3 text-left">Renovation Type</th><th class="p-3 text-left">Typical Duration</th><th class="p-3 text-left">Notes</th></tr></thead><tbody class="bg-white/70"><tr><td class="p-3 border-t">BTO partial renovation</td><td class="p-3 border-t">4–6 weeks</td><td class="p-3 border-t">Lower hacking, fewer unknown site issues.</td></tr>
+          <p class="eyebrow text-xs font-bold uppercase text-[#a99683]">Singapore Renovation Benchmarks</p><h3 class="serif text-2xl md:text-3xl font-bold mb-4">Typical site-work renovation durations</h3>
+          <div class="overflow-auto"><table class="w-full text-sm border-separate border-spacing-0 overflow-hidden rounded-2xl border border-[#d8cec0]"><thead><tr class="bg-[#f3efe7]"><th class="p-3 text-left">Renovation Type</th><th class="p-3 text-left">Typical Site-Work Duration</th><th class="p-3 text-left">Notes</th></tr></thead><tbody class="bg-white/70"><tr><td class="p-3 border-t">BTO partial renovation</td><td class="p-3 border-t">4–6 weeks</td><td class="p-3 border-t">Lower hacking, fewer unknown site issues.</td></tr>
           <tr><td class="p-3 border-t">BTO full renovation</td><td class="p-3 border-t">6–8 weeks</td><td class="p-3 border-t">Depends heavily on carpentry approval and fabrication.</td></tr>
           <tr><td class="p-3 border-t">HDB resale renovation</td><td class="p-3 border-t">8–12 weeks</td><td class="p-3 border-t">More hacking, pipe replacement, making-good, and site risk.</td></tr>
           <tr><td class="p-3 border-t">Condo renovation</td><td class="p-3 border-t">8–12 weeks</td><td class="p-3 border-t">MCST approval, lift protection, weekday-only rules may affect progress.</td></tr>
@@ -574,18 +620,18 @@ function removeManualBlackoutDate(date) {
 function selectedPresetBlackouts() { return [...document.querySelectorAll('.blackoutPreset:checked')].flatMap(cb => PRESET_BLACKOUTS[cb.value] || []); }
 function blackoutName(d) { const key = ymd(d); if (BASE_HOLIDAYS_2026[key]) return BASE_HOLIDAYS_2026[key]; if (manualBlackoutSet().has(key)) return 'Manual blackout'; const p = selectedPresetBlackouts().find(([s,e]) => isBetween(d, s, e)); return p ? 'Blackout period' : ''; }
 function isBlackout(d) { return !!blackoutName(d); }
-function getWorkingMode(type) { const v = document.getElementById('workingMode')?.value || 'hdbDefault'; if (type === 'condo') return 'weekdayOnly'; return v; }
+function getWorkingMode(type) { const v = document.getElementById('workingMode')?.value || 'hdbDefault'; if (type === 'condo' && v === 'hdbDefault') return 'weekdayOnly'; return v; }
 
 function workCapacity(d, type, workKind = 'light') {
     const dow = d.getDay();
     if (isBlackout(d) || dow === 0) return 0;
     const mode = getWorkingMode(type);
-    if (type === 'condo') return (dow >= 1 && dow <= 5) ? 1 : 0;
     if (mode === 'weekdayOnly') return (dow >= 1 && dow <= 5) ? 1 : 0;
     if (dow === 6) {
+        if (mode === 'monSatFull') return 1;
         if (workKind === 'heavy') return 0;
-        if (mode === 'monSatLight' || mode === 'monSatFull') return 1;
-        return 0.5;
+        if (mode === 'hdbDefault' || mode === 'monSatLight') return 1;
+        return 0;
     }
     return 1;
 }
@@ -617,9 +663,9 @@ function buildTasks() {
     const tasks = [];
     lastScheduleWarning = null;
     
-    if (approval === 'hdbPermit') { let t = task('HDB permit / approval buffer', 'approval', 5, cur, type, 'HDB permit required.', 'approval', 'light'); tasks.push(t); cur = t.next; }
+    if (approval === 'hdbPermit') { let t = task('HDB permit planning allowance', 'approval', 5, cur, type, 'IDWS planning allowance for HDB permit coordination; actual timing depends on the work type and HDB evaluation.', 'approval', 'light'); tasks.push(t); cur = t.next; }
     if (approval === 'condoApproval' || type === 'condo') { let days = approval === 'condoApproval' ? 10 : 5; let t = task('Condo MCST approval / lift protection', 'approval', days, cur, 'condo', 'MCST approval required.', 'approval', 'light'); tasks.push(t); cur = t.next; }
-    if (hacking === 'structural') { let t = task('QP / PE assessment for wall hacking', 'approval', 10, cur, type, 'Structural assessment required.', 'qp', 'light'); tasks.push(t); cur = t.next; }
+    if (hacking === 'structural') { let t = task('QP / PE assessment for wall alteration', 'approval', 10, cur, type, 'Planning allowance used only when professional assessment is required for the proposed wall alteration.', 'qp', 'light'); tasks.push(t); cur = t.next; }
     if (hacking !== 'none' && scope !== 'carpentry') { let hackDays = hacking === 'major' ? 6 : (hacking === 'structural' ? 4 : 3); let t = task('Hacking & demolition', 'hacking', hackDays, cur, type, 'Hacking and debris removal.', 'hacking', 'heavy'); tasks.push(t); cur = t.next; }
     if (hip && scope !== 'carpentry') { let hp = task('HDB HIP / old pipe coordination', 'gas', 4, cur, type, 'Pipe replacement.', 'hipPipes', 'heavy'); tasks.push(hp); cur = hp.next; }
     if (scope !== 'carpentry') { let days = scope === 'full' ? (type === 'resale' ? 14 : 12) : (scope === 'kitchenToilets' ? 8 : 5); let t = task('Masonry & tiling works', 'masonry', days, cur, type, 'Tiling works.', 'tiling', 'heavy'); tasks.push(t); cur = t.next; }
@@ -691,7 +737,7 @@ function renderTimeline(tasks) {
     });
 
     const printLogoSrc = document.querySelector('.print-brand-logo')?.getAttribute('src') || '';
-    let html = `<table class="timeline"><colgroup><col class="task-col-width">${days.map(() => '<col class="day-col">').join('')}</colgroup><thead><tr class="print-timeline-brand-row" style="display:none"><th class="print-timeline-brand-cell" colspan="${days.length + 1}"><div class="print-timeline-brand"><img src="${printLogoSrc}" alt="ID Work Studio logo"><div><div class="print-brand-name">ID Work Studio</div><div class="print-report-title">Renovation Timeline Planner Singapore</div><div class="print-report-meta">BCA-Registered · HDB-Approved · Singapore</div></div></div></th></tr><tr><th class="task-col" rowspan="2">Work Item</th>`;
+    let html = `<table class="timeline"><colgroup><col class="task-col-width">${days.map(() => '<col class="day-col">').join('')}</colgroup><thead><tr class="print-timeline-brand-row" style="display:none"><th class="print-timeline-brand-cell" colspan="${days.length + 1}"><div class="print-timeline-brand"><img src="${printLogoSrc}" alt="ID Work Studio logo"><div><div class="print-brand-name">ID Work Studio</div><div class="print-report-title">Renovation Timeline Planner Singapore</div><div class="print-report-meta">BCA-Registered · HDB Registered · Singapore</div></div></div></th></tr><tr><th class="task-col" rowspan="2">Work Item</th>`;
     monthGroups.forEach(m => html += `<th class="month-head" colspan="${m.count}">${m.label}</th>`);
     html += '</tr><tr>';
     days.forEach(d => {

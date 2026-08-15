@@ -10,18 +10,18 @@ const shophouseRenoContent = {
     badge: "Singapore URA Conservation Shophouse Specialist",
     serif: "Shophouse Renovation",
     bold: "DONE RIGHT",
-    subtitle: "Full URA Conservation Permission, BCA structural, and SCDF fire safety compliance for Singapore shophouses. Specialists in Tanjong Pagar, Chinatown, Kampong Glam, and Boat Quay.",
+    subtitle: "Shophouse renovation in Singapore with URA Conservation Permission coordination, plus BCA structural and SCDF fire-safety coordination where applicable. Specialists in Tanjong Pagar, Chinatown, Kampong Glam, and Boat Quay.",
     cta: "Get a Free Consultation",
     b1: "URA Conservation Permission",
     b2: "BCA & SCDF Compliant",
-    b3: "All Submissions Managed"
+    b3: "Approval Coordination"
   },
   overview: {
     serif: "Singapore's",
     bold: "SHOPHOUSE RENOVATION SPECIALISTS",
     p1: "Singapore shophouse renovation is not the same as a normal office or retail fit-out. Before design begins, owners and tenants need to confirm whether the property is conserved, what can legally be altered, and whether building condition, narrow staircases, old services or F&B requirements will affect cost, approval and timeline.",
     p2: "Many expensive mistakes happen before renovation starts — signing a lease without checking conservation limits, underestimating fire safety or exhaust requirements, or discovering hidden timber, dampness or M&E issues only after works begin. Our role is to assess feasibility first, so clients understand the risks before committing serious renovation budget.",
-    p3: "We manage the complete approval process — from <strong>URA Conservation Permission</strong> application to BCA structural submission and SCDF fire safety approval — delivering compliant, beautifully restored spaces.",
+    p3: "We coordinate the applicable approval process — including <strong>URA Conservation Permission</strong> and, where required by the proposed works, BCA structural and SCDF fire-safety submissions with the relevant appointed parties — while delivering carefully restored spaces.",
     districts_title: "Conservation Districts We Serve",
     uses_title: "Common Shophouse Uses",
     uses_desc: "F&B restaurants and cafés, boutique retail, professional offices, boutique hotels, creative studios, and mixed-use residential above commercial."
@@ -63,15 +63,15 @@ const shophouseRenoContent = {
     serif: "What We Cover in",
     bold: "SHOPHOUSE RENOVATION",
     i1t: "URA Conservation Submissions",
-    i1d: "Full URA Conservation Permission application and liaison for all categories of conserved shophouses in Singapore.",
+    i1d: "Coordination of the applicable URA Conservation Permission process, including liaison with the owner and relevant Qualified Person where required for conserved shophouse works.",
     i2t: "Facade & Heritage Restoration",
     i2d: "Sensitive restoration of original facade elements, five-foot ways, air wells, and heritage architectural details.",
     i3t: "Structural Works",
-    i3d: "BCA-approved structural modifications including mezzanine additions, floor openings, and load-bearing assessments.",
+    i3d: "Structural modifications such as mezzanine additions, floor openings and load-bearing assessments, with BCA submission by the appropriate Qualified Person where approval is required.",
     i4t: "M&E & Fire Safety",
-    i4d: "Full mechanical, electrical, and SCDF-compliant fire safety installation including suppression systems and emergency lighting.",
+    i4d: "Mechanical, electrical and fire-safety works coordinated with the relevant professionals, with SCDF requirements addressed where the proposed scope affects regulated fire-safety elements.",
     i5t: "F&B Grease Trap & Ventilation",
-    i5d: "NEA-compliant grease trap installation, industrial kitchen ventilation, and exhaust system design for F&B operations.",
+    i5d: "Grease-trap and sanitary planning in accordance with applicable PUB and food-premises requirements, together with kitchen ventilation and exhaust planning for F&B operations.",
     i6t: "Interior Fit-Out",
     i6d: "Custom joinery, feature walls, flooring, and lighting design that honours heritage character while meeting modern operational needs."
   },
@@ -79,7 +79,7 @@ const shophouseRenoContent = {
     s1u: "per sqft",
     s1l: "Shophouse renovation from",
     s2u: "agencies",
-    s2l: "Permits managed (URA, BCA, SCDF)",
+    s2l: "Approval pathways coordinated (URA, BCA, SCDF as applicable)",
     s3u: "months",
     s3l: "Typical project timeline"
   },
@@ -89,11 +89,11 @@ const shophouseRenoContent = {
     ch_label: "The Challenge",
     sol_label: "Our Solution",
     p1pain: "Complex URA Approvals",
-    p1sol: "Our team is experienced in URA Conservation Permission applications across all conservation area classifications.",
+    p1sol: "Our team is experienced in coordinating URA Conservation Permission requirements across conservation areas and works with the relevant appointed parties where required.",
     p2pain: "Heritage vs Modern Function",
     p2sol: "We design interiors that satisfy URA heritage requirements while delivering the modern F&B or office functionality you need.",
     p3pain: "Multi-Agency Compliance",
-    p3sol: "We coordinate BCA structural, SCDF fire safety, and URA conservation submissions concurrently to minimise delays."
+    p3sol: "We coordinate applicable URA, BCA structural and SCDF fire-safety submission pathways with the relevant appointed parties to minimise avoidable delays."
   },
   trust: { text: "Trusted for conservation shophouse projects in Tanjong Pagar, Chinatown, Kampong Glam, and Boat Quay." },
   process: {
@@ -102,9 +102,9 @@ const shophouseRenoContent = {
     s1t: "Free Consultation",
     s1d: "Onsite assessment, heritage classification review, and quotation.",
     s2t: "Design & URA Submission",
-    s2d: "Architectural drawings and full URA Conservation Permission application.",
+    s2d: "Architectural drawings and coordination of the applicable URA Conservation Permission submission with the relevant appointed parties where required.",
     s3t: "BCA & SCDF Approval",
-    s3d: "Structural and fire safety submissions managed in parallel.",
+    s3d: "Applicable structural and fire-safety submissions coordinated in parallel where the proposed works require them.",
     s4t: "Renovation & Handover",
     s4d: "Heritage-sensitive construction and full site handover."
   },
@@ -125,11 +125,11 @@ const shophouseRenoContent = {
 faq: {
     title: "Shophouse Renovation FAQs",
     q1: "Do I need URA approval to renovate a Singapore shophouse?",
-    a1: "Yes. Conserved shophouses are protected under the URA Conservation Guidelines. Any external changes — and many internal alterations — require <strong>URA Conservation Permission</strong> before works can commence. This includes changes to facades, windows, roofing, five-foot ways, and structural elements. ID Work Studio manages the full URA application process on your behalf.",
+    a1: "Conserved shophouses are protected under the URA Conservation Guidelines, and works that fall within the conservation controls require <strong>URA Conservation Permission</strong> before they commence. External changes such as facades, windows, roofing and five-foot ways are commonly controlled, while the exact treatment of internal works depends on the proposed scope and conservation requirements. ID Work Studio coordinates the applicable URA process with the owner and relevant Qualified Person where required.",
     q2: "How much does a shophouse renovation cost in Singapore?",
     a2: "Shophouse renovation costs typically start from <strong>S$150 per square foot</strong> for a basic fit-out, and can reach S$300+ psf for full heritage restoration with premium F&B or hospitality fit-out. Key cost drivers include structural works, M&E complexity, heritage restoration requirements, and specialist conservation materials.",
     q3: "How long does a shophouse renovation take in Singapore?",
-    a3: "A typical shophouse renovation takes <strong>6–9 months</strong> from initial consultation to handover. The timeline is primarily driven by the URA Conservation Permission approval process (typically 2–4 months), followed by BCA structural approval and SCDF fire safety clearance. Physical renovation works usually take 3–5 months depending on scope."
+    a3: "A typical shophouse renovation can take <strong>6–9 months</strong> from initial consultation to handover, depending on design development, conservation requirements, building condition, landlord coordination and whether BCA or SCDF submissions are also required. URA Conservation Permission has its own published processing pathways, but the overall project programme can extend when revisions, cross-agency coordination or site-condition issues arise. Physical renovation works commonly take around 3–5 months depending on scope."
   },
   related: {
     title: "Your Next Shophouse Renovation Decision",
@@ -160,17 +160,17 @@ faq: {
   sticky: { text: "Shophouse Feasibility Review — WhatsApp Us" }
 },
   zh: {
-  hero: { badge:"新加坡 URA 保育店屋翻新专家", serif:"店屋翻新", bold:"专业之选", subtitle:"为新加坡店屋提供完整的URA保育许可证、BCA结构及SCDF消防安全合规服务。专注于丹戎巴葛、牛车水、甘榜格南及驳船码头地区。", cta:"获取免费咨询", b1:"URA 保育许可证", b2:"符合 BCA 及 SCDF 标准", b3:"全程代办提交" },
-  overview: { serif:"新加坡", bold:"店屋翻新专家", p1:"新加坡店屋翻新与一般办公室或零售单位截然不同。在设计开始之前，业主和租户首先应确认店屋是否属于保育建筑、哪些部分可以合法改动，以及建筑现况、狭窄楼梯、老旧机电系统或餐饮用途等因素会否影响预算、审批及工期。", p2:"许多最昂贵的错误并不是发生在施工期间，而是在签约之前，例如未确认保育限制、低估消防或排烟要求，或施工后才发现隐藏缺陷。我们会先进行可行性评估，帮助客户在投入大量装修预算前识别潜在风险。", p3:"我们管理整个审批流程——从<strong>URA保育许可证</strong>申请，到BCA结构提交及SCDF消防安全审批——为您交付合规且精美修复的空间。", districts_title:"我们服务的保育区", uses_title:"店屋常见用途", uses_desc:"餐饮餐厅与咖啡馆、精品零售、专业办公室、精品酒店、创意工作室及商住混合用途。" },
+  hero: { badge:"新加坡 URA 保育店屋翻新专家", serif:"店屋翻新", bold:"专业之选", subtitle:"为新加坡店屋协调URA保育许可证流程，并在适用时协调BCA结构与SCDF消防安全要求。专注于丹戎巴葛、牛车水、甘榜格南及驳船码头地区。", cta:"获取免费咨询", b1:"URA 保育许可证", b2:"符合 BCA 及 SCDF 标准", b3:"审批流程协调" },
+  overview: { serif:"新加坡", bold:"店屋翻新专家", p1:"新加坡店屋翻新与一般办公室或零售单位截然不同。在设计开始之前，业主和租户首先应确认店屋是否属于保育建筑、哪些部分可以合法改动，以及建筑现况、狭窄楼梯、老旧机电系统或餐饮用途等因素会否影响预算、审批及工期。", p2:"许多最昂贵的错误并不是发生在施工期间，而是在签约之前，例如未确认保育限制、低估消防或排烟要求，或施工后才发现隐藏缺陷。我们会先进行可行性评估，帮助客户在投入大量装修预算前识别潜在风险。", p3:"我们会协调适用的审批流程——包括<strong>URA保育许可证</strong>，以及在拟议工程需要时，与相关受委任专业人士协调BCA结构和SCDF消防安全提交流程——同时完成谨慎修复的空间交付。", districts_title:"我们服务的保育区", uses_title:"店屋常见用途", uses_desc:"餐饮餐厅与咖啡馆、精品零售、专业办公室、精品酒店、创意工作室及商住混合用途。" },
   beforeLease: { serif:"签约之前", bold:"先检查店屋是否适合翻新", intro:"在签租约、购买意向书或装修合约之前，最重要的问题不是设计风格，而是这间店屋是否真的适合你的用途，是否会出现审批延误、隐藏维修费用或技术限制。", cta_title:"已经在考虑某间店屋？", cta_desc:"你可以把房源资料、平面图或现场照片发给我们。我们会先帮你查看可能影响装修的风险，例如保育限制、楼梯及搬运限制、餐饮排烟可行性、消防安全问题和隐藏建筑状况。", cta_btn:"申请店屋可行性评估", i1t:"保育状态", i1d:"确认单位是否属于保育建筑，以及外立面、窗户、屋顶、店面、五脚基或外部机电是否需要URA保育许可证。", i2t:"楼梯与搬运限制", i2d:"二楼或三楼店屋常见狭窄木楼梯。全高玻璃、长尺寸木工、大型板材或重型设备可能需要特别规划搬运和安装方式。", i3t:"木结构、白蚁与潮湿风险", i3d:"签约前应检查木地板、楼梯、屋顶构件、踢脚线、门框、潮湿墙面及旧有固定家具，尤其是年久或维护不足的单位。", i4t:"电力、给排水与燃气", i4d:"在规划厨房、厕所或餐饮工程前，应确认电力容量、供水、排水点、地漏、燃气供应及隔油池可行性。", i5t:"餐饮排烟可行性", i5d:"咖啡馆、餐厅和酒吧应先确认排烟是否可以合理走管及排放，并避免与保育要求、邻里影响、屋顶通道或相关审批冲突。", i6t:"消防安全与逃生", i6d:"应尽早检查楼梯通道、逃生路线、容纳人数、防火门、应急照明及SCDF要求，尤其是高楼层或餐饮用途。" },
-  scope: { serif:"店屋翻新", bold:"涵盖范围", i1t:"URA保育许可证提交", i1d:"为新加坡所有类别保育店屋代办完整的URA保育许可证申请及联络工作。", i2t:"外立面与遗产修复", i2d:"对原有外立面构件、五脚基、天井及遗产建筑细节进行敏感性修复。", i3t:"结构工程", i3d:"BCA审批的结构改造，包括夹层添建、楼板开孔及承重评估。", i4t:"机电及消防安全", i4d:"全套机电及符合SCDF标准的消防安全安装，包括抑制系统及应急照明。", i5t:"餐饮集油井与通风", i5d:"符合NEA标准的集油井安装、工业厨房通风及餐饮运营排气系统设计。", i6t:"室内装修", i6d:"定制木工、特色墙、地板及照明设计，在尊重遗产特色的同时满足现代运营需求。" },
-  stats: { s1u:"每平方英尺起", s1l:"店屋翻新费用", s2u:"个部门", s2l:"代办许可证（URA、BCA、SCDF）", s3u:"个月", s3l:"典型项目工期" },
-  challenges: { serif:"应对", bold:"店屋翻新挑战", ch_label:"难题", sol_label:"我们的解决方案", p1pain:"复杂的URA审批", p1sol:"我们团队在各保育区分类的URA保育许可证申请方面经验丰富。", p2pain:"遗产保育与现代功能的平衡", p2sol:"我们设计既满足URA遗产要求，又能实现您所需现代餐饮或办公功能的室内方案。", p3pain:"多部门合规", p3sol:"我们同步协调BCA结构、SCDF消防安全及URA保育提交，最大程度减少延误。" },
+  scope: { serif:"店屋翻新", bold:"涵盖范围", i1t:"URA保育许可证提交", i1d:"协调适用的URA保育许可证流程，并在需要时与业主及相关合格人士（QP）配合处理保育店屋工程。", i2t:"外立面与遗产修复", i2d:"对原有外立面构件、五脚基、天井及遗产建筑细节进行敏感性修复。", i3t:"结构工程", i3d:"包括夹层添建、楼板开孔及承重评估等结构改造，并在需要BCA批准时由合适的合格人士负责相关提交。", i4t:"机电及消防安全", i4d:"由相关专业人士协调机电及消防安全工程，并在拟议范围影响受监管消防安全项目时处理相应SCDF要求。", i5t:"餐饮集油井与通风", i5d:"按适用PUB及食品场所要求规划隔油设施与卫生排水，并同时规划餐饮厨房通风及排烟系统。", i6t:"室内装修", i6d:"定制木工、特色墙、地板及照明设计，在尊重遗产特色的同时满足现代运营需求。" },
+  stats: { s1u:"每平方英尺起", s1l:"店屋翻新费用", s2u:"个部门", s2l:"协调审批路径（URA、BCA、SCDF，视适用情况）", s3u:"个月", s3l:"典型项目工期" },
+  challenges: { serif:"应对", bold:"店屋翻新挑战", ch_label:"难题", sol_label:"我们的解决方案", p1pain:"复杂的URA审批", p1sol:"我们团队熟悉各保育区的URA保育许可证要求，并会在需要时与相关受委任专业人士协调。", p2pain:"遗产保育与现代功能的平衡", p2sol:"我们设计既满足URA遗产要求，又能实现您所需现代餐饮或办公功能的室内方案。", p3pain:"多部门合规", p3sol:"我们会与相关受委任专业人士同步协调适用的URA、BCA结构及SCDF消防安全提交流程，尽量减少可避免的延误。" },
   trust: { text:"深受丹戎巴葛、牛车水、甘榜格南及驳船码头保育店屋项目业主信赖。" },
-  process: { serif:"我们的", bold:"店屋翻新流程", s1t:"免费咨询", s1d:"现场评估、遗产分级审查与报价。", s2t:"设计与URA提交", s2d:"建筑图纸及完整URA保育许可证申请。", s3t:"BCA及SCDF审批", s3d:"结构及消防安全提交同步处理。", s4t:"翻新与移交", s4d:"注重遗产保育的施工与完整现场移交。" },
+  process: { serif:"我们的", bold:"店屋翻新流程", s1t:"免费咨询", s1d:"现场评估、遗产分级审查与报价。", s2t:"设计与URA提交", s2d:"建筑图纸，以及在需要时与相关受委任专业人士协调适用的URA保育许可证提交。", s3t:"BCA及SCDF审批", s3d:"在拟议工程需要时，同步协调适用的结构与消防安全提交流程。", s4t:"翻新与移交", s4d:"注重遗产保育的施工与完整现场移交。" },
   conservation: { title:"保育与技术限制", intro:"不是每一间店屋都适用同样的装修规则。越早了解保育限制，越能避免重新设计和审批延误。", p1:"对于保育店屋，外立面、屋顶轮廓、木窗、五脚基、店面及外部机电不能像普通商业单位一样随意更改。设计前应先确认哪些部分受保护，哪些改动需要URA保育许可证。", p2:"室内升级通常是可行的，但必须同时考虑结构安全、消防安全、业主要求及现有建筑状况。图纸上看似简单的设计，如果没有提前检查排烟路径、楼梯通道、机电容量或保育限制，仍可能无法执行。", points:["设计开始前先确认单位是否属于保育或非保育店屋。","不要假设窗户、外立面颜色、招牌、屋顶、店面或五脚基细节可以自由更改。","检查过往改动是否已获批准，尤其是高楼层、后方扩建及机电穿孔。","餐饮业者在签约前应确认排烟、隔油、通风及相关审批可行性。","保育、结构、消防及业主要求应一起审查，而不是分开处理。"] },
   costDrivers: { title:"为什么店屋翻新费用差异特别大", intro:"两间面积相近的店屋，装修费用可能相差很远。与现代商业单位不同，店屋预算往往受建筑年份、保育要求、现有状况及技术限制影响，而不只是面积。", i1t:"现有建筑状况", i1d:"屋顶漏水、潮湿、木结构老化、旧电线、弱给排水及未经批准的旧改动，可能要在检查或拆开后才发现。", i2t:"搬运与施工通道", i2d:"狭窄楼梯、后巷限制、长距离搬运及高楼层施工，会增加人工、施工顺序及安装难度。", i3t:"保育与审批", i3d:"额外保育提交、专业修复、结构审核或消防升级，都会影响预算和工期。", i4t:"餐饮基础设施", i4d:"餐厅、咖啡馆和酒吧可能需要排烟、隔油、燃气、通风及消防规划，才能确认真实预算。", note:"因此，店屋报价不应只按面积判断。现场评估通常是确认隐藏风险及真实预算最可靠的方法。" },
-  faq: { title:"店屋翻新常见问题", q1:"翻新新加坡店屋是否需要URA批准？", a1:"是的。新加坡保育店屋受URA保育指引保护。任何外部变更——以及许多内部改动——在施工前均需取得<strong>URA保育许可证</strong>。这包括对外立面、窗户、屋顶、五脚基及结构构件的改动。ID Work Studio代您全程管理URA申请流程。", q2:"新加坡店屋翻新费用是多少？", a2:"店屋翻新费用通常从<strong>每平方英尺S$150</strong>起（基础装修），全面遗产修复加高端餐饮或酒店装修可达每平方英尺S$300以上。主要费用影响因素包括结构工程范围、机电复杂程度、遗产修复要求及专业保育材料。", q3:"新加坡店屋翻新需要多长时间？", a3:"典型店屋翻新从初步咨询到移交通常需要<strong>6至9个月</strong>。工期主要取决于URA保育许可证审批流程（通常2至4个月），其次是BCA结构审批及SCDF消防安全许可。实体翻新施工通常需要3至5个月，视工程范围而定。" },
+  faq: { title:"店屋翻新常见问题", q1:"翻新新加坡店屋是否需要URA批准？", a1:"新加坡保育店屋受URA保育指引保护，属于保育管制范围内的工程在开工前需要取得<strong>URA保育许可证</strong>。外立面、窗户、屋顶及五脚基等外部项目通常受管制，而内部工程是否需要相关许可则取决于具体工程范围与保育要求。ID Work Studio会在需要时与业主及相关合格人士（QP）协调适用的URA流程。", q2:"新加坡店屋翻新费用是多少？", a2:"店屋翻新费用通常从<strong>每平方英尺S$150</strong>起（基础装修），全面遗产修复加高端餐饮或酒店装修可达每平方英尺S$300以上。主要费用影响因素包括结构工程范围、机电复杂程度、遗产修复要求及专业保育材料。", q3:"新加坡店屋翻新需要多长时间？", a3:"典型店屋翻新从初步咨询到移交通常可能需要<strong>6至9个月</strong>，实际取决于设计发展、保育要求、建筑现况、业主协调，以及是否还需要BCA或SCDF提交流程。URA保育许可证本身有官方处理路径，但若出现图纸修改、跨部门协调或现场隐藏问题，整体项目时间仍可能延长。实体翻新施工通常约需3至5个月，视工程范围而定。" },
   related: {
     title:"您的下一步店屋翻新决策",
     d1_label:"还在评估单位？",
@@ -209,11 +209,10 @@ export default function ShophouseRenovation() {
 
   const serviceSchema = {
     "@context":"https://schema.org","@type":"Service","name":"Shophouse Renovation Singapore",
-    "description":"Specialist shophouse renovation contractor in Singapore. URA Conservation Permission, BCA structural, and SCDF fire safety compliance — the tripartite approval process unique to conserved shophouses.",
+    "description":"Specialist shophouse renovation contractor in Singapore, coordinating URA Conservation Permission requirements and, where applicable, BCA structural and SCDF fire-safety submission processes with the relevant appointed parties.",
     "serviceType":"Shophouse Renovation",
     "areaServed":[{"@type":"Place","name":"Tanjong Pagar, Singapore"},{"@type":"Place","name":"Chinatown, Singapore"},{"@type":"Place","name":"Kampong Glam, Singapore"},{"@type":"Place","name":"Boat Quay, Singapore"},{"@type":"Place","name":"Little India, Singapore"},{"@type":"Place","name":"Emerald Hill, Singapore"}],
-    "provider":{"@type":"GeneralContractor","name":"ID Work Studio","url":"https://idworkstudio.com","telephone":"+6568162872","email":"contact@idworkstudio.com",
-      "address":{"@type":"PostalAddress","streetAddress":"11 Woodlands Close, Woodlands 11, #03-10","addressLocality":"Woodlands","addressRegion":"Singapore","postalCode":"737853","addressCountry":"SG"}},
+    "provider":{"@id":"https://idworkstudio.com/#business"},
     "mainEntityOfPage":{"@type":"WebPage","@id":"https://idworkstudio.com/commercial/shophouse-renovation"}
   };
   const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[1,2,3].map(n=>({ "@type":"Question","name":c.faq[`q${n}` as keyof typeof c.faq],"acceptedAnswer":{"@type":"Answer","text":c.faq[`a${n}` as keyof typeof c.faq]} }))};
@@ -227,20 +226,20 @@ export default function ShophouseRenovation() {
     <>
       <Helmet>
         <title>Shophouse Renovation Singapore | URA Conservation Compliance | ID Work Studio</title>
-        <meta name="description" content="Specialist shophouse renovation contractor in Singapore. URA Conservation Permission, BCA structural approval, and SCDF fire safety — all managed. Tanjong Pagar, Chinatown, Kampong Glam. Free consultation."/>
+        <meta name="description" content="Specialist shophouse renovation contractor in Singapore. URA Conservation Permission coordination, with BCA structural and SCDF fire-safety processes coordinated where applicable. Free consultation."/>
         <meta name="keywords" content="shophouse renovation Singapore, URA conservation renovation Singapore, conservation shophouse contractor Singapore, shophouse fit-out Tanjong Pagar, shophouse renovation Chinatown"/>
         <meta name="geo.region" content="SG"/><meta name="geo.placename" content="Woodlands, Singapore"/>
         <meta name="geo.position" content="1.4348129;103.7326522"/><meta name="ICBM" content="1.4348129, 103.7326522"/>
         <link rel="canonical" href="https://idworkstudio.com/commercial/shophouse-renovation"/>
         <meta property="og:type" content="website"/><meta property="og:url" content="https://idworkstudio.com/commercial/shophouse-renovation"/>
         <meta property="og:title" content="Shophouse Renovation Singapore | URA Conservation Experts | ID Work Studio"/>
-        <meta property="og:description" content="Shophouse renovation with full URA, BCA, and SCDF compliance. Tanjong Pagar, Chinatown, Kampong Glam specialists."/>
+        <meta property="og:description" content="Shophouse renovation with URA Conservation Permission coordination and BCA / SCDF requirements addressed where applicable."/>
         <meta property="og:image" content="https://idworkstudio.com/gallery/commercial-expertise.png"/>
         <meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/>
         <meta property="og:site_name" content="ID Work Studio"/><meta property="og:locale" content="en_SG"/>
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="Shophouse Renovation Singapore | URA Conservation Experts | ID Work Studio"/>
-        <meta name="twitter:description" content="Shophouse renovation with full URA, BCA, and SCDF compliance."/>
+        <meta name="twitter:description" content="Shophouse renovation with URA Conservation Permission coordination and BCA / SCDF requirements addressed where applicable."/>
         <meta name="twitter:image" content="https://idworkstudio.com/gallery/commercial-expertise.png"/>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>

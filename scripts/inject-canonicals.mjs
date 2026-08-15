@@ -194,17 +194,17 @@ const pageMetaMap = {
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',
-    description: 'Professional office and retail reinstatement in Singapore. BCA-registered. SCDF-compliant. 100% handover success with full permit management. Free site survey.',
+    description: 'Professional office and retail reinstatement in Singapore by a BCA-registered firm. Plan bare-shell handover, landlord requirements and authority coordination where applicable. Free site survey.',
     ogTitle: 'Office Reinstatement Singapore | ID Work Studio',
-    ogDesc: 'BCA-registered office reinstatement contractor in Singapore. SCDF permits, bare shell handover, 100% deposit recovery. Free site survey.',
+    ogDesc: 'BCA-registered office reinstatement contractor in Singapore for bare-shell handover, landlord requirements and authority coordination where applicable. Free site survey.',
     ogUrl: 'https://idworkstudio.com/commercial/reinstatement',
   },
   'commercial/office-renovation.html': {
     canonical: 'https://idworkstudio.com/commercial/office-renovation',
     title: 'Office Renovation Singapore | Turnkey Fit-Out | BCA-Registered | ID Work Studio',
-    description: 'Turnkey office renovation and fit-out in Singapore by a BCA-registered firm. Hybrid work layouts, system furniture and full SCDF compliance. Free site survey.',
+    description: 'Turnkey office renovation and fit-out in Singapore by a BCA-registered firm. Hybrid work layouts, system furniture and fire-safety coordination where applicable. Free site survey.',
     ogTitle: 'Office Renovation Singapore | Turnkey Fit-Out | ID Work Studio',
-    ogDesc: 'Office renovation and fit-out in Singapore by ID Work Studio — BCA-registered, full permit management, free site survey.',
+    ogDesc: 'Office renovation and fit-out in Singapore by ID Work Studio — BCA-registered, with authority and building-management coordination where applicable. Free site survey.',
     ogUrl: 'https://idworkstudio.com/commercial/office-renovation',
   },
   'commercial/retail-mall-renovation.html': {
@@ -218,17 +218,17 @@ const pageMetaMap = {
   'commercial/shophouse-renovation.html': {
     canonical: 'https://idworkstudio.com/commercial/shophouse-renovation',
     title: 'Shophouse & F&B Renovation Singapore | URA Compliant | ID Work Studio',
-    description: 'Heritage shophouse renovations and F&B interior fit-outs in Singapore with full URA and SCDF compliance. Free site survey by BCA-registered firm.',
+    description: 'Heritage shophouse renovations and F&B interior fit-outs in Singapore by a BCA-registered firm, with URA and fire-safety requirements coordinated where applicable. Free site survey.',
     ogTitle: 'Shophouse & F&B Renovation Singapore | ID Work Studio',
-    ogDesc: 'Shophouse renovation and F&B fit-outs in Singapore — URA and SCDF compliant, by ID Work Studio.',
+    ogDesc: 'Shophouse renovation and F&B fit-outs in Singapore by ID Work Studio, with URA and fire-safety requirements coordinated where applicable.',
     ogUrl: 'https://idworkstudio.com/commercial/shophouse-renovation',
   },
   'commercial/permits-compliance.html': {
     canonical: 'https://idworkstudio.com/commercial/permits-compliance',
     title: 'Commercial Renovation Permits Singapore | BCA, SCDF & MCST | ID Work Studio',
-    description: 'Full commercial renovation permit management in Singapore. BCA, SCDF, MCST and URA submissions handled in-house by ID Work Studio — BCA-registered firm.',
+    description: 'Commercial renovation permit and approval coordination in Singapore for BCA, SCDF, MCST and URA requirements where applicable, by BCA-registered ID Work Studio.',
     ogTitle: 'Commercial Renovation Permits Singapore | ID Work Studio',
-    ogDesc: 'BCA, SCDF, MCST and URA permit submissions for commercial renovations in Singapore — managed in-house by ID Work Studio.',
+    ogDesc: 'Commercial renovation approval coordination for BCA, SCDF, MCST and URA requirements where applicable, by ID Work Studio.',
     ogUrl: 'https://idworkstudio.com/commercial/permits-compliance',
   },
   'renovation-cost-calculator.html': {
@@ -343,40 +343,43 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
     );
   }
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'LocalBusiness',
+  const businessEntity = relativeFile === 'index.html'
+    ? {
+        '@type': 'HomeAndConstructionBusiness',
         '@id': 'https://idworkstudio.com/#business',
         name: 'ID Work Studio',
+        legalName: 'ID WORK STUDIO PTE LTD',
         url: 'https://idworkstudio.com/',
-        telephone: '+65 6816 2872',
+        telephone: '+6568162872',
         email: 'contact@idworkstudio.com',
-        description: 'BCA-registered and HDB-registered renovation and interior design firm in Singapore.',
+        foundingDate: '2015',
+        identifier: {
+          '@type': 'PropertyValue',
+          propertyID: 'UEN',
+          value: '201539658C',
+        },
         address: {
           '@type': 'PostalAddress',
           streetAddress: '11 Woodlands Close, Woodlands 11, #03-10',
-          addressLocality: 'Singapore',
+          addressLocality: 'Woodlands',
+          addressRegion: 'Singapore',
           postalCode: '737853',
           addressCountry: 'SG',
         },
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: 1.4380,
-          longitude: 103.7927,
+        areaServed: {
+          '@type': 'Country',
+          name: 'Singapore',
         },
-        areaServed: [
-          {
-            '@type': 'Country',
-            name: 'Singapore',
-          },
-          {
-            '@type': 'City',
-            name: 'Singapore',
-          },
-        ],
-      },
+        description: 'Singapore renovation and interior design company providing residential renovation, office fit-out and commercial renovation services.',
+      }
+    : {
+        '@id': 'https://idworkstudio.com/#business',
+      };
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      businessEntity,
       {
         '@type': 'WebPage',
         '@id': `${meta.canonical}#webpage`,
@@ -531,7 +534,7 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
             name: 'How much office space do I need per employee in Singapore?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'A single square-foot-per-person figure can be misleading. Two companies with the same headcount may need very different office sizes depending on workstation dimensions, meeting rooms, private offices, pantry, storage and circulation. This planner therefore calculates from actual requirements rather than using one fixed allowance per employee.',
+              text: 'A single square-foot-per-person figure can be misleading. Two companies with the same headcount may need very different office sizes depending on workstation dimensions, meeting rooms, private offices, pantry, storage and circulation. This planner therefore calculates from your actual requirements rather than using one fixed allowance per employee.',
             },
           },
           {
@@ -539,7 +542,7 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
             name: 'Does this planner include meeting rooms and private offices?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. The recommendation includes the meeting rooms, director rooms, manager rooms, phone or Zoom rooms and support spaces selected by the user. Spaces that are not selected are not automatically added.',
+              text: 'Yes. The recommendation includes the meeting rooms, director rooms, manager rooms, phone or Zoom rooms and support spaces you select. Spaces you do not select are not automatically added.',
             },
           },
           {
@@ -555,7 +558,7 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
             name: 'Why does circulation affect the recommended office size?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Furniture and room footprints are not the whole office. People still need workable access between desks, rooms and shared facilities. The planner therefore allows for overall planning and circulation rather than simply adding the physical size of each desk and room.',
+              text: 'Furniture and room footprints are not the whole office. People still need workable access between desks, rooms and shared facilities. The planner therefore allows for circulation and overall planning rather than simply adding the physical size of each desk and room.',
             },
           },
           {

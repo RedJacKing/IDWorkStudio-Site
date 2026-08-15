@@ -329,34 +329,20 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
-      "@id": "https://idworkstudio.com/#business",
-      "name": "ID Work Studio",
-      "url": "https://idworkstudio.com/",
-      "telephone": "+65 6816 2872",
-      "email": "contact@idworkstudio.com",
-      "foundingDate": "2015",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
-        "addressLocality": "Singapore",
-        "postalCode": "737853",
-        "addressCountry": "SG"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Singapore"
-      }
+      "@id": "https://idworkstudio.com/#business"
     },
     {
       "@type": "WebApplication",
       "@id": "https://idworkstudio.com/commercial-approval-planner#app",
-      "name": "Singapore Commercial Renovation Approval Planner",
+      "name": "Commercial Renovation Planner",
       "url": "https://idworkstudio.com/commercial-approval-planner",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Any",
       "isAccessibleForFree": true,
       "description": "A Singapore commercial renovation planning tool that identifies likely permits, explains why they are needed, estimates working-day approval allowances and works backwards from a target business opening date.",
+      "provider": {
+        "@id": "https://idworkstudio.com/#business"
+      },
       "hasPart": {
         "@id": "https://idworkstudio.com/commercial-approval-planner#business-types"
       }
@@ -365,7 +351,7 @@
       "@type": "WebPage",
       "@id": "https://idworkstudio.com/commercial-approval-planner",
       "url": "https://idworkstudio.com/commercial-approval-planner",
-      "name": "Commercial Renovation Approval Planner Singapore",
+      "name": "Commercial Renovation Approval Planner Singapore | ID Work Studio",
       "about": {
         "@id": "https://idworkstudio.com/#business"
       },
@@ -390,7 +376,7 @@
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Commercial Approval Planner",
+            "name": "Commercial Renovation Planner",
             "item": "https://idworkstudio.com/commercial-approval-planner"
           }
         ]
@@ -402,42 +388,50 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Can I apply for commercial renovation approvals before signing the tenancy agreement?",
+          "name": "Can I apply for approvals before signing the tenancy agreement?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Preliminary checks can often start earlier, but many formal submissions require confirmed premises details, landlord consent or an executed tenancy agreement."
+            "text": "Preliminary checks can often start earlier, but many formal submissions require the owner’s or landlord’s authorisation and confirmed premises details. The planner identifies the likely approval path early so you can choose a realistic lease and takeover schedule."
           }
         },
         {
           "@type": "Question",
-          "name": "Does changing an office layout require approval in Singapore?",
+          "name": "Does changing the office layout require approval?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It often does because adding, removing or relocating rooms can affect fire safety, lighting, electrical points, sprinklers and air-conditioning distribution."
+            "text": "It often does. Adding, removing or relocating rooms can affect fire safety, lighting, electrical points, sprinklers and air-conditioning distribution. The planner treats the layout change as the root cause and identifies the likely downstream reviews."
           }
         },
         {
           "@type": "Question",
-          "name": "How long does an SCDF fire safety plan approval take?",
+          "name": "How long does a Singapore Civil Defence Force (SCDF) plan approval take?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SCDF's published service target is to issue the outcome for a complete fire-safety plan submission within five working days for most cases. Preparation, landlord endorsement and revisions should still be included in the project schedule."
+            "text": "The Singapore Civil Defence Force (SCDF) published service target is to issue the outcome for a complete fire-safety plan submission within five working days for most cases. Preparation, landlord endorsement and revisions should still be included in the overall project schedule."
           }
         },
         {
           "@type": "Question",
-          "name": "Does an external commercial sign need a licence in Singapore?",
+          "name": "Does an external sign need a licence?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Outdoor signs generally require a Building and Construction Authority (BCA) advertisement licence unless an exemption applies. Landlord approval is normally needed first and some locations may require additional clearance."
+            "text": "Outdoor signs generally require a Building and Construction Authority (BCA) advertisement licence unless an exemption applies. Landlord approval is normally needed first, and conservation or special locations may require additional clearance."
           }
         },
         {
           "@type": "Question",
-          "name": "Why does a commercial renovation planner ask about after-hours air-conditioning?",
+          "name": "Why does the planner ask about after-hours air-conditioning?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Some buildings provide central air-conditioning only during normal operating hours. A business needing cooling later may require an approved independent system, chilled-water arrangement, landlord review and an air-balancing report."
+            "text": "Some buildings provide central air-conditioning only during normal hours. A business needing cooling later may require an approved independent system, chilled-water arrangement, landlord review and an air-balancing report."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this a legal approval guarantee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is a personalised planning assessment based on your answers. Final requirements depend on the unit’s approved use, drawings, landlord rules and formal review by the relevant authority or appointed professional."
           }
         }
       ]

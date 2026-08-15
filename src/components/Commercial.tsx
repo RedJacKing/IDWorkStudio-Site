@@ -11,13 +11,13 @@ const commercialPageContent = {
     "direct_answer": {
       "eyebrow": "Direct answer for Singapore business owners",
       "title": "Commercial renovation in Singapore: cost, timeline and approvals",
-      "p1": "Commercial renovation in Singapore typically costs <strong>$80 to $150 psf for most office renovations</strong>, with premium office fit-outs reaching <strong>up to $300 psf</strong>. Retail shops usually range from <strong>$120 to $300 psf</strong>, while F&B outlets commonly require <strong>$200 to $500+ psf</strong>. Most projects take <strong>6 to 12 weeks</strong> including design, landlord or MCST approval, authority checks and renovation works.",
+      "p1": "Commercial renovation in Singapore typically costs <strong>$50 to $80 psf for a basic office fit-out</strong>, <strong>$80 to $130 psf for a mid-range office fit-out</strong>, and <strong>$130 to $200+ psf for a premium or Grade A office fit-out</strong>. Complex corporate, high-spec M&E, acoustic, AV or strongly branded projects can exceed $200 psf and approach <strong>$300 psf</strong>. Retail shops usually range from <strong>$120 to $300 psf</strong>, while F&B outlets commonly require <strong>$200 to $500+ psf</strong>. A typical commercial renovation may take <strong>around 8 to 16 weeks from planning to handover</strong>, depending on unit type, approval requirements, M&E complexity and renovation scope.",
       "p2": "The main difference from residential renovation is compliance. Commercial projects may involve landlord fitting-out rules, MCST requirements, fire safety checks, exhaust requirements, working-hour restrictions and reinstatement obligations at lease end.",
       "cards": {
         "1": {
           "label": "Office renovation",
-          "range": "$80 – $150 psf",
-          "note": "Standard office renovation; premium fit-outs may reach $300 psf"
+          "range": "$50 – $200+ psf",
+          "note": "Basic $50–80 psf; mid-range $80–130 psf; premium / Grade A $130–200+ psf. Complex high-spec projects may approach $300 psf."
         },
         "2": {
           "label": "Retail renovation",
@@ -37,7 +37,7 @@ const commercialPageContent = {
       "items": {
         "1": {
           "title": "Basic office fit-out",
-          "cost": "$80 – $100 psf",
+          "cost": "$50 – $80 psf",
           "points": {
             "1": "Paint, flooring, basic ceiling touch-up and loose furniture coordination",
             "2": "Basic electrical and lighting points",
@@ -46,7 +46,7 @@ const commercialPageContent = {
         },
         "2": {
           "title": "Mid-range office renovation",
-          "cost": "$100 – $180 psf",
+          "cost": "$80 – $130 psf",
           "points": {
             "1": "Meeting rooms, pantry and manager rooms",
             "2": "Carpet/vinyl, ceiling, lighting and data works",
@@ -55,7 +55,7 @@ const commercialPageContent = {
         },
         "3": {
           "title": "Premium commercial fit-out",
-          "cost": "$180 – $300 psf",
+          "cost": "$130 – $200+ psf",
           "points": {
             "1": "Custom reception, feature walls and acoustic rooms",
             "2": "Higher-grade finishes and more M&E coordination",
@@ -70,7 +70,7 @@ const commercialPageContent = {
     },
     "timeline_guide": {
       "title": "Typical commercial renovation timeline",
-      "subtitle": "For most Singapore commercial projects, a realistic timeline is 6 to 12 weeks. The approval stage is usually where delays happen, especially when landlord, MCST, SCDF or building management comments require drawing revisions.",
+      "subtitle": "For many Singapore commercial projects, a realistic end-to-end planning range is around 8 to 16 weeks from planning to handover. Straightforward office fit-outs can be faster, while retail and F&B projects may take longer. The approval stage is usually where delays happen, especially when landlord, MCST, SCDF or building management comments require drawing revisions.",
       "steps": {
         "1": {
           "title": "Design and planning",
@@ -135,15 +135,15 @@ const commercialPageContent = {
       "subtitle": "Practical answers for office, retail and F&B renovation in Singapore, including cost, timeline, landlord approval, MCST and SCDF considerations.",
       "q1": {
         "q": "How much does commercial renovation cost in Singapore?",
-        "a": "Commercial renovation in Singapore typically costs $80 to $150 psf for most office renovations, with premium office fit-outs reaching up to $300 psf. Retail shops usually range from $120 to $300 psf, while F&B outlets commonly require $200 to $500+ psf. The final range is mainly affected by M&E works, fire safety requirements, carpentry, flooring, ceiling works and landlord reinstatement conditions."
+        "a": "Commercial renovation in Singapore typically costs $50 to $80 psf for a basic office fit-out, $80 to $130 psf for a mid-range office fit-out, and $130 to $200+ psf for a premium or Grade A office fit-out. Complex corporate, high-spec M&E, acoustic, AV or strongly branded projects can exceed $200 psf and approach $300 psf. Retail shops usually range from $120 to $300 psf, while F&B outlets commonly require $200 to $500+ psf. The final range is mainly affected by M&E works, fire safety requirements, carpentry, flooring, ceiling works and landlord reinstatement conditions."
       },
       "q2": {
         "q": "How much does office renovation cost in Singapore?",
-        "a": "A basic office renovation usually starts from $80 to $100 psf. A mid-range office with meeting rooms, pantry, flooring, ceiling and electrical works is usually $100 to $150 psf. Premium office fit-outs with feature walls, acoustic rooms, customised carpentry and higher-grade finishes can reach $150 to $300 psf."
+        "a": "A basic office fit-out is typically $50 to $80 psf. A mid-range office fit-out with more meeting rooms, glass partitions, pantry, better lighting and more electrical or data points is usually $80 to $130 psf. Premium or Grade A office fit-outs with acoustic treatment, custom carpentry, boardrooms, advanced M&E and stronger branding details are typically $130 to $200+ psf. Complex high-spec projects can exceed $200 psf and approach $300 psf."
       },
       "q3": {
         "q": "How long does commercial renovation usually take?",
-        "a": "Most commercial renovation projects take 6 to 12 weeks. Design and planning usually takes 2 to 3 weeks, landlord or MCST submission takes 2 to 4 weeks, and actual renovation works usually take 4 to 8 weeks depending on project size and approval conditions."
+        "a": "A typical commercial renovation may take around 8 to 16 weeks from planning to handover, depending on unit type, approval requirements, M&E complexity and renovation scope. Straightforward office fit-outs can be faster, while retail and F&B projects may take longer. Design and planning may take 2 to 3 weeks, landlord or MCST submission may take 2 to 4 weeks as a planning allowance, and actual renovation works commonly take 4 to 8 weeks depending on project size and approval conditions."
       },
       "q4": {
         "q": "Do I need landlord or MCST approval before renovation?",
@@ -187,13 +187,13 @@ const commercialPageContent = {
     "direct_answer": {
       "eyebrow": "给新加坡商业业主的直接答案",
       "title": "新加坡商业翻新：费用、时间表与审批",
-      "p1": "新加坡商业翻新通常为：<strong>多数办公室每平方英尺 $80 至 $150</strong>，高级办公室装修可达 <strong>每平方英尺 $300</strong>；<strong>零售店每平方英尺 $120 至 $300</strong>；<strong>餐饮空间每平方英尺 $200 至 $500+</strong>。多数项目连同设计、业主或 MCST 审批、相关检查与施工，通常需要 <strong>6 至 12 周</strong>。",
+      "p1": "新加坡商业翻新通常为：<strong>基础办公室装修每平方英尺 $50 至 $80</strong>，<strong>中档办公室装修每平方英尺 $80 至 $130</strong>，<strong>高端或 Grade A 办公室装修每平方英尺 $130 至 $200+</strong>。复杂企业项目、较高规格机电、隔音、AV 或品牌化设计可超过每平方英尺 $200，并接近 <strong>$300</strong>；<strong>零售店每平方英尺 $120 至 $300</strong>；<strong>餐饮空间每平方英尺 $200 至 $500+</strong>。商业翻新从规划到交付通常可预留 <strong>约 8 至 16 周</strong>，实际取决于单位类型、审批要求、机电复杂度与工程范围。",
       "p2": "商业翻新与住宅翻新的主要差别在于合规要求。商业项目可能涉及业主装修指南、MCST 要求、消防安全检查、排气系统、施工时段限制，以及租约结束时的原状修复责任。",
       "cards": {
         "1": {
           "label": "办公室翻新",
-          "range": "$80 – $150 / 平方英尺",
-          "note": "标准办公室装修；高级装修可达 $300 / 平方英尺"
+          "range": "$50 – $200+ / 平方英尺",
+          "note": "基础 $50–80；中档 $80–130；高端 / Grade A $130–200+。复杂高规格项目可接近 $300 / 平方英尺。"
         },
         "2": {
           "label": "零售店翻新",
@@ -213,7 +213,7 @@ const commercialPageContent = {
       "items": {
         "1": {
           "title": "基础办公室装修",
-          "cost": "$80 – $100 / 平方英尺",
+          "cost": "$50 – $80 / 平方英尺",
           "points": {
             "1": "油漆、地面、基础天花修补与活动家具协调",
             "2": "基础电位与灯位工程",
@@ -222,7 +222,7 @@ const commercialPageContent = {
         },
         "2": {
           "title": "中档办公室翻新",
-          "cost": "$100 – $180 / 平方英尺",
+          "cost": "$80 – $130 / 平方英尺",
           "points": {
             "1": "会议室、茶水间与经理房",
             "2": "地毯/乙烯基地板、天花、灯光与网络点",
@@ -231,7 +231,7 @@ const commercialPageContent = {
         },
         "3": {
           "title": "高级商业装修",
-          "cost": "$180 – $300 / 平方英尺",
+          "cost": "$130 – $200+ / 平方英尺",
           "points": {
             "1": "定制接待区、特色墙与隔音房",
             "2": "更高等级饰面与更多机电协调",
@@ -246,7 +246,7 @@ const commercialPageContent = {
     },
     "timeline_guide": {
       "title": "常见商业翻新时间表",
-      "subtitle": "新加坡多数商业项目较实际的时间为 6 至 12 周。审批阶段通常最容易延误，尤其当业主、MCST、SCDF 或大厦管理方要求修改图纸时。",
+      "subtitle": "新加坡许多商业项目从规划到交付，较实际的整体时间约为 8 至 16 周。较直接的办公室装修可能更快，而零售与餐饮项目可能更长。审批阶段通常最容易延误，尤其当业主、MCST、SCDF 或大厦管理方要求修改图纸时。",
       "steps": {
         "1": {
           "title": "设计与规划",
@@ -311,15 +311,15 @@ const commercialPageContent = {
       "subtitle": "针对办公室、零售与餐饮翻新的实用解答，包括费用、时间、业主审批、MCST 与 SCDF 注意事项。",
       "q1": {
         "q": "新加坡商业翻新费用大概是多少？",
-        "a": "新加坡商业翻新通常为多数办公室每平方英尺 $80 至 $150，高级办公室装修可达每平方英尺 $300。零售店通常为每平方英尺 $120 至 $300，餐饮空间通常需要每平方英尺 $200 至 $500+。最终费用主要受机电工程、消防安全要求、木作、地面、天花工程及租约原状修复条件影响。"
+        "a": "新加坡商业翻新通常为基础办公室装修每平方英尺 $50 至 $80，中档办公室装修每平方英尺 $80 至 $130，高端或 Grade A 办公室装修每平方英尺 $130 至 $200+。复杂企业项目、较高规格机电、隔音、AV 或品牌化设计可超过每平方英尺 $200，并接近 $300。零售店通常为每平方英尺 $120 至 $300，餐饮空间通常需要每平方英尺 $200 至 $500+。最终费用主要受机电工程、消防安全要求、木作、地面、天花工程及租约原状修复条件影响。"
       },
       "q2": {
         "q": "新加坡办公室翻新费用大概是多少？",
-        "a": "基础办公室翻新通常从每平方英尺 $80 至 $100 起。包含会议室、茶水间、地面、天花与电位工程的中档办公室通常为每平方英尺 $100 至 $150。若涉及特色墙、隔音房、定制木作与较高等级饰面，高级办公室装修可达每平方英尺 $150 至 $300。"
+        "a": "基础办公室装修通常为每平方英尺 $50 至 $80。包含更多会议室、玻璃隔间、茶水间、更好的灯光及更多电源或数据点的中档办公室，通常为每平方英尺 $80 至 $130。涉及隔音处理、定制木作、董事会议室、较复杂机电及更强品牌设计的高端或 Grade A 办公室，通常为每平方英尺 $130 至 $200+。复杂高规格项目可超过 $200，并接近 $300。"
       },
       "q3": {
         "q": "商业翻新通常需要多久？",
-        "a": "多数商业翻新项目需要 6 至 12 周。设计与规划通常需 2 至 3 周，业主或 MCST 提交通常需 2 至 4 周，实际施工通常需 4 至 8 周，视项目大小与审批条件而定。"
+        "a": "商业翻新从规划到交付通常可预留约 8 至 16 周，实际取决于单位类型、审批要求、机电复杂度与工程范围。较直接的办公室装修可能更快，而零售与餐饮项目可能更长。设计与规划可能需 2 至 3 周，业主或 MCST 提交可按 2 至 4 周作为规划缓冲，实际施工通常需 4 至 8 周，视项目大小与审批条件而定。"
       },
       "q4": {
         "q": "装修前是否需要业主或 MCST 批准？",
@@ -402,19 +402,7 @@ export default function Commercial() {
       "name": "Singapore"
     },
     "provider": {
-      "@type": "LocalBusiness",
-      "name": "ID Work Studio",
-      "url": "https://idworkstudio.com",
-      "telephone": "+6568162872",
-      "email": "contact@idworkstudio.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
-        "addressLocality": "Woodlands",
-        "addressRegion": "Singapore",
-        "postalCode": "737853",
-        "addressCountry": "SG"
-      }
+      "@id": "https://idworkstudio.com/#business"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

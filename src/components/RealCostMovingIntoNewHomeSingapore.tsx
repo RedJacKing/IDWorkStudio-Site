@@ -88,7 +88,7 @@ const content: Record<"en" | "zh", ArticleContent> = {
       "Premium warm neutral Singapore home interior showing living, dining and move-in ready renovation planning",
     quickAnswerTitle: "Quick answer",
     quickAnswer:
-      "A realistic move-in budget should separate renovation works, appliances, and furniture instead of treating everything as one renovation number. Renovation creates the foundation of the home, appliances make it functional, and furniture or styling can often be added gradually. If a homeowner spends S$100,000 before moving in, they should not assume the full S$100,000 will be recovered when selling after the 5-year MOP.",
+      "A realistic move-in budget should separate renovation works, appliances, furniture and the total move-in safety buffer instead of treating everything as one renovation number. Renovation contingency applies to renovation-specific uncertainty, while a total move-in safety buffer covers the wider household budget, including delivery, installation, missed items and last-minute changes. If a homeowner spends S$100,000 before moving in, they should not assume the full S$100,000 will be recovered when selling after the 5-year MOP.",
     costRows: [
       {
         label: "Renovation works",
@@ -345,9 +345,9 @@ const content: Record<"en" | "zh", ArticleContent> = {
     internalLinksTitle: "Useful planning tools and related guides",
     internalLinks: [
       {
-        label: "Renovation cost calculator",
-        to: "/renovation-cost-calculator",
-        text: "Estimate your renovation works separately before adding appliances and furniture to your move-in budget.",
+        label: "Total Home Budget Calculator",
+        to: "/total-home-budget-calculator",
+        text: "Plan renovation, loose furniture, appliances and your total move-in safety buffer together in one budgeting tool.",
       },
       {
         label: "Renovation quotation guide",
@@ -420,8 +420,8 @@ const content: Record<"en" | "zh", ArticleContent> = {
     ],
     ctaTitle: "Planning your renovation and move-in budget?",
     ctaText:
-      "Start by separating renovation works from appliances and furniture. ID Work Studio can help you plan the renovation foundation clearly, identify practical priorities and avoid spending heavily on items that do not improve daily living.",
-    ctaPrimary: "Use renovation calculator",
+      "Start by separating renovation works from appliances and furniture, then keep a separate total move-in safety buffer for delivery, installation, missed items and last-minute changes. ID Work Studio can help you plan the renovation foundation clearly, identify practical priorities and avoid spending heavily on items that do not improve daily living.",
+    ctaPrimary: "Use Total Home Budget Calculator",
     ctaSecondary: "Request a quote",
     breadcrumbCurrent: "Real Cost of Moving Into a New Home",
   },
@@ -439,7 +439,7 @@ const content: Record<"en" | "zh", ArticleContent> = {
     heroImageAlt: "新加坡高级暖色系住家室内设计，客厅与餐厅展示搬入前预算规划",
     quickAnswerTitle: "快速答案",
     quickAnswer:
-      "实际搬入预算应该把装修工程、电器和家具分开计算，而不是全部混在一个装修数字里。装修建立家的基础，电器让生活可以运作，家具和软装则可以在入住后慢慢增加。如果屋主搬入前花了 S$100,000，也不应该假设五年MOP后卖房时可以全数回收。",
+      "实际搬入预算应该把装修工程、电器、家具和整体搬入安全缓冲分开计算，而不是全部混在一个装修数字里。装修应急预算主要针对装修工程本身的不确定性，而整体搬入安全缓冲则覆盖送货、安装、遗漏物品及临时调整等更广泛的开支。如果屋主搬入前花了 S$100,000，也不应该假设五年MOP后卖房时可以全数回收。",
     costRows: [
       {
         label: "装修工程",
@@ -696,9 +696,9 @@ const content: Record<"en" | "zh", ArticleContent> = {
     internalLinksTitle: "实用预算工具与相关指南",
     internalLinks: [
       {
-        label: "装修费用计算器",
-        to: "/renovation-cost-calculator",
-        text: "先估算装修工程费用，再把电器和家具加入整体搬入预算。",
+        label: "整体搬入预算计算器",
+        to: "/total-home-budget-calculator",
+        text: "把装修、活动家具、电器与整体搬入安全缓冲一起规划，形成更完整的搬入预算。",
       },
       {
         label: "新加坡装修报价指南",
@@ -771,8 +771,8 @@ const content: Record<"en" | "zh", ArticleContent> = {
     ],
     ctaTitle: "正在规划装修和搬入预算？",
     ctaText:
-      "先把装修工程、电器和家具分开。ID Work Studio 可以协助你清楚规划装修基础、判断实用优先顺序，并避免把预算过度花在不改善日常生活的项目上。",
-    ctaPrimary: "使用费用计算器",
+      "先把装修工程、电器和家具分开，再另外保留整体搬入安全缓冲，用来应付送货、安装、遗漏项目与临时调整。ID Work Studio 可以协助你清楚规划装修基础、判断实用优先顺序，并避免把预算过度花在不改善日常生活的项目上。"
+    ctaPrimary: "使用整体搬入预算计算器",
     ctaSecondary: "索取装修报价",
     breadcrumbCurrent: "新加坡搬入新家的真实费用",
   },
@@ -1052,7 +1052,7 @@ export default function RealCostMovingIntoNewHomeSingapore() {
             <p className="mt-4 max-w-3xl text-base leading-8 text-white/75">{t.ctaText}</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link
-                to="/renovation-cost-calculator"
+                to="/total-home-budget-calculator"
                 className="inline-flex items-center justify-center rounded-full bg-[#C5A059] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#d6b36c]"
               >
                 {t.ctaPrimary}

@@ -10,9 +10,9 @@ const retailRenoPageContent = {
     badge: "Singapore Retail & Mall Store Renovation Specialist",
     serif: "Retail Fit-Out That",
     bold: "DRIVES SALES",
-    subtitle: "MCST-compliant retail renovation for Singapore shopping malls. Night-works capable, shopfront-to-stockroom specialists with proven mall management relationships.",
+    subtitle: "Retail renovation for Singapore shopping malls, with mall fit-out coordination, after-hours work capability where required, and shopfront-to-stockroom delivery.",
     cta: "Get a Free Site Survey",
-    b1: "MCST Submission Managed",
+    b1: "Mall Fit-Out Coordination",
     b2: "Night-Works Capable",
     b3: "Fast Mall Turnaround"
   },
@@ -21,11 +21,11 @@ const retailRenoPageContent = {
     bold: "RETAIL FIT-OUT SPECIALISTS",
     p1: "ID Work Studio specialises in retail and mall store renovation across Singapore's major shopping centres. We understand the strict MCST fit-out requirements, limited working hour windows, and brand-standard compliance that mall retail demands.",
     p2: "From luxury boutiques in Orchard Road to food hall units and neighbourhood mall stores, our team delivers high-quality retail interiors that maximise sales floor efficiency and brand impact within your MCST timeline.",
-    p3: "As an experienced retail contractor, we manage all <strong>MCST fit-out submissions, building plan approvals, and SCDF fire safety requirements</strong> — and we are capable of executing night works to meet your mall's restricted hours.",
+    p3: "As an experienced retail contractor, we coordinate applicable <strong>landlord or MCST fit-out requirements, BCA processes, and SCDF fire safety requirements</strong> with the relevant appointed parties where required — and we are capable of executing after-hours works when the mall's fit-out rules require them.",
     c1t: "MCST Submission Experts",
-    c1d: "Full management of mall fit-out permit packages, tenant coordination, and MCST compliance documentation for major Singapore malls.",
+    c1d: "Coordination of mall fit-out documentation, tenant requirements, and building-management submissions for Singapore retail projects.",
     c2t: "Night-Works Capability",
-    c2d: "Our team is certified for and experienced in after-hours and overnight renovation works to comply with mall trading hour restrictions.",
+    c2d: "Our team is experienced in after-hours and overnight renovation works where required by the mall's approved fit-out and working-hour rules.",
     c3t: "Brand-Standard Delivery",
     c3d: "We work directly with brand guidelines and head office specifications to deliver compliant, brand-accurate store environments."
   },
@@ -43,15 +43,15 @@ const retailRenoPageContent = {
     i5t: "M&E & ACMV Works",
     i5d: "Air-conditioning, electrical, and data works coordinated with the mall's central building management system.",
     i6t: "MCST & Permit Management",
-    i6d: "Full MCST fit-out submission, BCA permit applications, and SCDF fire safety approval managed in-house."
+    i6d: "Coordination of applicable landlord or MCST fit-out requirements, BCA processes, and SCDF fire safety requirements with the relevant appointed parties where required."
   },
   stats: {
     s1u: "per sqft",
     s1l: "Retail fit-out cost range",
     s2u: "weeks",
     s2l: "Typical fit-out timeline",
-    s3u: "day",
-    s3l: "MCST submission turnaround"
+    s3u: "",
+    s3l: "Mall fit-out approval requirements"
   },
   challenges: {
     serif: "Overcoming",
@@ -61,7 +61,7 @@ const retailRenoPageContent = {
     p1pain: "MCST Compliance",
     p1sol: "We have established relationships with major Singapore mall management teams and understand each mall's specific fit-out requirements.",
     p2pain: "Night-Works Restrictions",
-    p2sol: "Our certified night-works team operates during mall off-hours to complete your fit-out without impacting neighbouring tenants.",
+    p2sol: "Our team can carry out approved after-hours or overnight works where the mall's fit-out rules restrict noisy or disruptive works during trading hours.",
     p3pain: "Tight Mall Timelines",
     p3sol: "Detailed Gantt chart planning and dedicated site supervisors ensure your store opens on time, every time."
   },
@@ -72,20 +72,20 @@ const retailRenoPageContent = {
     s1t: "Free Site Survey",
     s1d: "Onsite assessment, MCST requirement review, and full quotation.",
     s2t: "Design & MCST Submission",
-    s2d: "Shopfront design, floor plans, and full MCST fit-out permit submission.",
+    s2d: "Shopfront design, floor plans, and coordination of the mall or building-management fit-out submission where required.",
     s3t: "Fit-Out Works",
-    s3d: "Night-capable construction by our licensed retail fit-out team.",
+    s3d: "Retail fit-out works with after-hours capability where required by the mall's working-hour rules.",
     s4t: "Handover & Opening",
     s4d: "MCST joint inspection, defect rectification, and store opening support."
   },
   faq: {
     title: "Retail Renovation FAQs",
     q1: "How much does a retail store fit-out cost in Singapore?",
-    a1: "Retail fit-out in Singapore typically costs between <strong>S$65 and S$150 per square foot</strong> for a standard mall store. A basic fit-out starts from S$65 psf. A premium brand-standard fit-out with custom displays and high-end finishes can reach S$150 psf or more. F&B fit-outs with kitchen equipment and NEA compliance add further to the cost.",
+    a1: "Retail fit-out planning ranges in Singapore are typically <strong>S$120–S$180 psf for a basic retail fit-out</strong>, <strong>S$180–S$300 psf for a mall fit-out</strong>, and <strong>S$300+ psf for a high-end or flagship retail fit-out</strong>. Actual cost depends on shopfront, display fixtures, lighting, M&E, working-hour restrictions, landlord requirements and finish level. F&B fit-outs with kitchen, exhaust and additional authority requirements usually cost more.",
     q2: "How long does a mall store fit-out take in Singapore?",
-    a2: "A standard mall store fit-out (200–500 sqft) typically takes <strong>6–12 weeks</strong> from design sign-off to store opening. This includes 1–2 weeks for MCST submission review and 4–8 weeks for the physical fit-out. We provide a full Gantt chart timeline before work commences.",
+    a2: "A standard mall store fit-out (200–500 sqft) typically takes <strong>6–12 weeks</strong> from design sign-off to store opening. Mall or building-management fit-out approval timing is building-specific, while the physical fit-out commonly takes around 4–8 weeks depending on scope and working-hour restrictions. We provide a full Gantt chart timeline before work commences.",
     q3: "Can you do night works for mall renovation in Singapore?",
-    a3: "Yes. ID Work Studio is experienced in and certified for night works in Singapore shopping malls. Most major mall management companies (CapitaLand, Frasers, Lendlease) require renovation works outside trading hours. Our night-works team is fully equipped and compliant with MOM Workplace Safety and Health regulations for after-hours construction."
+    a3: "Yes. ID Work Studio is experienced in after-hours and overnight retail fit-out works where required by a mall's approved working-hour rules. Many mall fit-out guides restrict noisy or disruptive works to approved after-hours windows. Our site team follows the applicable Workplace Safety and Health requirements and the specific building-management conditions for the project."
   },
   related: { title: "Explore Our Other Commercial Services" },
   cta: {
@@ -96,14 +96,14 @@ const retailRenoPageContent = {
   sticky: { text: "Free Retail Fit-Out Quote — WhatsApp Us Now" }
 },
   zh: {
-  hero: { badge:"新加坡零售及商场店面翻新专家", serif:"推动销售增长的", bold:"零售装修", subtitle:"符合MCST标准的新加坡商场店面翻新。具备夜间施工能力，从店面到储物间全程专业服务，拥有成熟的商场管理关系网络。", cta:"获取免费现场勘察", b1:"代办MCST提交", b2:"具备夜间施工能力", b3:"快速商场交付" },
-  overview: { serif:"新加坡", bold:"零售装修专家", p1:"ID Work Studio 专注于新加坡各大购物中心的零售及商场店面翻新。我们深刻理解商场零售所要求的严格MCST装修规范、有限施工时间窗口及品牌标准合规要求。", p2:"从乌节路奢侈品精品店到美食广场单位及邻里商场店面，我们团队在您的MCST工期内交付高质量零售室内设计，最大化销售区效率和品牌影响力。", p3:"作为经验丰富的零售装修承包商，我们管理所有<strong>MCST装修许可证提交、建筑方案审批及SCDF消防安全要求</strong>——并具备在商场限制时间内执行夜间施工的能力。", c1t:"MCST提交专家", c1d:"为新加坡主要商场提供完整的装修许可证包管理、租户协调及MCST合规文件服务。", c2t:"夜间施工能力", c2d:"我们团队持证并擅长在商场营业时间外进行下班后及通宵翻新施工，符合商场营业限制规定。", c3t:"品牌标准交付", c3d:"我们直接与品牌指引及总部规格配合，交付符合合规要求且准确呈现品牌形象的店面环境。" },
-  scope: { serif:"零售装修", bold:"包含哪些工程", i1t:"店面与橱窗设计", i1d:"高冲击力店面、橱窗陈列及入口标识设计，最大化来自商场公共区域的客流量。", i2t:"销售区布局", i2d:"客户动线规划及地板布局优化，提升商品发现率、停留时间及销售转化率。", i3t:"定制木工与陈列", i3d:"按品牌规格和MCST指引定制的陈列架、货架、收银台及试衣间。", i4t:"照明设计", i4d:"分层式零售照明——环境光、重点照明及功能照明——旨在展示商品并提升店内体验。", i5t:"机电及空调工程", i5d:"与商场中央大厦管理系统协调的空调、电气及数据工程。", i6t:"MCST及许可证管理", i6d:"全程代办MCST装修许可证提交、BCA许可证申请及SCDF消防安全审批。" },
-  stats: { s1u:"每平方英尺", s1l:"零售装修费用范围", s2u:"周", s2l:"典型装修工期", s3u:"天", s3l:"MCST提交周转时间" },
-  challenges: { serif:"克服", bold:"零售翻新难题", ch_label:"难题", sol_label:"我们的解决方案", p1pain:"MCST合规", p1sol:"我们与新加坡主要商场管理团队建立了成熟关系，深入了解各商场的具体装修要求。", p2pain:"夜间施工限制", p2sol:"我们持证的夜间施工团队在商场营业时间外作业，不影响邻近租户。", p3pain:"紧张的商场工期", p3sol:"详细的甘特图规划及专属现场监督员确保您的店面按时开业。" },
+  hero: { badge:"新加坡零售及商场店面翻新专家", serif:"推动销售增长的", bold:"零售装修", subtitle:"新加坡商场零售翻新，协调大厦装修要求，并在需要时具备非营业时间施工能力，从店面到储物间提供完整交付。", cta:"获取免费现场勘察", b1:"商场装修协调", b2:"具备夜间施工能力", b3:"快速商场交付" },
+  overview: { serif:"新加坡", bold:"零售装修专家", p1:"ID Work Studio 专注于新加坡各大购物中心的零售及商场店面翻新。我们深刻理解商场零售所要求的严格MCST装修规范、有限施工时间窗口及品牌标准合规要求。", p2:"从乌节路奢侈品精品店到美食广场单位及邻里商场店面，我们团队在您的MCST工期内交付高质量零售室内设计，最大化销售区效率和品牌影响力。", p3:"作为经验丰富的零售装修承包商，我们会在需要时与相关受委任专业人士协调<strong>业主或MCST装修要求、BCA流程及SCDF消防安全要求</strong>，并可按商场装修规定安排非营业时间施工。", c1t:"MCST提交专家", c1d:"协调新加坡零售项目所需的商场装修文件、租户要求及大厦管理提交流程。", c2t:"夜间施工能力", c2d:"我们团队具备非营业时间及通宵施工经验，并会在商场批准的装修与工作时段要求下执行相关工程。", c3t:"品牌标准交付", c3d:"我们直接与品牌指引及总部规格配合，交付符合合规要求且准确呈现品牌形象的店面环境。" },
+  scope: { serif:"零售装修", bold:"包含哪些工程", i1t:"店面与橱窗设计", i1d:"高冲击力店面、橱窗陈列及入口标识设计，最大化来自商场公共区域的客流量。", i2t:"销售区布局", i2d:"客户动线规划及地板布局优化，提升商品发现率、停留时间及销售转化率。", i3t:"定制木工与陈列", i3d:"按品牌规格和MCST指引定制的陈列架、货架、收银台及试衣间。", i4t:"照明设计", i4d:"分层式零售照明——环境光、重点照明及功能照明——旨在展示商品并提升店内体验。", i5t:"机电及空调工程", i5d:"与商场中央大厦管理系统协调的空调、电气及数据工程。", i6t:"MCST及许可证管理", i6d:"在需要时，与相关受委任专业人士协调业主或MCST装修要求、BCA流程及SCDF消防安全要求。", },
+  stats: { s1u:"每平方英尺", s1l:"零售装修费用范围", s2u:"周", s2l:"典型装修工期", s3u:"", s3l:"商场装修审批要求" },
+  challenges: { serif:"克服", bold:"零售翻新难题", ch_label:"难题", sol_label:"我们的解决方案", p1pain:"MCST合规", p1sol:"我们与新加坡主要商场管理团队建立了成熟关系，深入了解各商场的具体装修要求。", p2pain:"夜间施工限制", p2sol:"当商场装修规定限制噪音或干扰性工程时，我们可在获批准的非营业时间或夜间施工。", p3pain:"紧张的商场工期", p3sol:"详细的甘特图规划及专属现场监督员确保您的店面按时开业。" },
   trust: { text:"深受新加坡各大购物中心零售品牌及餐饮运营商信赖。" },
-  process: { serif:"我们如何", bold:"交付您的零售装修", s1t:"免费现场勘察", s1d:"现场评估、MCST要求审查与完整报价。", s2t:"设计与MCST提交", s2d:"店面设计、平面图及完整MCST装修许可证提交。", s3t:"装修施工", s3d:"由我们持牌零售装修团队进行夜间施工。", s4t:"移交与开业", s4d:"MCST联合验收、缺陷修正及开业支持。" },
-  faq: { title:"零售翻新常见问题", q1:"新加坡零售店面装修费用是多少？", a1:"新加坡零售装修标准商场店面通常在<strong>每平方英尺S$65至S$150</strong>之间。基础装修从S$65每平方英尺起。配备定制陈列及高端装饰的品牌标准装修可达S$150每平方英尺或以上。含厨房设备及NEA合规要求的餐饮装修费用另行追加。", q2:"新加坡商场店面装修需要多长时间？", a2:"标准商场店面装修（200至500平方英尺）从设计确认到开业通常需要<strong>6至12周</strong>，包括1至2周MCST提交审查及4至8周实体装修施工。我们在施工前提供完整的甘特图时间表。", q3:"你们能在新加坡商场进行夜间施工吗？", a3:"可以。ID Work Studio 在新加坡购物商场夜间施工方面经验丰富并持有相关资质。凯德、Fraser及Lendlease等主要商场管理公司要求在营业时间外进行翻新施工。我们的夜间施工团队完全符合人力部工作场所安全与卫生法规。" },
+  process: { serif:"我们如何", bold:"交付您的零售装修", s1t:"免费现场勘察", s1d:"现场评估、MCST要求审查与完整报价。", s2t:"设计与MCST提交", s2d:"店面设计、平面图，以及在需要时协调商场或大厦管理装修提交流程。", s3t:"装修施工", s3d:"按商场工作时段规定，在需要时安排具备非营业时间施工能力的零售装修工程。", s4t:"移交与开业", s4d:"MCST联合验收、缺陷修正及开业支持。" },
+  faq: { title:"零售翻新常见问题", q1:"新加坡零售店面装修费用是多少？", a1:"新加坡零售装修的常见规划范围通常为：<strong>基础零售装修每平方英尺 S$120–S$180</strong>、<strong>商场店面装修每平方英尺 S$180–S$300</strong>，以及<strong>高端或旗舰店装修每平方英尺 S$300+</strong>。实际费用取决于店面、陈列道具、灯光、机电、施工时段限制、业主要求及饰面等级。餐饮装修若涉及厨房、排气及额外审批要求，费用通常更高。", q2:"新加坡商场店面装修需要多长时间？", a2:"标准商场店面装修（200至500平方英尺）从设计确认到开业通常需要<strong>6至12周</strong>。商场或大厦管理装修审批时间因大厦而异，而实体装修通常约需4至8周，实际取决于工程范围及施工时段限制。我们在施工前提供完整的甘特图时间表。", q3:"你们能在新加坡商场进行夜间施工吗？", a3:"可以。ID Work Studio 具备商场非营业时间及夜间零售装修经验，并会按各商场获批准的工作时段要求安排施工。许多商场装修指南会把噪音或干扰性工程限制在指定的非营业时间。我们的现场团队会遵守适用的工作场所安全与卫生要求及该项目的大厦管理条件。" },
   related: { title:"探索我们的其他商业服务" },
   cta: { serif:"准备好开设", bold:"您的店面了吗？", btn:"WhatsApp 获取免费现场勘察" },
   sticky: { text:"免费零售装修报价 — 立即WhatsApp联系我们" }
@@ -118,11 +118,10 @@ export default function RetailMallRenovation() {
 
   const serviceSchema = {
     "@context":"https://schema.org","@type":"Service","name":"Retail & Mall Store Renovation Singapore",
-    "description":"Specialist retail fit-out contractor for shopping mall stores in Singapore. MCST submission management, shopfront design, night-works capability.",
+    "description":"Specialist retail fit-out contractor for shopping mall stores in Singapore. Mall and building-management fit-out coordination, shopfront design, and after-hours work capability where required.",
     "serviceType":"Retail Renovation","areaServed":{"@type":"City","name":"Singapore"},
-    "provider":{"@type":"GeneralContractor","name":"ID Work Studio","url":"https://idworkstudio.com","telephone":"+6568162872","email":"contact@idworkstudio.com",
-      "address":{"@type":"PostalAddress","streetAddress":"11 Woodlands Close, Woodlands 11, #03-10","addressLocality":"Woodlands","addressRegion":"Singapore","postalCode":"737853","addressCountry":"SG"}},
-    "offers":{"@type":"Offer","priceCurrency":"SGD","description":"Retail and mall store renovation from S$65 to S$150 per square foot."},
+    "provider":{"@id":"https://idworkstudio.com/#business"},
+    "offers":{"@type":"Offer","priceCurrency":"SGD","description":"Retail fit-out planning ranges: S$120–S$180 psf basic retail, S$180–S$300 psf mall fit-out, and S$300+ psf high-end or flagship retail."},
     "mainEntityOfPage":{"@type":"WebPage","@id":"https://idworkstudio.com/commercial/retail-mall-renovation"}
   };
   const faqItems = [
@@ -142,20 +141,20 @@ export default function RetailMallRenovation() {
     <>
       <Helmet>
         <title>Retail & Mall Store Renovation Singapore | MCST Fit-Out Specialist | ID Work Studio</title>
-        <meta name="description" content="Specialist retail and mall store renovation contractor in Singapore. MCST submissions, shopfront design, night-works capable. From $65 psf. Free site survey."/>
+        <meta name="description" content="Specialist retail and mall store renovation contractor in Singapore. Mall fit-out coordination, shopfront design and after-hours work capability where required. Free site survey."/>
         <meta name="keywords" content="retail renovation Singapore, mall store renovation Singapore, shop fit-out Singapore, MCST renovation Singapore, shopping mall renovation Singapore 2026"/>
         <meta name="geo.region" content="SG"/><meta name="geo.placename" content="Woodlands, Singapore"/>
         <meta name="geo.position" content="1.4348129;103.7326522"/><meta name="ICBM" content="1.4348129, 103.7326522"/>
         <link rel="canonical" href="https://idworkstudio.com/commercial/retail-mall-renovation"/>
         <meta property="og:type" content="website"/><meta property="og:url" content="https://idworkstudio.com/commercial/retail-mall-renovation"/>
         <meta property="og:title" content="Retail & Mall Store Renovation Singapore | ID Work Studio"/>
-        <meta property="og:description" content="Specialist retail fit-out for Singapore shopping malls. MCST submissions, night-works capable. From $65 psf."/>
+        <meta property="og:description" content="Specialist retail fit-out for Singapore shopping malls, with mall fit-out coordination and after-hours work capability where required."/>
         <meta property="og:image" content="https://idworkstudio.com/gallery/commercial-expertise.png"/>
         <meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/>
         <meta property="og:site_name" content="ID Work Studio"/><meta property="og:locale" content="en_SG"/>
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="Retail & Mall Store Renovation Singapore | ID Work Studio"/>
-        <meta name="twitter:description" content="Specialist retail fit-out for Singapore shopping malls. MCST submissions, night-works capable."/>
+        <meta name="twitter:description" content="Specialist retail fit-out for Singapore shopping malls, with mall fit-out coordination and after-hours work capability where required."/>
         <meta name="twitter:image" content="https://idworkstudio.com/gallery/commercial-expertise.png"/>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -243,7 +242,7 @@ export default function RetailMallRenovation() {
         <section className="py-16 bg-dark-charcoal">
           <div className="max-w-5xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              {[{v:"$65–$150",s:"s1"},{v:"6–12",s:"s2"},{v:"1–2",s:"s3"}].map(({v,s})=>(
+              {[{v:"$120–$300+",s:"s1"},{v:"6–12",s:"s2"},{v:"Building-specific",s:"s3"}].map(({v,s})=>(
                 <div key={s} className="flex flex-col items-center">
                   <div className="flex items-baseline gap-2 mb-2">
                     <span className="text-4xl md:text-5xl font-bold text-gold font-sans">{v}</span>

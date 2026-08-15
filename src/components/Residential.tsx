@@ -16,7 +16,7 @@ export default function Residential() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://idworkstudio.com" },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://idworkstudio.com/" },
       { "@type": "ListItem", "position": 2, "name": "Residential Renovation Singapore", "item": "https://idworkstudio.com/residential" }
     ]
   };
@@ -25,23 +25,11 @@ export default function Residential() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Residential Renovation Singapore",
-    "description": "HDB-licensed and BCA-registered residential renovation and interior design in Singapore. Specialising in HDB renovation, condo renovation, and landed home interiors across Singapore. Based in Woodlands, Singapore.",
+    "description": "HDB-registered and BCA-registered residential renovation and interior design in Singapore. Specialising in HDB renovation, condo renovation, and landed home interiors across Singapore. Based in Woodlands, Singapore.",
     "serviceType": "Residential Renovation",
     "areaServed": { "@type": "City", "name": "Singapore" },
     "provider": {
-      "@type": "LocalBusiness",
-      "name": "ID Work Studio",
-      "url": "https://idworkstudio.com",
-      "telephone": "+6568162872",
-      "email": "contact@idworkstudio.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
-        "addressLocality": "Woodlands",
-        "addressRegion": "Singapore",
-        "postalCode": "737853",
-        "addressCountry": "SG"
-      }
+      "@id": "https://idworkstudio.com/#business"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -64,48 +52,14 @@ export default function Residential() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the renovation cost for a 4-room BTO flat in 2026?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A comprehensive 4-room BTO renovation in Singapore typically ranges from $45,000 to $65,000 in 2026. This covers flooring, painting, plumbing, and custom carpentry for the kitchen and wardrobes. Premium finishes or open-plan hacking can push costs to $75,000+." }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does a 3-room or 5-room HDB renovation cost in Singapore?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A 3-room BTO renovation typically costs $25,000–$45,000. A 5-room BTO ranges from $50,000–$90,000. Resale flats of any size add 20–40% to the cost due to hacking, rewiring and waterproofing requirements." }
-      },
-      {
-        "@type": "Question",
-        "name": "Why does resale HDB renovation cost more than BTO renovation?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Resale HDB flats require infrastructure work before aesthetic renovation — including rewiring old electrical systems, replacing corroded pipes, hacking dated tiles, and waterproofing wet areas. These prelim works typically add $8,000–$20,000 to the total cost." }
-      },
-      {
-        "@type": "Question",
-        "name": "How can I maximize storage in a small HDB layout?",
-        "acceptedAnswer": { "@type": "Answer", "text": "To maximize storage in small HDBs, utilize vertical space with floor-to-ceiling carpentry. Implement smart solutions like platform beds with drawers, hidden storage within feature walls, and extendable dining tables. Japandi designs use concealed cabinetry to maintain a minimalist aesthetic without sacrificing functionality." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need an HDB permit for renovation works in Singapore?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most HDB renovation works including hacking, tiling, electrical and plumbing require an HDB Renovation Permit before physical work begins. The permit takes 1–3 weeks to approve. As an HDB-licensed firm, ID Work Studio handles all permit submissions on your behalf." }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does an HDB renovation take in Singapore?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A 4-room BTO renovation typically takes 8–12 weeks from key collection to handover, including permit processing. Resale flat renovations take 10–16 weeks due to additional hacking and infrastructure works." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the HDB renovation loan limit in Singapore?",
-        "acceptedAnswer": { "@type": "Answer", "text": "HDB flat owners can borrow up to $30,000 under the HDB Renovation Loan, repayable over up to 5 years. The loan covers licensed renovation works only. Bank renovation loans are available for projects exceeding this limit." }
-      },
-      {
-        "@type": "Question",
-        "name": "Why is choosing an HDB-licensed firm important?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Choosing an HDB-licensed firm is important because it helps ensure your renovation follows HDB guidelines and structural safety requirements. It also gives homeowners added confidence that works are carried out in line with Singapore’s renovation standards." }
+    "mainEntity": (['1', '2', '3', '4', '5', '6', '7', '8'] as const).map((key) => ({
+      "@type": "Question",
+      "name": t(`residential_page.faq_section.items.${key}.q`),
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": t(`residential_page.faq_section.items.${key}.a`)
       }
-    ]
+    }))
   };
 
   const faqIcons: Record<string, React.ReactNode> = {
@@ -125,7 +79,7 @@ export default function Residential() {
         <title>HDB &amp; Condo Interior Design Singapore | ID Work Studio</title>
         <meta
           name="description"
-          content="HDB-licensed and BCA-registered residential interior design and renovation in Singapore. Tailored solutions for BTO, resale flats, condominiums and landed homes."
+          content="HDB-registered and BCA-registered residential interior design and renovation in Singapore. Tailored solutions for BTO, resale flats, condominiums and landed homes."
         />
         <meta
           name="keywords"
@@ -141,7 +95,7 @@ export default function Residential() {
         <meta property="og:title" content="HDB & Condo Interior Design Singapore | ID Work Studio" />
         <meta
           property="og:description"
-          content="HDB-licensed and BCA-registered residential interior design and renovation in Singapore for BTO, resale, condo and landed homes."
+          content="HDB-registered and BCA-registered residential interior design and renovation in Singapore for BTO, resale, condo and landed homes."
         />
         <meta property="og:image" content="https://idworkstudio.com/WALANDING.jpg" />
         <meta property="og:image:width" content="1200" />
@@ -152,7 +106,7 @@ export default function Residential() {
         <meta name="twitter:title" content="HDB & Condo Interior Design Singapore | ID Work Studio" />
         <meta
           name="twitter:description"
-          content="HDB-licensed and BCA-registered residential interior design and renovation in Singapore. Specialising in BTO, resale and condo homes."
+          content="HDB-registered and BCA-registered residential interior design and renovation in Singapore. Specialising in BTO, resale and condo homes."
         />
         <meta name="twitter:image" content="https://idworkstudio.com/WALANDING.jpg" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
@@ -234,7 +188,7 @@ export default function Residential() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold">
-                  HDB-Licensed &amp; BCA-Registered Firm
+                  HDB Registered &amp; BCA-Registered Firm
                 </span>
                 <h2 className="text-3xl md:text-4xl font-serif mt-3 mb-8 text-charcoal">
                   {t('residential_page.specialists.title')}
@@ -535,7 +489,7 @@ export default function Residential() {
                   decoding="async"
                 />
                 <div className="absolute -top-5 -right-4 md:-right-8 bg-gold text-dark-charcoal p-5 md:p-6 rounded-2xl shadow-xl">
-                  <p className="text-2xl md:text-3xl font-bold font-serif leading-none">13,480</p>
+                  <p className="text-2xl md:text-3xl font-bold font-serif leading-none">13,500</p>
                   <p className="text-[10px] uppercase tracking-widest mt-1 font-bold leading-tight">
                     MOP Flats<br />in 2026
                   </p>

@@ -134,7 +134,7 @@ const resources = {
           "title": "Registered, structured and design-led.",
           "signals": [
             "BCA-registered renovation and interior design firm in Singapore.",
-            "HDB-approved for residential renovation works and HDB project coordination.",
+            "HDB Registered Renovation Contractor for residential renovation works and HDB project coordination.",
             "Experience across HDB homes, condos, office fit-outs and commercial reinstatement.",
             "Premium positioning with practical budgeting, sequencing and handover planning."
           ]
@@ -259,7 +259,7 @@ const resources = {
         "hero": {
           "badge": "2026 Design Trends",
           "title": "HDB & Condo Interior Design Singapore — Refined Living, Thoughtfully Crafted",
-          "subtitle": "HDB-licensed and BCA-registered firm creating tailored homes for modern living, with careful planning, permit coordination and polished execution.",
+          "subtitle": "HDB-registered and BCA-registered firm creating tailored homes for modern living, with careful planning, permit coordination and polished execution.",
           "cta": "Book a Home Consultation",
           "calculatorCta": "Renovation Cost Calculator",
           "quizCta": "Find Your Renovation Style"
@@ -299,7 +299,7 @@ const resources = {
             }
           },
           "testimonial": {
-            "quote": "HDB-licensed and BCA-registered interior design for modern BTO and resale homes in Singapore.",
+            "quote": "HDB-registered and BCA-registered interior design for modern BTO and resale homes in Singapore.",
             "author": "ID Work Studio"
           }
         },
@@ -315,7 +315,7 @@ const resources = {
           },
           "q3": {
             "q": "Why is choosing an HDB-registered contractor important for safety?",
-            "a": "Choosing an HDB-registered contractor is crucial because they are trained to strictly adhere to <strong>HDB's renovation guidelines</strong> and structural safety protocols. They ensure that no critical structural pillars are compromised during hacking and that all electrical and plumbing works meet Singapore's safety standards, protecting you from liability and safety hazards."
+            "a": "Choosing an HDB-registered contractor helps ensure HDB renovation works are carried out by a contractor listed on HDB’s Directory of Renovation Contractors and in line with the applicable <strong>HDB renovation guidelines</strong>. Electrical, plumbing and other regulated works must still be carried out by the appropriately licensed or qualified parties where required."
           }
         },
         "cta": {
@@ -327,28 +327,28 @@ const resources = {
           "badge": "2026 Renovation Cost Guide",
           "title": "Transparent HDB Renovation Costs",
           "subtitle": "Real price benchmarks from Singapore's renovation market. Zero hidden charges. Always get a full itemised quote before signing.",
-          "note": "Always set aside 10–15% of your budget as contingency for unexpected works. Resale HDB flats typically cost 20–40% more than BTO due to hacking, rewiring, waterproofing and pipe replacement requirements.",
+          "note": "For planning, set aside about 10–15% contingency for BTO or newer homes and 15–25% for resale homes. Resale renovation generally costs more because hacking, removal, rewiring, plumbing replacement, waterproofing and making-good works are more common, but the actual difference depends on the existing condition and renovation scope.",
           "cta": "Get a Free Itemised Quote",
           "items": {
             "bto3": {
               "label": "3-Room BTO",
-              "range": "$25,000 – $45,000",
-              "desc": "Flooring, painting, basic electrical, kitchen cabinets and bathroom fixtures. Ideal for first-time homeowners on a focused budget."
+              "range": "$40,000 – $53,000",
+              "desc": "Typical 2026 whole-home planning range for a 3-room BTO. Actual cost depends on carpentry, wet works, electrical scope, material selections and design complexity."
             },
             "bto4": {
               "label": "4-Room BTO",
-              "range": "$45,000 – $65,000",
-              "desc": "Full renovation including custom kitchen carpentry, built-in wardrobes, flooring, plumbing and feature wall. The most common renovation scope in Singapore."
+              "range": "$50,000 – $60,000",
+              "desc": "Typical 2026 whole-home planning range for a 4-room BTO. Actual cost depends on carpentry, hacking, electrical and plumbing works, and material selections."
             },
             "bto5": {
               "label": "5-Room BTO",
-              "range": "$50,000 – $90,000",
-              "desc": "Comprehensive fit-out with premium finishes, larger carpentry scope, feature walls and optional smart home integration."
+              "range": "$60,000 – $77,000",
+              "desc": "Typical 2026 whole-home planning range for a 5-room BTO. Larger carpentry scope, premium finishes and additional systems can increase the final cost."
             },
             "resale": {
               "label": "Resale HDB (Any Size)",
-              "range": "+20–40% vs BTO",
-              "desc": "Budget extra for hacking dated tiles, rewiring old electrical systems, replacing corroded pipes and full waterproofing of wet areas before aesthetic works begin."
+              "range": "Higher than comparable BTO",
+              "desc": "Resale renovation generally costs more because hacking, removal, rewiring, plumbing replacement, waterproofing and making-good works are more common. The actual difference depends on the existing condition and renovation scope."
             },
             "condo": {
               "label": "Condo / Private Apartment",
@@ -360,19 +360,19 @@ const resources = {
         "resale": {
           "badge": "Resale HDB & MOP 2026",
           "title": "Planning a Resale HDB Renovation?",
-          "subtitle": "Over 13,480 HDB flats hit MOP in 2026 — a 93% surge from last year. Whether you are selling or staying, a well-executed renovation maximises your flat's value and market appeal.",
+          "subtitle": "About 13,500 HDB flats are expected to reach MOP in 2026, up from about 8,000 in 2025. Whether you are selling or staying, a well-executed renovation maximises your flat's value and market appeal.",
           "points": {
             "1": {
               "title": "Infrastructure First",
-              "desc": "Older resale flats require rewiring, pipe replacement and full waterproofing before aesthetic work begins. We inspect every system before providing your quote — no nasty surprises mid-renovation."
+              "desc": "Older resale flats may require rewiring, pipe replacement, waterproofing or other infrastructure work depending on the existing condition. We inspect the relevant systems before finalising the renovation scope and quotation."
             },
             "2": {
               "title": "Resale Value Strategy",
-              "desc": "We design renovations that appeal to the next buyer — open-plan kitchens, Japandi aesthetics and neutral palettes proven to command higher asking prices in the Singapore resale market."
+              "desc": "We favour practical layouts, durable finishes and broadly appealing design choices that can help a resale home present well to future buyers without relying on short-lived trends."
             },
             "3": {
               "title": "Complete Permit Coordination",
-              "desc": "As an HDB-licensed firm, we manage HDB renovation permits, neighbour notifications and structural submissions on your behalf for a smoother experience."
+              "desc": "As an HDB Registered Renovation Contractor, we coordinate the applicable HDB renovation permit process, neighbour notifications and required professional submissions for the project scope."
             }
           },
           "cta": "Plan My Resale Renovation"
@@ -419,11 +419,11 @@ const resources = {
           "items": {
             "1": {
               "q": "What is the renovation cost for a 4-room BTO flat in 2026?",
-              "a": "A comprehensive 4-room BTO renovation in Singapore typically ranges from <strong>$45,000 to $65,000</strong> in 2026. This covers flooring, painting, plumbing, and custom carpentry for the kitchen and wardrobes. Premium finishes or open-plan hacking can push costs to $75,000+."
+              "a": "A typical 2026 whole-home 4-room BTO renovation in Singapore is around <strong>$50,000 to $60,000</strong>. Actual cost depends on scope, carpentry, hacking, electrical and plumbing works, and material selections."
             },
             "2": {
               "q": "How much does a 3-room or 5-room HDB renovation cost?",
-              "a": "A <strong>3-room BTO renovation</strong> typically costs $25,000–$45,000. A <strong>5-room BTO</strong> ranges from $50,000–$90,000. Resale flats of any size add 20–40% due to hacking, rewiring and waterproofing requirements."
+              "a": "Typical 2026 whole-home planning ranges are about <strong>$40,000–$53,000 for a 3-room BTO</strong> and <strong>$60,000–$77,000 for a 5-room BTO</strong>. Resale renovation generally costs more because hacking, removal, rewiring, plumbing replacement, waterproofing and making-good works are more common, but the actual difference depends on the existing condition and renovation scope."
             },
             "3": {
               "q": "Why does resale HDB renovation cost more than BTO?",
@@ -435,7 +435,7 @@ const resources = {
             },
             "5": {
               "q": "Do I need an HDB permit for renovation works?",
-              "a": "Yes. Most HDB renovation works — including <strong>hacking, tiling, electrical and plumbing</strong> — require an HDB Renovation Permit before physical work begins. The permit typically takes 1–3 weeks to approve. As an HDB-licensed firm, ID Work Studio handles all permit submissions on your behalf."
+              "a": "HDB renovation permit requirements depend on the type of work. <strong>Wall demolition or hacking requires HDB approval before work begins</strong>, while other works may have different permit or professional requirements. ID Work Studio is an HDB Registered Renovation Contractor and can coordinate the applicable renovation submission process for the project scope."
             },
             "6": {
               "q": "How long does an HDB renovation take in Singapore?",
@@ -443,11 +443,11 @@ const resources = {
             },
             "7": {
               "q": "What is the HDB renovation loan limit in 2026?",
-              "a": "HDB flat owners can borrow up to <strong>$30,000</strong> under the HDB Renovation Loan, repayable over up to 5 years. The loan covers licensed renovation works only. Bank renovation loans and personal loans are available for projects exceeding this limit."
+              "a": "Eligible homeowners may obtain a bank renovation loan of up to <strong>$30,000</strong>, subject to the lender’s income, credit and eligibility criteria. Some renovation loans offer repayment periods of up to 5 years."
             },
             "8": {
-              "q": "Why is choosing an HDB-licensed firm important?",
-              "a": "Choosing an HDB-licensed firm helps ensure your renovation follows <strong>HDB guidelines</strong> and structural safety requirements. It also gives homeowners added confidence that electrical, plumbing and hacking works are carried out in line with Singapore’s renovation standards."
+              "q": "Why is choosing an HDB Registered Renovation Contractor important?",
+              "a": "Choosing an HDB Registered Renovation Contractor helps ensure HDB renovation works are carried out by a contractor listed on HDB’s Directory of Renovation Contractors and in line with the applicable renovation requirements."
             }
           }
         },
@@ -785,7 +785,7 @@ const resources = {
                         },
                         "3": {
                                 "title": "BCA/HDB Compliant Commercial Renovations",
-                                "desc": "Full compliance with Singapore's strict building codes. We manage all submissions for F&B, Industrial, and Commercial spaces.",
+                                "desc": "We coordinate applicable building, fire-safety and building-management requirements for F&B, industrial and commercial spaces with the relevant appointed parties where required.",
                                 "point1": "FSSD (Fire Safety) Submissions",
                                 "point2": "Building Management (MA) Liaison"
                         }
@@ -797,7 +797,7 @@ const resources = {
                 "items": {
                         "1": {
                                 "title": "Fire Safety (SCDF)",
-                                "desc": "Full submission and approval handling for fire safety regulations."
+                                "desc": "Coordination of required fire-safety submissions with the appointed QP where applicable."
                         },
                         "2": {
                                 "title": "BCA Permits",
@@ -820,7 +820,7 @@ const resources = {
                 "office": {
                         "badge": "",
                         "title": "Office & Workspace Renovation",
-                        "desc": "Turnkey office fit-outs for Singapore businesses. Hybrid work layouts, system furniture, and full BCA/SCDF compliance."
+                        "desc": "Turnkey office fit-outs for Singapore businesses. Hybrid work layouts, system furniture, with BCA / SCDF coordination where required."
                 },
                 "retail": {
                         "badge": "",
@@ -830,17 +830,17 @@ const resources = {
                 "shophouse": {
                         "badge": "",
                         "title": "F&B & Shophouse Renovation",
-                        "desc": "Heritage-sensitive shophouse renovations and F&B fit-outs with full URA and SCDF compliance."
+                        "desc": "Heritage-sensitive shophouse renovations and F&B fit-outs with URA and SCDF coordination where required."
                 },
                 "compliance": {
                         "badge": "",
                         "title": "Permits & Compliance",
-                        "desc": "BCA, SCDF, MCST and LEW permit management. We handle all submissions so you can focus on your business."
+                        "desc": "Coordination of applicable BCA, SCDF, MCST and LEW submission processes with the relevant QP, LEW and building management, so you can focus on your business."
                 },
                 "reinstatement": {
                         "badge": "",
                         "title": "Office & Mall Reinstatement",
-                        "desc": "Professional bare-shell handover with 100% pass-rate guarantee. SCDF and MCST compliant."
+                        "desc": "Professional reinstatement and handover coordinated to landlord or building-management requirements, with SCDF and MCST requirements addressed where applicable."
                 }
         },
         "process": {
@@ -860,7 +860,7 @@ const resources = {
                         "3": {
                                 "title": "Permit Submission",
                                 "detail": "1–3 WEEKS",
-                                "desc": "We handle all BCA, SCDF, MCST and URA submissions before physical work begins."
+                                "desc": "We coordinate the applicable BCA, SCDF, MCST and URA submission process with the relevant parties before affected works begin."
                         },
                         "4": {
                                 "title": "Renovation Works",
@@ -908,7 +908,7 @@ const resources = {
           "items": {
             "1": {
               "pain": "Fear of Deposit Forfeit",
-              "solution": "100% Handover Success Guarantee. We manage the landlord’s checklist so you don’t have to."
+              "solution": "We review the landlord or building-management handover checklist and coordinate the reinstatement scope to improve the likelihood of a smooth handover."
             },
             "2": {
               "pain": "Strict Mall Management (MCST)",
@@ -930,7 +930,7 @@ const resources = {
             },
             "2": {
               "title": "Permit Management",
-              "desc": "We handle all MCST & SCDF submissions."
+              "desc": "We coordinate applicable landlord or MCST and SCDF processes with the relevant building management, QP and appointed parties where required."
             },
             "3": {
               "title": "The Work",
@@ -938,14 +938,14 @@ const resources = {
             },
             "4": {
               "title": "Handover",
-              "desc": "Final joint inspection with your landlord for a 100% pass."
+              "desc": "Final joint inspection with the landlord or building management, followed by agreed rectification where required."
             }
           }
         },
         "trust": {
           "bca": "BCA Registered",
           "hdb": "HDB Registered",
-          "scdf": "SCDF Compliant"
+          "scdf": "Fire Safety Coordination"
         },
         "trust_row": {
           "text": "Trusted by tenants in Singapore's leading Grade A Offices & Malls."
@@ -956,7 +956,7 @@ const resources = {
           "whatsapp_btn": "WHATSAPP FOR A FREE SITE SURVEY"
         },
         "sticky_footer": {
-          "text": "Get Your Deposit Back – WhatsApp for a Free Survey"
+          "text": "Plan a Smooth Handover – WhatsApp for a Free Survey"
         }
       }
     }
@@ -1216,7 +1216,7 @@ const resources = {
         "hero": {
           "badge": "2026 设计趋势",
           "title": "新加坡 HDB 与公寓室内设计 — 精致生活，匠心打造",
-          "subtitle": "具备 HDB 执照与 BCA 注册资质，为现代居住需求打造专属住宅，涵盖规划、报批与精致施工。",
+          "subtitle": "具备 HDB 注册与 BCA 注册资质，为现代居住需求打造专属住宅，涵盖规划、报批与精致施工。",
           "cta": "预约家居咨询",
           "calculatorCta": "装修费用计算器",
           "quizCta": "寻找您的装修风格"
@@ -1256,7 +1256,7 @@ const resources = {
             }
           },
           "testimonial": {
-            "quote": "具备 HDB 执照及 BCA 注册资质，专注于新加坡现代 BTO 与转售住宅的室内设计。",
+            "quote": "具备 HDB 注册及 BCA 注册资质，专注于新加坡现代 BTO 与转售住宅的室内设计。",
             "author": "ID Work Studio"
           }
         },
@@ -1272,7 +1272,7 @@ const resources = {
           },
           "q3": {
             "q": "为什么选择 HDB 注册承包商对安全很重要？",
-            "a": "选择 HDB 注册承包商至关重要，因为他们受过培训，严格遵守<strong> HDB 的翻新指南</strong>和结构 safety 协议。他们确保在拆除过程中不会损坏关键的结构柱，并且所有电气和管道工程均符合新加坡的安全标准，从而保护您免受责任和安全隐患。"
+            "a": "选择 HDB 注册承包商，有助于确保 HDB 翻新工程由列入 HDB 翻新承包商名录的承包商执行，并遵守适用的<strong>HDB 翻新指南</strong>。电气、水喉及其他受监管工程，在需要时仍须由具备相应牌照或资格的专业人士负责。"
           }
         },
         "cta": {
@@ -1284,28 +1284,28 @@ const resources = {
           "badge": "2026 翻新费用指南",
           "title": "透明的组屋翻新费用",
           "subtitle": "来自新加坡翻新市场的真实价格基准。零隐藏费用。签约前务必索取完整明细报价。",
-          "note": "请预留报价总额的 10–15% 作为应急备用金。由于拆除、重新布线、防水及更换水管等额外工程，转售组屋的翻新费用通常比 BTO 高出 20–40%。",
+          "note": "预算规划时，BTO 或较新的住宅可预留约 10–15% 应急备用金，转售住宅可预留约 15–25%。转售翻新通常费用更高，因为更常涉及拆除、清运、重新布线、更换水管、防水及修补工程，但实际差额取决于原有屋况与翻新范围。",
           "cta": "获取免费明细报价",
           "items": {
             "bto3": {
               "label": "三房式 BTO",
-              "range": "$25,000 – $45,000",
-              "desc": "地板、油漆、基本电气、厨柜及浴室洁具。适合预算有限的首次置业者。"
+              "range": "$40,000 – $53,000",
+              "desc": "2026 年三房式 BTO 全屋翻新的典型规划范围。实际费用取决于木作、湿作、电气范围、材料选择与设计复杂度。"
             },
             "bto4": {
               "label": "四房式 BTO",
-              "range": "$45,000 – $65,000",
-              "desc": "全面翻新，包括定制厨房木工、内置衣柜、地板、水管及特色墙。新加坡最常见的翻新规模。"
+              "range": "$50,000 – $60,000",
+              "desc": "2026 年四房式 BTO 全屋翻新的典型规划范围。实际费用取决于木作、拆改、电气、水喉工程及材料选择。"
             },
             "bto5": {
               "label": "五房式 BTO",
-              "range": "$50,000 – $90,000",
-              "desc": "全面装修，配备优质饰面、更大范围木工、特色墙及可选智能家居集成。"
+              "range": "$60,000 – $77,000",
+              "desc": "2026 年五房式 BTO 全屋翻新的典型规划范围。较大的木作范围、高级饰面及额外系统会提高最终费用。"
             },
             "resale": {
               "label": "转售组屋（任何房型）",
-              "range": "比 BTO 高 20–40%",
-              "desc": "需额外预算用于拆除旧瓷砖、重新布线、更换腐蚀水管及湿区全面防水处理。"
+              "range": "通常高于相近范围的 BTO",
+              "desc": "转售翻新通常费用更高，因为更常涉及拆除、清运、重新布线、更换水管、防水及修补工程。实际差额取决于原有屋况与翻新范围。"
             },
             "condo": {
               "label": "私人公寓",
@@ -1317,19 +1317,19 @@ const resources = {
         "resale": {
           "badge": "转售组屋与 2026 年满居住年限",
           "title": "计划翻新转售组屋？",
-          "subtitle": "2026 年将有超过 13,480 套组屋达到最低居住年限——比去年激增 93%。无论您是出售还是继续居住，专业翻新都能最大化您的房产价值与市场吸引力。",
+          "subtitle": "2026 年预计约有 13,500 套组屋达到最低居住年限，高于 2025 年约 8,000 套。无论您是出售还是继续居住，专业翻新都能最大化您的房产价值与市场吸引力。",
           "points": {
             "1": {
               "title": "基础设施优先",
-              "desc": "较旧的转售组屋在进行美观装修之前，需要重新布线、更换水管和全面防水处理。我们在报价前检查每一个系统——确保翻新过程中零意外。"
+              "desc": "较旧的转售组屋可能因原有屋况而需要重新布线、更换水管、防水或其他基础工程。我们会在确定翻新范围与报价前检查相关系统。"
             },
             "2": {
               "title": "转售价值策略",
-              "desc": "我们设计能吸引下一位买家的翻新方案——开放式厨房、日式北欧美学及中性色调，经证实能在新加坡转售市场获得更高的叫价。"
+              "desc": "我们更重视实用布局、耐用材料与较容易被未来买家接受的设计方向，让住宅在转售时保持更好的整体呈现，而不过度依赖短期流行趋势。"
             },
             "3": {
               "title": "全程许可证协调",
-              "desc": "作为具备 HDB 执照的公司，我们可代您协调 HDB 翻新许可证、邻里通知及结构报批流程，让整个过程更顺畅。"
+              "desc": "作为 HDB 注册翻新承包商，我们可根据项目范围协调适用的 HDB 翻新许可证、邻里通知及所需专业报批流程。"
             }
           },
           "cta": "规划我的转售组屋翻新"
@@ -1376,11 +1376,11 @@ const resources = {
           "items": {
             "1": {
               "q": "2026 年四房式 BTO 翻新的费用是多少？",
-              "a": "2026 年新加坡全面的四房式 BTO 翻新通常在 <strong>$45,000 至 $65,000</strong> 之间。涵盖地板、油漆、管道及厨房和衣柜的定制木工。高级饰面或开放式格局拆除可能将费用推高至 $75,000 以上。"
+              "a": "2026 年新加坡四房式 BTO 全屋翻新的典型规划范围约为 <strong>$50,000 至 $60,000</strong>。实际费用取决于工程范围、木作、拆改、电气、水喉工程及材料选择。"
             },
             "2": {
               "q": "三房式或五房式组屋翻新费用是多少？",
-              "a": "<strong>三房式 BTO 翻新</strong>通常为 $25,000–$45,000；<strong>五房式 BTO</strong> 为 $50,000–$90,000。任何房型的转售组屋因拆除、重新布线和防水要求，费用额外增加 20–40%。"
+              "a": "2026 年全屋翻新的典型规划范围约为<strong>三房式 BTO $40,000–$53,000</strong>，以及<strong>五房式 BTO $60,000–$77,000</strong>。转售翻新通常费用更高，因为更常涉及拆除、清运、重新布线、更换水管、防水及修补工程，但实际差额取决于原有屋况与翻新范围。"
             },
             "3": {
               "q": "为什么转售组屋翻新比 BTO 更贵？",
@@ -1392,7 +1392,7 @@ const resources = {
             },
             "5": {
               "q": "组屋翻新是否需要申请 HDB 许可证？",
-              "a": "是的。大多数组屋翻新工程——包括<strong>拆除、铺砖、电气及管道</strong>——在实体施工前均需取得 HDB 翻新许可证。许可证审批通常需要 1–3 周。作为具备 HDB 执照的公司，ID Work Studio 可代您处理相关许可证申请。"
+              "a": "HDB 翻新许可证要求取决于具体工程类型。<strong>拆墙或敲墙工程在开工前需要取得 HDB 批准</strong>，其他工程则可能有不同的许可证或专业人士要求。ID Work Studio 是 HDB 注册翻新承包商，可根据项目范围协调适用的翻新提交流程。"
             },
             "6": {
               "q": "新加坡组屋翻新需要多长时间？",
@@ -1400,11 +1400,11 @@ const resources = {
             },
             "7": {
               "q": "2026 年 HDB 翻新贷款上限是多少？",
-              "a": "组屋业主可向 HDB 申请最高 <strong>$30,000</strong> 的翻新贷款，还款期最长 5 年。贷款仅涵盖经许可的翻新工程。超出上限的项目可申请银行翻新贷款或个人贷款。"
+              "a": "符合条件的业主可向银行或金融机构申请翻新贷款，额度通常以<strong>不超过 $30,000 或 6 个月收入（以较低者为准）</strong>作为一般上限，并受贷款机构的收入、信用与资格审核影响。部分翻新贷款的还款期可长达 5 年。"
             },
             "8": {
-              "q": "为什么选择具备 HDB 执照的公司很重要？",
-              "a": "选择具备 HDB 执照的公司，有助于确保翻新工程符合<strong>HDB 指南</strong>及结构安全要求，也让业主更安心，知道电气、管道及拆改工程都按新加坡相关规范执行。"
+              "q": "为什么选择 HDB 注册翻新承包商很重要？",
+              "a": "选择 HDB 注册翻新承包商，有助于确保 HDB 翻新工程由列入 HDB 翻新承包商名录的承包商执行，并符合适用的翻新要求。"
             }
           }
         },
@@ -1742,7 +1742,7 @@ const resources = {
                         },
                         "3": {
                                 "title": "符合 BCA / HDB 标准的商业翻新",
-                                "desc": "全面配合新加坡严格建筑规范，可统筹餐饮、工业及商业空间所需的各项报批与施工协调。",
+                                "desc": "在需要时，与相关受委任专业人士及大厦管理方协调餐饮、工业及商业空间适用的建筑、消防安全与装修提交流程。",
                                 "point1": "FSSD（消防安全）报批",
                                 "point2": "大厦管理协调"
                         }
@@ -1754,7 +1754,7 @@ const resources = {
                 "items": {
                         "1": {
                                 "title": "消防安全（SCDF）",
-                                "desc": "协助处理消防安全相关报批与审批流程。"
+                                "desc": "在适用情况下，与受委任 QP 协调所需的消防安全提交流程。"
                         },
                         "2": {
                                 "title": "BCA 许可证",
@@ -1777,7 +1777,7 @@ const resources = {
                 "office": {
                         "badge": "",
                         "title": "办公室与工作空间翻新",
-                        "desc": "为新加坡企业提供一站式办公室装修服务，包括混合办公布局、系统家具及完整 BCA / SCDF 合规协调。"
+                        "desc": "为新加坡企业提供一站式办公室装修服务，包括混合办公布局、系统家具，并在需要时协调 BCA / SCDF 相关流程。"
                 },
                 "retail": {
                         "badge": "",
@@ -1787,12 +1787,12 @@ const resources = {
                 "shophouse": {
                         "badge": "",
                         "title": "餐饮与店屋翻新",
-                        "desc": "兼顾传统风貌与营运需求的店屋翻新及餐饮装修，符合 URA 与 SCDF 要求。"
+                        "desc": "兼顾传统风貌与营运需求的店屋翻新及餐饮装修，并在需要时协调 URA 与 SCDF 相关流程。"
                 },
                 "compliance": {
                         "badge": "",
                         "title": "许可证与合规管理",
-                        "desc": "涵盖 BCA、SCDF、MCST 及 LEW 的报批与协调流程，让您能专注于业务发展。"
+                        "desc": "协调适用的 BCA、SCDF、MCST 及 LEW 报批流程，并与相关 QP、LEW 及大厦管理方配合，让您能专注于业务发展。"
                 },
                 "reinstatement": {
                         "badge": "",
@@ -1817,7 +1817,7 @@ const resources = {
                         "3": {
                                 "title": "许可证提交",
                                 "detail": "1–3 周",
-                                "desc": "在施工前处理所需的 BCA、SCDF、MCST 与 URA 报批流程。"
+                                "desc": "在受影响工程开始前，与相关单位协调适用的 BCA、SCDF、MCST 与 URA 提交流程。"
                         },
                         "4": {
                                 "title": "翻新施工",
@@ -1902,7 +1902,7 @@ const resources = {
         "trust": {
           "bca": "BCA 注册",
           "hdb": "HDB 注册",
-          "scdf": "SCDF 合规"
+          "scdf": "消防安全协调"
         },
         "trust_row": {
           "text": "深受新加坡甲级办公楼与商场租户信赖"
@@ -1930,8 +1930,8 @@ enT["office_reno_page"] = {
     bold: "OFFICE SPACE",
     subtitle: "Turnkey office renovation and fit-out services for Singapore businesses. From hybrid work layouts to full M&E works — delivered on time, on budget.",
     cta: "Get a Free Site Survey",
-    b1: "BCA & SCDF Compliant",
-    b2: "All Permit Submissions Managed",
+    b1: "BCA Registered / Fire Safety Coordination",
+    b2: "Applicable Submission Coordination",
     b3: "Phased to Minimise Downtime"
   },
   overview: {
@@ -1939,13 +1939,13 @@ enT["office_reno_page"] = {
     bold: "OFFICE RENOVATION SPECIALISTS",
     p1: "ID Work Studio is a BCA-registered contractor specialising in office renovation and commercial fit-outs across Singapore. We serve SMEs, MNCs, and government agencies from our Woodlands studio.",
     p2: "Every office project begins with a free onsite consultation where we assess your space, understand your operational requirements, and develop a fit-out plan designed to minimise business disruption.",
-    p3: "As a <strong>BCA-registered contractor</strong>, we manage all submissions to BCA, SCDF, and MCST — eliminating the administrative burden from your team.",
+    p3: "As a <strong>BCA-registered contractor</strong>, we coordinate applicable BCA, SCDF and building-management submission processes with the relevant appointed parties where required — reducing the administrative burden on your team.",
     c1t: "Hybrid Work Ready",
     c1d: "We design flexible work environments with hot-desking zones, collaboration areas, and quiet focus pods to support modern hybrid work models.",
     c2t: "Full M&E Coordination",
     c2d: "Our team manages all mechanical and electrical works in-house, including air-conditioning, data cabling, and lighting design.",
-    c3t: "BCA & SCDF Compliant",
-    c3d: "We handle all BCA building permits and SCDF fire safety submissions before physical work commences, keeping your project legal and on schedule."
+    c3t: "BCA & Fire Safety Coordination",
+    c3d: "We coordinate applicable BCA and SCDF requirements with the relevant appointed parties before affected works commence, helping keep the project compliant and on schedule."
   },
   scope: {
     serif: "What's Included in",
@@ -1961,15 +1961,15 @@ enT["office_reno_page"] = {
     i5t: "Custom Joinery & Furniture",
     i5d: "Built-in reception counters, workstations, storage walls, and boardroom furniture tailored to your brand.",
     i6t: "Permit Submissions",
-    i6d: "Full BCA building plan submission, SCDF fire safety approval, and MCST fit-out permit management."
+    i6d: "Coordination of applicable BCA, SCDF and MCST or building-management submission requirements with the relevant appointed parties where required."
   },
   stats: {
     s1u: "psf",
-    s1l: "Office renovation cost range",
+    s1l: "Typical office fit-out range; complex high-spec projects may approach $300 psf",
     s2u: "weeks",
     s2l: "Typical fit-out timeline",
     s3u: "weeks",
-    s3l: "Permit approval lead time"
+    s3l: "Approval / building coordination planning allowance"
   },
   challenges: {
     serif: "Common",
@@ -1981,7 +1981,7 @@ enT["office_reno_page"] = {
     p2pain: "Business Downtime",
     p2sol: "Phased renovation schedules and after-hours works to keep your operations running throughout.",
     p3pain: "Permit Complexity",
-    p3sol: "Our in-house team manages all BCA, SCDF, and MCST submissions so you don't have to."
+    p3sol: "Our team coordinates the applicable BCA, SCDF and building-management submission process with the relevant appointed parties where required."
   },
   trust: { text: "Trusted by Singapore businesses, law firms, and government agencies." },
   process: {
@@ -1990,7 +1990,7 @@ enT["office_reno_page"] = {
     s1t: "Free Site Survey",
     s1d: "Free onsite assessment and full itemised quotation.",
     s2t: "Design & Approval",
-    s2d: "Space planning, 3D visuals, and all permit submissions.",
+    s2d: "Space planning, 3D visuals, and coordination of applicable approval and building-management submission requirements.",
     s3t: "Renovation Works",
     s3d: "Phased fit-out by our licensed CoreTrade team.",
     s4t: "Handover",
@@ -1999,11 +1999,11 @@ enT["office_reno_page"] = {
   faq: {
     title: "Office Renovation FAQs",
     q1: "How much does an office renovation cost in Singapore in 2026?",
-    a1: "Office renovation in Singapore typically costs between <strong>S$50 and S$180 per square foot</strong>, depending on fit-out level and scope of M&E works. A basic office refresh starts from S$50 psf. A full premium fit-out with glass partitions, feature walls, and smart office systems can reach S$180 psf or more.",
+    a1: "Office fit-out planning ranges in Singapore are typically <strong>S$50–S$80 psf for a basic fit-out</strong>, <strong>S$80–S$130 psf for a mid-range fit-out</strong>, and <strong>S$130–S$200+ psf for a premium or Grade A fit-out</strong>. Complex corporate, high-spec M&E, acoustic, AV or strongly branded projects can exceed S$200 psf and approach S$300 psf.",
     q2: "Do I need a permit for office renovation in Singapore?",
-    a2: "Yes. Most office renovation works require permit approval from one or more authorities:<br/><br/>• <strong>BCA</strong> for structural works and building plan amendments<br/>• <strong>SCDF</strong> for fire safety modifications (sprinklers, fire doors, emergency lighting)<br/>• <strong>MCST</strong> if your office is within a strata building or commercial tower<br/><br/>As a BCA-registered contractor, ID Work Studio handles all submissions on your behalf before physical work begins.",
+    a2: "Not every office renovation requires the same authority approvals. Requirements depend on the proposed works and building rules:<br/><br/>• <strong>BCA</strong> may be relevant for regulated building or structural works<br/>• <strong>SCDF</strong> may be relevant where fire safety systems, compartmentation or escape provisions are affected<br/>• <strong>Landlord / MCST / building management</strong> commonly requires fitting-out approval before works begin<br/><br/>ID Work Studio coordinates the applicable submission process with the relevant appointed QP, LEW or building-management parties where required.",
     q3: "How long does an office renovation take in Singapore?",
-    a3: "A typical office renovation (2,000–5,000 sqft) takes <strong>6–12 weeks</strong> from site survey to handover. This includes 1–2 weeks for design, 1–3 weeks for permit approvals, and 4–8 weeks for renovation works. Larger projects or those requiring structural changes may take 12–16 weeks."
+    a3: "A typical office renovation (2,000–5,000 sqft) can take <strong>6–12 weeks</strong> from site survey to handover for a straightforward fit-out. This may include 1–2 weeks for design, an <strong>approximately 2–4 week planning allowance for applicable landlord, building-management and authority coordination</strong>, and 4–8 weeks for renovation works. Larger or more complex projects may take 12–16 weeks or longer."
   },
   related: { title: "Explore Our Other Commercial Services" },
   cta: {
@@ -2019,7 +2019,7 @@ enT["compliance_reno_page"] = {
     badge: "Singapore Commercial Renovation Permit Specialists",
     serif: "Navigate Singapore's",
     bold: "COMMERCIAL RENOVATION PERMITS",
-    subtitle: "Complete MCST, BCA, SCDF fire safety, and LEW permit management for commercial renovation in Singapore — all handled in-house by our registered specialists.",
+    subtitle: "Commercial renovation approval and compliance coordination in Singapore, covering applicable landlord or MCST requirements, BCA and SCDF processes, and LEW requirements with the relevant appointed professionals where required.",
     cta: "Get a Free Permit Consultation",
     b1: "MCST Submission Management",
     b2: "SCDF Fire Safety Approval",
@@ -2029,14 +2029,14 @@ enT["compliance_reno_page"] = {
   intro: {
     serif: "Why Permit Management",
     bold: "MATTERS FOR YOUR PROJECT",
-    p1: "Commercial renovation in Singapore involves a complex web of regulatory submissions. Unpermitted works expose tenants to heavy fines, reinstatement orders, and lease disputes — risks that are entirely avoidable with a qualified, BCA-registered contractor.",
-    p2: "ID Work Studio manages the complete permit pipeline — from initial MCST fit-out application through to BCA building plan approval, SCDF fire safety certificate, and LEW electrical clearance — so your project proceeds lawfully and on schedule."
+    p1: "Commercial renovation in Singapore can involve landlord or building-management requirements as well as statutory submissions, depending on the proposed works. Starting work without the approvals that actually apply can create enforcement, reinstatement, delay and lease risks.",
+    p2: "ID Work Studio coordinates the applicable approval and submission process with the landlord or building management and the relevant appointed QP, LEW or other professional where required, so the project scope can be planned before affected works begin."
   },
   stats: {
-    s1: "Max fine for unpermitted works",
-    s2: "Max fine per permit breach",
-    s3: "Permit agencies we manage",
-    s4: "Days saved vs self-submission"
+    s1: "Up to this amount for certain unauthorised building works",
+    s2: "Non-domestic electrical-installation licence threshold",
+    s3: "Core approval / coordination pathways covered here",
+    s4: "Appointed professionals involved where required"
   },
   pillars: {
     serif: "The Four",
@@ -2046,70 +2046,70 @@ enT["compliance_reno_page"] = {
     p1: {
       agency: "MCST / Building Management",
       title: "MCST Fit-Out Permit",
-      subtitle: "Required for all works within strata commercial buildings and shopping malls",
-      body: "Before any physical work begins in a commercial strata unit, tenants must obtain written approval from the Management Corporation Strata Title (MCST) or building management. Each building has its own fit-out guidelines covering approved materials, working hours, dust and noise controls, and reinstatement obligations.",
+      subtitle: "Commonly required under landlord or building-management fit-out rules",
+      body: "Many commercial strata buildings and shopping malls require written landlord, MCST or building-management fit-out approval before renovation starts. The exact requirement is building-specific, and fit-out guides may cover materials, working hours, dust and noise controls, deposits and reinstatement obligations.",
       f1: "Submit fit-out drawings to building management",
       f2: "Obtain written approval before work commences",
       f3: "Comply with permitted working hours",
-      f4: "Provide security deposit for reinstatement",
-      f5: "Final joint inspection required at project completion"
+      f4: "Check whether a renovation or reinstatement deposit is required",
+      f5: "Check the building-specific handover and final-inspection requirements"
     },
     p2: {
       agency: "Building & Construction Authority",
       title: "BCA Building Plan Submission",
-      subtitle: "Required for structural works, change of use, and M&E modifications",
-      body: "Works that affect structural integrity, change the approved use of a space, or significantly alter M&E systems require submission to the Building and Construction Authority. A Qualified Person (QP) must certify all structural and fire safety designs.",
+      subtitle: "Applies where regulated building or structural works require BCA approval",
+      body: "BCA approval may be required where the proposed works fall within regulated building or structural works. The appropriate Qualified Person (QP) is responsible for the relevant building or structural submissions. Change of use is a separate planning matter handled through URA where applicable.",
       f1: "Qualified Person (QP) required for structural submissions",
       f2: "Building plan approval before structural works",
-      f3: "Change of use application via URA and BCA",
-      f4: "Temporary Occupation Permit (TOP) may be required",
-      f5: "As-built drawings required at project completion"
+      f3: "Change of use is assessed separately through URA where applicable",
+      f4: "Not all commercial fit-out works require BCA plan approval",
+      f5: "Completion documentation depends on the approved work scope"
     },
     p3: {
       agency: "Singapore Civil Defence Force",
       title: "SCDF Fire Safety Submission",
-      subtitle: "Required for any modification to fire protection systems or fire compartmentation",
-      body: "The Singapore Civil Defence Force regulates all works affecting fire safety systems. This includes relocation of sprinkler heads, smoke detectors, and fire doors — works commonly required in retail fit-outs, office renovations, and F&B conversions.",
+      subtitle: "May apply when fire protection, compartmentation or escape provisions are affected",
+      body: "SCDF requirements may apply when renovation affects fire protection systems, fire compartmentation, escape provisions or other regulated fire-safety elements. Where fire-safety plans are required, they are prepared and submitted by the appropriate Qualified Person (QP).",
       f1: "Fire safety plan submission to SCDF",
-      f2: "Licensed Fire Safety Manager (FSM) sign-off required",
-      f3: "Sprinkler relocation by PUB-licensed plumber",
-      f4: "Fire door compliance with BS 476 / SS standards",
-      f5: "Completion certificate from SCDF required at handover"
+      f2: "Required fire-safety plans are prepared and submitted by the appropriate QP",
+      f3: "Sprinkler alterations must follow the applicable SCDF fire-protection requirements",
+      f4: "Fire-rated elements must follow the applicable approved fire-safety requirements",
+      f5: "Where the FSC / TFP regime applies, the required inspection and certification process must be completed"
     },
     p4: {
       agency: "Energy Market Authority",
       title: "LEW Licensed Electrical Works",
-      subtitle: "Required for all electrical works above 45 Amps in Singapore commercial spaces",
-      body: "All electrical works in Singapore commercial spaces above 45 Amps must be carried out by or under the supervision of a Licensed Electrical Worker (LEW). This includes new consumer switch boards, three-phase power installations, and major M&E additions.",
-      f1: "LEW must supervise all works above 45A",
-      f2: "Electrical installation licence application to EMA",
-      f3: "LEW to certify all new electrical installations",
-      f4: "Periodic inspection certificate for existing systems",
-      f5: "Electrical as-built drawings required at completion"
+      subtitle: "Electrical work requires the appropriate LEW; installation licensing uses a separate 45 kVA threshold",
+      body: "Electrical work must be carried out or supervised by an appropriately licensed Licensed Electrical Worker (LEW). Separately, a non-domestic electrical installation generally requires an EMA electrical-installation licence when its approved load exceeds 45 kVA, as well as in certain other prescribed cases.",
+      f1: "Electrical work must be carried out or supervised by the appropriate LEW",
+      f2: "EMA installation licensing generally applies above 45 kVA approved load for non-domestic installations",
+      f3: "LEW responsibilities depend on the electrical work and installation involved",
+      f4: "Licensed installations are subject to the applicable inspection and licensing requirements",
+      f5: "Completion records depend on the electrical scope and building requirements"
     }
   },
   process: {
     serif: "Our",
     bold: "PERMIT MANAGEMENT PROCESS",
     s1t: "Permit Assessment",
-    s1d: "Free review of your renovation scope to identify all required permits.",
+    s1d: "Review the renovation scope to identify which landlord, building-management or statutory requirements may apply.",
     s2t: "Document Preparation",
-    s2d: "Architectural drawings, structural calculations, and fire safety plans prepared by our QP.",
+    s2d: "Coordinate the required drawings and professional documents with the relevant appointed QP, LEW or other professional where applicable.",
     s3t: "Submission & Liaison",
-    s3d: "We submit and chase all applications with MCST, BCA, SCDF, and EMA.",
+    s3d: "We coordinate the applicable submission process with the landlord or building management and the relevant appointed professionals or authorities.",
     s4t: "Approval & Clearance",
-    s4d: "Final approvals obtained and compliance certificates filed before handover."
+    s4d: "Applicable approvals, clearances and completion documents are coordinated before the affected works are handed over."
   },
   faq: {
     title: "Commercial Permit FAQs",
     q1: "Do I need SCDF approval for office renovation in Singapore?",
-    a1: "Yes, if your renovation involves any modification to fire protection systems. This includes relocation of <strong>sprinkler heads, smoke detectors, fire doors, or emergency lighting</strong> — all commonly required when partitioning an open-plan office or converting a retail unit. SCDF requires a fire safety plan submission certified by a Licensed Fire Safety Manager before works commence.",
+    a1: "SCDF approval may be required if the renovation affects <strong>fire protection systems, fire compartmentation, escape provisions or other regulated fire-safety elements</strong>. Where fire-safety plans are required, they are prepared and submitted by the appropriate Qualified Person (QP). Simple cosmetic works that do not affect fire safety may follow a different pathway.",
     q2: "What electrical works require a Licensed Electrical Worker (LEW) in Singapore?",
-    a2: "All electrical works in Singapore commercial spaces exceeding <strong>45 Amperes</strong> must be carried out by or under the direct supervision of an EMA-licensed LEW. This includes:<br/><br/>• Installation or replacement of consumer switch boards<br/>• Three-phase power installations<br/>• New electrical sub-mains<br/>• Major M&E additions requiring load calculations<br/><br/>ID Work Studio works with in-house LEW-supervised electricians for all commercial M&E works.",
+    a2: "Electrical work must be carried out or supervised by an appropriately licensed <strong>Licensed Electrical Worker (LEW)</strong>. The separate EMA electrical-installation licensing threshold is generally based on approved load exceeding <strong>45 kVA</strong> for non-domestic installations, not 45 Amperes. The exact LEW and licensing requirements depend on the proposed electrical scope and installation.",
     q3: "What happens if I renovate without the required permits in Singapore?",
-    a3: "Unpermitted renovation works carry serious consequences. Under the Building Control Act, fines can reach <strong>S$200,000</strong> for serious breaches. Building management may issue a Stop Work Order, require full reinstatement at the tenant's cost, and forfeit the security deposit. Always engage a BCA-registered contractor to manage your permits.",
+    a3: "Starting regulated building works without the approvals or permits that actually apply can have serious consequences. Under the Building Control Act, certain unauthorised building-work offences can carry fines of up to <strong>S$200,000</strong>. Separately, landlords or building management may stop works or require reinstatement under their own fit-out and tenancy conditions.",
     q4: "How long do commercial renovation permit approvals take in Singapore?",
-    a4: "Permit timelines vary by authority:<br/><br/>• <strong>MCST fit-out approval:</strong> 1–3 weeks<br/>• <strong>BCA building plan approval:</strong> 4–8 weeks<br/>• <strong>SCDF fire safety approval:</strong> 2–6 weeks<br/>• <strong>EMA electrical licence:</strong> 1–2 weeks<br/><br/>We submit all applications concurrently where possible to minimise overall timeline impact."
+    a4: "There is no single commercial-renovation permit timeline. <strong>Landlord or MCST fit-out timing is building-specific</strong>, while BCA, SCDF, URA and EMA processes depend on the exact submission pathway and project scope. Some defined pathways have published service standards, but plan revisions or cross-agency consultation can extend the overall programme. Use authority-specific timing only after confirming which approvals actually apply."
   },
   related: { title: "Explore Our Other Commercial Services" },
   cta: {
@@ -2124,32 +2124,32 @@ enT["compliance_reno_page"] = {
 const zhT = (resources as any).zh.translation;
 
 zhT["office_reno_page"] = {
-  hero: { badge:"新加坡 BCA 注册办公室翻新承包商", serif:"改造您的", bold:"办公空间", subtitle:"为新加坡企业提供一站式办公室翻新与装修服务。从混合办公布局到全套机电工程——准时交付，不超预算。", cta:"获取免费现场勘察", b1:"符合 BCA 及 SCDF 标准", b2:"全程代办许可证提交", b3:"分阶段施工，减少停业时间" },
-  overview: { serif:"新加坡", bold:"办公室翻新专家", p1:"ID Work Studio 是一家 BCA 注册承包商，专注于新加坡各地的办公室翻新与商业装修。我们为中小企业、跨国公司及政府机构提供服务，总部位于兀兰。", p2:"每个办公室项目均从免费现场咨询开始——我们评估您的空间，了解运营需求，并制定旨在减少业务中断的装修方案。", p3:"作为 <strong>BCA 注册承包商</strong>，我们代您处理向 BCA、SCDF 和 MCST 的所有提交，为您的团队减轻行政负担。", c1t:"适应混合办公模式", c1d:"我们设计灵活的工作环境，配备共享工位区、协作空间和安静专注区，支持现代混合办公模式。", c2t:"全套机电统筹", c2d:"我们团队内部统筹管理所有机电工程，包括空调、数据布线和照明设计。", c3t:"符合 BCA 及 SCDF 标准", c3d:"我们在实体施工前处理所有 BCA 建筑许可证和 SCDF 消防安全提交，确保项目合规并按时推进。" },
-  scope: { serif:"办公室翻新", bold:"包含哪些工程", i1t:"空间规划与布局", i1d:"针对生产力、协作需求及新加坡工作场所安全标准进行优化的平面布局设计。", i2t:"隔断与假天花", i2d:"玻璃隔断、轻钢龙骨系统及T型或石膏板假天花，兼顾隔音与美观效果。", i3t:"电气与数据工程", i3d:"全套机电工程，包括电源插座、数据布线、UPS系统及照明控制。", i4t:"地板与装饰", i4d:"乙烯基地板、架空地板、地毯砖及环氧涂层，满足运营及美观需求。", i5t:"定制木工与家具", i5d:"内置前台、工作站、储物墙及会议室家具，根据您的品牌量身定制。", i6t:"许可证提交", i6d:"全程代办 BCA 建筑方案提交、SCDF 消防安全审批及 MCST 装修许可证管理。" },
-  stats: { s1u:"每平方英尺", s1l:"办公室翻新费用范围", s2u:"周", s2l:"典型装修工期", s3u:"周", s3l:"许可证审批周期" },
-  challenges: { serif:"常见", bold:"办公室翻新难题", ch_label:"难题", sol_label:"我们的解决方案", p1pain:"超出预算", p1sol:"固定价格合同，附详细分项报价。无隐藏费用，无意外支出。", p2pain:"业务停工", p2sol:"分阶段施工安排及下班后作业，确保您的业务在整个装修期间持续运营。", p3pain:"许可证复杂性", p3sol:"我们内部团队代您处理所有 BCA、SCDF 和 MCST 提交。" },
+  hero: { badge:"新加坡 BCA 注册办公室翻新承包商", serif:"改造您的", bold:"办公空间", subtitle:"为新加坡企业提供一站式办公室翻新与装修服务。从混合办公布局到全套机电工程——准时交付，不超预算。", cta:"获取免费现场勘察", b1:"BCA 注册 / 消防安全协调", b2:"适用审批与提交流程协调", b3:"分阶段施工，减少停业时间" },
+  overview: { serif:"新加坡", bold:"办公室翻新专家", p1:"ID Work Studio 是一家 BCA 注册承包商，专注于新加坡各地的办公室翻新与商业装修。我们为中小企业、跨国公司及政府机构提供服务，总部位于兀兰。", p2:"每个办公室项目均从免费现场咨询开始——我们评估您的空间，了解运营需求，并制定旨在减少业务中断的装修方案。", p3:"作为 <strong>BCA 注册承包商</strong>，我们会在需要时与相关受委任专业人士及大厦管理方协调适用的 BCA、SCDF 与装修提交流程，减轻您团队的行政负担。", c1t:"适应混合办公模式", c1d:"我们设计灵活的工作环境，配备共享工位区、协作空间和安静专注区，支持现代混合办公模式。", c2t:"全套机电统筹", c2d:"我们团队内部统筹管理所有机电工程，包括空调、数据布线和照明设计。", c3t:"BCA 与消防安全协调", c3d:"我们会在受影响工程开始前，与相关受委任专业人士协调适用的 BCA 与 SCDF 要求，协助项目合规并按计划推进。" },
+  scope: { serif:"办公室翻新", bold:"包含哪些工程", i1t:"空间规划与布局", i1d:"针对生产力、协作需求及新加坡工作场所安全标准进行优化的平面布局设计。", i2t:"隔断与假天花", i2d:"玻璃隔断、轻钢龙骨系统及T型或石膏板假天花，兼顾隔音与美观效果。", i3t:"电气与数据工程", i3d:"全套机电工程，包括电源插座、数据布线、UPS系统及照明控制。", i4t:"地板与装饰", i4d:"乙烯基地板、架空地板、地毯砖及环氧涂层，满足运营及美观需求。", i5t:"定制木工与家具", i5d:"内置前台、工作站、储物墙及会议室家具，根据您的品牌量身定制。", i6t:"许可证提交", i6d:"在需要时，与相关受委任专业人士及大厦管理方协调适用的 BCA、SCDF 与 MCST 或楼宇装修提交流程。" },
+  stats: { s1u:"每平方英尺", s1l:"常见办公室装修范围；复杂高规格项目可接近每平方英尺 $300", s2u:"周", s2l:"典型装修工期", s3u:"周", s3l:"审批 / 大厦协调规划缓冲" },
+  challenges: { serif:"常见", bold:"办公室翻新难题", ch_label:"难题", sol_label:"我们的解决方案", p1pain:"超出预算", p1sol:"固定价格合同，附详细分项报价。无隐藏费用，无意外支出。", p2pain:"业务停工", p2sol:"分阶段施工安排及下班后作业，确保您的业务在整个装修期间持续运营。", p3pain:"许可证复杂性", p3sol:"我们的团队会在需要时，与相关受委任专业人士及大厦管理方协调适用的 BCA、SCDF 与装修提交流程。" },
   trust: { text:"深受新加坡企业、律师事务所及政府机构信赖。" },
-  process: { serif:"我们如何", bold:"交付您的办公室", s1t:"免费现场勘察", s1d:"免费现场评估与详细分项报价。", s2t:"设计与审批", s2d:"空间规划、3D效果图及全部许可证提交。", s3t:"翻新施工", s3d:"由我们持牌CoreTrade团队分阶段执行装修。", s4t:"完工移交", s4d:"联合验收、缺陷修正及完整移交。" },
-  faq: { title:"办公室翻新常见问题", q1:"2026年新加坡办公室翻新费用是多少？", a1:"新加坡办公室翻新费用通常在<strong>每平方英尺S$50至S$180</strong>之间，取决于装修标准和机电工程范围。基础翻新（油漆、地板、简单隔断）从S$50每平方英尺起。带玻璃隔断、特色墙及智能办公系统的全面高端装修可达S$180每平方英尺或以上。", q2:"新加坡办公室翻新是否需要申请许可证？", a2:"是的。大多数办公室翻新工程需要向以下一个或多个部门申请许可证审批：<br/><br/>• <strong>BCA</strong>（结构性工程及建筑方案变更）<br/>• <strong>SCDF</strong>（消防安全修改，包括洒水器、防火门、应急照明）<br/>• <strong>MCST</strong>（若办公室位于分层建筑或商业大厦内）<br/><br/>作为BCA注册承包商，ID Work Studio代您处理所有提交，在实体施工开始前完成审批。", q3:"新加坡办公室翻新需要多长时间？", a3:"典型办公室翻新（2,000至5,000平方英尺）从现场勘察到移交通常需要<strong>6至12周</strong>。包括1至2周设计、1至3周许可证审批及4至8周翻新施工。规模较大或需结构改动的项目可能需要12至16周。" },
+  process: { serif:"我们如何", bold:"交付您的办公室", s1t:"免费现场勘察", s1d:"免费现场评估与详细分项报价。", s2t:"设计与审批", s2d:"空间规划、3D 效果图，以及适用审批与大厦装修提交流程的协调。", s3t:"翻新施工", s3d:"由我们持牌CoreTrade团队分阶段执行装修。", s4t:"完工移交", s4d:"联合验收、缺陷修正及完整移交。" },
+  faq: { title:"办公室翻新常见问题", q1:"2026年新加坡办公室翻新费用是多少？", a1:"新加坡办公室装修的常见规划范围通常为：<strong>基础装修每平方英尺 S$50–S$80</strong>、<strong>中档装修每平方英尺 S$80–S$130</strong>，以及<strong>高端或 Grade A 装修每平方英尺 S$130–S$200+</strong>。复杂企业项目、较高规格机电、隔音、AV 或品牌化设计可超过每平方英尺 S$200，并接近 S$300。", q2:"新加坡办公室翻新是否需要申请许可证？", a2:"并非所有办公室翻新都需要相同的政府审批，实际要求取决于工程内容与大厦规定：<br/><br/>• <strong>BCA</strong> 可能适用于受监管的建筑或结构工程<br/>• <strong>SCDF</strong> 可能适用于影响消防系统、防火分区或逃生要求的工程<br/>• <strong>业主 / MCST / 大厦管理方</strong> 通常会要求在开工前取得装修批准<br/><br/>ID Work Studio 会在需要时与相关 QP、LEW 或大厦管理方协调适用的提交流程。", q3:"新加坡办公室翻新需要多长时间？", a3:"较直接的 2,000 至 5,000 平方英尺办公室装修，从现场勘察到移交通常可在<strong>6至12周</strong>内完成。可包括 1 至 2 周设计、<strong>约 2 至 4 周作为适用业主、大厦管理与相关审批协调的规划缓冲</strong>，以及 4 至 8 周现场施工。规模较大或较复杂的项目可能需要 12 至 16 周或更长时间。" },
   related: { title:"探索我们的其他商业服务" },
   cta: { serif:"准备好改造", bold:"您的办公室了吗？", btn:"WhatsApp 获取免费现场勘察" },
   sticky: { text:"免费办公室翻新报价 — 立即WhatsApp联系我们" }
 };
 
 zhT["compliance_reno_page"] = {
-  hero: { badge:"新加坡商业翻新许可证专家", serif:"轻松应对新加坡", bold:"商业翻新许可证", subtitle:"新加坡商业翻新全套MCST、BCA、SCDF消防安全及LEW许可证管理——由我们的注册专家内部全程代办。", cta:"获取免费许可证咨询", b1:"MCST提交管理", b2:"SCDF消防安全审批", b3:"BCA建筑方案提交", b4:"LEW持牌电气承包商" },
-  intro: { serif:"为何许可证管理", bold:"对您的项目至关重要", p1:"新加坡商业翻新涉及复杂的监管提交网络。未经许可的工程使租户面临高额罚款、恢复原状令及租约纠纷——这些风险完全可通过聘请合格的BCA注册承包商来规避。", p2:"ID Work Studio 管理完整的许可证申请流程——从初始MCST装修许可证申请，到BCA建筑方案审批、SCDF消防安全证书及LEW电气许可——确保您的项目合法合规、按时推进。" },
-  stats: { s1:"违规工程最高罚款", s2:"每项违规最高罚款", s3:"代办许可证部门数量", s4:"相比自行提交节省天数" },
+  hero: { badge:"新加坡商业翻新许可证专家", serif:"轻松应对新加坡", bold:"商业翻新许可证", subtitle:"协调新加坡商业翻新中适用的业主或MCST要求、BCA与SCDF流程，以及在需要时由相关受委任专业人士处理的LEW要求。", cta:"获取免费许可证咨询", b1:"MCST提交管理", b2:"SCDF消防安全审批", b3:"BCA建筑方案提交", b4:"LEW持牌电气承包商" },
+  intro: { serif:"为何许可证管理", bold:"对您的项目至关重要", p1:"新加坡商业翻新可能同时涉及业主或大厦管理要求，以及视工程范围而定的法定提交流程。若在应取得的批准尚未确认前开工，可能带来执法、恢复原状、延误及租约风险。", p2:"ID Work Studio 会在需要时，与业主或大厦管理方，以及相关受委任 QP、LEW 或其他专业人士协调适用的审批与提交流程，让受影响工程在开工前有更清楚的合规路径。" },
+  stats: { s1:"某些未经批准建筑工程的最高罚款可达", s2:"非住宅电气安装执照的一般负荷门槛", s3:"本页涵盖的核心审批 / 协调路径", s4:"适用时涉及的受委任专业人士" },
   pillars: {
     serif:"四大", bold:"许可证支柱", step_label:"步骤", facts_label:"关键要求",
-    p1: { agency:"MCST / 大厦管理", title:"MCST装修许可证", subtitle:"分层商业建筑及购物商场内所有工程的必要许可证", body:"在商业分层单位开始任何实体施工前，租户必须获得物业管理机构（MCST）或大厦管理方的书面批准。每栋建筑均有自己的装修指引，涵盖批准材料、施工时间、防尘降噪管控及恢复原状义务。", f1:"向大厦管理方提交装修图纸", f2:"施工前取得书面批准", f3:"遵守批准的施工时间", f4:"提供恢复原状保证金", f5:"项目竣工时需进行最终联合验收" },
-    p2: { agency:"建设局", title:"BCA建筑方案提交", subtitle:"结构性工程、用途变更及机电改造的必要程序", body:"影响建筑结构完整性、改变空间批准用途或对机电系统进行重大改动的工程，需向建设局提交申请。所有结构及消防安全设计必须由合格人士（QP）认证。", f1:"结构提交须由合格人士（QP）负责", f2:"结构性工程前须取得建筑方案批准", f3:"通过URA和BCA申请用途变更", f4:"可能需要临时占用许可证（TOP）", f5:"项目竣工时须提交竣工图纸" },
-    p3: { agency:"新加坡民防部队", title:"SCDF消防安全提交", subtitle:"对消防保护系统或防火分区进行任何改动的必要程序", body:"新加坡民防部队监管所有影响消防安全系统的工程。这包括洒水器、烟雾探测器和防火门的移位——这些是零售装修、办公室翻新和餐饮改造中常见的工程内容。", f1:"向SCDF提交消防安全方案", f2:"须由持牌消防安全经理（FSM）签署", f3:"洒水器移位须由PUB持牌水管工负责", f4:"防火门须符合BS 476 / SS标准", f5:"移交时须取得SCDF竣工证书" },
-    p4: { agency:"能源市场局", title:"LEW持牌电气工程", subtitle:"新加坡商业空间45安培以上电气工程的必要资质", body:"新加坡商业空间45安培以上的电气工程必须由EMA持牌电气工作者（LEW）或在其直接监督下进行。这包括新的总配电箱、三相电源安装及主要机电新增工程。", f1:"45A以上工程须由LEW监督", f2:"向EMA申请电气安装许可证", f3:"LEW须认证所有新电气安装", f4:"现有系统须定期检查证书", f5:"竣工时须提交电气竣工图纸" }
+    p1: { agency:"MCST / 大厦管理", title:"MCST装修许可证", subtitle:"业主或大厦管理装修规定中常见的开工前要求", body:"许多分层商业建筑及购物商场会要求租户在装修前取得业主、MCST 或大厦管理方的书面批准。具体要求因大厦而异，装修指引可能涵盖材料、施工时间、防尘降噪、押金及恢复原状义务。", f1:"向大厦管理方提交装修图纸", f2:"施工前取得书面批准", f3:"遵守批准的施工时间", f4:"确认是否需要装修或恢复原状押金", f5:"确认该大厦具体的交付与最终验收要求" },
+    p2: { agency:"建设局", title:"BCA建筑方案提交", subtitle:"当受监管的建筑或结构工程需要BCA批准时适用", body:"当拟议工程属于受监管的建筑或结构工程时，可能需要BCA批准，并由合适的合格人士（QP）负责相关建筑或结构提交。用途变更属于另一个规划事项，在适用时通过URA处理。", f1:"结构提交须由合格人士（QP）负责", f2:"结构性工程前须取得建筑方案批准", f3:"用途变更在适用时由URA另行评估", f4:"并非所有商业装修都需要BCA建筑方案批准", f5:"完工文件要求取决于获批工程范围" },
+    p3: { agency:"新加坡民防部队", title:"SCDF消防安全提交", subtitle:"当消防系统、防火分区或逃生要求受到影响时可能适用", body:"当装修影响消防保护系统、防火分区、逃生要求或其他受监管消防安全项目时，可能需要符合SCDF相关要求。若需要提交消防安全方案，应由合适的合格人士（QP）准备并提交。", f1:"向SCDF提交消防安全方案", f2:"需要的消防安全方案由合适的QP准备并提交", f3:"洒水器改动须符合适用的SCDF消防保护要求", f4:"防火构件须符合适用的获批消防安全要求", f5:"若项目属于FSC / TFP制度范围，应完成相应检查与认证流程" },
+    p4: { agency:"能源市场局", title:"LEW持牌电气工程", subtitle:"电气工程需要合适的LEW；电气安装执照另以45 kVA门槛判断", body:"电气工程必须由合适牌照级别的持牌电气工作者（LEW）执行或监督。另一个独立要求是，非住宅电气安装在获批负荷超过45 kVA时，一般需要EMA电气安装执照，某些其他法定情形也可能适用。", f1:"电气工程须由合适的LEW执行或监督", f2:"非住宅安装获批负荷一般超过45 kVA时涉及EMA安装执照", f3:"LEW责任取决于具体电气工程与安装范围", f4:"持牌安装须遵守适用的检查与执照要求", f5:"完工记录要求取决于电气工程与大厦规定" }
   },
-  process: { serif:"我们的", bold:"许可证管理流程", s1t:"许可证评估", s1d:"免费审查您的翻新范围，确认所需许可证。", s2t:"文件准备", s2d:"由我们的合格人士准备建筑图纸、结构计算及消防安全方案。", s3t:"提交与跟进", s3d:"我们向MCST、BCA、SCDF及EMA提交所有申请并积极跟进。", s4t:"审批与结案", s4d:"取得最终审批，在移交前归档所有合规证书。" },
-  faq: { title:"商业许可证常见问题", q1:"新加坡办公室翻新是否需要SCDF审批？", a1:"是的，如果您的翻新涉及对消防保护系统的任何改动。这包括<strong>洒水器、烟雾探测器、防火门或应急照明</strong>的移位——这些在开放式办公室隔断或零售单位改造中均为常见工程。SCDF要求在施工前提交由持牌消防安全经理认证的消防安全方案。", q2:"新加坡哪些电气工程需要LEW持牌电气工作者？", a2:"新加坡商业空间超过<strong>45安培</strong>的电气工程必须由EMA持牌LEW负责或在其直接监督下进行。包括：<br/><br/>• 安装或更换总配电箱<br/>• 三相电源安装<br/>• 新电气主线<br/>• 需负荷计算的重大机电新增工程<br/><br/>ID Work Studio 的商业机电工程均由内部LEW监督电工负责。", q3:"在新加坡无证翻新会有什么后果？", a3:"违规翻新工程将面临严重后果。根据《建筑管制法》，严重违规罚款最高可达<strong>S$200,000</strong>。大厦管理方可发出停工令，要求租户自费全面恢复原状，并没收保证金。请务必聘请BCA注册承包商代办许可证。", q4:"新加坡商业翻新许可证审批需要多长时间？", a4:"审批时间因部门而异：<br/><br/>• <strong>MCST装修审批：</strong>1至3周<br/>• <strong>BCA建筑方案审批：</strong>4至8周<br/>• <strong>SCDF消防安全审批：</strong>2至6周<br/>• <strong>EMA电气许可证：</strong>1至2周<br/><br/>我们尽可能同步提交所有申请，最大程度减少总体工期影响。" },
+  process: { serif:"我们的", bold:"许可证管理流程", s1t:"许可证评估", s1d:"审查翻新范围，确认哪些业主、大厦管理或法定要求可能适用。", s2t:"文件准备", s2d:"在适用时，与相关受委任QP、LEW或其他专业人士协调所需图纸与专业文件。", s3t:"提交与跟进", s3d:"与业主或大厦管理方，以及相关受委任专业人士或主管单位协调适用的提交流程。", s4t:"审批与结案", s4d:"在受影响工程移交前，协调适用的批准、许可与完工文件。" },
+  faq: { title:"商业许可证常见问题", q1:"新加坡办公室翻新是否需要SCDF审批？", a1:"如果装修影响<strong>消防保护系统、防火分区、逃生要求或其他受监管消防安全项目</strong>，可能需要SCDF批准。若需要提交消防安全方案，应由合适的合格人士（QP）准备并提交。纯装饰且不影响消防安全的工程，可能适用不同流程。", q2:"新加坡哪些电气工程需要LEW持牌电气工作者？", a2:"电气工程必须由合适牌照级别的<strong>持牌电气工作者（LEW）</strong>执行或监督。另一个独立的EMA电气安装执照门槛，对非住宅安装一般以获批负荷超过<strong>45 kVA</strong>判断，而不是45安培。具体LEW及执照要求取决于拟进行的电气工程和安装范围。", q3:"在新加坡无证翻新会有什么后果？", a3:"若在应取得的批准或许可证尚未具备时进行受监管建筑工程，可能面对严重后果。根据《建筑管制法》，某些未经批准建筑工程的违法行为罚款最高可达<strong>S$200,000</strong>。另外，业主或大厦管理方也可能根据装修规定或租约要求停工或恢复原状。", q4:"新加坡商业翻新许可证审批需要多长时间？", a4:"商业翻新并没有一个统一的许可证审批周期。<strong>业主或MCST装修审批时间取决于具体大厦</strong>，而BCA、SCDF、URA及EMA流程则取决于实际适用的提交流程与项目范围。某些明确流程有官方服务时限，但图纸修改或跨部门协调可能延长整体工期。应先确认哪些审批真正适用，再采用对应的官方时间。" },
   related: { title:"探索我们的其他商业服务" },
   cta: { serif:"让许可证管理", bold:"不再是难题", btn:"WhatsApp 获取免费许可证咨询" },
   sticky: { text:"免费许可证咨询 — 立即WhatsApp联系我们" }

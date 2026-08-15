@@ -193,16 +193,16 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         "planning_tools": {
           "eyebrow": "Planning tools",
           "title": "Plan cost, cashflow, timeline and design direction clearly.",
-          "subtitle": "Four focused tools for renovation budget, full move-in cost, timeline planning and style direction.",
+          "subtitle": "Practical tools to help you explore renovation costs, budgets, timelines and design decisions before you commit.",
           "items": [
             {
-              "title": "Renovation Cost Estimator",
+              "title": "Renovation Cost Calculator",
               "text": "Estimate renovation contract costs before requesting a quotation.",
               "href": "/renovation-cost-calculator",
               "label": "Estimate costs"
             },
             {
-              "title": "Move-In Budget Planner",
+              "title": "Total Home Budget Calculator",
               "text": "Plan renovation, furniture, appliances and safety buffer together.",
               "href": "/total-home-budget-calculator",
               "label": "Plan budget"
@@ -214,7 +214,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
               "label": "Plan timeline"
             },
             {
-              "title": "Style Discovery Quiz",
+              "title": "HDB Renovation Style Quiz",
               "text": "Narrow your style direction before consultation.",
               "href": "/hdb-renovation-style-quiz",
               "label": "Discover style"
@@ -248,15 +248,15 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
               "to": "/insights"
             },
             {
-              "label": "Renovation Cost Estimator",
+              "label": "Renovation Cost Calculator",
               "to": "/renovation-cost-calculator"
             },
             {
-              "label": "Move-In Budget Planner",
+              "label": "Total Home Budget Calculator",
               "to": "/total-home-budget-calculator"
             },
             {
-              "label": "Style Discovery Quiz",
+              "label": "HDB Renovation Style Quiz",
               "to": "/hdb-renovation-style-quiz"
             },
             {
@@ -274,7 +274,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
           "title": "Registered, experienced and committed to clearer renovation decisions.",
           "signals": [
             "BCA-registered renovation and interior design firm in Singapore.",
-            "HDB-approved for residential renovation works and HDB project coordination.",
+            "HDB Registered Renovation Contractor for residential renovation works and HDB project coordination.",
             "Experience across HDB homes, condos, office fit-outs and commercial reinstatement.",
             "Practical guidance that connects planning, design, execution and handover."
           ]
@@ -382,16 +382,16 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
         "planning_tools": {
           "eyebrow": "规划工具",
           "title": "更清楚规划费用、现金流、工期与风格方向。",
-          "subtitle": "四个工具分别协助预算、完整入住成本、翻新工期与风格判断。",
+          "subtitle": "实用规划工具，帮助你在决定翻新方案前先了解费用、整体预算、工期与设计方向。",
           "items": [
             {
-              "title": "Renovation Cost Estimator",
+              "title": "Renovation Cost Calculator",
               "text": "先估算翻新工程费用，再索取详细报价。",
               "href": "/renovation-cost-calculator",
               "label": "估算费用"
             },
             {
-              "title": "Move-In Budget Planner",
+              "title": "Total Home Budget Calculator",
               "text": "同时规划翻新、家具、电器与安全缓冲。",
               "href": "/total-home-budget-calculator",
               "label": "规划预算"
@@ -403,7 +403,7 @@ const homepageAuthorityContent: Record<'en' | 'zh', HomepageAuthorityContent> = 
               "label": "规划工期"
             },
             {
-              "title": "Style Discovery Quiz",
+              "title": "HDB Renovation Style Quiz",
               "text": "咨询前先缩小适合您的风格方向。",
               "href": "/hdb-renovation-style-quiz",
               "label": "开始测验"
@@ -745,15 +745,46 @@ function HomepageInternalLinks() {
 
 
 function LandingPage() {
+  const businessSchema = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "@id": "https://idworkstudio.com/#business",
+    "name": "ID Work Studio",
+    "legalName": "ID WORK STUDIO PTE LTD",
+    "url": "https://idworkstudio.com/",
+    "telephone": "+6568162872",
+    "email": "contact@idworkstudio.com",
+    "foundingDate": "2015",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "UEN",
+      "value": "201539658C"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "11 Woodlands Close, Woodlands 11, #03-10",
+      "addressLocality": "Woodlands",
+      "addressRegion": "Singapore",
+      "postalCode": "737853",
+      "addressCountry": "SG"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Singapore"
+    },
+    "description": "Singapore renovation and interior design company providing residential renovation, office fit-out and commercial renovation services."
+  };
+
   return (
     <>
       <Helmet>
         <title>ID Work Studio | Renovation & Interior Design Singapore | Woodlands</title>
         <meta
           name="description"
-          content="Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB-approved."
+          content="Planning an office or commercial renovation in Singapore? See 2026 cost ranges, timelines, and real project insights. BCA-registered & HDB Registered."
         />
         <link rel="canonical" href="https://idworkstudio.com/" />
+        <script type="application/ld+json">{JSON.stringify(businessSchema)}</script>
       </Helmet>
 
       <Hero />
