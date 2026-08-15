@@ -633,7 +633,7 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
           name: 'How much does commercial renovation cost in Singapore?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Commercial renovation in Singapore typically costs $30 to $180 psf for offices, $80 to $150 psf for retail shops, and $120 to $250 psf for F&B outlets. The final range is mainly affected by M&E works, fire safety requirements, carpentry, flooring, ceiling works and landlord reinstatement conditions.',
+            text: 'Commercial renovation in Singapore typically costs $50 to $80 psf for a basic office fit-out, $80 to $130 psf for a mid-range office fit-out, and $130 to $200+ psf for a premium or Grade A office fit-out. Complex corporate, high-spec M&E, acoustic, AV or strongly branded projects can exceed $200 psf and approach $300 psf. Retail shops usually range from $120 to $300 psf, while F&B outlets commonly require $200 to $500+ psf. The final range is mainly affected by M&E works, fire safety requirements, carpentry, flooring, ceiling works and landlord reinstatement conditions.',
           },
         },
         {
@@ -641,7 +641,7 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
           name: 'How much does office renovation cost in Singapore?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A basic office renovation usually starts from $30 to $60 psf. A mid-range office with meeting rooms, pantry, flooring, ceiling and electrical works is usually $60 to $100 psf. Premium office fit-outs with feature walls, acoustic rooms, customised carpentry and higher-grade finishes can reach $100 to $180 psf.',
+            text: 'A basic office fit-out is typically $50 to $80 psf. A mid-range office fit-out with more meeting rooms, glass partitions, pantry, better lighting and more electrical or data points is usually $80 to $130 psf. Premium or Grade A office fit-outs with acoustic treatment, custom carpentry, boardrooms, advanced M&E and stronger branding details are typically $130 to $200+ psf. Complex high-spec projects can exceed $200 psf and approach $300 psf.',
           },
         },
         {
@@ -649,7 +649,7 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
           name: 'How long does commercial renovation usually take?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Most commercial renovation projects take 6 to 12 weeks. Design and planning usually takes 2 to 3 weeks, landlord or MCST submission takes 2 to 4 weeks, and actual renovation works usually take 4 to 8 weeks depending on project size and approval conditions.',
+            text: 'A typical commercial renovation may take around 8 to 16 weeks from planning to handover, depending on unit type, approval requirements, M&E complexity and renovation scope. Straightforward office fit-outs can be faster, while retail and F&B projects may take longer. Design and planning may take 2 to 3 weeks, landlord or MCST submission may take 2 to 4 weeks as a planning allowance, and actual renovation works commonly take 4 to 8 weeks depending on project size and approval conditions.',
           },
         },
         {
@@ -697,7 +697,7 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
           name: 'Is retail renovation more expensive than office renovation?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Retail renovation is often higher than a basic office because shopfront, lighting, display fixtures, signage, customer flow, storage and landlord design guidelines are more involved. Typical retail renovation in Singapore ranges from $80 to $150 psf.',
+            text: 'Retail renovation is often higher than a basic office because shopfront, lighting, display fixtures, signage, customer flow, storage and landlord design guidelines are more involved. Typical retail renovation in Singapore ranges from $120 to $300 psf.',
           },
         },
         {
@@ -705,7 +705,7 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
           name: 'Why is F&B renovation usually more expensive?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'F&B renovation usually costs more because of exhaust, grease trap, plumbing, waterproofing, kitchen equipment coordination, fire safety, pest control requirements and stricter authority or landlord conditions. A practical F&B budget is usually $120 to $250 psf.',
+            text: 'F&B renovation usually costs more because of exhaust, grease trap, plumbing, waterproofing, kitchen equipment coordination, fire safety, pest control requirements and stricter authority or landlord conditions. A practical F&B budget is usually $200 to $500+ psf.',
           },
         },
         {
