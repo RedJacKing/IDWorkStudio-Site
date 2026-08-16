@@ -304,7 +304,7 @@ for (const [relativeFile, meta] of Object.entries(pageMetaMap)) {
     continue;
   }
 
-  html = html.replace(/<link\s+rel=["']canonical["'][^>]*>\s*/gi, '');
+  html = html.replace(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>\s*/gi, '');
   html = html.replace(/<!--\s*❌ REMOVED GLOBAL CANONICAL HERE\s*-->\s*/g, '');
 
   const encodedTitle = encodeHtml(meta.title);
