@@ -2629,7 +2629,7 @@ enT["article_renovation_cost_2026"] = {
   title: "Renovation Cost in Singapore (2026 Guide)",
   subtitle: "A practical guide to what homeowners in Singapore should realistically budget for BTO, resale and condo renovation in 2026, and what actually drives cost.",
   read_time: "8 min read",
-  intro: "Renovation cost in Singapore is not determined by size alone. In practice, the final budget depends on a combination of scope, design complexity, material grade, carpentry detailing, wet works and whether the property is a new BTO flat or an older resale unit.",
+  intro: "In 2026, renovation budgets in Singapore typically range from $40,000 to $75,000 for BTO flats, $55,000 to $98,000 for resale HDB flats, and $40,000 to $105,000+ for condos and private apartments. The final cost depends on scope, design complexity, material grade, carpentry, wet works and the condition of the property.",
   sections: {
     costs_title: "How much does renovation cost in Singapore?",
     costs_intro: "In 2026, most homeowners in Singapore can expect renovation budgets to fall within these broad ranges:",
@@ -2718,7 +2718,7 @@ zhT["article_renovation_cost_2026"] = {
   title: "新加坡翻新费用（2026 指南）",
   subtitle: "帮助新加坡业主更现实地规划 BTO、转售组屋与私人公寓翻新预算，并理解真正影响费用的关键因素。",
   read_time: "约 8 分钟",
-  intro: "新加坡的翻新费用并不单纯由面积决定。实际预算通常取决于工程范围、设计复杂度、材料等级、木作细节、湿作工程，以及房屋是全新 BTO 还是较旧的转售单位。",
+  intro: "2026 年新加坡住宅翻新预算，BTO 通常约为 $40,000 至 $75,000，转售 HDB 约为 $55,000 至 $98,000，私人公寓则约为 $40,000 至 $105,000+。最终费用会因工程范围、设计复杂度、材料等级、木作、湿作工程及房屋现况而有所不同。",
   sections: {
     costs_title: "新加坡翻新费用大概是多少？",
     costs_intro: "在 2026 年，新加坡大多数业主的翻新预算大致会落在以下区间：",
