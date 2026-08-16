@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
@@ -462,7 +462,7 @@ export default function CommercialRenovationCostSingapore() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Commercial Renovation Cost Singapore (2026 Guide) | ID Work Studio</title>
         <meta name="description" content="Real contractor pricing, approval requirements and hidden cost risks for office, retail, clinic, F&B and commercial renovation projects in Singapore." />
         <meta
@@ -483,7 +483,7 @@ export default function CommercialRenovationCostSingapore() {
         <meta property="og:image" content="https://idworkstudio.com/og-preview.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
-      </Helmet>
+      </Head>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
         <section className="relative min-h-[72vh] flex items-center justify-center overflow-hidden bg-black pt-28 md:pt-32 pb-20 text-white">

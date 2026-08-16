@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from 'vite-react-ssg';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -630,14 +630,14 @@ export default function HDBDefectChecklistBeforeRenovationSingapore() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{t.metaTitle}</title>
         <meta name="description" content={t.metaDescription} />
         <link rel="canonical" href={t.canonical} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-      </Helmet>
+      </Head>
 
       <main className="bg-[#FAF8F3] text-[#2C2C2C]">
         <section className="relative overflow-hidden bg-[#111] px-6 py-20 text-center text-white md:py-28">

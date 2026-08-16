@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -260,7 +260,7 @@ export default function ArticleHDBTimeline() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{article.meta.title}</title>
         <meta name="description" content={article.meta.description} />
         <link rel="canonical" href="https://idworkstudio.com/insights/hdb-renovation-timeline-singapore" />
@@ -276,7 +276,7 @@ export default function ArticleHDBTimeline() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      </Head>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
 

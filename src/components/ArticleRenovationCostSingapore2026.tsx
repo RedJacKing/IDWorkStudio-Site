@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -82,7 +82,7 @@ export default function ArticleRenovationCost2026() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{t('article_renovation_cost_2026.meta.title')}</title>
         <meta name="description" content={t('article_renovation_cost_2026.meta.description')} />
         <link rel="canonical" href="https://idworkstudio.com/insights/renovation-cost-singapore-2026" />
@@ -98,7 +98,7 @@ export default function ArticleRenovationCost2026() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      </Head>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
 

@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Building2, CalendarDays, CheckCircle2, Clock3, DollarSign, HelpCircle, MessageCircle, ShieldCheck } from 'lucide-react';
@@ -313,7 +313,7 @@ export default function OfficeRenovationCostSingapore() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{content.meta.title}</title>
         <meta name="description" content={content.meta.desc} />
         <link rel="canonical" href={articleUrl} />
@@ -329,7 +329,7 @@ export default function OfficeRenovationCostSingapore() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      </Head>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-black pt-28 md:pt-32 pb-20 text-white">

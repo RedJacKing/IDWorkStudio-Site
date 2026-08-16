@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, CheckCircle2, Lightbulb, Moon, Route, ShieldCheck, Sparkles } from 'lucide-react';
@@ -593,7 +593,7 @@ export default function FengShuiRenovationSingapore() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{t.metaTitle}</title>
         <meta name="description" content={t.metaDescription} />
         <link rel="canonical" href={t.canonical} />
@@ -611,7 +611,7 @@ export default function FengShuiRenovationSingapore() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-      </Helmet>
+      </Head>
 
       <article className="bg-[#f7f2ea] text-[#1f1a17] selection:bg-gold selection:text-dark-charcoal">
         <section className="relative min-h-[72vh] overflow-hidden bg-black pt-28 md:pt-32 text-white">

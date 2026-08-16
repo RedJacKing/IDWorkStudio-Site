@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 import { Link } from 'react-router-dom';
 import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -203,7 +203,7 @@ export default function ArticleRenovationMistakes() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{content.meta.title}</title>
         <meta name="description" content={content.meta.description} />
         <link rel="canonical" href="https://idworkstudio.com/insights/renovation-mistakes-singapore" />
@@ -219,7 +219,7 @@ export default function ArticleRenovationMistakes() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-off-white selection:bg-gold selection:text-dark-charcoal">
         <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden bg-black pt-28 pb-20 text-white md:pt-32">

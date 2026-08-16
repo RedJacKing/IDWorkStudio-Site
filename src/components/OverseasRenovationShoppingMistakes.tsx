@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from 'vite-react-ssg';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next"; 
 
@@ -817,7 +817,7 @@ export default function OverseasRenovationShoppingMistakes() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{t.metaTitle}</title>
         <meta name="description" content={t.metaDescription} />
         <link rel="canonical" href={t.canonical} />
@@ -829,7 +829,7 @@ export default function OverseasRenovationShoppingMistakes() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-      </Helmet>
+      </Head>
 
       <main className="bg-[#FAF8F3] text-[#2C2C2C]">
         <section className="relative overflow-hidden bg-[#111] px-6 pb-20 pt-28 text-white md:pb-24 md:pt-36">

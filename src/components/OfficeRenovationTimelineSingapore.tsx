@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 import type { ReactNode } from 'react';
 import { CalendarDays, Clock3, ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -340,7 +340,7 @@ export default function OfficeRenovationTimelineSingapore() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{article.meta.title}</title>
         <meta name="description" content={article.meta.description} />
         <link rel="canonical" href={articleUrl} />
@@ -356,7 +356,7 @@ export default function OfficeRenovationTimelineSingapore() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      </Head>
 
       <div className="bg-off-white min-h-screen selection:bg-gold selection:text-dark-charcoal">
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-black pt-28 md:pt-32 pb-20 text-white">
