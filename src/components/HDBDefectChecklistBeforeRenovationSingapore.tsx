@@ -284,6 +284,7 @@ const content: Record<"en" | "zh", ArticleContent> = {
     ],
     interlinkTitle: "Related renovation planning guides",
     interlinks: [
+      { text: "Use the interactive checklist while inspecting your flat so you can work through the main defect categories before renovation starts.", to: "/hdb-defect-checklist", label: "Open the HDB Defect Inspection Checklist" },
       { text: "Complete defect rectification before locking in your renovation schedule.", to: "/insights/hdb-renovation-timeline-singapore", label: "Read the HDB renovation timeline guide" },
       { text: "Some defects can affect the final renovation budget if they are only discovered after works begin.", to: "/insights/renovation-cost-singapore-2026", label: "Compare renovation cost ranges" },
       { text: "When reviewing quotations, separate original defects from actual renovation works to avoid unclear scope disputes.", to: "/insights/renovation-quotation-singapore", label: "Learn how to compare renovation quotations" },
@@ -522,6 +523,7 @@ const content: Record<"en" | "zh", ArticleContent> = {
     ],
     interlinkTitle: "相关装修规划指南",
     interlinks: [
+      { text: "验屋时可直接使用互动清单，按主要缺陷类别逐项检查，再开始装修。", to: "/hdb-defect-checklist", label: "打开 HDB 验屋缺陷检查工具" },
       { text: "应先完成主要缺陷处理，再确认装修进度。", to: "/insights/hdb-renovation-timeline-singapore", label: "阅读 HDB 翻新时间表" },
       { text: "有些缺陷如果装修后才发现，可能会影响最终预算。", to: "/insights/renovation-cost-singapore-2026", label: "查看新加坡装修费用指南" },
       { text: "比较报价时，应把原本缺陷与真正装修工程分清楚。", to: "/insights/renovation-quotation-singapore", label: "了解如何比较装修报价" },

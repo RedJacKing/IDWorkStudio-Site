@@ -65,7 +65,10 @@ const articleRenovationMistakesContent = {
     cost_suffix: "so you can compare BTO, resale and condo renovation budgets more realistically.",
     timeline_prefix: "To avoid delays from late decisions, owner-supplied items or unclear quotation scope, read our",
     timeline_link: "HDB renovation timeline guide",
-    timeline_suffix: "before renovation work starts."
+    timeline_suffix: "before renovation work starts.",
+    calculator_prefix: "If your main concern is whether your renovation budget is realistic, use our",
+    calculator_link: "Renovation Cost Calculator",
+    calculator_suffix: "to get a planning estimate before comparing quotations."
   },
     cta: {
     eyebrow: "Avoid Costly Renovation Mistakes",
@@ -134,7 +137,10 @@ const articleRenovationMistakesContent = {
     cost_suffix: "以更实际地比较 BTO、转售组屋和公寓翻新预算。",
     timeline_prefix: "若要避免因决定太迟、自购物品或报价范围不清而造成延误，可先阅读我们的",
     timeline_link: "HDB 翻新时间指南",
-    timeline_suffix: "再开始安排翻新工程。"
+    timeline_suffix: "再开始安排翻新工程。",
+    calculator_prefix: "如果你最担心的是装修预算是否实际，可先使用我们的",
+    calculator_link: "装修费用计算器",
+    calculator_suffix: "在比较报价前先取得规划估算。"
   },
     cta: {
     eyebrow: "避开昂贵翻新错误",
@@ -396,6 +402,16 @@ export default function ArticleRenovationMistakes() {
                     {content.internal_links.timeline_link}
                   </Link>
                   {content.internal_links.timeline_suffix}
+                </p>
+                <p>
+                  {content.internal_links.calculator_prefix}{' '}
+                  <Link
+                    to="/renovation-cost-calculator"
+                    className="text-charcoal underline decoration-gold/50 underline-offset-4 transition-colors hover:text-gold"
+                  >
+                    {content.internal_links.calculator_link}
+                  </Link>{' '}
+                  {content.internal_links.calculator_suffix}
                 </p>
               </div>
             </section>

@@ -129,6 +129,8 @@ const articleContent = {
   related_office_cost: "<officeCostLink>Office Renovation Cost Singapore (2026 Guide)</officeCostLink>",
   related_office_timeline: "<officeTimelineLink>Office Renovation Timeline Singapore: How Long an Office Fit-Out Really Takes</officeTimelineLink>",
   related_reinstatement: "<reinstatementLink>Commercial Reinstatement Singapore: Cost, Timeline, Checklist & Landlord Requirements</reinstatementLink>",
+  related_office_space: "Office Space Planner",
+  related_approval_planner: "Commercial Renovation Planner",
   related_services: "<commercialServicesLink>Commercial renovation services by ID Work Studio</commercialServicesLink>",
   faq_title: "Commercial renovation FAQ",
   faqs: {
@@ -271,6 +273,8 @@ const articleContent = {
   related_office_cost: "<officeCostLink>新加坡办公室翻新费用（2026 指南）</officeCostLink>",
   related_office_timeline: "<officeTimelineLink>新加坡办公室翻新时间表：办公室装修实际需要多久</officeTimelineLink>",
   related_reinstatement: "<reinstatementLink>新加坡商业恢复原状：费用、时间表、清单与业主要求</reinstatementLink>",
+  related_office_space: "办公室空间规划工具",
+  related_approval_planner: "商业装修审批规划工具",
   related_services: "<commercialServicesLink>ID Work Studio 商业翻新服务</commercialServicesLink>",
   faq_title: "商业翻新常见问题",
   faqs: {
@@ -935,6 +939,18 @@ export default function CommercialRenovationCostSingapore() {
                   className="rounded-2xl border border-gray-200 bg-white px-5 py-4 text-charcoal font-semibold hover:border-gold hover:text-gold transition-colors"
                 >
                   {extractTaggedText(t(`${ARTICLE_KEY}.related_reinstatement`) as string, 'reinstatementLink')}
+                </Link>
+                <Link
+                  to="/office-space-planner"
+                  className="rounded-2xl border border-gray-200 bg-white px-5 py-4 text-charcoal font-semibold hover:border-gold hover:text-gold transition-colors"
+                >
+                  {t(`${ARTICLE_KEY}.related_office_space`)}
+                </Link>
+                <Link
+                  to="/commercial-approval-planner"
+                  className="rounded-2xl border border-gray-200 bg-white px-5 py-4 text-charcoal font-semibold hover:border-gold hover:text-gold transition-colors"
+                >
+                  {t(`${ARTICLE_KEY}.related_approval_planner`)}
                 </Link>
                 <Link
                   to="/commercial"
