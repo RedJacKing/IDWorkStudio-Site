@@ -223,6 +223,26 @@ function auditTool(route, html) {
   }
 }
 
+function auditOfficeCostTerminology(route, html) {
+  const normalized = html
+    .replace(/&ndash;|&#8211;|&#x2013;/gi, '–')
+    .replace(/&mdash;|&#8212;|&#x2014;/gi, '—')
+    .replace(/\s+/g, ' ');
+
+  const conflictingStandardRange =
+    /standard\s+(?:SME\s+)?office(?:\s+(?:renovation|fit[- ]?out))?[^.]{0,120}(?:\$|S\$)\s*80\s*(?:-|–|to)\s*(?:\$|S\$)?\s*150\s*(?:psf|per\s+sq(?:uare)?\s*ft|per\s+sqft|per\s+square\s+foot)/i.test(normalized)
+    || /(?:\$|S\$)\s*80\s*(?:-|–|to)\s*(?:\$|S\$)?\s*150\s*(?:psf|per\s+sq(?:uare)?\s*ft|per\s+sqft|per\s+square\s+foot)[^.]{0,120}standard\s+(?:SME\s+)?office/i.test(normalized);
+
+  if (conflictingStandardRange) {
+    fail(
+      route,
+      'Factual consistency: $80–150 psf is labelled as a standard office range. Use scope-specific SME wording or the canonical standard corporate range.'
+    );
+  } else {
+    pass(route, 'Office cost terminology is consistent with the canonical framework.');
+  }
+}
+
 function printSection(title) {
   console.log('');
   console.log(`===== ${title} =====`);
@@ -287,6 +307,14 @@ for (const route of sitemapRoutes) {
 
   if (TOOL_ROUTES.has(route)) {
     auditTool(route, html);
+  }
+
+  if (
+    route === '/commercial'
+    || route === '/insights/commercial-renovation-cost-singapore'
+    || route === '/insights/office-renovation-cost-singapore'
+  ) {
+    auditOfficeCostTerminology(route, html);
   }
 }
 

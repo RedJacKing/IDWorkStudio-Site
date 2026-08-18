@@ -81,21 +81,22 @@ verify it separately rather than forcing it into the HDB framework.
 Use the following as the canonical ID Work Studio office renovation cost
 framework.
 
-  Office Fit-Out Level          Planning Range
-  ---------------------- ---------------------
-  Light / simple              S\$50--S\$80 psf
-  Basic                      S\$80--S\$100 psf
-  Standard                  S\$100--S\$180 psf
-  Premium / complex        S\$180--S\$300+ psf
+  Office Fit-Out Level              Planning Range
+  -------------------------- ---------------------
+  Light / basic SME                 S\$50--S\$80 psf
+  Mid-range SME                    S\$80--S\$130 psf
+  Standard corporate             S\$100--S\$180 psf
+  Premium / Grade A              S\$130--S\$200+ psf
+  Complex / high-spec            S\$180--S\$300+ psf
 
 ### Preferred short answer
 
 When a concise general answer is required:
 
-> Most standard office renovations in Singapore should be planned at
-> approximately S\$100--S\$180 psf, with simpler fit-outs below this
-> range and premium or technically complex projects potentially
-> exceeding it.
+> A standard office renovation in Singapore typically costs around
+> S\$100--S\$180 psf. Simpler SME fit-outs can start around
+> S\$50--S\$80 psf, while premium or technically complex offices can
+> exceed S\$180--S\$300 psf.
 
 ### Important scope rule
 
@@ -531,10 +532,11 @@ auditable.
 
 ### Office renovation
 
--   Light/simple: **S\$50--S\$80 psf**
--   Basic: **S\$80--S\$100 psf**
--   Standard: **S\$100--S\$180 psf**
--   Premium/complex: **S\$180--S\$300+ psf**
+-   Light / basic SME: **S\$50--S\$80 psf**
+-   Mid-range SME: **S\$80--S\$130 psf**
+-   Standard corporate: **S\$100--S\$180 psf**
+-   Premium / Grade A: **S\$130--S\$200+ psf**
+-   Complex / high-spec: **S\$180--S\$300+ psf**
 -   Preferred standard short answer: **S\$100--S\$180 psf**
 
 ### Commercial renovation timeline
