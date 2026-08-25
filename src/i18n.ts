@@ -332,7 +332,7 @@ const resources = {
           "items": {
             "bto3": {
               "label": "3-Room BTO",
-              "range": "$40,000 – $53,000",
+              "range": "$40,000 – $52,000",
               "desc": "Typical 2026 whole-home planning range for a 3-room BTO. Actual cost depends on carpentry, wet works, electrical scope, material selections and design complexity."
             },
             "bto4": {
@@ -342,7 +342,7 @@ const resources = {
             },
             "bto5": {
               "label": "5-Room BTO",
-              "range": "$60,000 – $77,000",
+              "range": "$60,000 – $75,000",
               "desc": "Typical 2026 whole-home planning range for a 5-room BTO. Larger carpentry scope, premium finishes and additional systems can increase the final cost."
             },
             "resale": {
@@ -423,7 +423,7 @@ const resources = {
             },
             "2": {
               "q": "How much does a 3-room or 5-room HDB renovation cost?",
-              "a": "Typical 2026 whole-home planning ranges are about <strong>$40,000–$53,000 for a 3-room BTO</strong> and <strong>$60,000–$77,000 for a 5-room BTO</strong>. Resale renovation generally costs more because hacking, removal, rewiring, plumbing replacement, waterproofing and making-good works are more common, but the actual difference depends on the existing condition and renovation scope."
+              "a": "Typical 2026 whole-home planning ranges are about <strong>$40,000–$52,000 for a 3-room BTO</strong> and <strong>$60,000–$75,000 for a 5-room BTO</strong>. Resale renovation generally costs more because hacking, removal, rewiring, plumbing replacement, waterproofing and making-good works are more common, but the actual difference depends on the existing condition and renovation scope."
             },
             "3": {
               "q": "Why does resale HDB renovation cost more than BTO?",
@@ -1289,7 +1289,7 @@ const resources = {
           "items": {
             "bto3": {
               "label": "三房式 BTO",
-              "range": "$40,000 – $53,000",
+              "range": "$40,000 – $52,000",
               "desc": "2026 年三房式 BTO 全屋翻新的典型规划范围。实际费用取决于木作、湿作、电气范围、材料选择与设计复杂度。"
             },
             "bto4": {
@@ -1299,7 +1299,7 @@ const resources = {
             },
             "bto5": {
               "label": "五房式 BTO",
-              "range": "$60,000 – $77,000",
+              "range": "$60,000 – $75,000",
               "desc": "2026 年五房式 BTO 全屋翻新的典型规划范围。较大的木作范围、高级饰面及额外系统会提高最终费用。"
             },
             "resale": {
@@ -1380,7 +1380,7 @@ const resources = {
             },
             "2": {
               "q": "三房式或五房式组屋翻新费用是多少？",
-              "a": "2026 年全屋翻新的典型规划范围约为<strong>三房式 BTO $40,000–$53,000</strong>，以及<strong>五房式 BTO $60,000–$77,000</strong>。转售翻新通常费用更高，因为更常涉及拆除、清运、重新布线、更换水管、防水及修补工程，但实际差额取决于原有屋况与翻新范围。"
+              "a": "2026 年全屋翻新的典型规划范围约为<strong>三房式 BTO $40,000–$52,000</strong>，以及<strong>五房式 BTO $60,000–$75,000</strong>。转售翻新通常费用更高，因为更常涉及拆除、清运、重新布线、更换水管、防水及修补工程，但实际差额取决于原有屋况与翻新范围。"
             },
             "3": {
               "q": "为什么转售组屋翻新比 BTO 更贵？",

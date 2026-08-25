@@ -37,6 +37,8 @@ import FifteenRenovationDecisionsSingapore from './components/FifteenRenovationD
 import OfficeSpacePlanningSingapore from './components/OfficeSpacePlanningSingapore';
 import StickyMobileNav from './components/StickyMobileNav';
 import ScrollToHashElement from './components/ScrollToHashElement';
+import AnswerFinder from './components/AnswerFinder';
+import { getAnswerFinderEntries, getHomepageSuggestedAnswerIds } from './components/answerFinderIndex';
 
 import { useTranslation } from 'react-i18next';
 
@@ -539,12 +541,14 @@ function HomepageAuthoritySections() {
     <main className="bg-[#f8f5ef] text-dark-charcoal">
       <section className="px-4 py-10 sm:px-6 lg:px-8 md:py-12">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-6 max-w-3xl rounded-[2rem] border border-gold/15 bg-white/75 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-7">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.quick_answers.eyebrow}</p>
-            <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{content.quick_answers.title}</h2>
-            <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base">
-              {content.quick_answers.subtitle}
-            </p>
+          <div className="mb-6 w-full rounded-[2rem] border border-gold/15 bg-white/75 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:p-7">
+            <div className="max-w-3xl">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold">{content.quick_answers.eyebrow}</p>
+              <h2 className="font-serif text-3xl font-bold leading-tight md:text-4xl">{content.quick_answers.title}</h2>
+              <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base">
+                {content.quick_answers.subtitle}
+              </p>
+            </div>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -744,6 +748,26 @@ function HomepageInternalLinks() {
 }
 
 
+
+function HomepageAnswerFinder() {
+  const { i18n } = useTranslation();
+  const lang = i18n.language === 'zh' ? 'zh' : 'en';
+
+  return (
+    <AnswerFinder
+      entries={getAnswerFinderEntries(lang)}
+      suggestedIds={getHomepageSuggestedAnswerIds(lang)}
+      title={lang === 'zh' ? '你想了解哪一个装修问题？' : 'What would you like to know about your renovation?'}
+      subtitle={
+        lang === 'zh'
+          ? '可以询问装修费用、工期、审批、办公室规划、HDB 工程或商业装修问题。'
+          : 'Ask about renovation cost, timeline, approvals, office planning, HDB works or commercial renovation.'
+      }
+      placeholder={lang === 'zh' ? '输入你的装修问题…' : 'Type your renovation question...'}
+    />
+  );
+}
+
 function LandingPage() {
   const businessSchema = {
     "@context": "https://schema.org",
@@ -789,6 +813,7 @@ function LandingPage() {
 
       <Hero />
       <Services />
+      <HomepageAnswerFinder />
       <HomepageAuthoritySections />
       <Contact />
       <HomepageInternalLinks />

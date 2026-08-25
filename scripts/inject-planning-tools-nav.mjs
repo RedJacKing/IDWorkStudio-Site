@@ -91,7 +91,7 @@ function updatePlanningMenu(html, relativeFile) {
       return replaceExactlyOnce(
         html,
         /<div class="nav-dropdown-menu" id="planningToolsMenu">[\s\S]*?<\/div>\s*<\/div>\s*<a href="https:\/\/idworkstudio\.com\/insights">Guides<\/a>/g,
-        `<div class="nav-dropdown-menu" id="planningToolsMenu">\n${renderDescriptive(relativeFile)}\n</div>\n</div>\n<a href="https://idworkstudio.com/insights">Guides</a>`,
+        `<div class="nav-dropdown-menu" id="planningToolsMenu">\n${renderDescriptive(relativeFile)}\n</div>\n</div>\n<a href="https://idworkstudio.com/#ask">Ask</a>\n<a href="https://idworkstudio.com/insights">Guides</a>`,
         relativeFile,
         'commercial Planning Tools menu'
       );
@@ -100,7 +100,7 @@ function updatePlanningMenu(html, relativeFile) {
       return replaceExactlyOnce(
         html,
         /<div class="site-dropdown">[\s\S]*?<\/div>\s*<\/div>\s*<a href="\/insights">Guides<\/a>/g,
-        `<div class="site-dropdown">\n          ${renderSimple(relativeFile)}\n        </div>\n      </div>\n      <a href="/insights">Guides</a>`,
+        `<div class="site-dropdown">\n          ${renderSimple(relativeFile)}\n        </div>\n      </div>\n      <a href="https://idworkstudio.com/#ask">Ask</a>\n      <a href="/insights">Guides</a>`,
         relativeFile,
         'defect-checklist Planning Tools menu'
       );
@@ -109,7 +109,7 @@ function updatePlanningMenu(html, relativeFile) {
       return replaceExactlyOnce(
         html,
         /<div style="position:absolute;top:100%;left:0;background:#fff;border:1px solid #E5E2DA;border-radius:16px;padding:10px 0;min-width:260px;box-shadow:0 14px 34px rgba\(0,0,0,\.08\);display:none" class="planning-dropdown">[\s\S]*?<\/div><\/div><a href="https:\/\/idworkstudio\.com\/insights">Guides<\/a>/g,
-        `<div style="position:absolute;top:100%;left:0;background:#fff;border:1px solid #E5E2DA;border-radius:16px;padding:10px 0;min-width:260px;box-shadow:0 14px 34px rgba(0,0,0,.08);display:none" class="planning-dropdown">${planningTools.map((tool) => `<a href="${href(tool)}"${currentAttr(tool, relativeFile)} style="display:block;padding:10px 18px">${renderToolContent(tool)}</a>`).join('')}</div></div><a href="https://idworkstudio.com/insights">Guides</a>`,
+        `<div style="position:absolute;top:100%;left:0;background:#fff;border:1px solid #E5E2DA;border-radius:16px;padding:10px 0;min-width:260px;box-shadow:0 14px 34px rgba(0,0,0,.08);display:none" class="planning-dropdown">${planningTools.map((tool) => `<a href="${href(tool)}"${currentAttr(tool, relativeFile)} style="display:block;padding:10px 18px">${renderToolContent(tool)}</a>`).join('')}</div></div><a href="https://idworkstudio.com/#ask">Ask</a><a href="https://idworkstudio.com/insights">Guides</a>`,
         relativeFile,
         'style-quiz Planning Tools menu'
       );
@@ -118,7 +118,7 @@ function updatePlanningMenu(html, relativeFile) {
       return replaceExactlyOnce(
         html,
         /<div class="planning-tools-menu">[\s\S]*?<\/div>\s*<\/div>\s*<a href="https:\/\/idworkstudio\.com\/insights">Guides<\/a>/g,
-        `<div class="planning-tools-menu">\n${renderOffice(relativeFile)}\n          </div>\n        </div>\n\n        <a href="https://idworkstudio.com/insights">Guides</a>`,
+        `<div class="planning-tools-menu">\n${renderOffice(relativeFile)}\n          </div>\n        </div>\n\n        <a href="https://idworkstudio.com/#ask">Ask</a>\n        <a href="https://idworkstudio.com/insights">Guides</a>`,
         relativeFile,
         'office-space Planning Tools menu'
       );
@@ -128,7 +128,7 @@ function updatePlanningMenu(html, relativeFile) {
       return replaceExactlyOnce(
         html,
         /<div class="nav-tools-menu">[\s\S]*?<\/div>\s*<\/div>\s*<a href="https:\/\/idworkstudio\.com\/insights">Guides<\/a>/g,
-        `<div class="nav-tools-menu">${renderSimpleDescriptive(relativeFile)}</div></div><a href="https://idworkstudio.com/insights">Guides</a>`,
+        `<div class="nav-tools-menu">${renderSimpleDescriptive(relativeFile)}</div></div><a href="https://idworkstudio.com/#ask">Ask</a><a href="https://idworkstudio.com/insights">Guides</a>`,
         relativeFile,
         'nav-tools Planning Tools menu'
       );
@@ -137,7 +137,7 @@ function updatePlanningMenu(html, relativeFile) {
       return replaceExactlyOnce(
         html,
         /<div class="rounded-\[18px\] border border-\[#eee5da\] bg-white p-2\.5 text-left normal-case tracking-normal shadow-\[0_18px_45px_rgba\(23,21,20,\.14\)\]">[\s\S]*?<\/div>\s*<\/div>\s*<\/div><a href="https:\/\/idworkstudio\.com\/insights"/g,
-        `<div class="rounded-[18px] border border-[#eee5da] bg-white p-2.5 text-left normal-case tracking-normal shadow-[0_18px_45px_rgba(23,21,20,.14)]">\n${renderTimeline(relativeFile)}\n    </div>\n  </div>\n</div><a href="https://idworkstudio.com/insights"`,
+        `<div class="rounded-[18px] border border-[#eee5da] bg-white p-2.5 text-left normal-case tracking-normal shadow-[0_18px_45px_rgba(23,21,20,.14)]">\n${renderTimeline(relativeFile)}\n    </div>\n  </div>\n</div><a href="https://idworkstudio.com/#ask">Ask</a><a href="https://idworkstudio.com/insights"`,
         relativeFile,
         'timeline Planning Tools menu'
       );

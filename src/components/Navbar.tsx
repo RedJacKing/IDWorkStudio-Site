@@ -59,6 +59,7 @@ export default function Navbar() {
 
             <div className="hidden md:flex gap-3 lg:gap-5 items-center">
               <Link to="/#home" className="text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-[0.12rem] font-light font-sans">{t('nav.home')}</Link>
+              <Link to="/#ask" className="text-charcoal/80 hover:text-champagne transition-colors text-xs uppercase tracking-[0.12rem] font-light font-sans">Ask</Link>
               <Link to="/residential" className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/residential') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.residential')}</Link>
               <Link to="/commercial" className={`text-xs uppercase tracking-[0.12rem] font-light font-sans transition-colors ${isActive('/commercial') ? 'text-champagne' : 'text-charcoal/80 hover:text-champagne'}`}>{t('nav.commercial')}</Link>
 
@@ -136,6 +137,7 @@ export default function Navbar() {
           <div className="md:hidden max-h-[calc(100dvh-12.5rem)] overflow-y-auto bg-white border-b border-gray-100 pb-20">
             <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3">
               <Link to="/#home" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.home')}</Link>
+              <Link to="/#ask" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">Ask</Link>
               <Link to="/residential" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.residential')}</Link>
               <Link to="/commercial" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-sm font-light text-charcoal hover:text-champagne hover:bg-gray-50 uppercase tracking-[0.15rem]">{t('nav.commercial')}</Link>
 
