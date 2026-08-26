@@ -191,6 +191,15 @@ const pageMetaMap = {
     ogUrl: 'https://idworkstudio.com/insights/how-much-office-space-do-you-need-singapore',
   },
 
+  'insights/home-lighting-design-singapore.html': {
+    canonical: 'https://idworkstudio.com/insights/home-lighting-design-singapore',
+    title: 'Home Lighting Design Singapore: HDB Renovation Guide | ID Work Studio',
+    description: 'Plan home lighting for a Singapore HDB renovation: downlight placement, ceiling fans, colour temperature, task lighting, concealed LEDs and smart GU10s.',
+    ogTitle: 'Home Lighting Design Singapore: HDB Renovation Guide',
+    ogDesc: 'Plan HDB home lighting around downlights, ceiling fans, colour temperature, task lighting, concealed LEDs and smart GU10s.',
+    ogUrl: 'https://idworkstudio.com/insights/home-lighting-design-singapore',
+  },
+
   'commercial/reinstatement.html': {
     canonical: 'https://idworkstudio.com/commercial/reinstatement',
     title: 'Office Reinstatement Singapore | Bare Shell Handover | ID Work Studio',

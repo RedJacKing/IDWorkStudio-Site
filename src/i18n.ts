@@ -2294,6 +2294,12 @@ enT["insights_page"] = {
       title: "How Much Office Space Do You Need in Singapore?",
       excerpt: "Plan office size around headcount, peak attendance, meeting rooms, private calls and SCDF fire-safety requirements instead of relying on one sqft-per-employee rule.",
       read_time: "14 min read"
+    },
+    "18": {
+      category: "Home Lighting Guide",
+      title: "Home Lighting Design Singapore: How to Plan Lighting for Your Renovation",
+      excerpt: "Plan HDB home lighting around people, furniture and real activities — including downlights, ceiling fans, colour temperature, task lighting, concealed LEDs and smart GU10s.",
+      read_time: "14 min read"
     }
   },
   footer_block: {
@@ -2443,6 +2449,12 @@ zhT["insights_page"] = {
       category: "办公室空间规划指南",
       title: "新加坡办公室需要多大？",
       excerpt: "不要只用每名员工多少平方英尺来估算办公室；应同时考虑人数、高峰到岗、会议室、私人通话及 SCDF 消防安全要求。",
+      read_time: "约 14 分钟"
+    },
+    "18": {
+      category: "家居灯光指南",
+      title: "新加坡家居灯光设计：装修时应该怎样规划灯光？",
+      excerpt: "从人的活动、家具和实际使用出发规划 HDB 灯光，包括筒灯、吊扇、色温、工作照明、隐藏式 LED 与智能 GU10。",
       read_time: "约 14 分钟"
     }
   },

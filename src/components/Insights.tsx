@@ -190,6 +190,16 @@ export default function Insights() {
       date: '2026-08-14',
       readTime: t('insights_page.articles.17.read_time'),
     },
+    {
+      slug: '/insights/home-lighting-design-singapore',
+      sections: ['residential'],
+      topics: ['lighting', 'design', 'hdb', 'planning'],
+      category: t('insights_page.articles.18.category'),
+      title: t('insights_page.articles.18.title'),
+      excerpt: t('insights_page.articles.18.excerpt'),
+      date: '2026-08-26',
+      readTime: t('insights_page.articles.18.read_time'),
+    },
   ];
 
   const residentialArticles = articles.filter((article) =>
