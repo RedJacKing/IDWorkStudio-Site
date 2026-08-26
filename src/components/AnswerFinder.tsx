@@ -1,4 +1,4 @@
-import { FormEvent, useMemo, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useRef, useState } from 'react';
 import { Search, ArrowRight, MessageCircle } from 'lucide-react';
 
 export type AnswerFinderEntry = {
@@ -747,6 +747,7 @@ export default function AnswerFinder({
 }: AnswerFinderProps) {
   const [query, setQuery] = useState('');
   const [submittedQuery, setSubmittedQuery] = useState('');
+  const loggedUnresolvedQueries = useRef(new Set<string>());
 
   const suggestedEntries = useMemo(
     () =>
@@ -789,6 +790,44 @@ export default function AnswerFinder({
   const hasRelatedMatch = resolution.mode === 'choices' && Boolean(bestResult);
 
   const isChinese = entries.some((entry) => /[\u3400-\u9fff]/.test(entry.question));
+
+  useEffect(() => {
+    const cleanQuery = submittedQuery.trim();
+    if (!cleanQuery || bestResult) return;
+
+    const normalizedQuery = normalize(cleanQuery);
+    const meaningfulWordCount = normalizedQuery.split(' ').filter(Boolean).length;
+    if (meaningfulWordCount < 3 && cleanQuery.length < 12) return;
+    if (loggedUnresolvedQueries.current.has(normalizedQuery)) return;
+
+    const timer = window.setTimeout(() => {
+      if (loggedUnresolvedQueries.current.has(normalizedQuery)) return;
+
+      const signals = classifyQuery(cleanQuery);
+      const formData = new URLSearchParams();
+      formData.set('form-name', 'answer-finder-unresolved');
+      formData.set('raw_query', cleanQuery);
+      formData.set('language', isChinese ? 'zh' : 'en');
+      formData.set('project_context', signals.contexts.join(','));
+      formData.set('detected_intent', signals.intents.join(','));
+      formData.set('safety_class', resolution.safety);
+      formData.set('query_length', String(cleanQuery.length));
+      formData.set('page_url', window.location.href);
+
+      loggedUnresolvedQueries.current.add(normalizedQuery);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData.toString(),
+      }).catch(() => {
+        loggedUnresolvedQueries.current.delete(normalizedQuery);
+      });
+    }, 1500);
+
+    return () => window.clearTimeout(timer);
+  }, [bestResult, isChinese, resolution.safety, submittedQuery]);
+
   const copy = isChinese
     ? {
         eyebrow: '装修答案查找器',
@@ -859,6 +898,24 @@ export default function AnswerFinder({
               {subtitle}
             </p>
           </div>
+
+          <form
+            name="answer-finder-unresolved"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            hidden
+          >
+            <input type="hidden" name="form-name" value="answer-finder-unresolved" />
+            <input type="hidden" name="raw_query" />
+            <input type="hidden" name="language" />
+            <input type="hidden" name="project_context" />
+            <input type="hidden" name="detected_intent" />
+            <input type="hidden" name="safety_class" />
+            <input type="hidden" name="query_length" />
+            <input type="hidden" name="page_url" />
+            <input type="hidden" name="bot-field" />
+          </form>
 
           <form onSubmit={handleSubmit} className="mx-auto mt-6 max-w-2xl">
             <label htmlFor="answer-finder-search" className="sr-only">
