@@ -9,7 +9,7 @@ type CommercialFaqKey = 'q1' | 'q2' | 'q3' | 'q4' | 'q5' | 'q6' | 'q7' | 'q8' | 
 const commercialPageContent = {
   "en": {
     "direct_answer": {
-      "eyebrow": "Direct answer for Singapore commercial projects",
+      "eyebrow": "Direct answer for Singapore business owners",
       "title": "Commercial renovation in Singapore: cost, timeline and approvals",
       "p1": "Commercial renovation in Singapore typically costs <strong>$50 to $80 psf for a basic office fit-out</strong>, <strong>$80 to $130 psf for a mid-range office fit-out</strong>, and <strong>$130 to $200+ psf for a premium or Grade A office fit-out</strong>. Complex corporate, high-spec M&E, acoustic, AV or strongly branded projects can exceed $200 psf and approach <strong>$300 psf</strong>. Retail shops usually range from <strong>$120 to $300 psf</strong>, while F&B outlets commonly require <strong>$200 to $500+ psf</strong>. A typical commercial renovation may take <strong>around 8 to 16 weeks from planning to handover</strong>, depending on unit type, approval requirements, M&E complexity and renovation scope.",
       "p2": "The main difference from residential renovation is compliance. Commercial projects may involve landlord fitting-out rules, MCST requirements, fire safety checks, exhaust requirements, working-hour restrictions and reinstatement obligations at lease end.",
@@ -30,32 +30,6 @@ const commercialPageContent = {
           "note": "Kitchen, exhaust, plumbing and fire safety factors"
         }
       }
-    },
-    "decision_block": {
-      "eyebrow": "Before commitment",
-      "title": "What we help you establish before commitment",
-      "body": "Share your floor plan, project requirements and target handover date. We can review the project at a preliminary level so you can assess feasibility before moving into detailed design or construction.",
-      "items": {
-        "1": {
-          "title": "Layout feasibility",
-          "desc": "Review how headcount, rooms, circulation and operational needs can fit the space before detailed design."
-        },
-        "2": {
-          "title": "Scope & budget",
-          "desc": "Identify the likely renovation scope and a realistic budget direction before a confirmed itemised quotation."
-        },
-        "3": {
-          "title": "Project timeline",
-          "desc": "Set a realistic planning, approval, renovation and handover programme around your target date."
-        },
-        "4": {
-          "title": "Approvals & project risks",
-          "desc": "Flag landlord or MCST requirements, site restrictions and SCDF/BCA considerations where applicable."
-        }
-      },
-      "note": "Preliminary review is for planning and internal discussion. Detailed design, confirmed quotation and committed programme follow after scope and site verification.",
-      "primary_cta": "Request Preliminary Project Review",
-      "secondary_cta": "Request Commercial Portfolio"
     },
     "cost_breakdown": {
       "title": "Commercial renovation cost breakdown in Singapore",
@@ -124,18 +98,18 @@ const commercialPageContent = {
       }
     },
     "content_cluster": {
-      "eyebrow": "Commercial planning guides",
-      "title": "Go deeper on the question you need to answer",
-      "body": "If you need more detail for budgeting or scheduling, use the relevant guide below. These support the project discussion without forcing every commercial project into the same decision order.",
+      "eyebrow": "Next commercial decision",
+      "title": "Choose the next decision to clarify",
+      "body": "Commercial renovation decisions usually move from budget to timing, unit type and lease obligations. Use the next guide based on the question you are trying to answer now.",
       "cost_card": {
-        "eyebrow": "Budget planning",
+        "eyebrow": "If you are budgeting",
         "title": "Commercial Renovation Cost Singapore",
-        "desc": "Use this if you need realistic office, retail or F&B renovation ranges before comparing quotations."
+        "desc": "Start here if you need realistic office, retail or F&B renovation ranges before requesting quotations."
       },
       "timeline_card": {
-        "eyebrow": "Programme planning",
+        "eyebrow": "If you already have a budget",
         "title": "Office Renovation Timeline Singapore",
-        "desc": "Check how design, landlord approval, site works and handover affect your target opening or move-in date."
+        "desc": "Next, check how design, landlord approval, site works and handover affect your opening date."
       }
     },
     "project_management": {
@@ -211,7 +185,7 @@ const commercialPageContent = {
   },
   "zh": {
     "direct_answer": {
-      "eyebrow": "给新加坡商业项目的直接答案",
+      "eyebrow": "给新加坡商业业主的直接答案",
       "title": "新加坡商业翻新：费用、时间表与审批",
       "p1": "新加坡商业翻新通常为：<strong>基础办公室装修每平方英尺 $50 至 $80</strong>，<strong>中档办公室装修每平方英尺 $80 至 $130</strong>，<strong>高端或 Grade A 办公室装修每平方英尺 $130 至 $200+</strong>。复杂企业项目、较高规格机电、隔音、AV 或品牌化设计可超过每平方英尺 $200，并接近 <strong>$300</strong>；<strong>零售店每平方英尺 $120 至 $300</strong>；<strong>餐饮空间每平方英尺 $200 至 $500+</strong>。商业翻新从规划到交付通常可预留 <strong>约 8 至 16 周</strong>，实际取决于单位类型、审批要求、机电复杂度与工程范围。",
       "p2": "商业翻新与住宅翻新的主要差别在于合规要求。商业项目可能涉及业主装修指南、MCST 要求、消防安全检查、排气系统、施工时段限制，以及租约结束时的原状修复责任。",
@@ -232,32 +206,6 @@ const commercialPageContent = {
           "note": "厨房、排气、给排水与消防安全因素"
         }
       }
-    },
-    "decision_block": {
-      "eyebrow": "正式投入前",
-      "title": "先把商业装修项目的关键事项理清",
-      "body": "提供平面图、项目需求和目标交付日期，我们可先从初步层面协助评估可行性，让您在进入详细设计或施工前先掌握关键方向。",
-      "items": {
-        "1": {
-          "title": "布局可行性",
-          "desc": "根据员工人数、所需空间、动线与营运需求，先判断现有单位是否适合。"
-        },
-        "2": {
-          "title": "工程范围与预算",
-          "desc": "先厘清可能涉及的装修范围和合理预算方向；正式明细报价仍需确认现场及最终工程范围。"
-        },
-        "3": {
-          "title": "项目时间表",
-          "desc": "根据设计、审批、施工与目标交付日期，建立较实际的整体时间预期。"
-        },
-        "4": {
-          "title": "审批与项目风险",
-          "desc": "及早识别业主或 MCST 要求、施工限制，以及适用时的 SCDF/BCA 注意事项。"
-        }
-      },
-      "note": "初步评估用于规划及内部讨论。详细设计、正式报价及承诺工期需在工程范围和现场条件确认后提供。",
-      "primary_cta": "申请初步项目评估",
-      "secondary_cta": "索取商业项目作品集"
     },
     "cost_breakdown": {
       "title": "新加坡商业翻新费用 breakdown",
@@ -326,18 +274,18 @@ const commercialPageContent = {
       }
     },
     "content_cluster": {
-      "eyebrow": "商业项目规划指南",
-      "title": "针对您现在的问题进一步了解",
-      "body": "如果您需要更详细的预算或工期资料，可继续查看以下相关指南。不同商业项目的决策次序并不完全相同，因此可按当前需要选择。",
+      "eyebrow": "下一步商业决策",
+      "title": "先厘清您现在最需要决定的问题",
+      "body": "商业翻新的决策通常会从预算、时间、单位类型到租约责任逐步推进。请根据您现在最需要回答的问题，选择下一份指南。",
       "cost_card": {
-        "eyebrow": "预算规划",
+        "eyebrow": "如果您正在做预算",
         "title": "新加坡商业翻新费用",
-        "desc": "如果您需要了解办公室、零售或餐饮空间的实际预算范围，以便比较报价，请先看这里。"
+        "desc": "如果您需要在索取报价前了解办公室、零售或餐饮空间的实际预算范围，请先看这里。"
       },
       "timeline_card": {
-        "eyebrow": "工期规划",
+        "eyebrow": "如果您已有初步预算",
         "title": "新加坡办公室翻新时间表",
-        "desc": "了解设计、业主审批、现场施工与交付如何影响目标开业或搬迁日期。"
+        "desc": "接下来了解设计、业主审批、现场施工与交付如何影响开业或搬迁日期。"
       }
     },
     "project_management": {
@@ -419,14 +367,6 @@ export default function Commercial() {
   const commercialContent = commercialPageContent[lang];
   const whatsappNumber = "6598333085";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%20ID%20Work%20Studio,%20I'd%20like%20a%20free%20consultation%20for%20my%20commercial%20project.`;
-  const projectReviewMessage = lang === 'zh'
-    ? '您好 ID Work Studio，我想先做商业装修项目的初步评估。我可以提供平面图、项目地点、大约面积或员工人数、主要需求和目标交付日期。'
-    : "Hi ID Work Studio, I'd like a preliminary review for my commercial project. I can share the floor plan, project location, approximate size or headcount, key requirements and target handover date.";
-  const portfolioMessage = lang === 'zh'
-    ? '您好 ID Work Studio，我想索取商业项目作品集作内部参考。我的项目类型是办公室、零售、餐饮或其他商业空间。'
-    : "Hi ID Work Studio, I'd like to request your commercial portfolio for internal review. My project is for an office, retail, F&B or other commercial space.";
-  const projectReviewWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(projectReviewMessage)}`;
-  const portfolioWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(portfolioMessage)}`;
 
   const faqIconMap = [Clock, Building2, Clock, ShieldCheck, FileCheck, HardHat, CheckCircle, FileCheck, Building2, HardHat, CheckCircle, ShieldCheck];
 
@@ -601,51 +541,6 @@ export default function Commercial() {
                   {t('commercial_page.hero.cta_reinstatement')}
                 </Link>
               </motion.div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 md:py-20 bg-white border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-stretch">
-              <div className="bg-off-white rounded-2xl p-7 md:p-10 border border-gray-100 shadow-sm">
-                <p className="text-[11px] uppercase tracking-[0.25em] text-gold font-bold mb-4">{commercialContent.decision_block.eyebrow}</p>
-                <h2 className="text-3xl md:text-4xl font-serif text-charcoal mb-5 leading-tight">{commercialContent.decision_block.title}</h2>
-                <p className="text-gray-600 leading-relaxed mb-6">{commercialContent.decision_block.body}</p>
-                <p className="text-sm text-gray-500 leading-relaxed mb-7">{commercialContent.decision_block.note}</p>
-
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href={projectReviewWhatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block w-full sm:w-auto px-6 py-3.5 bg-gold text-dark-charcoal text-[11px] uppercase tracking-[0.16em] hover:bg-gold-hover hover:shadow-[0_0_20px_rgba(197,160,89,0.35)] transition-all duration-300 font-bold rounded-full text-center"
-                  >
-                    {commercialContent.decision_block.primary_cta}
-                  </a>
-                  <a
-                    href={portfolioWhatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block w-full sm:w-auto px-6 py-3.5 bg-transparent text-charcoal text-[11px] uppercase tracking-[0.16em] hover:bg-charcoal/5 transition-all duration-300 font-bold border border-charcoal/20 rounded-full text-center"
-                  >
-                    {commercialContent.decision_block.secondary_cta}
-                  </a>
-                </div>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                {Object.values(commercialContent.decision_block.items).map((item, index) => {
-                  const Icon = [Building2, FileCheck, Clock, ShieldCheck][index];
-                  return (
-                  <div key={item.title} className="bg-charcoal text-white rounded-2xl p-6 border border-white/10">
-                    <Icon className="w-8 h-8 text-gold mb-4" />
-                    <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                    <p className="text-sm text-gray-300 leading-relaxed">{item.desc}</p>
-                  </div>
-                );
-                })}
-              </div>
             </div>
           </div>
         </section>
